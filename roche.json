@@ -1,0 +1,1298 @@
+[
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperPrep Kit",
+    "catalogNumbers": [
+      "07962347001",
+      "07962363001",
+      "07962355001",
+      "07962371001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Ligation-based DNA library prep (fragmented DNA)",
+    "description": "Streamlined one-tube library construction (end repair/A-tailing, adapter ligation, optional amplification) for mechanically or naturally fragmented DNA, including FFPE and cell-free DNA. PCR-free variants omit the library amplification module.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hyperprep-kit/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2022/07/KAPA-HyperPrep-Kit-Technical-Data-Sheet.pdf",
+    "storage": "-15°C to -25°C (enzymes and reaction buffers; constant-temperature freezer)",
+    "kitSize": "24 rxn (07962347001) / 96 rxn (07962363001); PCR-free 24 rxn (07962355001) / 96 rxn (07962371001)",
+    "applications": [
+      "whole-genome sequencing",
+      "whole-exome / targeted sequencing (with KAPA target enrichment)",
+      "ChIP-seq",
+      "methyl-seq",
+      "amplicon sequencing",
+      "cfDNA and FFPE libraries"
+    ],
+    "keyParameters": {
+      "input": "1 ng – 1 µg fragmented double-stranded DNA",
+      "time": "2–3 h with minimal hands-on time",
+      "notes": "Older KAPA codes KK8502/KK8504 (KK8503/KK8505 PCR-free) map to these Roche numbers per the technical data sheet; adapters sold separately; kit includes bead-based cleanup reagent (KAPA Pure/HyperPure Beads)"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hyperprep-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07962347001/07962363001 present on fetched Roche Sequencing Store product page; PCR-free 07962355001/07962371001 present on fetched https://rochesequencingstore.com/catalog/kapa-hyper-prep-kit-pcr-free/ and in the fetched technical data sheet (KR0961 v7.19)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperPlus Kit",
+    "catalogNumbers": [
+      "07962401001",
+      "07962428001",
+      "07962398001",
+      "07962410001",
+      "07962436001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "DNA library prep with integrated enzymatic fragmentation",
+    "description": "Single-tube workflow combining low-bias enzymatic fragmentation with end repair, A-tailing and adapter ligation for fully automatable Illumina library construction. PCR-free variants exclude the amplification module.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hyper-plus-kit/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2017/10/KAPA-HyperPlus-Kit_KR1145-–-v5.19.pdf",
+    "storage": "-15°C to -25°C (enzymes and reaction buffers; constant-temperature freezer)",
+    "kitSize": "24 rxn (07962401001) / 96 rxn (07962428001); PCR-free 8 rxn (07962398001) / 24 rxn (07962410001) / 96 rxn (07962436001)",
+    "applications": [
+      "whole-genome sequencing",
+      "whole-exome sequencing",
+      "targeted sequencing",
+      "FFPE sample sequencing"
+    ],
+    "keyParameters": {
+      "input": "1 ng – 1 µg double-stranded DNA",
+      "time": "1.5–3 h",
+      "notes": "Older KAPA codes KK8512/KK8514 (KK8511/KK8513/KK8515 PCR-free); KAPA Pure Beads and adapters sold separately"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hyper-plus-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07962401001/07962428001 present on fetched store page; PCR-free numbers 07962398001/07962410001/07962436001 present on fetched https://rochesequencingstore.com/catalog/kapa-hyperplus-kit-pcr-free/ and in fetched technical data sheet KR1145 v5.19."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA EvoPrep Kits (KAPA EvoPrep Kit + Lib Amp Primers / KAPA EvoPrep Boost)",
+    "catalogNumbers": [
+      "10212233702",
+      "10212250702",
+      "10212268702",
+      "10212276702",
+      "10613653001",
+      "10613661001",
+      "10613670001",
+      "10613688001",
+      "10153806001",
+      "10153814001",
+      "10153857001",
+      "10154284001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Ligation-based DNA library prep for fragmented DNA (EvoT4 ligase chemistry)",
+    "description": "DNA library prep kits for mechanically or naturally fragmented DNA, designed for WGS, WES, targeted sequencing and methyl-seq with a streamlined, fully automatable workflow. Offered with library amplification primers, as EvoPrep Boost, and as PCR-free versions.",
+    "productUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-evoprep-kits-pid00001170.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00001170",
+    "storage": "-15°C to -20°C",
+    "kitSize": "KAPA EvoPrep Kit + Lib Amp Primers: 24 rxn (10212233702) / 96 rxn (10212250702) / 384 rxn (10212268702) / 96-well plate (10212276702); KAPA EvoPrep Boost Kit: 24 rxn (10613653001) / 96 rxn (10613661001) / 384 rxn (10613670001) / plated 96 rxn (10613688001); KAPA EvoPrep Boost PCR-free: 24 rxn (10153806001) / 96 rxn (10153814001) / 384 rxn (10153857001) / plated 96 rxn (10154284001)",
+    "applications": [
+      "whole-genome sequencing",
+      "whole-exome sequencing",
+      "targeted sequencing",
+      "methyl-seq"
+    ],
+    "keyParameters": {
+      "input": "0.1 ng – 500 ng (PCR-free from 50 ng); dependent on sample type and quality",
+      "time": "~2.3 h depending on sample number and whether library amplification is performed",
+      "notes": "Use with KAPA UDI Adapters or KAPA HyperPlex Adapters and KAPA HyperPure Beads; compatible with Illumina systems"
+    },
+    "sourceUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-evoprep-kits-pid00001170.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers present in the product table of the fetched Roche Diagnostics product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA EvoPlus V2 Kit / KAPA EvoPlus Boost Kits",
+    "catalogNumbers": [
+      "09420037001",
+      "09420053001",
+      "09420339001",
+      "09420428001",
+      "10212284702",
+      "10212292702",
+      "10212306702",
+      "10212314702",
+      "10613696001",
+      "10613700001",
+      "10613718001",
+      "10613726001",
+      "09420045001",
+      "09420304001",
+      "09420371001",
+      "09420436001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "DNA library prep with integrated enzymatic fragmentation",
+    "description": "DNA library prep kits with integrated enzymatic fragmentation offering improved fragmentation performance, insensitivity to fragmentation inhibitors, better conversion efficiency and reduced sequencing artefacts in an automatable workflow. Available as EvoPlus V2 Kit (with or without library amplification primers), EvoPlus Boost Kit and PCR-free EvoPlus Boost.",
+    "productUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-evoplus-v2-kits-pid00001169.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00001169",
+    "storage": "-15°C to -25°C (enzymes and reaction buffers; constant-temperature freezer)",
+    "kitSize": "KAPA EvoPlus V2 Kit: 24 rxn (09420037001) / 96 rxn (09420053001) / 384 rxn (09420339001) / 96-well plate (09420428001); EvoPlus V2 Kit + Lib Amp Primers: 24 rxn (10212284702) / 96 rxn (10212292702) / 384 rxn (10212306702) / 96 plate (10212314702); EvoPlus Boost Kit: 24 rxn (10613696001) / 96 rxn (10613700001) / 384 rxn (10613718001) / plated 96 rxn (10613726001); EvoPlus Boost PCR-free: 24 rxn (09420045001) / 96 rxn (09420304001) / 384 rxn (09420371001) / plated 96 rxn (09420436001)",
+    "applications": [
+      "whole-genome sequencing",
+      "whole-exome sequencing",
+      "targeted sequencing"
+    ],
+    "keyParameters": {
+      "input": "0.1 ng – 500 ng (PCR-free from 50 ng minimum)",
+      "time": "~2 h to sequencing- or capture-ready libraries",
+      "notes": "Compatible with all Illumina sequencing systems; adapters and KAPA HyperPure Beads sold separately"
+    },
+    "sourceUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-evoplus-v2-kits-pid00001169.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "10212284702/10212292702/10212306702/10212314702, 10613696001/10613700001/10613718001/10613726001 and PCR-free 09420045001/09420304001/09420371001/09420436001 present on fetched Roche Diagnostics page; 09420037001/09420053001/09420339001/09420428001 (and the PCR-free numbers) present on fetched https://rochesequencingstore.com/catalog/kapa-evoplus-v2-kit/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA RNA HyperPrep Kit with RiboErase (HMR)",
+    "catalogNumbers": [
+      "08098131702",
+      "08098140702"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded total RNA-seq library prep with rRNA depletion",
+    "description": "Combines RNase H-based ribosomal RNA depletion (human/mouse/rat) and DNase treatment with fragmentation, cDNA synthesis, adapter ligation and amplification to produce strand-specific RNA-seq libraries with fewer purification steps.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-rna-hyperprep-kit-with-riboerase-hmr/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2017/10/KAPA-RNA-HyperPrep-Kit-with-RiboErase-HMR-Technical-Data-Sheet.pdf",
+    "kitSize": "24 rxn (08098131702) / 96 rxn (08098140702)",
+    "applications": [
+      "total RNA-seq (stranded)",
+      "degraded / FFPE RNA",
+      "human, mouse, rat rRNA depletion"
+    ],
+    "keyParameters": {
+      "input": "25 ng – 1 µg purified total RNA",
+      "time": "~4 h to sequencing-ready libraries (single day including rRNA depletion)",
+      "notes": "Includes KAPA Pure Beads, KAPA HiFi HotStart ReadyMix and Library Amplification Primer Mix; adapters sold separately"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-rna-hyperprep-kit-with-riboerase-hmr/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "08098131702/08098140702 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA mRNA HyperPrep Kit",
+    "catalogNumbers": [
+      "08098115702",
+      "08098123702"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded mRNA-seq library prep (poly(A) capture)",
+    "description": "mRNA capture on magnetic oligo-dT beads followed by strand-specific library construction using KAPA RNA HyperPrep chemistry that combines enzymatic steps and reduces the number of reaction purifications.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-mrna-hyperprep-kit/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/SEQ-KAPA-0164",
+    "kitSize": "24 rxn (08098115702) / 96 rxn (08098123702)",
+    "applications": [
+      "mRNA-seq (stranded)",
+      "gene expression profiling",
+      "lower-input and partially degraded RNA"
+    ],
+    "keyParameters": {
+      "input": "50 ng – 1 µg intact total RNA",
+      "notes": "Adapters sold separately"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-mrna-hyperprep-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "08098115702/08098123702 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA RNA EvoPrep Kits (KAPA RNA EvoPrep, KAPA mRNA EvoPrep, KAPA RNA EvoPrep + RiboErase HMR / HMR Globin)",
+    "catalogNumbers": [
+      "10640561702",
+      "10640570702",
+      "10600730702",
+      "10600829702",
+      "10600837702",
+      "10600748702",
+      "10600756702",
+      "10600764702",
+      "10600799702",
+      "10600802702"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "RNA-seq library prep family (EvoT4 ligase chemistry)",
+    "description": "RNA library prep kits that convert input RNA into sequencing-ready, adapter-ligated libraries with fewer reagents and a streamlined workflow. Variants: KAPA RNA EvoPrep (no depletion), KAPA mRNA EvoPrep (poly(A) capture), and RNA EvoPrep + RiboErase (HMR) or (HMR Globin) rRNA/globin depletion.",
+    "productUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-rna-evoprep-kits-pid00001204.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00001204",
+    "storage": "-15°C to -25°C (cDNA synthesis and library prep components; constant-temperature freezer)",
+    "kitSize": "KAPA RNA EvoPrep: 24 rxn (10640561702) / 96 rxn (10640570702) / 384 rxn (10600730702); KAPA mRNA EvoPrep: 24 rxn (10600829702) / 96 rxn (10600837702); RNA EvoPrep + RiboErase HMR: 24 rxn (10600748702) / 96 rxn (10600756702) / 384 rxn (10600764702); RNA EvoPrep + RiboErase HMR Globin: 96 rxn (10600799702) / 384 rxn (10600802702)",
+    "applications": [
+      "total RNA-seq (stranded)",
+      "mRNA-seq",
+      "whole blood RNA-seq (globin depletion)",
+      "low-input RNA-seq"
+    ],
+    "keyParameters": {
+      "input": "RNA EvoPrep 0.25 ng – 100 ng; mRNA EvoPrep 25 ng – 1 µg; RNA EvoPrep + RiboErase (HMR / HMR Globin) 5 ng – 1 µg",
+      "time": "RNA EvoPrep ~3.5 h; mRNA EvoPrep ~4.5 h; RiboErase variants ~5.5 h",
+      "notes": "Illumina-compatible; adapters sold separately"
+    },
+    "sourceUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-rna-evoprep-kits-pid00001204.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers present in the product table of the fetched Roche Diagnostics product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperCapture Reagent Kit (KAPA HyperCap Workflow)",
+    "catalogNumbers": [
+      "09075810001",
+      "09075828001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Hybridization capture reagents (target enrichment)",
+    "description": "Contains components to perform hybridization, wash and post-capture PCR steps in the KAPA HyperCap Workflow using KAPA Target Enrichment probes: KAPA HiFi HotStart ReadyMix, COT Human DNA, Universal Enhancing Oligos, Hybridization Buffer, Component H, bead/stringent/wash buffers and Post-Capture PCR Oligos.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hypercapture-reagent-kit/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2020/07/KAPA-HyperCapture-Reagent-Kit.pdf",
+    "kitSize": "24 rxn (09075810001) / 96 rxn (09075828001)",
+    "applications": [
+      "hybridization-based target enrichment",
+      "exome / custom panel capture",
+      "post-capture library amplification"
+    ],
+    "keyParameters": {
+      "notes": "Used with KAPA HyperCapture Bead Kit (09075780001 24 rxn / 09075798001 96 rxn) and KAPA HyperExome / HyperCap probes"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hypercapture-reagent-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09075810001/09075828001 present on fetched store page and on fetched https://diagnostics.roche.com/global/en/products/set/kapa-hyperexome-v2-probes-pid00001174.html (which also lists Bead Kit 09075780001/09075798001)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperExome V2 Probes",
+    "catalogNumbers": [
+      "09718630001",
+      "09718648001",
+      "09718656001",
+      "09718664001",
+      "09718672001",
+      "09718699001",
+      "09718702001",
+      "09718729001",
+      "09718737001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Whole-exome hybridization capture probes",
+    "description": "Target enrichment probes for exome capture (43.2 Mb design) covering coding exons from RefSeq, ClinVar and Ensembl v106 with coverage of ACMG v3.1, CCDS and COSMIC content and 529 sample-tracking SNPs; used in the KAPA HyperCap Workflow.",
+    "productUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-hyperexome-v2-probes-pid00001174.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00001174",
+    "kitSize": "12 rxn (09718630001) / 24 rxn (09718648001) / 48 rxn (09718656001) / 96 rxn (09718664001) / 192 rxn (09718672001) / 384 rxn (09718699001) / 768 rxn (09718702001) / 1152 rxn (09718729001) / 1536 rxn (09718737001)",
+    "applications": [
+      "whole-exome sequencing",
+      "germline and somatic variant discovery"
+    ],
+    "keyParameters": {
+      "notes": "Target size 43.2 Mb; requires KAPA HyperCapture Reagent Kit and Bead Kit; companion accessories on same page: KAPA Universal Enhancing Oligos 24 rxn 09075836001 / 96 rxn 09075852001, KAPA Probes Resuspension Buffer 1 mL 09075879001 / 5 mL 09075887001, KAPA Hybrid Enhancer Reagent 1 mL 09075763001"
+    },
+    "sourceUrl": "https://diagnostics.roche.com/global/en/products/set/kapa-hyperexome-v2-probes-pid00001174.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All listed material numbers present in the product table of the fetched Roche Diagnostics product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA Universal Adapter",
+    "catalogNumbers": [
+      "09063781001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Truncated Illumina adapter (for use with KAPA UDI Primer Mixes)",
+    "description": "Truncated, ready-to-use 15 µM adapter with T-overhangs used during ligation-based library construction for sequencing on Illumina instruments; full-length indexed adapters are completed during amplification with KAPA UDI Primer Mixes. Manufactured by duplexing for high ligation efficiency and low adapter-dimer formation.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-universal-adapter/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2020/07/KAPA_Universal_Adapter.pdf",
+    "kitSize": "15 µM, 960 µL (09063781001)",
+    "applications": [
+      "ligation-based NGS library prep",
+      "KAPA HyperCap workflow",
+      "KAPA HyperPETE workflow",
+      "multiplexed Illumina sequencing"
+    ],
+    "keyParameters": {
+      "notes": "Use with KAPA UDI Primer Mixes (1–96, 97–192, 193–288, 289–384) for unique dual indexing; UMI version available as KAPA Universal UMI Adapter (09329862001 96 rxn / 09329889001 4 x 960 µL)"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-universal-adapter/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09063781001 present on fetched store page and on fetched https://diagnostics.roche.com/global/en/products/set/kapa-adapters-and-accessories-pid00001171.html; UMI adapter numbers present on fetched https://rochesequencingstore.com/catalog/kapa-universal-umi-adapter/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA UDI Primer Mixes",
+    "catalogNumbers": [
+      "09134336001",
+      "09329838001",
+      "09329846001",
+      "09329854001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Unique dual index (UDI) amplification primer mixes",
+    "description": "Pre-mixed forward and reverse library amplification primers carrying non-redundant 8-nt unique dual index pairs; used with KAPA Universal Adapters to generate uniquely indexed Illumina libraries and mitigate index hopping on patterned flow cells.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-udi-primer-mixes/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/SEQ-KAPA-0261",
+    "kitSize": "96 rxn each: UDI 1–96 (09134336001) / 97–192 (09329838001) / 193–288 (09329846001) / 289–384 (09329854001)",
+    "applications": [
+      "sample indexing during library amplification",
+      "multiplexed sequencing",
+      "target capture workflows"
+    ],
+    "keyParameters": {
+      "notes": "8-nt UDI sequences; compatible with 2- and 4-channel Illumina instruments and patterned/non-patterned flow cells; sequencing-based QC for cross-contamination"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-udi-primer-mixes/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All four material numbers present on fetched store page and on fetched Roche Diagnostics KAPA Adapters page (pid00001171)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA Unique Dual-Indexed (UDI) Adapter Kit (15 µM)",
+    "catalogNumbers": [
+      "08861919702"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Full-length unique dual-indexed Illumina adapters (96-well plate)",
+    "description": "Full-length, ready-to-use 15 µM adapters for ligation-based library construction on Illumina instruments; 192 non-redundant barcodes provide 96 unique dual-index combinations on standard Illumina adapter backbones, supplied in a 96-well plate with KAPA Adapter Dilution Buffer.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-unique-dual-indexed-adapter-kit-15-%ce%bcm/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2019/09/KAPA-UDI-Adapter-Kit_KR1736-–-v2.19.pdf",
+    "kitSize": "96 x 20 µL (15 µM) (08861919702)",
+    "applications": [
+      "multiplexed DNA and RNA sequencing",
+      "index-hopping mitigation on patterned flow cells",
+      "PCR-free library prep"
+    ],
+    "keyParameters": {
+      "notes": "96 UDI combinations; use with KAPA HyperPrep/HyperPlus/EvoPrep/EvoPlus and RNA kits"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-unique-dual-indexed-adapter-kit-15-%ce%bcm/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "08861919702 present on fetched store page and on fetched Roche Diagnostics KAPA Adapters page (pid00001171)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA Library Quantification Kits (Illumina platforms)",
+    "catalogNumbers": [
+      "07960140001",
+      "07960204001",
+      "07960255001",
+      "07960298001",
+      "07960336001"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "qPCR library quantification (SYBR)",
+    "description": "Complete qPCR kits for accurate, reproducible quantification of Illumina NGS libraries: KAPA SYBR FAST qPCR Master Mix formulated with the appropriate passive reference dye, Illumina primer premix and a set of six pre-diluted DNA standards (452 bp, 20 pM to 0.0002 pM).",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-library-quantification-kits/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2017/10/KAPA-Library-Quantification-Kit.pdf",
+    "storage": "-15°C to -25°C (all components; constant-temperature freezer)",
+    "kitSize": "500 reactions each: Universal (07960140001) / ABI Prism (07960204001) / Bio-Rad (07960255001) / LightCycler 480 (07960298001) / ROX Low (07960336001)",
+    "applications": [
+      "library quantification before cluster generation",
+      "pooling for multiplexed sequencing",
+      "pre/post-capture library QC"
+    ],
+    "keyParameters": {
+      "input": "Library diluted 1:1,000 – 1:100,000 (plus one additional 2-fold dilution recommended)",
+      "time": "~1 h qPCR run",
+      "notes": "Cycling: 95°C 5 min; 35 cycles of 95°C 30 s, 60°C 45 s (acquire); optional melt 65–95°C. Older KAPA codes KK4824 (Universal), KK4835 (ABI), KK4844 (Bio-Rad), KK4854 (LC480), KK4873 (ROX Low)"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-library-quantification-kits/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All five material numbers present on fetched store page and in the fetched technical data sheet (KR0405 v11.20)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HiFi HotStart ReadyMix (2X)",
+    "catalogNumbers": [
+      "07958927001",
+      "07958935001",
+      "09420398001"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity hot-start PCR master mix",
+    "description": "2X ready-to-use master mix based on KAPA HiFi HotStart DNA Polymerase, a single-enzyme B-family proofreading polymerase with antibody-mediated hot start; error rate 1 per 3.6 x 10^6 nucleotides (~100x lower than wild-type Taq) with robust amplification of GC- and AT-rich templates.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-readymix/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2023/02/KAPA-HiFi-HotStart-ReadyMix-PCR-Kit-Technical-Data-Sheet_v14-22.pdf",
+    "storage": "-15°C to -25°C (constant-temperature freezer)",
+    "kitSize": "1.25 mL (07958927001; ~50 x 50 µL rxn) / 6.25 mL (07958935001) / 9.6 mL (09420398001)",
+    "applications": [
+      "high-fidelity PCR",
+      "NGS library amplification",
+      "GC-rich templates (up to 84% GC)",
+      "long amplicons",
+      "cloning and mutagenesis"
+    ],
+    "keyParameters": {
+      "input": "10–100 ng genomic DNA or 0.1–1 ng less complex DNA per 25 µL reaction",
+      "notes": "Cycling: 98°C 20 s denaturation; 60–75°C 15 s annealing; 72°C 15–60 s/kb extension. Older KAPA codes KK2601/KK2602"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-readymix/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07958927001/07958935001/09420398001 present on fetched store page and in fetched technical data sheet (KR0370 v14.22)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HiFi HotStart Uracil+ ReadyMix Kit",
+    "catalogNumbers": [
+      "07959052001",
+      "07959079001"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Uracil-tolerant high-fidelity hot-start master mix",
+    "description": "Modified KAPA HiFi HotStart DNA Polymerase engineered with an inactivated uracil-binding pocket so it tolerates uracil residues, giving higher and more uniform coverage for bisulfite-converted and other uracil-containing templates; supplied as a 2X ReadyMix (0.2 mM each dNTP, no dUTP) lacking only primers and template.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-uracil-with-readymix-kit/",
+    "kitSize": "1.25 mL / 50 rxn (07959052001) ; 6.25 mL / 250 rxn (07959079001)",
+    "applications": [
+      "bisulfite sequencing library amplification",
+      "methylation analysis",
+      "amplification of damaged DNA",
+      "NGS library amplification"
+    ],
+    "keyParameters": {
+      "notes": "Formerly 'KAPA High Fidelity HotStart Uracil+ ReadyMix'; 2X ReadyMix contains dATP/dCTP/dGTP/dTTP, no dUTP"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-uracil-with-readymix-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07959052001/07959079001 present on fetched store page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HiFi HotStart plus dNTPs",
+    "catalogNumbers": [
+      "07958889001",
+      "07958897001"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity hot-start DNA polymerase (enzyme + buffers + dNTPs)",
+    "description": "KAPA HiFi HotStart DNA Polymerase (single-enzyme B-family proofreading polymerase, antibody hot start) supplied with dNTPs and two 5X buffers (Fidelity Buffer and GC Buffer, each containing 2 mM MgCl2 at 1X); 3'-5' exonuclease proofreading yields blunt-ended products with an error rate ~100x lower than Taq.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-plus-dntps/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/SEQ-KAPA-0021",
+    "kitSize": "100 U (07958889001, KK2501) / 250 U (07958897001, KK2502)",
+    "applications": [
+      "high-fidelity PCR",
+      "GC-rich, AT-rich and long targets",
+      "NGS library amplification",
+      "site-directed mutagenesis",
+      "cloning"
+    ],
+    "keyParameters": {
+      "notes": "Error rate 1 per 3.6 x 10^6 nucleotides; no 5'-3' exonuclease activity; blunt-ended products"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hifi-hotstart-plus-dntps/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07958889001 (KK2501) / 07958897001 (KK2502) present on fetched store page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA Library Amplification Kit with Primer Mix / KAPA HiFi HotStart Library Amp Kit",
+    "catalogNumbers": [
+      "07958978001",
+      "07958986001",
+      "07958960001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "NGS library amplification master mix (KAPA HiFi)",
+    "description": "KAPA HiFi HotStart-based library amplification kits designed to address PCR-induced bias in NGS library amplification; the 'with Primer Mix' kits supply a 2X ReadyMix plus Illumina library amplification primer mix, while the KAPA HiFi HotStart Library Amp Kit supplies enzyme (1 U/µL), Fidelity and GC buffers, dNTPs and MgCl2.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-lib-amp-kitprimer/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2022/07/KAPA-HiFi-HotStart-Library-Amplification-Kit-Technical-Data-Sheet.pdf",
+    "kitSize": "With Primer Mix: 50 rxn (07958978001) / 250 rxn (07958986001); KAPA HiFi HotStart Library Amp Kit: 250 rxn (07958960001)",
+    "applications": [
+      "Illumina DNA/RNA library amplification",
+      "ChIP DNA and other precious samples",
+      "pre- and post-capture amplification in targeted capture",
+      "real-time amplification of low-input libraries"
+    ],
+    "keyParameters": {
+      "notes": "Also available as KAPA Library Amplification Primer Mix (sold separately) and KAPA EvoAmp ReadyMix (10613556001 24 rxn / 10613572001 96 rxn / 10613599001 384 rxn)"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-lib-amp-kitprimer/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07958978001/07958986001 present on fetched store page; 07958960001 present on fetched https://rochesequencingstore.com/catalog/kapa-lib-amp-kit/; EvoAmp numbers present on fetched https://rochesequencingstore.com/catalog/kapa-evoamp-readymix-powered-by-kapa-hifi/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA EvoAmp ReadyMix (powered by KAPA HiFi)",
+    "catalogNumbers": [
+      "10613556001",
+      "10613572001",
+      "10613599001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "NGS library amplification ReadyMix",
+    "description": "Ready-to-use library amplification mix containing KAPA HiFi HotStart DNA Polymerase designed to minimize amplification bias while maintaining very high fidelity (2.8 x 10^-7 errors/base); antibody-mediated hot start prevents non-specific amplification during setup. Primers and template not included.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-evoamp-readymix-powered-by-kapa-hifi/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2025/11/kapa-evoamp-readymix-mc-17338.pdf",
+    "kitSize": "24 rxn (10613556001) / 96 rxn (10613572001) / 384 rxn (10613599001)",
+    "applications": [
+      "Illumina library amplification",
+      "WGS",
+      "WES / targeted sequencing",
+      "RNA-seq",
+      "ChIP-seq"
+    ],
+    "keyParameters": {
+      "input": "0.1 ng – 500 ng DNA into library prep (gDNA, cfDNA, FFPE-derived DNA)",
+      "notes": "5'→3' polymerase and 3'→5' exonuclease activities"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-evoamp-readymix-powered-by-kapa-hifi/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "10613556001/10613572001/10613599001 present on fetched store page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA Pure Beads",
+    "catalogNumbers": [
+      "07983271001",
+      "07983280001",
+      "07983298001"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Paramagnetic SPRI-type cleanup and size-selection beads",
+    "description": "Suspension of paramagnetic beads in an optimized buffer for reaction purification and tunable size selection in DNA and RNA NGS library construction workflows; high recovery of single- and double-stranded DNA from 1 ng to 5 µg, automation-compatible.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-pure-beads/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2022/07/KAPA-Pure-Beads-Technical-Data-Sheet.pdf",
+    "storage": "2°C to 8°C (do not freeze)",
+    "kitSize": "5 mL (07983271001, KK8000) / 30 mL (07983280001, KK8001) / 60 mL (07983298001, KK8002)",
+    "applications": [
+      "post-reaction cleanup in NGS library prep",
+      "size selection",
+      "PCR/qPCR product cleanup",
+      "genomic DNA cleanup and concentration"
+    ],
+    "keyParameters": {
+      "input": "1 ng – 5 µg DNA per reaction",
+      "notes": "Typical ratios: 3X for gDNA cleanup; 0.5X–3X for fragmented DNA depending on cutoff; double-sided size selection e.g. 0.6X–0.8X / 0.5X–0.7X"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-pure-beads/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "07983271001/07983280001/07983298001 present on fetched store page and in fetched technical data sheet (KR1245 v4.17)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperPure Beads",
+    "catalogNumbers": [
+      "08963835001",
+      "08963843001",
+      "08963851001",
+      "08963878001",
+      "08963860001"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Paramagnetic cleanup and size-selection beads",
+    "description": "Suspension of paramagnetic beads in a buffer optimized for purification or size selection of single- and double-stranded DNA in NGS and other molecular biology workflows; processes 1 ng to 5 µg DNA per reaction and is compatible with manual or automated liquid handling.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hyperpure-beads/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2022/07/KAPA-HyperPure-Beads-Technical-Data-Sheet.pdf",
+    "storage": "2°C to 8°C (do not store at -15°C to -25°C)",
+    "kitSize": "5 mL (08963835001) / 30 mL (08963843001) / 60 mL (08963851001) / 4 x 60 mL (08963878001) / 450 mL (08963860001)",
+    "applications": [
+      "reaction cleanup (adapters, primers, nucleotides, salts, enzymes)",
+      "size selection of fragmented DNA and libraries",
+      "DNA concentration and buffer exchange"
+    ],
+    "keyParameters": {
+      "input": "1 ng – 5 µg DNA per reaction",
+      "notes": "3X bead-to-sample ratio recommended for maximum recovery during cleanup/buffer exchange"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hyperpure-beads/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All five material numbers present on fetched store page and in fetched technical data sheet (KR1705 v1.19)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "LightCycler 480 SYBR Green I Master",
+    "catalogNumbers": [
+      "04707516001",
+      "04887352001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "SYBR Green I hot-start qPCR master mix (2X)",
+    "description": "One-component hot start reaction mix (2X) containing FastStart Taq DNA Polymerase and SYBR Green I dye for PCR product detection and characterization on the LightCycler 480 System; suitable for sensitive detection and quantification of DNA/cDNA targets and two-step RT-PCR.",
+    "productUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-sybr-green-i-master/",
+    "kitSize": "5 x 1 mL (04707516001) / 10 x 5 mL (04887352001)",
+    "applications": [
+      "SYBR Green qPCR on LightCycler 480",
+      "two-step RT-qPCR",
+      "melting-curve analysis"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with heat-labile Uracil-DNA Glycosylase for carryover prevention; Research Use Only"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-sybr-green-i-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "04707516001/04887352001 present on fetched Roche Sequencing Store product page (LifeScience section)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "LightCycler 480 Probes Master",
+    "catalogNumbers": [
+      "04707494001",
+      "04887301001",
+      "04902343001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Hydrolysis-probe hot-start qPCR master mix (2X)",
+    "description": "Ready-to-use 2X hot start reaction mix with FastStart Taq DNA Polymerase specifically developed for hydrolysis probe-based (TaqMan-type / Universal ProbeLibrary) assays performed in multiwell plates on the LightCycler 480 Instrument; supports mono- or dual-color quantification and two-step RT-PCR.",
+    "productUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-probes-master/",
+    "kitSize": "5 x 1 mL (04707494001) / 10 x 5 mL (04887301001) / 1 x 50 mL (04902343001)",
+    "applications": [
+      "probe-based qPCR on LightCycler 480",
+      "two-step RT-qPCR",
+      "multiplex (dual-color) quantification"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with Uracil-DNA Glycosylase carryover prevention; Research Use Only"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-probes-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "04707494001/04887301001/04902343001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "LightCycler 480 High Resolution Melting Master",
+    "catalogNumbers": [
+      "04909631001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "HRM (high resolution melting) master mix (2X)",
+    "description": "Easy-to-use 2X hot start reaction mix for PCR and high resolution melting on LightCycler 480 or LightCycler 96 systems, containing FastStart Taq DNA Polymerase and LightCycler 480 High Resolution Melting Dye; supplied with 25 mM MgCl2 stock for optimization.",
+    "productUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-high-resolution-melting-master/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2024/03/LightCycler_480_Technical_Note_1_November_2008.pdf",
+    "kitSize": "5 x 1 mL (04909631001)",
+    "applications": [
+      "HRM genotyping / mutation scanning",
+      "detection of heterozygous sequence variants by melt-curve shape"
+    ],
+    "keyParameters": {
+      "notes": "MgCl2 titration recommended; compatible with LightCycler Uracil-DNA Glycosylase"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/lightcycler-480-high-resolution-melting-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "04909631001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "FastStart Essential DNA Green Master",
+    "catalogNumbers": [
+      "06402712001",
+      "06924204001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "SYBR Green I hot-start qPCR master mix (2X) for LightCycler 96 / PRO",
+    "description": "Ready-to-use 2X hot start master mix using SYBR Green I detection with chemically modified FastStart Taq DNA Polymerase (inactive until 75°C, fully activated by 5–10 min at 95°C) for real-time PCR on the LightCycler PRO and LightCycler 96 in 8-tube strips or multiwell plates.",
+    "productUrl": "https://rochesequencingstore.com/catalog/faststart-essential-dna-green-master/",
+    "kitSize": "1 x 5 mL (06402712001) / 10 x 5 mL (06924204001)",
+    "applications": [
+      "SYBR Green qPCR (LightCycler 96 / PRO)",
+      "gene expression",
+      "melting-curve analysis"
+    ],
+    "keyParameters": {
+      "notes": "Hot-start activation 95°C 5–10 min; compatible with LightCycler 480 Multiwell Plates and 8-Tube Strips"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/faststart-essential-dna-green-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "06402712001/06924204001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "FastStart Essential DNA Probes Master",
+    "catalogNumbers": [
+      "06402682001",
+      "06924492001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Hydrolysis-probe hot-start qPCR master mix (2X)",
+    "description": "Ready-to-use 2X reaction mix containing FastStart Taq DNA Polymerase for hot start probe-based qPCR (hydrolysis probes / Universal ProbeLibrary) with a fixed, optimized MgCl2 concentration so no titration is required.",
+    "productUrl": "https://rochesequencingstore.com/catalog/faststart-essential-dna-probes-master/",
+    "kitSize": "1 x 500 reactions of 20 µL (06402682001) / 10 x 500 reactions (06924492001)",
+    "applications": [
+      "probe-based qPCR",
+      "RT-qPCR",
+      "endpoint genotyping"
+    ],
+    "keyParameters": {
+      "notes": "Fixed MgCl2; hydrolysis (FRET) probe chemistry"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/faststart-essential-dna-probes-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "06402682001/06924492001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "Transcriptor First Strand cDNA Synthesis Kit",
+    "catalogNumbers": [
+      "04379012001",
+      "04896866001",
+      "04897030001"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "First-strand cDNA synthesis kit",
+    "description": "All reagents required for first-strand cDNA synthesis of products up to 14 kb using Transcriptor Reverse Transcriptase (with RNase H activity), with random hexamer, anchored-oligo(dT)18 or sequence-specific priming; suitable for downstream qPCR on LightCycler and other real-time instruments and conventional thermal cyclers.",
+    "productUrl": "https://rochesequencingstore.com/catalog/transcriptor-first-strand-cdna-synthesis-kit/",
+    "kitSize": "50 rxn (04379012001) / 100 rxn (04896866001) / 200 rxn (04897030001)",
+    "applications": [
+      "two-step RT-qPCR",
+      "RT-PCR",
+      "gene expression analysis",
+      "GC-rich RNA with secondary structure"
+    ],
+    "keyParameters": {
+      "notes": "cDNA up to 14 kb; 10^8-fold linear range reported on the page"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/transcriptor-first-strand-cdna-synthesis-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "04379012001/04896866001/04897030001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "High Pure Viral Nucleic Acid Kit",
+    "catalogNumbers": [
+      "11858874001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Viral DNA/RNA spin-column purification",
+    "description": "Spin-column purification of viral nucleic acids (RNA and DNA simultaneously) from mammalian serum, plasma or whole blood for PCR/RT-PCR; includes an Inhibitor Removal Buffer and works with heparinized samples (>100 U/mL heparin). Approx. 20 minutes processing.",
+    "productUrl": "https://rochesequencingstore.com/catalog/high-pure-viral-nucleic-acid-kit/",
+    "kitSize": "Up to 100 isolations (11858874001)",
+    "applications": [
+      "viral nucleic acid extraction from serum/plasma/whole blood",
+      "PCR / RT-PCR"
+    ],
+    "keyParameters": {
+      "time": "~20 min",
+      "notes": "Elution in PCR-grade water or low-salt buffer; Large Volume version 05114403001 handles up to 2.5 mL sample (50 isolations)"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/high-pure-viral-nucleic-acid-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11858874001 present on fetched store page; 05114403001 present on fetched https://rochesequencingstore.com/catalog/high-pure-viral-nucleic-acid-large-volume-kit/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "High Pure Viral RNA Kit",
+    "catalogNumbers": [
+      "11858882001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Viral RNA spin-column purification",
+    "description": "Purifies intact viral RNA from serum or plasma without organic solvents or precipitation in approximately 10 minutes for multiple templates; includes a special Inhibitor Removal Buffer for improved RT-PCR sensitivity and is compatible with heparinized samples (>100 U/mL heparin).",
+    "productUrl": "https://rochesequencingstore.com/catalog/high-pure-viral-rna-kit/",
+    "kitSize": "100 isolations (11858882001)",
+    "applications": [
+      "viral RNA extraction from serum/plasma",
+      "RT-PCR"
+    ],
+    "keyParameters": {
+      "time": "~10 min",
+      "notes": "50 µL eluate sufficient for 8–14 RT-PCR reactions"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/high-pure-viral-rna-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11858882001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "High Pure RNA Isolation Kit",
+    "catalogNumbers": [
+      "11828665001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA spin-column purification (cultured cells) with on-column DNase",
+    "description": "Small-scale purification of total RNA from cultured cells (blood, yeast and bacteria with pre-lysis treatments) with integrated DNase digestion to remove genomic DNA; no precipitation or solvent extraction; RNA eluted in 50 µL. Up to 24 samples in ~1 h (single sample ~25 min).",
+    "productUrl": "https://rochesequencingstore.com/catalog/high-pure-rna-isolation-kit/",
+    "kitSize": "50 isolations (11828665001)",
+    "applications": [
+      "RT-PCR / RT-qPCR",
+      "northern blotting",
+      "RNase protection",
+      "primer extension"
+    ],
+    "keyParameters": {
+      "time": "~25 min per sample; up to 24 samples in ~1 h",
+      "notes": "Integrated DNase I digestion; 50 µL elution"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/high-pure-rna-isolation-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11828665001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "High Pure PCR Template Preparation Kit",
+    "catalogNumbers": [
+      "11796828001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA spin-column purification (blood, cells, tissue)",
+    "description": "Glass-fiber spin-column kit (Proteinase K lysis, Inhibitor Removal Buffer, elution buffer) for isolating nucleic acids from whole blood, cultured cells and tissue (bacteria and yeast with pre-lysis) for PCR, real-time PCR, restriction digests and Southern blotting.",
+    "productUrl": "https://rochesequencingstore.com/catalog/high-pure-pcr-template-preparation-kit/",
+    "kitSize": "Up to 100 isolations (11796828001)",
+    "applications": [
+      "genomic DNA extraction",
+      "PCR / qPCR template prep",
+      "restriction digest",
+      "Southern blotting"
+    ],
+    "keyParameters": {
+      "notes": "Yields high-molecular-weight DNA suitable for long templates"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/high-pure-pcr-template-preparation-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11796828001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "MagNA Pure 96 DNA and Viral NA Small Volume Kit",
+    "catalogNumbers": [
+      "06543588001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automated magnetic-glass-particle nucleic acid extraction (MagNA Pure 96)",
+    "description": "Ready-to-use reagents in two prefilled sealed trays for purifying DNA and viral nucleic acids from up to 200 µL of whole blood, plasma, serum, cultured cells or tissue on the MagNA Pure 96 Instrument using Magnetic Glass Particle technology; eluates suitable for sensitive qPCR/RT-qPCR and NGS.",
+    "productUrl": "https://lifescience.roche.com/global/en/products/others/magna-pure-96-dna-and-viral-na-small-volume-kit-382421.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/3.8.2.4.2.1",
+    "kitSize": "Up to 3 x 192 isolations (06543588001)",
+    "applications": [
+      "automated DNA / viral NA extraction",
+      "whole blood, plasma, serum",
+      "cultured cells and FFPE/fresh-frozen tissue",
+      "qPCR and NGS input"
+    ],
+    "keyParameters": {
+      "input": "≤200 µL blood/plasma/serum; ≤5 x 10^5 cultured cells; ≤5 mg fresh-frozen tissue or 1–10 µm FFPE sections",
+      "notes": "IVD-labelled kit; companion MagNA Pure 96 Cellular RNA Large Volume Kit 05467535001"
+    },
+    "sourceUrl": "https://lifescience.roche.com/global/en/products/others/magna-pure-96-dna-and-viral-na-small-volume-kit-382421.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "06543588001 present on fetched lifescience.roche.com product page and on fetched https://rochesequencingstore.com/catalog/magna-pure-96-dna-and-viral-na-small-volume-kit/; 05467535001 present on fetched https://rochesequencingstore.com/catalog/magna-pure-96-cellular-rna-large-volume-kit/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperPETE Reagent Kit",
+    "catalogNumbers": [
+      "09211624001",
+      "09211683001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Primer extension target enrichment (PETE) reagents",
+    "description": "Reagents for primer extension target enrichment of custom-defined regions of the genome or transcriptome; used with KAPA HyperPETE Catalog panels or HyperPETE Choice/Explore panels (capture and release primers) to detect indels, SNVs, CNVs, MSI and RNA fusions in a single-workday workflow.",
+    "productUrl": "https://diagnostics.roche.com/global/en/products/lab/kapa-hyperpete-reagent-kit-pid00000009.html",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00000009",
+    "kitSize": "24 rxn (09211624001) / 96 rxn (09211683001)",
+    "applications": [
+      "targeted DNA/RNA sequencing (FFPE, cfDNA)",
+      "somatic oncology research",
+      "MSI and fusion detection"
+    ],
+    "keyParameters": {
+      "notes": "Catalog panels on the store: HyperPETE Pan Cancer Panel 09329161001 (24) / 09329196001 (96) / 09329226001 (384); HyperPETE Hot Spot Panel 09329234001 (24) / 09329277001 (96) / 09329307001 (384)"
+    },
+    "sourceUrl": "https://diagnostics.roche.com/global/en/products/lab/kapa-hyperpete-reagent-kit-pid00000009.html",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09211624001/09211683001 present on fetched Roche Diagnostics page and on fetched https://rochesequencingstore.com/catalog/kapa-hyperpete-reagent-kit/; panel numbers present on fetched store pages for the Pan Cancer and Hot Spot panels."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperPETE Pan Cancer Panel",
+    "catalogNumbers": [
+      "09329161001",
+      "09329196001",
+      "09329226001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Pre-designed PETE cancer panel (DNA)",
+    "description": "302 kb capture-target PETE panel with 1,321 target regions across 86 cancer-related genes plus 190 MSI loci; single-workday primer extension target enrichment optimized for low-quality/low-quantity FFPE DNA and cfDNA.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hyperpete-pan-cancer-panel/",
+    "protocolUrl": "https://sequencing.roche.com/global/en/products/group/kapa-hyperpete-workflow.html",
+    "kitSize": "24 rxn (09329161001) / 96 rxn (09329196001) / 384 rxn (09329226001)",
+    "applications": [
+      "somatic oncology research",
+      "FFPE DNA and cfDNA mutation detection",
+      "MSI analysis"
+    ],
+    "keyParameters": {
+      "notes": "Requires KAPA HyperPETE Reagent Kit; single-day workflow"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hyperpete-pan-cancer-panel/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09329161001/09329196001/09329226001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperCap Oncology Panel",
+    "catalogNumbers": [
+      "09462384001",
+      "09462457001",
+      "09462465001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Pre-designed hybridization capture cancer panel",
+    "description": "214 kb capture-target hybridization panel covering the full coding sequence of 13 genes (ATM, BRCA1, BRCA2, BRIP1, CHEK2, EGFR, ERBB2, KRAS, MET, MYCN, RAD51C, RAD51D, TP53) plus hotspot variants across 67 genes, for FFPE DNA and cfDNA in the KAPA HyperCap workflow.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hypercap-oncology-panel/",
+    "kitSize": "12 rxn (09462384001) / 24 rxn (09462457001) / 48 rxn (09462465001)",
+    "applications": [
+      "somatic oncology research",
+      "cfDNA and FFPE targeted sequencing"
+    ],
+    "keyParameters": {
+      "notes": "Page reports >97.5% target bases at 1000x from 10 ng cfDNA; requires KAPA HyperCapture Reagent and Bead Kits"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hypercap-oncology-panel/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09462384001/09462457001/09462465001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA HyperExome (v1) Probes",
+    "catalogNumbers": [
+      "09062548001",
+      "09062556001",
+      "09062564001",
+      "09062572001",
+      "09062599001",
+      "09062602001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Whole-exome hybridization capture probes",
+    "description": "Whole exome capture probe set (43 Mb capture target) built on KAPA Target Enrichment probe technology, covering genes and variants from CCDS, RefSeq, Ensembl, GENCODE and ClinVar with design optimized for uniform coverage across GC ranges and hard-to-sequence regions.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-hyperexome/",
+    "kitSize": "12 rxn (09062548001) / 24 rxn (09062556001) / 48 rxn (09062564001) / 96 rxn (09062572001) / 192 rxn (09062599001) / 384 rxn (09062602001)",
+    "applications": [
+      "whole-exome sequencing"
+    ],
+    "keyParameters": {
+      "notes": "Successor design KAPA HyperExome V2 (43.2 Mb) listed separately; used with KAPA HyperCapture Reagent Kit and Bead Kit"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-hyperexome/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "All six material numbers present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA RNA HyperPrep Kit",
+    "catalogNumbers": [
+      "08098093702",
+      "08098107702"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded RNA-seq library prep (no depletion module)",
+    "description": "Streamlined, strand-specific RNA-seq library construction from purified total, rRNA-depleted or poly(A)-enriched RNA using chemistry that combines enzymatic steps and reduces purifications; suitable for manual or automated workflows. Not compatible with small RNAs <100 bp.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-rna-hyperprep-kit/",
+    "protocolUrl": "https://rochesequencingstore.com/wp-content/uploads/2017/10/KAPA-RNA-HyperPrep-Kit-4.pdf",
+    "kitSize": "24 rxn (08098093702) / 96 rxn (08098107702)",
+    "applications": [
+      "whole-transcriptome RNA-seq",
+      "targeted RNA-seq",
+      "gene expression incl. degraded/FFPE RNA",
+      "fusion and splice-junction detection"
+    ],
+    "keyParameters": {
+      "input": "1–100 ng purified total, rRNA-depleted or poly(A)-enriched RNA",
+      "notes": "Adapters sold separately"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-rna-hyperprep-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "08098093702/08098107702 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA NGS FFPE DNA QC Kit",
+    "catalogNumbers": [
+      "09217193001",
+      "09306889001"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "qPCR-based FFPE DNA quality assessment",
+    "description": "qPCR system that assesses FFPE DNA quality by comparing amplification of a large (191 bp) and a small (66 bp) amplicon; each sample run in three technical replicates alongside the QC PCR DNA Standard and a no-template control, within the KAPA HyperPETE Somatic Tissue DNA workflow.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-ngs-ffpe-dna-qc-kit/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00000017",
+    "kitSize": "24 rxn (09217193001) / 96 rxn (09306889001)",
+    "applications": [
+      "FFPE DNA quality/quantity QC before target enrichment"
+    ],
+    "keyParameters": {
+      "notes": "Q-ratio of 191 bp vs 66 bp amplicon"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-ngs-ffpe-dna-qc-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09217193001/09306889001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "cOmplete Protease Inhibitor Cocktail (tablets)",
+    "catalogNumbers": [
+      "11697498001",
+      "11836145001"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protease inhibitor cocktail tablets",
+    "description": "Mixture of several protease inhibitors with broad inhibitory specificity for inhibition of serine, cysteine and metalloproteases in bacterial, mammalian, yeast and plant cell extracts; convenient pre-dosed tablets, one tablet per 50 mL extraction solution.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/coro",
+    "storage": "2–8°C (tablets); stock solution 1–2 weeks at 2–8°C or ≥12 weeks at -15 to -25°C",
+    "kitSize": "Vial of 20 tablets (11697498001) / 3 x 20 tablets (11836145001)",
+    "applications": [
+      "protein extraction and purification",
+      "cell lysis for western blot",
+      "enzyme assays"
+    ],
+    "keyParameters": {
+      "notes": "Working concentration 1 tablet per 50 mL; 25X stock: dissolve one tablet in 2 mL water or 100 mM phosphate buffer pH 7.0"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/coro",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Roche material numbers 11697498001/11836145001 present on fetched Sigma-Aldrich (MilliporeSigma) product page for Roche cOmplete (CO-RO); Roche life-science reagents are distributed via Sigma-Aldrich and lifescience.roche.com has no fetchable product page for this item."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "PhosSTOP phosphatase inhibitor tablets",
+    "catalogNumbers": [
+      "04906837001",
+      "04906845001"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Phosphatase inhibitor cocktail tablets",
+    "description": "Ready-to-use phosphatase inhibitor tablets that dissolve quickly in aqueous solutions and inhibit acid, alkaline, serine/threonine and tyrosine protein phosphatases in mammalian, plant, yeast and bacterial samples; one tablet per 10 mL extract or buffer.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/phossro",
+    "storage": "2–8°C",
+    "kitSize": "Pkg of 20 tablets (04906837001) / 10 tablets (04906845001)",
+    "applications": [
+      "preservation of protein phosphorylation during lysis",
+      "phospho-western blot / phosphoproteomics sample prep"
+    ],
+    "keyParameters": {
+      "notes": "1 tablet per 10 mL; or 10X stock in 1 mL water or 100 mM phosphate buffer pH 7.0"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/phossro",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Roche material numbers 04906837001/04906845001 present on fetched Sigma-Aldrich product page for Roche PhosSTOP (PHOSS-RO)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "Cell Proliferation Kit I (MTT)",
+    "catalogNumbers": [
+      "11465007001"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Colorimetric MTT proliferation/viability/cytotoxicity assay",
+    "description": "Colorimetric assay for non-radioactive quantification of cell proliferation, viability and cytotoxicity based on cleavage of the MTT tetrazolium salt by metabolically active cells to formazan, read on an ELISA plate reader; kit contains MTT Labeling Reagent and Solubilization Solution.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11465007001",
+    "storage": "-20°C (working MTT solution 2–8°C after thawing)",
+    "kitSize": "1 kit, sufficient for ≤2,500 tests (11465007001)",
+    "applications": [
+      "cell proliferation",
+      "cell viability",
+      "cytotoxicity assays in 96-well format"
+    ],
+    "keyParameters": {
+      "notes": "Companion Cell Proliferation Reagent WST-1 (ready-to-use, no solubilization): 8 mL 05015944001 (≤800 tests) / 25 mL 11644807001 (≤2,500 tests), storage -20°C"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11465007001",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11465007001 present on fetched Sigma-Aldrich product page for Roche Cell Proliferation Kit I (MTT); WST-1 numbers present on fetched https://www.sigmaaldrich.com/US/en/product/roche/cellproro."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "DIG RNA Labeling Kit (SP6/T7)",
+    "catalogNumbers": [
+      "11175025910"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Non-radioactive (digoxigenin) RNA probe labeling by in vitro transcription",
+    "description": "Kit for generating digoxigenin-labeled RNA probes by in vitro transcription with SP6 or T7 RNA polymerase; probes suitable for northern and Southern blots and in situ hybridization as a non-radioactive alternative.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11175025910",
+    "storage": "-20°C",
+    "kitSize": "1 kit (12 components), sufficient for 2 x 10 labeling reactions (11175025910)",
+    "applications": [
+      "in situ hybridization probes",
+      "northern / Southern blot probes"
+    ],
+    "keyParameters": {
+      "notes": "Detect with Anti-Digoxigenin-AP Fab fragments (11093274910, 200 µL/150 U, store 2–8°C; 150 mU/mL dot blot, 1.5–7.5 U/mL in situ hybridization)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11175025910",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11175025910 present on fetched Sigma-Aldrich product page for Roche DIG RNA Labeling Kit (SP6/T7); 11093274910 present on fetched https://www.sigmaaldrich.com/US/en/product/roche/11093274910 (Anti-Digoxigenin-AP, Fab fragments)."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "Anti-Digoxigenin-AP, Fab fragments",
+    "catalogNumbers": [
+      "11093274910"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Alkaline phosphatase-conjugated anti-DIG detection antibody",
+    "description": "Fab fragments of polyclonal sheep anti-digoxigenin antibody conjugated to alkaline phosphatase for detection of DIG-labeled nucleic acids and compounds in northern/Southern blots, ELISA and in situ hybridization.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11093274910",
+    "storage": "2–8°C",
+    "kitSize": "200 µL (150 U) (11093274910)",
+    "applications": [
+      "DIG-labeled probe detection on blots",
+      "in situ hybridization",
+      "ELISA"
+    ],
+    "keyParameters": {
+      "notes": "Recommended concentrations: 150 mU/mL (dot blot), 150–300 mU/mL (ELISA), 1.5–7.5 U/mL (in situ hybridization)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11093274910",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11093274910 present on fetched Sigma-Aldrich product page for Roche Anti-Digoxigenin-AP, Fab fragments."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "Digital LightCycler 5x DNA Master / 5x RNA Master",
+    "catalogNumbers": [
+      "09393544001",
+      "08897115001"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Digital PCR master mixes (Digital LightCycler System)",
+    "description": "Generic 5X master mixes for the Digital LightCycler System enabling laboratory-developed digital PCR tests: DNA Master for DNA targets and RNA Master including a thermostable polymerase for one-step reverse transcription and PCR; both contain dUTP (instead of dTTP) with AmpErase enzyme for contamination control and support up to 6 fluorescent dyes.",
+    "productUrl": "https://rochesequencingstore.com/catalog/digital-lightcycler-5x-dna-master/",
+    "kitSize": "240 tests each: 5x DNA Master (09393544001) / 5x RNA Master (08897115001)",
+    "applications": [
+      "digital PCR laboratory-developed tests",
+      "absolute quantification of nucleic acids",
+      "rare variant detection with LightMix Digital assays"
+    ],
+    "keyParameters": {
+      "notes": "Exclusive to the Digital LightCycler System (nanowell plates); labelled for in vitro diagnostic use"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/digital-lightcycler-5x-dna-master/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09393544001 present on fetched store page for the DNA Master; 08897115001 present on fetched https://rochesequencingstore.com/catalog/digital-lightcycler-5x-rna-master/."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "KAPA NGS DNA Extraction Kit",
+    "catalogNumbers": [
+      "09189823001",
+      "09190023001"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "FFPE DNA extraction for NGS",
+    "description": "Extracts PCR-ready DNA from formalin-fixed paraffin-embedded samples as the first step of the KAPA HyperPETE Somatic Tissue DNA workflow, prior to QC with the KAPA NGS FFPE DNA QC Kit and library preparation.",
+    "productUrl": "https://rochesequencingstore.com/catalog/kapa-ngs-dna-extraction-kit/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00000015",
+    "kitSize": "24 rxn (09189823001) / 96 rxn (09190023001)",
+    "applications": [
+      "FFPE DNA extraction for targeted NGS"
+    ],
+    "keyParameters": {
+      "input": "FFPE tissue sections"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/kapa-ngs-dna-extraction-kit/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09189823001/09190023001 present on fetched Roche Sequencing Store product page."
+  },
+  {
+    "vendor": "Roche",
+    "vendorShort": "Roche",
+    "productName": "AVENIO ctDNA Expanded Kit V2 (RUO)",
+    "catalogNumbers": [
+      "09733779001"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Liquid biopsy targeted NGS assay (cfDNA)",
+    "description": "Pan-cancer NGS liquid biopsy research assay with a 77-gene, 192 kb panel containing genes in U.S. NCCN Guidelines and emerging cancer biomarkers; detects SNVs, indels, fusions and CNVs from plasma cfDNA. For Research Use Only.",
+    "productUrl": "https://rochesequencingstore.com/catalog/avenio-ctdna-expanded-kit-v2/",
+    "protocolUrl": "https://elabdoc-prod.roche.com/eLD/web/global/en/products/PID00000558",
+    "kitSize": "16 rxn (09733779001)",
+    "applications": [
+      "ctDNA / liquid biopsy research",
+      "lung and colorectal cancer research"
+    ],
+    "keyParameters": {
+      "input": "4 mL plasma; 10–50 ng cfDNA",
+      "time": "~5 days from extraction to results",
+      "notes": "Research Use Only"
+    },
+    "sourceUrl": "https://rochesequencingstore.com/catalog/avenio-ctdna-expanded-kit-v2/",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "09733779001 present on fetched Roche Sequencing Store product page."
+  }
+]

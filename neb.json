@@ -1,0 +1,1889 @@
+[
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Q5 High-Fidelity 2X Master Mix",
+    "catalogNumbers": [
+      "M0492S",
+      "M0492L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity PCR master mix",
+    "description": "Ready-to-use 2X master mix containing Q5 High-Fidelity DNA Polymerase, dNTPs and Mg2+; error rate ~280-fold lower than Taq, suitable for amplicons across a wide range of GC content.",
+    "productUrl": "https://www.neb.com/en/products/m0492-q5-high-fidelity-2x-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-q5-high-fidelity-2x-master-mix-m0492",
+    "storage": "-20°C",
+    "kitSize": "100 reactions of 50 µL (S) / 500 reactions of 50 µL (L)",
+    "applications": [
+      "high-fidelity PCR",
+      "cloning",
+      "GC-rich templates"
+    ],
+    "keyParameters": {
+      "notes": "Final Mg2+ 2 mM at 1X; use NEB Tm Calculator for annealing temperature (universal 60 °C annealing possible)"
+    },
+    "sourceUrl": "https://www.neb.com/en/products/m0492-q5-high-fidelity-2x-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0492S/M0492L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Q5 Hot Start High-Fidelity DNA Polymerase",
+    "catalogNumbers": [
+      "M0493S",
+      "M0493L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity hot-start DNA polymerase",
+    "description": "Thermostable high-fidelity DNA polymerase (~280-fold lower error rate than Taq) with an aptamer-based hot start that allows room-temperature reaction setup; supplied with 5X Q5 Reaction Buffer and High GC Enhancer.",
+    "productUrl": "https://www.neb.com/products/m0493-q5-hot-start-high-fidelity-dna-polymerase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/pcr-using-q5-hot-start-high-fidelity-dna-polymerase-m0493",
+    "storage": "-20°C",
+    "kitSize": "100 units (S) / 500 units (L) at 2,000 units/mL",
+    "applications": [
+      "high-fidelity PCR",
+      "cloning",
+      "difficult amplicons",
+      "room-temperature setup"
+    ],
+    "keyParameters": {
+      "time": "Extension ~30 s/kb",
+      "notes": "5X Q5 Reaction Buffer gives 2 mM Mg2+ at 1X; High GC Enhancer for >=65% GC targets; use NEB Tm Calculator for annealing"
+    },
+    "sourceUrl": "https://www.neb.com/products/m0493-q5-hot-start-high-fidelity-dna-polymerase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0493S/M0493L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Q5 Hot Start High-Fidelity 2X Master Mix",
+    "catalogNumbers": [
+      "M0494S",
+      "M0494L",
+      "M0494X"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity hot-start PCR master mix",
+    "description": "2X master mix combining Q5 Hot Start High-Fidelity DNA Polymerase with dNTPs and Mg2+ in a ready-to-use format; ~280-fold higher fidelity than Taq with aptamer-based hot start.",
+    "productUrl": "https://www.neb.com/en-us/products/m0494-q5-hot-start-high-fidelity-2x-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-q5-hot-start-high-fidelity-2x-master-mix-m0494",
+    "storage": "-20°C",
+    "kitSize": "100 reactions (S) / 500 reactions (L) / 500 reactions bulk 1 x 12.5 mL (X)",
+    "applications": [
+      "high-fidelity PCR",
+      "cloning",
+      "site-directed mutagenesis",
+      "GC-rich templates"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with universal 60 °C annealing; use NEB Tm Calculator for primer-specific annealing temperatures"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0494-q5-hot-start-high-fidelity-2x-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0494S/M0494L/M0494X present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "OneTaq Hot Start 2X Master Mix with Standard Buffer",
+    "catalogNumbers": [
+      "M0484S",
+      "M0484L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Hot-start Taq master mix",
+    "description": "Hot-start 2X master mix of Taq and Deep Vent DNA polymerases with an aptamer-based inhibitor, giving 2X higher fidelity than Taq; suited to routine and challenging PCR from pure DNA, bacterial colonies and cDNA.",
+    "productUrl": "https://www.neb.com/en-us/products/m0484-onetaq-hot-start-2x-master-mix-with-standard-buffer",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/onetaq-hot-start-2x-master-mix-with-standard-buffer-m0484",
+    "storage": "-20°C",
+    "kitSize": "100 reactions of 50 µL, 2 x 1.25 mL (S) / 500 reactions of 50 µL, 10 x 1.25 mL (L)",
+    "applications": [
+      "routine PCR",
+      "colony PCR",
+      "hot-start PCR"
+    ],
+    "keyParameters": {
+      "input": "Pure DNA, bacterial colonies, cDNA",
+      "notes": "1X mix: 1.8 mM MgCl2, 0.2 mM dNTPs, 25 U/mL OneTaq; amplicons up to ~6 kb genomic DNA; room-temperature setup; stable for 15 freeze-thaw cycles"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0484-onetaq-hot-start-2x-master-mix-with-standard-buffer",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0484S/M0484L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "OneTaq 2X Master Mix with Standard Buffer",
+    "catalogNumbers": [
+      "M0482S",
+      "M0482L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Standard Taq master mix",
+    "description": "An optimized blend of Taq and Deep Vent DNA Polymerases in a 2X master mix suited to routine PCR from a variety of templates; 2X higher fidelity than standard Taq and works with targets up to 65% GC.",
+    "productUrl": "https://www.neb.com/en-us/products/m0482-onetaq-2x-master-mix-with-standard-buffer",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-onetaq-2x-master-mix-with-standard-buffer-m0482",
+    "storage": "-20°C",
+    "kitSize": "100 reactions of 50 µL, 2 x 1.25 mL (S) / 500 reactions of 50 µL, 10 x 1.25 mL (L)",
+    "applications": [
+      "routine PCR",
+      "colony PCR",
+      "cDNA amplification"
+    ],
+    "keyParameters": {
+      "input": "Pure DNA, bacterial colonies, cDNA",
+      "notes": "Amplicons up to ~6 kb genomic DNA; 25 U/mL OneTaq at 1X"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0482-onetaq-2x-master-mix-with-standard-buffer",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0482S/M0482L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "LongAmp Taq 2X Master Mix",
+    "catalogNumbers": [
+      "M0287S",
+      "M0287L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Long-range PCR master mix",
+    "description": "Ready-to-use master mix combining recombinant Taq DNA Polymerase with a trace amount of Deep Vent DNA Polymerase for long-range PCR (up to 30 kb) with 2X higher fidelity than Taq.",
+    "productUrl": "https://www.neb.com/en-us/products/m0287-longamp-taq-2x-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-longamp-taq-2x-master-mix-m0287",
+    "storage": "-20°C",
+    "kitSize": "100 reactions of 50 µL (S) / 500 reactions of 50 µL (L)",
+    "applications": [
+      "long-range PCR",
+      "genomic DNA amplification"
+    ],
+    "keyParameters": {
+      "notes": "Amplicons up to 30 kb; extension at 65 °C; 1X: 2 mM MgSO4, 0.3 mM dNTPs, 125 U/mL enzyme"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0287-longamp-taq-2x-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0287S/M0287L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Phusion High-Fidelity DNA Polymerase",
+    "catalogNumbers": [
+      "M0530S",
+      "M0530L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity DNA polymerase",
+    "description": "Thermostable Pyrococcus-like DNA polymerase fused to a processivity-enhancing domain, providing 50X higher fidelity than Taq and short extension times; supplied with 5X Phusion HF and 5X Phusion GC Buffers.",
+    "productUrl": "https://www.neb.com/en-us/products/m0530-phusion-high-fidelity-dna-polymerase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/pcr-protocol-m0530",
+    "storage": "-20°C",
+    "kitSize": "100 units (S) / 500 units (L) at 2,000 units/mL",
+    "applications": [
+      "high-fidelity PCR",
+      "cloning",
+      "GC-rich templates"
+    ],
+    "keyParameters": {
+      "time": "Extension times as short as 30 s",
+      "notes": "Annealing temperature requirements differ from most PCR enzymes; use NEB Tm Calculator"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0530-phusion-high-fidelity-dna-polymerase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0530S/M0530L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Luna Universal qPCR Master Mix",
+    "catalogNumbers": [
+      "M3003S",
+      "M3003L",
+      "M3003X",
+      "M3003E"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "SYBR/dye-based qPCR master mix",
+    "description": "Optimized 2X reaction mix for real-time qPCR detection and quantitation of target DNA using SYBR Green I dye-based detection; contains Hot Start Taq, dUTP and a universal passive reference dye compatible across instrument platforms.",
+    "productUrl": "https://www.neb.com/en-us/products/m3003-luna-universal-qpcr-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/luna-universal-qpcr-master-mix-protocol-m3003",
+    "storage": "-20°C",
+    "kitSize": "200 reactions (S) / 500 reactions (L) / 1,000 reactions (X) / 2,500 reactions (E)",
+    "applications": [
+      "qPCR",
+      "gene expression (two-step RT-qPCR)",
+      "DNA quantitation"
+    ],
+    "keyParameters": {
+      "input": "cDNA or genomic DNA; 6-log range (20 ng – 0.2 pg) demonstrated",
+      "notes": "40–45 cycles recommended; SYBR Green I chemistry; includes dUTP and visible tracking dye"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m3003-luna-universal-qpcr-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M3003S/L/X/E present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Luna Universal Probe qPCR Master Mix",
+    "catalogNumbers": [
+      "M3004S",
+      "M3004L",
+      "M3004X",
+      "M3004E"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Probe-based qPCR master mix",
+    "description": "2X master mix for probe-based (hydrolysis probe) qPCR detection and quantitation of DNA and cDNA targets; contains Hot Start Taq DNA Polymerase, a universal passive reference dye and dUTP for carryover prevention.",
+    "productUrl": "https://www.neb.com/en-us/products/m3004-luna-universal-probe-qpcr-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/luna-universal-probe-qpcr-master-mix-protocol-m3004",
+    "storage": "-20°C",
+    "kitSize": "200 reactions (S) / 500 reactions (L) / 1,000 reactions (X) / 2,500 reactions (E)",
+    "applications": [
+      "probe qPCR",
+      "multiplex qPCR",
+      "two-step RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "20 ng – 0.2 pg cDNA; 50 ng – 1 pg genomic DNA",
+      "notes": "40–45 cycles; 400 nM primers and 200 nM probe per target; supports multiplexing with different fluorophores"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m3004-luna-universal-probe-qpcr-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M3004S/L/X/E present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Luna Universal One-Step RT-qPCR Kit",
+    "catalogNumbers": [
+      "E3005S",
+      "E3005L",
+      "E3005X",
+      "E3005E"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "One-step RT-qPCR (dye-based)",
+    "description": "Dye-based (SYBR Green I) one-step RT-qPCR kit combining Hot Start Taq DNA Polymerase with thermostable WarmStart Reverse Transcriptase in a single-tube workflow, with aptamer-based control of both enzymes.",
+    "productUrl": "https://www.neb.com/en-us/products/e3005-luna-universal-one-step-rt-qpcr-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/luna-universal-one-step-rt-qpcr-kit-protocol-e3005",
+    "storage": "-20°C",
+    "kitSize": "200 reactions (S) / 500 reactions (L) / 1,000 reactions (X) / 2,500 reactions (E)",
+    "applications": [
+      "one-step RT-qPCR",
+      "RNA quantitation",
+      "gene expression"
+    ],
+    "keyParameters": {
+      "input": "100 ng – 10 pg total RNA (8-log input range supported)",
+      "time": "RT 10 min at 55 °C (up to 60 °C for difficult targets), then 40 cycles (45 for very low input)",
+      "notes": "20 µL reactions in 96-well or 10 µL in 384-well; amplicons 70–200 bp optimal"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e3005-luna-universal-one-step-rt-qpcr-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E3005S/L/X/E present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "LunaScript RT SuperMix Kit",
+    "catalogNumbers": [
+      "E3010S",
+      "E3010L"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "cDNA synthesis master mix",
+    "description": "Optimized master mix for first-strand cDNA synthesis with thermostable Luna Reverse Transcriptase, random hexamer and poly-dT primers and RNase inhibitor; designed for two-step RT-qPCR and amplicon sequencing workflows.",
+    "productUrl": "https://www.neb.com/en-us/products/e3010-luna-script-rt-supermix-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-lunascript-rt-supermix-kit-e3010",
+    "storage": "-20°C",
+    "kitSize": "25 reactions (S) / 100 reactions (L)",
+    "applications": [
+      "first-strand cDNA synthesis",
+      "two-step RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "Up to 1 µg total RNA down to single RNA copies",
+      "time": "~13 min total (25 °C 2 min, 55 °C 10 min, 95 °C 1 min)",
+      "notes": "Random hexamer and oligo-dT primers included in the mix"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e3010-luna-script-rt-supermix-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E3010S/E3010L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "ProtoScript II Reverse Transcriptase",
+    "catalogNumbers": [
+      "M0368S",
+      "M0368L",
+      "M0368X"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "M-MuLV reverse transcriptase (RNase H-)",
+    "description": "Recombinant M-MuLV reverse transcriptase engineered for reduced RNase H activity and increased thermostability, enabling first-strand cDNA synthesis at elevated temperatures with full-length products up to 12 kb.",
+    "productUrl": "https://www.neb.com/en-us/products/m0368-protoscript-ii-reverse-transcriptase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/first-strand-cdna-synthesis-standard-protocol-neb-m0368",
+    "storage": "-20°C",
+    "kitSize": "4,000 units (S) / 10,000 units (L) / 40,000 units (X)",
+    "applications": [
+      "first-strand cDNA synthesis",
+      "RT-PCR",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "1 pg – 1 µg total RNA",
+      "notes": "Optimal at 42 °C, active up to 48 °C; RNase H-; cDNA up to 12 kb"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0368-protoscript-ii-reverse-transcriptase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0368S/L/X present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBuilder HiFi DNA Assembly Master Mix",
+    "catalogNumbers": [
+      "E2621S",
+      "E2621L",
+      "E2621X"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Seamless (Gibson-type) DNA assembly master mix",
+    "description": "Master mix of exonuclease, polymerase and ligase enabling seamless assembly of multiple DNA fragments regardless of length or end compatibility, producing fully sealed dsDNA suitable for direct transformation.",
+    "productUrl": "https://www.neb.com/en-us/products/e2621-nebuilder-hifi-dna-assembly-master-mix",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/nebuilder-hifi-dna-assembly-reaction-protocol",
+    "storage": "-20°C",
+    "kitSize": "10 reactions (S) / 50 reactions (L) / 250 reactions (X)",
+    "applications": [
+      "seamless cloning",
+      "multi-fragment assembly",
+      "vector construction"
+    ],
+    "keyParameters": {
+      "input": "~20 fmol per fragment recommended for 20 bp overlaps; equimolar ratios for 4+ fragments",
+      "time": "50 °C for 15–60 min",
+      "notes": "Up to 11 fragments; 15–30 bp overlaps optimal"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e2621-nebuilder-hifi-dna-assembly-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E2621S/L/X present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBuilder HiFi DNA Assembly Cloning Kit",
+    "catalogNumbers": [
+      "E5520S"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Seamless DNA assembly kit with competent cells",
+    "description": "Combines NEBuilder HiFi DNA Assembly Master Mix with NEB 5-alpha Competent E. coli, positive control, pUC19 vector and SOC medium for one-step seamless assembly of multiple DNA fragments and transformation.",
+    "productUrl": "https://www.neb.com/en-us/products/e5520-nebuilder-hifi-dna-assembly-cloning-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/nebuilder-hifi-dna-assembly-reaction-protocol",
+    "storage": "-80°C (competent cells); -20°C (master mix)",
+    "kitSize": "10 reactions",
+    "applications": [
+      "seamless cloning",
+      "multi-fragment assembly"
+    ],
+    "keyParameters": {
+      "input": "Insert >=2x vector concentration; equimolar for 4+ fragments",
+      "time": "15–60 min at 50 °C",
+      "notes": "Up to 11 fragments; 15–30 bp overlaps; assemblies up to 15 kb with NEB 5-alpha (use NEB 10-beta for larger)"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e5520-nebuilder-hifi-dna-assembly-cloning-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog number E5520S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBridge Golden Gate Assembly Kit (BsaI-HF v2)",
+    "catalogNumbers": [
+      "E1601S",
+      "E1601L"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Golden Gate assembly kit (Type IIS)",
+    "description": "Kit for seamless (scarless) Golden Gate assembly of 2–50+ DNA fragments using the Type IIS restriction enzyme BsaI-HFv2 and T4 DNA Ligase; includes enzyme mix, T4 DNA Ligase Reaction Buffer and pGGAselect destination plasmid. Formerly branded NEB Golden Gate Assembly Kit (BsaI-HFv2).",
+    "productUrl": "https://www.neb.com/en-us/products/e1601-nebridge-golden-gate-assembly-mix-basai-hf-v2",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/golden-gate-assembly-protocol-for-using-neb-golden-gate-assembly-mix-e1601",
+    "storage": "-20°C",
+    "kitSize": "20 reactions (S) / 100 reactions (L)",
+    "applications": [
+      "Golden Gate assembly",
+      "multi-fragment assembly",
+      "modular cloning"
+    ],
+    "keyParameters": {
+      "notes": "Fragments <100 bp to >15 kb; standard 30 cycles of alternating digestion/ligation, up to 60 cycles supported"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e1601-nebridge-golden-gate-assembly-mix-basai-hf-v2",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E1601S/E1601L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBridge Golden Gate Assembly Kit (BsmBI-v2)",
+    "catalogNumbers": [
+      "E1602S",
+      "E1602L"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Golden Gate assembly kit (Type IIS)",
+    "description": "Kit for efficient, seamless Golden Gate cloning and assembly of 2–50+ DNA fragments using Type IIS restriction enzyme BsmBI-v2; includes enzyme mix, T4 DNA Ligase Reaction Buffer and pGGAselect destination plasmid.",
+    "productUrl": "https://www.neb.com/en-us/products/e1602-nebridge-golden-gate-assembly-kit-bsmbi-v2",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/golden-gate-assembly-protocol-for-using-neb-golden-gate-assembly-kit-bsmbi-v2-neb-e1602",
+    "storage": "-20°C",
+    "kitSize": "20 reactions (S) / 100 reactions (L)",
+    "applications": [
+      "Golden Gate assembly",
+      "multi-fragment assembly",
+      "sgRNA library cloning"
+    ],
+    "keyParameters": {
+      "notes": "Fragments <100 bp to >15 kb; 30 cycles recommended for multi-fragment assemblies (up to 65 cycles)"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e1602-nebridge-golden-gate-assembly-kit-bsmbi-v2",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E1602S/E1602L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEB PCR Cloning Kit",
+    "catalogNumbers": [
+      "E1202S"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "PCR product cloning kit",
+    "description": "Rapid cloning of PCR products with blunt or single-base overhang ends into linearized pMiniT 2.0 vector using a proprietary ligation enhancer; includes NEB 10-beta Competent E. coli, outgrowth medium and analysis primers, with no purification or blue/white screening required.",
+    "productUrl": "https://www.neb.com/en-us/products/e1202-neb-pcr-cloning-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/ligation-protocol-e1202",
+    "storage": "-20°C (competent cells -80°C)",
+    "kitSize": "20 reactions",
+    "applications": [
+      "PCR product cloning",
+      "TA/blunt cloning",
+      "in vitro transcription templates (SP6/T7)"
+    ],
+    "keyParameters": {
+      "input": "Purified or unpurified PCR product from Taq, Q5, OneTaq or LongAmp Taq",
+      "time": "5 min ligation",
+      "notes": "No 5' phosphate required on insert"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e1202-neb-pcr-cloning-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog number E1202S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Q5 Site-Directed Mutagenesis Kit",
+    "catalogNumbers": [
+      "E0554S"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Site-directed mutagenesis kit",
+    "description": "Rapid site-specific mutagenesis (insertions, deletions, substitutions) of double-stranded plasmid DNA in under two hours using Q5 Hot Start High-Fidelity 2X Master Mix with mutagenic primers followed by a KLD (kinase-ligase-DpnI) step; includes NEB 5-alpha Competent E. coli.",
+    "productUrl": "https://www.neb.com/en-us/products/e0554-q5-site-directed-mutagenesis-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/q5-site-directed-mutagenesis-kit-protocol-e0554",
+    "storage": "-20°C",
+    "kitSize": "10 reactions",
+    "applications": [
+      "site-directed mutagenesis",
+      "insertions/deletions",
+      "point mutations"
+    ],
+    "keyParameters": {
+      "input": "1–25 ng plasmid template",
+      "time": "<2 h total; KLD step 5 min at room temperature",
+      "notes": "Plasmids up to at least 20 kb; non-overlapping primers, exponential amplification"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e0554-q5-site-directed-mutagenesis-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog number E0554S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "T4 DNA Ligase",
+    "catalogNumbers": [
+      "M0202S",
+      "M0202T",
+      "M0202L",
+      "M0202M"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "DNA ligase",
+    "description": "Catalyzes the formation of a phosphodiester bond between juxtaposed 5' phosphate and 3' hydroxyl termini in duplex DNA or RNA; joins blunt and cohesive-end fragments and repairs single-stranded nicks. Supplied with 10X T4 DNA Ligase Reaction Buffer.",
+    "productUrl": "https://www.neb.com/en-us/products/m0202-t4-dna-ligase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/dna-ligation-with-t4-dna-ligase-m0202",
+    "storage": "-20°C",
+    "kitSize": "20,000 units at 400,000 U/mL (S) / 20,000 units at 2,000,000 U/mL (T) / 100,000 units at 400,000 U/mL (L) / 100,000 units at 2,000,000 U/mL (M)",
+    "applications": [
+      "cloning",
+      "ligation",
+      "Golden Gate assembly",
+      "adapter ligation"
+    ],
+    "keyParameters": {
+      "time": "16 °C in 1X T4 DNA Ligase Reaction Buffer",
+      "notes": "Buffer: 50 mM Tris-HCl, 10 mM MgCl2, 1 mM ATP, 10 mM DTT pH 7.5; heat inactivate 65 °C 10 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0202-t4-dna-ligase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0202S/T/L/M present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Quick Ligation Kit",
+    "catalogNumbers": [
+      "M2200S",
+      "M2200L"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Rapid ligation kit",
+    "description": "Rapid ligation of cohesive- or blunt-end DNA fragments in 5 minutes at room temperature (25 °C) using T4 DNA Ligase with an optimized 2X buffer containing PEG, ATP and MgCl2.",
+    "productUrl": "https://www.neb.com/en-us/products/m2200-quick-ligation-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/quick-ligation-protocol",
+    "storage": "-20°C",
+    "kitSize": "30 reactions (S) / 150 reactions (L)",
+    "applications": [
+      "cloning",
+      "rapid ligation"
+    ],
+    "keyParameters": {
+      "input": "20–30 fmol vector; insert:vector 1:1 to 1:10; DNA 1–10 ng/µL",
+      "time": "5 min at 25 °C",
+      "notes": "Longer incubation gives no benefit; transformation efficiency declines after 1 h"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m2200-quick-ligation-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M2200S/M2200L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Instant Sticky-end Ligase Master Mix",
+    "catalogNumbers": [
+      "M0370S",
+      "M0370L"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Ligase master mix",
+    "description": "Ready-to-use 2X solution of T4 DNA Ligase with a proprietary ligation enhancer formulated to instantly ligate cohesive-end (2–4 bp overhang) substrates and improve transformation; remains liquid at -20 °C.",
+    "productUrl": "https://www.neb.com/en-us/products/m0370-instant-sticky-end-ligase-master-mix",
+    "storage": "-20°C",
+    "kitSize": "50 reactions (S) / 250 reactions (L)",
+    "applications": [
+      "sticky-end ligation",
+      "cloning"
+    ],
+    "keyParameters": {
+      "input": "Vector 20–100 ng; insert 2–6 fold molar excess",
+      "time": "Instant for sticky ends; 5–15 min for blunt/TA ends at 4–25 °C",
+      "notes": "10 µL reactions recommended; not heat-inactivatable; column purify before electroporation"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0370-instant-sticky-end-ligase-master-mix",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0370S/M0370L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEB 5-alpha Competent E. coli (High Efficiency)",
+    "catalogNumbers": [
+      "C2987H",
+      "C2987I",
+      "C2987P",
+      "C2987R",
+      "C2987U"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Chemically competent cells (cloning strain)",
+    "description": "High-efficiency chemically competent DH5-alpha derivative (T1 phage resistant, endA1, recA1) for a wide variety of cloning applications and high-quality plasmid preparation.",
+    "productUrl": "https://www.neb.com/en-us/products/c2987-neb-5-alpha-competent-e-coli-high-efficiency",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/high-efficiency-transformation-protocol-c2987",
+    "storage": "-80°C",
+    "kitSize": "20 x 0.05 mL (H) / 6 x 0.2 mL (I) / 96-well plate (P) / 384-well plate (R) / 96 x 0.05 mL strips (U)",
+    "applications": [
+      "transformation",
+      "cloning",
+      "plasmid propagation"
+    ],
+    "keyParameters": {
+      "notes": "Efficiency 1–3 x 10^9 cfu/µg pUC19 (H/I/P/U), 1–5 x 10^8 (R); heat shock ~30 s; SOC outgrowth"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/c2987-neb-5-alpha-competent-e-coli-high-efficiency",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers C2987H/I/P/R/U present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEB 10-beta Competent E. coli (High Efficiency)",
+    "catalogNumbers": [
+      "C3019H",
+      "C3019I",
+      "C3019P"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Chemically competent cells (large plasmids/BACs)",
+    "description": "High-efficiency chemically competent DH10B derivative, T1 phage resistant and endonuclease I deficient, ideal for cloning large plasmids and BACs and for methylated DNA from eukaryotic sources.",
+    "productUrl": "https://www.neb.com/en-us/products/c3019-neb-10-beta-competent-e-coli-high-efficiency",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/high-efficiency-transformation-protocol-c3019",
+    "storage": "-80°C",
+    "kitSize": "20 x 0.05 mL (H) / 6 x 0.2 mL (I) / 96-well plate (P)",
+    "applications": [
+      "transformation",
+      "large plasmid/BAC cloning",
+      "USER cloning",
+      "site-directed mutagenesis"
+    ],
+    "keyParameters": {
+      "notes": "Efficiency 1–3 x 10^9 cfu/µg pUC19 (H/I), 1–3 x 10^8 (P); heat shock 30–50 s; 20–30 min on ice with DNA"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/c3019-neb-10-beta-competent-e-coli-high-efficiency",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers C3019H/I/P present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "BL21(DE3) Competent E. coli",
+    "catalogNumbers": [
+      "C2527H",
+      "C2527I"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Chemically competent T7 expression strain",
+    "description": "Chemically competent cells of the widely used T7 expression E. coli strain BL21(DE3), deficient in Lon and OmpT proteases and resistant to phage T1; supplied with SOC outgrowth medium.",
+    "productUrl": "https://www.neb.com/en-us/products/c2527-bl21de3-competent-e-coli",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protein-expression-using-bl21de3-c2527",
+    "storage": "-80°C",
+    "kitSize": "20 x 0.05 mL (H) / 6 x 0.2 mL (I)",
+    "applications": [
+      "T7 protein expression",
+      "transformation"
+    ],
+    "keyParameters": {
+      "notes": "Efficiency 1–5 x 10^7 cfu/µg pUC19; do not store at -20 °C"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/c2527-bl21de3-competent-e-coli",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers C2527H/C2527I present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEB Turbo Competent E. coli (High Efficiency)",
+    "catalogNumbers": [
+      "C2984H",
+      "C2984I"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Chemically competent cells (fast growth)",
+    "description": "High-efficiency chemically competent cells for rapid transformation with accelerated colony development (colonies visible ~6.5 h post-transformation); lacIq for tight expression control, endA1 for high-quality plasmid DNA, blue/white screening supported.",
+    "productUrl": "https://www.neb.com/en-us/products/c2984-neb-turbo-competent-e-coli-high-efficiency",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/high-efficiency-transformation-protocol-c2984",
+    "storage": "-80°C",
+    "kitSize": "20 x 0.05 mL (H) / 6 x 0.2 mL (I)",
+    "applications": [
+      "transformation",
+      "rapid cloning",
+      "blue/white screening"
+    ],
+    "keyParameters": {
+      "time": "Colonies visible 6.5 h post-transformation; DNA isolation possible 4 h after growth",
+      "notes": "Efficiency 1–3 x 10^9 cfu/µg pUC19"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/c2984-neb-turbo-competent-e-coli-high-efficiency",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers C2984H/C2984I present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEB Stable Competent E. coli (High Efficiency)",
+    "catalogNumbers": [
+      "C3040H",
+      "C3040I",
+      "C3040P"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Chemically competent cells (unstable inserts/repeats)",
+    "description": "High-efficiency chemically competent cells for transformation and isolation of plasmids containing repetitive DNA elements and unstable inserts, including retroviral/lentiviral clones; growth at 30 °C recommended.",
+    "productUrl": "https://www.neb.com/en-us/products/c3040-neb-stable-competent-e-coli-high-efficiency",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/high-efficiency-transformation-protocol-c3040h",
+    "storage": "-80°C",
+    "kitSize": "20 x 0.05 mL (H) / 6 x 0.2 mL (I) / 96-well plate (P)",
+    "applications": [
+      "lentiviral/retroviral vector cloning",
+      "repeat-containing plasmids",
+      "transformation"
+    ],
+    "keyParameters": {
+      "notes": "Efficiency 1–3 x 10^9 cfu/µg pUC19 (H/I), 1–3 x 10^8 (P); grow at 30 °C; compatible with NEBuilder HiFi and Gibson Assembly"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/c3040-neb-stable-competent-e-coli-high-efficiency",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers C3040H/I/P present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Ultra II DNA Library Prep Kit for Illumina",
+    "catalogNumbers": [
+      "E7645S",
+      "E7645L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "DNA library prep (Illumina)",
+    "description": "Library prep kit for Illumina sequencing producing high-quality libraries from 500 pg to 1 µg of sheared input DNA, with a streamlined automatable workflow, fewer PCR cycles required and compatibility with PCR-free workflows and challenging samples (GC-rich, FFPE DNA). Adaptors/primers and beads sold separately.",
+    "productUrl": "https://www.neb.com/en-us/products/e7645-nebnext-ultra-ii-dna-library-prep-kit-for-illumina",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale7103-e7645.pdf",
+    "storage": "-20°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "whole-genome sequencing",
+      "ChIP-seq",
+      "targeted sequencing",
+      "FFPE DNA libraries"
+    ],
+    "keyParameters": {
+      "input": "500 pg – 1 µg fragmented DNA",
+      "notes": "Requires NEBNext Singleplex/Multiplex Oligos; sample purification beads not included (see E7103); use Ultra II FS for unsheared DNA"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7645-nebnext-ultra-ii-dna-library-prep-kit-for-illumina",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7645S/E7645L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Ultra II DNA Library Prep with Sample Purification Beads",
+    "catalogNumbers": [
+      "E7103S",
+      "E7103L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "DNA library prep (Illumina) with beads",
+    "description": "NEBNext Ultra II DNA Library Prep reagents bundled with SPRIselect Sample Purification Beads for cleanup and size selection; converts 500 pg to 1 µg of DNA into indexed Illumina libraries. Adaptors, primers and fragmentation reagents not included.",
+    "productUrl": "https://www.neb.com/en/products/e7103-nebnext-ultra-ii-dna-library-prep-with-sample-purification-beads",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale7103-e7645.pdf",
+    "storage": "-20°C (enzymes/buffers); 25°C (Sample Purification Beads)",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "whole-genome sequencing",
+      "ChIP-seq",
+      "targeted sequencing"
+    ],
+    "keyParameters": {
+      "input": "500 pg – 1 µg fragmented DNA",
+      "notes": "Includes SPRIselect beads; adaptors/primers ordered separately"
+    },
+    "sourceUrl": "https://www.neb.com/en/products/e7103-nebnext-ultra-ii-dna-library-prep-with-sample-purification-beads",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7103S/E7103L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Ultra II FS DNA Library Prep Kit for Illumina",
+    "catalogNumbers": [
+      "E7805S",
+      "E7805L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "DNA library prep with enzymatic fragmentation (Illumina)",
+    "description": "Enzymatic fragmentation-based library prep kit for 100 pg – 500 ng input DNA that combines fragmentation, end repair and dA-tailing in a single enzyme mix with minimal clean-ups; a single protocol works regardless of input amount or GC content.",
+    "productUrl": "https://www.neb.com/en-us/products/e7805-nebnext-ultra-ii-fs-dna-library-prep-kit-for-illumina",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale6177-e7805.pdf",
+    "storage": "-20°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "whole-genome sequencing",
+      "targeted sequencing",
+      "low-input DNA libraries"
+    ],
+    "keyParameters": {
+      "input": "100 pg – 500 ng DNA",
+      "time": "~2.5 h total, <15 min hands-on; fragmentation ~20 min (varies with desired insert size)",
+      "notes": "Beads not included (E6177 version includes beads)"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7805-nebnext-ultra-ii-fs-dna-library-prep-kit-for-illumina",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7805S/E7805L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Ultra II Directional RNA Library Prep Kit for Illumina",
+    "catalogNumbers": [
+      "E7760S",
+      "E7760L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded RNA-seq library prep (Illumina)",
+    "description": "Strand-specific (dUTP method) RNA library prep kit for Illumina with increased sensitivity and specificity, for 10 ng – 1 µg total RNA when used with the NEBNext Poly(A) mRNA Magnetic Isolation Module or NEBNext rRNA Depletion kits; adaptors and primers sold separately.",
+    "productUrl": "https://www.neb.com/en-us/products/e7760-nebnext-ultra-ii-directional-rna-library-prep-kit-for-illumina",
+    "storage": "-20°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "stranded RNA-seq",
+      "mRNA-seq",
+      "total RNA-seq (with rRNA depletion)"
+    ],
+    "keyParameters": {
+      "input": "10 ng – 1 µg total RNA",
+      "notes": "dUTP-based strand specificity; requires E7490 poly(A) module or rRNA depletion kit; NEBNext oligos ordered separately"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7760-nebnext-ultra-ii-directional-rna-library-prep-kit-for-illumina",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7760S/E7760L present on fetched product page (E7760G also listed)."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Enzymatic Methyl-seq Kit",
+    "catalogNumbers": [
+      "E7120S",
+      "E7120L"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic methyl-seq (EM-seq) library prep",
+    "description": "Enzyme-based alternative to bisulfite conversion for methylome analysis using TET2 and APOBEC to detect 5-mC and 5-hmC while minimizing DNA damage; built on NEBNext Ultra II library prep with an optimized EM-seq adaptor. An improved v2 kit (E8015) is also available.",
+    "productUrl": "https://www.neb.com/en-us/products/e7120-nebnext-enzymatic-methyl-seq-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/where-can-i-find-protocols-for-using-the-nebnext-enzymatic-methyl-seq-kit-neb-e7120-e7125-e7140",
+    "storage": "-20°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "whole-genome methylation sequencing",
+      "5-mC/5-hmC detection"
+    ],
+    "keyParameters": {
+      "input": "10–200 ng sheared DNA",
+      "notes": "TET2 oxidation + APOBEC deamination; sequencing primers not included (NEBNext UDI primer pairs recommended); larger inserts than bisulfite methods"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7120-nebnext-enzymatic-methyl-seq-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7120S/E7120L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Poly(A) mRNA Magnetic Isolation Module",
+    "catalogNumbers": [
+      "E7490S",
+      "E7490L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "mRNA enrichment module",
+    "description": "Isolates intact poly(A)+ RNA from 1–5 µg of total RNA using oligo d(T)25 coupled to 1 µm paramagnetic beads; yields intact mRNA in under 1 hour and can be adapted for automated high-throughput use.",
+    "productUrl": "https://www.neb.com/en/products/e7490-nebnext-polya-mrna-magnetic-isolation-module",
+    "storage": "4°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "mRNA-seq",
+      "poly(A) enrichment",
+      "RNA library prep"
+    ],
+    "keyParameters": {
+      "input": "1–5 µg total RNA (use E3370 High Input module for >5 µg)",
+      "time": "<1 h",
+      "notes": "Supplied with RNA Binding Buffer (2X), Wash Buffer, Tris Buffer, Oligo d(T)25 Beads"
+    },
+    "sourceUrl": "https://www.neb.com/en/products/e7490-nebnext-polya-mrna-magnetic-isolation-module",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7490S/E7490L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext rRNA Depletion Kit v2 (Human/Mouse/Rat)",
+    "catalogNumbers": [
+      "E7400S",
+      "E7400L",
+      "E7400X"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "rRNA depletion module",
+    "description": "RNase H-based kit that removes cytoplasmic (5S, 5.8S, 18S, 28S) and mitochondrial (12S, 16S) rRNA from human, mouse and rat total RNA, including low-quality/FFPE RNA, with improved reagents, probes and protocol versus v1.",
+    "productUrl": "https://www.neb.com/en-us/products/e7400-nebnext-rrna-depletion-kit-v2-human-mouse-rat",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-rrna-depletion-using-the-nebnext-rrna-depletion-kit-v2-human-mouse-rat-neb-e7400-e7405",
+    "storage": "-20°C",
+    "kitSize": "6 reactions (S) / 24 reactions (L) / 96 reactions (X)",
+    "applications": [
+      "total RNA-seq",
+      "FFPE RNA-seq",
+      "rRNA depletion"
+    ],
+    "keyParameters": {
+      "input": "10 ng – 1 µg total RNA",
+      "time": "2 h (<10 min hands-on)",
+      "notes": "RNase H-based; compatible with degraded RNA"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7400-nebnext-rrna-depletion-kit-v2-human-mouse-rat",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7400S/L/X present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Multiplex Oligos for Illumina (96 Unique Dual Index Primer Pairs)",
+    "catalogNumbers": [
+      "E6440S",
+      "E6440L"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Adaptors and unique dual index primers",
+    "description": "Adaptors and 96 pre-mixed unique dual index (8-base) primer pairs in a single-use 96-well plate for high-yield multiplexed Illumina library production; hairpin-loop adaptor design minimizes adaptor-dimer formation. Set 1 of 5 (sets 1–5 combine for up to 480 UDI pairs).",
+    "productUrl": "https://www.neb.com/en-us/products/e6440-nebnext-multiplex-oligos-for-illumina-96-unique-dual-index-primer-pairs",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale6440_e6442_e6444_e6446_e6448.pdf",
+    "storage": "-20°C",
+    "kitSize": "96 reactions (S) / 384 reactions (L)",
+    "applications": [
+      "Illumina library indexing",
+      "DNA/ChIP/RNA library prep (not small RNA)"
+    ],
+    "keyParameters": {
+      "notes": "8-base i5/i7 unique dual indices; 96-well plate with pierceable foil seal"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e6440-nebnext-multiplex-oligos-for-illumina-96-unique-dual-index-primer-pairs",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E6440S/E6440L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Library Quant Kit for Illumina",
+    "catalogNumbers": [
+      "E7630S",
+      "E7630L"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "qPCR library quantification",
+    "description": "qPCR-based kit for accurate, reproducible quantitation of Illumina NGS libraries; includes six DNA standards (100 pM to 0.001 pM), master mix, primer mix, ROX (high and low) and dilution buffer, compatible with all major qPCR platforms.",
+    "productUrl": "https://www.neb.com/en-us/products/e7630-nebnext-library-quant-kit-for-illumina",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale7630_e7642.pdf",
+    "storage": "-20°C",
+    "kitSize": "100 reactions (S) / 500 reactions (L)",
+    "applications": [
+      "NGS library quantification",
+      "sequencing loading normalization"
+    ],
+    "keyParameters": {
+      "input": "Diluted libraries 150–1000 bp, 20–70% GC",
+      "notes": "6 standards; four- or six-standard protocols; ROX included"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e7630-nebnext-library-quant-kit-for-illumina",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E7630S/E7630L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin Plasmid Miniprep Kit",
+    "catalogNumbers": [
+      "T1110S",
+      "T1110L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid miniprep (spin column)",
+    "description": "Plasmid miniprep kit with upgraded spin columns for purification of up to 20 µg of plasmid DNA from 1–5 mL bacterial culture, with elution in as little as 30 µL; replaces the Monarch Plasmid Miniprep Kit (T1010, discontinued Nov 2024).",
+    "productUrl": "https://www.neb.com/en-us/products/t1110-monarch-spin-plasmid-miniprep-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/plasmid-miniprep-protocol-using-centrifugation-t1110",
+    "storage": "25°C (room temperature)",
+    "kitSize": "50 preps (S) / 250 preps (L)",
+    "applications": [
+      "plasmid purification",
+      "cloning",
+      "sequencing",
+      "transfection-grade minipreps"
+    ],
+    "keyParameters": {
+      "input": "1–5 mL culture (<=15 OD units)",
+      "time": "9.5–12.5 min spin/incubation",
+      "notes": "Yield up to 20 µg; plasmids up to 25 kb; elution >=30 µL; A260/280 and A260/230 >1.8"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t1110-monarch-spin-plasmid-miniprep-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T1110S/T1110L present on fetched product page. Legacy T1010 page fetched and confirmed discontinued (replaced by T1110)."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin PCR & DNA Cleanup Kit (5 µg)",
+    "catalogNumbers": [
+      "T1130S",
+      "T1130L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "PCR/enzymatic reaction cleanup (spin column)",
+    "description": "Purifies and concentrates up to 5 µg of double- or single-stranded DNA from enzymatic reactions using upgraded spin columns designed for low elution volumes and minimal buffer retention; replaces T1030.",
+    "productUrl": "https://www.neb.com/en-us/products/t1130-monarch-spin-pcr-and-dna-cleanup-kit-5-ug",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/standard-cleanup-protocol-using-the-monarch-spin-pcr-and-dna-cleanup-kit-and-centrifugation",
+    "storage": "25°C (room temperature)",
+    "kitSize": "50 preps (S) / 250 preps (L)",
+    "applications": [
+      "PCR cleanup",
+      "enzymatic reaction cleanup",
+      "oligonucleotide cleanup"
+    ],
+    "keyParameters": {
+      "input": "DNA 50 bp – 25 kb (standard protocol)",
+      "time": "~5 min",
+      "notes": "Binding capacity 5 µg; elution 5–20 µL; recovery 70–90%"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t1130-monarch-spin-pcr-and-dna-cleanup-kit-5-ug",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T1130S/T1130L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin DNA Gel Extraction Kit",
+    "catalogNumbers": [
+      "T1120S",
+      "T1120L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Agarose gel extraction (spin column)",
+    "description": "Rapid purification of dsDNA fragments (100 bp – 25 kb) from agarose gels with precision-engineered spin columns; elute in as little as 5 µL with yields up to 5 µg, without pH monitoring or isopropanol addition. Replaces T1020.",
+    "productUrl": "https://www.neb.com/en-us/products/t1120-monarch-spin-dna-gel-extraction-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/standard-gel-extraction-protocol-using-the-monarch-spin-dna-gel-extraction-kit-and-centrifugation",
+    "storage": "25°C (room temperature)",
+    "kitSize": "50 preps (S) / 250 preps (L)",
+    "applications": [
+      "gel extraction",
+      "cloning fragment purification"
+    ],
+    "keyParameters": {
+      "input": "dsDNA 100 bp – 25 kb in agarose gel slices",
+      "time": "10–15 min",
+      "notes": "Binding capacity 5 µg; elution >=5 µL; recovery 70–90% (<10 kb), 50–70% (>=10 kb)"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t1120-monarch-spin-dna-gel-extraction-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T1120S/T1120L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin gDNA Extraction Kit",
+    "catalogNumbers": [
+      "T3010V",
+      "T3010S",
+      "T3010L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA extraction (spin column)",
+    "description": "Extraction and purification of high-quality genomic DNA (peak size typically >=50 kb) from blood, tissue, cultured cells, bacteria, yeast, saliva, buccal swabs and insects, for PCR, qPCR, NGS and sequencing. Formerly the Monarch Genomic DNA Purification Kit.",
+    "productUrl": "https://www.neb.com/en-us/products/t3010-monarch-spin-gdna-extraction-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-monarch-genomic-dna-extraction-neb-t3010-part-2-genomic-dna-binding-and-elution",
+    "storage": "25°C (room temperature)",
+    "kitSize": "10 preps (V) / 50 preps (S) / 150 preps (L)",
+    "applications": [
+      "genomic DNA extraction",
+      "PCR/qPCR templates",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "Up to 5 x 10^6 cells; 100 µL blood; 25 mg tissue; 2 x 10^9 bacteria; 5 x 10^7 yeast; 500 µL saliva",
+      "notes": "Elution >=35 µL (100 µL recommended); A260/280 >=1.8, A260/230 >=2.0; <1% RNA with RNase A"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t3010-monarch-spin-gdna-extraction-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T3010V/S/L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin RNA Isolation Kit (Mini)",
+    "catalogNumbers": [
+      "T2110V",
+      "T2110S",
+      "T2110L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA extraction (spin column)",
+    "description": "Total RNA extraction kit purifying up to 100 µg of high-quality total RNA (>=20 nt, including miRNA) from cells, microbes, plants, insects, tissues, blood and plasma; includes Proteinase K, RNase-free DNase I and Monarch StabiLyse buffer. Replaces the Monarch Total RNA Miniprep Kit (T2010).",
+    "productUrl": "https://www.neb.com/en-us/products/t2110-monarch-spin-rna-isolation-kit-mini",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-total-rna-isolation-and-purification-using-the-monarch-spin-rna-isolation-kit-mini-neb-t2110",
+    "storage": "25°C (room temperature)",
+    "kitSize": "10 preps (V) / 50 preps (S) / 200 preps (L)",
+    "applications": [
+      "total RNA isolation",
+      "RT-qPCR",
+      "RNA-seq",
+      "small RNA library prep"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity 100 µg; RNA >=20 nt; elution >=10 µL; A260/280 >=2.0, A260/230 >=1.8; on-column DNase I treatment included"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t2110-monarch-spin-rna-isolation-kit-mini",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T2110V/S/L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch Spin RNA Cleanup Kit (50 µg)",
+    "catalogNumbers": [
+      "T2040S",
+      "T2040L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "RNA cleanup (spin column)",
+    "description": "Rapid purification and concentration of up to 50 µg of RNA (>=25 nt) from enzymatic reactions, removing enzymes, NTPs and salts; also supports RNA cleanup from TRIzol aqueous phase and RNA gel extraction.",
+    "productUrl": "https://www.neb.com/en-us/products/t2040-monarch-spin-rna-cleanup-kit-50-ug",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/monarch-spin-rna-cleanup-kit-protocol",
+    "storage": "25°C (room temperature)",
+    "kitSize": "10 preps (S) / 100 preps (L)",
+    "applications": [
+      "RNA cleanup after IVT/DNase/labeling",
+      "TRIzol aqueous phase cleanup",
+      "RNA gel extraction"
+    ],
+    "keyParameters": {
+      "time": "~5 min",
+      "notes": "Binding capacity 50 µg; RNA >=25 nt (>=15 nt modified protocol); elution 20–50 µL; recovery 70–100%"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t2040-monarch-spin-rna-cleanup-kit-50-ug",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T2040S/T2040L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Monarch HMW DNA Extraction Kit for Cells & Blood",
+    "catalogNumbers": [
+      "T3050S",
+      "T3050L"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "High molecular weight DNA extraction",
+    "description": "Rapid extraction of high molecular weight genomic DNA (typically 50–250 kb, up to megabase range with low agitation) from cultured cells or whole blood, with tunable fragment length, for long-read sequencing on Oxford Nanopore and PacBio platforms.",
+    "productUrl": "https://www.neb.com/en-us/products/t3050-monarch-hmw-dna-extraction-kit-for-cells-and-blood",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/high-molecular-weight-dna-hmw-dna-extraction-from-cells",
+    "storage": "25°C (room temperature)",
+    "kitSize": "5 preps (S) / 50 preps (L)",
+    "applications": [
+      "long-read sequencing (ONT, PacBio)",
+      "HMW gDNA extraction",
+      "optical mapping"
+    ],
+    "keyParameters": {
+      "input": "1 x 10^6 cultured cells or 500 µL whole blood",
+      "time": "30 min (cells) / 60 min (blood)",
+      "notes": "DNA 50–250 kb standard; A260/280 1.80–1.90, A260/230 2.2–2.5"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/t3050-monarch-hmw-dna-extraction-kit-for-cells-and-blood",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers T3050S/T3050L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "EnGen Spy Cas9 NLS",
+    "catalogNumbers": [
+      "M0646T",
+      "M0646M"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Cas9 nuclease protein (RNP-ready)",
+    "description": "RNA-guided S. pyogenes Cas9 endonuclease with SV40 nuclear localization signals on the N- and C-termini for improved nuclear transport; catalyzes site-specific dsDNA cleavage and is ideal for direct delivery of Cas9/sgRNA ribonucleoprotein complexes into cells or in vitro digestion.",
+    "productUrl": "https://www.neb.com/en-us/products/m0646-engen-spy-cas9-nls",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/in-vitro-digestion-of-dna-with-cas9-nucleases",
+    "storage": "-20°C",
+    "kitSize": "500 pmol (T) / 2,500 pmol (M) at 20 µM",
+    "applications": [
+      "RNP genome editing",
+      "in vitro Cas9 digestion",
+      "electroporation/lipofection of RNP"
+    ],
+    "keyParameters": {
+      "notes": "20 µM (3.22 mg/mL); in vitro digestion in 1X NEBuffer r3.1 at 37 °C; heat inactivate 65 °C 5 min; pair with EnGen sgRNA Synthesis Kit"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0646-engen-spy-cas9-nls",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0646T/M0646M present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "EnGen sgRNA Synthesis Kit, S. pyogenes",
+    "catalogNumbers": [
+      "E3322V",
+      "E3322S"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "sgRNA in vitro transcription kit",
+    "description": "Rapid synthesis of functional single guide RNA by in vitro transcription from a user-supplied ~55-nt target-specific DNA oligo, generating microgram quantities of sgRNA in under one hour; includes RNase-free DNase I for optional template removal.",
+    "productUrl": "https://www.neb.com/en-us/products/e3322-engen-sgrna-synthesis-kit-s-pyogenes",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/engen-sqrna-synthesis-kit-s-pyogenes-protocol-e3322",
+    "storage": "-20°C",
+    "kitSize": "10 reactions (V) / 20 reactions (S)",
+    "applications": [
+      "sgRNA synthesis",
+      "CRISPR/Cas9 RNP preparation",
+      "in vitro Cas9 cleavage assays"
+    ],
+    "keyParameters": {
+      "input": "~55-nt ssDNA oligo (~20 nt target + 14 nt overlap)",
+      "time": "30 min at 37 °C; <1 h total workflow",
+      "notes": "Microgram yields of sgRNA; optional DNase I treatment"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e3322-engen-sgrna-synthesis-kit-s-pyogenes",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E3322V/E3322S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "EnGen Mutation Detection Kit",
+    "catalogNumbers": [
+      "E3321S"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "T7 Endonuclease I editing detection assay",
+    "description": "Optimized reagents for T7 Endonuclease I-based detection of genome editing events (CRISPR/Cas9, TALEN, ZFN) with no cleanup between PCR and digestion; includes Q5 Hot Start High-Fidelity 2X Master Mix, EnGen T7 Endonuclease I, control template/primers, Proteinase K, ladder and loading dye.",
+    "productUrl": "https://www.neb.com/en-us/products/e3321-engen-mutation-detection-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/t7-endonuclease-i-mutation-detection-with-the-engen-mutation-detection-kit-e3321",
+    "storage": "-20°C",
+    "kitSize": "25 reactions",
+    "applications": [
+      "genome editing efficiency estimation",
+      "T7E1 mismatch assay"
+    ],
+    "keyParameters": {
+      "input": "Genomic DNA from edited cells",
+      "time": "T7 Endonuclease I digestion ~15 min",
+      "notes": "Workflow: PCR -> denature/re-anneal -> T7E1 digestion -> gel analysis; detects mismatches >1 base"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e3321-engen-mutation-detection-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog number E3321S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "EnGen Lba Cas12a (Cpf1)",
+    "catalogNumbers": [
+      "M0653S",
+      "M0653T"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Cas12a nuclease protein",
+    "description": "Programmable DNA endonuclease guided by a single 40–44 nt guide RNA that requires a 5' TTTV PAM and cleaves ~18 bases downstream of the PAM to generate 5' overhanging ends; for in vitro digestion and RNP delivery.",
+    "productUrl": "https://www.neb.com/en-us/products/m0653-engen-lba-cas12a-cpf1",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/in-vitro-digestion-of-dna-with-engen-lba-cas12a-cpf1-neb-m0653",
+    "storage": "-20°C",
+    "kitSize": "70 pmol at 1 µM (S) / 2,000 pmol at 100 µM (T)",
+    "applications": [
+      "Cas12a genome editing (RNP)",
+      "in vitro Cas12a digestion",
+      "T-rich PAM targeting"
+    ],
+    "keyParameters": {
+      "notes": "Digestion in 1X NEBuffer r2.1 at 37 °C; active 16–48 °C; PAM 5' TTTV; 5' overhangs"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0653-engen-lba-cas12a-cpf1",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0653S/M0653T present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "EcoRI-HF",
+    "catalogNumbers": [
+      "R3101S",
+      "R3101T",
+      "R3101L",
+      "R3101M"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "High-fidelity restriction endonuclease",
+    "description": "Engineered high-fidelity version of EcoRI (G^AATTC) with the same specificity as native EcoRI but significantly reduced star activity and 100% activity in rCutSmart Buffer; Time-Saver qualified.",
+    "productUrl": "https://www.neb.com/en-us/products/r3101-ecori-hf",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/restriction-digest-protocol",
+    "storage": "-20°C",
+    "kitSize": "10,000 units at 20,000 U/mL (S) / 10,000 units at 100,000 U/mL (T) / 50,000 units at 20,000 U/mL (L) / 50,000 units at 100,000 U/mL (M)",
+    "applications": [
+      "restriction digestion",
+      "cloning",
+      "double digests"
+    ],
+    "keyParameters": {
+      "time": "5–15 min (Time-Saver) to 1 h at 37 °C",
+      "notes": "Recognition site G/AATTC; rCutSmart Buffer; heat inactivation 65 °C 20 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/r3101-ecori-hf",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers R3101S/T/L/M present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "BamHI-HF",
+    "catalogNumbers": [
+      "R3136S",
+      "R3136T",
+      "R3136L",
+      "R3136M"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "High-fidelity restriction endonuclease",
+    "description": "Engineered high-fidelity BamHI (G^GATCC) with dramatically reduced star activity compared to native BamHI and 100% activity in rCutSmart Buffer, enabling simplified single-buffer digests; Time-Saver qualified.",
+    "productUrl": "https://www.neb.com/en-us/products/r3136-bamhi-hf",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/restriction-digest-protocol",
+    "storage": "-20°C",
+    "kitSize": "10,000 units at 20,000 U/mL (S) / 10,000 units at 100,000 U/mL (T) / 50,000 units at 20,000 U/mL (L) / 50,000 units at 100,000 U/mL (M)",
+    "applications": [
+      "restriction digestion",
+      "cloning",
+      "double digests"
+    ],
+    "keyParameters": {
+      "time": "5–15 min (Time-Saver) to 1 h at 37 °C",
+      "notes": "Recognition site G/GATCC; rCutSmart Buffer; not heat-inactivatable"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/r3136-bamhi-hf",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers R3136S/T/L/M present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NotI-HF",
+    "catalogNumbers": [
+      "R3189S",
+      "R3189L",
+      "R3189M"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "High-fidelity restriction endonuclease",
+    "description": "Engineered high-fidelity NotI (GC^GGCCGC, 8-base cutter) with 100% activity in rCutSmart Buffer and significantly reduced star activity compared to native NotI; Time-Saver qualified.",
+    "productUrl": "https://www.neb.com/en-us/products/r3189-noti-hf",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/restriction-digest-protocol",
+    "storage": "-20°C",
+    "kitSize": "500 units at 20,000 U/mL (S) / 2,500 units at 20,000 U/mL (L) / 2,500 units at 100,000 U/mL (M)",
+    "applications": [
+      "restriction digestion",
+      "cloning",
+      "plasmid linearization"
+    ],
+    "keyParameters": {
+      "time": "5–15 min (Time-Saver) to 1 h at 37 °C",
+      "notes": "Recognition site GC/GGCCGC; rCutSmart Buffer; heat inactivation 65 °C 20 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/r3189-noti-hf",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers R3189S/L/M present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "DpnI",
+    "catalogNumbers": [
+      "R0176S",
+      "R0176L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Methylation-dependent restriction endonuclease",
+    "description": "Restriction endonuclease (GA^TC) that cleaves only when its recognition site is dam-methylated, commonly used to remove parental template in site-directed mutagenesis; 100% activity in rCutSmart Buffer.",
+    "productUrl": "https://www.neb.com/en-us/products/r0176-dpni",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/restriction-digest-protocol",
+    "storage": "-20°C",
+    "kitSize": "1,000 units (S) / 5,000 units (L)",
+    "applications": [
+      "site-directed mutagenesis template removal",
+      "methylation analysis"
+    ],
+    "keyParameters": {
+      "notes": "Requires dam methylation; blocked by overlapping CpG methylation; 37 °C; heat inactivation 80 °C 20 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/r0176-dpni",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers R0176S/R0176L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "T4 Polynucleotide Kinase",
+    "catalogNumbers": [
+      "M0201S",
+      "M0201L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Polynucleotide kinase",
+    "description": "Catalyzes transfer and exchange of Pi from the gamma position of ATP to the 5'-hydroxyl terminus of double- and single-stranded DNA and RNA, and removes 3'-phosphoryl groups; used for end-labeling and phosphorylating oligos/PCR products before ligation.",
+    "productUrl": "https://www.neb.com/en-us/products/m0201-t4-polynucleotide-kinase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/non-radioactive-phosphorylation-with-t4-pnk-or-pnk3-phosphatase-minus",
+    "storage": "-20°C",
+    "kitSize": "500 units (S) / 2,500 units (L)",
+    "applications": [
+      "5' phosphorylation of oligos",
+      "end-labeling",
+      "linker/adaptor phosphorylation"
+    ],
+    "keyParameters": {
+      "notes": "1X T4 PNK Reaction Buffer (70 mM Tris-HCl, 10 mM MgCl2, 5 mM DTT pH 7.6) + ATP; 37 °C; heat inactivation 65 °C 20 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0201-t4-polynucleotide-kinase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0201S/M0201L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Quick CIP",
+    "catalogNumbers": [
+      "M0525S",
+      "M0525L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Heat-labile alkaline phosphatase",
+    "description": "Heat-labile recombinant calf intestinal alkaline phosphatase that nonspecifically removes 5' and 3' phosphate groups from DNA and RNA ends and unincorporated nucleotides; dephosphorylation in 10 minutes with 2-minute heat inactivation.",
+    "productUrl": "https://www.neb.com/en-us/products/m0525-quick-cip",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-dephosphorylation-of-5-ends-of-dna-using-quick-cip-neb-m0525",
+    "storage": "-20°C",
+    "kitSize": "1,000 units (S) / 5,000 units (L) at 5,000 U/mL",
+    "applications": [
+      "vector dephosphorylation",
+      "enzymatic PCR cleanup (with Exonuclease I)",
+      "removing dNTPs"
+    ],
+    "keyParameters": {
+      "time": "10 min at 37 °C",
+      "notes": "1X rCutSmart Buffer; heat inactivation 80 °C 2 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0525-quick-cip",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0525S/M0525L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Antarctic Phosphatase",
+    "catalogNumbers": [
+      "M0289S",
+      "M0289L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Heat-labile alkaline phosphatase",
+    "description": "Heat-labile alkaline phosphatase from a recombinant source that removes 5' and 3' phosphates from DNA, RNA and dNTPs; used for vector dephosphorylation in cloning and for sequencing prep, supplied with its own reaction buffer.",
+    "productUrl": "https://www.neb.com/en-us/products/m0289-antarctic-phosphatase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/vector-dephosphorylation-protocol",
+    "storage": "-20°C",
+    "kitSize": "1,000 units (S) / 5,000 units (L) at 5,000 U/mL",
+    "applications": [
+      "vector dephosphorylation",
+      "dNTP removal"
+    ],
+    "keyParameters": {
+      "notes": "1X Antarctic Phosphatase Reaction Buffer (50 mM Bis-Tris-Propane-HCl, 1 mM MgCl2, 0.1 mM ZnCl2 pH 6); 37 °C; heat inactivation 80 °C 2 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0289-antarctic-phosphatase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0289S/M0289L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "DNase I (RNase-free)",
+    "catalogNumbers": [
+      "M0303S",
+      "M0303L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Nuclease",
+    "description": "Endonuclease that nonspecifically cleaves DNA to release di-, tri- and oligonucleotides with 5'-phosphorylated and 3'-hydroxylated ends; used to remove contaminating DNA from RNA preparations and to degrade DNA templates after in vitro transcription.",
+    "productUrl": "https://www.neb.com/en-us/products/m0303-dnase-i-rnase-free",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/a-typical-dnase-i-reaction-protocol-m0303",
+    "storage": "-20°C",
+    "kitSize": "1,000 units (S) / 5,000 units (L) at 2,000 U/mL",
+    "applications": [
+      "DNA removal from RNA",
+      "IVT template removal",
+      "nick translation"
+    ],
+    "keyParameters": {
+      "notes": "1X DNase I Reaction Buffer (10 mM Tris-HCl, 2.5 mM MgCl2, 0.5 mM CaCl2 pH 7.6); 37 °C; heat inactivation 75 °C 10 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0303-dnase-i-rnase-free",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0303S/M0303L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Proteinase K, Molecular Biology Grade",
+    "catalogNumbers": [
+      "P8107S"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Protease",
+    "description": "Subtilisin-related serine protease that hydrolyzes a variety of peptide bonds; frequently used to eliminate enzymes from reactions and to digest proteins in cellular lysates prior to nucleic acid purification.",
+    "productUrl": "https://www.neb.com/en-us/products/p8107-proteinase-k-molecular-biology-grade",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-to-purify-pcr-products-in-preparation-for-cloning-using-proteinase-k-p8107",
+    "storage": "-20°C",
+    "kitSize": "2 mL (2 x 1 mL) at 800 units/mL",
+    "applications": [
+      "enzyme removal from reactions",
+      "lysate digestion for nucleic acid extraction"
+    ],
+    "keyParameters": {
+      "notes": "Active 20–60 °C, pH 7.5–12.0; heat inactivation 95 °C 10 min"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/p8107-proteinase-k-molecular-biology-grade",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog number P8107S present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "RNase Inhibitor, Murine",
+    "catalogNumbers": [
+      "M0314S",
+      "M0314L"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "RNase inhibitor",
+    "description": "50 kDa recombinant murine protein that specifically inhibits RNases A, B and C by noncovalent 1:1 binding; stable at low DTT concentrations (<1 mM), unlike human/porcine inhibitors.",
+    "productUrl": "https://www.neb.com/en-us/products/m0314-rnase-inhibitor-murine",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/using-rnase-inhibitor-to-prevent-ribonuclease-digestion-of-rna",
+    "storage": "-20°C",
+    "kitSize": "3,000 units (S) / 15,000 units (L) at 40,000 U/mL",
+    "applications": [
+      "RT/cDNA synthesis",
+      "in vitro transcription",
+      "RNA handling"
+    ],
+    "keyParameters": {
+      "notes": "Recommended 1 U/µL; use below 50 °C; inhibits RNase A, B, C"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0314-rnase-inhibitor-murine",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0314S/M0314L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "1 kb Plus DNA Ladder",
+    "catalogNumbers": [
+      "N3200S",
+      "N3200L"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "DNA ladder",
+    "description": "Molecular weight standard combining a 100 bp and 1 kb ladder in one, with 19 bands from 100 bp to 10,002 bp and enhanced-intensity reference bands at 0.5, 1.0 and 3.0 kb; supplied with gel loading dye.",
+    "productUrl": "https://www.neb.com/en-us/products/n3200-1-kb-plus-dna-ladder",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/suggested-loading-protocol-for-dna-ladders-and-markers",
+    "storage": "-20°C",
+    "kitSize": "0.1 mL, 200 gel lanes (S) / 0.5 mL, 1,000 gel lanes (L) at 1,000 µg/mL",
+    "applications": [
+      "agarose gel electrophoresis sizing"
+    ],
+    "keyParameters": {
+      "notes": "19 bands 100 bp – 10,002 bp; load 0.5–1 µg diluted in sample buffer"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/n3200-1-kb-plus-dna-ladder",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers N3200S/N3200L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "100 bp DNA Ladder",
+    "catalogNumbers": [
+      "N3231S",
+      "N3231L"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "DNA ladder",
+    "description": "Molecular weight standard of 12 bands from 100 bp to 1,517 bp for agarose gel electrophoresis; supplied with gel loading dye.",
+    "productUrl": "https://www.neb.com/en-us/products/n3231-100-bp-dna-ladder",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/suggested-loading-protocol-for-dna-ladders-and-markers",
+    "storage": "-20°C",
+    "kitSize": "0.1 mL, 100 gel lanes (S) / 0.5 mL, 500 gel lanes (L) at 500 µg/mL",
+    "applications": [
+      "agarose gel electrophoresis sizing (small fragments)"
+    ],
+    "keyParameters": {
+      "notes": "12 bands 100–1,517 bp; load 0.5 µg diluted in sample buffer"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/n3231-100-bp-dna-ladder",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers N3231S/N3231L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Quick-Load Purple 1 kb Plus DNA Ladder",
+    "catalogNumbers": [
+      "N0550S",
+      "N0550L"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Ready-to-load DNA ladder",
+    "description": "Pre-mixed, ready-to-load 1 kb Plus ladder (19 bands, 100 bp – 10,002 bp) in purple tracking dye that does not leave a shadow under UV light; enhanced bands at 500/517 bp, 1,000 bp and 3,001 bp.",
+    "productUrl": "https://www.neb.com/en-us/products/n0550-quick-load-purple-1-kb-plus-dna-ladder",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/protocol-for-quick-load-purple-1kb-plus-dna-ladder-n0550",
+    "storage": "4°C (or -20°C long-term)",
+    "kitSize": "1.25 mL, 250 gel lanes (S) / 3.75 mL, 750 gel lanes (L) at 100 µg/mL",
+    "applications": [
+      "agarose gel electrophoresis sizing"
+    ],
+    "keyParameters": {
+      "notes": "Load 5–10 µL per lane (0.5–1 µg)"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/n0550-quick-load-purple-1-kb-plus-dna-ladder",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers N0550S/N0550L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "WarmStart Colorimetric LAMP 2X Master Mix (DNA & RNA)",
+    "catalogNumbers": [
+      "M1800S",
+      "M1800L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Isothermal amplification (colorimetric LAMP/RT-LAMP)",
+    "description": "Optimized 2X master mix of Bst 2.0 WarmStart DNA Polymerase and WarmStart RTx Reverse Transcriptase in a low-buffer solution with pH indicator for LAMP and RT-LAMP; positive amplification is visualized by a pink-to-yellow color change.",
+    "productUrl": "https://www.neb.com/en-us/products/m1800-warmstart-colorimetric-lamp-2x-master-mix-dna-rna",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/warmstart-colorimetric-lamp-2x-master-mix-typical-lamp-protocol-m1800",
+    "storage": "-20°C",
+    "kitSize": "100 reactions of 25 µL (S) / 500 reactions of 25 µL (L)",
+    "applications": [
+      "colorimetric LAMP",
+      "RT-LAMP",
+      "point-of-need detection"
+    ],
+    "keyParameters": {
+      "input": "DNA or RNA targets with LAMP primer set",
+      "time": "15–40 min at 65 °C",
+      "notes": "Pink (negative) to yellow (positive); requires heated block/chamber"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m1800-warmstart-colorimetric-lamp-2x-master-mix-dna-rna",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M1800S/M1800L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "WarmStart LAMP Kit (DNA & RNA)",
+    "catalogNumbers": [
+      "E1700S",
+      "E1700L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Isothermal amplification (fluorescent LAMP/RT-LAMP)",
+    "description": "One-step solution for loop-mediated isothermal amplification of DNA or RNA (RT-LAMP) targets; includes WarmStart LAMP 2X Master Mix (Bst 2.0 WarmStart DNA Polymerase + WarmStart RTx Reverse Transcriptase) and 50X LAMP Fluorescent Dye, with WarmStart inhibition allowing room-temperature setup.",
+    "productUrl": "https://www.neb.com/en-us/products/e1700-warmstart-lamp-kit-dna-rna",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/warmstart-lamp-kit-dna-rna-protocol-e1700",
+    "storage": "-20°C",
+    "kitSize": "100 reactions (S) / 500 reactions (L)",
+    "applications": [
+      "real-time fluorescent LAMP",
+      "RT-LAMP",
+      "turbidity/end-point detection"
+    ],
+    "keyParameters": {
+      "time": "65 °C isothermal; ~75 min run",
+      "notes": "Detection by real-time fluorescence, turbidity or end-point visualization"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e1700-warmstart-lamp-kit-dna-rna",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E1700S/E1700L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Q5 High-Fidelity DNA Polymerase",
+    "catalogNumbers": [
+      "M0491S",
+      "M0491L"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-fidelity DNA polymerase",
+    "description": "Thermostable high-fidelity DNA polymerase with 3'->5' exonuclease activity fused to the Sso7d processivity domain, delivering ultra-low error rates (~280-fold higher fidelity than Taq) across varied GC content; supplied with 5X Q5 Reaction Buffer and 5X Q5 High GC Enhancer.",
+    "productUrl": "https://www.neb.com/en-us/products/m0491-q5-high-fidelity-dna-polymerase",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/pcr-using-q5-high-fidelity-dna-polymerase-m0491",
+    "storage": "-20°C",
+    "kitSize": "100 units (S) / 500 units (L) at 2,000 units/mL",
+    "applications": [
+      "high-fidelity PCR",
+      "cloning",
+      "long/difficult amplicons",
+      "Gibson/HiFi assembly inserts"
+    ],
+    "keyParameters": {
+      "notes": "5X Q5 Reaction Buffer gives 2 mM Mg2+ at 1X; High GC Enhancer for >=65% GC; universal 62 °C annealing protocol compatible; use NEB Tm Calculator"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/m0491-q5-high-fidelity-dna-polymerase",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers M0491S/M0491L present on fetched product page (M0491G glycerol-free also listed)."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "Luna Universal Probe One-Step RT-qPCR Kit",
+    "catalogNumbers": [
+      "E3006S",
+      "E3006L",
+      "E3006X",
+      "E3006E"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "One-step RT-qPCR (probe-based)",
+    "description": "Probe-based one-step RT-qPCR kit for rapid, sensitive and precise detection and quantitation of target RNA, combining Luna WarmStart Reverse Transcriptase with Hot Start Taq DNA Polymerase for specificity and robustness in single-tube reactions.",
+    "productUrl": "https://www.neb.com/en-us/products/e3006-luna-universal-probe-one-step-rt-qpcr-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/luna-universal-probe-one-step-rt-qpcr-kit-protocol-e3006",
+    "storage": "-20°C",
+    "kitSize": "200 reactions (S) / 500 reactions (L) / 1,000 reactions (X) / 2,500 reactions (E)",
+    "applications": [
+      "one-step RT-qPCR (probe)",
+      "multiplex RT-qPCR",
+      "viral RNA detection (RUO)"
+    ],
+    "keyParameters": {
+      "input": "100 ng – 10 pg total RNA recommended (1 µg – 0.1 pg demonstrated)",
+      "time": "RT 10 min at 55 °C (up to 60 °C), then 40 cycles (45 for very low input)",
+      "notes": "400 nM primers, 200 nM probe per target; multiplexing supported"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e3006-luna-universal-probe-one-step-rt-qpcr-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E3006S/L/X/E present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "ProtoScript II First Strand cDNA Synthesis Kit",
+    "catalogNumbers": [
+      "E6560S",
+      "E6560L"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "First-strand cDNA synthesis kit",
+    "description": "Optimized kit for first-strand cDNA synthesis with higher specificity and yield using ProtoScript II (M-MuLV, RNase H-reduced) reverse transcriptase in a 2X reaction mix/10X enzyme mix format; includes Random Primer Mix and Oligo d(T)23 VN primer, generating cDNA up to 10 kb.",
+    "productUrl": "https://www.neb.com/en-us/products/e6560-protoscript-ii-first-strand-cdna-synthesis-kit",
+    "protocolUrl": "https://www.neb.com/en-us/protocols/first-strand-cdna-synthesis-protocols-e6560",
+    "storage": "-20°C",
+    "kitSize": "30 reactions (S) / 150 reactions (L)",
+    "applications": [
+      "first-strand cDNA synthesis",
+      "RT-PCR",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "Typically 250 ng total RNA",
+      "notes": "42 °C reaction (enzyme active up to 48 °C); anchored oligo-dT and random primers included; products up to 10 kb"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e6560-protoscript-ii-first-strand-cdna-synthesis-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E6560S/E6560L present on fetched product page."
+  },
+  {
+    "vendor": "New England Biolabs",
+    "vendorShort": "NEB",
+    "productName": "NEBNext Enzymatic Methyl-seq v2 Kit",
+    "catalogNumbers": [
+      "E8015S",
+      "E8015L"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic methyl-seq (EM-seq) library prep, v2",
+    "description": "Second-generation enzyme-based alternative to bisulfite conversion for 5mC/5hmC detection that minimizes DNA damage; v2 offers a 100-fold lower minimum input than E7120, one fewer cleanup step and faster processing, with even GC coverage. Index primers sold separately.",
+    "productUrl": "https://www.neb.com/en-us/products/e8015-nebnext-enzymatic-methyl-seq-v2-kit",
+    "protocolUrl": "https://www.neb.com/en-us/-/media/nebus/files/manuals/manuale8015.pdf",
+    "storage": "-20°C",
+    "kitSize": "24 reactions (S) / 96 reactions (L)",
+    "applications": [
+      "whole-genome methylation sequencing",
+      "low-input methylome analysis",
+      "cfDNA methylation"
+    ],
+    "keyParameters": {
+      "input": "0.1 ng – 200 ng DNA (100 pg minimum)",
+      "notes": "Detects >56 million CpGs at 200–1 ng input; index primers not included"
+    },
+    "sourceUrl": "https://www.neb.com/en-us/products/e8015-nebnext-enzymatic-methyl-seq-v2-kit",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "Catalog numbers E8015S/E8015L present on fetched product page."
+  }
+]
