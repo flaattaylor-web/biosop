@@ -3,7 +3,32 @@ import { SopDocument, ReactionSheet, CrossTestResult, SearchAndSuggestionResult,
 import { sanitizeAndValidateSop } from '../utils/sheetUtils';
 import { getEnv } from './env';
 
-export const defaultModel = (): string => getEnv('GEMINI_MODEL') || 'gemini-2.5-flash';
+export const defaultModel = (): string => getEnv('GEMINI_MODEL') || 'gemini-3.6-flash';
+
+/**
+ * Order tried on every call: explicitly requested → GEMINI_MODEL → current stable flash models.
+ * Model IDs retire without warning (2.5-flash stopped accepting new keys in Aug 2026), so the
+ * fallbacks exist to keep the app answering while GEMINI_MODEL is corrected. Pin the one your key
+ * has access to via GEMINI_MODEL (wrangler.jsonc vars on Cloudflare, .env on Node).
+ */
+export function modelCandidates(requested?: string): string[] {
+  return Array.from(
+    new Set([
+      requested || defaultModel(),
+      defaultModel(),
+      'gemini-3.7-flash',
+      'gemini-3.6-flash',
+      'gemini-3.5-flash',
+      'gemini-flash-latest',
+    ].filter(Boolean) as string[])
+  );
+}
+
+/** True when an error means "this model ID is not usable by this key" rather than a transient fault. */
+export function isModelUnavailable(err: unknown): boolean {
+  const m = String((err as { message?: string })?.message || err);
+  return m.includes('404') || m.includes('NOT_FOUND') || m.includes('no longer available');
+}
 
 export function getAiClient() {
   const apiKey = getEnv('GEMINI_API_KEY');
@@ -27,19 +52,7 @@ async function generateWithRetry(
   ai: GoogleGenAI,
   params: Parameters<typeof ai.models.generateContent>[0]
 ) {
-  const requestedModel = params.model || defaultModel();
-  // Order: explicitly requested → env-configured default → known-good fallbacks.
-  // Set GEMINI_MODEL in .env to pin a model your key has access to.
-  const candidateModels = Array.from(
-    new Set([
-      requestedModel,
-      defaultModel(),
-      'gemini-2.5-flash',
-      'gemini-2.5-pro',
-      'gemini-flash-latest',
-      'gemini-2.0-flash',
-    ])
-  );
+  const candidateModels = modelCandidates(params.model);
 
   let lastError: any = null;
 
@@ -509,16 +522,30 @@ export async function generateSopAndReactionSheetStream(
 ): Promise<SopDocument> {
   const ai = getAiClient();
   const bundle = buildSopRequest(params);
-  const stream = await ai.models.generateContentStream({
-    model: defaultModel(),
-    contents: contentsFor(bundle, params),
-    config: {
-      systemInstruction: bundle.systemInstruction,
-      responseMimeType: 'application/json',
-      responseSchema: sopDocumentSchema,
-      abortSignal: signal,
-    },
-  });
+  // The stream is created before any bytes reach the client, so an unusable model ID can still be
+  // swapped here without the user seeing a partial response.
+  let stream: Awaited<ReturnType<typeof ai.models.generateContentStream>> | null = null;
+  let streamError: unknown = null;
+  for (const modelName of modelCandidates()) {
+    try {
+      stream = await ai.models.generateContentStream({
+        model: modelName,
+        contents: contentsFor(bundle, params),
+        config: {
+          systemInstruction: bundle.systemInstruction,
+          responseMimeType: 'application/json',
+          responseSchema: sopDocumentSchema,
+          abortSignal: signal,
+        },
+      });
+      break;
+    } catch (err) {
+      streamError = err;
+      if (!isModelUnavailable(err)) throw err;
+      console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next candidate...`);
+    }
+  }
+  if (!stream) throw streamError instanceof Error ? streamError : new Error(String(streamError));
   let acc = '';
   for await (const chunk of stream) {
     if (signal?.aborted) throw new Error('Generation aborted by client.');

@@ -32,7 +32,7 @@ function client(): GoogleGenAI {
   return new GoogleGenAI({ apiKey });
 }
 
-const model = () => getEnv('GEMINI_MODEL') || 'gemini-2.5-flash';
+const model = () => getEnv('GEMINI_MODEL') || 'gemini-3.6-flash';
 
 export async function groundedLiteratureSearch(params: {
   query: string;

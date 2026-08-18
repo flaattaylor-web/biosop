@@ -42,7 +42,12 @@ If several people should see the same protocols on this deployment: Dashboard �
 
 Worker → **Settings → Variables and Secrets → Add** → type *Secret* → name `GEMINI_API_KEY` → paste your key → **Deploy**.
 
-Optional, same place: `BIOSOP_API_TOKEN` (if set, AI endpoints require `Authorization: Bearer <token>` — recommended once the site is public so strangers can't spend your quota), `NCBI_API_KEY` (raises the PubMed rate limit).
+Optional, same place: `NCBI_API_KEY` (raises the PubMed rate limit).
+
+> **Do not set `BIOSOP_API_TOKEN` on a deployment you use from a browser.** If it is set, every AI
+> endpoint demands an `Authorization: Bearer <token>` header, and the web UI does not send one — the
+> whole app returns *Unauthorized.* The token exists for scripted/CLI callers only. To protect a
+> public site, use a Cloudflare WAF rate-limiting rule or Cloudflare Access instead (see Notes below).
 
 ## 4. Attach the domain
 
@@ -79,6 +84,10 @@ Local Node server (SQLite file, Vite HMR): `npm run dev` → http://localhost:30
 
 ## Notes and limits
 
-- **Rate limiting** in the Worker is per-isolate and best-effort. For a public site add a Cloudflare **WAF rate-limiting rule** on `/api/generate-sop*` (one rule is free) and/or set `BIOSOP_API_TOKEN`.
+- **Rate limiting** in the Worker is per-isolate and best-effort. For a public site add a Cloudflare
+  **WAF rate-limiting rule** on `/api/generate-sop*` (one rule is free). To restrict the site to named
+  people, put **Cloudflare Access** in front of the domain — it gates the browser before requests reach
+  the Worker, which `BIOSOP_API_TOKEN` cannot do. A bearer token shipped in a browser bundle is readable
+  by anyone viewing source, so it protects nothing there; set it only for API/CLI consumers.
 - **Long generations** stream over SSE, which Workers support. If a generation fails the stream returns an `error` event and the UI reports it.
 - **Outbound calls** from the Worker: Gemini, Crossref, NCBI E-utilities — all reachable from Workers.

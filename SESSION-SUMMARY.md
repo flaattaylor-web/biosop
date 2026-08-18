@@ -20,7 +20,7 @@ An AI Studio scaffold (React + Express + Gemini) that generated SOPs and Excel r
 - **One API (Hono, `src/server/app.ts`) on two runtimes:** Node (`server.ts`, local dev with Vite HMR) and **Cloudflare Workers** (`src/worker.ts`). Verified end-to-end in the real Workers runtime (workerd) with Playwright.
 - **`wrangler.jsonc`** names `taylorflaat-biosop.org` + `www.` as custom domains → Cloudflare attaches DNS + TLS on deploy. `DEPLOY.md` = GitHub → Cloudflare in 5 steps. **No database required.**
 - Streaming generation (SSE) with real per-section progress and cancel; fake `setTimeout` progress removed.
-- Model ID configurable (`GEMINI_MODEL`, default gemini-2.5-flash), validated against `models.list` at boot.
+- Model ID configurable (`GEMINI_MODEL`, default gemini-3.6-flash), validated against `models.list` at boot.
 - Optional bearer token + per-IP rate limit on AI endpoints. `xlsx@0.18.5` (CVE-2023-30533) removed.
 
 ### Privacy (your ask: "only stores user data in their own browser")

@@ -45,7 +45,7 @@ npm run deploy           # vite build + wrangler deploy
 One API (`src/server/app.ts`, Hono) runs on both runtimes; only the entry points differ:
 `server.ts` (Node, better-sqlite3 file) and `src/worker.ts` (Workers, D1).
 
-At boot the server lists the models available to your key and warns if `GEMINI_MODEL` (default `gemini-2.5-flash`) is not among them.
+At boot the server lists the models available to your key and warns if `GEMINI_MODEL` (default `gemini-3.6-flash`) is not among them.
 
 ## Layout
 
