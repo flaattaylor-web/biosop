@@ -31,7 +31,7 @@
   // Non-secret configuration. Secrets (GEMINI_API_KEY, BIOSOP_API_TOKEN, NCBI_API_KEY)
   // go in via `wrangler secret put` or the dashboard — never in this file.
   "vars": {
-    "GEMINI_MODEL": "gemini-2.5-flash",
+    "GEMINI_MODEL": "gemini-3.6-flash",
     "AI_RATE_LIMIT_PER_10MIN": "30",
     "LITERATURE_CONTACT_EMAIL": "flaattaylor@gmail.com"
   },
