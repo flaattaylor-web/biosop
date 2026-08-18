@@ -1,0 +1,6 @@
+{
+  "name": "BioSOP & Reaction Sheet Generator",
+  "description": "Generate biotech Standard Operating Procedures and Excel reaction sheets, validated against literature and benchmark protocols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,4 @@
+# Local secrets for `wrangler dev` (copy to .dev.vars — it is gitignored)
+GEMINI_API_KEY=your_key_here
+# BIOSOP_API_TOKEN=
+# NCBI_API_KEY=

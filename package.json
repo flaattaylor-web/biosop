@@ -1,0 +1,51 @@
+{
+  "name": "biosop-generator",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build",
+    "start": "NODE_ENV=production tsx server.ts",
+    "cf:dev": "vite build && wrangler dev",
+    "cf:migrate": "wrangler d1 migrations apply biosop --remote",
+    "deploy": "vite build && wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit && tsc --noEmit -p tsconfig.core.json",
+    "clean": "rm -rf dist .wrangler"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@hono/node-server": "^2.1.1",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "better-sqlite3": "^13.0.3",
+    "docx": "^9.7.1",
+    "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "hono": "^4.13.3",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260818.1",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "fast-check": "^4.9.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.124.0"
+  }
+}

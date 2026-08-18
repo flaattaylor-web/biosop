@@ -1,0 +1,48 @@
+/**
+ * Cloudflare Workers configuration — BioSOP Generator
+ *
+ * Deploy flow (see DEPLOY.md):
+ *   1. wrangler d1 create biosop            → paste database_id below
+ *   2. wrangler secret put GEMINI_API_KEY
+ *   3. npm run deploy   (or connect the GitHub repo in the Cloudflare dashboard)
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "biosop",
+  "main": "src/worker.ts",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Static front end built by `vite build`. Anything that isn't an asset is
+  // handled by the Worker; SPA routes fall back to index.html.
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+
+  // OPTIONAL — shared team storage. By default protocols live only in each
+  // user's browser and no database is needed. To enable server storage:
+  //   npx wrangler d1 create biosop   → paste database_id, uncomment this block, redeploy.
+  // "d1_databases": [
+  //   { "binding": "DB", "database_name": "biosop", "database_id": "REPLACE_WITH_ID", "migrations_dir": "migrations" }
+  // ],
+
+  // Non-secret configuration. Secrets (GEMINI_API_KEY, BIOSOP_API_TOKEN, NCBI_API_KEY)
+  // go in via `wrangler secret put` or the dashboard — never in this file.
+  "vars": {
+    "GEMINI_MODEL": "gemini-2.5-flash",
+    "AI_RATE_LIMIT_PER_10MIN": "30",
+    "LITERATURE_CONTACT_EMAIL": "flaattaylor@gmail.com"
+  },
+
+  // Custom domain. The zone must already be on this Cloudflare account;
+  // Cloudflare creates the DNS record and certificate automatically on deploy.
+  "routes": [
+    { "pattern": "taylorflaat-biosop.org", "custom_domain": true },
+    { "pattern": "www.taylorflaat-biosop.org", "custom_domain": true }
+  ],
+
+  "observability": { "enabled": true },
+  "upload_source_maps": true
+}
