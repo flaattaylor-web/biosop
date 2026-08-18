@@ -327,7 +327,10 @@ export const SopGenerator: React.FC<SopGeneratorProps> = ({
       const cleanMsg = msg.includes('Failed to fetch')
         ? 'Network request failed. Please check your network connection and try again.'
         : msg || 'An error occurred during protocol generation.';
-      setErrorMsg(cleanMsg);
+      // err.detail carries the reason Gemini itself gave; show it so a quota problem is not
+      // mistaken for a transient one.
+      const detail: string | undefined = typeof err?.detail === 'string' ? err.detail : undefined;
+      setErrorMsg(detail && !cleanMsg.includes(detail) ? `${cleanMsg} (Gemini said: ${detail})` : cleanMsg);
     } finally {
       setIsLoading(false);
       setStatusStep('');
