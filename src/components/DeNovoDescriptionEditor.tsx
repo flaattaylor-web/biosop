@@ -160,7 +160,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
     }
   };
 
-  const handleExecuteBuild = (e: React.FormEvent) => {
+  const handleExecuteBuild = (e: React.MouseEvent | React.FormEvent) => {
     e.preventDefault();
     if (!description.trim()) return;
 
@@ -219,7 +219,10 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
         </div>
       </div>
 
-      <form onSubmit={handleExecuteBuild} className="space-y-5">
+      {/* Deliberately a <div>, not a <form>: this editor renders inside SopGenerator's form, and a
+          nested form makes the browser dispatch a submit event that bubbles to the outer form —
+          running the standard generation path with stale state alongside the de novo one. */}
+      <div className="space-y-5">
         {/* Core Metadata Fields */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3.5">
           <div className="md:col-span-2 space-y-1">
@@ -403,7 +406,8 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
           </div>
 
           <button
-            type="submit"
+            type="button"
+            onClick={handleExecuteBuild}
             disabled={isLoading || !description.trim()}
             className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white text-xs font-extrabold uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
           >
@@ -421,7 +425,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
             )}
           </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
