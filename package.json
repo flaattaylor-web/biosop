@@ -20,7 +20,6 @@
     "@hono/node-server": "^2.1.1",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
-    "better-sqlite3": "^13.0.3",
     "docx": "^9.7.1",
     "dotenv": "^17.2.3",
     "exceljs": "^4.4.0",
@@ -31,6 +30,9 @@
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "vite": "^6.2.3"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^13.0.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260818.1",
@@ -44,7 +46,6 @@
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3",
     "vitest": "^4.1.11",
     "wrangler": "^4.124.0"
   }

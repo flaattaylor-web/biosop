@@ -1,0 +1,1357 @@
+[
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute Plasmid Miniprep Kit",
+    "catalogNumbers": [
+      "PLN10",
+      "PLN70",
+      "PLN350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid miniprep (silica spin column)",
+    "description": "Silica-binding spin-column kit for isolating plasmid DNA from recombinant E. coli cultures by alkaline-SDS lysis; recovers up to 15 µg of high-copy plasmid DNA from 1–5 mL culture in under 30 minutes without phenol/chloroform extraction or alcohol precipitation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/pln70",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/388/586/pln70bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "10 purifications (PLN10) / 70 (PLN70) / 350 (PLN350)",
+    "applications": [
+      "plasmid miniprep",
+      "restriction digestion",
+      "cloning",
+      "sequencing",
+      "transformation"
+    ],
+    "keyParameters": {
+      "input": "1–5 mL E. coli culture",
+      "time": "<30 min",
+      "yield": "up to 15 µg high-copy plasmid DNA",
+      "elution": "water or Tris-EDTA buffer"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/pln70",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "PLN70 (70 purifications) shown as product number on fetched page and PLN350 referenced on same page; PLN10/PLN70/PLN350 all listed in the fetched user guide (pln70bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute HP Plasmid Midiprep Kit",
+    "catalogNumbers": [
+      "NA0200",
+      "NA0200S"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid midiprep (silica membrane, spin or vacuum)",
+    "description": "Silica-membrane kit for larger-scale plasmid preparation from E. coli cultures in spin or vacuum format; up to 350 µg high-copy plasmid DNA in 30 minutes or less with no phenol/chloroform extraction or alcohol precipitation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na0200",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/310/420/na0200bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "25 preps (NA0200) / 4 preps (NA0200S)",
+    "applications": [
+      "plasmid midiprep",
+      "transfection-grade plasmid DNA",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "culture volume by cell mass: A600 x mL = 200–600 (250 typically optimal); e.g., 50 mL overnight LB culture",
+      "time": "≤30 min",
+      "yield": "up to 350 µg high-copy plasmid DNA",
+      "notes": "Spin or vacuum format"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na0200",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "NA0200 (sufficient for 25 purifications) present on fetched product page; NA0200S (4 preps) listed in the fetched user guide (na0200bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute HP Plasmid Maxiprep Kit",
+    "catalogNumbers": [
+      "NA0300S",
+      "NA0300",
+      "NA0310"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid maxiprep (silica membrane, spin or vacuum)",
+    "description": "Filter-syringe clearing plus silica-binding column kit for isolating plasmid DNA from recombinant E. coli; up to 1.2 mg plasmid DNA from a 150 mL overnight LB culture in 30 minutes or less, no phenol/chloroform.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na0310",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/116/626/na0310bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "4 preps (NA0300S) / 10 preps (NA0300) / 25 preps (NA0310)",
+    "applications": [
+      "plasmid maxiprep",
+      "transfection-grade plasmid DNA"
+    ],
+    "keyParameters": {
+      "input": "150 mL overnight LB culture (optimal volume = 750/A600)",
+      "time": "≤30 min from harvested culture",
+      "yield": "up to 1.2 mg high-copy plasmid DNA",
+      "notes": "Vacuum or spin format"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na0310",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "NA0310 (sufficient for 25 purifications) present on fetched product page; NA0300S/NA0300/NA0310 listed in the fetched user guide (na0310bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute Mammalian Genomic DNA Miniprep Kit",
+    "catalogNumbers": [
+      "G1N10",
+      "G1N70",
+      "G1N350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from mammalian cells/tissue (spin column)",
+    "description": "Silica spin-column kit for high-molecular-weight genomic DNA from mammalian cells and tissue: chaotropic-salt lysis, ethanol-assisted binding, washes and elution in 200 µL Tris-EDTA; no mechanical homogenization required.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/g1n70",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/627/935/g1n70bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "10 preps (G1N10) / 70 preps (G1N70) / 350 preps (G1N350)",
+    "applications": [
+      "genomic DNA from cultured cells",
+      "genomic DNA from tissue",
+      "PCR",
+      "Southern blot"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^6 cells or 25 mg tissue",
+      "time": "20 min after lysis",
+      "yield": "~25 µg (cells) / ~30 µg (tissue)",
+      "notes": "A260/A280 1.6–1.9; DNA up to 50 kb; elute in 200 µL"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/g1n70",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "G1N70 (sufficient for 70 purifications) present on fetched product page; G1N10/G1N70/G1N350 listed in the fetched user guide (g1n70bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute Bacterial Genomic DNA Kit",
+    "catalogNumbers": [
+      "NA2100",
+      "NA2110",
+      "NA2120"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Bacterial genomic DNA (silica microspin)",
+    "description": "Silica-based microspin kit for pure genomic DNA from bacterial cultures; works directly on Gram-negative bacteria and with optional lysozyme (L4919) for Gram-positive strains, avoiding phenol, chloroform and alcohol precipitation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na2110",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/203/124/na2110bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "10 preps (NA2100) / 70 preps (NA2110) / 350 preps (NA2120)",
+    "applications": [
+      "bacterial genomic DNA",
+      "PCR",
+      "restriction digestion",
+      "Southern blot",
+      "cloning"
+    ],
+    "keyParameters": {
+      "input": "up to 1.5 mL bacterial culture",
+      "time": "70–120 min",
+      "yield": "15–20 µg typical",
+      "notes": "A260/A280 1.6–1.9; DNA up to 50 kb"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na2110",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "NA2110 (sufficient for 70 purifications) present on fetched product page; NA2100/NA2110/NA2120 listed in the fetched user guide (na2110bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute Mammalian Total RNA Miniprep Kit",
+    "catalogNumbers": [
+      "RTN10",
+      "RTN70",
+      "RTN350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from mammalian cells/tissue (spin column)",
+    "description": "Silica spin-column kit to isolate total RNA from mammalian cells and tissues without phenol or chloroform; up to 150 µg total RNA per prep from up to 10^7 cells or 40 mg tissue, with recovery possible from as few as 100 cells.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/rtn70",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/181/065/rtn70bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "10 preps (RTN10) / 70 preps (RTN70) / 350 preps (RTN350)",
+    "applications": [
+      "total RNA isolation",
+      "RT-PCR",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "up to 10^7 cells or 40 mg tissue",
+      "time": "<30 min (12–18 preps in 30 min)",
+      "yield": "up to 150 µg total RNA"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/rtn70",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "RTN70 (sufficient for 70 purifications) present on fetched product page; RTN10/RTN70/RTN350 listed in the fetched user guide (rtn70bul.pdf)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute PCR Clean-Up Kit",
+    "catalogNumbers": [
+      "NA1020"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "PCR product clean-up (spin column)",
+    "description": "Silica-membrane spin-column kit for rapid purification of single- or double-stranded PCR products (100 bp to 10 kb), removing primers, nucleotides, polymerase, oil and salts in about 8 minutes.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na1020",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/786/801/na1020bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "70 purifications",
+    "applications": [
+      "PCR clean-up",
+      "sequencing",
+      "cloning"
+    ],
+    "keyParameters": {
+      "input": "up to 100 µL PCR reaction or 10 µg DNA per column",
+      "time": "~8–15 min",
+      "yield": "up to 95% recovery of products 100 bp–10 kb",
+      "notes": "removes >99% of primers and most primer-dimers (<40 bp)",
+      "elution": "50 µL Elution Solution or water"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na1020",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "NA1020 (sufficient for 70 purifications) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "GenElute Gel Extraction Kit",
+    "catalogNumbers": [
+      "NA1111"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Agarose gel extraction (spin or vacuum column)",
+    "description": "Silica-binding kit for rapid extraction of linear and plasmid DNA fragments from standard or low-melting agarose gels (TAE or TBE) in spin or vacuum format; up to 80% recovery, up to 10 µg DNA per column.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na1111",
+    "protocolUrl": "https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/144/866/na1111bul.pdf",
+    "storage": "15–25°C",
+    "kitSize": "70 purifications",
+    "applications": [
+      "gel extraction",
+      "cloning",
+      "sequencing",
+      "labeling"
+    ],
+    "keyParameters": {
+      "input": "up to 3.5 g agarose gel slice per column",
+      "yield": "up to 80% recovery; binding capacity up to 10 µg per column",
+      "notes": "TAE and TBE compatible; also polyacrylamide gels",
+      "time": "~15–20 min (spin or vacuum)",
+      "elution": "50 µL (or 25 µL for higher concentration)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/na1111",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "NA1111 (sufficient for 70 purifications) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Extract-N-Amp Tissue PCR Kit",
+    "catalogNumbers": [
+      "XNAT2",
+      "XNAT2R"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Direct-PCR extraction (tissue) with hot-start ReadyMix",
+    "description": "All reagents to rapidly extract PCR-ready genomic DNA from mouse tails, hair, animal tissue, saliva and buccal swabs (10 min RT + 3 min 95 °C, no enzymatic digestion or homogenization) and amplify with the included antibody hot-start PCR ReadyMix.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnat2",
+    "storage": "−20°C",
+    "kitSize": "100 extractions / 100 amplifications (XNAT2); 1000 extractions / 1000 amplifications (XNAT2R)",
+    "applications": [
+      "mouse-tail genotyping",
+      "direct PCR from tissue",
+      "buccal swab PCR"
+    ],
+    "keyParameters": {
+      "input": "mouse tail, hair, animal tissue, saliva, buccal swab",
+      "time": "~15 min extraction",
+      "notes": "extract stable at 4 °C for 6+ months; RED-dye version (REDExtract-N-Amp Tissue PCR Kit) ordered as XNAT-1000RXN"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnat2",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "XNAT2 (100 extractions/100 amplifications) present on fetched product page; XNAT2R (1000/1000) confirmed on fetched page https://www.sigmaaldrich.com/US/en/product/sigma/xnat2r."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Extract-N-Amp Plant PCR Kit",
+    "catalogNumbers": [
+      "XNAP2"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Direct-PCR extraction (plant leaf) with hot-start ReadyMix",
+    "description": "Rapid genomic DNA extraction from plant leaf disks (10 min at 95 °C, no liquid nitrogen, mechanical disruption or column purification) followed by dilution and direct PCR with the included 2X hot-start PCR ReadyMix.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnap2",
+    "storage": "−20°C",
+    "kitSize": "100 extractions / 100 amplifications",
+    "applications": [
+      "plant genotyping",
+      "direct PCR from leaf tissue"
+    ],
+    "keyParameters": {
+      "input": "0.5–0.7 cm leaf disk",
+      "time": "<15 min extraction",
+      "notes": "Contains Extraction Solution, Dilution Solution and 2X PCR ReadyMix (Taq + hot-start antibody)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnap2",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "XNAP2 (100 extractions/100 amplifications) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Extract-N-Amp Blood PCR Kit",
+    "catalogNumbers": [
+      "XNAB2"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Direct-PCR extraction (whole blood) with hot-start ReadyMix",
+    "description": "Rapid extraction of host genomic DNA from 10 µL whole blood, dried blood spots or blood cards (5 min RT extraction plus neutralization; no purification, centrifugation, heating or precipitation) and PCR with the included antibody hot-start ReadyMix.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnab2",
+    "storage": "−20°C",
+    "kitSize": "100 extractions / 100 amplifications",
+    "applications": [
+      "direct PCR from blood",
+      "dried blood spot genotyping"
+    ],
+    "keyParameters": {
+      "input": "10 µL whole blood, dried blood spot or blood card",
+      "time": "~8 min prep",
+      "notes": "extract stable at 4 °C for at least 6 months"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/xnab2",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "XNAB2 (100 extractions/100 amplifications) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "JumpStart Taq ReadyMix",
+    "catalogNumbers": [
+      "P2893",
+      "P2893-100RXN",
+      "P2893-400RXN"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Antibody hot-start Taq 2X master mix",
+    "description": "Ready-to-use 2X master mix of antibody-inactivated hot-start JumpStart Taq DNA polymerase, 99% pure dNTPs and reaction buffer; the antibody dissociates at 70 °C to restore activity, allowing room-temperature setup and reduced primer-dimers.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p2893",
+    "storage": "−20°C",
+    "kitSize": "100 reactions (2.5 mL) / 400 reactions (10 mL)",
+    "applications": [
+      "hot-start PCR",
+      "multiplex PCR",
+      "routine PCR"
+    ],
+    "keyParameters": {
+      "input": "2.5 units/50 µL reaction",
+      "notes": "2X concentrate; dNTPs included"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p2893",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "P2893 with 100RXN (2.5 mL) and 400RXN (10 mL) pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "REDTaq ReadyMix PCR Reaction Mix",
+    "catalogNumbers": [
+      "R2523"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Taq 2X master mix with loading dye",
+    "description": "2X ready-to-use PCR master mix of Taq DNA polymerase, 99% pure dNTPs, reaction buffer and an inert red dye so products can be loaded directly on agarose gels; amplifies targets up to 7 kb (no hot start).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/r2523",
+    "storage": "−20°C",
+    "kitSize": "20 reactions (500 µL) / 100 reactions (2.5 mL)",
+    "applications": [
+      "routine PCR",
+      "colony PCR / direct gel loading",
+      "semi-quantitative RT-PCR"
+    ],
+    "keyParameters": {
+      "input": "25 µL 2X mix + 25 µL template/primers/water (50 µL)",
+      "notes": "red dye migrates at ~125 bp equivalent; targets up to 7 kb"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/r2523",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "R2523 with 20-reaction and 100-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "JumpStart REDTaq ReadyMix Reaction Mix",
+    "catalogNumbers": [
+      "P0982"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Antibody hot-start Taq 2X master mix with loading dye",
+    "description": "2X optimized reaction concentrate of antibody hot-start JumpStart Taq DNA polymerase, 99% pure dNTPs, buffer and an inert red tracking/loading dye that does not affect sequencing, restriction digestion or ligation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p0982",
+    "storage": "−20°C",
+    "kitSize": "20 reactions (500 µL) / 100 reactions (2.5 mL) / 800 reactions (20 mL)",
+    "applications": [
+      "hot-start PCR with direct gel loading",
+      "multiplex PCR",
+      "methylation-specific PCR"
+    ],
+    "keyParameters": {
+      "input": "2.5 units/50 µL reaction",
+      "notes": "polymerase inactive at RT, activated in first denaturation step"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p0982",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "P0982 with 20/100/800-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "KiCqStart SYBR Green qPCR ReadyMix",
+    "catalogNumbers": [
+      "KCQS00"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "SYBR Green qPCR 2X master mix (no reference dye)",
+    "description": "2X concentrated ready-to-use qPCR master mix with buffer, stabilizers, antibody hot-start Taq DNA polymerase, dNTPs, MgCl2 and SYBR Green dye; KCQS00 contains no internal reference dye (for Bio-Rad, Roche, Eppendorf, Cepheid and similar systems).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/kcqs00",
+    "storage": "−20°C (1 year) or 2–8°C up to 6 months",
+    "kitSize": "250 reactions (2 x 1.25 mL) / 1,250 reactions (10 x 1.25 mL) / 5,000 reactions (50 mL)",
+    "applications": [
+      "SYBR Green qPCR",
+      "two-step RT-qPCR"
+    ],
+    "keyParameters": {
+      "time": "results in ~33 min",
+      "notes": "no internal reference dye (KCQS00 formulation); compatible with Bio-Rad, Cepheid, Eppendorf, Illumina, Corbett and Roche instruments"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/kcqs00",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "KCQS00 with 250/1,250/5,000-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "LuminoCt SYBR Green qPCR ReadyMix",
+    "catalogNumbers": [
+      "L6544"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Fast SYBR Green qPCR master mix",
+    "description": "Ready-to-use SYBR Green qPCR master mix with JumpStart Taq antibody hot start formulated for fast cycling; results in about 25 minutes with amplicons under 200 bp; ROX reference dye available separately (R4526).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l6544",
+    "storage": "−20°C",
+    "kitSize": "100 reactions (2.5 mL) / 500 reactions (12.5 mL) / 2000 reactions (50 mL)",
+    "applications": [
+      "fast SYBR Green qPCR",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "time": "~25 min run",
+      "notes": "amplicons <200 bp recommended; add ROX (R4526) for instruments requiring it"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l6544",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "L6544 with 100/500/2000-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "LuminoCt qPCR ReadyMix",
+    "catalogNumbers": [
+      "L6669"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Fast probe-based qPCR master mix",
+    "description": "Ready-to-use master mix for fast probe-based qPCR: Tris-HCl pH 8.3, KCl, dNTPs, stabilizers, MgCl2 and JumpStart Taq DNA polymerase with antibody hot start; assay results in as little as 25 minutes.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l6669",
+    "storage": "−20°C",
+    "kitSize": "100 reactions (2.5 mL) / 500 reactions (12.5 mL) / 2000 reactions (50 mL)",
+    "applications": [
+      "probe-based qPCR (TaqMan-style)",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "time": "~25 min run",
+      "notes": "default 50 µL reaction; optional 100X ROX reference dye R4526"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l6669",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "L6669 with 100/500/2000-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "SYBR Green JumpStart Taq ReadyMix",
+    "catalogNumbers": [
+      "S4438"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "SYBR Green qPCR 2X master mix (standard cycling)",
+    "description": "2X ready-to-use concentrate of SYBR Green I dye, antibody hot-start JumpStart Taq DNA polymerase, dNTPs and reaction buffer (MgCl2 in buffer) for quantitative PCR; add 25 µL of 2X mix to template, primers and water.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/s4438",
+    "storage": "−20°C",
+    "kitSize": "20 reactions (500 µL) / 100 reactions (2.5 mL) / 400 reactions (10 mL) / 500 reactions (12.5 mL)",
+    "applications": [
+      "SYBR Green qPCR",
+      "gene expression",
+      "RT-qPCR"
+    ],
+    "keyParameters": {
+      "input": "1.25 units/50 µL reaction",
+      "notes": "hot-start antibody released above 70 °C; compatible with 20+ qPCR platforms"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/s4438",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "S4438 with 20/100/400/500-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "AccuTaq LA DNA Polymerase",
+    "catalogNumbers": [
+      "D8045"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Long and accurate (LA) PCR polymerase",
+    "description": "Hybrid of Taq DNA polymerase and a 3'→5' exonuclease proofreading polymerase for long-range PCR: up to 22 kb from genomic templates and up to 40 kb from less complex templates, with fidelity up to 6.5X that of Taq; supplied with 10X buffer and DMSO.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/d8045",
+    "storage": "−20°C (enzyme and 10X buffer); room temperature (DMSO)",
+    "kitSize": "125 / 500 / 1500 reactions",
+    "applications": [
+      "long-range PCR",
+      "high-fidelity amplification of long targets"
+    ],
+    "keyParameters": {
+      "input": "5 units/µL",
+      "notes": "up to 22 kb genomic, 40 kb simple templates; fidelity up to 6.5X Taq"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/d8045",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "D8045 with 125/500/1500-reaction pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "ReadyScript cDNA Synthesis Mix",
+    "catalogNumbers": [
+      "RDRT"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "5X first-strand cDNA synthesis master mix",
+    "description": "5X concentrated master mix containing buffer, dNTPs, MgCl2, a blend of random and oligo(dT) primers, RNase inhibitor, stabilizers and an RNase H+ MMLV-derived ReadyScript reverse transcriptase; converts up to 1 µg RNA per 20 µL reaction to cDNA in about 40 minutes for RT-PCR and RT-qPCR.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/rdrt",
+    "storage": "−20°C (1 year); −70°C for extended shelf life",
+    "kitSize": "25 / 100 / 500 reactions",
+    "applications": [
+      "first-strand cDNA synthesis",
+      "two-step RT-qPCR",
+      "RT-PCR"
+    ],
+    "keyParameters": {
+      "input": "up to 1 µg total RNA per 20 µL reaction",
+      "time": "~40 min",
+      "notes": "optimized for targets <1 kb; RNase H+ MMLV RT"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/rdrt",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "RDRT with 25/100/500-reaction configurations present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Enhanced Avian First Strand Synthesis Kit",
+    "catalogNumbers": [
+      "STR1"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "AMV-RT first-strand cDNA synthesis kit",
+    "description": "First-strand cDNA synthesis kit built on enhanced avian myeloblastosis virus reverse transcriptase (eAMV-RT), which transcribes through RNA secondary structure at up to 65 °C; supplies eAMV-RT (1000 U), dNTPs, random nonamers, anchored oligo(dT)23 primer, RNase inhibitor and PCR-grade water.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/str1",
+    "storage": "−20°C",
+    "kitSize": "50 reactions",
+    "applications": [
+      "first-strand cDNA synthesis",
+      "RT-PCR",
+      "full-length cDNA from structured RNA"
+    ],
+    "keyParameters": {
+      "input": "total or poly(A)+ RNA",
+      "notes": "RT temperature up to 65 °C; random 9-mers and anchored oligo(dT)23 included"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/str1",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "STR1 (sufficient for 50 reactions) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Cas9 Protein from Streptococcus pyogenes (recombinant, 1X NLS)",
+    "catalogNumbers": [
+      "CAS9PROT"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "SpCas9 nuclease protein (RNP delivery)",
+    "description": "Recombinant SpCas9 protein (~160 kDa, ≥95% by SDS-PAGE) with one nuclear localization signal, supplied lyophilized with dilution buffer and reconstitution solution; ready-to-use with guide RNAs for RNP transfection or embryo injection.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/cas9prot",
+    "storage": "−20°C",
+    "kitSize": "50 µg (≥300 pmol) / 250 µg (≥1500 pmol)",
+    "applications": [
+      "CRISPR RNP genome editing",
+      "cell transfection",
+      "embryo microinjection"
+    ],
+    "keyParameters": {
+      "notes": "1X NLS; lyophilized powder; pair with synthetic crRNA:tracrRNA or sgRNA"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/cas9prot",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "CAS9PROT with 50 µg and 250 µg pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "SygRNA Cas9 Synthetic tracrRNA",
+    "catalogNumbers": [
+      "TRACRRNA05N"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Synthetic guide RNA component (tracrRNA)",
+    "description": "HPLC-purified synthetic SpCas9 tracrRNA that pairs with a target-specific SygRNA crRNA to guide Cas9 protein or mRNA to genomic targets; supplied dry for resuspension in RNase-free Tris buffer (pH ≤8.0) and delivered by microinjection, lipofection or electroporation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/tracrrna05n",
+    "storage": "−20°C",
+    "kitSize": "5 nmol",
+    "applications": [
+      "CRISPR knockout",
+      "CRISPR knock-in",
+      "RNP assembly with Cas9 protein"
+    ],
+    "keyParameters": {
+      "notes": "must be combined with target-specific crRNA and a Cas9 source; custom crRNAs ordered via the SygRNA/CRISPR search tool"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/tracrrna05n",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "TRACRRNA05N (5 nmol) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "MISSION shRNA Bacterial Glycerol Stock (TRC library, family)",
+    "catalogNumbers": [
+      "SHCLNG"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Lentiviral shRNA knockdown clones (RNAi family)",
+    "description": "Product family of over 150,000 pre-cloned TRC lentiviral shRNA constructs targeting more than 15,000 human and 15,000 mouse genes, supplied as bacterial glycerol stocks (individual clones, gene target sets or gene family sets) that can be transfected or packaged into lentiviral particles for gene knockdown.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/shclng",
+    "storage": "−70°C (shipped on dry ice)",
+    "kitSize": "individual clone glycerol stock (gene-specific SHCLNG-NM_xxxxxx SKUs)",
+    "applications": [
+      "RNAi gene knockdown",
+      "lentivirus production",
+      "stable knockdown cell lines"
+    ],
+    "keyParameters": {
+      "notes": "lentiviral-compatible plasmids; ordered per target gene; lentiviral particle format also available"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/shclng",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "SHCLNG (MISSION shRNA Bacterial Stock) present on fetched product page; gene-specific suffixes are assigned at ordering and were not individually verified."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "MISSION siRNA Universal Negative Control #1",
+    "catalogNumbers": [
+      "SIC001"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "siRNA negative control (RNAi family)",
+    "description": "Negative-control siRNA for RNAi transfection experiments, tested in vitro in human, mouse and rat cell lines; representative control for the MISSION siRNA product line.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/sic001",
+    "storage": "−20°C",
+    "applications": [
+      "siRNA knockdown controls",
+      "RNAi transfection optimization"
+    ],
+    "keyParameters": {
+      "notes": "two sizes offered; use alongside gene-specific MISSION siRNA/esiRNA"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/sic001",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "SIC001 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "BugBuster Protein Extraction Reagent (Novagen)",
+    "catalogNumbers": [
+      "70584-M"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "E. coli lysis / protein extraction reagent",
+    "description": "Tris-buffered mixture of non-ionic and zwitterionic detergents that gently disrupts E. coli cell walls to release active, soluble protein without sonication or French press; non-denaturing and also used for inclusion body preparation.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/70584m",
+    "storage": "10–30°C (may be frozen; avoid repeated freeze-thaw)",
+    "applications": [
+      "E. coli lysis",
+      "soluble protein extraction",
+      "inclusion body preparation"
+    ],
+    "keyParameters": {
+      "notes": "non-denaturing detergent mix in Tris buffer; alternative to sonication/French press"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/70584m",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "70584-M present on fetched Novagen product page (URL slug 70584m); other pack SKUs (e.g., 70584-3/-4) not verified."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Benzonase Nuclease",
+    "catalogNumbers": [
+      "70746",
+      "E1014"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Non-specific endonuclease (nucleic acid removal)",
+    "description": "Recombinant Serratia marcescens endonuclease that degrades all forms of DNA and RNA to 2–5 base oligonucleotides with no proteolytic activity; used to remove nucleic acids and reduce viscosity in protein preparations. 70746 (Millipore/Novagen): 25–29 U/µL, >90% purity; E1014 (Sigma): ≥250 U/µL, ≥90% purity, in 50% glycerol/20 mM Tris pH 8.0/2 mM MgCl2/20 mM NaCl.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/70746",
+    "storage": "−20°C",
+    "applications": [
+      "nucleic acid removal from lysates",
+      "viscosity reduction",
+      "protein purification sample prep"
+    ],
+    "keyParameters": {
+      "notes": "requires 1–2 mM Mg2+; active pH 6–10, 0–42 °C; optimum pH 8.0–9.2"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/70746",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "70746 present on fetched Millipore page; E1014 confirmed on fetched page https://www.sigmaaldrich.com/US/en/product/sigma/e1014."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "HIS-Select Nickel Affinity Gel",
+    "catalogNumbers": [
+      "P6611"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC (Ni-NTA type) affinity resin for His-tag purification",
+    "description": "IMAC affinity gel (6% beaded agarose, 45–165 µm) with a proprietary quadridentate NTA chelate on a non-charged hydrophilic linkage for purifying His-tagged recombinant proteins under native or denaturing conditions; binding capacity >15 mg/mL, minimal nickel leaching.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p6611",
+    "storage": "2–8°C",
+    "kitSize": "1 mL / 5 mL / 25 mL / 100 mL / 500 mL",
+    "applications": [
+      "His-tag protein purification",
+      "batch or column IMAC"
+    ],
+    "keyParameters": {
+      "yield": ">15 mg protein/mL resin (~30 kDa protein)",
+      "notes": "1:1 suspension in 20% ethanol; native and denaturing conditions"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/p6611",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "P6611 with 1/5/25/100/500 mL pack sizes present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "ANTI-FLAG M2 Affinity Gel",
+    "catalogNumbers": [
+      "A2220"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Anti-FLAG antibody agarose (IP / affinity purification)",
+    "description": "Mouse monoclonal ANTI-FLAG M2 antibody (IgG1) covalently attached to 4% agarose beads for immunoprecipitation and affinity purification of N-terminal, C-terminal or internal FLAG (DYKDDDDK) fusion proteins; calcium-independent binding, eluted with FLAG peptide, 3X FLAG peptide or glycine pH 3.5.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/a2220",
+    "storage": "−20°C",
+    "applications": [
+      "FLAG-tag immunoprecipitation",
+      "FLAG fusion protein purification",
+      "co-IP"
+    ],
+    "keyParameters": {
+      "yield": ">0.6 mg FLAG-BAP/mL resin",
+      "notes": "45–165 µm beads; supplied in buffered saline with azide and 50% glycerol"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/a2220",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "A2220 present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "FLAG Peptide",
+    "catalogNumbers": [
+      "F3290"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Elution peptide for FLAG affinity resins",
+    "description": "Synthetic DYKDDDDK peptide (≥85% HPLC, MW 1012.97) for competitive elution of FLAG fusion proteins from ANTI-FLAG M1/M2 agarose or M2 magnetic resins; usual working concentration 100 µg/mL (does not elute 3X FLAG fusions).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/f3290",
+    "storage": "2–8°C",
+    "applications": [
+      "FLAG-tag elution",
+      "native protein recovery after FLAG IP"
+    ],
+    "keyParameters": {
+      "notes": "dissolve in TBS (10 mM Tris-HCl, 150 mM NaCl, pH 7.4) to 5 mg/mL stock; use at ~100 µg/mL"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/f3290",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "F3290 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Bradford Reagent",
+    "catalogNumbers": [
+      "B6916"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric protein quantitation reagent",
+    "description": "Ready-to-use Coomassie Brilliant Blue G-250 reagent for protein determination (no mixing or dilution): 5-minute incubation, read at 595 nm; standard range 50–1400 µg/mL and micro range 1–10 µg/mL, compatible with microwell plates and tolerant of reducing sugars and thiols.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/b6916",
+    "storage": "2–8°C",
+    "applications": [
+      "protein concentration assay",
+      "microplate protein assay"
+    ],
+    "keyParameters": {
+      "input": "0.1–1.4 mg/mL (standard) or 1–10 µg/mL (micro)",
+      "time": "5 min",
+      "notes": "read A595"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/b6916",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "B6916 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "In Situ Cell Death Detection Kit, Fluorescein (Roche)",
+    "catalogNumbers": [
+      "11684795910"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "TUNEL apoptosis assay (fluorescence)",
+    "description": "Nonradioactive TUNEL kit for detecting and quantifying apoptotic DNA strand breaks at the single-cell level: TdT enzyme solution plus fluorescein-dUTP label solution, read directly by fluorescence microscopy or flow cytometry with no secondary detection step; suitable for frozen and formalin-fixed sections.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11684795910",
+    "storage": "−20°C",
+    "kitSize": "≤50 tests",
+    "applications": [
+      "apoptosis detection (TUNEL)",
+      "tissue sections",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "notes": "direct fluorescein labeling; Enzyme Solution (TdT) + Label Solution (fluorescein-dUTP)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/roche/11684795910",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "11684795910 (Roche, ≤50 tests) present on fetched sigmaaldrich.com product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "pET-28a(+) DNA (Novagen pET expression vector family)",
+    "catalogNumbers": [
+      "69864-M"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "T7 bacterial expression vector (pET system)",
+    "description": "Representative Novagen pET vector: pET-28a(+) carries an N-terminal His-Tag/thrombin/T7-Tag configuration with optional C-terminal His-Tag under the bacteriophage T7 promoter for T7 RNA polymerase-driven expression in E. coli (DE3) hosts; supplied as 10 µg purified plasmid DNA with an Induction Control strain glycerol stock.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/69864m",
+    "storage": "−70°C (may be frozen; avoid repeated freeze/thaw)",
+    "kitSize": "10 µg plasmid DNA + induction control strain",
+    "applications": [
+      "recombinant protein expression in E. coli",
+      "His-tag cloning",
+      "T7 expression system"
+    ],
+    "keyParameters": {
+      "notes": "expression yields can exceed 50% of total cell protein after induction (vendor statement); other pET vectors follow the same Novagen 6xxxx-M numbering"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/69864m",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "69864-M (pET-28a(+) DNA - Novagen) present on fetched product page (URL slug 69864m)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "BL21(DE3) Competent Cells (Novagen)",
+    "catalogNumbers": [
+      "69450-M"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Chemically competent E. coli expression host",
+    "description": "Chemically competent BL21(DE3) E. coli (lon and ompT protease deficient, chromosomal T7 RNA polymerase under lacUV5 control) for IPTG-inducible T7 expression of pET-cloned targets; transformation efficiency >2 x 10^7 cfu/µg.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/69450m",
+    "storage": "−70°C",
+    "kitSize": "0.4 mL (2 x 0.2 mL cells, 2 x 2 mL SOC, test plasmid) / 1 mL (5 x 0.2 mL cells, 4 x 2 mL SOC, test plasmid)",
+    "applications": [
+      "protein expression host",
+      "pET vector transformation"
+    ],
+    "keyParameters": {
+      "yield": ">2 x 10^7 cfu/µg",
+      "notes": "chemically competent; SOC medium and 2 ng test plasmid included"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/69450m",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "69450-M with 0.4 mL and 1 mL pack sizes present on fetched product page (URL slug 69450m)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Amicon Ultra-15 Centrifugal Filter, 10 kDa MWCO (Amicon Ultra family)",
+    "catalogNumbers": [
+      "UFC9010"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Ultrafiltration concentrator / buffer exchange",
+    "description": "15 mL centrifugal ultrafiltration device with vertical Ultracel regenerated-cellulose membrane (10 kDa MWCO) for concentrating and desalting proteins and nucleic acids: 80–100X concentration in as little as 10–15 minutes with >90% typical retentate recovery and a physical dead-stop against over-spinning.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ufc9010",
+    "storage": "Ambient",
+    "kitSize": "pkg of 8 / 24 / 96 (Amicon Ultra family also offered in 0.5, 2, 4 mL sizes and 3–100 kDa MWCOs)",
+    "applications": [
+      "protein concentration",
+      "buffer exchange / desalting",
+      "nucleic acid concentration"
+    ],
+    "keyParameters": {
+      "input": "up to 15 mL",
+      "time": "10–15 min spin",
+      "yield": ">90% recovery; 80–100X concentration",
+      "notes": "10 kDa MWCO regenerated cellulose"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ufc9010",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "UFC9010 with pkg of 8/24/96 present on fetched product page; other Amicon Ultra family SKUs not individually verified."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Immobilon-P PVDF Membrane, 0.45 µm",
+    "catalogNumbers": [
+      "IPVH00010"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "PVDF transfer membrane",
+    "description": "Hydrophobic 0.45 µm PVDF transfer membrane (roll, 27 cm x 3.75 m) for western and dot blotting of proteins >20 kDa; high protein binding (approx. 160–294 µg/cm2 depending on protein), robust when cut, low background, compatible with chemiluminescent, colorimetric, fluorescent and radioactive detection and reprobing.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ipvh00010",
+    "storage": "Ambient",
+    "kitSize": "1 roll, 27 cm x 3.75 m",
+    "applications": [
+      "western blot transfer",
+      "dot blot",
+      "reprobing"
+    ],
+    "keyParameters": {
+      "notes": "0.45 µm pore; binding capacity approx. 215 µg/cm2 BSA, 160 µg/cm2 insulin, 294 µg/cm2 goat IgG"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ipvh00010",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "IPVH00010 (1 roll, 27 cm x 3.75 m) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Immobilon ECL Ultra Western HRP Substrate",
+    "catalogNumbers": [
+      "WBULS0100"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Chemiluminescent HRP substrate",
+    "description": "Ultra-sensitive two-component chemiluminescent substrate (Solution A 50 mL + Solution B 50 mL, sufficient for 1000 cm2) for HRP-labelled antibodies on PVDF or nitrocellulose western blots; mid-to-low femtogram detection on film or digital imagers with long signal duration.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/wbuls0100",
+    "storage": "2–8°C",
+    "kitSize": "50 mL + 50 mL (1000 cm2 of membrane)",
+    "applications": [
+      "western blot chemiluminescent detection",
+      "low-abundance protein detection"
+    ],
+    "keyParameters": {
+      "notes": "two-component substrate (Solution A + Solution B); compatible with common buffers and blocking reagents; PVDF or nitrocellulose"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/wbuls0100",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "WBULS0100 present on fetched product page. Immobilon Western Chemiluminescent HRP Substrate (WBKLS0100) and Immobilon/Luminata Forte (WBLUF0100) pages returned 404 on 2026-08-18 and were omitted."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Steriflip Vacuum Tube Top Filter, 0.22 µm PES (Steriflip family)",
+    "catalogNumbers": [
+      "SCGP00525"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Sterile filtration unit (50 mL tube-top)",
+    "description": "Sterile, closed vacuum filtration unit with 0.22 µm hydrophilic polyethersulfone membrane that attaches directly to 50 mL centrifuge tubes for filter-sterilizing up to 50 mL of media, buffers and biological solutions without sample transfer (0.6 mL hold-up).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/scgp00525",
+    "storage": "15–25°C",
+    "kitSize": "pack of 25",
+    "applications": [
+      "sterile filtration of media and buffers",
+      "small-volume solution sterilization"
+    ],
+    "keyParameters": {
+      "input": "up to 50 mL",
+      "notes": "0.22 µm PES; sterile; max 45 °C"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/scgp00525",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "SCGP00525 (pack of 25) present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Stericup Quick Release-GP Vacuum Filtration System, 500 mL, 0.22 µm PES (Stericup family)",
+    "catalogNumbers": [
+      "S2GPU05RE",
+      "SCGPU05RE"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Sterile bottle-top vacuum filtration system",
+    "description": "Sterile vacuum filtration system combining a 500 mL Steritop bottle-top funnel with 0.22 µm fast-flow PES Express PLUS membrane and a 500 mL receiver flask, for sterilizing tissue culture media, protein and DNA solutions; quick-release funnel and stackable receiver bottles.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/s2gpu05re",
+    "storage": "15–25°C",
+    "kitSize": "pack of 12 (500 mL); Stericup family also in 150/250/1000 mL",
+    "applications": [
+      "sterile filtration of culture media",
+      "buffer sterilization"
+    ],
+    "keyParameters": {
+      "input": "up to 500 mL",
+      "notes": "0.22 µm PES Express PLUS; 2.4 mL hold-up volume"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/s2gpu05re",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "S2GPU05RE (pack of 12) and synonym SCGPU05RE present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Millicell 24-well Standing Cell Culture Insert, 0.4 µm PCF, 12 mm (Millicell family)",
+    "catalogNumbers": [
+      "PIHP01250"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Permeable cell culture inserts",
+    "description": "Sterile, TC-treated 12 mm standing insert with 0.4 µm translucent Isopore polycarbonate membrane (0.6 cm2, 0.4 mL working volume) for 24-well plates, giving attached or suspension cells access to medium from apical and basolateral sides for polarized-monolayer, transport and co-culture studies.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/pihp01250",
+    "storage": "10–30°C",
+    "kitSize": "50 inserts (individually blister packaged)",
+    "applications": [
+      "polarized epithelial culture",
+      "transport / permeability assays",
+      "co-culture"
+    ],
+    "keyParameters": {
+      "notes": "0.4 µm PCF membrane; 24-well format; gamma-irradiated sterile"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/pihp01250",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "PIHP01250 (pack of 50) present on fetched product page; other Millicell family SKUs not individually verified."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Escort IV Transfection Reagent",
+    "catalogNumbers": [
+      "L3287"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Cationic lipid transfection reagent",
+    "description": "Proprietary polycationic lipid formulation (1 mg/mL aqueous) for transient and stable transfection of nucleic acids into mammalian and insect cell lines (incl. Sf9, Sf21, S2); complexes are added directly to culture medium, serum compatible, low toxicity; ~160–500 transfections per mL.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l3287",
+    "storage": "2–8°C (do not freeze)",
+    "applications": [
+      "plasmid transfection",
+      "insect cell transfection",
+      "stable cell line generation"
+    ],
+    "keyParameters": {
+      "input": "~4–16 µL reagent + 2 µg DNA per 6 cm plate",
+      "notes": "1 mg/mL; serum compatible"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/l3287",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "L3287 present on fetched product page (listed as current product; pack sizes not shown in fetched content)."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "LookOut Mycoplasma PCR Detection Kit",
+    "catalogNumbers": [
+      "MP0035"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Mycoplasma contamination PCR test",
+    "description": "PCR-based detection of Mycoplasma, Acholeplasma and Ureaplasma contamination in cell cultures and biologics using pre-coated reaction tubes containing dNTPs, primers and loading dye; optimized for JumpStart Taq DNA Polymerase (D9307, sold separately). Research use; not for clinical diagnostics.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/mp0035",
+    "storage": "2–8°C",
+    "kitSize": "1 kit",
+    "applications": [
+      "mycoplasma screening of cell cultures",
+      "biologics QC"
+    ],
+    "keyParameters": {
+      "notes": "detects M. fermentans down to ~20 copies (vendor data); requires JumpStart Taq D9307; pre-coated tubes include loading dye for gel readout"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/mp0035",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "MP0035 present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Duolink In Situ Red Starter Kit Mouse/Rabbit (Duolink PLA family)",
+    "catalogNumbers": [
+      "DUO92101"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Proximity ligation assay (PLA) kit",
+    "description": "Proximity ligation assay starter kit for single-molecule detection of endogenous protein-protein interactions, post-translational modifications and protein expression in fixed cells and tissue: Anti-Rabbit PLUS and Anti-Mouse MINUS PLA probes, Red detection reagents (ex 594/em 624 nm), wash buffers and DAPI mounting medium for 30 reactions.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/duo92101",
+    "protocolUrl": "https://www.sigmaaldrich.com/US/en/technical-documents/protocol/protein-biology/protein-and-nucleic-acid-interactions/duolink-fluorescence-user-manual",
+    "storage": "−20°C",
+    "kitSize": "30 PLA reactions",
+    "applications": [
+      "protein-protein interaction imaging",
+      "PTM detection in situ",
+      "fixed cells and tissue sections"
+    ],
+    "keyParameters": {
+      "notes": "requires one mouse and one rabbit primary antibody; rolling-circle amplification; components also sold separately (DUO92002, DUO92004, DUO92008, DUO82049, DUO82040)"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/duo92101",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "DUO92101 (30 reactions) present on fetched product page; component numbers listed on same page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Cell Counting Kit-8 (CCK-8)",
+    "catalogNumbers": [
+      "96992"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "WST-8 colorimetric viability/proliferation assay",
+    "description": "Ready-to-use WST-8 solution for cell viability, proliferation and cytotoxicity assays: cellular dehydrogenases reduce WST-8 to a water-soluble orange formazan proportional to living cell number; no premixing, low cytotoxicity allowing incubation up to 24–48 h.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/96992",
+    "storage": "2–8°C",
+    "applications": [
+      "cell viability",
+      "proliferation assay",
+      "cytotoxicity assay"
+    ],
+    "keyParameters": {
+      "notes": "add directly to wells; orange formazan soluble in medium; vendor states higher sensitivity than MTT/XTT/MTS"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/96992",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "96992 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "MTT Cell Growth Assay Kit",
+    "catalogNumbers": [
+      "CT02"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "MTT colorimetric proliferation/cytotoxicity assay",
+    "description": "MTT tetrazolium assay for cell proliferation and complement-mediated cytotoxicity: Reagent A (50 mg MTT per vial) and Solution B (15 mL PBS pH 7.4); living cells cleave MTT to a dark blue formazan, dissolved in isopropanol/HCl and read at 570 nm (630 nm reference).",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ct02",
+    "storage": "2–8°C",
+    "applications": [
+      "cell proliferation",
+      "cytotoxicity assay",
+      "96-well viability screening"
+    ],
+    "keyParameters": {
+      "input": "1,000–50,000 cells/well useful range (detects 200–50,000)",
+      "time": "~4 h incubation at 37 °C",
+      "notes": "read A570 with A630 reference"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/mm/ct02",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "CT02 present on fetched product page."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Calcein-AM (BioReagent, for fluorescence)",
+    "catalogNumbers": [
+      "17783"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Live-cell viability fluorescent stain",
+    "description": "Non-fluorescent, cell-permeable acetoxymethyl ester of calcein (≥90% HPLC, MW 994.86) that is hydrolysed by intracellular esterases to green-fluorescent calcein (ex 496/em 516 nm) in live cells; used for viability staining, flow cytometry and liposome leakage assays.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/17783",
+    "storage": "−20°C",
+    "applications": [
+      "live/dead cell staining",
+      "flow cytometry viability",
+      "fluorescence microscopy"
+    ],
+    "keyParameters": {
+      "notes": "ex 496 nm / em 516 nm; supplied as solid; self-quenches at high concentration"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/17783",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "17783 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Trizma base (Tris base, primary standard and buffer)",
+    "catalogNumbers": [
+      "T1503"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Buffer component (Tris)",
+    "description": "Crystalline Tris(hydroxymethyl)aminomethane, ≥99.9% by titration, pKa 8.1 at 25 °C (buffering pH 7–9), tested for low heavy-metal contamination; used to prepare TAE, TBE, TE, electrophoresis, blotting and lysis buffers.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/t1503",
+    "storage": "Dry, room temperature",
+    "applications": [
+      "buffer preparation (TAE/TBE/TE)",
+      "western blot and electrophoresis buffers",
+      "protein extraction buffers"
+    ],
+    "keyParameters": {
+      "notes": "MW 121.14; pKa 8.1 (25 °C); DRYPOUR packaging"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/t1503",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "T1503 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "RNaseZAP RNase decontamination solution",
+    "catalogNumbers": [
+      "R2020"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "RNase decontamination reagent",
+    "description": "Ready-to-use liquid cleaning agent (pH 7.0–7.4) that removes RNase contamination from glassware, plasticware, pipettors, benchtops and reaction vessels without inhibiting subsequent enzymatic reactions; not for corrodible metal surfaces.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/r2020",
+    "kitSize": "250 mL",
+    "applications": [
+      "RNase-free workspace preparation",
+      "RNA work decontamination"
+    ],
+    "keyParameters": {
+      "notes": "liquid, pH 7.0–7.4, water soluble; does not inhibit subsequent enzymatic reactions"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/r2020",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "R2020 (250 mL) present on fetched product page; storage temperature not stated in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Deoxynucleotide (dNTP) Mix, 10 mM each",
+    "catalogNumbers": [
+      "D7295"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "dNTP mix for PCR / RT",
+    "description": "Premixed equimolar solution of ≥99% pure dATP, dCTP, dGTP and TTP sodium salts at 10 mM each in molecular-biology-grade water; 1 µL is sufficient for a standard 50 µL PCR reaction, and it is also used for reverse transcription, cDNA synthesis and sequencing.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/d7295",
+    "storage": "−20°C",
+    "applications": [
+      "PCR",
+      "reverse transcription / cDNA synthesis",
+      "DNA sequencing"
+    ],
+    "keyParameters": {
+      "input": "1 µL per standard 50 µL PCR (≈200 µM final each dNTP)",
+      "notes": "10 mM each dNTP; shipped on dry ice"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/d7295",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "D7295 present on fetched product page; pack sizes not shown in fetched content."
+  },
+  {
+    "vendor": "MilliporeSigma (Merck)",
+    "vendorShort": "MilliporeSigma",
+    "productName": "Nuclease-Free Water, for Molecular Biology (not DEPC-treated)",
+    "catalogNumbers": [
+      "W4502"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Nuclease-free water",
+    "description": "Double-distilled, deionized, 0.1 µm-filtered water analyzed for absence of DNase, RNase and protease (explicitly not DEPC-treated); for cDNA synthesis, PCR/qPCR, agarose gel electrophoresis and RNA elution.",
+    "productUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/w4502",
+    "applications": [
+      "PCR/qPCR setup",
+      "RNA elution",
+      "cDNA synthesis"
+    ],
+    "keyParameters": {
+      "notes": "DNase-, RNase-, protease-free; 0.1 µm filtered; explicitly not DEPC treated"
+    },
+    "sourceUrl": "https://www.sigmaaldrich.com/US/en/product/sigma/w4502",
+    "retrievedAt": "2026-08-18",
+    "verified": true,
+    "verificationNote": "W4502 present on fetched product page; pack sizes and storage not shown in fetched content. Sigma 95284 (Water, Molecular Biology, sterile filtered) also fetched and is likewise nuclease-free rather than DEPC-treated."
+  }
+]
