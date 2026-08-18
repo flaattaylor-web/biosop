@@ -32,15 +32,52 @@ function safeName(s: string | undefined, fallback: string): string {
   return (s || fallback).replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 120);
 }
 
-function isBusy(msg: string): boolean {
-  return /503|UNAVAILABLE|high demand|429|resource_exhausted|Overloaded/i.test(msg);
+/**
+ * Quota exhaustion (429) and provider overload (503) both used to report as "model is busy",
+ * which sent people into a retry loop for a condition retrying cannot clear. Keep them apart.
+ */
+export function classifyAiError(msg: string): 'quota' | 'overloaded' | 'missing-model' | null {
+  if (/\b429\b|RESOURCE_EXHAUSTED|resource.exhausted|quota|rate.?limit/i.test(msg)) return 'quota';
+  if (/\b50[03]\b|UNAVAILABLE|high demand|Overloaded|INTERNAL/i.test(msg)) return 'overloaded';
+  if (/\b404\b|NOT_FOUND|no longer available/i.test(msg)) return 'missing-model';
+  return null;
 }
 
-function aiErrorMessage(error: unknown, fallback: string): { status: 500 | 503; message: string } {
+/** Gemini nests the human-readable reason in a JSON envelope; pull it out so the UI can show it. */
+export function upstreamDetail(msg: string): string | undefined {
+  if (!msg || /GEMINI_API_KEY/.test(msg)) return undefined;
+  const m = msg.match(/"message"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+  const text = (m ? m[1] : msg).replace(/\\n/g, ' ').replace(/\\"/g, '"').replace(/\s+/g, ' ').trim();
+  return text ? text.slice(0, 240) : undefined;
+}
+
+function aiErrorMessage(error: unknown, fallback: string): { status: 500 | 503 | 429; message: string; detail?: string } {
   const msg = error instanceof Error ? error.message : String(error ?? '');
+  const detail = upstreamDetail(msg);
   if (/GEMINI_API_KEY/.test(msg)) return { status: 503, message: 'AI service is not configured on the server (GEMINI_API_KEY missing).' };
-  if (isBusy(msg)) return { status: 503, message: 'The AI model is currently busy. Please try again in a moment.' };
-  return { status: 500, message: msg || fallback };
+  switch (classifyAiError(msg)) {
+    case 'quota':
+      return {
+        status: 429,
+        message:
+          'Gemini refused the request for quota or rate-limit reasons. Free-tier keys allow only a few requests ' +
+          'per minute and a capped number per day — wait a minute and retry. If it keeps happening, check the ' +
+          'limits for your key at aistudio.google.com/rate-limit, or enable billing on its Google Cloud project.',
+        detail,
+      };
+    case 'overloaded':
+      return { status: 503, message: 'The AI model is currently busy. Please try again in a moment.', detail };
+    case 'missing-model':
+      return {
+        status: 503,
+        message:
+          'The configured Gemini model is not available to this API key. Set GEMINI_MODEL to a model your key ' +
+          'can use (wrangler.jsonc vars on Cloudflare, .env when self-hosting).',
+        detail,
+      };
+    default:
+      return { status: 500, message: msg || fallback, detail };
+  }
 }
 
 // ---------------------------------------------------------------- rate limit (in-memory, per isolate/process)
@@ -111,8 +148,8 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       return c.json({ success: true, sop });
     } catch (e) {
       console.error('generate-sop', e);
-      const { status, message } = aiErrorMessage(e, 'Failed to generate SOP and reaction sheet.');
-      return c.json({ error: message }, status);
+      const { status, message, detail } = aiErrorMessage(e, 'Failed to generate SOP and reaction sheet.');
+      return c.json({ error: message, detail }, status);
     }
   });
 
@@ -146,8 +183,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
         await stream.writeSSE({ event: 'done', data: JSON.stringify({ sop }) });
       } catch (e) {
         console.error('generate-sop/stream', e);
-        const { message } = aiErrorMessage(e, 'Generation failed.');
-        const detail = e instanceof Error && !/GEMINI_API_KEY/.test(e.message) ? e.message.slice(0, 300) : undefined;
+        const { message, detail } = aiErrorMessage(e, 'Generation failed.');
         await stream.writeSSE({ event: 'error', data: JSON.stringify({ error: message, detail }) });
       }
     });
@@ -158,7 +194,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { sop, referenceLiteratureOrSop } = await c.req.json();
       if (!sop || !referenceLiteratureOrSop) return c.json({ error: 'SOP and reference literature text are required.' }, 400);
       return c.json({ success: true, result: await crossTestAgainstLiterature({ sop, referenceLiteratureOrSop }) });
-    } catch (e) { const r = aiErrorMessage(e, 'Failed to run literature cross-test.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Failed to run literature cross-test.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   app.post('/api/auto-fix', async (c) => {
@@ -166,7 +202,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { sop, discrepancies } = await c.req.json();
       if (!sop || !discrepancies) return c.json({ error: 'SOP and discrepancies are required.' }, 400);
       return c.json({ success: true, sop: await autoFixSopFromLiterature({ sop, discrepancies }) });
-    } catch (e) { const r = aiErrorMessage(e, 'Failed to auto-fix SOP.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Failed to auto-fix SOP.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   app.post('/api/search-suggestions', async (c) => {
@@ -174,7 +210,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { query, targetOrganism, categoryHint } = await c.req.json();
       if (!query || typeof query !== 'string') return c.json({ error: 'Search query is required.' }, 400);
       return c.json({ success: true, result: await searchAndSuggestProtocols({ query, targetOrganism, categoryHint }) });
-    } catch (e) { const r = aiErrorMessage(e, 'Failed to execute protocol search.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Failed to execute protocol search.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   app.post('/api/expand-de-novo-description', async (c) => {
@@ -182,7 +218,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { description, protocolTitle, category, targetHost, biosafetyLevel } = await c.req.json();
       if (!description || typeof description !== 'string') return c.json({ error: 'Protocol description is required.' }, 400);
       return c.json({ success: true, blueprint: await expandDeNovoDescription({ description, protocolTitle, category, targetHost, biosafetyLevel }) });
-    } catch (e) { const r = aiErrorMessage(e, 'Failed to expand de novo description.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Failed to expand de novo description.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   // ---------------------------------------------------------------- exports
@@ -347,7 +383,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { query, vendorHint } = (await c.req.json()) as { query?: string; vendorHint?: string };
       if (!query || typeof query !== 'string' || query.trim().length < 3) return c.json({ error: 'A search query is required.' }, 400);
       return c.json(await discoverKits(query.trim().slice(0, 200), vendorHint?.slice(0, 60)));
-    } catch (e) { const r = aiErrorMessage(e, 'Kit discovery failed.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Kit discovery failed.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   /**
@@ -381,7 +417,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       const { query, organism } = (await c.req.json()) as { query?: string; organism?: string };
       if (!query || typeof query !== 'string') return c.json({ error: 'query is required.' }, 400);
       return c.json(await groundedLiteratureSearch({ query, organism }));
-    } catch (e) { const r = aiErrorMessage(e, 'Literature search failed.'); return c.json({ error: r.message }, r.status); }
+    } catch (e) { const r = aiErrorMessage(e, 'Literature search failed.'); return c.json({ error: r.message, detail: r.detail }, r.status); }
   });
 
   app.get('/api/literature/doi/*', async (c) => {
