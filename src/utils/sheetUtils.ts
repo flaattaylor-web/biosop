@@ -265,10 +265,68 @@ export function cleanMetadataField(text: string | undefined, maxChars: number): 
   return (lastBreak > maxChars * 0.6 ? cut.slice(0, lastBreak) : cut).trim();
 }
 
+/** Coerces a value the model may have emitted as an object or number into displayable text. */
+function asText(v: unknown): string {
+  if (typeof v === 'string') return v;
+  if (v == null) return '';
+  if (typeof v === 'number' || typeof v === 'boolean') return String(v);
+  if (Array.isArray(v)) return v.map(asText).filter(Boolean).join('; ');
+  const vals = Object.values(v as Record<string, unknown>).map(asText).filter(Boolean);
+  return vals.join(' — ');
+}
+
+/** Everything the UI iterates over must be an array of the shape it expects, or React throws mid-render. */
+function coerceShapes(sop: SopDocument): SopDocument {
+  const arr = <T,>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
+  const textList = (v: unknown): string[] => arr<unknown>(v).map(asText).filter(Boolean);
+
+  return {
+    ...sop,
+    steps: arr<Record<string, unknown>>(sop.steps).map((st, i) => ({
+      ...st,
+      stepNumber: typeof st.stepNumber === 'number' ? st.stepNumber : i + 1,
+      title: asText(st.title) || `Step ${i + 1}`,
+      instruction: asText(st.instruction),
+    })) as SopDocument['steps'],
+    qualityControl: textList(sop.qualityControl),
+    equipmentRequired: textList(sop.equipmentRequired),
+    reagentsRequired: textList(sop.reagentsRequired),
+    hazards: arr<Record<string, unknown>>(sop.hazards).map((h) => ({
+      ...h,
+      label: asText(h.label) || 'Hazard',
+      description: asText(h.description),
+    })) as SopDocument['hazards'],
+    ppeRequirements: arr<unknown>(sop.ppeRequirements).map((pRaw) => {
+      const item = pRaw as Record<string, unknown>;
+      return typeof pRaw === 'string'
+        ? { item: pRaw, required: true }
+        : { ...item, item: asText(item.item) || 'PPE', required: item.required !== false };
+    }) as SopDocument['ppeRequirements'],
+    troubleshooting: arr<Record<string, unknown>>(sop.troubleshooting).map((t) => ({
+      issue: asText(t.issue),
+      cause: asText(t.cause),
+      solution: asText(t.solution),
+    })),
+    references: arr<Record<string, unknown>>(sop.references).map((r) => ({
+      ...r,
+      citation: asText(r.citation),
+    })) as SopDocument['references'],
+    revisionHistory: arr<Record<string, unknown>>(sop.revisionHistory).map((r) => ({
+      version: asText(r.version),
+      date: asText(r.date),
+      changes: asText(r.changes),
+      author: asText(r.author),
+    })),
+  };
+}
+
 export function sanitizeAndValidateSop(sop: SopDocument): SopDocument {
   if (!sop) return sop;
 
-  const sanitized: SopDocument = { ...sop };
+  // A protocol the model shaped unexpectedly — steps omitted entirely, QC criteria emitted as
+  // objects instead of strings — used to throw inside React's render and blank the whole page.
+  // Normalise the shape here, before any view touches it.
+  const sanitized: SopDocument = coerceShapes(sop);
 
   // Repair runaway repetition before anything else reads these fields.
   sanitized.title = cleanMetadataField(sanitized.title, 300) as string;
