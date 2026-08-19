@@ -95,9 +95,56 @@ function scoreFrom(base: number, findings: AuditFinding[]): number {
   return Math.max(0, Math.min(100, Math.round(score)));
 }
 
+/* Consumables that get used *during* a protocol but are never pipetted into the reaction as a
+   component with a stock concentration. A model that lists them here produces a master mix
+   containing 14 µL of ethanol and 14 µL of "Qubit assay kit", and because a nonsense pair like
+   10 µM -> 1 µM is still unit-compatible, C1V1=C2V2 verifies it happily. Unit-compatible is not
+   the same as physically meaningful, and this is where that gap gets closed. */
+const NON_REAGENT_PATTERNS: { re: RegExp; kind: string }[] = [
+  { re: /\bethanol\b|\bisopropanol\b|\bmethanol\b/i, kind: 'a wash solvent' },
+  { re: /assay kit|qubit[^,]*\b(kit|assay)\b|screentape|tapestation|bioanalyzer reagent/i, kind: 'a QC assay consumable' },
+  { re: /ampure|spri\s?select|rnaclean|magnetic bead|sera-?mag|bead slurry/i, kind: 'a bead slurry' },
+  { re: /\btips?\b|barrier filter|microplate|pcr plate|\btubes?\b|microtube|flow cell|cartridge|spin column/i, kind: 'labware' },
+  { re: /wash buffer|\beb buffer\b|elution buffer|priming (mix|kit)|flush (buffer|tether)|running buffer/i, kind: 'a wash or elution buffer' },
+];
+
+function nonReagentFindings(calc: ReactionCalculation): AuditFinding[] {
+  const out: AuditFinding[] = [];
+  for (const c of calc.components) {
+    // A diluent legitimately IS water or a buffer, so it is exempt.
+    if (c.role === 'DILUENT') continue;
+    const hit = NON_REAGENT_PATTERNS.find((p) => p.re.test(c.name));
+    if (!hit) continue;
+    out.push({
+      severity: 'ERROR',
+      code: 'NON_REAGENT_COMPONENT',
+      componentId: c.id,
+      message: `"${c.name}" is ${hit.kind}, not a component of the reaction mix, but it is listed with a per-reaction volume.`,
+      remedy: 'Move it out of the reaction components and into the step that consumes it. Leaving it here inflates the reaction volume, distorts every final concentration, and inflates the cost estimate.',
+    });
+  }
+  return out;
+}
+
+/** Placeholder concentrations betray themselves: many unrelated reagents landing on one volume. */
+function placeholderConcentrationFindings(calc: ReactionCalculation): AuditFinding[] {
+  const real = calc.components.filter((c) => c.role !== 'DILUENT' && c.volPerRxnMicroliters > 0);
+  if (real.length < 4) return [];
+  const byVolume = new Map<number, number>();
+  for (const c of real) byVolume.set(c.volPerRxnMicroliters, (byVolume.get(c.volPerRxnMicroliters) || 0) + 1);
+  const [vol, count] = [...byVolume.entries()].sort((a, b) => b[1] - a[1])[0];
+  if (count < 4 || count / real.length < 0.6) return [];
+  return [{
+    severity: 'WARNING',
+    code: 'PLACEHOLDER_CONCENTRATIONS',
+    message: `${count} of ${real.length} components resolve to the same ${vol} µL, which happens when one stock/final concentration pair has been copied across unrelated reagents.`,
+    remedy: 'Check each component against its actual vendor stock concentration. Identical volumes across chemically unrelated reagents are almost always placeholder values rather than a designed reaction.',
+  }];
+}
+
 function auditStoichiometry(calc: ReactionCalculation | null): AuditDimension {
   const notChecked = [
-    'Whether the specified concentrations are biochemically appropriate for this assay',
+    'Whether a concentration is optimal for this assay — only whether it is physically meaningful',
     'Enzyme activity units against the manufacturer lot certificate',
   ];
 
@@ -110,7 +157,11 @@ function auditStoichiometry(calc: ReactionCalculation | null): AuditDimension {
     };
   }
 
-  const findings = toAuditFindings(calc.findings, ['STOICHIOMETRY_DEVIATION', 'UNVERIFIABLE_COMPONENT', 'NO_VOLUME']);
+  const findings = [
+    ...toAuditFindings(calc.findings, ['STOICHIOMETRY_DEVIATION', 'UNVERIFIABLE_COMPONENT', 'NO_VOLUME']),
+    ...nonReagentFindings(calc),
+    ...placeholderConcentrationFindings(calc),
+  ];
   const coverage = calc.verifiableComponentCount / calc.totalComponentCount;
   // A protocol we could barely check does not earn a high base score.
   const base = 60 + 40 * coverage;
@@ -122,7 +173,9 @@ function auditStoichiometry(calc: ReactionCalculation | null): AuditDimension {
     whatWasChecked:
       `Recomputed the required volume for each component from its stock and final concentration and ` +
       `compared it to the protocol's stated volume. ${calc.verifiableComponentCount} of ` +
-      `${calc.totalComponentCount} components had unit-compatible concentration pairs and could be verified.`,
+      `${calc.totalComponentCount} components had unit-compatible concentration pairs and could be verified. ` +
+      `Also checked that every component is a substance actually pipetted into the reaction, and that the ` +
+      `concentrations are not one placeholder pair repeated across unrelated reagents.`,
     notChecked,
     findings,
   };
@@ -185,6 +238,54 @@ function auditPipettability(calc: ReactionCalculation | null): AuditDimension {
   };
 }
 
+/**
+ * The document joins reaction rows to procedure steps by stepNumber. When the model emits a
+ * reaction sheet that skips a step with no reagents and renumbers to close the gap, every master
+ * mix from that point on is attached to the wrong step — the arithmetic still balances, so nothing
+ * else in this audit notices. Compared by word overlap because the two lists phrase the same
+ * operation differently ("Adapter Ligation" vs "Ligation of barcoded adapters").
+ */
+function stepAlignmentFindings(sop: SopDocument): AuditFinding[] {
+  const steps = sop.steps || [];
+  const rxn = sop.reactionSheet?.stepByStepReactionSteps || [];
+  if (steps.length === 0 || rxn.length === 0) return [];
+
+  const out: AuditFinding[] = [];
+  if (rxn.length !== steps.length) {
+    out.push({
+      severity: 'WARNING',
+      code: 'STEP_COUNT_MISMATCH',
+      message: `The procedure has ${steps.length} steps but the reaction sheet has ${rxn.length}, so at least one master mix cannot line up with the step that uses it.`,
+      remedy: 'Emit one reaction entry per procedure step, including steps that add no reagents (an instrument run, an incubation, a wash) with an empty reagent list, so the numbering cannot drift.',
+    });
+  }
+
+  const words = (t: string) => new Set((t || '').toLowerCase().match(/[a-z]{4,}/g) || []);
+  const overlap = (a: string, b: string) => {
+    const [wa, wb] = [words(a), words(b)];
+    if (wa.size === 0 || wb.size === 0) return 1;
+    let hits = 0;
+    for (const w of wa) if (wb.has(w)) hits++;
+    return hits / Math.min(wa.size, wb.size);
+  };
+
+  const drifted: number[] = [];
+  for (const step of steps) {
+    const paired = rxn.find((r) => r.stepNumber === step.stepNumber);
+    if (!paired) continue;
+    if (overlap(step.title, `${paired.stepName} ${paired.phase}`) < 0.15) drifted.push(step.stepNumber);
+  }
+  if (drifted.length >= 2) {
+    out.push({
+      severity: 'WARNING',
+      code: 'STEP_CONTENT_DRIFT',
+      message: `Step${drifted.length > 1 ? 's' : ''} ${drifted.join(', ')} carry a master mix whose name describes a different operation from the step text.`,
+      remedy: 'Check each step against its table before use. This is the signature of a reaction sheet offset by one — the mix shown under a step usually belongs to the next one.',
+    });
+  }
+  return out;
+}
+
 function auditDocumentCompleteness(sop: SopDocument): AuditDimension {
   const findings: AuditFinding[] = [];
   const required: { field: string; present: boolean; label: string }[] = [
@@ -219,12 +320,14 @@ function auditDocumentCompleteness(sop: SopDocument): AuditDimension {
     });
   }
 
+  findings.push(...stepAlignmentFindings(sop));
+
   const present = required.filter((r) => r.present).length;
   return {
     key: 'DOCUMENT_COMPLETENESS', label: 'Document completeness',
     score: scoreFrom(100, findings),
     coverage: 1,
-    whatWasChecked: `Checked for ${required.length} structural fields; ${present} present. Checked each step for instruction text.`,
+    whatWasChecked: `Checked for ${required.length} structural fields; ${present} present. Checked each step for instruction text, and that every master mix lines up with the step that uses it.`,
     notChecked: [
       'Whether the content is scientifically correct for your application',
       'Conformance to your organisation’s SOP template or numbering convention',
