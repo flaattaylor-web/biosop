@@ -226,7 +226,9 @@ export const EquipmentInventorySection: React.FC<EquipmentInventorySectionProps>
                           </span>
                         ) : (
                           <span className="text-amber-300 font-medium">
-                            Hardware Missing / Maintenance — Substitution Available ({sub?.compatibilityScore}% match)
+                            {sub
+                              ? `Hardware Missing / Maintenance — Substitution Available (${sub.compatibilityScore}% match)`
+                              : 'Hardware Missing / Maintenance — no catalogued substitute; this instrument is required'}
                           </span>
                         )}
                       </p>
