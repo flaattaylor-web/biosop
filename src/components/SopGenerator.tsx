@@ -264,6 +264,11 @@ export const SopGenerator: React.FC<SopGeneratorProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // The de novo description editor runs its own generation through
+    // handleGenerateDeNovoFromEditor and keeps its title/description in local state. Any submit
+    // that reaches here while it is open would start a second, standard generation from stale
+    // fields — or reject it as "no topic". Ignore it.
+    if (generationMode === 'de_novo' && deNovoTab === 'description_editor') return;
     if (!topic.trim()) {
       setErrorMsg('Please specify a protocol topic or select a preset.');
       return;
