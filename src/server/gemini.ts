@@ -458,7 +458,21 @@ ${
     'such as acoustic shearing, an incubation, a magnet capture, an air-dry — still emit its reaction step with ' +
     'the matching stepNumber and stepName and an empty reagentsAndVolumes array. Never skip a step and never ' +
     'renumber to close a gap: the document joins the two lists by stepNumber, so any drift attaches each master ' +
-    'mix to the wrong procedure step.';
+    'mix to the wrong procedure step. ' +
+    '9. Platform chemistry constrains the workflow and is not negotiable. Identify the sequencing platform and ' +
+    'chemistry named in the request before writing any step, and obey its published limits. Oxford Nanopore ' +
+    'DIRECT RNA sequences native full-length molecules: never fragment, shear or sonicate the input; never ' +
+    'amplify it; purify with an RNA SPRI (Agencourt RNAClean XP — not AMPure XP or SPRIselect, which are ' +
+    'double-stranded DNA chemistries); require poly(A)-selected input or add an in vitro polyadenylation step; ' +
+    'name an RNA flow cell (FLO-MIN004RA or FLO-PRO004RA); and note that Oxford Nanopore does not currently ' +
+    'support barcoding or multiplexing for direct RNA, so a multiplexed direct RNA protocol must be labelled ' +
+    'non-standard and cite the custom-barcoding method it follows. EVERY nanopore library, DNA or RNA, must end ' +
+    'with ligation of the motor-protein sequencing adapter — a barcoded or RT adapter replaces the RT adapter, ' +
+    'never the motor adapter — and a ligated nanopore library is NEVER heat-inactivated, because heat denatures ' +
+    'the motor protein and melts the adapter duplex. Size single-stranded RNA in nucleotides and duplex DNA in ' +
+    'base pairs. When the request asks for something the named platform cannot do, say so plainly in the scope ' +
+    'section and describe the nearest supported alternative rather than inventing a workflow that would fail at ' +
+    'the bench. A deterministic auditor checks these constraints and fails the document when they are broken.';
 
   const promptWithAttachment = params.referenceAttachment
     ? prompt + `\n\nMANUFACTURER DOCUMENT ATTACHED (${params.referenceAttachment.name || params.referenceAttachment.mimeType}): The attached document is the official manufacturer protocol for this product. Follow its reagent names, volumes, concentrations, temperatures, times and order of operations EXACTLY. Do not invent components that are not in the document. Where the document gives a range, use the manufacturer's recommended default. Cite the document as the primary reference.`
