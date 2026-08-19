@@ -10,7 +10,7 @@ import type { ProtocolStore, SignatureRole } from './db';
 import type { SopDocument, ReactionSheet } from '../types';
 import {
   generateSopAndReactionSheet, generateSopAndReactionSheetStream, crossTestAgainstLiterature, autoFixSopFromLiterature,
-  searchAndSuggestProtocols, expandDeNovoDescription, SopGenerationParams,
+  searchAndSuggestProtocols, expandDeNovoDescription, SopGenerationParams, getAiClient, defaultModel,
 } from './gemini';
 import { generateExcelWorkbook } from './excel';
 import { generateWordDocument } from './word';
@@ -24,6 +24,9 @@ import { getEnv } from './env';
 import { discoverKits, fetchReferenceDoc } from './kits';
 
 export type AppEnv = { Variables: { store: ProtocolStore | null } };
+
+/** Hard ceiling on one SOP generation, including the non-streaming retry. */
+const GENERATION_TIMEOUT_MS = 300_000;
 
 const XLSX_MIME = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
 const DOCX_MIME = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
@@ -55,33 +58,37 @@ export function upstreamDetail(msg: string): string | undefined {
 function aiErrorMessage(error: unknown, fallback: string): { status: 500 | 503 | 429; message: string; detail?: string } {
   const msg = error instanceof Error ? error.message : String(error ?? '');
   const detail = upstreamDetail(msg);
+  /** Not every caller renders `detail`, so fold it into the sentence the user is guaranteed to see. */
+  const withReason = (text: string) => (detail ? `${text} [Gemini reported: ${detail}]` : text);
   if (/GEMINI_API_KEY/.test(msg)) return { status: 503, message: 'AI service is not configured on the server (GEMINI_API_KEY missing).' };
   switch (classifyAiError(msg)) {
     case 'quota':
       return {
         status: 429,
-        message:
-          'Gemini refused the request for quota or rate-limit reasons. Free-tier keys allow only a few requests ' +
-          'per minute and a capped number per day — wait a minute and retry. If it keeps happening, check the ' +
-          'limits for your key at aistudio.google.com/rate-limit, or enable billing on its Google Cloud project.',
+        message: withReason(
+          'Gemini refused the request for quota or rate-limit reasons. Wait a minute and retry; if it keeps ' +
+          'happening, check the limits for your key at aistudio.google.com/rate-limit.'
+        ),
         detail,
       };
     case 'overloaded':
-      return { status: 503, message: 'The AI model is currently busy. Please try again in a moment.', detail };
+      return { status: 503, message: withReason('The AI model is currently busy. Please try again in a moment.'), detail };
     case 'truncated-stream':
       return {
         status: 503,
-        message:
+        message: withReason(
           'Gemini cut the response off mid-stream and the non-streaming retry did not recover it. ' +
-          'This usually clears on a second attempt; a shorter benchmark protocol or fewer reagents also helps.',
+          'This usually clears on a second attempt; a shorter benchmark protocol also helps.'
+        ),
         detail,
       };
     case 'missing-model':
       return {
         status: 503,
-        message:
+        message: withReason(
           'The configured Gemini model is not available to this API key. Set GEMINI_MODEL to a model your key ' +
-          'can use (wrangler.jsonc vars on Cloudflare, .env when self-hosting).',
+          'can use (wrangler.jsonc vars on Cloudflare, .env when self-hosting).'
+        ),
         detail,
       };
     default:
@@ -124,7 +131,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
   });
 
   // ---------------------------------------------------------------- guards on AI endpoints
-  const AI_PATHS = ['/api/generate-sop', '/api/generate-sop/stream', '/api/cross-test', '/api/auto-fix', '/api/search-suggestions', '/api/expand-de-novo-description', '/api/literature/search', '/api/kits/discover'];
+  const AI_PATHS = ['/api/generate-sop', '/api/generate-sop/stream', '/api/cross-test', '/api/auto-fix', '/api/search-suggestions', '/api/expand-de-novo-description', '/api/literature/search', '/api/kits/discover', '/api/ai-selftest'];
   app.use('*', async (c, next) => {
     if (!AI_PATHS.includes(new URL(c.req.url).pathname)) return next();
     const token = getEnv('BIOSOP_API_TOKEN');
@@ -132,6 +139,39 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
     const limit = Number(getEnv('AI_RATE_LIMIT_PER_10MIN') || 30);
     if (rateLimited(clientKey(c), limit, 10 * 60 * 1000)) return c.json({ error: 'Too many requests. Please slow down.' }, 429);
     return next();
+  });
+
+  /**
+   * Diagnostic. Runs the smallest possible blocking call and the smallest possible streaming call
+   * against the configured model and reports each outcome with Gemini's raw error text. Splits
+   * "this key/model is broken" from "streaming through Workers is broken" from "only the large SOP
+   * request fails" — questions the app's own error copy cannot answer. Costs a handful of tokens.
+   */
+  app.get('/api/ai-selftest', async (c) => {
+    const model = defaultModel();
+    const probe = async (mode: 'blocking' | 'streaming') => {
+      const started = Date.now();
+      try {
+        const ai = getAiClient();
+        const req = { model, contents: 'Reply with the single word: ok' };
+        let text = '';
+        if (mode === 'blocking') {
+          text = (await ai.models.generateContent(req)).text || '';
+        } else {
+          for await (const chunk of await ai.models.generateContentStream(req)) text += chunk.text || '';
+        }
+        return { ok: true, ms: Date.now() - started, text: text.trim().slice(0, 40) };
+      } catch (e) {
+        const raw = e instanceof Error ? e.message : String(e);
+        return { ok: false, ms: Date.now() - started, classified: classifyAiError(raw), raw: raw.slice(0, 1200) };
+      }
+    };
+    return c.json({
+      model,
+      keyConfigured: !!getEnv('GEMINI_API_KEY'),
+      blocking: await probe('blocking'),
+      streaming: await probe('streaming'),
+    });
   });
 
   app.get('/api/health', (c) => c.json({
@@ -179,6 +219,17 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
       let lastEmit = 0;
       const ac = new AbortController();
       stream.onAbort(() => ac.abort());
+
+      // Two guards on a long generation:
+      //   ping  — the non-streaming fallback in generateSopAndReactionSheetStream can run for
+      //           minutes without producing a single token, and an SSE connection with no traffic
+      //           gets closed by the browser or an intermediary. The client ignores unknown events,
+      //           so this only keeps the socket warm.
+      //   timer — without it a wedged upstream call leaves the user watching a spinner forever.
+      const heartbeat = setInterval(() => { void stream.writeSSE({ event: 'ping', data: '{}' }); }, 10_000);
+      let timedOut = false;
+      const timer = setTimeout(() => { timedOut = true; ac.abort(); }, GENERATION_TIMEOUT_MS);
+
       try {
         const sop = await generateSopAndReactionSheetStream(params, (_d, acc) => {
           for (const [m, label] of SECTION_MARKERS) if (!seen.has(label) && acc.includes(m)) seen.add(label);
@@ -192,8 +243,13 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
         await stream.writeSSE({ event: 'done', data: JSON.stringify({ sop }) });
       } catch (e) {
         console.error('generate-sop/stream', e);
-        const { message, detail } = aiErrorMessage(e, 'Generation failed.');
+        const { message, detail } = timedOut
+          ? { message: `Generation ran past ${Math.round(GENERATION_TIMEOUT_MS / 60000)} minutes and was stopped. Gemini accepted the request but never finished it — retry, and if it happens again shorten the protocol description or reduce the reagent list.`, detail: undefined as string | undefined }
+          : aiErrorMessage(e, 'Generation failed.');
         await stream.writeSSE({ event: 'error', data: JSON.stringify({ error: message, detail }) });
+      } finally {
+        clearInterval(heartbeat);
+        clearTimeout(timer);
       }
     });
   });
