@@ -472,7 +472,15 @@ ${
     'the motor protein and melts the adapter duplex. Size single-stranded RNA in nucleotides and duplex DNA in ' +
     'base pairs. When the request asks for something the named platform cannot do, say so plainly in the scope ' +
     'section and describe the nearest supported alternative rather than inventing a workflow that would fail at ' +
-    'the bench. A deterministic auditor checks these constraints and fails the document when they are broken.';
+    'the bench. A deterministic auditor checks these constraints and fails the document when they are broken. ' +
+    '10. reactionSheet.components may contain ONLY substances pipetted into the reaction tube that have a real ' +
+    'stock concentration — enzymes, buffers, primers, adapters, nucleotides, template, and the diluent. Never ' +
+    'list ethanol, bead slurries (AMPure/SPRIselect/RNAClean), wash or elution buffers, QC assay kits, tips, ' +
+    'plates, tubes or flow cells as components; they are consumed by a step, so they belong in that step\'s ' +
+    'reagentsAndVolumes and in the equipment/reagent inventory. Give each component its genuine vendor stock ' +
+    'concentration and the final concentration the assay actually calls for. Do NOT reuse one stock/final pair ' +
+    'across unrelated reagents: copying "10 uM to 1 uM" down the list is unit-compatible, so arithmetic checks ' +
+    'pass, but it silently assigns every reagent the same volume and produces a mix no one can run.';
 
   const promptWithAttachment = params.referenceAttachment
     ? prompt + `\n\nMANUFACTURER DOCUMENT ATTACHED (${params.referenceAttachment.name || params.referenceAttachment.mimeType}): The attached document is the official manufacturer protocol for this product. Follow its reagent names, volumes, concentrations, temperatures, times and order of operations EXACTLY. Do not invent components that are not in the document. Where the document gives a range, use the manufacturer's recommended default. Cite the document as the primary reference.`
