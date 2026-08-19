@@ -21,7 +21,8 @@ export type AuditDimensionKey =
   | 'PIPETTABILITY'
   | 'DOCUMENT_COMPLETENESS'
   | 'SAFETY_AND_QC'
-  | 'CITATION_INTEGRITY';
+  | 'CITATION_INTEGRITY'
+  | 'PLATFORM_RULES';
 
 export interface AuditDimension {
   key: AuditDimensionKey;
@@ -63,12 +64,13 @@ export interface AuditReport {
 }
 
 const WEIGHTS: Record<AuditDimensionKey, number> = {
-  STOICHIOMETRY: 0.30,
-  VOLUME_BALANCE: 0.25,
-  PIPETTABILITY: 0.10,
-  DOCUMENT_COMPLETENESS: 0.15,
+  STOICHIOMETRY: 0.25,
+  VOLUME_BALANCE: 0.20,
+  PIPETTABILITY: 0.08,
+  DOCUMENT_COMPLETENESS: 0.12,
   SAFETY_AND_QC: 0.10,
-  CITATION_INTEGRITY: 0.10,
+  CITATION_INTEGRITY: 0.08,
+  PLATFORM_RULES: 0.17,
 };
 
 function toAuditFindings(fs: CalculationFinding[], codes: string[]): AuditFinding[] {
@@ -334,6 +336,189 @@ function auditCitations(sop: SopDocument): AuditDimension {
   };
 }
 
+/* ------------------------------------------------------------------ platform rules
+
+   Everything else in this file checks the document against itself: does the
+   arithmetic close, is a field present, does a DOI resolve. A protocol can pass
+   all of that and still be unrunnable, because a fluent model will happily write
+   a workflow that contradicts the chemistry it names — shearing RNA destined for
+   direct RNA sequencing, omitting the motor adapter a nanopore read depends on.
+
+   These rules encode published, platform-specific constraints. Each one is
+   deterministic and narrow: it only fires when the document itself names the
+   platform, and it states the source of the constraint in its remedy so a
+   scientist can overrule it with evidence rather than guesswork.
+
+   Sources: Oxford Nanopore SQK-RNA004 protocol and support documentation. Add
+   rules only where the vendor is unambiguous; a false positive here costs more
+   trust than a missed warning.
+------------------------------------------------------------------------------- */
+
+interface PlatformContext {
+  /** Every searchable sentence in the document, lowercased. */
+  text: string;
+  isNanopore: boolean;
+  isDirectRna: boolean;
+  isRnaWorkflow: boolean;
+}
+
+/** Matches `re`, ignoring occurrences that are negated ("requires no fragmentation"). */
+function mentions(text: string, re: RegExp): boolean {
+  const rx = new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g');
+  for (const m of text.matchAll(rx)) {
+    const before = text.slice(Math.max(0, (m.index ?? 0) - 40), m.index ?? 0);
+    if (/\b(no|non|without|avoid|avoids|never|not|skip|omit|do not|does not|must not)\b[\s\w-]{0,20}$/.test(before)) continue;
+    return true;
+  }
+  return false;
+}
+
+function platformContext(sop: SopDocument): PlatformContext {
+  const parts: string[] = [
+    sop.title, sop.scope, sop.category,
+    ...(sop.equipmentRequired || []),
+    ...(sop.reagentsRequired || []),
+    ...(sop.qualityControl || []),
+    ...(sop.steps || []).flatMap((st) => [st.title, st.instruction, (st as { conditions?: string }).conditions || '']),
+    ...(sop.reactionSheet?.stepByStepReactionSteps || []).flatMap((st) => [
+      st.stepName, st.phase, st.instructions, st.conditions,
+      ...(st.reagentsAndVolumes || []).map((r) => r.reagentName),
+    ]),
+    ...(sop.reactionSheet?.components || []).map((c) => c.name || ''),
+  ];
+  const text = parts.filter(Boolean).join(' \n ').toLowerCase();
+
+  const isNanopore = /nanopore|minion|gridion|promethion|flongle|\bsqk-|flow cell/.test(text);
+  const isDirectRna = /direct rna|drna[- ]seq|native rna|sqk-rna/.test(text);
+  const isRnaWorkflow = isDirectRna || /\brna\b/.test(text);
+
+  return { text, isNanopore, isDirectRna, isRnaWorkflow };
+}
+
+interface PlatformRule {
+  code: string;
+  severity: FindingSeverity;
+  /** Only evaluated when this returns true, so unrelated protocols are never touched. */
+  applies: (c: PlatformContext) => boolean;
+  /** True when the document VIOLATES the rule. */
+  violated: (c: PlatformContext) => boolean;
+  message: string;
+  remedy: string;
+}
+
+const PLATFORM_RULE_SET: PlatformRule[] = [
+  {
+    code: 'DRNA_NO_FRAGMENTATION',
+    severity: 'ERROR',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => mentions(c.text, /covaris|focused-ultrasonicator|ultrasonicat|sonicat|shear(ing|ed)?\b|fragmentase|bioruptor|megaruptor|fragmentation (module|buffer|enzyme)/),
+    message: 'Direct RNA sequencing reads native full-length molecules, but this protocol fragments the input.',
+    remedy: 'Remove the shearing/fragmentation step. Oxford Nanopore states direct RNA input "requires no fragmentation"; shearing also severs transcripts from the poly(A) tail the RT adapter anneals to, so most fragments become uncapturable.',
+  },
+  {
+    code: 'DRNA_NO_AMPLIFICATION',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => mentions(c.text, /\bpcr\b|amplification step|amplify the librar|indexing pcr/),
+    message: 'Direct RNA sequencing is amplification-free, but this protocol includes an amplification step.',
+    remedy: 'Drop the amplification. Amplifying converts native RNA to cDNA and forfeits the base modifications and full-length isoform information direct RNA exists to capture.',
+  },
+  {
+    code: 'NANOPORE_MOTOR_ADAPTER_MISSING',
+    severity: 'ERROR',
+    applies: (c) => c.isNanopore && /ligat/.test(c.text),
+    violated: (c) => !/rna ligation adapter|\brla\b|\brmx\b|\bamx\b|\bla\b adapter|ligation adapter|sequencing adapter|motor protein|adapter mix/.test(c.text),
+    message: 'No motor-protein sequencing adapter is ligated, so nothing can translocate the pore.',
+    remedy: 'Add the platform sequencing adapter ligation (RLA for SQK-RNA004; the ligation adapter for DNA kits). A barcoded or RT adapter replaces the RT adapter, not the motor adapter — both are required.',
+  },
+  {
+    code: 'NANOPORE_NO_HEAT_INACTIVATION',
+    severity: 'ERROR',
+    applies: (c) => c.isNanopore && /ligat/.test(c.text),
+    violated: (c) => /heat[- ]?inactivat/.test(c.text),
+    message: 'A ligated nanopore library is heat-inactivated in this protocol.',
+    remedy: 'Remove the heat inactivation. Heat denatures the motor protein and melts the splint/adapter duplex holding the construct together; nanopore protocols proceed straight from ligation to bead cleanup.',
+  },
+  {
+    code: 'RNA_DNA_SPRI_CHEMISTRY',
+    severity: 'ERROR',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => /ampure xp|spri\s?select/.test(c.text) && !/rnaclean|rna clean xp|nucleomag rna|rnaclean xp/.test(c.text),
+    message: 'A double-stranded DNA SPRI chemistry is used to purify RNA.',
+    remedy: 'Substitute Agencourt RNAClean XP, which Oxford Nanopore specifies throughout the direct RNA protocol. Binding conditions differ from AMPure XP/SPRIselect and RNA recovery on a DNA SPRI is poor and size-biased.',
+  },
+  {
+    code: 'DRNA_MULTIPLEX_UNSUPPORTED',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => /barcod|multiplex|\d+[- ]plex/.test(c.text),
+    message: 'This protocol barcodes or multiplexes a direct RNA run, which is not a vendor-supported capability.',
+    remedy: 'Oxford Nanopore states "multiplexing is currently unavailable for direct RNA." Custom barcoding is a published research technique — cite the method paper and label the protocol as non-standard, or run samples on separate flow cells.',
+  },
+  {
+    code: 'DRNA_POLYA_SELECTION',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => /total rna/.test(c.text) && !/poly\(?a\)?[- ](select|purif|enrich|tail)|oligo[- ]?d\(?t\)?[- ](select|enrich)|polyadenylat/.test(c.text),
+    message: 'Total RNA is accepted as input without poly(A) selection or poly(A) tailing.',
+    remedy: 'Direct RNA capture is oligo-dT based, so non-polyadenylated RNA is invisible to it. Require poly(A)-selected input, or add an in vitro polyadenylation step for bacterial or non-polyadenylated RNA.',
+  },
+  {
+    code: 'DRNA_FLOW_CELL_UNSPECIFIED',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => !/flo-min004|flo-pro004|rna flow cell/.test(c.text),
+    message: 'No RNA-specific flow cell is specified for a direct RNA run.',
+    remedy: 'Name the flow cell explicitly: FLO-MIN004RA (MinION/GridION) or FLO-PRO004RA (PromethION). A standard DNA flow cell will not run this chemistry.',
+  },
+  {
+    code: 'RNA_SIZED_IN_BASE_PAIRS',
+    severity: 'INFO',
+    applies: (c) => c.isRnaWorkflow && !/\bdna librar|cdna|double[- ]stranded/.test(c.text),
+    violated: (c) => /\d+\s?bp\b/.test(c.text),
+    message: 'RNA lengths are expressed in base pairs.',
+    remedy: 'Single-stranded RNA is sized in nucleotides (nt). Base pairs describe duplex DNA.',
+  },
+];
+
+function auditPlatformRules(sop: SopDocument): AuditDimension {
+  const notChecked = [
+    'Whether the chosen platform suits your biological question',
+    'Vendor constraints for platforms this rule set does not yet cover',
+    'Any constraint published after this rule set was written',
+  ];
+
+  const ctx = platformContext(sop);
+  const applicable = PLATFORM_RULE_SET.filter((r) => r.applies(ctx));
+
+  if (applicable.length === 0) {
+    return {
+      key: 'PLATFORM_RULES', label: 'Platform chemistry rules',
+      score: null, coverage: 0,
+      whatWasChecked:
+        'No sequencing platform this rule set covers was named in the document, so no platform-specific ' +
+        'constraint could be applied.',
+      notChecked, findings: [],
+    };
+  }
+
+  const findings: AuditFinding[] = applicable
+    .filter((r) => r.violated(ctx))
+    .map((r) => ({ severity: r.severity, code: r.code, message: r.message, remedy: r.remedy }));
+
+  return {
+    key: 'PLATFORM_RULES', label: 'Platform chemistry rules',
+    score: scoreFrom(100, findings),
+    coverage: 1,
+    whatWasChecked:
+      `Applied ${applicable.length} published constraint(s) for the sequencing chemistry this document names ` +
+      `(fragmentation, amplification, adapter requirements, purification chemistry, input selection, flow cell). ` +
+      `${findings.length} were violated.`,
+    notChecked,
+    findings,
+  };
+}
+
 export function auditProtocol(sop: SopDocument, calc: ReactionCalculation | null): AuditReport {
   const dimensions: AuditDimension[] = [
     auditStoichiometry(calc),
@@ -342,6 +527,7 @@ export function auditProtocol(sop: SopDocument, calc: ReactionCalculation | null
     auditDocumentCompleteness(sop),
     auditSafetyAndQc(sop),
     auditCitations(sop),
+    auditPlatformRules(sop),
   ];
 
   const scored = dimensions.filter((d) => d.score !== null);
@@ -378,8 +564,9 @@ export function auditProtocol(sop: SopDocument, calc: ReactionCalculation | null
     dimensions,
     scopeStatement:
       'This is an automated consistency check of the protocol document. It verifies internal arithmetic, ' +
-      'structural completeness, and whether cited sources resolve in a public registry. It does NOT verify ' +
-      'that the science is correct or appropriate for your application, and it does not constitute ' +
+      'structural completeness, whether cited sources resolve in a public registry, and whether the workflow ' +
+      'obeys a fixed set of published constraints for the sequencing platform it names. It does NOT verify ' +
+      'that the science as a whole is correct or appropriate for your application, and it does not constitute ' +
       'validation, qualification, or evidence of conformance to ISO 9001, GLP, GMP, or 21 CFR Part 11. ' +
       'A qualified scientist must review this protocol before use.',
     limitations: Array.from(new Set(dimensions.flatMap((d) => d.notChecked))),
