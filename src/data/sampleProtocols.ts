@@ -1,4 +1,5 @@
 import { SopDocument } from '../types';
+import { BIOLOGY_PROTOCOLS } from './biologyProtocols';
 import { COMPANY_KIT_SOPS } from './companyKits';
 
 export const INITIAL_GENERIC_SOPS: SopDocument[] = [
@@ -237,4 +238,4 @@ export const INITIAL_GENERIC_SOPS: SopDocument[] = [
   }
 ];
 
-export const SAMPLE_SOPS: SopDocument[] = [...COMPANY_KIT_SOPS, ...INITIAL_GENERIC_SOPS];
+export const SAMPLE_SOPS: SopDocument[] = [...COMPANY_KIT_SOPS, ...BIOLOGY_PROTOCOLS, ...INITIAL_GENERIC_SOPS];
