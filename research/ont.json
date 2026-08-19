@@ -621,5 +621,179 @@
     "retrievedAt": "2026-08-18",
     "verified": true,
     "verificationNote": "Product code EXP-RAA114 present on fetched store product page."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "Ligation Sequencing Kit XL V14",
+    "catalogNumbers": [
+      "SQK-LSK114-XL"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "Ligation-based DNA library prep (bulk format)",
+    "description": "Bulk-format version of the Kit 14 ligation sequencing chemistry for laboratories running many libraries. Modal raw read accuracy Q20+ (99%+).",
+    "productUrl": "https://store.nanoporetech.com/ligation-sequencing-kit-xl-v14.html",
+    "protocolUrl": "https://nanoporetech.com/document/genomic-dna-by-ligation-sqk-lsk114",
+    "storage": "-20°C to -30°C; useful life 3 months from receipt",
+    "kitSize": "48 libraries",
+    "applications": [
+      "whole genome sequencing",
+      "amplicon sequencing",
+      "cDNA sequencing",
+      "high-throughput library production"
+    ],
+    "keyParameters": {
+      "input": "1 µg gDNA, or 100-200 fmol amplicons/cDNA (fragmentation suggested for 100-500 ng inputs)",
+      "time": "~65 min manual",
+      "notes": "Flow cells FLO-MIN114 or FLO-PRO114M. Third-party reagents required: NEBNext Companion Module v2, AMPure XP beads, BSA, ethanol, Qubit assay."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/ligation-sequencing-kit-xl-v14.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Kit code, 48-library size, 1 µg input and flow cell compatibility read from the fetched store product page."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "Multiplex Ligation Sequencing Kit XL V14",
+    "catalogNumbers": [
+      "SQK-MLK114.96-XL"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "PCR-free low-plex barcoded DNA library prep",
+    "description": "PCR-free barcoded library preparation for high-output, low-plex whole genome sequencing — 2 barcoded samples per flow cell, or 3 barcoded samples per two flow cells.",
+    "productUrl": "https://store.nanoporetech.com/multiplex-ligation-sequencing-kit-xl-v14.html",
+    "protocolUrl": "https://nanoporetech.com/document/multiplex-ligation-sequencing-sqk-mlk114-96-xl",
+    "storage": "-20°C to -30°C; useful life 3 months from receipt",
+    "kitSize": "Up to 48 reactions across 48 flow cells (2 samples/flow cell), or 32 reactions across 64 flow cells (3 samples per 2 flow cells)",
+    "applications": [
+      "whole genome sequencing",
+      "low-plex multiplexing",
+      "PCR-free barcoded libraries"
+    ],
+    "keyParameters": {
+      "input": "1 µg gDNA per sample",
+      "time": "155 min manual; 245 min automated",
+      "notes": "96 barcodes supplied as one plate, 8 µl per well. PromethION only — FLO-PRO114M. Third-party: NEBNext modules, NEB Blunt/TA Ligase Master Mix, AMPure XP, 80% ethanol."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/multiplex-ligation-sequencing-kit-xl-v14.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Kit code, barcode plate format, 1 µg input, prep times and FLO-PRO114M-only compatibility read from the fetched store product page."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "Direct RNA Sequencing Kit XL",
+    "catalogNumbers": [
+      "SQK-RNA004-XL"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "Direct (native) RNA sequencing library prep (bulk format)",
+    "description": "Bulk-format direct RNA sequencing kit for laboratories processing many native RNA samples. Sequences RNA directly without cDNA conversion or PCR, preserving base modifications.",
+    "productUrl": "https://store.nanoporetech.com/direct-rna-sequencing-kit-xl.html",
+    "protocolUrl": "https://nanoporetech.com/document/direct-rna-sequencing-sqk-rna004-xl",
+    "storage": "-20°C to -30°C; stable during shipping for 7 days up to 25°C",
+    "kitSize": "48 reactions",
+    "applications": [
+      "native RNA sequencing",
+      "RNA modification detection",
+      "full-length isoform analysis",
+      "high-throughput direct RNA production"
+    ],
+    "keyParameters": {
+      "input": "300 ng poly(A) tailed RNA or 1 µg total RNA",
+      "time": "~160 min",
+      "notes": "Early Access product. Requires RNA flow cells FLO-MIN004RA or FLO-PRO004RA. Third-party: NEBNext Companion Module, Agencourt RNAClean XP, Qubit assays."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/direct-rna-sequencing-kit-xl.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Kit code, 48-reaction size, input, ~160 min prep time and RNA flow cell requirement read from the fetched store product page."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "Direct RNA Barcoding Kit 24",
+    "catalogNumbers": [
+      "SQK-DRB004.24"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "Barcoded direct (native) RNA sequencing library prep",
+    "description": "Barcoded library preparation enabling multiplexed sequencing of native RNA samples. This is the only Oxford Nanopore chemistry that barcodes direct RNA; the base SQK-RNA004 kit contains no barcodes.",
+    "productUrl": "https://store.nanoporetech.com/direct-rna-barcoding-kit24.html",
+    "protocolUrl": "https://community.nanoporetech.com/protocols",
+    "storage": "-20°C to -30°C",
+    "kitSize": "24 barcodes; reagents for up to 6 library preparations",
+    "applications": [
+      "multiplexed native RNA sequencing",
+      "IVT transcript QC",
+      "RNA modification detection across sample sets"
+    ],
+    "keyParameters": {
+      "input": "450 fmol poly(A)+ enriched RNA, or 450 fmol poly(A)-tailed IVT transcript RNA, in 5 µl",
+      "time": "~370 min",
+      "notes": "Early Access; warranty 3 months from receipt. Optimised for 4-8 poly(A)+ enriched RNA samples, or 12-24 poly(A)-tailed IVT transcript samples. No PCR and no fragmentation. Additional third-party reagents required."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/direct-rna-barcoding-kit24.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Kit code, 450 fmol input, 4-8 / 12-24 sample guidance, ~370 min prep and Early Access status read from the fetched store product page."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "MinION/GridION Flow Cell (RNA)",
+    "catalogNumbers": [
+      "FLO-MIN004RA"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "Flow cell (MinION/GridION, RNA chemistry)",
+    "description": "RNA flow cell with up to 512 nanopore channels for sequencing native RNA in real time. Required for all direct RNA library preparations on MinION and GridION.",
+    "productUrl": "https://store.nanoporetech.com/us/flow-cell-rna-001.html",
+    "protocolUrl": "https://nanoporetech.com/support/library-prep/RNA-and-cDNA/which-flow-cells-can-i-use-with-sqk-rna004",
+    "storage": "2-8°C; stable unopened for 12 weeks",
+    "kitSize": "Single flow cell (bulk ordering available)",
+    "applications": [
+      "direct RNA sequencing on MinION",
+      "direct RNA sequencing on GridION"
+    ],
+    "keyParameters": {
+      "input": "75 µl loading mix (37.5 µl Sequencing Buffer + 25.5 µl Library Solution + 12 µl library)",
+      "time": "Runs up to ~72 h",
+      "notes": "Compatible with SQK-RNA004, SQK-RNA004-XL and SQK-DRB004.24 only. DNA flow cells (FLO-MIN114) will NOT run direct RNA chemistry. Warranty 12 weeks; replacement for unused cells reporting fewer than 800 pores within two days of the flow cell check."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/us/flow-cell-rna-001.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Code, 512 channels, 2-8°C / 12-week storage and the 800-pore warranty terms read from the fetched store product page; kit compatibility confirmed on the ONT support page for SQK-RNA004."
+  },
+  {
+    "vendor": "Oxford Nanopore Technologies",
+    "vendorShort": "ONT",
+    "productName": "PromethION Flow Cell Packs (RNA)",
+    "catalogNumbers": [
+      "FLO-PRO004RA"
+    ],
+    "category": "Long-Read Sequencing",
+    "subcategory": "Flow cell (PromethION, RNA chemistry)",
+    "description": "RNA flow cell with up to 2675 nanopore channels for sequencing native RNA in real time on PromethION. Sold in packs of 4.",
+    "productUrl": "https://store.nanoporetech.com/flow-cells.html",
+    "protocolUrl": "https://nanoporetech.com/support/library-prep/RNA-and-cDNA/which-flow-cells-can-i-use-with-sqk-rna004",
+    "storage": "2-8°C",
+    "kitSize": "Pack of 4 flow cells",
+    "applications": [
+      "high-output direct RNA sequencing",
+      "population-scale native RNA studies"
+    ],
+    "keyParameters": {
+      "input": "Per ONT PromethION direct RNA loading guidance",
+      "time": "Runs up to ~72 h",
+      "notes": "Compatible with SQK-RNA004, SQK-RNA004-XL and SQK-DRB004.24 only. PromethION DNA flow cells (FLO-PRO114M) will NOT run direct RNA chemistry."
+    },
+    "sourceUrl": "https://store.nanoporetech.com/flow-cells.html",
+    "retrievedAt": "2026-08-19",
+    "verified": true,
+    "verificationNote": "Code, 2675 channels and pack-of-4 format read from the fetched store flow cell listing; kit compatibility confirmed on the ONT support page for SQK-RNA004."
   }
 ]
