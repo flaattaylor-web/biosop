@@ -408,6 +408,12 @@ function auditCitations(sop: SopDocument): AuditDimension {
     const status = (r as { verificationStatus?: string }).verificationStatus;
     if (status === 'VERIFIED') {
       verified++;
+    } else if (status === 'MISMATCH') {
+      findings.push({
+        severity: 'ERROR', code: 'CITATION_TEXT_MISMATCH',
+        message: `Citation text does not match the registry record it points at: "${r.citation.slice(0, 100)}"`,
+        remedy: 'A real identifier carrying an invented title is the commonest way a fabricated citation survives a check. Replace the citation text with the registry record shown in the reference panel.',
+      });
     } else if (status === 'NOT_FOUND') {
       findings.push({
         severity: 'ERROR', code: 'CITATION_NOT_FOUND',
@@ -521,7 +527,9 @@ const PLATFORM_RULE_SET: PlatformRule[] = [
     code: 'DRNA_NO_FRAGMENTATION',
     severity: 'ERROR',
     applies: (c) => c.isDirectRna,
-    violated: (c) => asserted(c, /covaris|focused-ultrasonicator|ultrasonicat|sonicat|shear(ing|ed)?\b|fragmentase|bioruptor|megaruptor|fragmentation (module|buffer|enzyme|step)|fragment the (rna|sample|input)/),
+    // "shear" alone is too blunt: a protocol can legitimately warn that heat and shear destroy the
+    // motor protein. Match it only where it takes the sample as its object.
+    violated: (c) => asserted(c, /covaris|focused-ultrasonicator|ultrasonicat|sonicat|fragmentase|bioruptor|megaruptor|acoustic shear\w*|fragmentation (module|buffer|enzyme|step)|fragment the (rna|sample|input)|\bshear\w*\s+(the\s+)?(rna|dna|sample|input|library|target|to\b|at\b|using\b|on\b|with\b)/),
     message: 'Direct RNA sequencing reads native full-length molecules, but this protocol fragments the input.',
     remedy: 'Remove the shearing/fragmentation step. Oxford Nanopore states direct RNA input "requires no fragmentation"; shearing also severs transcripts from the poly(A) tail the RT adapter anneals to, so most fragments become uncapturable.',
   },
@@ -570,22 +578,39 @@ const PLATFORM_RULE_SET: PlatformRule[] = [
     remedy: 'Wash with the kit wash buffer (WSB for Oxford Nanopore) instead. Ethanol denatures the motor protein bound to the adapter, and a library with no motor protein produces no reads.',
   },
   {
-    code: 'DRNA_MULTIPLEX_UNSUPPORTED',
+    code: 'DRNA_MULTIPLEX_UNDECLARED',
     severity: 'WARNING',
     applies: (c) => c.isDirectRna,
-    // Satisfied when the document says so itself. Custom barcoding is legitimate research practice;
-    // the failure mode is presenting it as standard vendor chemistry.
+    // SQK-RNA004 on its own has no barcoding. Oxford Nanopore now sells a separate Direct RNA
+    // Barcoding Kit (SQK-DRB004.24, Early Access), and custom splint barcoding is established
+    // research practice. So multiplexing is no longer disqualifying — silently implying that the
+    // base kit does it is.
     violated: (c) =>
       /barcod|multiplex|\d+[- ]plex/.test(c.text) &&
-      !/not (natively |currently )?support(ed|s)?|non-standard|nonstandard|not vendor[- ]supported|not a supported/.test(c.text),
-    message: 'This protocol barcodes or multiplexes a direct RNA run without noting that it is not a vendor-supported capability.',
-    remedy: 'Oxford Nanopore states "multiplexing is currently unavailable for direct RNA." Custom barcoding is a published research technique — cite the method paper and label the protocol as non-standard, or run samples on separate flow cells.',
+      !/drb004|direct rna barcoding kit|not (natively |currently )?support(ed|s)?|non-standard|nonstandard|not vendor[- ]supported|not a supported/.test(c.text),
+    message: 'This protocol barcodes or multiplexes a direct RNA run without saying which barcoding chemistry it uses.',
+    remedy: 'Name the Direct RNA Barcoding Kit (SQK-DRB004.24, Early Access) if you are using it, or state that the barcoding is custom and non-standard and cite the method. The base SQK-RNA004 kit contains no barcodes, so a reader following this protocol with RNA004 alone will have nothing to demultiplex.',
+  },
+  {
+    code: 'DRNA_PLEX_ABOVE_GUIDANCE',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna && /\d+[- ]plex|multiplex/.test(c.text),
+    // ONT's stated optimum: 4-8 poly(A)+ enriched RNA samples, or 12-24 poly(A)-tailed IVT transcripts.
+    violated: (c) => {
+      const plex = [...c.text.matchAll(/(\d+)[-\s]?plex/g)].map((m) => parseInt(m[1], 10));
+      const highest = plex.length ? Math.max(...plex) : 0;
+      if (highest <= 8) return false;
+      const isIvt = /\bivt\b|in vitro transcri|poly\(?a\)?[- ]tailed/.test(c.text);
+      return !isIvt || highest > 24;
+    },
+    message: 'The declared plex count is above the sample number Oxford Nanopore gives guidance for on direct RNA.',
+    remedy: 'ONT optimises the Direct RNA Barcoding Kit for 4-8 poly(A)+ enriched RNA samples, or 12-24 poly(A)-tailed IVT transcript samples. Above that, expect reduced per-sample depth; state the expected coverage per sample or reduce the pool.',
   },
   {
     code: 'DRNA_POLYA_SELECTION',
     severity: 'WARNING',
     applies: (c) => c.isDirectRna,
-    violated: (c) => /total rna/.test(c.text) && !/poly\(?a\)?[- ](select|purif|enrich|tail)|oligo[- ]?d\(?t\)?[- ](select|enrich)|polyadenylat/.test(c.text),
+    violated: (c) => /total rna/.test(c.text) && !/poly[- ]?\(?a\)?\+?[-\s](select|purif|enrich|tail)|oligo[- ]?d\(?t\)?[-\s](select|enrich)|polyadenylat/.test(c.text),
     message: 'Total RNA is accepted as input without poly(A) selection or poly(A) tailing.',
     remedy: 'Direct RNA capture is oligo-dT based, so non-polyadenylated RNA is invisible to it. Require poly(A)-selected input, or add an in vitro polyadenylation step for bacterial or non-polyadenylated RNA.',
   },
