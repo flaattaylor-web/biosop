@@ -30,6 +30,14 @@ export function isClientAbort(err: unknown): boolean {
   return e?.name === 'AbortError' || /aborted by client|The operation was aborted/i.test(String(e?.message || ''));
 }
 
+/** True when the provider is briefly refusing work — 503/UNAVAILABLE, "high demand", overload. */
+export function isOverloaded(err: unknown): boolean {
+  const m = String((err as { message?: string })?.message || err);
+  return /\b50[03]\b|UNAVAILABLE|high demand|Overloaded|INTERNAL/i.test(m);
+}
+
+const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 /** True when an error means "this model ID is not usable by this key" rather than a transient fault. */
 export function isModelUnavailable(err: unknown): boolean {
   const m = String((err as { message?: string })?.message || err);
@@ -438,7 +446,19 @@ ${
     '3. State the reaction volume; the diluent will be computed to balance it. ' +
     '4. Specify real, commonly available laboratory equipment; do not invent instrument models. ' +
     '5. Every reference must be a real publication or vendor document you are confident exists, with a DOI or URL where available. If unsure a source exists, omit it — references will be verified against Crossref/PubMed and fabricated ones will be flagged. ' +
-    '6. Populate stepByStepReactionSteps with per-step reagent additions referencing components by name.';
+    '6. Populate stepByStepReactionSteps with per-step reagent additions referencing components by name. ' +
+    '7. reactionSheet.components describes ONE reaction only — the primary reaction whose volume is ' +
+    'reactionVolumeMicroliters — and its per-reaction volumes must sum to that volume, with a DILUENT absorbing ' +
+    'the remainder. Reagents consumed by other steps (bead slurries, ethanol washes, elution buffer, QC assay ' +
+    'reagents) belong ONLY in that step\'s reagentsAndVolumes and must NOT appear in the top-level components ' +
+    'list. A software auditor sums components and fails the document when they exceed the stated reaction volume. ' +
+    '8. stepByStepReactionSteps must correspond 1:1 with the SOP procedureSteps: same number of steps, and the ' +
+    'entry with a given stepNumber must describe the SAME operation as the procedure step with that stepNumber, ' +
+    'with stepName and phase naming that operation. When a procedure step adds no reagents — an instrument run ' +
+    'such as acoustic shearing, an incubation, a magnet capture, an air-dry — still emit its reaction step with ' +
+    'the matching stepNumber and stepName and an empty reagentsAndVolumes array. Never skip a step and never ' +
+    'renumber to close a gap: the document joins the two lists by stepNumber, so any drift attaches each master ' +
+    'mix to the wrong procedure step.';
 
   const promptWithAttachment = params.referenceAttachment
     ? prompt + `\n\nMANUFACTURER DOCUMENT ATTACHED (${params.referenceAttachment.name || params.referenceAttachment.mimeType}): The attached document is the official manufacturer protocol for this product. Follow its reagent names, volumes, concentrations, temperatures, times and order of operations EXACTLY. Do not invent components that are not in the document. Where the document gives a range, use the manufacturer's recommended default. Cite the document as the primary reference.`
@@ -533,23 +553,42 @@ export async function generateSopAndReactionSheetStream(
   let stream: Awaited<ReturnType<typeof ai.models.generateContentStream>> | null = null;
   let streamError: unknown = null;
   for (const modelName of modelCandidates()) {
-    try {
-      stream = await ai.models.generateContentStream({
-        model: modelName,
-        contents: contentsFor(bundle, params),
-        config: {
-          systemInstruction: bundle.systemInstruction,
-          responseMimeType: 'application/json',
-          responseSchema: sopDocumentSchema,
-          abortSignal: signal,
-        },
-      });
-      break;
-    } catch (err) {
-      streamError = err;
-      if (!isModelUnavailable(err)) throw err;
-      console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next candidate...`);
+    // Two attempts per model: a 503 "high demand" is usually a spike lasting seconds, and when it
+    // is not, the next model in the ladder is rarely saturated at the same moment. Without this a
+    // transient spike on one model failed the whole generation.
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        stream = await ai.models.generateContentStream({
+          model: modelName,
+          contents: contentsFor(bundle, params),
+          config: {
+            systemInstruction: bundle.systemInstruction,
+            responseMimeType: 'application/json',
+            responseSchema: sopDocumentSchema,
+            abortSignal: signal,
+          },
+        });
+        break;
+      } catch (err) {
+        streamError = err;
+        if (isClientAbort(err) || signal?.aborted) throw err;
+        if (isModelUnavailable(err)) {
+          console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next candidate...`);
+          break;
+        }
+        if (isOverloaded(err)) {
+          if (attempt < 2) {
+            console.warn(`[Gemini API] Model ${modelName} reported high demand. Retrying once...`);
+            await pause(1500);
+            continue;
+          }
+          console.warn(`[Gemini API] Model ${modelName} still overloaded. Trying next candidate...`);
+          break;
+        }
+        throw err;
+      }
     }
+    if (stream) break;
   }
   if (!stream) throw streamError instanceof Error ? streamError : new Error(String(streamError));
 
