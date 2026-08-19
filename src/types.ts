@@ -351,6 +351,8 @@ export interface SopDocument {
     verificationStatus?: 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'UNCHECKED';
     verificationNote?: string;
     resolvedTitle?: string;
+    /** The registry's own citation string, for replacing a wrong one. */
+    canonicalCitation?: string;
   }[];
   reactionSheet?: ReactionSheet;
   equipmentInventoryCheck?: EquipmentInventoryCheck;
