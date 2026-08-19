@@ -757,8 +757,11 @@ ${JSON.stringify(params.discrepancies, null, 2)}
 CRITICAL INSTRUCTIONS:
 1. Incorporate all recommended corrections to achieve 100% literature compliance.
 2. Fix all concentration deviations, buffer stoichiometric ratios (C1*V1 = C2*V2), safety/PPE entries, and thermocycler step profiles.
-3. Increment the document version number (e.g. from ${params.sop.version || 'v1.0'} to v1.1 or v2.0).
-4. Append a new entry to revisionHistory detailing the exact literature audit corrections applied.
+3. Return the COMPLETE document. Every section, step, component, reference and table must be present
+   in your output, changed where the audit requires it and byte-identical where it does not. Anything
+   you omit is treated as deleted. Do not summarise, truncate, or replace content with placeholders.
+4. Leave id, documentId and version alone — the application sets those. Describe each change you made
+   in plain language; the revision history entry is written for you.
   `;
 
   const response = await generateWithRetry(ai, {
@@ -782,7 +785,42 @@ CRITICAL INSTRUCTIONS:
     throw new Error('AI produced invalid structured JSON output during literature fix. Please try again.');
   }
 
-  return sanitizeAndValidateSop(parsed);
+  // The model returns a whole regenerated document, so anything it forgets would silently vanish and
+  // the identity fields would drift — a new id means the app's "replace the protocol with this id"
+  // update matches nothing and the fix appears to have been discarded. Merge over the original and
+  // pin identity and versioning in code rather than trusting the model to preserve them.
+  const fixed = sanitizeAndValidateSop(parsed);
+  const nextVersion = bumpVersion(params.sop.version);
+  return sanitizeAndValidateSop({
+    ...params.sop,
+    ...fixed,
+    id: params.sop.id,
+    documentId: params.sop.documentId,
+    version: nextVersion,
+    revisionHistory: [
+      ...(params.sop.revisionHistory || []),
+      {
+        version: nextVersion,
+        date: new Date().toISOString().split('T')[0],
+        changes: `Literature cross-test fixes applied: ${params.discrepancies
+          .map((d: { title?: string; issue?: string }) => d?.title || d?.issue)
+          .filter(Boolean)
+          .join('; ') || 'see audit report'}.`,
+        author: 'Automated literature cross-test',
+      },
+    ],
+  });
+}
+
+/** 1.0.0 -> 1.1.0, v1.0 -> v1.1. Deterministic, so two fixes never collide on one version string. */
+export function bumpVersion(version: string | undefined): string {
+  const raw = version || '1.0.0';
+  const prefix = raw.startsWith('v') ? 'v' : '';
+  const parts = raw.replace(/^v/, '').split('.').map((n) => parseInt(n, 10));
+  if (parts.length < 2 || parts.some((n) => Number.isNaN(n))) return `${prefix}1.1`;
+  parts[1] += 1;
+  for (let i = 2; i < parts.length; i++) parts[i] = 0;
+  return prefix + parts.join('.');
 }
 
 /**
