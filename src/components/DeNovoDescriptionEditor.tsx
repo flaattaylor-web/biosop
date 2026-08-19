@@ -116,6 +116,17 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
 }) => {
   const [description, setDescription] = useState<string>('');
   const [protocolTitle, setProtocolTitle] = useState<string>('');
+
+  // Batch design is editable here rather than only on the standard generator form, because the
+  // description editor hides that form entirely — so there was no way to change the sample count
+  // for a de novo run without switching tabs and losing what you had typed.
+  const [samples, setSamples] = useState<number>(sampleCount);
+  const [reps, setReps] = useState<number>(replicates);
+  const [posCtrl, setPosCtrl] = useState<number>(posControls);
+  const [negCtrl, setNegCtrl] = useState<number>(negControls);
+  const [overflow, setOverflow] = useState<number>(overflowPercent);
+  const totalReactions = Math.max(1, samples * reps + posCtrl + negCtrl);
+  const effectiveReactions = Math.ceil(totalReactions * (1 + overflow / 100));
   const [category, setCategory] = useState<string>('Next-Generation Sequencing');
   const [targetHost, setTargetHost] = useState<string>('Mammalian / Bacterial gDNA');
   const [biosafetyLevel, setBiosafetyLevel] = useState<BioSafetyLevel>('BSL-1');
@@ -184,11 +195,11 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
       biosafetyLevel,
       additionalReqs: description,
       blueprint: expandedBlueprint || undefined,
-      sampleCount,
-      replicates,
-      posControls,
-      negControls,
-      overflowPercent
+      sampleCount: samples,
+      replicates: reps,
+      posControls: posCtrl,
+      negControls: negCtrl,
+      overflowPercent: overflow
     });
   };
 
@@ -413,7 +424,61 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
 
         {/* Action Button */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100">
-          <div className="flex items-center gap-2 text-xs text-slate-600">
+          {/* BATCH DESIGN — drives every master mix volume downstream */}
+        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3.5 space-y-3">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Batch Design</span>
+            <span className="text-[11px] font-mono text-slate-600">
+              {samples} x {reps} + {posCtrl} pos + {negCtrl} neg = <strong>{totalReactions} reactions</strong>
+              {overflow > 0 && <> &rarr; <strong>{effectiveReactions}</strong> with +{overflow}% overflow</>}
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {([
+              ['Samples', samples, setSamples, 1, 384],
+              ['Replicates', reps, setReps, 1, 12],
+              ['Positive controls', posCtrl, setPosCtrl, 0, 24],
+              ['Negative controls', negCtrl, setNegCtrl, 0, 24],
+              ['Overflow %', overflow, setOverflow, 0, 100],
+            ] as [string, number, (n: number) => void, number, number][]).map(([label, value, setter, min, max]) => (
+              <div key={label} className="space-y-1">
+                <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-500">{label}</label>
+                <div className="flex items-center rounded-lg border border-slate-300 bg-white overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setter(Math.max(min, value - 1))}
+                    disabled={value <= min}
+                    className="px-2 py-1.5 text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
+                    aria-label={`Decrease ${label}`}
+                  >-</button>
+                  <input
+                    type="number"
+                    min={min}
+                    max={max}
+                    value={value}
+                    onChange={(e) => {
+                      const n = parseInt(e.target.value, 10);
+                      setter(Number.isNaN(n) ? min : Math.min(max, Math.max(min, n)));
+                    }}
+                    className="w-full text-center text-sm font-semibold text-slate-900 py-1.5 focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setter(Math.min(max, value + 1))}
+                    disabled={value >= max}
+                    className="px-2 py-1.5 text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
+                    aria-label={`Increase ${label}`}
+                  >+</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[11px] text-slate-500">
+            Every per-step master mix, the Excel calculator and the cost estimate scale from these numbers.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2 text-xs text-slate-600">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>99%+ Mathematical & Stoichiometric Verification Engine Active</span>
           </div>
