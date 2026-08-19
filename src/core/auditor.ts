@@ -1,992 +1,700 @@
-import { GoogleGenAI, Type } from '@google/genai';
-import { SopDocument, ReactionSheet, CrossTestResult, SearchAndSuggestionResult, SelectedReagentConstraint } from '../types';
-import { sanitizeAndValidateSop } from '../utils/sheetUtils';
-import { getEnv } from './env';
-
-export const defaultModel = (): string => getEnv('GEMINI_MODEL') || 'gemini-3.6-flash';
-
 /**
- * Order tried on every call: explicitly requested → GEMINI_MODEL → current stable flash models.
- * Model IDs retire without warning (2.5-flash stopped accepting new keys in Aug 2026), so the
- * fallbacks exist to keep the app answering while GEMINI_MODEL is corrected. Pin the one your key
- * has access to via GEMINI_MODEL (wrangler.jsonc vars on Cloudflare, .env on Node).
+ * Protocol audit.
+ *
+ * Replaces `accuracyAuditor.ts`, whose score was clamped to
+ * `Math.max(99.0, Math.min(99.9, x))` and therefore could never report a problem.
+ *
+ * Design rules for this module:
+ *   1. The score CAN be low. There is no floor and no clamp.
+ *   2. Unverifiable is not the same as verified. A protocol nothing could be
+ *      checked against reports low CONFIDENCE, not a high score.
+ *   3. No claim is printed that the code did not actually test. In particular
+ *      no ISO/GLP conformance is asserted — this software cannot establish that.
  */
-export function modelCandidates(requested?: string): string[] {
-  return Array.from(
-    new Set([
-      requested || defaultModel(),
-      defaultModel(),
-      'gemini-3.7-flash',
-      'gemini-3.6-flash',
-      'gemini-3.5-flash',
-      'gemini-flash-latest',
-    ].filter(Boolean) as string[])
-  );
+
+import { SopDocument } from '../types';
+import { ReactionCalculation, CalculationFinding, FindingSeverity } from './reactionMath';
+
+export type AuditDimensionKey =
+  | 'STOICHIOMETRY'
+  | 'VOLUME_BALANCE'
+  | 'PIPETTABILITY'
+  | 'DOCUMENT_COMPLETENESS'
+  | 'SAFETY_AND_QC'
+  | 'CITATION_INTEGRITY'
+  | 'PLATFORM_RULES';
+
+export interface AuditDimension {
+  key: AuditDimensionKey;
+  label: string;
+  /** 0-100, or null when there was nothing to assess. */
+  score: number | null;
+  /** Fraction of the relevant items this dimension was able to check (0-1). */
+  coverage: number;
+  /** Exactly what was tested — shown in the UI so the score is interpretable. */
+  whatWasChecked: string;
+  /** Things this dimension explicitly did NOT verify. */
+  notChecked: string[];
+  findings: AuditFinding[];
 }
 
-/** True when the caller cancelled — never retried, because the user asked for it to stop. */
-export function isClientAbort(err: unknown): boolean {
-  const e = err as { name?: string; message?: string };
-  return e?.name === 'AbortError' || /aborted by client|The operation was aborted/i.test(String(e?.message || ''));
+export interface AuditFinding {
+  severity: FindingSeverity;
+  code: string;
+  message: string;
+  remedy?: string;
+  componentId?: string;
 }
 
-/** True when the provider is briefly refusing work — 503/UNAVAILABLE, "high demand", overload. */
-export function isOverloaded(err: unknown): boolean {
-  const m = String((err as { message?: string })?.message || err);
-  return /\b50[03]\b|UNAVAILABLE|high demand|Overloaded|INTERNAL/i.test(m);
+export type AuditVerdict = 'PASS' | 'PASS_WITH_WARNINGS' | 'FAIL' | 'INSUFFICIENT_DATA';
+
+export interface AuditReport {
+  generatedAt: string;
+  /** Weighted score over dimensions that could be assessed. Null if none could. */
+  overallScore: number | null;
+  /** How much of the protocol the audit was actually able to examine (0-1). */
+  confidence: number;
+  verdict: AuditVerdict;
+  errorCount: number;
+  warningCount: number;
+  dimensions: AuditDimension[];
+  /** Plain-language statement of scope. Rendered verbatim in the UI. */
+  scopeStatement: string;
+  limitations: string[];
 }
 
-const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
-/** True when an error means "this model ID is not usable by this key" rather than a transient fault. */
-export function isModelUnavailable(err: unknown): boolean {
-  const m = String((err as { message?: string })?.message || err);
-  return m.includes('404') || m.includes('NOT_FOUND') || m.includes('no longer available');
-}
-
-export function getAiClient() {
-  const apiKey = getEnv('GEMINI_API_KEY');
-  if (!apiKey) {
-    throw new Error('GEMINI_API_KEY environment variable is missing.');
-  }
-  return new GoogleGenAI({
-    apiKey,
-    httpOptions: {
-      headers: {
-        'User-Agent': 'aistudio-build',
-      },
-    },
-  });
-}
-
-/**
- * Helper to invoke Gemini API with immediate candidate model failover and retries
- */
-async function generateWithRetry(
-  ai: GoogleGenAI,
-  params: Parameters<typeof ai.models.generateContent>[0]
-) {
-  const candidateModels = modelCandidates(params.model);
-
-  let lastError: any = null;
-
-  for (const modelName of candidateModels) {
-    for (let attempt = 1; attempt <= 2; attempt++) {
-      try {
-        const response = await ai.models.generateContent({
-          ...params,
-          model: modelName,
-        });
-        return response;
-      } catch (err: any) {
-        lastError = err;
-        const errMsg = String(err?.message || err);
-        const isNotFound = errMsg.includes('404') || errMsg.includes('NOT_FOUND') || errMsg.includes('no longer available');
-        if (isNotFound) {
-          console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next valid candidate...`);
-          break;
-        }
-
-        const isTransient =
-          errMsg.includes('503') ||
-          errMsg.includes('429') ||
-          errMsg.includes('UNAVAILABLE') ||
-          errMsg.includes('high demand') ||
-          errMsg.includes('resource_exhausted') ||
-          errMsg.includes('Overloaded');
-
-        if (isTransient && attempt < 2) {
-          const delayMs = 1200 + Math.floor(Math.random() * 600);
-          console.warn(`[Gemini API] Model ${modelName} temporarily busy (503/high demand). Retrying in ${delayMs}ms...`);
-          await new Promise((res) => setTimeout(res, delayMs));
-        } else {
-          console.warn(`[Gemini API] Switching from ${modelName} to next fallback model...`);
-          break;
-        }
-      }
-    }
-  }
-
-  throw lastError;
-}
-
-const sopDocumentSchema = {
-  type: Type.OBJECT,
-  properties: {
-    id: { type: Type.STRING },
-    documentId: { type: Type.STRING },
-    version: { type: Type.STRING },
-    effectiveDate: { type: Type.STRING },
-    title: { type: Type.STRING },
-    category: { type: Type.STRING },
-    companyKitInfo: {
-      type: Type.OBJECT,
-      properties: {
-        vendor: { type: Type.STRING },
-        catalogNumber: { type: Type.STRING },
-        officialDocUrl: { type: Type.STRING },
-        storageConditions: { type: Type.STRING },
-        kitIncludes: { type: Type.ARRAY, items: { type: Type.STRING } }
-      },
-      required: ['vendor', 'catalogNumber', 'storageConditions']
-    },
-    author: { type: Type.STRING },
-    reviewer: { type: Type.STRING },
-    scope: { type: Type.STRING },
-    biosafetyLevel: { type: Type.STRING },
-    hazards: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          type: { type: Type.STRING },
-          label: { type: Type.STRING },
-          description: { type: Type.STRING }
-        },
-        required: ['type', 'label', 'description']
-      }
-    },
-    ppeRequirements: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          item: { type: Type.STRING },
-          required: { type: Type.BOOLEAN },
-          notes: { type: Type.STRING }
-        },
-        required: ['item', 'required']
-      }
-    },
-    equipmentRequired: { type: Type.ARRAY, items: { type: Type.STRING } },
-    reagentsRequired: { type: Type.ARRAY, items: { type: Type.STRING } },
-    steps: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          stepNumber: { type: Type.INTEGER },
-          title: { type: Type.STRING },
-          instruction: { type: Type.STRING },
-          timingMinutes: { type: Type.NUMBER },
-          tempCelsius: { type: Type.NUMBER },
-          safetyWarning: { type: Type.STRING },
-          criticalCheckpoint: { type: Type.STRING },
-          stoppingPoint: { type: Type.STRING }
-        },
-        required: ['stepNumber', 'title', 'instruction']
-      }
-    },
-    qualityControl: { type: Type.ARRAY, items: { type: Type.STRING } },
-    troubleshooting: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          issue: { type: Type.STRING },
-          cause: { type: Type.STRING },
-          solution: { type: Type.STRING }
-        },
-        required: ['issue', 'cause', 'solution']
-      }
-    },
-    references: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          citation: { type: Type.STRING },
-          doiOrUrl: { type: Type.STRING },
-          summary: { type: Type.STRING }
-        },
-        required: ['citation']
-      }
-    },
-    reactionSheet: {
-      type: Type.OBJECT,
-      properties: {
-        id: { type: Type.STRING },
-        title: { type: Type.STRING },
-        assayType: { type: Type.STRING },
-        reactionVolumeMicroliters: { type: Type.NUMBER },
-        defaultNumReactions: { type: Type.NUMBER },
-        defaultOverflowPercent: { type: Type.NUMBER },
-        components: {
-          type: Type.ARRAY,
-          items: {
-            type: Type.OBJECT,
-            properties: {
-              id: { type: Type.STRING },
-              name: { type: Type.STRING },
-              stockConc: { type: Type.NUMBER },
-              stockUnit: { type: Type.STRING },
-              finalConc: { type: Type.NUMBER },
-              finalUnit: { type: Type.STRING },
-              volPerRxnMicroliters: { type: Type.NUMBER },
-              pipettingOrder: { type: Type.INTEGER },
-              notes: { type: Type.STRING },
-              storageTemp: { type: Type.STRING },
-              role: { type: Type.STRING, enum: ['MASTER_MIX', 'PER_SAMPLE', 'DILUENT'] },
-              molecularWeight: { type: Type.NUMBER, description: 'g/mol, only if known; enables mass<->molar conversion' }
-            },
-            required: ['id', 'name', 'stockConc', 'stockUnit', 'finalConc', 'finalUnit', 'volPerRxnMicroliters', 'role']
-          }
-        },
-        stepByStepReactionSteps: {
-          type: Type.ARRAY,
-          items: {
-            type: Type.OBJECT,
-            properties: {
-              stepNumber: { type: Type.INTEGER },
-              stepName: { type: Type.STRING },
-              phase: { type: Type.STRING },
-              tempCelsius: { type: Type.NUMBER },
-              timingMinutes: { type: Type.NUMBER },
-              conditions: { type: Type.STRING },
-              reagentsAndVolumes: {
-                type: Type.ARRAY,
-                items: {
-                  type: Type.OBJECT,
-                  properties: {
-                    reagentName: { type: Type.STRING },
-                    volPerRxnMicroliters: { type: Type.NUMBER },
-                    finalAmountOrConc: { type: Type.STRING },
-                    notes: { type: Type.STRING }
-                  },
-                  required: ['reagentName', 'volPerRxnMicroliters']
-                }
-              },
-              instructions: { type: Type.STRING },
-              criticalCheckpoint: { type: Type.STRING },
-              safetyWarning: { type: Type.STRING },
-              stoppingPoint: { type: Type.STRING }
-            },
-            required: ['stepNumber', 'stepName', 'conditions', 'instructions']
-          }
-        },
-        thermocyclerProfile: {
-          type: Type.ARRAY,
-          items: {
-            type: Type.OBJECT,
-            properties: {
-              stepNumber: { type: Type.INTEGER },
-              phase: { type: Type.STRING },
-              tempCelsius: { type: Type.NUMBER },
-              durationSeconds: { type: Type.NUMBER },
-              cycles: { type: Type.INTEGER },
-              notes: { type: Type.STRING }
-            },
-            required: ['stepNumber', 'phase', 'tempCelsius', 'durationSeconds']
-          }
-        },
-        notes: { type: Type.STRING }
-      },
-      required: ['id', 'title', 'assayType', 'reactionVolumeMicroliters', 'components']
-    },
-    revisionHistory: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          version: { type: Type.STRING },
-          date: { type: Type.STRING },
-          changes: { type: Type.STRING },
-          author: { type: Type.STRING }
-        },
-        required: ['version', 'date', 'changes', 'author']
-      }
-    }
-  },
-  required: [
-    'id', 'documentId', 'version', 'title', 'category', 'scope',
-    'biosafetyLevel', 'hazards', 'ppeRequirements', 'equipmentRequired',
-    'reagentsRequired', 'steps', 'qualityControl', 'troubleshooting',
-    'references', 'revisionHistory'
-  ]
+const WEIGHTS: Record<AuditDimensionKey, number> = {
+  STOICHIOMETRY: 0.25,
+  VOLUME_BALANCE: 0.20,
+  PIPETTABILITY: 0.08,
+  DOCUMENT_COMPLETENESS: 0.12,
+  SAFETY_AND_QC: 0.10,
+  CITATION_INTEGRITY: 0.08,
+  PLATFORM_RULES: 0.17,
 };
 
-/**
- * Generate a standard biotechnology Standard Operating Procedure (SOP) and companion reaction sheet
- */
-export interface SopGenerationParams {
-  topic: string;
-  category?: string;
-  targetOrganismOrHost?: string;
-  biosafetyLevel?: string;
-  additionalRequirements?: string;
-  referenceText?: string;
-  generationMode?: 'de_novo' | 'literature_benchmark';
-  isDeNovo?: boolean;
-  sopTemplateText?: string;
-  sopTemplateMode?: 'match_structure' | 'fill_placeholders';
-  customTemplateName?: string;
-  sampleCount?: number;
-  replicates?: number;
-  posControls?: number;
-  negControls?: number;
-  overflowPercent?: number;
-  selectedReagents?: SelectedReagentConstraint[];
-  /** Optional manufacturer document (e.g. protocol PDF) passed to the model as an inline attachment. */
-  referenceAttachment?: { mimeType: string; data: string; name?: string };
-  /** When set, the generated SOP is stamped with this kit metadata. */
-  kit?: { vendor: string; catalogNumber: string; officialDocUrl?: string; storageConditions?: string; kitIncludes?: string[] };
+function toAuditFindings(fs: CalculationFinding[], codes: string[]): AuditFinding[] {
+  return fs
+    .filter((f) => codes.includes(f.code))
+    .map((f) => ({
+      severity: f.severity,
+      code: f.code,
+      message: f.message,
+      remedy: f.remedy,
+      componentId: f.componentId,
+    }));
 }
 
-interface SopRequestBundle {
-  prompt: string;
-  systemInstruction: string;
-  isDeNovoMode: boolean;
-  design: { sCount: number; reps: number; posCtl: number; negCtl: number; overflow: number; calculatedTotalReactions: number };
-}
-
-/** Builds the prompt + config once so blocking and streaming paths stay identical. */
-export function buildSopRequest(params: SopGenerationParams): SopRequestBundle {
-  const isDeNovoMode = !!(params.isDeNovo || params.generationMode === 'de_novo');
-
-  const sCount = params.sampleCount && params.sampleCount > 0 ? params.sampleCount : 8;
-  const reps = params.replicates && params.replicates > 0 ? params.replicates : 1;
-  const posCtl = params.posControls !== undefined ? params.posControls : 1;
-  const negCtl = params.negControls !== undefined ? params.negControls : 1;
-  const overflow = params.overflowPercent !== undefined ? params.overflowPercent : 10;
-  const calculatedTotalReactions = (sCount * reps) + posCtl + negCtl;
-
-  let templatePromptSection = '';
-  if (params.sopTemplateText && params.sopTemplateText.trim().length > 0) {
-    templatePromptSection = `
-CRITICAL CUSTOM SOP TEMPLATE FORMATTING DIRECTIVES:
-The user has provided a Custom SOP Template / Format. You MUST construct and format the generated SOP so that all generated sections, procedure steps, safety checkpoints, equipment lists, and quality controls strictly match and fill into this template layout:
-
-=== CUSTOM SOP TEMPLATE CONTENT BEGIN ===
-${params.sopTemplateText.trim()}
-=== CUSTOM SOP TEMPLATE CONTENT END ===
-
-Template Execution Mode: ${params.sopTemplateMode === 'fill_placeholders' ? 'DIRECT PLACEHOLDER INJECTION & FILLING' : 'MATCH TEMPLATE SECTION STRUCTURE & HEADINGS'}
-1. Map all generated experimental protocol details, safety requirements, master mix calculations, and step-by-step instructions into the exact structure and order specified by the template above.
-2. If the template contains specific section headings, numbering, or mandatory disclaimer text, ensure those headings and disclaimers appear prominently in the generated scope, steps, or instructions.
-3. Inject the generated protocol metadata, target host, BSL guidelines, equipment, and troubleshooting entries into the corresponding template fields.
-`;
+/** Penalty model: errors cost far more than warnings, and the score can reach 0. */
+function scoreFrom(base: number, findings: AuditFinding[]): number {
+  let score = base;
+  for (const f of findings) {
+    if (f.severity === 'ERROR') score -= 25;
+    else if (f.severity === 'WARNING') score -= 8;
   }
+  return Math.max(0, Math.min(100, Math.round(score)));
+}
 
-  let reagentConstraintsSection = '';
-  if (params.selectedReagents && params.selectedReagents.length > 0) {
-    reagentConstraintsSection = `
-CRITICAL REAGENT DATABASE & STOCK SOLUTION CONSTRAINTS:
-The bench scientist has configured the following exact stock solutions, target working concentrations, and storage requirements from the laboratory database:
-${params.selectedReagents
-  .map(
-    (r, i) =>
-      `${i + 1}. [${r.name}] | Category: ${r.category} | Stock Conc (C1): ${r.stockConc} ${r.stockUnit} | Target Final Conc (C2): ${r.finalConc} ${r.finalUnit} | Storage Requirement: ${r.storageCondition} | Prep Notes: ${r.preparationNotes}${r.notes ? ` | Notes: ${r.notes}` : ''}`
-  )
-  .join('\n')}
+/* Consumables that get used *during* a protocol but are never pipetted into the reaction as a
+   component with a stock concentration. A model that lists them here produces a master mix
+   containing 14 µL of ethanol and 14 µL of "Qubit assay kit", and because a nonsense pair like
+   10 µM -> 1 µM is still unit-compatible, C1V1=C2V2 verifies it happily. Unit-compatible is not
+   the same as physically meaningful, and this is where that gap gets closed. */
+const NON_REAGENT_PATTERNS: { re: RegExp; kind: string }[] = [
+  { re: /\bethanol\b|\bisopropanol\b|\bmethanol\b/i, kind: 'a wash solvent' },
+  { re: /assay kit|qubit[^,]*\b(kit|assay)\b|screentape|tapestation|bioanalyzer reagent/i, kind: 'a QC assay consumable' },
+  { re: /ampure|spri\s?select|rnaclean|magnetic bead|sera-?mag|bead slurry/i, kind: 'a bead slurry' },
+  { re: /\btips?\b|barrier filter|microplate|pcr plate|\btubes?\b|microtube|flow cell|cartridge|spin column/i, kind: 'labware' },
+  { re: /wash buffer|\beb buffer\b|elution buffer|priming (mix|kit)|flush (buffer|tether)|running buffer/i, kind: 'a wash or elution buffer' },
+];
 
-REAGENT DATABASE DIRECTIVES:
-1. In the Reaction Sheet and Master Mix tables, you MUST incorporate these specified stock reagents using the exact Stock Concentrations (C1) and Target Final Working Concentrations (C2).
-2. Calculate single reaction pipetting volumes (V1) using exact C1*V1 = C2*V_total stoichiometry.
-3. In the Reagents Required table and Storage Requirements section of the SOP, state the exact storage conditions and preparation/aliquot rules indicated above.
-`;
+function nonReagentFindings(calc: ReactionCalculation): AuditFinding[] {
+  const out: AuditFinding[] = [];
+  for (const c of calc.components) {
+    // A diluent legitimately IS water or a buffer, so it is exempt.
+    if (c.role === 'DILUENT') continue;
+    const hit = NON_REAGENT_PATTERNS.find((p) => p.re.test(c.name));
+    if (!hit) continue;
+    out.push({
+      severity: 'ERROR',
+      code: 'NON_REAGENT_COMPONENT',
+      componentId: c.id,
+      message: `"${c.name}" is ${hit.kind}, not a component of the reaction mix, but it is listed with a per-reaction volume.`,
+      remedy: 'Move it out of the reaction components and into the step that consumes it. Leaving it here inflates the reaction volume, distorts every final concentration, and inflates the cost estimate.',
+    });
   }
-
-  const prompt = `
-You are a senior Biotechnology R&D Director, Senior Quality Assurance Specialist, and Molecular Automation Architect.
-Generate a complete, ISO/GLP-compliant Biotechnology Standard Operating Procedure (SOP) and companion Excel Reaction Sheet for the following request:
-
-Topic / Protocol: ${params.topic}
-Generation Mode: ${isDeNovoMode ? 'DE NOVO CUTTING-EDGE PROTOCOL SYNTHESIS' : 'LITERATURE BENCHMARK SOP'}
-Category: ${params.category || 'Molecular Biology'}
-Target Organism / Host: ${params.targetOrganismOrHost || 'Standard Biological System'}
-Biosafety Level: ${params.biosafetyLevel || 'BSL-1'}
-Additional Requirements: ${params.additionalRequirements || 'None'}
-EXPERIMENTAL SCALE & SAMPLE CAPACITY DIRECTIVES:
-- Primary Sample Count: ${sCount} Biological Test Samples
-- Technical Replicates: ${reps}x (${reps === 1 ? 'Singlicate' : reps === 2 ? 'Duplicate' : 'Triplicate'})
-- Positive Reference Controls: ${posCtl}
-- No Template Controls (NTC): ${negCtl}
-- Calculated Total Reaction Wells N: ${calculatedTotalReactions} Total Reaction Wells (+${overflow}% Pipetting Dead-Volume Buffer)
-
-CRITICAL LABORATORY EQUIPMENT & PIPETTING ACCURACY DIRECTIVES:
-1. Multi-Channel Pipetting Standard: For standard 96-well microplate column work (8 wells per column: Rows A–H), ALWAYS specify **8-channel multi-channel pipettes** (e.g. 0.5–10 µL, 2–20 µL, 20–200 µL). Do NOT hallucinate 12-channel pipettes for column-wise additions (12-channel is only for 12-well row-wise operations). Include calibrated single-channel pipettes (P2, P10, P20, P200, P1000).
-2. Covaris DNA Shearing & Acoustic Fragmentation: For any protocol involving DNA fragmentation, NGS library prep, WGS, or shearing, include dedicated **Covaris Focused-ultrasonicator (ME220/S220/E220)** steps with exact instrument parameters:
-   - Target fragment size (e.g. 200 bp, 350 bp, 550 bp)
-   - Peak Incident Power (PIP in Watts, e.g. 50W to 175W)
-   - Duty Factor % (e.g. 10% to 20%)
-   - Cycles per Burst (CPB, e.g. 200)
-   - Treatment Duration (seconds, e.g. 60s to 180s)
-   - Water bath chiller temperature (4°C to 7°C) & Degas level
-   - Vessel: Covaris microTUBE AFA Fiber Snap-Cap (130 µL) or 8 microTUBE Strip
-3. Step-by-Step Reaction Sheet & Master Mix Breakdown:
-   - In reactionSheet.stepByStepReactionSteps, generate a sequential breakdown for EVERY protocol step (e.g. 1. DNA Normalization & Shearing, 2. Master Mix Assembly & Aliquoting with 8-channel pipette, 3. Thermal Cycling / Incubation, 4. SPRI Bead Purification & 80% Ethanol Washes, 5. Elution & QC).
-   - In each step, provide full reagentsAndVolumes with exact single-reaction microliters, target concentrations, stock concentrations, and handling notes.
-4. Comprehensive Reagents & Consumables Breakdown:
-   - Include EVERY reagent and consumable in the SOP and reaction sheet: 100% molecular ethanol, freshly prepared 80% ethanol wash, SPRIselect/AMPure magnetic beads, Nuclease-Free Water, 10 mM Tris-HCl pH 8.5 (EB buffer), Qubit HS assay reagents, barrier filter tips, 96-well PCR plates, and microcentrifuge tubes.
-
-${params.referenceText ? `Reference Literature / Benchmark Context:\n${params.referenceText}` : ''}
-${templatePromptSection}
-${reagentConstraintsSection}
-
-${
-  isDeNovoMode
-    ? `CRITICAL DE NOVO SYNTHESIS DIRECTIVES:
-1. Synthesize a completely NEW, novel, cutting-edge protocol based on first principles, thermodynamic/kinetic literature, and emerging 2024-2026 biotech methodologies.
-2. For EVERY step in the protocol, provide a dedicated Step-by-Step Master Mix calculation (reagentsAndVolumes) with exact single-reaction microliter volumes, target concentrations, stock concentrations, step temperatures, and incubation conditions.
-3. Include cited cutting-edge literature benchmarks (author, journal, year, DOI) that ground this de novo protocol in published biochemistry.
-4. Highlight experimental hazard controls, critical checkpoints, and troubleshooting for novel reaction chemistries.`
-    : `CRITICAL LITERATURE BENCHMARK DIRECTIVES:
-1. Include realistic, precise chemical concentrations, stock solutions, pipetting volumes, incubation times, temperatures, and equipment based on standard literature protocols.
-2. Provide a full hazard analysis and complete PPE requirements.
-3. Include quality control checks and actionable troubleshooting pairs (Issue, Cause, Solution).
-4. Provide cited literature references (author, journal, year, DOI or protocol source).
-5. Include a companion ReactionSheet object with exact stock concentrations, target concentrations, single reaction volume in microliters, pipetting order, storage temperatures, and thermocycler or incubation profiles.`
-}
-  `;
-
-  const systemInstruction =
-    'You are a PhD Principal Investigator and Quality Director generating publication-grade biotechnology SOP documents and companion reaction master mix sheets. ' +
-    'RULES: 1. For every reactionSheet component give the stock concentration (C1) with unit, the final concentration (C2) with unit, and your proposed per-reaction volume. Use compatible units for C1 and C2 (both molar, or both mass/volume, or both X). Volumes will be independently recomputed by software from C1V1=C2V2 — accuracy of the CONCENTRATIONS matters most. ' +
-    '2. Mark each component with role: "MASTER_MIX" (shared mix), "PER_SAMPLE" (template/sample added per tube), or "DILUENT" (water/buffer to volume). ' +
-    '3. State the reaction volume; the diluent will be computed to balance it. ' +
-    '4. Specify real, commonly available laboratory equipment; do not invent instrument models. ' +
-    '5. Every reference must be a real publication or vendor document you are confident exists, with a DOI or URL where available. If unsure a source exists, omit it — references will be verified against Crossref/PubMed and fabricated ones will be flagged. ' +
-    '6. Populate stepByStepReactionSteps with per-step reagent additions referencing components by name. ' +
-    '7. reactionSheet.components describes ONE reaction only — the primary reaction whose volume is ' +
-    'reactionVolumeMicroliters — and its per-reaction volumes must sum to that volume, with a DILUENT absorbing ' +
-    'the remainder. Reagents consumed by other steps (bead slurries, ethanol washes, elution buffer, QC assay ' +
-    'reagents) belong ONLY in that step\'s reagentsAndVolumes and must NOT appear in the top-level components ' +
-    'list. A software auditor sums components and fails the document when they exceed the stated reaction volume. ' +
-    '8. stepByStepReactionSteps must correspond 1:1 with the SOP procedureSteps: same number of steps, and the ' +
-    'entry with a given stepNumber must describe the SAME operation as the procedure step with that stepNumber, ' +
-    'with stepName and phase naming that operation. When a procedure step adds no reagents — an instrument run ' +
-    'such as acoustic shearing, an incubation, a magnet capture, an air-dry — still emit its reaction step with ' +
-    'the matching stepNumber and stepName and an empty reagentsAndVolumes array. Never skip a step and never ' +
-    'renumber to close a gap: the document joins the two lists by stepNumber, so any drift attaches each master ' +
-    'mix to the wrong procedure step. ' +
-    '9. Platform chemistry constrains the workflow and is not negotiable. Identify the sequencing platform and ' +
-    'chemistry named in the request before writing any step, and obey its published limits. Oxford Nanopore ' +
-    'DIRECT RNA sequences native full-length molecules: never fragment, shear or sonicate the input; never ' +
-    'amplify it; purify with an RNA SPRI (Agencourt RNAClean XP — not AMPure XP or SPRIselect, which are ' +
-    'double-stranded DNA chemistries); require poly(A)-selected input or add an in vitro polyadenylation step; ' +
-    'name an RNA flow cell (FLO-MIN004RA or FLO-PRO004RA); and note that Oxford Nanopore does not currently ' +
-    'support barcoding or multiplexing for direct RNA, so a multiplexed direct RNA protocol must be labelled ' +
-    'non-standard and cite the custom-barcoding method it follows. EVERY nanopore library, DNA or RNA, must end ' +
-    'with ligation of the motor-protein sequencing adapter — a barcoded or RT adapter replaces the RT adapter, ' +
-    'never the motor adapter — and a ligated nanopore library is NEVER heat-inactivated, because heat denatures ' +
-    'the motor protein and melts the adapter duplex. Size single-stranded RNA in nucleotides and duplex DNA in ' +
-    'base pairs. When the request asks for something the named platform cannot do, say so plainly in the scope ' +
-    'section and describe the nearest supported alternative rather than inventing a workflow that would fail at ' +
-    'the bench. A deterministic auditor checks these constraints and fails the document when they are broken. ' +
-    '10. reactionSheet.components may contain ONLY substances pipetted into the reaction tube that have a real ' +
-    'stock concentration — enzymes, buffers, primers, adapters, nucleotides, template, and the diluent. Never ' +
-    'list ethanol, bead slurries (AMPure/SPRIselect/RNAClean), wash or elution buffers, QC assay kits, tips, ' +
-    'plates, tubes or flow cells as components; they are consumed by a step, so they belong in that step\'s ' +
-    'reagentsAndVolumes and in the equipment/reagent inventory. Give each component its genuine vendor stock ' +
-    'concentration and the final concentration the assay actually calls for. Do NOT reuse one stock/final pair ' +
-    'across unrelated reagents: copying "10 uM to 1 uM" down the list is unit-compatible, so arithmetic checks ' +
-    'pass, but it silently assigns every reagent the same volume and produces a mix no one can run.';
-
-  const promptWithAttachment = params.referenceAttachment
-    ? prompt + `\n\nMANUFACTURER DOCUMENT ATTACHED (${params.referenceAttachment.name || params.referenceAttachment.mimeType}): The attached document is the official manufacturer protocol for this product. Follow its reagent names, volumes, concentrations, temperatures, times and order of operations EXACTLY. Do not invent components that are not in the document. Where the document gives a range, use the manufacturer's recommended default. Cite the document as the primary reference.`
-    : prompt;
-
-  return {
-    prompt: promptWithAttachment,
-    systemInstruction,
-    isDeNovoMode,
-    design: { sCount, reps, posCtl, negCtl, overflow, calculatedTotalReactions },
-  };
+  return out;
 }
 
-/** Gemini `contents` for a request: text prompt plus optional inline document. */
-function contentsFor(bundle: SopRequestBundle, params: SopGenerationParams) {
-  if (!params.referenceAttachment) return bundle.prompt;
+/** Placeholder concentrations betray themselves: many unrelated reagents landing on one volume. */
+function placeholderConcentrationFindings(calc: ReactionCalculation): AuditFinding[] {
+  const real = calc.components.filter((c) => c.role !== 'DILUENT' && c.volPerRxnMicroliters > 0);
+  if (real.length < 4) return [];
+  const byVolume = new Map<number, number>();
+  for (const c of real) byVolume.set(c.volPerRxnMicroliters, (byVolume.get(c.volPerRxnMicroliters) || 0) + 1);
+  const [vol, count] = [...byVolume.entries()].sort((a, b) => b[1] - a[1])[0];
+  if (count < 4 || count / real.length < 0.6) return [];
   return [{
-    role: 'user' as const,
-    parts: [
-      { text: bundle.prompt },
-      { inlineData: { mimeType: params.referenceAttachment.mimeType, data: params.referenceAttachment.data } },
-    ],
+    severity: 'WARNING',
+    code: 'PLACEHOLDER_CONCENTRATIONS',
+    message: `${count} of ${real.length} components resolve to the same ${vol} µL, which happens when one stock/final concentration pair has been copied across unrelated reagents.`,
+    remedy: 'Check each component against its actual vendor stock concentration. Identical volumes across chemically unrelated reagents are almost always placeholder values rather than a designed reaction.',
   }];
 }
 
-/** Applies design metadata and sanitises the raw model output. Shared by blocking and streaming paths. */
-export function postProcessGeneratedSop(rawText: string, params: SopGenerationParams, bundle: SopRequestBundle): SopDocument {
-  const data = JSON.parse(rawText || '{}') as SopDocument;
-  const { isDeNovoMode } = bundle;
-  const { sCount, reps, posCtl, negCtl, overflow, calculatedTotalReactions } = bundle.design;
+function auditStoichiometry(calc: ReactionCalculation | null): AuditDimension {
+  const notChecked = [
+    'Whether a concentration is optimal for this assay — only whether it is physically meaningful',
+    'Enzyme activity units against the manufacturer lot certificate',
+  ];
 
-  data.isDeNovo = isDeNovoMode;
-  data.generationMode = isDeNovoMode ? 'de_novo' : 'literature_benchmark';
-  if (params.kit) {
-    data.companyKitInfo = {
-      vendor: params.kit.vendor,
-      catalogNumber: params.kit.catalogNumber,
-      officialDocUrl: params.kit.officialDocUrl,
-      storageConditions: params.kit.storageConditions || data.companyKitInfo?.storageConditions || '',
-      kitIncludes: params.kit.kitIncludes?.length ? params.kit.kitIncludes : (data.companyKitInfo?.kitIncludes || []),
+  if (!calc || calc.totalComponentCount === 0) {
+    return {
+      key: 'STOICHIOMETRY', label: 'Stoichiometry (C₁V₁ = C₂V₂)',
+      score: null, coverage: 0,
+      whatWasChecked: 'No reaction components were present to check.',
+      notChecked, findings: [],
     };
   }
-  if (params.sopTemplateText && params.sopTemplateText.trim().length > 0) {
-    data.customTemplateApplied = true;
-    data.customTemplateName = params.customTemplateName || 'Custom Institutional Template';
-  }
-  if (data.reactionSheet) {
-    data.reactionSheet.isDeNovo = isDeNovoMode;
-    data.reactionSheet.generationMode = isDeNovoMode ? 'de_novo' : 'literature_benchmark';
-    data.reactionSheet.defaultNumReactions = calculatedTotalReactions;
-    data.reactionSheet.defaultOverflowPercent = overflow;
-    data.reactionSheet.sampleCount = sCount;
-    data.reactionSheet.replicates = reps;
-    data.reactionSheet.posControls = posCtl;
-    data.reactionSheet.negControls = negCtl;
+
+  const findings = [
+    ...toAuditFindings(calc.findings, ['STOICHIOMETRY_DEVIATION', 'UNVERIFIABLE_COMPONENT', 'NO_VOLUME']),
+    ...nonReagentFindings(calc),
+    ...placeholderConcentrationFindings(calc),
+  ];
+  const coverage = calc.verifiableComponentCount / calc.totalComponentCount;
+  // A protocol we could barely check does not earn a high base score.
+  const base = 60 + 40 * coverage;
+
+  return {
+    key: 'STOICHIOMETRY', label: 'Stoichiometry (C₁V₁ = C₂V₂)',
+    score: scoreFrom(base, findings),
+    coverage,
+    whatWasChecked:
+      `Recomputed the required volume for each component from its stock and final concentration and ` +
+      `compared it to the protocol's stated volume. ${calc.verifiableComponentCount} of ` +
+      `${calc.totalComponentCount} components had unit-compatible concentration pairs and could be verified. ` +
+      `Also checked that every component is a substance actually pipetted into the reaction, and that the ` +
+      `concentrations are not one placeholder pair repeated across unrelated reagents.`,
+    notChecked,
+    findings,
+  };
+}
+
+function auditVolumeBalance(calc: ReactionCalculation | null): AuditDimension {
+  const notChecked = ['Volume changes from temperature or evaporation during incubation'];
+
+  if (!calc || calc.totalComponentCount === 0) {
+    return {
+      key: 'VOLUME_BALANCE', label: 'Volume conservation',
+      score: null, coverage: 0,
+      whatWasChecked: 'No reaction components were present to check.',
+      notChecked, findings: [],
+    };
   }
 
-  return sanitizeAndValidateSop(data);
+  const findings = toAuditFindings(calc.findings, ['VOLUME_OVERFLOW', 'NO_DILUENT', 'INVALID_TARGET_VOLUME']);
+  const delta = Math.abs(calc.actualVolumeMicroliters - calc.targetVolumeMicroliters);
+  let base = 100;
+  if (delta >= 0.005 && delta < 0.5) base = 92;
+  else if (delta >= 0.5) base = 60;
+
+  return {
+    key: 'VOLUME_BALANCE', label: 'Volume conservation',
+    score: scoreFrom(base, findings),
+    coverage: 1,
+    whatWasChecked:
+      `Summed all component volumes (${calc.actualVolumeMicroliters} µL) and compared to the stated ` +
+      `reaction volume (${calc.targetVolumeMicroliters} µL). Difference: ${delta.toFixed(3)} µL.`,
+    notChecked,
+    findings,
+  };
+}
+
+function auditPipettability(calc: ReactionCalculation | null): AuditDimension {
+  const notChecked = ['Calibration status of the actual pipettes in your lab'];
+
+  if (!calc || calc.totalComponentCount === 0) {
+    return {
+      key: 'PIPETTABILITY', label: 'Pipettable volumes',
+      score: null, coverage: 0,
+      whatWasChecked: 'No reaction components were present to check.',
+      notChecked, findings: [],
+    };
+  }
+
+  const findings = toAuditFindings(calc.findings, ['BELOW_MIN_PIPETTABLE', 'MIX_VOLUME_BELOW_FLOOR']);
+  const below = calc.components.filter((c) => c.belowMinPipettable).length;
+
+  return {
+    key: 'PIPETTABILITY', label: 'Pipettable volumes',
+    score: scoreFrom(100, findings),
+    coverage: 1,
+    whatWasChecked:
+      `Checked every component volume against the accurate-pipetting floor. ` +
+      `${below} of ${calc.totalComponentCount} fall below it.`,
+    notChecked,
+    findings,
+  };
 }
 
 /**
- * Generate a standard biotechnology SOP and companion reaction sheet (blocking).
+ * The document joins reaction rows to procedure steps by stepNumber. When the model emits a
+ * reaction sheet that skips a step with no reagents and renumbers to close the gap, every master
+ * mix from that point on is attached to the wrong step — the arithmetic still balances, so nothing
+ * else in this audit notices. Compared by word overlap because the two lists phrase the same
+ * operation differently ("Adapter Ligation" vs "Ligation of barcoded adapters").
  */
-export async function generateSopAndReactionSheet(params: SopGenerationParams): Promise<SopDocument> {
-  const ai = getAiClient();
-  const bundle = buildSopRequest(params);
-  const response = await generateWithRetry(ai, {
-    model: defaultModel(),
-    contents: contentsFor(bundle, params),
-    config: {
-      systemInstruction: bundle.systemInstruction,
-      responseMimeType: 'application/json',
-      responseSchema: sopDocumentSchema,
-    },
-  });
-  return postProcessGeneratedSop(response.text || '{}', params, bundle);
-}
+function stepAlignmentFindings(sop: SopDocument): AuditFinding[] {
+  const steps = sop.steps || [];
+  const rxn = sop.reactionSheet?.stepByStepReactionSteps || [];
+  if (steps.length === 0 || rxn.length === 0) return [];
 
-/**
- * Streaming variant. Calls `onChunk` with each text delta as it arrives so the
- * client can show real progress, then returns the fully post-processed SOP.
- */
-export async function generateSopAndReactionSheetStream(
-  params: SopGenerationParams,
-  onChunk: (delta: string, accumulated: string) => void,
-  signal?: AbortSignal
-): Promise<SopDocument> {
-  const ai = getAiClient();
-  const bundle = buildSopRequest(params);
-  // The stream is created before any bytes reach the client, so an unusable model ID can still be
-  // swapped here without the user seeing a partial response.
-  let stream: Awaited<ReturnType<typeof ai.models.generateContentStream>> | null = null;
-  let streamError: unknown = null;
-  for (const modelName of modelCandidates()) {
-    // Two attempts per model: a 503 "high demand" is usually a spike lasting seconds, and when it
-    // is not, the next model in the ladder is rarely saturated at the same moment. Without this a
-    // transient spike on one model failed the whole generation.
-    for (let attempt = 1; attempt <= 2; attempt++) {
-      try {
-        stream = await ai.models.generateContentStream({
-          model: modelName,
-          contents: contentsFor(bundle, params),
-          config: {
-            systemInstruction: bundle.systemInstruction,
-            responseMimeType: 'application/json',
-            responseSchema: sopDocumentSchema,
-            abortSignal: signal,
-          },
-        });
-        break;
-      } catch (err) {
-        streamError = err;
-        if (isClientAbort(err) || signal?.aborted) throw err;
-        if (isModelUnavailable(err)) {
-          console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next candidate...`);
-          break;
-        }
-        if (isOverloaded(err)) {
-          if (attempt < 2) {
-            console.warn(`[Gemini API] Model ${modelName} reported high demand. Retrying once...`);
-            await pause(1500);
-            continue;
-          }
-          console.warn(`[Gemini API] Model ${modelName} still overloaded. Trying next candidate...`);
-          break;
-        }
-        throw err;
-      }
-    }
-    if (stream) break;
-  }
-  if (!stream) throw streamError instanceof Error ? streamError : new Error(String(streamError));
-
-  let acc = '';
-  try {
-    for await (const chunk of stream) {
-      if (signal?.aborted) throw new Error('Generation aborted by client.');
-      const t = chunk.text || '';
-      if (t) {
-        acc += t;
-        onChunk(t, acc);
-      }
-    }
-  } catch (err) {
-    // A dropped upstream stream leaves the SDK holding a partial SSE frame ("Incomplete JSON
-    // segment at the end") and `acc` holding truncated JSON — unusable either way. The blocking
-    // call returns the same document without depending on a long-lived connection, so retry there
-    // once rather than failing a generation the user has already waited on.
-    if (signal?.aborted || isClientAbort(err)) throw err;
-    console.warn(`[Gemini API] Stream ended early (${String((err as Error)?.message || err)}). Retrying without streaming...`);
-    onChunk('', acc); // nudge the SSE channel so the client sees the connection is still alive
-    return await generateSopAndReactionSheet(params);
+  const out: AuditFinding[] = [];
+  if (rxn.length !== steps.length) {
+    out.push({
+      severity: 'WARNING',
+      code: 'STEP_COUNT_MISMATCH',
+      message: `The procedure has ${steps.length} steps but the reaction sheet has ${rxn.length}, so at least one master mix cannot line up with the step that uses it.`,
+      remedy: 'Emit one reaction entry per procedure step, including steps that add no reagents (an instrument run, an incubation, a wash) with an empty reagent list, so the numbering cannot drift.',
+    });
   }
 
-  return postProcessGeneratedSop(acc, params, bundle);
+  const words = (t: string) => new Set((t || '').toLowerCase().match(/[a-z]{4,}/g) || []);
+  const overlap = (a: string, b: string) => {
+    const [wa, wb] = [words(a), words(b)];
+    if (wa.size === 0 || wb.size === 0) return 1;
+    let hits = 0;
+    for (const w of wa) if (wb.has(w)) hits++;
+    return hits / Math.min(wa.size, wb.size);
+  };
+
+  const drifted: number[] = [];
+  for (const step of steps) {
+    const paired = rxn.find((r) => r.stepNumber === step.stepNumber);
+    if (!paired) continue;
+    if (overlap(step.title, `${paired.stepName} ${paired.phase}`) < 0.15) drifted.push(step.stepNumber);
+  }
+  if (drifted.length >= 2) {
+    out.push({
+      severity: 'WARNING',
+      code: 'STEP_CONTENT_DRIFT',
+      message: `Step${drifted.length > 1 ? 's' : ''} ${drifted.join(', ')} carry a master mix whose name describes a different operation from the step text.`,
+      remedy: 'Check each step against its table before use. This is the signature of a reaction sheet offset by one — the mix shown under a step usually belongs to the next one.',
+    });
+  }
+  return out;
 }
 
-/**
- * Cross-test an SOP and Reaction Sheet against literature standards and reference protocols
- */
-export async function crossTestAgainstLiterature(params: {
-  sop: SopDocument;
-  referenceLiteratureOrSop: string;
-}): Promise<CrossTestResult> {
-  const ai = getAiClient();
+function auditDocumentCompleteness(sop: SopDocument): AuditDimension {
+  const findings: AuditFinding[] = [];
+  const required: { field: string; present: boolean; label: string }[] = [
+    { field: 'title', present: !!sop.title, label: 'Title' },
+    { field: 'documentId', present: !!sop.documentId, label: 'Document ID' },
+    { field: 'version', present: !!sop.version, label: 'Version' },
+    { field: 'effectiveDate', present: !!sop.effectiveDate, label: 'Effective date' },
+    { field: 'author', present: !!sop.author, label: 'Author' },
+    { field: 'scope', present: !!sop.scope, label: 'Scope' },
+    { field: 'steps', present: (sop.steps?.length ?? 0) > 0, label: 'Procedure steps' },
+    { field: 'equipmentRequired', present: (sop.equipmentRequired?.length ?? 0) > 0, label: 'Equipment list' },
+    { field: 'reagentsRequired', present: (sop.reagentsRequired?.length ?? 0) > 0, label: 'Reagent list' },
+    { field: 'revisionHistory', present: (sop.revisionHistory?.length ?? 0) > 0, label: 'Revision history' },
+  ];
 
-  const prompt = `
-You are an expert Biotechnology Protocol Auditor, QC Specialist, and Scientific Literature Validator.
-Conduct a rigorous multi-tier audit cross-testing the target SOP & Reaction Sheet against the provided scientific literature or benchmark operating procedure.
-
-TARGET SOP & REACTION SHEET:
-Title: ${params.sop.title}
-Document ID: ${params.sop.documentId}
-Biosafety Level: ${params.sop.biosafetyLevel}
-Steps: ${JSON.stringify(params.sop.steps, null, 2)}
-Reaction Sheet Components: ${JSON.stringify(params.sop.reactionSheet?.components || [], null, 2)}
-Thermocycler Profile: ${JSON.stringify(params.sop.reactionSheet?.thermocyclerProfile || [], null, 2)}
-
-BENCHMARK LITERATURE / REFERENCE PROCEDURE TEXT:
-${params.referenceLiteratureOrSop}
-
-AUDIT RULES:
-1. Chemical & Buffer Verification: Compare concentrations, pH, salt molarity, buffer ratios (e.g., Tris, MgCl2, dNTPs, enzyme units) against literature.
-2. Stoichiometric & Volumetric Math: Verify total reaction volume equals sum of component volumes, stock-to-final concentration ratios.
-3. Biosafety & Hazard Audit: Check if BSL rating matches risk level, inspect PPE gaps, check hazardous chemical disposal warnings (e.g., Ethidium Bromide, Phenol, SDS).
-4. Identify all Discrepancies with Severity:
-   - CRITICAL_HAZARD: Missing critical PPE, unsafe BSL level, dangerous chemical exposure without warning.
-   - CONCENTRATION_DEVIATION: Reagent molarity/concentration significantly deviates from literature optimal range (e.g. 1.5mM vs 3.0mM MgCl2).
-   - VOLUME_MISMATCH: Component volumes don't add up to total reaction volume.
-   - OPTIMIZATION_SUGGESTION: Temperature or timing tweak recommended in modern papers for higher yield/purity.
-5. Provide an overall compliance score (0 - 100%).
-  `;
-
-  const response = await generateWithRetry(ai, {
-    model: defaultModel(),
-    contents: prompt,
-    config: {
-      systemInstruction: 'You audit biotech procedures and reaction master mixes against peer-reviewed literature and ISO laboratory compliance standards.',
-      responseMimeType: 'application/json',
-      responseSchema: {
-        type: Type.OBJECT,
-        properties: {
-          testedAt: { type: Type.STRING },
-          overallScore: { type: Type.NUMBER },
-          summary: { type: Type.STRING },
-          passedChecks: { type: Type.INTEGER },
-          totalChecks: { type: Type.INTEGER },
-          discrepancies: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                id: { type: Type.STRING },
-                category: { type: Type.STRING },
-                severity: { type: Type.STRING },
-                title: { type: Type.STRING },
-                location: { type: Type.STRING },
-                currentValue: { type: Type.STRING },
-                literatureValue: { type: Type.STRING },
-                citation: { type: Type.STRING },
-                explanation: { type: Type.STRING },
-                suggestedFix: { type: Type.STRING }
-              },
-              required: [
-                'id', 'category', 'severity', 'title', 'location',
-                'currentValue', 'literatureValue', 'citation', 'explanation', 'suggestedFix'
-              ]
-            }
-          },
-          literatureReferences: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                id: { type: Type.STRING },
-                title: { type: Type.STRING },
-                authors: { type: Type.STRING },
-                journalOrSource: { type: Type.STRING },
-                year: { type: Type.INTEGER },
-                contentSnippet: { type: Type.STRING }
-              },
-              required: ['id', 'title', 'authors', 'journalOrSource', 'year', 'contentSnippet']
-            }
-          }
-        },
-        required: ['testedAt', 'overallScore', 'summary', 'passedChecks', 'totalChecks', 'discrepancies', 'literatureReferences']
-      }
+  for (const r of required) {
+    if (!r.present) {
+      findings.push({
+        severity: 'WARNING', code: 'MISSING_FIELD',
+        message: `${r.label} is missing.`,
+        remedy: `Populate the ${r.label.toLowerCase()} before issuing this document.`,
+      });
     }
-  });
-
-  const rawText = response.text || '{}';
-  return JSON.parse(rawText) as CrossTestResult;
-}
-
-/**
- * Automatically update SOP and Reaction Sheet based on cross-test literature discrepancies
- */
-export async function autoFixSopFromLiterature(params: {
-  sop: SopDocument;
-  discrepancies: any[];
-}): Promise<SopDocument> {
-  const ai = getAiClient();
-
-  const prompt = `
-You are a Lead Biotech Protocol Specialist & Quality Assurance Director.
-Update the provided SOP and companion Reaction Sheet to resolve ALL discrepancies flagged during the literature cross-testing audit.
-
-ORIGINAL SOP:
-${JSON.stringify(params.sop, null, 2)}
-
-DISCREPANCIES FLAGGED BY LITERATURE AUDIT:
-${JSON.stringify(params.discrepancies, null, 2)}
-
-CRITICAL INSTRUCTIONS:
-1. Incorporate all recommended corrections to achieve 100% literature compliance.
-2. Fix all concentration deviations, buffer stoichiometric ratios (C1*V1 = C2*V2), safety/PPE entries, and thermocycler step profiles.
-3. Return the COMPLETE document. Every section, step, component, reference and table must be present
-   in your output, changed where the audit requires it and byte-identical where it does not. Anything
-   you omit is treated as deleted. Do not summarise, truncate, or replace content with placeholders.
-4. Leave id, documentId and version alone — the application sets those. Describe each change you made
-   in plain language; the revision history entry is written for you.
-  `;
-
-  const response = await generateWithRetry(ai, {
-    model: defaultModel(),
-    contents: prompt,
-    config: {
-      systemInstruction: 'You revise biotech SOPs and reaction sheets to achieve 100% compliance with validated literature standards.',
-      responseMimeType: 'application/json',
-      responseSchema: sopDocumentSchema
-    }
-  });
-
-  let rawText = response.text || '{}';
-  rawText = rawText.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
-
-  let parsed: SopDocument;
-  try {
-    parsed = JSON.parse(rawText) as SopDocument;
-  } catch (err) {
-    console.error('Failed to parse auto-fix output:', rawText);
-    throw new Error('AI produced invalid structured JSON output during literature fix. Please try again.');
   }
 
-  // The model returns a whole regenerated document, so anything it forgets would silently vanish and
-  // the identity fields would drift — a new id means the app's "replace the protocol with this id"
-  // update matches nothing and the fix appears to have been discarded. Merge over the original and
-  // pin identity and versioning in code rather than trusting the model to preserve them.
-  const fixed = sanitizeAndValidateSop(parsed);
-  const nextVersion = bumpVersion(params.sop.version);
-  return sanitizeAndValidateSop({
-    ...params.sop,
-    ...fixed,
-    id: params.sop.id,
-    documentId: params.sop.documentId,
-    version: nextVersion,
-    revisionHistory: [
-      ...(params.sop.revisionHistory || []),
-      {
-        version: nextVersion,
-        date: new Date().toISOString().split('T')[0],
-        changes: `Literature cross-test fixes applied: ${params.discrepancies
-          .map((d: { title?: string; issue?: string }) => d?.title || d?.issue)
-          .filter(Boolean)
-          .join('; ') || 'see audit report'}.`,
-        author: 'Automated literature cross-test',
-      },
+  const stepsWithoutDetail = (sop.steps || []).filter((s) => !s.instruction || s.instruction.trim().length < 20).length;
+  if (stepsWithoutDetail > 0) {
+    findings.push({
+      severity: 'WARNING', code: 'THIN_STEPS',
+      message: `${stepsWithoutDetail} step(s) have little or no instruction text.`,
+      remedy: 'Expand these steps so they are executable without prior knowledge.',
+    });
+  }
+
+  findings.push(...stepAlignmentFindings(sop));
+
+  const present = required.filter((r) => r.present).length;
+  return {
+    key: 'DOCUMENT_COMPLETENESS', label: 'Document completeness',
+    score: scoreFrom(100, findings),
+    coverage: 1,
+    whatWasChecked: `Checked for ${required.length} structural fields; ${present} present. Checked each step for instruction text, and that every master mix lines up with the step that uses it.`,
+    notChecked: [
+      'Whether the content is scientifically correct for your application',
+      'Conformance to your organisation’s SOP template or numbering convention',
     ],
-  });
+    findings,
+  };
 }
 
-/** 1.0.0 -> 1.1.0, v1.0 -> v1.1. Deterministic, so two fixes never collide on one version string. */
-export function bumpVersion(version: string | undefined): string {
-  const raw = version || '1.0.0';
-  const prefix = raw.startsWith('v') ? 'v' : '';
-  const parts = raw.replace(/^v/, '').split('.').map((n) => parseInt(n, 10));
-  if (parts.length < 2 || parts.some((n) => Number.isNaN(n))) return `${prefix}1.1`;
-  parts[1] += 1;
-  for (let i = 2; i < parts.length; i++) parts[i] = 0;
-  return prefix + parts.join('.');
+function auditSafetyAndQc(sop: SopDocument): AuditDimension {
+  const findings: AuditFinding[] = [];
+
+  if ((sop.hazards?.length ?? 0) === 0) {
+    findings.push({ severity: 'ERROR', code: 'NO_HAZARDS', message: 'No hazards are documented.', remedy: 'Add a hazard assessment before any bench work.' });
+  }
+  if ((sop.ppeRequirements?.length ?? 0) === 0) {
+    findings.push({ severity: 'ERROR', code: 'NO_PPE', message: 'No PPE requirements are documented.', remedy: 'Specify required PPE.' });
+  }
+  if ((sop.qualityControl?.length ?? 0) === 0) {
+    findings.push({ severity: 'WARNING', code: 'NO_QC', message: 'No quality-control checks are specified.', remedy: 'Add at least a no-template control and a positive control.' });
+  }
+  if ((sop.troubleshooting?.length ?? 0) === 0) {
+    findings.push({ severity: 'INFO', code: 'NO_TROUBLESHOOTING', message: 'No troubleshooting guidance is provided.' });
+  }
+
+  const bsl = sop.biosafetyLevel;
+  const hazardText = (sop.hazards || []).map((h) => `${h.label} ${h.description}`).join(' ').toLowerCase();
+  const ppeText = (sop.ppeRequirements || []).map((p) => `${p.item} ${p.notes ?? ''}`).join(' ').toLowerCase();
+
+  if ((bsl === 'BSL-2' || bsl === 'BSL-3') && !/hood|cabinet|bsc|containment/.test(`${hazardText} ${ppeText}`)) {
+    findings.push({
+      severity: 'ERROR', code: 'BSL_CONTAINMENT_MISSING',
+      message: `This protocol is marked ${bsl} but no biosafety cabinet or containment measure is specified anywhere.`,
+      remedy: `${bsl} work requires documented primary containment.`,
+    });
+  }
+
+  const hasNtc = (sop.qualityControl || []).some((q) => /ntc|no[- ]template|negative control|blank/i.test(q));
+  if ((sop.qualityControl?.length ?? 0) > 0 && !hasNtc) {
+    findings.push({
+      severity: 'WARNING', code: 'NO_NTC',
+      message: 'Quality control does not include a no-template / negative control.',
+      remedy: 'Add an NTC to detect reagent contamination.',
+    });
+  }
+
+  return {
+    key: 'SAFETY_AND_QC', label: 'Safety & quality control',
+    score: scoreFrom(100, findings),
+    coverage: 1,
+    whatWasChecked:
+      'Checked that hazards, PPE, and QC controls are present; that BSL-2/3 protocols specify containment; ' +
+      'and that QC includes a negative control.',
+    notChecked: [
+      'Whether the stated biosafety level is correct for your organism and procedure',
+      'Your institution’s specific biosafety committee requirements',
+      'Chemical compatibility and waste-stream segregation',
+    ],
+    findings,
+  };
 }
 
-/**
-  * AI Reasoning & Thought Function for Protocol Search & Smart Suggestions
-  */
-export async function searchAndSuggestProtocols(params: {
-  query: string;
-  targetOrganism?: string;
-  categoryHint?: string;
-}): Promise<SearchAndSuggestionResult> {
-  const ai = getAiClient();
+function auditCitations(sop: SopDocument): AuditDimension {
+  const refs = sop.references || [];
+  const findings: AuditFinding[] = [];
 
-  const prompt = `
-You are a Principal AI Biotech Research Scientist & Protocol Architect.
-Analyze the user's protocol search/suggestion request: "${params.query}".
-${params.targetOrganism ? `Target Organism/Host: ${params.targetOrganism}` : ''}
-${params.categoryHint ? `Preferred Category: ${params.categoryHint}` : ''}
+  if (refs.length === 0) {
+    return {
+      key: 'CITATION_INTEGRITY', label: 'Citation integrity',
+      score: null, coverage: 0,
+      whatWasChecked: 'No references are present.',
+      notChecked: ['Whether the protocol content matches any published source'],
+      findings: [{ severity: 'WARNING', code: 'NO_REFERENCES', message: 'This protocol cites no sources.' }],
+    };
+  }
 
-You MUST output an "AI Thought Chain" containing 5 explicit step-by-step reasoning phases detailing how you parsed, analyzed, cross-checked, and formulated optimized protocol suggestions, followed by 3 highly optimized protocol suggestions.
-
-REASONING PHASES REQUIRED IN thoughtSteps:
-1. INTENT_PARSING: Deconstruct user research goal, target organism/host, key assay type, and functional constraints.
-2. STOICHIOMETRY: Analyze reaction stoichiometry (C1*V1 = C2*V2), enzyme kinetics, buffer requirements, and temperature profiles.
-3. BIOSAFETY_QC: Evaluate Biosafety Level (BSL-1/2/3), hazard profiles, PPE matrices, and quality control checkpoints.
-4. LITERATURE_SYNTHESIS: Cross-reference validated literature standards (Cold Spring Harbor, Nature Protocols, NIH/NCBI guidelines).
-5. RECOMMENDATION: Formulate tailored protocol variants with match confidence scores and clear advantages.
-
-Provide 3 distinct, practical protocol suggestions matching the user's query with realistic parameters ready to be sent to the SOP Generator.
-  `;
-
-  const response = await generateWithRetry(ai, {
-    model: defaultModel(),
-    contents: prompt,
-    config: {
-      systemInstruction: 'You perform deep scientific reasoning and protocol analysis for biotechnology queries, returning structured thought steps and high-precision protocol suggestions.',
-      responseMimeType: 'application/json',
-      responseSchema: {
-        type: Type.OBJECT,
-        properties: {
-          query: { type: Type.STRING },
-          overallAnalysisSummary: { type: Type.STRING },
-          thoughtSteps: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                stepNumber: { type: Type.INTEGER },
-                title: { type: Type.STRING },
-                category: { type: Type.STRING, enum: ['INTENT_PARSING', 'STOICHIOMETRY', 'BIOSAFETY_QC', 'LITERATURE_SYNTHESIS', 'RECOMMENDATION'] },
-                detail: { type: Type.STRING },
-                keyFactors: { type: Type.ARRAY, items: { type: Type.STRING } }
-              },
-              required: ['stepNumber', 'title', 'category', 'detail']
-            }
-          },
-          suggestions: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                id: { type: Type.STRING },
-                title: { type: Type.STRING },
-                category: { type: Type.STRING },
-                matchScore: { type: Type.INTEGER },
-                description: { type: Type.STRING },
-                targetHostOrOrganism: { type: Type.STRING },
-                biosafetyLevel: { type: Type.STRING, enum: ['BSL-1', 'BSL-2', 'BSL-3'] },
-                estimatedDuration: { type: Type.STRING },
-                keyReagents: { type: Type.ARRAY, items: { type: Type.STRING } },
-                scientificRationale: { type: Type.STRING },
-                suggestedTopic: { type: Type.STRING },
-                suggestedCategory: { type: Type.STRING },
-                suggestedAdditionalReqs: { type: Type.STRING },
-                sampleCountDefault: { type: Type.INTEGER }
-              },
-              required: [
-                'id',
-                'title',
-                'category',
-                'matchScore',
-                'description',
-                'targetHostOrOrganism',
-                'biosafetyLevel',
-                'estimatedDuration',
-                'keyReagents',
-                'scientificRationale',
-                'suggestedTopic',
-                'suggestedCategory',
-                'suggestedAdditionalReqs'
-              ]
-            }
-          }
-        },
-        required: ['query', 'overallAnalysisSummary', 'thoughtSteps', 'suggestions']
-      }
+  let verified = 0;
+  for (const r of refs) {
+    const status = (r as { verificationStatus?: string }).verificationStatus;
+    if (status === 'VERIFIED') {
+      verified++;
+    } else if (status === 'NOT_FOUND') {
+      findings.push({
+        severity: 'ERROR', code: 'CITATION_NOT_FOUND',
+        message: `Citation could not be resolved in Crossref or PubMed: "${r.citation.slice(0, 100)}"`,
+        remedy: 'This reference may not exist. Remove it or replace it with a verified source.',
+      });
+    } else {
+      findings.push({
+        severity: 'WARNING', code: 'CITATION_UNVERIFIED',
+        message: `Citation has not been checked against a registry: "${r.citation.slice(0, 100)}"`,
+        remedy: 'Run literature verification to confirm this source exists.',
+      });
     }
-  });
+  }
 
-  const rawText = response.text || '{}';
-  return JSON.parse(rawText) as SearchAndSuggestionResult;
+  const coverage = verified / refs.length;
+  return {
+    key: 'CITATION_INTEGRITY', label: 'Citation integrity',
+    score: scoreFrom(50 + 50 * coverage, findings),
+    coverage,
+    whatWasChecked:
+      `Checked each of the ${refs.length} reference(s) against Crossref/PubMed resolution status. ` +
+      `${verified} verified as existing.`,
+    notChecked: [
+      'Whether a verified paper actually supports the specific claim it is cited for',
+      'Whether the cited method was applied to a comparable system',
+    ],
+    findings,
+  };
+}
+
+/* ------------------------------------------------------------------ platform rules
+
+   Everything else in this file checks the document against itself: does the
+   arithmetic close, is a field present, does a DOI resolve. A protocol can pass
+   all of that and still be unrunnable, because a fluent model will happily write
+   a workflow that contradicts the chemistry it names — shearing RNA destined for
+   direct RNA sequencing, omitting the motor adapter a nanopore read depends on.
+
+   These rules encode published, platform-specific constraints. Each one is
+   deterministic and narrow: it only fires when the document itself names the
+   platform, and it states the source of the constraint in its remedy so a
+   scientist can overrule it with evidence rather than guesswork.
+
+   Sources: Oxford Nanopore SQK-RNA004 protocol and support documentation. Add
+   rules only where the vendor is unambiguous; a false positive here costs more
+   trust than a missed warning.
+------------------------------------------------------------------------------- */
+
+interface PlatformContext {
+  /** Every searchable sentence in the document, lowercased. */
+  text: string;
+  /** The same text split into clauses, so a rule can tell an instruction from a prohibition. */
+  sentences: string[];
+  /** Procedure step text in order, for rules that depend on what happens after what. */
+  steps: string[];
+  isNanopore: boolean;
+  isDirectRna: boolean;
+  isRnaWorkflow: boolean;
 }
 
 /**
- * AI Protocol Blueprint Architect: Expands and structures a de novo protocol description
+ * A good protocol names the thing it forbids: "do NOT shear", "ethanol wash prohibited after RMX",
+ * "fragmentation is contraindicated". Keyword matching reads those as instructions and fails the
+ * document for following the rule. Every check below therefore asks whether the pattern appears in
+ * a clause that is NOT a prohibition.
  */
-export async function expandDeNovoDescription(params: {
-  description: string;
-  protocolTitle?: string;
-  category?: string;
-  targetHost?: string;
-  biosafetyLevel?: string;
-}) {
-  const ai = getAiClient();
+const PROHIBITION_RE = /\b(no|not|never|without|avoid\w*|skip|omit\w*|prohibit\w*|contraindicat\w*|forbidden|instead of|rather than)\b/;
 
-  const prompt = `
-You are a Principal Molecular Biologist and Automation Workflow Architect.
-Analyze and structure the following user's de novo protocol description into a publication-grade protocol blueprint:
+function asserted(ctx: PlatformContext, re: RegExp): boolean {
+  return ctx.sentences.some((clause) => re.test(clause) && !PROHIBITION_RE.test(clause));
+}
 
-User Description:
-${params.description}
+function platformContext(sop: SopDocument): PlatformContext {
+  const parts: string[] = [
+    sop.title, sop.scope, sop.category,
+    ...(sop.equipmentRequired || []),
+    ...(sop.reagentsRequired || []),
+    ...(sop.qualityControl || []),
+    ...(sop.steps || []).flatMap((st) => [st.title, st.instruction, (st as { conditions?: string }).conditions || '']),
+    ...(sop.reactionSheet?.stepByStepReactionSteps || []).flatMap((st) => [
+      st.stepName, st.phase, st.instructions, st.conditions,
+      ...(st.reagentsAndVolumes || []).map((r) => r.reagentName),
+    ]),
+    ...(sop.reactionSheet?.components || []).map((c) => c.name || ''),
+  ];
+  const text = parts.filter(Boolean).join(' \n ').toLowerCase();
+  const sentences = text.split(/[.;\n]+/).map((t) => t.trim()).filter(Boolean);
+  const steps = (sop.steps || []).map((st) => `${st.title || ''} ${st.instruction || ''}`.toLowerCase());
 
-Title / Topic Hint: ${params.protocolTitle || 'De Novo Protocol'}
-Category Hint: ${params.category || 'Molecular Biology'}
-Host Hint: ${params.targetHost || 'Mammalian / Bacterial Cells'}
-BSL Hint: ${params.biosafetyLevel || 'BSL-1'}
+  const isNanopore = /nanopore|minion|gridion|promethion|flongle|\bsqk-|flow cell/.test(text);
+  const isDirectRna = /direct rna|drna[- ]seq|native rna|sqk-rna/.test(text);
+  const isRnaWorkflow = isDirectRna || /\brna\b/.test(text);
 
-INSTRUCTIONS:
-1. Parse the core experimental phases, starting material, input masses, enzymes, pipetting method (8-channel for 96-well format), Covaris shearing requirements (target bp, PIP, duty factor, cycles per burst, time), purification (SPRI beads, 80% ethanol washes, elution), and QC checkpoints (Qubit, TapeStation).
-2. Return a clean, structured DeNovoProtocolBlueprint.
-`;
+  return { text, sentences, steps, isNanopore, isDirectRna, isRnaWorkflow };
+}
 
-  const response = await generateWithRetry(ai, {
-    model: defaultModel(),
-    contents: prompt,
-    config: {
-      systemInstruction: 'You structure biotechnology protocol specifications with 99%+ biochemical precision.',
-      responseMimeType: 'application/json',
-      responseSchema: {
-        type: Type.OBJECT,
-        properties: {
-          userDescription: { type: Type.STRING },
-          protocolTitle: { type: Type.STRING },
-          targetHostOrOrganism: { type: Type.STRING },
-          category: { type: Type.STRING },
-          biosafetyLevel: { type: Type.STRING, enum: ['BSL-1', 'BSL-2', 'BSL-3'] },
-          startingMaterial: { type: Type.STRING },
-          inputMassOrConcentration: { type: Type.STRING },
-          shearingMethod: { type: Type.STRING, enum: ['COVARIS_ACOUSTIC', 'ENZYMATIC', 'NONE'] },
-          shearingTargetBp: { type: Type.INTEGER },
-          pipettingFormat: { type: Type.STRING, enum: ['8_CHANNEL_MULTICHANNEL', 'SINGLE_CHANNEL', 'HYBRID'] },
-          purificationStrategy: { type: Type.STRING, enum: ['SPRI_BEADS', 'SPIN_COLUMN', 'NONE'] },
-          keyStepsOutline: { type: Type.ARRAY, items: { type: Type.STRING } },
-          qcCheckpoints: { type: Type.ARRAY, items: { type: Type.STRING } },
-          customReagents: { type: Type.ARRAY, items: { type: Type.STRING } },
-          safeStoppingPoints: { type: Type.ARRAY, items: { type: Type.STRING } }
-        },
-        required: [
-          'userDescription', 'protocolTitle', 'targetHostOrOrganism', 'category',
-          'biosafetyLevel', 'startingMaterial', 'inputMassOrConcentration',
-          'shearingMethod', 'pipettingFormat', 'purificationStrategy',
-          'keyStepsOutline', 'qcCheckpoints', 'customReagents', 'safeStoppingPoints'
-        ]
-      }
-    }
-  });
+interface PlatformRule {
+  code: string;
+  severity: FindingSeverity;
+  /** Only evaluated when this returns true, so unrelated protocols are never touched. */
+  applies: (c: PlatformContext) => boolean;
+  /** True when the document VIOLATES the rule. */
+  violated: (c: PlatformContext) => boolean;
+  message: string;
+  remedy: string;
+}
 
-  const rawText = response.text || '{}';
-  return JSON.parse(rawText);
+const PLATFORM_RULE_SET: PlatformRule[] = [
+  {
+    code: 'DRNA_NO_FRAGMENTATION',
+    severity: 'ERROR',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => asserted(c, /covaris|focused-ultrasonicator|ultrasonicat|sonicat|shear(ing|ed)?\b|fragmentase|bioruptor|megaruptor|fragmentation (module|buffer|enzyme|step)|fragment the (rna|sample|input)/),
+    message: 'Direct RNA sequencing reads native full-length molecules, but this protocol fragments the input.',
+    remedy: 'Remove the shearing/fragmentation step. Oxford Nanopore states direct RNA input "requires no fragmentation"; shearing also severs transcripts from the poly(A) tail the RT adapter anneals to, so most fragments become uncapturable.',
+  },
+  {
+    code: 'DRNA_NO_AMPLIFICATION',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => asserted(c, /\bpcr\b|amplification step|amplify the librar|indexing pcr/),
+    message: 'Direct RNA sequencing is amplification-free, but this protocol includes an amplification step.',
+    remedy: 'Drop the amplification. Amplifying converts native RNA to cDNA and forfeits the base modifications and full-length isoform information direct RNA exists to capture.',
+  },
+  {
+    code: 'NANOPORE_MOTOR_ADAPTER_MISSING',
+    severity: 'ERROR',
+    applies: (c) => c.isNanopore && /ligat/.test(c.text),
+    violated: (c) => !/rna ligation adapter|\brla\b|\brmx\b|\bamx\b|\bla\b adapter|ligation adapter|sequencing adapter|motor protein|adapter mix/.test(c.text),
+    message: 'No motor-protein sequencing adapter is ligated, so nothing can translocate the pore.',
+    remedy: 'Add the platform sequencing adapter ligation (RLA for SQK-RNA004; the ligation adapter for DNA kits). A barcoded or RT adapter replaces the RT adapter, not the motor adapter — both are required.',
+  },
+  {
+    code: 'NANOPORE_NO_HEAT_INACTIVATION',
+    severity: 'ERROR',
+    applies: (c) => c.isNanopore && /ligat/.test(c.text),
+    violated: (c) => asserted(c, /heat[- ]?inactivat|thermal inactivation/),
+    message: 'A ligated nanopore library is heat-inactivated in this protocol.',
+    remedy: 'Remove the heat inactivation. Heat denatures the motor protein and melts the splint/adapter duplex holding the construct together; nanopore protocols proceed straight from ligation to bead cleanup.',
+  },
+  {
+    code: 'RNA_DNA_SPRI_CHEMISTRY',
+    severity: 'ERROR',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => asserted(c, /ampure xp|spri\s?select/) && !/rnaclean|rna clean xp|nucleomag rna/.test(c.text),
+    message: 'A double-stranded DNA SPRI chemistry is used to purify RNA.',
+    remedy: 'Substitute Agencourt RNAClean XP, which Oxford Nanopore specifies throughout the direct RNA protocol. Binding conditions differ from AMPure XP/SPRIselect and RNA recovery on a DNA SPRI is poor and size-biased.',
+  },
+  {
+    code: 'ETHANOL_AFTER_MOTOR_ADAPTER',
+    severity: 'ERROR',
+    applies: (c) => c.isNanopore,
+    violated: (c) => {
+      const ligationStep = c.steps.findIndex((t) => /\brmx\b|\brla\b|motor protein|rna adapter|sequencing adapter/.test(t) && /ligat/.test(t));
+      if (ligationStep < 0) return false;
+      return c.steps.slice(ligationStep).some((t) => /ethanol/.test(t) && /wash/.test(t) && !PROHIBITION_RE.test(t));
+    },
+    message: 'An ethanol wash is performed after the motor-protein adapter is ligated.',
+    remedy: 'Wash with the kit wash buffer (WSB for Oxford Nanopore) instead. Ethanol denatures the motor protein bound to the adapter, and a library with no motor protein produces no reads.',
+  },
+  {
+    code: 'DRNA_MULTIPLEX_UNSUPPORTED',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    // Satisfied when the document says so itself. Custom barcoding is legitimate research practice;
+    // the failure mode is presenting it as standard vendor chemistry.
+    violated: (c) =>
+      /barcod|multiplex|\d+[- ]plex/.test(c.text) &&
+      !/not (natively |currently )?support(ed|s)?|non-standard|nonstandard|not vendor[- ]supported|not a supported/.test(c.text),
+    message: 'This protocol barcodes or multiplexes a direct RNA run without noting that it is not a vendor-supported capability.',
+    remedy: 'Oxford Nanopore states "multiplexing is currently unavailable for direct RNA." Custom barcoding is a published research technique — cite the method paper and label the protocol as non-standard, or run samples on separate flow cells.',
+  },
+  {
+    code: 'DRNA_POLYA_SELECTION',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => /total rna/.test(c.text) && !/poly\(?a\)?[- ](select|purif|enrich|tail)|oligo[- ]?d\(?t\)?[- ](select|enrich)|polyadenylat/.test(c.text),
+    message: 'Total RNA is accepted as input without poly(A) selection or poly(A) tailing.',
+    remedy: 'Direct RNA capture is oligo-dT based, so non-polyadenylated RNA is invisible to it. Require poly(A)-selected input, or add an in vitro polyadenylation step for bacterial or non-polyadenylated RNA.',
+  },
+  {
+    code: 'DRNA_FLOW_CELL_UNSPECIFIED',
+    severity: 'WARNING',
+    applies: (c) => c.isDirectRna,
+    violated: (c) => !/flo-min004|flo-pro004|rna flow cell/.test(c.text),
+    message: 'No RNA-specific flow cell is specified for a direct RNA run.',
+    remedy: 'Name the flow cell explicitly: FLO-MIN004RA (MinION/GridION) or FLO-PRO004RA (PromethION). A standard DNA flow cell will not run this chemistry.',
+  },
+  {
+    code: 'RNA_SIZED_IN_BASE_PAIRS',
+    severity: 'INFO',
+    applies: (c) => c.isRnaWorkflow && !/\bdna librar|cdna|double[- ]stranded/.test(c.text),
+    violated: (c) => /\d+\s?bp\b/.test(c.text),
+    message: 'RNA lengths are expressed in base pairs.',
+    remedy: 'Single-stranded RNA is sized in nucleotides (nt). Base pairs describe duplex DNA.',
+  },
+];
+
+function auditPlatformRules(sop: SopDocument): AuditDimension {
+  const notChecked = [
+    'Whether the chosen platform suits your biological question',
+    'Vendor constraints for platforms this rule set does not yet cover',
+    'Any constraint published after this rule set was written',
+  ];
+
+  const ctx = platformContext(sop);
+  const applicable = PLATFORM_RULE_SET.filter((r) => r.applies(ctx));
+
+  if (applicable.length === 0) {
+    return {
+      key: 'PLATFORM_RULES', label: 'Platform chemistry rules',
+      score: null, coverage: 0,
+      whatWasChecked:
+        'No sequencing platform this rule set covers was named in the document, so no platform-specific ' +
+        'constraint could be applied.',
+      notChecked, findings: [],
+    };
+  }
+
+  const findings: AuditFinding[] = applicable
+    .filter((r) => r.violated(ctx))
+    .map((r) => ({ severity: r.severity, code: r.code, message: r.message, remedy: r.remedy }));
+
+  return {
+    key: 'PLATFORM_RULES', label: 'Platform chemistry rules',
+    score: scoreFrom(100, findings),
+    coverage: 1,
+    whatWasChecked:
+      `Applied ${applicable.length} published constraint(s) for the sequencing chemistry this document names ` +
+      `(fragmentation, amplification, adapter requirements, purification chemistry, input selection, flow cell). ` +
+      `${findings.length} were violated.`,
+    notChecked,
+    findings,
+  };
+}
+
+export function auditProtocol(sop: SopDocument, calc: ReactionCalculation | null): AuditReport {
+  const dimensions: AuditDimension[] = [
+    auditStoichiometry(calc),
+    auditVolumeBalance(calc),
+    auditPipettability(calc),
+    auditDocumentCompleteness(sop),
+    auditSafetyAndQc(sop),
+    auditCitations(sop),
+    auditPlatformRules(sop),
+  ];
+
+  const scored = dimensions.filter((d) => d.score !== null);
+  const totalWeight = scored.reduce((s, d) => s + WEIGHTS[d.key], 0);
+  const overallScore =
+    totalWeight > 0
+      ? Number((scored.reduce((s, d) => s + (d.score as number) * WEIGHTS[d.key], 0) / totalWeight).toFixed(1))
+      : null;
+
+  // Confidence reflects how much could actually be examined, weighted the same way.
+  const confidence = Number(
+    dimensions.reduce((s, d) => s + d.coverage * WEIGHTS[d.key], 0).toFixed(3)
+  );
+
+  const all = dimensions.flatMap((d) => d.findings);
+  const errorCount = all.filter((f) => f.severity === 'ERROR').length;
+  const warningCount = all.filter((f) => f.severity === 'WARNING').length;
+
+  // A confirmed error is a FAIL no matter how little else we could see. Only
+  // when nothing is wrong AND we could see little do we decline to pass.
+  let verdict: AuditVerdict;
+  if (errorCount > 0) verdict = 'FAIL';
+  else if (overallScore === null || confidence < 0.4) verdict = 'INSUFFICIENT_DATA';
+  else if (warningCount > 0) verdict = 'PASS_WITH_WARNINGS';
+  else verdict = 'PASS';
+
+  return {
+    generatedAt: new Date().toISOString(),
+    overallScore,
+    confidence,
+    verdict,
+    errorCount,
+    warningCount,
+    dimensions,
+    scopeStatement:
+      'This is an automated consistency check of the protocol document. It verifies internal arithmetic, ' +
+      'structural completeness, whether cited sources resolve in a public registry, and whether the workflow ' +
+      'obeys a fixed set of published constraints for the sequencing platform it names. It does NOT verify ' +
+      'that the science as a whole is correct or appropriate for your application, and it does not constitute ' +
+      'validation, qualification, or evidence of conformance to ISO 9001, GLP, GMP, or 21 CFR Part 11. ' +
+      'A qualified scientist must review this protocol before use.',
+    limitations: Array.from(new Set(dimensions.flatMap((d) => d.notChecked))),
+  };
 }
