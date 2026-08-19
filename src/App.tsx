@@ -14,6 +14,83 @@ import { exportLiveExcelLocal } from './client/exportsLocal';
 import { DataPrivacyPanel } from './components/DataPrivacyPanel';
 import { useEffect } from 'react';
 
+/**
+ * A generated document with an unexpected shape used to take the whole application down: React
+ * unmounts the tree on an uncaught render error, so the user saw a blank white page with no way
+ * back. The header stays outside this boundary, so a bad protocol costs that one view rather than
+ * the whole session.
+ */
+interface BoundaryProps { children: React.ReactNode; onReset: () => void }
+interface BoundaryState { error: Error | null }
+
+/**
+ * React.Component is described explicitly here rather than through its generic signature, because
+ * this project does not install @types/react — without that package the class members are untyped
+ * and tsc rejects every use of this.props/this.state. Declaring the base shape keeps the type check
+ * meaningful either way. (Adding @types/react is the better long-term fix; it also makes tsc check
+ * the rest of the UI, which it currently does not.)
+ */
+const ErrorBoundaryBase = (React as unknown as {
+  Component: new (props: BoundaryProps) => {
+    props: BoundaryProps;
+    state: BoundaryState;
+    context: unknown;
+    refs: Record<string, unknown>;
+    setState(next: BoundaryState): void;
+    forceUpdate(callback?: () => void): void;
+    render(): React.ReactNode;
+  };
+}).Component;
+
+class RenderErrorBoundary extends ErrorBoundaryBase {
+  constructor(props: BoundaryProps) {
+    super(props);
+    this.state = { error: null };
+  }
+
+  static getDerivedStateFromError(error: Error): BoundaryState {
+    return { error };
+  }
+
+  componentDidCatch(error: Error, info: { componentStack?: string | null }) {
+    console.error('Render error in protocol view:', error, info?.componentStack);
+  }
+
+  render() {
+    if (!this.state.error) return this.props.children;
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="rounded-xl border border-red-200 bg-red-50 p-6 space-y-3">
+          <h2 className="text-lg font-bold text-red-900">This protocol could not be displayed</h2>
+          <p className="text-sm text-red-800">
+            Something in the generated document has a shape this view cannot render, so it was stopped before it
+            took the rest of the page with it. Your other protocols are unaffected.
+          </p>
+          <pre className="text-xs bg-white/70 border border-red-200 rounded p-3 overflow-x-auto text-red-900">
+            {this.state.error.message}
+          </pre>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => { this.setState({ error: null }); this.props.onReset(); }}
+              className="px-4 py-2 rounded-lg bg-red-700 text-white text-sm font-semibold hover:bg-red-800 cursor-pointer"
+            >
+              Back to the protocol library
+            </button>
+            <button
+              type="button"
+              onClick={() => this.setState({ error: null })}
+              className="px-4 py-2 rounded-lg border border-red-300 text-red-800 text-sm font-semibold hover:bg-red-100 cursor-pointer"
+            >
+              Try rendering again
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<'generator' | 'viewer' | 'excel' | 'crosstest' | 'library' | 'companyKits'>('companyKits');
   const [protocols, setProtocols] = useState<SopDocument[]>(() => SAMPLE_SOPS.map(sanitizeAndValidateSop));
@@ -132,6 +209,7 @@ export default function App() {
         </div>
       )}
       <main className="flex-1 pb-12">
+        <RenderErrorBoundary onReset={() => setActiveTab('library')}>
         {activeTab === 'generator' && (
           <SopGenerator
             onSopGenerated={handleSopGenerated}
@@ -207,6 +285,7 @@ export default function App() {
             }}
           />
         )}
+        </RenderErrorBoundary>
       </main>
 
       {/* Subtle Footer */}
