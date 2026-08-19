@@ -5,7 +5,7 @@ import { verifyReferences, VerificationStatus } from '../client/api';
 
 const STATUS: Record<VerificationStatus | 'NONE', { label: string; cls: string; Icon: React.ElementType }> = {
   VERIFIED: { label: 'Verified in registry', cls: 'bg-emerald-50 text-emerald-800 border-emerald-200', Icon: CheckCircle2 },
-  MISMATCH: { label: 'DOI points to a different paper', cls: 'bg-red-50 text-red-800 border-red-200', Icon: XCircle },
+  MISMATCH: { label: 'Citation does not match the registry record', cls: 'bg-red-50 text-red-800 border-red-200', Icon: XCircle },
   NOT_FOUND: { label: 'Not found — may not exist', cls: 'bg-red-50 text-red-800 border-red-200', Icon: XCircle },
   UNCHECKED: { label: 'Registry unreachable — unverified', cls: 'bg-slate-50 text-slate-700 border-slate-200', Icon: HelpCircle },
   NONE: { label: 'Not yet verified', cls: 'bg-amber-50 text-amber-800 border-amber-200', Icon: AlertTriangle },
@@ -32,6 +32,7 @@ export const ReferenceVerifier: React.FC<{ sop: SopDocument; onSopUpdated?: (s: 
           verificationStatus: results[i]?.verification.status,
           verificationNote: results[i]?.verification.note,
           resolvedTitle: results[i]?.verification.resolved?.title,
+          canonicalCitation: results[i]?.verification.canonical,
           doiOrUrl: r.doiOrUrl || (results[i]?.verification.resolved?.doi ? `https://doi.org/${results[i].verification.resolved!.doi}` : r.doiOrUrl),
         })),
       };
@@ -73,6 +74,12 @@ export const ReferenceVerifier: React.FC<{ sop: SopDocument; onSopUpdated?: (s: 
                 <Icon className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <div className="min-w-0 flex-1">
                   <div className="text-slate-800">{r.citation}</div>
+                  {r.canonicalCitation && r.verificationStatus === 'MISMATCH' && (
+                    <div className="mt-1.5 text-[11px] text-slate-700 bg-white/70 border border-slate-200 rounded-md p-2">
+                      <span className="font-semibold">Registry record — use this instead: </span>
+                      {r.canonicalCitation}
+                    </div>
+                  )}
                   <div className="text-xs mt-1 flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{st.label}</span>
                     {r.verificationNote && <span className="text-slate-600">— {r.verificationNote}</span>}
