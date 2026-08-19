@@ -32,7 +32,17 @@ export interface VerificationResult {
   /** 0-1: how strongly the resolved record matches the citation text. */
   confidence: number;
   resolved?: ResolvedRecord;
+  /** The registry's own citation string, ready to paste over a wrong one. */
+  canonical?: string;
   note: string;
+}
+
+/** Formats a registry record the way it should have been cited. */
+export function formatCanonical(rec: ResolvedRecord): string {
+  const authors = rec.authors.length > 3 ? `${rec.authors.slice(0, 3).join(', ')}, et al.` : rec.authors.join(', ');
+  const bits = [authors, rec.year ? `(${rec.year}).` : '', `${rec.title}.`, rec.journal ? `${rec.journal}.` : ''];
+  const line = bits.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
+  return rec.doi ? `${line} https://doi.org/${rec.doi}` : line;
 }
 
 export class RegistryUnreachableError extends Error {
@@ -248,6 +258,26 @@ export async function searchPubmed(query: string, retmax = 5): Promise<ResolvedR
 const VERIFY_THRESHOLD = 0.6;
 const MISMATCH_THRESHOLD = 0.3;
 
+/** Best title match across Crossref then PubMed, and whether any registry answered at all. */
+async function searchByTitle(title: string): Promise<{ best: { rec: ResolvedRecord; sim: number } | null; reachable: boolean }> {
+  let reachable = false;
+  let best: { rec: ResolvedRecord; sim: number } | null = null;
+  for (const search of [searchCrossref, searchPubmed]) {
+    try {
+      const hits = await search(title, 5);
+      reachable = true;
+      for (const rec of hits) {
+        const sim = titleSimilarity(title, rec.title);
+        if (!best || sim > best.sim) best = { rec, sim };
+      }
+      if (best && best.sim >= VERIFY_THRESHOLD) break;
+    } catch (e) {
+      if (!(e instanceof RegistryUnreachableError)) throw e;
+    }
+  }
+  return { best, reachable };
+}
+
 export async function verifyCitation(ref: { citation: string; doiOrUrl?: string }): Promise<VerificationResult> {
   const citation = String(ref.citation || '').trim();
   const doi = extractDoi(ref.doiOrUrl || '') || extractDoi(citation);
@@ -265,19 +295,39 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
       throw e;
     }
     if (!rec) {
-      return { status: 'NOT_FOUND', confidence: 0, note: `DOI ${doi} does not exist in Crossref.` };
+      // A dead DOI is not the end of the enquiry. The paper may be real and merely mis-cited, which
+      // is a different problem from a fabricated reference — and the fix is different too.
+      const { best } = claimedTitle.length >= 10 ? await searchByTitle(claimedTitle) : { best: null };
+      if (best && best.sim >= VERIFY_THRESHOLD) {
+        return {
+          status: 'MISMATCH', confidence: best.sim, resolved: best.rec, canonical: formatCanonical(best.rec),
+          note: `DOI ${doi} does not exist, but this paper does: "${best.rec.title}"${best.rec.doi ? ` at DOI ${best.rec.doi}` : ''}. The citation has the right paper and the wrong identifier.`,
+        };
+      }
+      return {
+        status: 'NOT_FOUND', confidence: best?.sim ?? 0, resolved: best?.rec,
+        canonical: best ? formatCanonical(best.rec) : undefined,
+        note: best
+          ? `DOI ${doi} does not exist, and no close match for this title was found either. Closest record: "${best.rec.title}" (${(best.sim * 100).toFixed(0)}%).`
+          : `DOI ${doi} does not exist in Crossref, and no paper with this title was found in Crossref or PubMed. Treat this reference as fabricated unless you can produce the source.`,
+      };
     }
     const sim = titleSimilarity(claimedTitle, rec.title);
     if (sim >= VERIFY_THRESHOLD) {
-      return { status: 'VERIFIED', confidence: sim, resolved: rec, note: `DOI resolves and title matches (${(sim * 100).toFixed(0)}%).` };
+      return { status: 'VERIFIED', confidence: sim, resolved: rec, canonical: formatCanonical(rec), note: `DOI resolves and title matches (${(sim * 100).toFixed(0)}%).` };
     }
     if (sim < MISMATCH_THRESHOLD) {
       return {
-        status: 'MISMATCH', confidence: sim, resolved: rec,
+        status: 'MISMATCH', confidence: sim, resolved: rec, canonical: formatCanonical(rec),
         note: `DOI ${doi} exists but resolves to a different paper: "${rec.title}". The citation text does not match.`,
       };
     }
-    return { status: 'VERIFIED', confidence: sim, resolved: rec, note: `DOI resolves; partial title match (${(sim * 100).toFixed(0)}%) — review manually.` };
+    // The old behaviour called this VERIFIED with a "review manually" note, so an invented title on a
+    // real DOI counted towards the score. It is the commonest way a fabricated citation survives.
+    return {
+      status: 'MISMATCH', confidence: sim, resolved: rec, canonical: formatCanonical(rec),
+      note: `DOI ${doi} resolves, but only ${(sim * 100).toFixed(0)}% of the citation text matches the record. The registry title is "${rec.title}". Replace the citation text with the registry record.`,
+    };
   }
 
   // Path 2: no DOI. Search by title in Crossref, then PubMed.
@@ -285,35 +335,21 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
     return { status: 'NOT_FOUND', confidence: 0, note: 'Citation is too short to search.' };
   }
 
-  let reachable = false;
-  let best: { rec: ResolvedRecord; sim: number } | null = null;
-
-  for (const search of [searchCrossref, searchPubmed]) {
-    try {
-      const hits = await search(claimedTitle, 5);
-      reachable = true;
-      for (const rec of hits) {
-        const sim = titleSimilarity(claimedTitle, rec.title);
-        if (!best || sim > best.sim) best = { rec, sim };
-      }
-      if (best && best.sim >= VERIFY_THRESHOLD) break;
-    } catch (e) {
-      if (!(e instanceof RegistryUnreachableError)) throw e;
-    }
-  }
+  const { best, reachable } = await searchByTitle(claimedTitle);
 
   if (!reachable) {
     return { status: 'UNCHECKED', confidence: 0, note: 'No literature registry could be reached. This citation has not been verified.' };
   }
   if (best && best.sim >= VERIFY_THRESHOLD) {
-    return { status: 'VERIFIED', confidence: best.sim, resolved: best.rec, note: `Matched a registry record by title (${(best.sim * 100).toFixed(0)}%).` };
+    return { status: 'VERIFIED', confidence: best.sim, resolved: best.rec, canonical: formatCanonical(best.rec), note: `Matched a registry record by title (${(best.sim * 100).toFixed(0)}%).` };
   }
   return {
     status: 'NOT_FOUND', confidence: best?.sim ?? 0,
     resolved: best?.rec,
+    canonical: best ? formatCanonical(best.rec) : undefined,
     note: best
       ? `No confident match. Closest registry record: "${best.rec.title}" (${(best.sim * 100).toFixed(0)}%).`
-      : 'No matching record found in Crossref or PubMed.',
+      : 'No matching record found in Crossref or PubMed. Treat this reference as fabricated unless you can produce the source.',
   };
 }
 
