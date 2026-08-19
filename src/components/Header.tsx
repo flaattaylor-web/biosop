@@ -41,20 +41,39 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Quick Protocol Selector Dropdown */}
-          <div className="hidden md:flex items-center gap-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
-            <FlaskConical className="w-4 h-4 text-cyan-400" />
-            <span className="text-xs text-slate-300 font-medium">Active Protocol:</span>
+          {/* Active protocol selector.
+              Previously a 200px control holding option labels of 70+ characters — every entry read
+              as "SOP-NEB-M04...". Now grouped by category, titled rather than prefixed with the
+              document ID, and wide enough to read. */}
+          <div className="hidden md:flex items-center gap-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60 min-w-0">
+            <FlaskConical className="w-4 h-4 text-cyan-400 shrink-0" />
+            <label htmlFor="active-protocol" className="text-xs text-slate-300 font-medium whitespace-nowrap">
+              Active protocol
+            </label>
             <select
+              id="active-protocol"
               value={currentSop?.id || ''}
               onChange={(e) => onSelectSample(e.target.value)}
-              className="bg-slate-900 text-xs text-cyan-300 font-medium px-2 py-1 rounded border border-slate-700 focus:outline-none focus:border-cyan-500 max-w-[200px] truncate"
+              title={currentSop ? `${currentSop.documentId}: ${currentSop.title}` : undefined}
+              className="bg-slate-900 text-sm text-cyan-200 font-medium px-2.5 py-1.5 rounded-md border border-slate-700 focus:outline-none focus:border-cyan-500 w-[clamp(18rem,32vw,34rem)] cursor-pointer"
             >
-              {samples.map((sample) => (
-                <option key={sample.id} value={sample.id}>
-                  {sample.documentId}: {sample.title}
-                </option>
-              ))}
+              {Object.entries(
+                samples.reduce<Record<string, typeof samples>>((groups, sample) => {
+                  const key = sample.category || 'Other protocols';
+                  (groups[key] = groups[key] || []).push(sample);
+                  return groups;
+                }, {})
+              )
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([category, entries]) => (
+                  <optgroup key={category} label={category}>
+                    {entries.map((sample) => (
+                      <option key={sample.id} value={sample.id} title={`${sample.documentId}: ${sample.title}`}>
+                        {sample.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
             </select>
           </div>
 
