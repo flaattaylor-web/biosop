@@ -221,10 +221,70 @@ export function ensureReactionSheet(sop: SopDocument): ReactionSheet {
   return sheet;
 }
 
+/**
+ * Language models occasionally fall into a repetition loop mid-field — one generated reviewer
+ * title ran "Director Controls" several hundred times before drifting into another language.
+ * The document is otherwise fine, so the fix is to repair the field rather than reject the run.
+ *
+ * Detects a phrase of 1-6 words repeated three or more times in a row, keeps one copy, and caps
+ * short metadata fields at a sane length.
+ */
+export function collapseRepetition(text: string): string {
+  if (!text || text.length < 60) return text;
+  const words = text.split(/\s+/);
+  const out: string[] = [];
+  let i = 0;
+  while (i < words.length) {
+    let collapsed = false;
+    for (let unit = 1; unit <= 6 && i + unit * 3 <= words.length; unit++) {
+      const phrase = words.slice(i, i + unit).join(' ').toLowerCase();
+      let reps = 1;
+      while (
+        i + unit * (reps + 1) <= words.length &&
+        words.slice(i + unit * reps, i + unit * (reps + 1)).join(' ').toLowerCase() === phrase
+      ) reps++;
+      if (reps >= 3) {
+        out.push(...words.slice(i, i + unit));
+        i += unit * reps;
+        collapsed = true;
+        break;
+      }
+    }
+    if (!collapsed) out.push(words[i++]);
+  }
+  return out.join(' ');
+}
+
+/** Repetition-collapsed and length-capped, for fields that should be a line rather than an essay. */
+export function cleanMetadataField(text: string | undefined, maxChars: number): string | undefined {
+  if (typeof text !== 'string') return text;
+  const collapsed = collapseRepetition(text).trim();
+  if (collapsed.length <= maxChars) return collapsed;
+  const cut = collapsed.slice(0, maxChars);
+  const lastBreak = Math.max(cut.lastIndexOf(', '), cut.lastIndexOf('; '), cut.lastIndexOf(' '));
+  return (lastBreak > maxChars * 0.6 ? cut.slice(0, lastBreak) : cut).trim();
+}
+
 export function sanitizeAndValidateSop(sop: SopDocument): SopDocument {
   if (!sop) return sop;
 
   const sanitized: SopDocument = { ...sop };
+
+  // Repair runaway repetition before anything else reads these fields.
+  sanitized.title = cleanMetadataField(sanitized.title, 300) as string;
+  sanitized.author = cleanMetadataField(sanitized.author, 200) as string;
+  sanitized.reviewer = cleanMetadataField(sanitized.reviewer, 200);
+  sanitized.category = cleanMetadataField(sanitized.category, 120) as string;
+  sanitized.documentId = cleanMetadataField(sanitized.documentId, 60) as string;
+  sanitized.scope = collapseRepetition(sanitized.scope || '');
+  if (Array.isArray(sanitized.steps)) {
+    sanitized.steps = sanitized.steps.map((st) => ({
+      ...st,
+      title: cleanMetadataField(st.title, 200) as string,
+      instruction: collapseRepetition(st.instruction || ''),
+    }));
+  }
+
   if (!sanitized.documentId) {
     sanitized.documentId = `SOP-${(sanitized.category || 'BIO').substring(0, 3).toUpperCase()}-2026-${Math.floor(100 + Math.random() * 900)}`;
   }
