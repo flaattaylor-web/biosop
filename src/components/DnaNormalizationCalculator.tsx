@@ -42,12 +42,15 @@ import {
 interface DnaNormalizationCalculatorProps {
   sop?: SopDocument;
   reactionSheet?: ReactionSheet;
+  /** Previously computed normalization to reopen. Passed by ReactionSheetViewer. */
+  initialData?: DnaNormalizationResult;
   onApplyToProtocol?: (result: DnaNormalizationResult) => void;
 }
 
 export const DnaNormalizationCalculator: React.FC<DnaNormalizationCalculatorProps> = ({
   sop,
   reactionSheet,
+  initialData,
   onApplyToProtocol
 }) => {
   // Preset default from active reaction sheet if starting volume is defined
@@ -69,6 +72,10 @@ export const DnaNormalizationCalculator: React.FC<DnaNormalizationCalculatorProp
     initialVolumeUl?: number;
     notes?: string;
   }>>(() => {
+    // Work the user already did wins over any default.
+    if (initialData?.samples?.length) {
+      return initialData.samples;
+    }
     // If SOP or ReactionSheet already has normalization data, use it
     if (reactionSheet?.dnaNormalization?.samples) {
       return reactionSheet.dnaNormalization.samples;
