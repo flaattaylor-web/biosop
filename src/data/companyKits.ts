@@ -1467,6 +1467,80 @@ export const COMPANY_KIT_SOPS: SopDocument[] = [
     revisionHistory: [{ version: '3.0', date: '2026-02-08', changes: 'Updated for Revio system 25M SMRT Cell density.', author: 'PacBio Operations' }]
   },
   {
+    id: 'ont-sqk-rna004',
+    documentId: 'SOP-ONT-RNA004',
+    version: '1.0',
+    effectiveDate: '2026-08-19',
+    title: 'Oxford Nanopore Direct RNA Sequencing Kit (SQK-RNA004) SOP',
+    category: 'NGS Library Preparation & Sequencing',
+    author: 'Transcribed from the Oxford Nanopore SQK-RNA004 protocol',
+    reviewer: 'Pending laboratory review',
+    companyKitInfo: {
+      vendor: 'Oxford Nanopore',
+      catalogNumber: 'SQK-RNA004',
+      officialDocUrl: 'https://nanoporetech.com/document/direct-rna-sequencing-sqk-rna004',
+      storageConditions: '-20°C to -30°C; RNA flow cells at 2-8°C',
+      kitIncludes: ['RT Adapter (RTA)', 'RNA Ligation Adapter (RLA)', 'RNA Control Strand (RCS)', 'Wash Buffer (WSB)', 'RNA Elution Buffer (REB)', 'Sequencing Buffer', 'Library Solution', 'Flow Cell Flush / Tether']
+    },
+    scope: 'Native RNA library preparation for Oxford Nanopore MinION, GridION and PromethION. RNA is sequenced directly: no PCR, no cDNA conversion of the sequenced strand, and no fragmentation. Reverse transcription is performed only to linearise secondary structure; the RNA strand is what passes through the pore, which is what preserves base modifications and full-length isoform structure. Input is 300 ng poly(A)+ enriched RNA or 1 µg total RNA in 8 µl. Non-polyadenylated RNA must be poly(A)-tailed in vitro before starting, since capture is oligo-dT based.',
+    biosafetyLevel: 'BSL-1',
+    hazards: [
+      { type: 'CHEMICAL', label: 'Ethanol (70%)', description: 'Flammable liquid and vapour. Used only in the post-RT bead wash; keep away from ignition sources.' },
+      { type: 'BIOHAZARD', label: 'RNase contamination', description: 'Ambient RNase degrades native RNA and is the most common cause of short reads. Maintain an RNase-free bench, tips and glassware.' }
+    ],
+    ppeRequirements: [
+      { item: 'Nitrile Gloves (RNase-free)', required: true, notes: 'Change frequently; ambient RNase is the principal risk to the sample.' },
+      { item: 'Lab Coat', required: true },
+      { item: 'Safety Glasses', required: true, notes: 'During ethanol handling.' }
+    ],
+    equipmentRequired: [
+      'MinION Mk1B / Mk1C, GridION or PromethION sequencer',
+      'RNA Flow Cell (FLO-MIN004RA for MinION/GridION, FLO-PRO004RA for PromethION)',
+      'Thermal cycler',
+      'Magnetic separation rack for 1.5 mL tubes',
+      'Hula mixer / tube rotator',
+      'Qubit 4 Fluorometer',
+      'Microcentrifuge and vortex mixer'
+    ],
+    reagentsRequired: [
+      'ONT SQK-RNA004 Direct RNA Sequencing Kit',
+      'NEBNext Quick Ligation Reaction Buffer and T4 DNA Ligase (NEBNext Companion Module)',
+      'Induro Reverse Transcriptase and 5x Induro RT reaction buffer',
+      'Murine RNase Inhibitor',
+      '10 mM dNTP mix',
+      'Agencourt RNAClean XP beads (Beckman Coulter A63987)',
+      'Freshly prepared 70% ethanol',
+      'Nuclease-free water',
+      'Qubit RNA HS Assay Kit'
+    ],
+    steps: [
+      { stepNumber: 1, title: 'Input QC and RT Adapter (RTA) Ligation', instruction: 'Confirm RNA integrity and quantity; ONT recommends high-integrity input. Do not fragment, shear or sonicate the RNA. In a 0.2 mL tube combine 8 µl RNA (300 ng poly(A)+ enriched, or 1 µg total RNA), 3 µl NEBNext Quick Ligation Reaction Buffer, 0.5 µl diluted RNA Control Strand (or nuclease-free water if omitting the control), 1 µl Murine RNase Inhibitor, 1 µl RT Adapter (RTA) and 1.5 µl T4 DNA Ligase, for 15 µl total. Mix by pipetting and incubate 10 minutes at room temperature.', timingMinutes: 15, tempCelsius: 22 },
+      { stepNumber: 2, title: 'Reverse Transcription (structure linearisation only)', instruction: 'Prepare the RT mix: 13 µl nuclease-free water, 2 µl 10 mM dNTPs, 8 µl 5x Induro RT reaction buffer. Add all 23 µl to the 15 µl adapter-ligated RNA, then add 2 µl Induro Reverse Transcriptase (40 µl total). Mix gently and incubate 60°C for 30 minutes, then 70°C for 10 minutes, then hold at 4°C. The cDNA strand is not sequenced; it exists to flatten secondary structure during translocation.', timingMinutes: 40, tempCelsius: 60 },
+      { stepNumber: 3, title: 'RNAClean XP Cleanup After Reverse Transcription', instruction: 'Add 72 µl resuspended Agencourt RNAClean XP beads to the 40 µl reaction. Incubate 5 minutes on a rotator at room temperature. Pellet on a magnet until clear and discard the supernatant. Wash the pellet twice with 150 µl freshly prepared 70% ethanol without disturbing it. Remove residual ethanol, air dry briefly, and elute in 23 µl nuclease-free water. Use RNAClean XP, not AMPure XP or SPRIselect — those are double-stranded DNA chemistries and recover RNA poorly.', timingMinutes: 20, tempCelsius: 22 },
+      { stepNumber: 4, title: 'RNA Ligation Adapter (RLA) Ligation — motor protein attachment', instruction: 'Combine the 23 µl reverse-transcribed sample with 8 µl NEBNext Quick Ligation Reaction Buffer, 6 µl RNA Ligation Adapter (RLA) and 3 µl T4 DNA Ligase, for 40 µl total. Mix gently by flicking and incubate 10 minutes at room temperature. RLA carries the motor protein that ratchets the strand through the pore. Do NOT heat inactivate this reaction and do not vortex it; heat and vigorous mixing both destroy motor activity.', timingMinutes: 10, tempCelsius: 22 },
+      { stepNumber: 5, title: 'Final Cleanup with Wash Buffer (no ethanol)', instruction: 'Add 16 µl resuspended RNAClean XP beads to the 40 µl ligation. Incubate 5 minutes at room temperature and pellet on the magnet. Wash the pellet twice with 150 µl Wash Buffer (WSB) supplied with the kit. Do NOT use ethanol at this step — ethanol denatures the motor protein bound to the adapter and the library will produce no reads. Elute in 13 µl RNA Elution Buffer (REB) and quantify 1 µl on Qubit RNA HS.', timingMinutes: 20, tempCelsius: 22 },
+      { stepNumber: 6, title: 'RNA Flow Cell Priming and Library Loading', instruction: 'Perform a flow cell check in MinKNOW on an RNA flow cell (FLO-MIN004RA for MinION/GridION, FLO-PRO004RA for PromethION); a DNA flow cell will not run this chemistry. Prime the flow cell per the ONT flush protocol. Prepare the loading mix: 37.5 µl Sequencing Buffer, 25.5 µl Library Solution and 12 µl RNA library, for 75 µl total. Mix gently and load dropwise into the SpotON port, avoiding air bubbles. Start the run in MinKNOW selecting the direct RNA protocol.', timingMinutes: 25, tempCelsius: 22 }
+    ],
+    qualityControl: [
+      'Use high-integrity RNA; degraded input is the dominant cause of short reads in direct RNA runs.',
+      'Quantify the final library on Qubit RNA HS before loading.',
+      'Flow cell check must report an acceptable pore count before loading.',
+      'Include the RNA Control Strand (RCS) when troubleshooting: it distinguishes a library problem from a flow cell problem.'
+    ],
+    troubleshooting: [
+      { issue: 'No reads or near-zero throughput', cause: 'Motor protein denatured — usually an ethanol wash or a heat step after RLA ligation.', solution: 'Use Wash Buffer (WSB) for the final cleanup and never heat the ligated library. Rebuild the library from the RT product if available.' },
+      { issue: 'Very short reads', cause: 'RNA degradation before or during prep, or an attempt to fragment the input.', solution: 'Work RNase-free throughout; never shear or sonicate RNA for direct RNA sequencing.' },
+      { issue: 'Low yield after the RT cleanup', cause: 'AMPure XP or SPRIselect used in place of RNAClean XP, or the bead pellet over-dried.', solution: 'Use RNAClean XP at the stated ratios and elute before the pellet cracks.' },
+      { issue: 'Almost no reads from a total RNA input', cause: 'Non-polyadenylated RNA cannot be captured by the oligo-dT based RT adapter.', solution: 'Poly(A)-select the input, or poly(A)-tail it in vitro with E. coli poly(A) polymerase before starting.' }
+    ],
+    references: [
+      { citation: 'Oxford Nanopore Technologies. Direct RNA sequencing (SQK-RNA004) protocol.', doiOrUrl: 'https://nanoporetech.com/document/direct-rna-sequencing-sqk-rna004' },
+      { citation: 'Garalde DR, Snell EA, Jachimowicz D, et al. Highly parallel direct RNA sequencing on an array of nanopores. Nature Methods. 2018;15(3):201-206.', doiOrUrl: 'https://doi.org/10.1038/nmeth.4577' },
+      { citation: 'Workman RE, Tang AD, Tang PS, et al. Nanopore native RNA sequencing of a human poly(A) transcriptome. Nature Methods. 2019;16(12):1297-1305.', doiOrUrl: 'https://doi.org/10.1038/s41592-019-0617-2' }
+    ],
+    revisionHistory: [{ version: '1.0', date: '2026-08-19', changes: 'Initial transcription of the SQK-RNA004 direct RNA protocol, volumes taken from the Oxford Nanopore protocol document.', author: 'Catalog build' }]
+  },
+  {
     id: 'ont-sqk-lsk114',
     documentId: 'SOP-ONT-SQK114',
     version: '4.0',
