@@ -75,7 +75,18 @@ const QUICK_SPEC_CHIPS = [
   }
 ];
 
+const BLANK_STARTER_TITLE = 'N/A — start from a blank description';
+
+/**
+ * The first entry is deliberately blank and selected by default. Opening the editor pre-loaded with
+ * the Covaris/SPRI starter meant every de novo run inherited acoustic shearing whether or not the
+ * protocol should have it — including direct RNA runs, where shearing is contraindicated.
+ */
 const TEMPLATE_STARTERS = [
+  {
+    title: BLANK_STARTER_TITLE,
+    description: ''
+  },
   {
     title: 'NGS Library Prep with Covaris Shearing & SPRI Cleanup',
     description: 'High-throughput 96-well Illumina library preparation starting from 50 ng extracted bacterial or mammalian genomic DNA. Includes Covaris ME220 acoustic shearing to 350 bp, end-repair/A-tailing with Ultra II master mix, 8-channel adapter ligation, double-sided 0.6x/0.8x SPRI magnetic bead cleanup with fresh 80% ethanol washes, 6 cycles indexing PCR with Q5 polymerase, and Qubit HS fluorometry QC.'
@@ -103,8 +114,8 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
   negControls,
   overflowPercent
 }) => {
-  const [description, setDescription] = useState<string>(TEMPLATE_STARTERS[0].description);
-  const [protocolTitle, setProtocolTitle] = useState<string>('De Novo NGS Library Prep with Covaris Shearing & SPRI Cleanup');
+  const [description, setDescription] = useState<string>('');
+  const [protocolTitle, setProtocolTitle] = useState<string>('');
   const [category, setCategory] = useState<string>('Next-Generation Sequencing');
   const [targetHost, setTargetHost] = useState<string>('Mammalian / Bacterial gDNA');
   const [biosafetyLevel, setBiosafetyLevel] = useState<BioSafetyLevel>('BSL-1');
@@ -121,8 +132,10 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
   };
 
   const handleSelectStarter = (starter: typeof TEMPLATE_STARTERS[0]) => {
-    setProtocolTitle(starter.title);
-    setDescription(starter.description);
+    // N/A clears the fields rather than writing its own label into them.
+    const blank = starter.title === BLANK_STARTER_TITLE;
+    setProtocolTitle(blank ? '' : starter.title);
+    setDescription(blank ? '' : starter.description);
   };
 
   const handleAiExpandDescription = async () => {
