@@ -11,6 +11,56 @@ import { DEFAULT_LAB_EQUIPMENT_INVENTORY } from '../data/labEquipmentInventory';
 /**
  * Standard Hardware Substitutions database for common molecular biology equipment
  */
+/* ---------------------------------------------------------------- matching helpers
+
+   Three real mis-matches this replaces, all seen in generated documents:
+     - a 20-200 uL pipette "matched" to the lab's 2-20 uL one, because both names
+       contain "8-channel";
+     - "Single channel pipettes (P2...P1000)" matched to an 8-channel pipette;
+     - "Covaris microTUBE AFA Fiber Snap-Cap (130 uL)" — a plastic consumable —
+       matched to the Covaris instrument, because both names contain "covaris".
+------------------------------------------------------------------------------- */
+
+/** Consumables are not hardware; they must not be matched to an instrument or scored as one. */
+const CONSUMABLE_RE = /microtube|snap-?cap|afa fiber|screentape|filter tips?|\btips?\b|pcr plate|96-well plate|\bflow cell\b|cartridge|spri\s?select|ampure|assay kit|reagent kit|\bstrips?\b/i;
+const INSTRUMENT_WORD_RE = /stand|rack|magnet|centrifuge|cycler|sequencer|reader|analyz|station|mixer|hood|freezer|incubator|pipette|fluorometer|spectrophotometer|ultrasonicator|thermomixer/i;
+
+export function isConsumable(requirement: string): boolean {
+  return CONSUMABLE_RE.test(requirement) && !INSTRUMENT_WORD_RE.test(requirement);
+}
+
+function parseVolumeRange(s: string): { min: number; max: number } | null {
+  const m = s.match(/(\d+(?:\.\d+)?)\s*(?:–|—|-|to)\s*(\d+(?:\.\d+)?)\s*(?:µ|u)\s?l/i);
+  return m ? { min: parseFloat(m[1]), max: parseFloat(m[2]) } : null;
+}
+
+function channelCount(s: string): number | null {
+  if (/\b12[-\s]?channel\b/i.test(s)) return 12;
+  if (/\b8[-\s]?channel\b/i.test(s)) return 8;
+  if (/single[-\s]?channel/i.test(s) || /\bp(?:2|10|20|200|1000)\b/i.test(s)) return 1;
+  if (/multi-?channel/i.test(s)) return 8;
+  return null;
+}
+
+function isPipetteRequest(s: string): boolean {
+  return /pipette|pipettor|micropipette|\bp(?:2|10|20|200|1000)\b/i.test(s);
+}
+
+/** A pipette matches only when the channel count agrees AND its range covers what is asked for. */
+function pipetteMatches(requirement: string, inventoryName: string): boolean {
+  const reqChannels = channelCount(requirement);
+  const invChannels = channelCount(inventoryName);
+  if (reqChannels !== null && invChannels !== null && reqChannels !== invChannels) return false;
+
+  const reqRange = parseVolumeRange(requirement);
+  const invRange = parseVolumeRange(inventoryName);
+  if (reqRange && invRange) {
+    return invRange.min <= reqRange.min + 1e-9 && invRange.max >= reqRange.max - 1e-9;
+  }
+  // No range stated on one side: channel agreement is the most we can honestly assert.
+  return reqChannels === null || invChannels === null || reqChannels === invChannels;
+}
+
 const COMMON_HARDWARE_SUBSTITUTIONS: Record<string, {
   alternativeEquipment: string;
   category: EquipmentCategory;
@@ -122,9 +172,16 @@ export function checkEquipmentInventory(
   for (const req of sopEquipment) {
     const reqLower = req.toLowerCase();
 
+    // Plasticware and kits are ordered, not scheduled. Scoring them as hardware both dilutes the
+    // readiness figure and produces nonsense matches like a microTUBE "matched to" a sonicator.
+    if (isConsumable(req)) continue;
+
     // Search for matching item in inventory
     const matchedItem = inventory.find((inv) => {
       const invNameLower = inv.name.toLowerCase();
+      if (isPipetteRequest(reqLower)) {
+        return inv.category === 'LIQUID_HANDLING' && pipetteMatches(req, inv.name);
+      }
       const invMfgLower = (inv.manufacturer || '').toLowerCase();
       const invModelLower = (inv.model || '').toLowerCase();
 
@@ -165,15 +222,6 @@ export function checkEquipmentInventory(
       }
       if (reqLower.includes('countess') || reqLower.includes('cell counter')) {
         return inv.category === 'CELL_COUNTER';
-      }
-      if (reqLower.includes('8-channel') || reqLower.includes('8 channel') || (reqLower.includes('multichannel') && !reqLower.includes('12-channel') && !reqLower.includes('12 channel'))) {
-        return inv.name.toLowerCase().includes('8-channel') || inv.id.includes('8ch');
-      }
-      if (reqLower.includes('12-channel') || reqLower.includes('12 channel')) {
-        return inv.name.toLowerCase().includes('12-channel') || inv.id.includes('12ch');
-      }
-      if (reqLower.includes('pipette') || reqLower.includes('micropipette') || reqLower.includes('p20') || reqLower.includes('p200') || reqLower.includes('p1000')) {
-        return inv.category === 'LIQUID_HANDLING';
       }
       if (reqLower.includes('covaris') || reqLower.includes('focused-ultrasonicator') || reqLower.includes('afa') || reqLower.includes('shearing')) {
         return inv.name.toLowerCase().includes('covaris') || inv.id.includes('covaris');
@@ -230,23 +278,20 @@ export function checkEquipmentInventory(
       } else if (reqLower.includes('real-time') || reqLower.includes('qpcr')) {
         substitution = COMMON_HARDWARE_SUBSTITUTIONS.realtime_pcr;
       } else {
-        // Generic fallback substitution
-        substitution = {
-          alternativeEquipment: `Standard Lab Alternative for ${req}`,
-          adjustmentNotes: `Specific model ${req} not indexed in available inventory. Verify parameter compatibility with lab supervisor prior to run.`,
-          compatibilityScore: 80,
-          impactLevel: 'MEDIUM',
-          parameterAdjustments: ['Verify operating specs and temperature limits with instrument manual']
-        };
+        // No catalogued alternative. Previously this branch invented one by echoing the missing
+        // instrument's own name back — "Standard Lab Alternative for MinION" rendered as the MinION
+        // substituting for itself, at 80% compatibility. Saying nothing is the honest answer, and a
+        // sequencer or partitioning instrument has no substitute in any case: it defines the platform.
+        substitution = undefined;
       }
 
-      totalScoreSum += substitution.compatibilityScore;
+      totalScoreSum += substitution?.compatibilityScore ?? 0;
       equipmentMatches.push({
         requiredEquipment: req,
         isAvailable: false,
         matchedInventoryId: matchedItem?.id,
         matchedInventoryName: matchedItem?.name,
-        category: matchedItem?.category || substitution.category,
+        category: matchedItem?.category || substitution?.category,
         status: matchedItem?.status || 'UNAVAILABLE',
         suggestedSubstitution: substitution
       });
