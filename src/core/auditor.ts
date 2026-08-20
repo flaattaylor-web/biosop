@@ -311,12 +311,47 @@ function auditDocumentCompleteness(sop: SopDocument): AuditDimension {
     }
   }
 
-  const stepsWithoutDetail = (sop.steps || []).filter((s) => !s.instruction || s.instruction.trim().length < 20).length;
-  if (stepsWithoutDetail > 0) {
+  // A document can carry every required field and still contain no protocol. These checks exist
+  // because a generated SOP with step titles and empty instructions used to pass completeness.
+  const steps = sop.steps || [];
+
+  if (steps.length > 0 && steps.length < 3) {
     findings.push({
-      severity: 'WARNING', code: 'THIN_STEPS',
-      message: `${stepsWithoutDetail} step(s) have little or no instruction text.`,
-      remedy: 'Expand these steps so they are executable without prior knowledge.',
+      severity: 'ERROR', code: 'TOO_FEW_STEPS',
+      message: `Only ${steps.length} procedure step(s). This is not a runnable protocol.`,
+      remedy: 'A bench protocol needs its full sequence of operations, typically five to twelve steps. Regenerate, stating the discipline explicitly.',
+    });
+  }
+
+  const emptySteps = steps.filter((st) => !st.instruction || st.instruction.trim().length < 20);
+  if (emptySteps.length > 0) {
+    findings.push({
+      severity: emptySteps.length >= Math.max(2, steps.length / 2) ? 'ERROR' : 'WARNING',
+      code: 'THIN_STEPS',
+      message: `${emptySteps.length} of ${steps.length} step(s) have little or no instruction text.`,
+      remedy: 'Every step needs an instruction an operator could follow without prior knowledge — what is done, to what, how much, how long, at what temperature.',
+    });
+  }
+
+  const echoes = steps.filter((st) => {
+    const title = (st.title || '').trim().toLowerCase();
+    const instruction = (st.instruction || '').trim().toLowerCase();
+    return title.length > 6 && instruction.length > 0 && instruction.length < title.length * 2.5 && instruction.includes(title.slice(0, Math.min(title.length, 24)));
+  });
+  if (echoes.length > 0) {
+    findings.push({
+      severity: 'WARNING', code: 'STEP_ECHOES_TITLE',
+      message: `${echoes.length} step(s) restate their own title instead of giving an instruction.`,
+      remedy: 'Replace the restatement with the actual operation and its parameters.',
+    });
+  }
+
+  const withNumbers = steps.filter((st) => /\d/.test(st.instruction || '')).length;
+  if (steps.length >= 3 && withNumbers < steps.length / 2) {
+    findings.push({
+      severity: 'WARNING', code: 'STEPS_LACK_PARAMETERS',
+      message: `Only ${withNumbers} of ${steps.length} steps contain any quantity, time or temperature.`,
+      remedy: 'A protocol step without numbers cannot be executed reproducibly. Add volumes, concentrations, durations, temperatures and speeds.',
     });
   }
 
