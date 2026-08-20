@@ -340,6 +340,93 @@ interface SopRequestBundle {
 }
 
 /** Builds the prompt + config once so blocking and streaming paths stay identical. */
+/**
+ * The generator was written for reagent-assembly work and said so in every prompt: multichannel
+ * pipetting standards, Covaris shearing parameters, master mix breakdowns, no-template controls.
+ * Handed a TCID50 titration or an H&E stain, a model asked for those things produces a document
+ * with nothing usable in it. Classify the work first, then ask for what that discipline actually
+ * specifies.
+ */
+export type WorkflowClass =
+  | 'REAGENT_ASSEMBLY'
+  | 'CELL_BASED'
+  | 'STAINING_IMAGING'
+  | 'PROTEIN_ANALYTICAL'
+  | 'MICROBIOLOGY'
+  | 'GENERIC';
+
+export function workflowClass(params: SopGenerationParams): WorkflowClass {
+  const text = [params.topic, params.category, params.additionalRequirements, params.targetOrganismOrHost]
+    .filter(Boolean).join(' ').toLowerCase();
+
+  if (/histolog|immunohistochem|\bihc\b|\bif\b staining|h&e|haematoxylin|hematoxylin|microscop|confocal|section|fixation|counterstain|chromogen/.test(text)) return 'STAINING_IMAGING';
+  if (/tcid50|plaque assay|virus|viral|infect|cytotox|transfect|cell cultur|passage|cryopreserv|mycoplasma|viability|organoid|flow cytometr|\bmoi\b|monolayer/.test(text)) return 'CELL_BASED';
+  if (/western|sds-page|proteom|mass spec|\blc-ms|chromatograph|purification|elisa|immunoprecipit|bca|bradford|protein assay|peptide|digest/.test(text)) return 'PROTEIN_ANALYTICAL';
+  if (/bacteri|microbio|colony|agar|gram stain|antibiotic susceptib|\bmic\b|inoculum|broth|fermentation|growth curve|od600/.test(text)) return 'MICROBIOLOGY';
+  if (/pcr|qpcr|sequenc|librar|cloning|ligat|restriction|crispr|rna extraction|dna extraction|reverse transcri|primer|master mix|nucleic acid/.test(text)) return 'REAGENT_ASSEMBLY';
+  return 'GENERIC';
+}
+
+export function domainDirectives(cls: WorkflowClass, params: SopGenerationParams): string {
+  const scale = `The design is ${params.sampleCount ?? 8} samples x ${params.replicates ?? 1} replicate(s) plus controls.`;
+
+  switch (cls) {
+    case 'CELL_BASED':
+      return `CELL-BASED WORKFLOW DIRECTIVES — this protocol is built around living cells, not a reagent mix:
+- Name the cell line or primary cell type, its medium formulation with supplement percentages, and the passage range that is acceptable.
+- State seeding density per well and the vessel format, and the confluence or cell state required on the day of the experiment.
+- Give incubation conditions explicitly: temperature, CO2 percentage, humidity, and duration in hours or days.
+- Where an agent is applied, state the dose in the unit the field uses — MOI for virus, molarity for compounds, ng/mL for cytokines — and the dilution series if there is one.
+- Define the readout and its scoring criteria in words an operator can apply without training: what counts as CPE, what counts as a positive well, what magnification.
+- Controls are biological here, not no-template controls: uninfected or vehicle-treated wells, a reference-titre stock, and where relevant a cell-only plate control. ${scale}
+- There is usually no master mix. Do NOT invent one. Leave reactionSheet.components empty and put the operational parameters in the steps, where they belong.`;
+
+    case 'STAINING_IMAGING':
+      return `STAINING AND IMAGING DIRECTIVES — this protocol acts on tissue or fixed cells:
+- State the specimen: fixation type and duration, embedding, section thickness in micrometres, and the slide type.
+- Give the full solvent series with times, including dewaxing and rehydration where the specimen is paraffin-embedded.
+- For antigen retrieval, name the buffer and pH, the heating method, the time at temperature, and the cool-down.
+- Give every antibody or stain as a dilution or concentration, with incubation time and temperature, and the number and duration of washes between steps.
+- State development or differentiation timing explicitly, and say what the operator watches for, since these steps are judged by eye and are irreversible.
+- Include a positive control specimen and a negative control with the primary omitted or an isotype match.
+- There is no master mix in this work. Leave reactionSheet.components empty rather than inventing reagent volumes.`;
+
+    case 'PROTEIN_ANALYTICAL':
+      return `PROTEIN AND ANALYTICAL DIRECTIVES:
+- State protein input as a mass or concentration per lane, per well or per injection, and how it was quantified.
+- Give buffer compositions with component concentrations and pH, and state which are prepared fresh.
+- For electrophoresis and transfer, state gel percentage, voltage or current, duration, and cooling.
+- For antibodies, give the dilution, diluent, incubation time and temperature, and the wash regime.
+- For chromatography or mass spectrometry, state column, mobile phases, gradient, flow rate, and the acquisition parameters that affect the result.
+- Include loading controls, blanks and a standard curve where the method is quantitative. ${scale}
+- Reagent mixes here are buffers rather than reaction master mixes: populate reactionSheet.components only where a genuine reaction is assembled per sample.`;
+
+    case 'MICROBIOLOGY':
+      return `MICROBIOLOGY DIRECTIVES:
+- Name the organism and strain, the medium and agar formulation, and the incubation atmosphere, temperature and duration.
+- State inoculum preparation quantitatively — OD600, McFarland standard, or CFU/mL — and the dilution scheme used to reach it.
+- Give plating or broth volumes, and the counting rule including which plates are countable.
+- State selection or supplementation with concentrations, and whether plates are fresh.
+- Controls: an uninoculated medium control for sterility, a known reference strain, and where relevant a resistant and susceptible pair. ${scale}
+- Populate reactionSheet.components only if a reagent reaction is genuinely assembled; a plating protocol has none.`;
+
+    case 'REAGENT_ASSEMBLY':
+      return `REAGENT ASSEMBLY AND MASTER MIX DIRECTIVES:
+1. Multi-channel pipetting: for 96-well column work (rows A-H), specify 8-channel pipettes (0.5-10 µL, 2-20 µL, 20-200 µL) and calibrated single-channel pipettes (P2, P10, P20, P200, P1000). Do not specify 12-channel pipettes for column-wise additions.
+2. Where the protocol genuinely fragments nucleic acid, give the instrument parameters in full: target fragment size, peak incident power, duty factor, cycles per burst, treatment duration, chiller temperature and vessel. Do not add a fragmentation step to a protocol that does not need one.
+3. In reactionSheet.stepByStepReactionSteps, give a per-step reagent breakdown with exact single-reaction volumes, stock and target concentrations, and handling notes.
+4. List every reagent and consumable the protocol consumes, including ethanol, beads, water, elution buffer and QC assay reagents — in the inventory and the step that consumes them, not in the reaction components.
+${scale}`;
+
+    default:
+      return `GENERAL LABORATORY DIRECTIVES:
+- Identify what the protocol acts on, in what quantity, and what the finished product or measurement is.
+- Give every quantity, concentration, temperature, duration and speed the operator needs; a step without numbers is not a protocol step.
+- State the controls appropriate to this kind of work and what result would invalidate the run.
+- Populate reactionSheet.components only where reagents are genuinely combined per sample; otherwise leave it empty rather than inventing a mix. ${scale}`;
+  }
+}
+
 export function buildSopRequest(params: SopGenerationParams): SopRequestBundle {
   const isDeNovoMode = !!(params.isDeNovo || params.generationMode === 'de_novo');
 
@@ -400,24 +487,19 @@ EXPERIMENTAL SCALE & SAMPLE CAPACITY DIRECTIVES:
 - Primary Sample Count: ${sCount} Biological Test Samples
 - Technical Replicates: ${reps}x (${reps === 1 ? 'Singlicate' : reps === 2 ? 'Duplicate' : 'Triplicate'})
 - Positive Reference Controls: ${posCtl}
-- No Template Controls (NTC): ${negCtl}
-- Calculated Total Reaction Wells N: ${calculatedTotalReactions} Total Reaction Wells (+${overflow}% Pipetting Dead-Volume Buffer)
+- Negative Controls: ${negCtl} (a no-template control for reagent reactions; an uninfected, untreated or unstained control for cell, tissue and culture work)
+- Total Units N: ${calculatedTotalReactions} (+${overflow}% overflow where reagent is consumed per unit)
 
-CRITICAL LABORATORY EQUIPMENT & PIPETTING ACCURACY DIRECTIVES:
-1. Multi-Channel Pipetting Standard: For standard 96-well microplate column work (8 wells per column: Rows A–H), ALWAYS specify **8-channel multi-channel pipettes** (e.g. 0.5–10 µL, 2–20 µL, 20–200 µL). Do NOT hallucinate 12-channel pipettes for column-wise additions (12-channel is only for 12-well row-wise operations). Include calibrated single-channel pipettes (P2, P10, P20, P200, P1000).
-2. Covaris DNA Shearing & Acoustic Fragmentation: For any protocol involving DNA fragmentation, NGS library prep, WGS, or shearing, include dedicated **Covaris Focused-ultrasonicator (ME220/S220/E220)** steps with exact instrument parameters:
-   - Target fragment size (e.g. 200 bp, 350 bp, 550 bp)
-   - Peak Incident Power (PIP in Watts, e.g. 50W to 175W)
-   - Duty Factor % (e.g. 10% to 20%)
-   - Cycles per Burst (CPB, e.g. 200)
-   - Treatment Duration (seconds, e.g. 60s to 180s)
-   - Water bath chiller temperature (4°C to 7°C) & Degas level
-   - Vessel: Covaris microTUBE AFA Fiber Snap-Cap (130 µL) or 8 microTUBE Strip
-3. Step-by-Step Reaction Sheet & Master Mix Breakdown:
-   - In reactionSheet.stepByStepReactionSteps, generate a sequential breakdown for EVERY protocol step (e.g. 1. DNA Normalization & Shearing, 2. Master Mix Assembly & Aliquoting with 8-channel pipette, 3. Thermal Cycling / Incubation, 4. SPRI Bead Purification & 80% Ethanol Washes, 5. Elution & QC).
-   - In each step, provide full reagentsAndVolumes with exact single-reaction microliters, target concentrations, stock concentrations, and handling notes.
-4. Comprehensive Reagents & Consumables Breakdown:
-   - Include EVERY reagent and consumable in the SOP and reaction sheet: 100% molecular ethanol, freshly prepared 80% ethanol wash, SPRIselect/AMPure magnetic beads, Nuclease-Free Water, 10 mM Tris-HCl pH 8.5 (EB buffer), Qubit HS assay reagents, barrier filter tips, 96-well PCR plates, and microcentrifuge tubes.
+${domainDirectives(workflowClass(params), params)}
+
+UNIVERSAL STEP QUALITY REQUIREMENT — this applies to every protocol regardless of discipline:
+Every entry in steps[] must be executable at the bench by someone who has not read the paper. Each
+instruction states what is done, to what, in what quantity, at what temperature, for how long, and
+how the operator knows it worked. An instruction that merely restates its own title, or says
+"prepare the sample appropriately", is a failure of the document, not a stylistic preference. Give
+between 5 and 12 steps for a routine protocol; use more only when the work genuinely has more
+stages. If a step has no reagent additions — an incubation, an instrument run, a scoring step — it
+still gets a full instruction, and its reagentsAndVolumes array is simply empty.
 
 ${params.referenceText ? `Reference Literature / Benchmark Context:\n${params.referenceText}` : ''}
 ${templatePromptSection}
