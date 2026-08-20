@@ -1,0 +1,914 @@
+[
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Plasmid DNA Mini Kit I (V-spin)",
+    "catalogNumbers": [
+      "D6943"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid miniprep, spin/vacuum column",
+    "description": "Alkaline-lysis plasmid miniprep using HiBind Mini Column technology in a three-step bind, wash and elute procedure. The V-spin format uses capped columns suitable for both vacuum and centrifugation protocols.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-plasmid-mini-kit-i-v-spin/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.11308.S2R4E1A3.20230830.236.5116364",
+    "kitSize": "5 / 50 / 200 / 600 preps",
+    "applications": [
+      "cloning",
+      "sequencing",
+      "transformation",
+      "PCR",
+      "restriction digestion",
+      "ligation",
+      "in vitro transcription"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL LB culture",
+      "time": "<30 minutes",
+      "notes": "Yield 15-25 µg high copy-number; 0.1-5 µg low copy-number; elution 100 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-plasmid-mini-kit-i-v-spin/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6943 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Endo-Free Plasmid DNA Maxi Kit",
+    "catalogNumbers": [
+      "D6926"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Endotoxin-free plasmid maxiprep",
+    "description": "Purifies up to 1 mg of high-quality, endotoxin-free plasmid DNA from 50-200 mL of overnight culture, using Lysate Clearance Filter Syringes instead of centrifugation to clear bacterial lysates after alkaline lysis.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-endo-free-plasmid-maxi-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.2287.S2R4E1A3.20190208.67.4695526",
+    "kitSize": "Sample / 2 / 25 / 100 preps",
+    "applications": [
+      "transfection",
+      "gene therapy research",
+      "cloning",
+      "in vitro transcription",
+      "NGS",
+      "PCR",
+      "transformation"
+    ],
+    "keyParameters": {
+      "input": "50-200 mL LB culture (OD600 2-3); up to 500 mL for low copy plasmids",
+      "notes": "Yield 600-1200 µg high copy / 50-300 µg low copy; endotoxin <0.01 EU/mL by LAL testing; elution 1500 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-endo-free-plasmid-maxi-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6926 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Cycle Pure Kit (V-spin)",
+    "catalogNumbers": [
+      "D6492"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "PCR product cleanup, spin/vacuum column",
+    "description": "Rapid PCR product purification using HiBind technology, recovering DNA fragments from 100 bp to 10 kb while removing oligonucleotides, nucleotides and polymerase. No phenol/chloroform extraction.",
+    "productUrl": "https://omegabiotek.com/product/pcr-clean-up-kit-e-z-n-a-cycle-pure/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.4138.S2R4E1A3.20190923.67.4704238",
+    "kitSize": "Sample / 5 / 50 / 200 / 600 preps",
+    "applications": [
+      "T-A ligation",
+      "PCR sequencing",
+      "restriction enzyme digestion",
+      "labelling reactions"
+    ],
+    "keyParameters": {
+      "input": "5-50 µL ssDNA, dsDNA or PCR product",
+      "time": "<10 minutes",
+      "notes": ">80% recovery for 100 bp-10 kb; elution 30-50 µL; spin and vacuum formats"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/pcr-clean-up-kit-e-z-n-a-cycle-pure/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6492 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Gel Extraction Kit (V-spin)",
+    "catalogNumbers": [
+      "D2500"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Agarose gel DNA extraction, spin/vacuum column",
+    "description": "Spin-column extraction of DNA fragments from agarose gels using a specialised binding buffer with a pH indicator that allows visual optimisation of DNA binding conditions.",
+    "productUrl": "https://omegabiotek.com/product/pcr-gel-extraction-kit-e-z-n-a-gel-extraction-kit/",
+    "kitSize": "Sample / 5 / 50 / 200 preps",
+    "applications": [
+      "cloning",
+      "in vitro transcription",
+      "nucleic acid labelling",
+      "PCR",
+      "qPCR",
+      "sequencing",
+      "Southern blotting"
+    ],
+    "keyParameters": {
+      "input": "Agarose gel slice, up to 25 µg DNA",
+      "time": "<10 minutes",
+      "notes": "DNA size range 70 bp-20 kb (optimal 100 bp-10 kb); >85% recovery; elution 30-50 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/pcr-gel-extraction-kit-e-z-n-a-gel-extraction-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D2500 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "MicroElute Cycle-Pure & Gel Extraction Kit",
+    "catalogNumbers": [
+      "D6294-00S"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Low-elution-volume PCR cleanup and gel extraction",
+    "description": "Combined MicroElute Cycle-Pure and MicroElute Gel Extraction kit using the HiBind matrix, which reversibly binds DNA or RNA under optimised conditions, for recovery of DNA in very small elution volumes.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-microelute-gel-extraction-kit/",
+    "kitSize": "Sample request size shown (D6294-00S); larger pack sizes available",
+    "applications": [
+      "cloning",
+      "in vitro transcription",
+      "nucleic acid labelling",
+      "PCR",
+      "qPCR",
+      "sequencing",
+      "Southern blotting"
+    ],
+    "keyParameters": {
+      "input": "Agarose gel slice; up to 10 µg DNA",
+      "time": "<15 minutes",
+      "notes": "Elution 10-15 µL; DNA size 70 bp-20 kb; >90% recovery; binding capacity 10 µg"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-microelute-gel-extraction-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU D6294-00S (sample size) shown verbatim on fetched Omega Bio-tek product page; other pack-size suffixes not displayed."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind TotalPure NGS",
+    "catalogNumbers": [
+      "M1378"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Paramagnetic bead cleanup and size selection for NGS",
+    "description": "Magnetic bead purification system for clean-up and size selection of DNA and RNA in next-generation sequencing workflows. Double- or single-sided size selection is achieved by varying the bead-to-sample ratio, selectively binding fragments larger than 100 bp while removing primers, nucleotides and primer-dimers.",
+    "productUrl": "https://omegabiotek.com/product/ngs-workflow-pcr-clean-up-mag-bind-total-pure-ngs/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.1998.S2R4E1A3.20190109.67.4708836",
+    "storage": "2-8 °C",
+    "kitSize": "5 mL / 50 mL / 500 mL",
+    "applications": [
+      "NGS library prep cleanup",
+      "size selection",
+      "PCR cleanup",
+      "cDNA/RNA purification",
+      "cloning",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "notes": "Left-sided, right-sided or double-sided size selection; >90% recovery for fragments >100 bp"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/ngs-workflow-pcr-clean-up-mag-bind-total-pure-ngs/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M1378 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind RxnPure Plus",
+    "catalogNumbers": [
+      "M1386-01"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Magnetic bead PCR/reaction cleanup",
+    "description": "Magnetic bead system that isolates and concentrates DNA from PCR, selectively binding amplicons 100 bp and larger while removing excess primers, primer-dimers, dNTPs and salts. Compatible with manual and automated liquid handling and with 96- or 384-well formats.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-rxnpure-plus/",
+    "kitSize": "50 mL (M1386-01)",
+    "applications": [
+      "PCR cleanup",
+      "cloning",
+      "sequencing",
+      "transformation",
+      "restriction digestion",
+      "ligation"
+    ],
+    "keyParameters": {
+      "notes": "No centrifugation or filtration required; Mag-Bind TotalPure NGS is the updated version of this product"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-rxnpure-plus/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M1386-01 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Tissue DNA Kit",
+    "catalogNumbers": [
+      "D3396"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from tissue, cells and swabs",
+    "description": "Silica mini spin column kit for rapid genomic DNA extraction from tissues, cultured cells, mouse tail snips, paraffin-embedded tissue, whole blood, body fluids and buccal swabs via lyse, bind, wash and elute steps.",
+    "productUrl": "https://omegabiotek.com/product/genomic-dna-kit-e-z-n-a-tissue-dna-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.3654.S2R4E1A3.20190819.67.4723114",
+    "kitSize": "5 / 50 / 200 / 600 preps",
+    "applications": [
+      "PCR",
+      "sequencing",
+      "genotyping",
+      "Southern blot",
+      "restriction enzyme digestion"
+    ],
+    "keyParameters": {
+      "input": "30 mg tissue or 5x10^6 cultured cells",
+      "time": "<20 minutes after lysis",
+      "notes": "Elution 100-200 µL; throughput 1-24 samples; no phenol/chloroform"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/genomic-dna-kit-e-z-n-a-tissue-dna-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D3396 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Total RNA Kit I",
+    "catalogNumbers": [
+      "R6834"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from cultured cells and soft tissue",
+    "description": "Simple and rapid isolation of up to 100 µg total RNA from cultured eukaryotic cells and soft tissues using HiBind RNA Mini Column technology, without phenol/chloroform extraction.",
+    "productUrl": "https://omegabiotek.com/product/total-cellular-rna-e-z-n-a-total-rna-kit-i/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.4635.S2R4E1A3.20190820.67.4690928",
+    "kitSize": "Sample / 5 / 50 / 200 / 600 preps",
+    "applications": [
+      "RT-PCR",
+      "qRT-PCR",
+      "Northern blotting",
+      "nuclease protection assay",
+      "microarray",
+      "in vitro translation",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "Up to 1x10^7 eukaryotic cells or 30 mg tissue",
+      "time": "20 minutes or less",
+      "notes": "Yield up to 100 µg; elution 40-70 µL; isolates RNA >200 nucleotides; spin and vacuum formats"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/total-cellular-rna-e-z-n-a-total-rna-kit-i/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number R6834 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. HP Total RNA Kit",
+    "catalogNumbers": [
+      "R6812"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from cells/tissue with integrated gDNA removal",
+    "description": "RNA isolation from cultured cells or tissues that integrates sample homogenisation and genomic DNA elimination into a single step.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-hp-total-rna-kit/",
+    "kitSize": "Throughput 1-24 samples; multiple prep sizes available",
+    "applications": [
+      "RT-PCR",
+      "RT-qPCR",
+      "Northern blotting",
+      "NGS",
+      "poly A+ mRNA purification",
+      "nuclease protection",
+      "in vitro translation"
+    ],
+    "keyParameters": {
+      "input": "1x10^7 eukaryotic cells or 25-30 mg tissue",
+      "time": "25 minutes",
+      "notes": "Yield up to 100 µg; elution 40-70 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-hp-total-rna-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number R6812 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Plant & Fungal RNA Kit",
+    "catalogNumbers": [
+      "R6827",
+      "R6840"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from plant and fungal tissue",
+    "description": "Spin-column extraction and purification of total RNA from plant and fungal specimens using the reversible binding properties of the HiBind silica matrix, eliminating phenol/chloroform extraction.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-plant-rna-kit/",
+    "kitSize": "Sample / 5 / 50 / 200 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "real-time RT-PCR",
+      "microarray",
+      "Northern blotting",
+      "poly-A purification",
+      "nuclease protection",
+      "in vitro translation"
+    ],
+    "keyParameters": {
+      "input": "10-100 mg plant or fungal tissue",
+      "notes": "Yield up to 100 µg RNA >200 nucleotides; elution 50-100 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-plant-rna-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers R6827/R6840 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. FFPE DNA Kit",
+    "catalogNumbers": [
+      "D3399"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from FFPE tissue sections",
+    "description": "Rapid purification of DNA from formalin-fixed, paraffin-embedded tissue sections using a buffer system that reverses formalin crosslinking, with a choice of xylene/ethanol or heat-based paraffin removal, on MicroElute LE DNA Columns.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-ffpe-dna-kit/",
+    "kitSize": "5 preps / 50 preps",
+    "applications": [
+      "qPCR",
+      "NGS",
+      "PCR"
+    ],
+    "keyParameters": {
+      "input": "3-8 paraffin sections, 5-10 µm thick",
+      "notes": "Elution 50-75 µL; throughput 1-24 samples"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-ffpe-dna-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D3399 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Blood & Tissue DNA HDQ 96 Kit",
+    "catalogNumbers": [
+      "M6399-00S"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automated magnetic-bead genomic DNA from blood, tissue and swabs, 96-well",
+    "description": "Magnetic bead system for rapid isolation of high-quality genomic DNA from blood, saliva, swabs, mouse tails, dried blood spots, tissues and cultured cells in 96-well format, with validated protocols for common liquid handlers.",
+    "productUrl": "https://omegabiotek.com/product/tissue-and-blood-kit-genomic-dna-isolation-mag-bind-hdq-96/",
+    "kitSize": "Sample size shown (M6399-00S); 96-well kit sizes available",
+    "applications": [
+      "NGS",
+      "microarray",
+      "qPCR",
+      "genotyping",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "100-250 µL blood, 500 µL saliva, swabs, mouse tails, dried blood spots, tissue or 5x10^6 cultured cells",
+      "time": "Up to 384 samples in 2.5 h on automation",
+      "notes": "Elution 50-200 µL; platforms include Hamilton STAR/NIMBUS, Tecan Fluent/Freedom EVO, Thermo KingFisher Apex/Flex, Accuris IsoPURE 96"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/tissue-and-blood-kit-genomic-dna-isolation-mag-bind-hdq-96/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU M6399-00S shown verbatim on fetched Omega Bio-tek product page; other pack-size suffixes not displayed."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Plasmid DNA Maxi Kit",
+    "catalogNumbers": [
+      "D6922"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid maxiprep",
+    "description": "Combines HiBind technology with alkaline-SDS lysis to deliver high-quality plasmid DNA from overnight bacterial culture, without phenol/chloroform extraction.",
+    "productUrl": "https://omegabiotek.com/product/plasmid-dna-extraction-e-z-n-a-plasmid-dna-maxi-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.3695.S2R4E1A3.20190208.67.4701334",
+    "kitSize": "Sample / 2 / 20 / 100 preps",
+    "applications": [
+      "cloning",
+      "sequencing",
+      "transformation",
+      "PCR",
+      "restriction digestion",
+      "ligation",
+      "in vitro transcription"
+    ],
+    "keyParameters": {
+      "input": "50-200 mL overnight culture",
+      "time": "<60 minutes",
+      "notes": "Yield 600-1200 µg high copy / 50-300 µg low copy; elution 1500 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/plasmid-dna-extraction-e-z-n-a-plasmid-dna-maxi-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6922 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. FastFilter Plasmid DNA Mini Kit",
+    "catalogNumbers": [
+      "D6944"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid miniprep with nested lysate-clearance column",
+    "description": "Rapid plasmid miniprep using a nested column design in which a FastFilter Mini Column sits inside a HiBind DNA Mini Column, combining lysate clearance and DNA binding into one or two centrifugation steps.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-fastfilter-plasmid-dna-mini-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.9248.S2R4E1A3.20220909.8.4478694",
+    "kitSize": "Sample / 10 / 100 / 300 preps",
+    "applications": [
+      "routine screening",
+      "restriction enzyme digestion",
+      "transformation",
+      "PCR",
+      "DNA sequencing"
+    ],
+    "keyParameters": {
+      "input": "Up to 5 mL bacterial culture",
+      "time": "9 minutes from bacterial pellet for cultures <=3 mL",
+      "notes": "Elution 50-100 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-fastfilter-plasmid-dna-mini-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6944 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. FastFilter Plasmid DNA Maxi Kit",
+    "catalogNumbers": [
+      "D6924"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid maxiprep with syringe lysate clearance",
+    "description": "Plasmid maxiprep combining spin column convenience with Lysate Clearance Filter Syringes instead of centrifugation to rapidly clear bacterial lysates after alkaline lysis, followed by bind, wash and elute.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-fastfilter-plasmid-maxi-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.2282.S2R4E1A3.20190208.67.4686451",
+    "kitSize": "Sample / 2 / 25 preps",
+    "applications": [
+      "cloning",
+      "sequencing",
+      "transformation",
+      "PCR",
+      "restriction digestion",
+      "ligation",
+      "in vitro transcription"
+    ],
+    "keyParameters": {
+      "input": "50-200 mL LB culture; up to 500 mL for low copy plasmids",
+      "time": "<40 minutes",
+      "notes": "Yield 600-1200 µg high copy / 50-300 µg low copy"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-fastfilter-plasmid-maxi-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6924 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E.Z.N.A. Endo-Free Plasmid DNA Midi Kit",
+    "catalogNumbers": [
+      "D6915"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Endotoxin-free plasmid midiprep",
+    "description": "Large-scale isolation of transfection-grade, low-endotoxin plasmid DNA (<1 EU/µg) using Lysate Clearance Filter Syringes to clear bacterial lysates after alkaline lysis, followed by bind, wash and elute.",
+    "productUrl": "https://omegabiotek.com/product/e-z-n-a-endo-free-plasmid-midi-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.2287.S2R4E1A3.20190208.67.4695526",
+    "kitSize": "Sample / 2 / 25 preps",
+    "applications": [
+      "transfection",
+      "gene therapy research",
+      "cloning",
+      "in vitro transcription",
+      "NGS",
+      "PCR",
+      "transformation"
+    ],
+    "keyParameters": {
+      "input": "15-50 mL LB culture (OD600 2-3); up to 100 mL for low copy plasmids",
+      "notes": "Yield 100-250 µg high copy / 10-50 µg low copy; endotoxin <1 EU/µg; elution 500 µL"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-n-a-endo-free-plasmid-midi-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6915 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Blood & Saliva DNA LSP Kit",
+    "catalogNumbers": [
+      "PS6399-1-384PF"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Pre-filled automated magnetic-bead genomic DNA from blood and saliva",
+    "description": "Pre-programmed, pre-filled automated solution for DNA extraction from blood, saliva, buffy coat and cultured cells, with reagents supplied ready-to-run in automation-ready barcoded reservoirs.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-blood-saliva-lsp-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.14668.S2R4E1A3.20251222.236.5129069",
+    "kitSize": "4 x 96 preps (384 samples)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "digital PCR",
+      "NGS",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "Up to 250 µL blood, 500 µL saliva, buffy coat, or 1x10^6 cultured cells",
+      "time": "~2.5 h for 384 samples",
+      "notes": "Elution 50-200 µL; validated on Hamilton Microlab STAR"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-blood-saliva-lsp-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number PS6399-1-384PF present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind cfDNA LSP Kit",
+    "catalogNumbers": [
+      "PS3298-1-96PF"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Pre-filled automated cell-free DNA extraction from plasma/serum",
+    "description": "Pre-programmed, pre-filled automated solution for extracting circulating cell-free DNA from plasma or serum, supplied in automation-ready barcoded reagent reservoirs and tubes for open liquid-handling platforms.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-cfdna-lsp-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.12907.S2R4E1A3.20241216.236.5127012",
+    "kitSize": "4 x 24 preps (96 purifications)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "digital PCR",
+      "NGS",
+      "liquid biopsy"
+    ],
+    "keyParameters": {
+      "input": "Up to 4 mL plasma or serum",
+      "time": "~3.5 h for 96 samples",
+      "notes": "Elution 50-200 µL; pre-scripted Hamilton Microlab STAR protocols"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-cfdna-lsp-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number PS3298-1-96PF present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Bacterial DNA 96 Kit",
+    "catalogNumbers": [
+      "M2350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Magnetic-bead bacterial genomic DNA, 96-well",
+    "description": "Magnetic bead isolation of genomic DNA from gram-positive and gram-negative bacteria; Mag-BIND particles reversibly bind DNA after lysozyme and Proteinase K digestion, with proteins and contaminants removed by washing.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-bacterial-dna-96-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.2401.S2R4E1A3.20190214.67.4662130",
+    "kitSize": "1 x 96 preps / 4 x 96 preps",
+    "applications": [
+      "qPCR",
+      "PCR",
+      "microbial genomics",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "Up to 0.5 mL gram-positive or gram-negative bacterial culture",
+      "notes": "Elution 200 µL; manual or automated; MagBinder Fit24 supported"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-bacterial-dna-96-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M2350 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Viral RNA Xpress Kit",
+    "catalogNumbers": [
+      "M6219"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Magnetic-bead viral RNA extraction from swabs",
+    "description": "Rapid isolation of viral RNA from nasopharyngeal swab specimens using magnetic beads, producing nucleic acids free of proteins, nucleases and other impurities.",
+    "productUrl": "https://omegabiotek.com/product/viral-rna-extraction-kit-mag-bind-viral-rna-xpress/",
+    "kitSize": "Throughput 8-96 samples; multiple kit sizes available",
+    "applications": [
+      "qPCR",
+      "RT-qPCR",
+      "pathogen detection"
+    ],
+    "keyParameters": {
+      "input": "50-200 µL from dry NP swabs or swabs in viral transport media",
+      "notes": "Elution 50-100 µL; automated or manual; supports Hamilton STAR/MagEx STARlet/NIMBUS/VANTAGE, KingFisher, BioSprint, MagMAX 96, Tecan DreamPrep NAP"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/viral-rna-extraction-kit-mag-bind-viral-rna-xpress/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M6219 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Blood & Tissue DNA HDQ Prefilled 96 Kit",
+    "catalogNumbers": [
+      "M6399-01PF96"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Prefilled-plate automated genomic DNA from blood, tissue and swabs",
+    "description": "Automated purification solution with prefilled 96-well plates and all required plastics for post-lysis processing on magnetic particle processors, isolating DNA from cultured cells, tissues, buccal swabs, mouse tail snippets, dried blood spots, whole blood and saliva. No reagent preparation and no organic solvents.",
+    "productUrl": "https://omegabiotek.com/product/prefilled-plates-tissue-and-blood-dna-extraction-mag-bind-hdq-96/",
+    "kitSize": "4 x 96 preps",
+    "applications": [
+      "qPCR",
+      "PCR",
+      "NGS",
+      "microarray",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "Up to 250 µL whole blood or 250 µL saliva; also swabs, mouse tails, buffy coat, dried blood spots, cultured cells",
+      "time": "~40 minutes run time",
+      "notes": "Elution 100 µL; KingFisher Flex, QIAGEN BioSprint, MagMAX Express-96"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/prefilled-plates-tissue-and-blood-dna-extraction-mag-bind-hdq-96/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M6399-01PF96 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind NGS Normalization Kit",
+    "catalogNumbers": [
+      "M6467"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Magnetic-bead NGS library normalization",
+    "description": "Magnetic bead kit that normalises NGS libraries without manual quantification and dilution, taking 200-2000 ng input and delivering approximately 100 ng normalised output.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-ngs-normalization-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.12571.S2R4E1A3.20251222.236.5112492",
+    "kitSize": "1 x 96 preps / 4 x 96 preps",
+    "applications": [
+      "NGS library normalization",
+      "targeted sequencing",
+      "whole-genome sequencing"
+    ],
+    "keyParameters": {
+      "input": "200-2000 ng NGS library or PCR amplicon",
+      "notes": "~100 ng normalised output in 25 µL elution; automated and manual; throughput 1-96"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-ngs-normalization-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M6467 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "E-Z 96 Plant DNA DS Kit",
+    "catalogNumbers": [
+      "D1411"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "High-throughput plant genomic DNA, 96-well",
+    "description": "Recovers genomic DNA up to 30 kb from fresh, frozen or dried plant tissue in 96-well plate format, combining the reversible binding of the HiBind matrix with silica plate technology to eliminate polysaccharides, phenolic compounds and enzyme inhibitors.",
+    "productUrl": "https://omegabiotek.com/product/e-z-96-plant-dna-ds-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.3778.S2R4E1A3.20190211.67.4680885",
+    "kitSize": "1 x 96 preps / 4 x 96 preps",
+    "applications": [
+      "PCR",
+      "restriction digestion",
+      "hybridization",
+      "genotyping"
+    ],
+    "keyParameters": {
+      "input": "50 mg wet plant tissue",
+      "time": "<1 hour for 96 samples",
+      "notes": "Elution 150 µL; recovers DNA up to 30 kb"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/e-z-96-plant-dna-ds-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D1411 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Plant DNA DS 96 Kit",
+    "catalogNumbers": [
+      "M1130"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Magnetic-bead plant genomic DNA, 96-well",
+    "description": "Isolation of high-quality genomic, chloroplast and mitochondrial DNA from plants and other tissues that are difficult to lyse or high in polysaccharide content, combining E.Z.N.A. buffer chemistry with Mag-Bind magnetic particles. No organic solvents.",
+    "productUrl": "https://omegabiotek.com/product/plant-extraction-mag-bind-plant-dna-ds-96/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.2387.S2R4E1A3.20190109.67.4697341",
+    "kitSize": "1 x 96 preps / 4 x 96 preps",
+    "applications": [
+      "PCR",
+      "restriction digestion",
+      "NGS",
+      "hybridization"
+    ],
+    "keyParameters": {
+      "input": "50 mg wet tissue or 15 mg dry tissue",
+      "time": "96 samples in <1 hour",
+      "notes": "Elution 100-200 µL; M1128 is the older version of this kit; supports Hamilton Microlab Prep/STAR/Genomic STARlet, Tecan Fluent, MagBinder Fit24, Dynamic Devices Lynx"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/plant-extraction-mag-bind-plant-dna-ds-96/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M1130 (current version) present on fetched Omega Bio-tek product page; M1128 listed there as the older version."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "MB Fit24 Blood & Tissue DNA Kit",
+    "catalogNumbers": [
+      "B6399-5-48PF"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cartridge-based automated genomic DNA for MagBinder Fit24",
+    "description": "Pre-scripted, cartridge-based solution for purification of high-quality DNA from blood, saliva, cultured cells, or fresh or frozen tissue on the MagBinder Fit24 Nucleic Acid Purification System.",
+    "productUrl": "https://omegabiotek.com/product/mb-fit24-blood-tissue-kit/",
+    "protocolUrl": "https://ensur.omegabio.com/ensur/contentAction.aspx?key=Production.11144.S2R4E1A3.20231214.236.5101481",
+    "kitSize": "48 cartridges",
+    "applications": [
+      "NGS",
+      "qPCR",
+      "microarray",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "250 µL blood; 500 µL saliva; swabs; fresh or frozen cells and tissue",
+      "time": "Offline 30 min (blood/saliva/cells/swabs) or 1-3 h (tissue); online 47 min",
+      "notes": "Elution 100 µL; throughput 1-24 samples; MagBinder Fit24 instrument"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mb-fit24-blood-tissue-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number B6399-5-48PF present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "MB Fit24 Blood & Tissue DNA Kit CE IVD",
+    "catalogNumbers": [
+      "B6399-5-48PFCEIVD"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "CE-IVD cartridge-based automated genomic DNA for MagBinder Fit24",
+    "description": "CE-IVD marked automation-ready kit with pre-filled reagent cartridges for genomic DNA isolation, combining the reversible nucleic acid binding of Mag-Bind Particles PF-HDQ with optimised buffer chemistries.",
+    "productUrl": "https://omegabiotek.com/product/mb-fit24-blood-tissue-dna-kit-ce-ivd/",
+    "kitSize": "48 cartridges",
+    "applications": [
+      "NGS",
+      "qPCR",
+      "microarray",
+      "clinical-grade extraction"
+    ],
+    "keyParameters": {
+      "input": "250 µL blood; 500 µL saliva; swabs; fresh or frozen cells and tissue",
+      "time": "Offline 30 min to 3 h; online 47 min",
+      "notes": "Elution 100 µL; throughput 1-24; CE-IVD marked, sold in select European countries"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mb-fit24-blood-tissue-dna-kit-ce-ivd/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number B6399-5-48PFCEIVD present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "MB Fit24 cfDNA Kit",
+    "catalogNumbers": [
+      "B3298-10-48PF"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cartridge-based automated cell-free DNA from plasma/serum",
+    "description": "Automation-ready cartridges pre-filled with reagents for isolating circulating cell-free DNA from plasma or serum on the MagBinder Fit24, optimised for smaller DNA fragments of 150-400 bp.",
+    "productUrl": "https://omegabiotek.com/product/mb-fit24-cfdna-kit/",
+    "kitSize": "48 cartridges",
+    "applications": [
+      "NGS",
+      "qPCR",
+      "liquid biopsy"
+    ],
+    "keyParameters": {
+      "input": "Up to 4 mL plasma or serum",
+      "time": "Offline ~40 min; online ~53 min",
+      "notes": "Elution 50-100 µL; throughput 1-24 samples"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mb-fit24-cfdna-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number B3298-10-48PF present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "MB Fit24 cfDNA Kit CE IVD",
+    "catalogNumbers": [
+      "B3298-10-48PFCEIVD"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "CE-IVD cartridge-based automated cell-free DNA from plasma/serum",
+    "description": "CE-IVD marked cartridge kit for rapid isolation of circulating DNA from plasma or serum on the MagBinder Fit24 automated system, with pre-filled reagents that remove manual reagent preparation.",
+    "productUrl": "https://omegabiotek.com/product/mb-fit24-cfdna-kit-ce-ivd/",
+    "kitSize": "48 cartridges",
+    "applications": [
+      "PCR",
+      "digital PCR",
+      "NGS",
+      "liquid biopsy"
+    ],
+    "keyParameters": {
+      "input": "Up to 4 mL plasma or serum per cartridge",
+      "time": "Offline ~40 min; online ~53 min",
+      "notes": "Elution 50-100 µL; CE-IVD marked, sold in select European countries"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mb-fit24-cfdna-kit-ce-ivd/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number B3298-10-48PFCEIVD present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Endo-free Plasmid Mini Kit",
+    "catalogNumbers": [
+      "M1261"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automatable magnetic-bead endotoxin-free plasmid miniprep",
+    "description": "Fully automatable magnetic bead kit for extracting endotoxin-free plasmid DNA; the beads clear the lysate, avoiding the manual centrifugation step.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-endo-free-plasmid-mini-kit-on-a-magnetic-processor/",
+    "kitSize": "Multiple kit sizes available",
+    "applications": [
+      "transfection",
+      "cloning",
+      "sequencing",
+      "automated plasmid prep"
+    ],
+    "keyParameters": {
+      "input": "Up to 1.5 mL bacterial culture",
+      "notes": "Yield up to 20 µg from 1.5 mL TB culture; endotoxin <0.1 EU/µg; A260/A280 >1.8 and A260/A230 >1.8; KingFisher Apex/Duo Prime/Flex and Accuris IsoPURE supported"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-endo-free-plasmid-mini-kit-on-a-magnetic-processor/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M1261 present on fetched Omega Bio-tek product page."
+  },
+  {
+    "vendor": "Omega Bio-tek",
+    "vendorShort": "Omega Bio-tek",
+    "productName": "Mag-Bind Endo-free Plasmid Midi Kit",
+    "catalogNumbers": [
+      "M1272"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automatable magnetic-bead endotoxin-free plasmid midiprep",
+    "description": "Fully automatable magnetic bead kit for endotoxin-free plasmid DNA purification at midi scale, compatible with diverse plasmid types and culture media on robotic platforms.",
+    "productUrl": "https://omegabiotek.com/product/mag-bind-edo-freeplasmid-midi-kit-on-a-dynamic-devices-liquid-handler/",
+    "kitSize": "Multiple kit sizes available",
+    "applications": [
+      "transfection",
+      "cloning",
+      "sequencing",
+      "automated plasmid prep"
+    ],
+    "keyParameters": {
+      "input": "Up to 50 mL bacterial culture",
+      "time": "24 samples in ~70 minutes",
+      "notes": "Yield up to 200 µg; endotoxin <0.1 EU/µg; A260/A280 >1.8 and A260/A230 >1.8"
+    },
+    "sourceUrl": "https://omegabiotek.com/product/mag-bind-edo-freeplasmid-midi-kit-on-a-dynamic-devices-liquid-handler/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M1272 present on fetched Omega Bio-tek product page."
+  }
+]

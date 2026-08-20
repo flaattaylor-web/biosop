@@ -348,7 +348,7 @@ export interface SopDocument {
     doiOrUrl?: string;
     summary?: string;
     /** Set by /api/literature/verify. Absent = never checked. */
-    verificationStatus?: 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'UNCHECKED';
+    verificationStatus?: 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'RETRACTED' | 'UNCHECKED';
     verificationNote?: string;
     resolvedTitle?: string;
     /** The registry's own citation string, for replacing a wrong one. */

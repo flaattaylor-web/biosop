@@ -1,0 +1,1154 @@
+[
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-6 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "D6050B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine)",
+    "description": "Solid-phase sandwich ELISA for quantitative measurement of human IL-6 in cell culture supernates, serum, EDTA/heparin plasma and urine. Colorimetric TMB detection read at 450 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-6-quantikine-elisa-kit_d6050b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/d6050b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "cytokine quantification",
+      "serum/plasma biomarker measurement",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "Sample types: cell culture supernates, serum, EDTA plasma, heparin plasma, urine",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 0.626 pg/mL; assay range 3.13-300 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-6-quantikine-elisa-kit_d6050b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D6050B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human TNF-alpha Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DTA00D"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine)",
+    "description": "Solid-phase sandwich ELISA for quantitative measurement of human TNF-alpha in cell culture supernates, serum and plasma, using 50 µL of sample per well with TMB colorimetric detection.",
+    "productUrl": "https://www.rndsystems.com/products/human-tnf-alpha-quantikine-elisa-kit_dta00d",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dta00d.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "cytokine quantification",
+      "inflammation research",
+      "serum/plasma biomarker measurement"
+    ],
+    "keyParameters": {
+      "input": "50 µL per well; cell culture supernates, serum, EDTA plasma, heparin plasma",
+      "time": "~4.5 h assay",
+      "notes": "Sensitivity 6.23 pg/mL; assay range 15.6-1000 pg/mL; intra-assay CV 2.2-3.0%"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-tnf-alpha-quantikine-elisa-kit_dta00d",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DTA00D present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-1 beta/IL-1F2 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DLB50"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine)",
+    "description": "Solid-phase sandwich ELISA measuring mature human IL-1 beta/IL-1F2 in cell culture supernates, serum and plasma. Uses E. coli-expressed recombinant standard and TMB colorimetric detection at 450 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-1-beta-il-1f2-quantikine-elisa-kit_dlb50",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dlb50.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "inflammasome research",
+      "cytokine quantification",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, EDTA/heparin/citrate plasma",
+      "time": "3.5 or 4.5 h depending on sample type",
+      "notes": "Sensitivity 1 pg/mL; assay range 3.9-250 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-1-beta-il-1f2-quantikine-elisa-kit_dlb50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DLB50 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-8/CXCL8 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "D8000C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (chemokine)",
+    "description": "Solid-phase sandwich ELISA for human IL-8/CXCL8 in cell culture supernates, serum and plasma using 50 µL sample per well and TMB detection at 450 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-8-cxcl8-quantikine-elisa-kit_d8000c",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/d8000c.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "chemokine quantification",
+      "inflammation research",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "50 µL per well; cell culture supernates, serum, EDTA/heparin/citrate plasma",
+      "time": "3.5 h assay",
+      "notes": "Sensitivity 7.5 pg/mL; assay range 31.2-2000 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-8-cxcl8-quantikine-elisa-kit_d8000c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D8000C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human VEGF Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DVE00"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (growth factor)",
+    "description": "Solid-phase sandwich ELISA for quantitative determination of human VEGF in cell culture supernates, serum and plasma, with separate standard curves for supernate and serum/plasma matrices.",
+    "productUrl": "https://www.rndsystems.com/products/human-vegf-quantikine-elisa-kit_dve00",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dve00.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "angiogenesis research",
+      "growth factor quantification",
+      "tumour biology"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, EDTA/heparin/citrate plasma",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 5 pg/mL (supernates), 9 pg/mL (serum/plasma); range 15.6-1000 pg/mL (supernates), 31.3-2000 pg/mL (serum/plasma)"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-vegf-quantikine-elisa-kit_dve00",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DVE00 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-10 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "D1000B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine)",
+    "description": "Solid-phase sandwich ELISA for human IL-10 in cell culture supernates, serum and plasma. Recognises natural and recombinant human IL-10 without cross-reactivity to viral IL-10.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-10-quantikine-elisa-kit_d1000b",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "cytokine quantification",
+      "immunology research",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, EDTA/heparin/citrate plasma",
+      "time": "3.5 or 4.5 h depending on sample type",
+      "notes": "Sensitivity 3.9 pg/mL; assay range 7.8-500 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-10-quantikine-elisa-kit_d1000b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number D1000B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human CCL2/MCP-1 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DCP00"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (chemokine)",
+    "description": "Solid-phase sandwich ELISA for quantitative measurement of human CCL2/MCP-1 in cell culture supernates, serum, plasma and urine.",
+    "productUrl": "https://www.rndsystems.com/products/human-ccl2-mcp-1-quantikine-elisa-kit_dcp00",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dcp00.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "chemokine quantification",
+      "monocyte recruitment studies",
+      "urine biomarker measurement"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, EDTA/heparin/citrate plasma, urine",
+      "time": "3.5 or 4.5 h depending on sample type",
+      "notes": "Sensitivity 10 pg/mL; assay range 31.2-2000 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-ccl2-mcp-1-quantikine-elisa-kit_dcp00",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DCP00 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human/Mouse/Rat/Porcine/Canine TGF-beta 1 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DB100C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (growth factor, multispecies)",
+    "description": "Solid-phase sandwich ELISA for TGF-beta 1 across human, mouse, rat, porcine and canine samples in cell culture supernates, serum, platelet-poor plasma and urine. Latent TGF-beta 1 requires sample activation.",
+    "productUrl": "https://www.rndsystems.com/products/human-tgf-beta-1-quantikine-elisa-kit_db100c",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/db100c.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "TGF-beta signalling",
+      "fibrosis research",
+      "multispecies biomarker measurement"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, platelet-poor (EDTA) plasma, urine; activation with Sample Activation Kit 1 (DY010) may be required",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 5.5 pg/mL; assay range 31.3-2000 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-tgf-beta-1-quantikine-elisa-kit_db100c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DB100C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Mouse IL-6 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "M6000B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine, mouse)",
+    "description": "Solid-phase sandwich ELISA for mouse IL-6 in cell culture supernates, serum and heparin plasma using 50 µL sample per well with TMB detection at 450 nm.",
+    "productUrl": "https://www.rndsystems.com/products/mouse-il-6-quantikine-elisa-kit_m6000b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/m6000b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "mouse model cytokine measurement",
+      "inflammation research",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "50 µL per well; cell culture supernates, serum, heparin plasma",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 1.8 pg/mL; assay range 7.8-500 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/mouse-il-6-quantikine-elisa-kit_m6000b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M6000B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Mouse TNF-alpha Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "MTA00B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine, mouse)",
+    "description": "Solid-phase sandwich ELISA measuring natural and recombinant mouse TNF-alpha in cell culture supernates, serum and plasma, with less than 0.5% cross-reactivity to related molecules.",
+    "productUrl": "https://www.rndsystems.com/products/mouse-tnf-alpha-quantikine-elisa-kit_mta00b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/mta00b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "mouse model cytokine measurement",
+      "inflammation research",
+      "endotoxin challenge studies"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, EDTA plasma, heparin plasma",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 7.21 pg/mL; assay range 10.9-700 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/mouse-tnf-alpha-quantikine-elisa-kit_mta00b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MTA00B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-6 Quantikine HS ELISA Kit",
+    "catalogNumbers": [
+      "HS600C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "High-sensitivity (HS) amplified sandwich ELISA kit",
+    "description": "High-sensitivity solid-phase ELISA for human IL-6 in serum, plasma and urine, using an amplification step to reach sub-pg/mL detection. Read at 450 or 490 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-6-quantikine-hs-elisa-kit_hs600c",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "low-abundance cytokine detection",
+      "clinical research serum/plasma biomarkers",
+      "chronic inflammation studies"
+    ],
+    "keyParameters": {
+      "input": "100 µL per well; serum, EDTA plasma, heparin plasma, urine",
+      "time": "4 h assay",
+      "notes": "Sensitivity 0.09 pg/mL; assay range 0.156-10 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-6-quantikine-hs-elisa-kit_hs600c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number HS600C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human TNF-alpha Quantikine HS ELISA Kit",
+    "catalogNumbers": [
+      "HSTA00E"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "High-sensitivity (HS) amplified sandwich ELISA kit",
+    "description": "High-sensitivity sandwich ELISA for human TNF-alpha in serum and plasma, using 50 µL sample per well and an amplified colorimetric readout at 450 or 490 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-tnf-alpha-quantikine-hs-elisa-kit_hsta00e",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/hsta00e.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "low-abundance cytokine detection",
+      "clinical research serum/plasma biomarkers",
+      "inflammation studies"
+    ],
+    "keyParameters": {
+      "input": "50 µL per well; serum, EDTA plasma, heparin plasma",
+      "time": "4 h assay",
+      "notes": "Sensitivity 0.049 pg/mL; assay range 0.156-10 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-tnf-alpha-quantikine-hs-elisa-kit_hsta00e",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number HSTA00E present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IL-6 DuoSet ELISA",
+    "catalogNumbers": [
+      "DY206"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "ELISA development system (matched antibody pair + standard)",
+    "description": "ELISA development system supplying capture antibody, biotinylated detection antibody, mass-calibrated recombinant human IL-6 standard and streptavidin-HRP for building a sandwich ELISA. Plates and buffers are supplied separately.",
+    "productUrl": "https://www.rndsystems.com/products/human-il-6-duoset-elisa_dy206",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dy206.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "Reagents for five 96-well plates (DY206); 15-plate size also offered",
+    "applications": [
+      "custom ELISA development",
+      "cytokine quantification",
+      "384-well assay miniaturisation"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, plasma",
+      "time": "Standard overnight coat plus ~4 h assay",
+      "notes": "Standard curve 9.38-600 pg/mL; requires DuoSet Ancillary Reagent Kit 2 (DY008C) or equivalent buffers/plates"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-il-6-duoset-elisa_dy206",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers DY206 and ancillary kit DY008C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human TNF-alpha DuoSet ELISA",
+    "catalogNumbers": [
+      "DY210"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "ELISA development system (matched antibody pair + standard)",
+    "description": "ELISA development system containing capture antibody, biotinylated detection antibody, recombinant human TNF-alpha standard and streptavidin-HRP for constructing a sandwich ELISA on user-supplied plates.",
+    "productUrl": "https://www.rndsystems.com/products/human-tnf-alpha-duoset-elisa_dy210",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "Reagents for five 96-well plates",
+    "applications": [
+      "custom ELISA development",
+      "cytokine quantification",
+      "assay miniaturisation"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, plasma",
+      "time": "Overnight plate coat plus ~4 h assay",
+      "notes": "Standard curve 15.6-1000 pg/mL; requires DuoSet Ancillary Reagent Kit 2 (DY008C)"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-tnf-alpha-duoset-elisa_dy210",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DY210 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human VEGF DuoSet ELISA",
+    "catalogNumbers": [
+      "DY293B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "ELISA development system (matched antibody pair + standard)",
+    "description": "ELISA development system for human VEGF supplying capture and biotinylated detection antibodies, recombinant standard and streptavidin-HRP. Detects rhVEGF165, rhVEGF121 and rhVEGF165b.",
+    "productUrl": "https://www.rndsystems.com/products/human-vegf-duoset-elisa_dy293b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dy293b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "Reagents for five 96-well plates",
+    "applications": [
+      "custom ELISA development",
+      "angiogenesis research",
+      "growth factor quantification"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, plasma",
+      "time": "Overnight plate coat plus ~4 h assay",
+      "notes": "Standard curve 31.2-2000 pg/mL; ancillary buffers/plates sold separately"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-vegf-duoset-elisa_dy293b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DY293B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human XL Cytokine Array Kit",
+    "catalogNumbers": [
+      "ARY022B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based sandwich immunoassay antibody array",
+    "description": "Membrane-based sandwich immunoassay that measures the relative levels of 105 human cytokines, chemokines, growth factors and soluble proteins in a single sample using chemiluminescent detection.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-xl-cytokine-array-kit_ary022b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary022b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "cytokine profiling",
+      "biomarker discovery",
+      "secretome screening"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, cell and tissue lysates, serum, plasma, human milk, saliva",
+      "notes": "105 analytes; chemiluminescent readout, no specialised equipment required; LI-COR fluorescence possible with protocol modification"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-xl-cytokine-array-kit_ary022b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY022B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Phospho-Kinase Array Kit",
+    "catalogNumbers": [
+      "ARY003C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based phospho-protein antibody array",
+    "description": "Membrane-based antibody array measuring the relative phosphorylation of 37 human kinases plus 2 related total proteins in cell lysates, with chemiluminescent detection.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-phospho-kinase-array-kit_ary003c",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary003c.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 sets of 2 membranes (A and B), spotted in duplicate",
+    "applications": [
+      "kinase signalling profiling",
+      "pathway analysis",
+      "drug mechanism-of-action studies"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; lysis buffer supplied",
+      "notes": "37 kinase phosphorylation sites plus 2 total proteins; chemiluminescent imaging"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-phospho-kinase-array-kit_ary003c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY003C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Angiogenesis Array Kit",
+    "catalogNumbers": [
+      "ARY007"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based sandwich immunoassay antibody array",
+    "description": "Membrane-based sandwich immunoassay detecting 55 angiogenesis-related proteins in parallel, including growth factors, extracellular matrix components, proteases and membrane-bound receptors.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-angiogenesis-array-kit_ary007",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary007.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "angiogenesis research",
+      "tumour microenvironment profiling",
+      "biomarker discovery"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, cell and tissue lysates, serum, plasma, saliva",
+      "notes": "55 analytes; chemiluminescent detection, no specialised equipment required"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-angiogenesis-array-kit_ary007",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY007 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Apoptosis Array Kit",
+    "catalogNumbers": [
+      "ARY009"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Membrane-based apoptosis protein antibody array",
+    "description": "Membrane-based sandwich immunoassay for parallel determination of 35 human apoptosis-related proteins in cell lysates, including Bcl-2 family members, caspases, heat shock proteins, p53 phospho-forms and IAP family members.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-apoptosis-array-kit_ary009",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "apoptosis pathway profiling",
+      "cytotoxicity mechanism studies",
+      "drug response analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "35 apoptosis-related proteins; chemiluminescent detection"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-apoptosis-array-kit_ary009",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY009 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Phospho-RTK Array Kit",
+    "catalogNumbers": [
+      "ARY001B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based phospho-protein antibody array",
+    "description": "Membrane-based antibody array for parallel determination of the relative phosphorylation of 49 human receptor tyrosine kinases, detected with an HRP-conjugated pan phospho-tyrosine antibody.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-phospho-rtk-array-kit_ary001b",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each RTK spotted in duplicate)",
+    "applications": [
+      "receptor tyrosine kinase profiling",
+      "oncology signalling research",
+      "inhibitor screening"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "49 RTKs; chemiluminescent detection using pan phospho-tyrosine-HRP"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-phospho-rtk-array-kit_ary001b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY001B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Cytokine Array Kit",
+    "catalogNumbers": [
+      "ARY005B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based sandwich immunoassay antibody array",
+    "description": "Membrane-based sandwich immunoassay measuring the relative levels of 36 human cytokines, chemokines and acute phase proteins in a single sample with chemiluminescent detection.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary005b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "cytokine profiling",
+      "inflammation research",
+      "biomarker screening"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, cell and tissue lysates, serum, plasma, saliva, urine, human milk",
+      "notes": "36 analytes; includes 4-well multi-dish, array buffer, detection antibody cocktail and chemiluminescent reagents"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-cytokine-array-kit_ary005b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY005B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Mouse XL Cytokine Array Kit",
+    "catalogNumbers": [
+      "ARY028"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based sandwich immunoassay antibody array (mouse)",
+    "description": "Membrane-based sandwich immunoassay measuring the relative levels of 111 mouse cytokines and related proteins in a single sample using chemiluminescent detection.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-mouse-xl-cytokine-array-kit_ary028",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary028.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "mouse cytokine profiling",
+      "in vivo model biomarker discovery",
+      "secretome screening"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, cell and tissue lysates, serum, urine",
+      "notes": "111 analytes; chemiluminescent detection, LI-COR compatible with protocol modification"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-mouse-xl-cytokine-array-kit_ary028",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY028 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Protease Array Kit",
+    "catalogNumbers": [
+      "ARY021B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Membrane-based sandwich immunoassay antibody array",
+    "description": "Membrane-based sandwich immunoassay that simultaneously detects relative changes in 35 human proteases in a single sample, developed with chemiluminescent reagents in the same manner as a Western blot.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-protease-array-kit_ary021b",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary021b.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "protease profiling",
+      "tumour invasion and ECM remodelling studies",
+      "biomarker screening"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, cell and tissue lysates, serum, plasma, urine, saliva",
+      "notes": "35 proteases; chemiluminescent detection, no specialised equipment required"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-protease-array-kit_ary021b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY021B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Proteome Profiler Human Cell Stress Array Kit",
+    "catalogNumbers": [
+      "ARY018"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Membrane-based cell stress protein antibody array",
+    "description": "Membrane-based sandwich immunoassay that detects 26 human cell stress-related proteins simultaneously in cell and tissue lysates using chemiluminescent detection.",
+    "productUrl": "https://www.rndsystems.com/products/proteome-profiler-human-cell-stress-array-kit_ary018",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/ary018.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "4 membranes (each analyte spotted in duplicate)",
+    "applications": [
+      "cell stress response profiling",
+      "hypoxia and oxidative stress studies",
+      "toxicology screening"
+    ],
+    "keyParameters": {
+      "input": "Cell and tissue lysates",
+      "notes": "26 cell stress-related proteins; chemiluminescent detection, no specialised equipment required"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/proteome-profiler-human-cell-stress-array-kit_ary018",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number ARY018 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human XL Cytokine Luminex Performance Assay 46-plex Fixed Panel",
+    "catalogNumbers": [
+      "LKTM014B"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Magnetic bead-based multiplex immunoassay panel (Luminex)",
+    "description": "Fixed 46-plex magnetic bead-based multiplex immunoassay for the Luminex platform, profiling 46 human cytokines and related analytes in under 50 µL of serum or plasma with mass-calibrated standards.",
+    "productUrl": "https://www.rndsystems.com/products/human-xl-cytokine-luminex-performance-panel_lktm014b",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "One 96-well microplate",
+    "applications": [
+      "multiplex cytokine profiling",
+      "cytokine release syndrome monitoring",
+      "biomarker verification"
+    ],
+    "keyParameters": {
+      "input": "<50 µL serum or plasma per well",
+      "time": "3-5 h assay",
+      "notes": "46 analytes; magnetic bead format simplifies wash steps"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-xl-cytokine-luminex-performance-panel_lktm014b",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LKTM014B present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human Luminex Discovery Assay (custom magnetic multiplex panel)",
+    "catalogNumbers": [
+      "LXSAHM"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Customisable magnetic bead multiplex immunoassay (Luminex)",
+    "description": "Customisable magnetic bead-based multiplex immunoassay in which the user selects analytes from over 360 human targets to build a single panel run on a Luminex analyser. Supplied premixed with detection antibodies, standards and buffers.",
+    "productUrl": "https://www.rndsystems.com/products/human-luminex-discovery-assay_lxsahm",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "1 x 96-well microplate; panel size selected at order (catalog suffix reflects plex, e.g. LXSAHM-10)",
+    "applications": [
+      "multiplex biomarker discovery",
+      "cytokine screening",
+      "serum/plasma and supernate profiling"
+    ],
+    "keyParameters": {
+      "input": "<50 µL serum, plasma, cell culture supernate or tissue culture media (35 µL recommended for >25 analytes)",
+      "time": "3-4 h assay",
+      "notes": "Choose from 360+ human analytes; kits typically ship 5-10 days after ordering"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-luminex-discovery-assay_lxsahm",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LXSAHM present on fetched R&D Systems product page; plex-size suffixes (e.g. -10) are appended at order."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Mouse Luminex Discovery Assay (custom magnetic multiplex panel)",
+    "catalogNumbers": [
+      "LXSAMSM"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Customisable magnetic bead multiplex immunoassay (Luminex, mouse)",
+    "description": "Customisable magnetic bead-based multiplex immunoassay for mouse samples; users select up to 50 targets from more than 108 available mouse analytes to build one panel.",
+    "productUrl": "https://www.rndsystems.com/products/mouse-luminex-discovery-assay_lxsamsm",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "1 x 96-well microplate with magnetic antibody-coated beads",
+    "applications": [
+      "mouse multiplex biomarker profiling",
+      "preclinical model cytokine analysis",
+      "tissue lysate analysis"
+    ],
+    "keyParameters": {
+      "input": "<50 µL serum, plasma, tissue culture supernate or tissue lysate (35 µL recommended for >25 analytes on MAGPIX)",
+      "time": "3-4 h assay",
+      "notes": "Up to 50 user-defined analytes from a 108+ target menu"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/mouse-luminex-discovery-assay_lxsamsm",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LXSAMSM present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IFN-gamma ELISpot Kit",
+    "catalogNumbers": [
+      "EL285"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "ELISpot kit (single-cell cytokine secretion)",
+    "description": "ELISpot kit for enumerating human IFN-gamma-secreting cells using a PVDF-backed 96-well microplate, biotinylated detection antibody and streptavidin-alkaline phosphatase with BCIP/NBT chromogen producing blue-black spots.",
+    "productUrl": "https://www.rndsystems.com/products/human-ifn-gamma-elispot-kit_el285",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/el285.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "1 x 96-well PVDF microplate",
+    "applications": [
+      "antigen-specific T cell response measurement",
+      "vaccine immunogenicity research",
+      "single-cell cytokine secretion"
+    ],
+    "keyParameters": {
+      "input": "Small numbers of primary cells; no in vitro expansion required",
+      "time": "3 h 15 min - 4 h 30 min plus plate coating",
+      "notes": "Includes human IFN-gamma positive control; AP/BCIP-NBT colorimetric spot detection"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-ifn-gamma-elispot-kit_el285",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number EL285 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "MagCellect Human CD4+ T Cell Isolation Kit",
+    "catalogNumbers": [
+      "MAGH102"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Negative-selection magnetic isolation kit that depletes non-CD4+ cells from human PBMC using a biotinylated antibody cocktail and streptavidin ferrofluid, yielding untouched CD4+ T cells in under one hour.",
+    "productUrl": "https://www.rndsystems.com/products/magcellect-human-cd4-t-cell-isolation-kit_magh102",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/magh102.pdf",
+    "storage": "2-8°C; do not freeze",
+    "kitSize": "Up to 1 x 10^9 total cells per kit (antibody cocktail 1 mL, ferrofluid 1.25 mL, 10X buffer 10 mL)",
+    "applications": [
+      "untouched CD4+ T cell isolation",
+      "PBMC subset purification",
+      "downstream functional assays"
+    ],
+    "keyParameters": {
+      "input": "Human peripheral blood mononuclear cells",
+      "time": "<1 h",
+      "notes": "Typical purity >85% CD4+ T cells; requires MagCellect Magnet (MAG997), sold separately"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/magcellect-human-cd4-t-cell-isolation-kit_magh102",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MAGH102 and magnet MAG997 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "MagCellect Human CD3+ T Cell Isolation Kit",
+    "catalogNumbers": [
+      "MAGH101"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell isolation kit",
+    "description": "MagCellect magnetic separation kit for isolating human CD3+ T cells, used with the MagCellect Magnet and streptavidin ferrofluid separation system.",
+    "productUrl": "https://www.rndsystems.com/products/magcellect-human-cd3-t-cell-isolation-kit_magh101",
+    "storage": "2-8°C (unopened)",
+    "applications": [
+      "human T cell isolation",
+      "PBMC subset purification",
+      "downstream functional assays"
+    ],
+    "keyParameters": {
+      "input": "Human blood-derived mononuclear cells",
+      "notes": "Red blood cell lysis before isolation is recommended by the vendor FAQ to improve yield; requires MagCellect Magnet"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/magcellect-human-cd3-t-cell-isolation-kit_magh101",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MAGH101 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "TACS MTT Cell Proliferation Assay",
+    "catalogNumbers": [
+      "4890-050-K",
+      "4890-025-K"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Tetrazolium (MTT) proliferation/viability assay kit",
+    "description": "Colorimetric MTT assay in which mitochondrial enzymes of metabolically active cells reduce MTT to an insoluble formazan dye; supplied as MTT Reagent plus Detergent Reagent for solubilisation.",
+    "productUrl": "https://www.rndsystems.com/products/tacs-mtt-cell-proliferation-assay_4890-050-k",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/4890-025-k.pdf",
+    "storage": "2-8°C",
+    "kitSize": "Two pack sizes offered (4890-025-K and 4890-050-K)",
+    "applications": [
+      "cell proliferation",
+      "cell viability",
+      "cytotoxicity screening"
+    ],
+    "keyParameters": {
+      "input": "Adherent or suspension cultures, multi-species",
+      "notes": "Read at 570 nm (any filter absorbing 550-600 nm acceptable)"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/tacs-mtt-cell-proliferation-assay_4890-050-k",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 4890-050-K and 4890-025-K present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human IFN-gamma Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DIF50C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (cytokine)",
+    "description": "Solid-phase sandwich ELISA for human IFN-gamma in cell culture supernates, serum and plasma using 100 µL sample per well with TMB colorimetric detection at 450 nm. Replaces the discontinued DIF50.",
+    "productUrl": "https://www.rndsystems.com/products/human-ifn-gamma-quantikine-elisa-kit_dif50c",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dif50c.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "Th1 response measurement",
+      "cytokine quantification",
+      "cell culture supernate analysis"
+    ],
+    "keyParameters": {
+      "input": "100 µL per well; cell culture supernates, serum, EDTA plasma, heparin plasma",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 5.69 pg/mL; assay range 15.6-1000 pg/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-ifn-gamma-quantikine-elisa-kit_dif50c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DIF50C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Recombinant Human IL-6 Protein",
+    "catalogNumbers": [
+      "206-IL",
+      "206-IL/CF",
+      "206-GMP"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine (culture supplement)",
+    "description": "E. coli-derived recombinant human IL-6 (Pro29-Met212), >97% pure by SDS-PAGE, supplied lyophilised from PBS/NaCl with BSA carrier (carrier-free and GMP versions available).",
+    "productUrl": "https://www.rndsystems.com/products/recombinant-human-il-6-protein_206-il",
+    "storage": "-20 to -70°C as supplied (12 months); 1 month at 2-8°C or 3 months at -20 to -70°C after reconstitution",
+    "applications": [
+      "cell culture supplementation",
+      "cytokine signalling studies",
+      "bioassay standards"
+    ],
+    "keyParameters": {
+      "input": "Reconstitute at 100-200 µg/mL in sterile PBS containing >=0.1% human or bovine serum albumin",
+      "notes": "ED50 0.2-0.8 ng/mL (mouse plasmacytoma proliferation); endotoxin <0.10 EU/µg by LAL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/recombinant-human-il-6-protein_206-il",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 206-IL, 206-IL/CF and 206-GMP present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Recombinant Human VEGF 165 Protein",
+    "catalogNumbers": [
+      "293-VE",
+      "293-VE/CF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant growth factor (culture supplement)",
+    "description": "Sf 21 (baculovirus)-derived recombinant human VEGF 165, >97% pure by SDS-PAGE with silver stain, lyophilised from acetonitrile/TFA with BSA carrier (293-VE) or trehalose (carrier-free 293-VE/CF).",
+    "productUrl": "https://www.rndsystems.com/products/recombinant-human-vegf-165-protein_293-ve",
+    "storage": "-20 to -70°C as supplied (12 months); 1 month at 2-8°C or 3 months at -20 to -70°C after reconstitution",
+    "applications": [
+      "angiogenesis assays",
+      "endothelial cell culture",
+      "receptor binding studies"
+    ],
+    "keyParameters": {
+      "notes": "ED50 1.50-12.0 ng/mL in HUVEC proliferation assay; endotoxin <0.01 EU/µg by LAL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/recombinant-human-vegf-165-protein_293-ve",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 293-VE and 293-VE/CF present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Recombinant Human TNF-alpha Protein",
+    "catalogNumbers": [
+      "210-TA",
+      "210-GMP"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine (culture supplement)",
+    "description": "E. coli-derived recombinant human TNF-alpha, >97% pure by SDS-PAGE with silver stain, lyophilised from 0.2 µm filtered PBS and available with BSA carrier or carrier-free.",
+    "productUrl": "https://www.rndsystems.com/products/recombinant-human-tnf-alpha-protein_210-ta",
+    "storage": "-20 to -70°C as supplied (12 months); 1 month at 2-8°C or 3 months at -20 to -70°C after reconstitution",
+    "applications": [
+      "cell stimulation",
+      "cytotoxicity assays",
+      "inflammation research"
+    ],
+    "keyParameters": {
+      "notes": "ED50 25-100 pg/mL (L-929 cytotoxicity with actinomycin D); endotoxin <0.10 EU/µg by LAL; avoid repeated freeze-thaw"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/recombinant-human-tnf-alpha-protein_210-ta",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 210-TA and 210-GMP present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Recombinant Human EGF Protein, CF",
+    "catalogNumbers": [
+      "236-EG",
+      "236-GMP"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant growth factor (culture supplement, carrier-free)",
+    "description": "E. coli-derived carrier-free recombinant human EGF (Asn971-Arg1023 with N-terminal Met), >97% pure by SDS-PAGE, lyophilised from 0.2 µm filtered PBS.",
+    "productUrl": "https://www.rndsystems.com/products/recombinant-human-egf-protein_236-eg",
+    "storage": "-20 to -70°C as supplied (12 months); 1 month at 2-8°C or 3 months at -20 to -70°C after reconstitution",
+    "applications": [
+      "stem cell and organoid culture",
+      "epithelial cell proliferation",
+      "serum-free media supplementation"
+    ],
+    "keyParameters": {
+      "notes": "ED50 20-100 pg/mL (Balb/3T3 proliferation); endotoxin <0.10 EU/µg by LAL; analysed by SEC-MALS"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/recombinant-human-egf-protein_236-eg",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 236-EG and 236-GMP present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (Tocris Bioscience)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Tocriscreen Stem Cell Library",
+    "catalogNumbers": [
+      "7340"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Small molecule screening library (compound set)",
+    "description": "Screening library of 120 Tocris stem cell compounds supplied as ready-to-use 10 mM DMSO solutions, for studying stem cell reprogramming, differentiation, proliferation and signalling.",
+    "productUrl": "https://www.rndsystems.com/target/compound-libraries",
+    "storage": "Store as supplied per vendor instructions (DMSO stocks)",
+    "kitSize": "120 compounds, 100 µL of 10 mM DMSO solution each",
+    "applications": [
+      "phenotypic screening",
+      "stem cell differentiation studies",
+      "assay development"
+    ],
+    "keyParameters": {
+      "input": "100 µL 10 mM DMSO solutions",
+      "notes": "120 compounds; Tocris Bioscience brand of Bio-Techne"
+    },
+    "sourceUrl": "https://www.rndsystems.com/target/compound-libraries",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 7340 present on fetched Bio-Techne/R&D Systems compound library page (tocris.com product URLs now redirect here)."
+  },
+  {
+    "vendor": "Bio-Techne (Tocris Bioscience)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Tocriscreen GPCR Compound Library",
+    "catalogNumbers": [
+      "8100"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Small molecule screening library (compound set)",
+    "description": "Screening library of 240 GPCR-directed Tocris compounds supplied as ready-to-use 10 mM DMSO solutions for high-throughput and high-content screening, target validation and assay development.",
+    "productUrl": "https://www.rndsystems.com/target/compound-libraries",
+    "storage": "Store as supplied per vendor instructions (DMSO stocks)",
+    "kitSize": "240 compounds, 100 µL of 10 mM DMSO solution each",
+    "applications": [
+      "high-throughput screening",
+      "GPCR target validation",
+      "assay development"
+    ],
+    "keyParameters": {
+      "input": "100 µL 10 mM DMSO solutions",
+      "notes": "240 compounds; Tocris Bioscience brand of Bio-Techne"
+    },
+    "sourceUrl": "https://www.rndsystems.com/target/compound-libraries",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 8100 present on fetched Bio-Techne/R&D Systems compound library page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "DuoSet ELISA Ancillary Reagent Kit 2",
+    "catalogNumbers": [
+      "DY008C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "ELISA ancillary buffer and plate kit",
+    "description": "Ancillary reagent kit supplying the plates and buffers needed to run DuoSet ELISA development systems: clear polystyrene microplates, plate sealers, TMB substrate, stop solution, coating buffer, reagent diluent concentrate and wash buffer.",
+    "productUrl": "https://www.rndsystems.com/products/duoset-elisa-ancillary-reagent-kit-2_dy008c",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "Sufficient for five 96-well (12x8 strip) or five 384-well plate assays; 24 plate sealers; 5 x 12.5 mL TMB; 5 x 12 mL stop solution",
+    "applications": [
+      "DuoSet ELISA setup",
+      "custom sandwich ELISA",
+      "384-well ELISA"
+    ],
+    "keyParameters": {
+      "notes": "Companion product to DuoSet ELISA development systems (e.g. DY206, DY210)"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/duoset-elisa-ancillary-reagent-kit-2_dy008c",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DY008C present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human MMP-9 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DMP900"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (protease)",
+    "description": "Solid-phase sandwich ELISA measuring total human MMP-9 (92 kDa pro- and 82 kDa active forms; not the 65 kDa form) in cell culture supernates, serum, platelet-poor heparin plasma, saliva and urine. Calibrated with CHO-expressed recombinant human pro-MMP-9.",
+    "productUrl": "https://www.rndsystems.com/products/human-mmp-9-total-quantikine-elisa-kit_dmp900",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/dmp900.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well strip plate",
+    "applications": [
+      "protease quantification",
+      "ECM remodelling research",
+      "urine and saliva biomarker measurement"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernates, serum, platelet-poor heparin plasma, saliva, urine",
+      "time": "3.5 h assay",
+      "notes": "Sensitivity 0.156 ng/mL; assay range 0.312-20 ng/mL; <0.5% cross-reactivity with related molecules"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-mmp-9-total-quantikine-elisa-kit_dmp900",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DMP900 present on fetched R&D Systems product page."
+  },
+  {
+    "vendor": "Bio-Techne (R&D Systems)",
+    "vendorShort": "Bio-Techne",
+    "productName": "Human Total Adiponectin/Acrp30 Quantikine ELISA Kit",
+    "catalogNumbers": [
+      "DRP300"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Colorimetric sandwich ELISA kit (adipokine)",
+    "description": "Solid-phase sandwich ELISA quantifying total human adiponectin/Acrp30 in cell culture supernates, serum and plasma using only 10 µL of serum or plasma per well with TMB detection at 450 nm.",
+    "productUrl": "https://www.rndsystems.com/products/human-total-adiponectin-acrp30-quantikine-elisa-kit_drp300",
+    "protocolUrl": "https://resources.rndsystems.com/pdfs/datasheets/drp300.pdf",
+    "storage": "2-8°C (unopened)",
+    "kitSize": "96-well plate",
+    "applications": [
+      "metabolic and obesity research",
+      "adipokine quantification",
+      "serum/plasma biomarker measurement"
+    ],
+    "keyParameters": {
+      "input": "50 µL cell culture supernate or 10 µL serum/EDTA plasma/heparin plasma per well",
+      "time": "4.5 h assay",
+      "notes": "Sensitivity 0.891 ng/mL; assay range 3.9-250 ng/mL"
+    },
+    "sourceUrl": "https://www.rndsystems.com/products/human-total-adiponectin-acrp30-quantikine-elisa-kit_drp300",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number DRP300 present on fetched R&D Systems product page."
+  }
+]

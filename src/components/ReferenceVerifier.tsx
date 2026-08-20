@@ -7,6 +7,7 @@ const STATUS: Record<VerificationStatus | 'NONE', { label: string; cls: string; 
   VERIFIED: { label: 'Verified in registry', cls: 'bg-emerald-50 text-emerald-800 border-emerald-200', Icon: CheckCircle2 },
   MISMATCH: { label: 'Citation does not match the registry record', cls: 'bg-red-50 text-red-800 border-red-200', Icon: XCircle },
   NOT_FOUND: { label: 'Not found — may not exist', cls: 'bg-red-50 text-red-800 border-red-200', Icon: XCircle },
+  RETRACTED: { label: 'RETRACTED — paper withdrawn', cls: 'bg-red-100 text-red-900 border-red-300 font-bold', Icon: XCircle },
   UNCHECKED: { label: 'Registry unreachable — unverified', cls: 'bg-slate-50 text-slate-700 border-slate-200', Icon: HelpCircle },
   NONE: { label: 'Not yet verified', cls: 'bg-amber-50 text-amber-800 border-amber-200', Icon: AlertTriangle },
 };

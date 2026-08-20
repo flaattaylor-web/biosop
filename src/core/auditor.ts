@@ -443,6 +443,12 @@ function auditCitations(sop: SopDocument): AuditDimension {
     const status = (r as { verificationStatus?: string }).verificationStatus;
     if (status === 'VERIFIED') {
       verified++;
+    } else if (status === 'RETRACTED') {
+      findings.push({
+        severity: 'ERROR', code: 'CITATION_RETRACTED',
+        message: `Citation points at a retracted paper: "${r.citation.slice(0, 100)}"`,
+        remedy: 'The registry record exists and the title matches, which is why this passes a naive check. The paper has been withdrawn. Remove the citation and re-examine whether the step it supports is still justified.',
+      });
     } else if (status === 'MISMATCH') {
       findings.push({
         severity: 'ERROR', code: 'CITATION_TEXT_MISMATCH',

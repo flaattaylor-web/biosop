@@ -1,0 +1,1061 @@
+[
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "ToxinEraser Endotoxin Removal Kit",
+    "catalogNumbers": [
+      "L00338"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Polymyxin B affinity endotoxin removal column",
+    "description": "Endotoxin removal resin using a modified polymyxin B (PMB) affinity matrix for highly efficient endotoxin removal; can reduce endotoxin levels to less than 0.1 EU/ml with repeat use.",
+    "productUrl": "https://www.genscript.com/kit/L00338-ToxinEraser_Endotoxin_Removal_Kit.html",
+    "storage": "2°C to 8°C (do not freeze)",
+    "kitSize": "1 kit, 1.5 ml pre-packed column",
+    "applications": [
+      "recombinant protein endotoxin removal",
+      "antibody preparation",
+      "peptide and polysaccharide clean-up"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity >2,000,000 EU/ml settled resin; reusable up to five times with regeneration"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00338-ToxinEraser_Endotoxin_Removal_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00338 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "ToxinSensor Chromogenic LAL Endotoxin Assay Kit",
+    "catalogNumbers": [
+      "L00350",
+      "L00350C"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Chromogenic LAL endotoxin quantitation assay",
+    "description": "In vitro endpoint endotoxin detection system for human and animal parenteral drugs, biological products, and medical devices, with a measurable endotoxin concentration range from 0.01 to 1 EU/mL.",
+    "productUrl": "https://www.genscript.com/kit/L00350-ToxinSensor_Chromogenic_LAL_Endotoxin_Assay_Kit.html",
+    "storage": "Room temperature, cool dark place (do not freeze)",
+    "kitSize": "32 assays (L00350) / 16 assays (L00350C)",
+    "applications": [
+      "endotoxin testing",
+      "pharmaceutical QC",
+      "medical device testing"
+    ],
+    "keyParameters": {
+      "notes": "Range 0.01-1 EU/mL; USP and Chinese Pharmacopoeia bacterial endotoxin test methods"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00350-ToxinSensor_Chromogenic_LAL_Endotoxin_Assay_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00350/L00350C present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenBuilder Ultra Cloning Kit",
+    "catalogNumbers": [
+      "L01150"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Seamless multi-fragment DNA assembly",
+    "description": "One-step assembly of multiple DNA fragments into linearized vectors using a proprietary enzyme mix that recognizes 15-40 bp overlaps; supports seamless cloning of up to 10 fragments simultaneously without restriction sites or helper sequences.",
+    "productUrl": "https://www.genscript.com/kit/L01150-GenBuilder_Ultra_Cloning_Kit.html",
+    "storage": "-20°C",
+    "kitSize": "10 reactions / 50 reactions",
+    "applications": [
+      "seamless cloning",
+      "multi-fragment DNA assembly",
+      "plasmid construction"
+    ],
+    "keyParameters": {
+      "notes": "15-40 bp overlaps; up to 10 fragments; compatible with ssDNA and dsDNA fragments"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L01150-GenBuilder_Ultra_Cloning_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L01150 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GST Fusion Protein Purification Kit",
+    "catalogNumbers": [
+      "L00207"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Glutathione affinity purification kit",
+    "description": "Kit for one-step purification of recombinant glutathione S-transferase (GST) fusion proteins; includes five disposable columns and five 0.154 g samples of glutathione.",
+    "productUrl": "https://www.genscript.com/kit/L00207-GST_Fusion_Protein_Purification_Kit.html",
+    "storage": "2-8°C (do not freeze)",
+    "kitSize": "1 kit containing 10 ml Glutathione Resin",
+    "applications": [
+      "GST fusion protein purification",
+      "E. coli, insect and mammalian expression"
+    ],
+    "sourceUrl": "https://www.genscript.com/kit/L00207-GST_Fusion_Protein_Purification_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00207 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "His Tag ELISA Detection Kit",
+    "catalogNumbers": [
+      "L00436"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Competition ELISA for His-tagged proteins",
+    "description": "Rapid competition ELISA for quick identification of His-tagged proteins in samples and high throughput screening of stable cell lines expressing His-tagged proteins.",
+    "productUrl": "https://www.genscript.com/kit/L00436-His_Tag_ELISA_Detection_Kit.html",
+    "storage": "2-8°C (do not freeze)",
+    "kitSize": "1 kit, 8 wells x 12 strips",
+    "applications": [
+      "His-tag expression monitoring",
+      "stable cell line screening"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates or supernatants from mammalian, yeast and bacterial cells",
+      "time": "~1.5 hours",
+      "notes": "Sensitivity 1 ng/ml; detection range 1-729 ng/ml"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00436-His_Tag_ELISA_Detection_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00436 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "High Affinity Ni-Charged Resin",
+    "catalogNumbers": [
+      "L00223",
+      "L00223-10",
+      "L00223-25",
+      "L00223-500"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC resin for His-tagged protein purification",
+    "description": "Agarose-based chromatography medium for purifying polyhistidine-tagged proteins, using a chelating agent that binds Ni2+ by four coordination sites, giving low metal leakage and high binding capacity.",
+    "productUrl": "https://www.genscript.com/product/L00223-High_Affinity_Ni_Charged_Resin.html",
+    "storage": "2-8°C (do not freeze), 50% slurry in PBS with 20% ethanol",
+    "kitSize": "10 ml (L00223-10) / 25 ml (L00223-25) / 500 ml (L00223-500) settled resin",
+    "applications": [
+      "His-tagged protein purification"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity >=20 mg 6xHis-tagged protein (27 kDa) per ml settled resin"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00223-High_Affinity_Ni_Charged_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00223/L00223-10/L00223-25/L00223-500 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "High Affinity Ni-Charged Resin FF",
+    "catalogNumbers": [
+      "L00666"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "High-capacity IMAC resin for His-tagged proteins",
+    "description": "6% highly cross-linked agarose medium with covalently coupled chelating agent that binds Ni2+ through four coordination sites, for high-affinity purification of polyhistidine-tagged recombinant proteins with low nickel leakage.",
+    "productUrl": "https://www.genscript.com/product/L00666-High_Affinity_Ni_Charged_Resin_FF.html",
+    "storage": "2-8°C in 20% ethanol (do not freeze)",
+    "kitSize": "5 ml / 25 ml / 100 ml settled resin",
+    "applications": [
+      "His-tagged protein purification",
+      "gravity column and automated systems"
+    ],
+    "keyParameters": {
+      "notes": "Dynamic binding capacity >=50 mg His-tagged protein per ml settled resin"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00666-High_Affinity_Ni_Charged_Resin_FF.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00666 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "AmMag Ni Magnetic Beads",
+    "catalogNumbers": [
+      "L00776-4"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Magnetic IMAC beads for His-tagged proteins",
+    "description": "Magnetic beads for purification and screening of histidine-tagged proteins, highly resistant to EDTA and DTT so that protein binding occurs even when chelators are present.",
+    "productUrl": "https://www.genscript.com/product/L00776-AmMag_Ni_Magnetic_Beads.html",
+    "storage": "2-8°C in 20% ethanol (do not freeze)",
+    "kitSize": "4 ml (1 ml settled beads) / 40 ml (10 ml) / 400 ml (100 ml)",
+    "applications": [
+      "His-tagged protein purification",
+      "expression screening",
+      "automated purification"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity ~20 mg His-tagged protein per ml settled beads"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00776-AmMag_Ni_Magnetic_Beads.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00776-4 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Protein A Resin",
+    "catalogNumbers": [
+      "L00210"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein A affinity resin for antibody purification",
+    "description": "Affinity chromatography medium for easy, one-step purification of classes, subclasses and fragments of immunoglobulins from biological fluids and from cell culture media; also used for immunoprecipitation.",
+    "productUrl": "https://www.genscript.com/product/L00210-Protein_A_Resin.html",
+    "storage": "2-8°C in 20% ethanol (do not freeze)",
+    "kitSize": "5 ml settled resin (10 ml 50% slurry)",
+    "applications": [
+      "antibody purification",
+      "immunoprecipitation"
+    ],
+    "keyParameters": {
+      "notes": "Static binding capacity >20 mg human IgG/ml settled resin; recombinant protein A with 5 IgG binding sites"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00210-Protein_A_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00210 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Protein G Resin",
+    "catalogNumbers": [
+      "L00209"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein G affinity resin for antibody purification",
+    "description": "Affinity chromatography medium designed for one-step purification of classes, subclasses and fragments of immunoglobulins from biological fluids and from cell culture media.",
+    "productUrl": "https://www.genscript.com/product/L00209-Protein_G_Resin.html",
+    "storage": "2-8°C in 1x PBS containing 20% ethanol (do not freeze)",
+    "kitSize": "5 ml settled resin (total 10 ml); bulk available",
+    "applications": [
+      "antibody purification",
+      "immunoprecipitation"
+    ],
+    "keyParameters": {
+      "notes": "Static binding capacity >20 mg human IgG/ml settled resin; recombinant Streptococcal protein G lacking albumin-binding sites"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00209-Protein_G_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00209 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Protein L Resin",
+    "catalogNumbers": [
+      "L00239"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein L affinity resin for kappa light chain capture",
+    "description": "Affinity chromatography medium for easy, one-step purification of classes, subclasses and fragments of immunoglobulins from biological fluids and from cell culture media, using highly purified protein L from Peptostreptococcus magnus.",
+    "productUrl": "https://www.genscript.com/product/L00239-Protein_L_Resin.html",
+    "storage": "2-8°C in 1x PBS containing 20% ethanol (do not freeze)",
+    "kitSize": "2.5 ml settled resin (total 5 ml); bulk available",
+    "applications": [
+      "antibody and antibody fragment purification",
+      "scFv and Fab purification"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity >=15 mg human IgG/ml settled resin; 4% agarose, 90 um average particle size"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00239-Protein_L_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00239 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Glutathione Resin",
+    "catalogNumbers": [
+      "L00206"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Glutathione affinity resin for GST fusion proteins",
+    "description": "Affinity chromatography medium for easy, one-step purification of recombinant glutathione S-transferase (GST) fusion proteins expressed in E. coli, insect cells, and mammalian cells.",
+    "productUrl": "https://www.genscript.com/product/L00206-Glutathione_Resin.html",
+    "storage": "2-8°C in 1x PBS containing 20% ethanol (do not freeze)",
+    "kitSize": "10 ml settled resin (total 20 ml)",
+    "applications": [
+      "GST fusion protein purification"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity 35-45 mg GST-fusion protein (26 kDa) per ml settled resin"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00206-Glutathione_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00206 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Streptavidin Resin",
+    "catalogNumbers": [
+      "L00353"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Streptavidin affinity resin",
+    "description": "Affinity chromatography medium for one-step purification of biotinylated peptides, antibodies, lectins and similar molecules; recombinant streptavidin covalently coupled to 4% highly cross-linked agarose.",
+    "productUrl": "https://www.genscript.com/product/L00353-Streptavidin_Resin.html",
+    "storage": "2-8°C in 1x PBS containing 20% ethanol (do not freeze)",
+    "kitSize": "5 ml settled resin (total 10 ml); bulk available",
+    "applications": [
+      "biotinylated molecule purification",
+      "pull-down assays"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity >120 nmol D-Biotin per ml settled resin"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00353-Streptavidin_Resin.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00353 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Ni Resin FF",
+    "catalogNumbers": [
+      "L00465-5"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC resin for His-tagged protein purification",
+    "description": "6% highly cross-linked agarose medium coupled to a chelating agent for high-affinity purification of polyhistidine-tagged recombinant proteins, with low nickel leakage and high stability.",
+    "productUrl": "https://www.genscript.com/product/L00465-Ni_Resin_FF.html",
+    "storage": "2-8°C in 1x PBS containing 20% ethanol (do not freeze)",
+    "kitSize": "5 ml settled resin (total 10 ml) / 25 ml (total 50 ml); bulk available",
+    "applications": [
+      "His-tagged protein purification",
+      "gravity column and automated systems"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity >40 mg His-tagged protein per ml settled resin"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00465-Ni_Resin_FF.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00465-5 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Ni-charged MagBeads",
+    "catalogNumbers": [
+      "L00295"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Magnetic IMAC beads for His-tagged proteins",
+    "description": "Superparamagnetic beads (~40 um) with metal-chelating agents covalently bound to their surfaces and pre-charged with nickel, for quick and efficient small-scale purification of polyhistidine-tagged proteins under native or denaturing conditions.",
+    "productUrl": "https://www.genscript.com/product/L00295-Ni_charged_MagBeads.html",
+    "storage": "2-8°C (do not freeze; keep beads in liquid suspension)",
+    "kitSize": "8 ml (2 ml settled beads)",
+    "applications": [
+      "small-scale His-tag purification",
+      "expression screening"
+    ],
+    "keyParameters": {
+      "notes": "Binding capacity 40 mg 6xHis-tagged protein per ml settled beads"
+    },
+    "sourceUrl": "https://www.genscript.com/product/L00295-Ni_charged_MagBeads.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00295 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCrispr sgRNA Screening Kit",
+    "catalogNumbers": [
+      "L00689",
+      "L00689-30"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "In vitro sgRNA efficiency screening kit",
+    "description": "Kit for assessing sgRNA efficiency in vitro before cell transduction, allowing rapid evaluation of multiple guide RNA candidates to identify the highly effective CRISPR sgRNA.",
+    "productUrl": "https://www.genscript.com/kit/L00689-GenCrispr_sgRNA_Screening_Kit.html",
+    "storage": "-20°C (positive control sgRNA at -80°C)",
+    "kitSize": "30 reactions / 100 reactions",
+    "applications": [
+      "sgRNA screening",
+      "CRISPR/Cas9 in vitro cleavage"
+    ],
+    "keyParameters": {
+      "notes": "Contains GenCrispr Cas9 Nuclease, 10X reaction buffer, positive control sgRNA and substrate"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00689-GenCrispr_sgRNA_Screening_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00689/L00689-30 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR Ultra NLS-Cas9-Research",
+    "catalogNumbers": [
+      "Z03621"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Recombinant SpCas9 nuclease",
+    "description": "Recombinant Cas9 nuclease from Streptococcus pyogenes produced in E. coli with an N-terminal nuclear localization signal (NLS), for gene editing via guide RNA complexes.",
+    "productUrl": "https://www.genscript.com/product/Z03621-GenCRISPR_Ultra_NLS_Cas9.html",
+    "storage": "-20°C for up to 12 months; avoid repeated freeze-thaw",
+    "kitSize": "0.5 mg / 1 mg / 5 mg; bulk available",
+    "applications": [
+      "RNP genome editing",
+      "gRNA-dependent dsDNA cleavage"
+    ],
+    "keyParameters": {
+      "notes": "10 mg/mL in 25 mM Tris, 300 mM NaCl, 0.1 mM EDTA, 50% glycerol, pH 8.0"
+    },
+    "sourceUrl": "https://www.genscript.com/product/Z03621-GenCRISPR_Ultra_NLS_Cas9.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03621 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR Ultra eSpCas9-2NLS-Research",
+    "catalogNumbers": [
+      "Z03622"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "High-fidelity recombinant SpCas9 variant",
+    "description": "Mutant Cas9 nuclease variant expressed in E. coli with double-ended nuclear localization signals that delivers higher fidelity and less off-target activity than wild-type SpCas9 nuclease.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03622-GenCRISPR_Ultra_eSpCas9_2NLS_Research.html",
+    "storage": "-20°C for 12 months; avoid repeated freeze-thaw",
+    "kitSize": "0.5 mg / 1 mg / 5 mg; bulk available",
+    "applications": [
+      "high-fidelity genome editing",
+      "RNP delivery"
+    ],
+    "keyParameters": {
+      "notes": "10 mg/mL in 25 mM Tris, 300 mM NaCl, 0.1 mM EDTA, 50% glycerol, pH 8.0"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03622-GenCRISPR_Ultra_eSpCas9_2NLS_Research.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03622 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR NLS-wtSpCas9, his-tag",
+    "catalogNumbers": [
+      "RC00001"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Codon-optimized wild-type SpCas9 nuclease",
+    "description": "Codon-optimized Cas9 nuclease from Streptococcus pyogenes with a nuclear localization signal and histidine tag, produced in E. coli; recognizes NGG PAM sequences and cuts double-stranded DNA.",
+    "productUrl": "https://www.genscript.com/enzyme/RC00001-GenCRISPR_NLS_wtSpCas9_his_tag.html",
+    "storage": "-20±5°C for up to 18 months; avoid repeated freeze-thaw",
+    "kitSize": "0.1 mg / 1 mg / 3 mg",
+    "applications": [
+      "genome editing in T cells and stem cells",
+      "RNP delivery"
+    ],
+    "keyParameters": {
+      "notes": "10 mg/ml; 163 kDa; 30 mM Tris-HCl, 0.3 M NaCl, 50% glycerol, 0.1 mM EDTA, pH 7.4"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/RC00001-GenCRISPR_NLS_wtSpCas9_his_tag.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number RC00001 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR Cas12a (Cpf1) Nuclease",
+    "catalogNumbers": [
+      "Z03502"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Recombinant Cas12a/Cpf1 nuclease",
+    "description": "Recombinant CRISPR/Cpf1 nuclease enabling crRNA-dependent double-stranded DNA cleavage; expressed in E. coli with C-terminal NLS and His-tag, derived from Acidaminococcus sp. strain BV3L6.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03502-GenCRISPR_Cas12a_Cpf1_Nuclease.html",
+    "storage": "-20°C for 18 months; avoid repeated freeze-thaw",
+    "kitSize": "50 ug / 100 ug / 500 ug / 1 mg",
+    "applications": [
+      "genome editing",
+      "crRNA-guided DNA cleavage"
+    ],
+    "keyParameters": {
+      "notes": "4 mg/mL; TTTV PAM"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03502-GenCRISPR_Cas12a_Cpf1_Nuclease.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03502 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR SaCas9 2NLS Nuclease",
+    "catalogNumbers": [
+      "Z03699"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Recombinant SaCas9 nuclease",
+    "description": "Tag-free nuclease from Staphylococcus aureus with nuclear localization signals at both N and C termini, enabling gRNA-dependent double-stranded DNA cleavage with improved cellular delivery.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03699-GenCRISPR_SaCas9_2NLS_Nuclease.html",
+    "storage": "-20°C for 12 months; avoid repeated freeze-thaw",
+    "kitSize": "0.1 mg / 0.5 mg / 1 mg; bulk available",
+    "applications": [
+      "genome editing",
+      "AAV-compatible editing",
+      "RNP delivery"
+    ],
+    "keyParameters": {
+      "notes": "4 mg/ml; ~130 kDa; NNGRRT PAM; purity >=90%, bioactivity >=90%"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03699-GenCRISPR_SaCas9_2NLS_Nuclease.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03699 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCrispr NLS-Cas9-D10A Nickase",
+    "catalogNumbers": [
+      "Z03390"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Cas9 D10A nickase",
+    "description": "Modified Cas9 with one deactivated catalytic domain that can only cut the single DNA strand complementary to the guide RNA; paired guide RNAs create double-strand breaks with reduced off-target effects.",
+    "productUrl": "https://www.genscript.com/protein/Z03390-GenCrispr_NLS_Cas9_D10A_Nickase.html",
+    "storage": "-20°C in 10 mM Tris, 300 mM NaCl, 0.1 mM EDTA, 1 mM DTT, 50% glycerol, pH 7.4",
+    "kitSize": "10 ug and 50 ug at 1 mg/ml; 100 ug at 4 mg/ml; bulk available",
+    "applications": [
+      "paired-nickase genome editing",
+      "guide RNA screening"
+    ],
+    "keyParameters": {
+      "notes": "Single-strand nicking; reduced off-target vs wild-type Cas9"
+    },
+    "sourceUrl": "https://www.genscript.com/protein/Z03390-GenCrispr_NLS_Cas9_D10A_Nickase.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03390 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "GenCRISPR Cas13a (C2c2) Nuclease",
+    "catalogNumbers": [
+      "Z03486"
+    ],
+    "category": "CRISPR & Genome Editing",
+    "subcategory": "Recombinant Cas13a RNA-targeting nuclease",
+    "description": "RNA-guided, RNA-targeting Type VI CRISPR enzyme from Leptotrichia wadei with two HEPN domains, showing sequence-specific RNA cleavage followed by collateral ribonuclease activity.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03486-GenCRISPR_Cas13a_C2c2_Nuclease.html",
+    "storage": "-20°C for 12 months; avoid repeated freeze-thaw",
+    "kitSize": "100 ug / 500 ug / 1 mg",
+    "applications": [
+      "RNA detection assays",
+      "crRNA-dependent RNA cleavage",
+      "guide RNA processing"
+    ],
+    "keyParameters": {
+      "notes": "4 mg/ml; purity >=95%; activity >=85%; endotoxin <0.2 EU/ug"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03486-GenCRISPR_Cas13a_C2c2_Nuclease.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03486 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "TEV Protease, His",
+    "catalogNumbers": [
+      "Z03030"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Site-specific tag-cleavage protease",
+    "description": "Highly site-specific cysteine protease from Tobacco Etch Virus with an N-terminal His tag; recognizes ENLYFQ(G/S) and cleaves between the Gln and Gly/Ser residues, commonly used to remove affinity tags from fusion proteins.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03030-TEV_Protease_His.html",
+    "storage": "-20°C for up to 1 year; avoid freeze-thaw",
+    "kitSize": "1,000 IU / 10,000 IU",
+    "applications": [
+      "affinity tag removal",
+      "fusion protein cleavage"
+    ],
+    "keyParameters": {
+      "notes": "10 IU/ul; 28.4 kDa; purity >95%; optimal at 30°C, active down to 4°C"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03030-TEV_Protease_His.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03030 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "SUMO Protease Animal-Free, His",
+    "catalogNumbers": [
+      "Z03691"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "SUMO-specific tag-cleavage protease",
+    "description": "Recombinant SUMO protease from Saccharomyces cerevisiae expressed in E. coli with a C-terminal His tag, produced by animal-free processes; specifically cleaves SUMO fusion proteins.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03691-SUMO_Protease_Animal_Free_His.html",
+    "storage": "-20°C; avoid repeated freeze-thaw",
+    "kitSize": "250 U / 1,000 U / 5,000 U",
+    "applications": [
+      "SUMO tag removal",
+      "drug and vaccine development and manufacturing"
+    ],
+    "keyParameters": {
+      "notes": "10 U/ul; ~27 kDa; purity >=95%; endotoxin <0.2 EU/ug"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03691-SUMO_Protease_Animal_Free_His.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03691 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Enterokinase (EK), His, Lyophilized, Bovine",
+    "catalogNumbers": [
+      "Z03376"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Enterokinase tag-cleavage protease",
+    "description": "Recombinant bovine enterokinase that cleaves after a lysine preceded by four aspartic acids (Asp-Asp-Asp-Asp-Lys); the His-tagged form can be removed from the digestion system by Ni2+ affinity chromatography.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03376-Enterokinase_EK_His_Lyophilized_Bovine.html",
+    "storage": "-20°C lyophilised, 1 year; avoid freeze-thaw",
+    "kitSize": "10 ug / 50 ug / 1 mg; bulk available",
+    "applications": [
+      "fusion tag removal"
+    ],
+    "keyParameters": {
+      "notes": "100 IU/ug; 40 kDa; purity >95%; endotoxin <0.2 EU/ug"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03376-Enterokinase_EK_His_Lyophilized_Bovine.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03376 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "PreScission Protease",
+    "catalogNumbers": [
+      "Z02799"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GST-3C fusion tag-cleavage protease",
+    "description": "Fusion protein of glutathione S-transferase (GST) and human rhinovirus type 14 3C protease that recognizes Leu-Glu-Val-Leu-Phe-Gln/Gly-Pro and cleaves between the Gln and Gly-Pro residues.",
+    "productUrl": "https://www.genscript.com/enzyme/Z02799-PreScission_Protease.html",
+    "storage": "-20°C or below, stable 6 months; avoid repeated freeze-thaw",
+    "kitSize": "100 U / 250 U / 5,000 U",
+    "applications": [
+      "GST fusion protein cleavage",
+      "tag removal"
+    ],
+    "keyParameters": {
+      "notes": "1.4 U/ul; 1 U cleaves 100 ug fusion protein to 90% completion in 16 h at 5°C"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z02799-PreScission_Protease.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z02799 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Benz-Neburase, His",
+    "catalogNumbers": [
+      "Z03626",
+      "Z03626-10"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Serratia marcescens endonuclease",
+    "description": "Endonuclease from Serratia marcescens that can be used to remove all forms of DNA and RNA, including double stranded, single stranded, linearized, and circular forms.",
+    "productUrl": "https://www.genscript.com/enzyme/Z03626-Benz_Neburase_His.html",
+    "storage": "-20°C for 24 months (2 weeks at 4°C); avoid repeated freeze-thaw",
+    "kitSize": "10 kU / 100 kU / 500 kU",
+    "applications": [
+      "nucleic acid removal in downstream purification",
+      "viral vector and vaccine manufacture"
+    ],
+    "keyParameters": {
+      "notes": ">=250 U/ul; purity >=95%; endotoxin <=0.1 EU/kU; requires 1-2 mM Mg2+; active pH 6-10, 35-44°C"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/Z03626-Benz_Neburase_His.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number Z03626/Z03626-10 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "AmMag Quatro Low-Endotoxin Plasmid Purification Mini Kit",
+    "catalogNumbers": [
+      "L01037",
+      "L01037-48"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automated low-endotoxin plasmid miniprep",
+    "description": "Kit using GenScript's exclusive endotoxin-removal technology to produce high-quality plasmid DNA from E. coli with minimal endotoxin levels, for use on the AmMag Quatro 1100 automated system.",
+    "productUrl": "https://www.genscript.com/kit/L01037-AmMag_Quatro_Low_Endotoxin_Plasmid_Purification_Mini_Kit.html",
+    "storage": "Room temperature (15-25°C)",
+    "kitSize": "48 preps",
+    "applications": [
+      "transfection-grade plasmid prep",
+      "automated plasmid purification"
+    ],
+    "sourceUrl": "https://www.genscript.com/kit/L01037-AmMag_Quatro_Low_Endotoxin_Plasmid_Purification_Mini_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L01037/L01037-48 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "AmMag Quatro Plasmid Purification Kit, Maxi",
+    "catalogNumbers": [
+      "L00882",
+      "L00882-24"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Automated transfection-grade plasmid maxiprep",
+    "description": "Automated solution for large-scale, high-quality, transfection-grade plasmid purification from E. coli cultures, using a system controller that provides simultaneous operation of up to 4 independent purification modules with pre-filled consumables.",
+    "productUrl": "https://www.genscript.com/kit/L00882-AmMag_Quatro_Plasmid_Purification_Kit_Maxi.html",
+    "storage": "15-25°C",
+    "kitSize": "1 kit, Maxi 24 preps",
+    "applications": [
+      "transfection",
+      "sequencing",
+      "cloning and transformation"
+    ],
+    "sourceUrl": "https://www.genscript.com/kit/L00882-AmMag_Quatro_Plasmid_Purification_Kit_Maxi.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00882/L00882-24 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Lentivirus Titer p24 ELISA Kit",
+    "catalogNumbers": [
+      "L00938"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA for lentiviral p24 titre",
+    "description": "Sandwich ELISA system to quickly determine the titer of any HIV-1-based lentiviral supernatant.",
+    "productUrl": "https://www.genscript.com/kit/L00938-Lentivirus_Titer_p24_ELISA_Kit.html",
+    "storage": "2-8°C, 12 months unopened",
+    "kitSize": "96 tests",
+    "applications": [
+      "lentiviral vector titration",
+      "viral vector QC"
+    ],
+    "keyParameters": {
+      "notes": "LoD 29.42 pg/mL; LoQ 39.03 pg/mL; linearity 31.25-2000 pg/mL"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00938-Lentivirus_Titer_p24_ELISA_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00938 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "AAV2 Titer Capsid ELISA Kit",
+    "catalogNumbers": [
+      "L00942"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA for AAV2 capsid titre",
+    "description": "Sandwich ELISA that quantitatively measures AAV2 titer in supernatant for gene therapy applications, making viral titration easy, accurate and reproducible.",
+    "productUrl": "https://www.genscript.com/kit/L00942-AAV2_Titer_Capsid_ELISA_Kit.html",
+    "storage": "2-8°C, 12 months unopened",
+    "kitSize": "96 tests",
+    "applications": [
+      "AAV vector titration",
+      "gene therapy QC"
+    ],
+    "keyParameters": {
+      "time": "2 h 25 min at 37°C",
+      "notes": "LoD 2.08e7 capsids/mL; linear range 4.8e7-2.5e9 capsids/mL"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00942-AAV2_Titer_Capsid_ELISA_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00942 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Benz-Neburase Nuclease ELISA Kit",
+    "catalogNumbers": [
+      "L00886"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Residual endonuclease impurity ELISA",
+    "description": "Sandwich ELISA to detect and quantify residual endonuclease impurity in manufacturing processes for viral vectors and vaccines, targeting Benz-Neburase Nuclease and related Serratia marcescens endonucleases.",
+    "productUrl": "https://www.genscript.com/kit/L00886-Benz_Neburase_Nuclease_ELISA_Kit.html",
+    "storage": "2-8°C, 12 months unopened (do not freeze)",
+    "kitSize": "96 tests (8 wells x 12 strips)",
+    "applications": [
+      "residual nuclease testing",
+      "gene and cell therapy release testing"
+    ],
+    "keyParameters": {
+      "notes": "Sensitivity 8.40 pg/ml; linearity 15.63-1000 pg/ml"
+    },
+    "sourceUrl": "https://www.genscript.com/kit/L00886-Benz_Neburase_Nuclease_ELISA_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00886 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Hot Start Taq DNA Polymerase",
+    "catalogNumbers": [
+      "E00049"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Antibody-mediated hot-start Taq polymerase",
+    "description": "Recombinant thermostable Taq polymerase combined with a thermolabile neutralizing antibody; polymerase activity is blocked until the reaction reaches 95°C during the initial denaturing step, when activity is fully restored.",
+    "productUrl": "https://www.genscript.com/enzyme/E00049-Hot_Start_Taq_DNA_Polymerase.html",
+    "storage": "-20°C",
+    "kitSize": "250 U / 1000 U",
+    "applications": [
+      "high-specificity PCR",
+      "colony PCR",
+      "room-temperature reaction setup"
+    ],
+    "keyParameters": {
+      "notes": "Reduces primer-dimer formation and increases PCR product yield"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/E00049-Hot_Start_Taq_DNA_Polymerase.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00049 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "2X Taq Master Mix",
+    "catalogNumbers": [
+      "E00019"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Ready-to-use 2X PCR master mix",
+    "description": "Premixed 2X concentrated solution containing Taq DNA Polymerase, reaction buffer, MgCl2 and dNTPs, including all components for PCR except DNA template and primers; amplifies fragments up to 8 kb from lambda DNA.",
+    "productUrl": "https://www.genscript.com/enzyme/E00019-2X_Taq_Master_Mix.html",
+    "storage": "-20°C",
+    "kitSize": "100 reactions (2.5 mL)",
+    "applications": [
+      "routine PCR"
+    ],
+    "keyParameters": {
+      "notes": "0.1 U/ul Taq, 3 mM MgCl2, 0.4 mM dNTPs; 25 ul mix per 50 ul reaction"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/E00019-2X_Taq_Master_Mix.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00019 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Taq DNA Polymerase",
+    "catalogNumbers": [
+      "E00007"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Thermostable DNA polymerase",
+    "description": "Thermostable DNA polymerase from an E. coli strain carrying the Taq gene; the most common polymerase used for PCR reactions, exhibiting terminal transferase activity that adds adenosine to 3' ends.",
+    "productUrl": "https://www.genscript.com/enzyme/E00007-Taq_DNA_Polymerase.html",
+    "storage": "-20°C",
+    "kitSize": "1,000 U / 50,000 U",
+    "applications": [
+      "PCR",
+      "3' A-tailing of blunt ends",
+      "primer extension",
+      "DNA sequencing"
+    ],
+    "sourceUrl": "https://www.genscript.com/enzyme/E00007-Taq_DNA_Polymerase.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00007 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "T7 RNA Polymerase",
+    "catalogNumbers": [
+      "E00066",
+      "E00066-5"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "DNA-dependent RNA polymerase",
+    "description": "DNA-dependent RNA polymerase with strict specificity for the T7 phage promoter, used for synthesizing RNA transcripts from DNA templates in the 5'-3' direction.",
+    "productUrl": "https://www.genscript.com/enzyme/E00066-T7_RNA_Polymerase.html",
+    "storage": "-20°C, stable 12 months; avoid repeated freeze-thaw",
+    "kitSize": "5 kU / 10 kU; bulk available",
+    "applications": [
+      "in vitro transcription",
+      "RNA probe synthesis",
+      "siRNA precursor synthesis",
+      "capped mRNA synthesis"
+    ],
+    "keyParameters": {
+      "notes": ">=50 U/ul; purity >=95%; endotoxin <=0.1 EU/ug"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/E00066-T7_RNA_Polymerase.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00066/E00066-5 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "DNase I",
+    "catalogNumbers": [
+      "E00053"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "Recombinant deoxyribonuclease I",
+    "description": "Recombinant bovine DNase I expressed in yeast that cleaves single-stranded DNA, double-stranded DNA and DNA-RNA hybrids, producing 5'-phosphate-terminated polynucleotides with a free 3' hydroxyl group.",
+    "productUrl": "https://www.genscript.com/enzyme/E00053-DNase_I.html",
+    "storage": "-20°C, stable 12 months; avoid repeated freeze-thaw",
+    "kitSize": "1,000 U / 5,000 U / 10,000 U",
+    "applications": [
+      "DNA template digestion after in vitro transcription",
+      "DNA-free RNA preparation",
+      "DNase I footprinting",
+      "nick translation"
+    ],
+    "keyParameters": {
+      "notes": "Ca2+ dependent, enhanced by Mg2+ or Mn2+"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/E00053-DNase_I.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00053 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "M-MuLV Reverse Transcriptase",
+    "catalogNumbers": [
+      "E00050"
+    ],
+    "category": "Reverse Transcription",
+    "subcategory": "Recombinant M-MLV reverse transcriptase",
+    "description": "Reverse transcriptase derived from a cloned region of the pol gene of MMLV with reduced RNase H activity, synthesising complementary cDNA strands from RNA templates.",
+    "productUrl": "https://www.genscript.com/enzyme/E00050-M_MuLV_Reverse_Transcriptase.html",
+    "storage": "-20°C, stable 12 months",
+    "kitSize": "10,000 U / 40,000 U",
+    "applications": [
+      "cDNA synthesis",
+      "RT-PCR",
+      "gene expression analysis"
+    ],
+    "keyParameters": {
+      "notes": "Purity >95%; 1 U transfers 1 nmol deoxynucleotide into acid-precipitable material in 10 min at 37°C"
+    },
+    "sourceUrl": "https://www.genscript.com/enzyme/E00050-M_MuLV_Reverse_Transcriptase.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number E00050 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "pUC57 plasmid DNA",
+    "catalogNumbers": [
+      "SD1176"
+    ],
+    "category": "Cloning & DNA Assembly",
+    "subcategory": "Cloning vector plasmid DNA",
+    "description": "Commonly used E. coli cloning vector; the 2,710 bp plasmid is isolated from E. coli strain DH5-alpha by standard procedures and supplied lyophilised for reconstitution in ddH2O.",
+    "productUrl": "https://www.genscript.com/product/SD1176-pUC57_plasmid_DNA.html",
+    "storage": "-20°C in TE buffer (10 mM Tris-HCl, 1 mM EDTA, pH 7.5)",
+    "kitSize": "50 ug/vial",
+    "applications": [
+      "molecular cloning",
+      "gene synthesis subcloning"
+    ],
+    "keyParameters": {
+      "notes": "2,710 bp"
+    },
+    "sourceUrl": "https://www.genscript.com/product/SD1176-pUC57_plasmid_DNA.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number SD1176 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "eStain L1C Protein Staining Kit",
+    "catalogNumbers": [
+      "L00753"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Gel staining and destaining reagent kit",
+    "description": "Reagent kit for use with the eStain L1 protein staining device (L00657), enabling protein visualisation through staining and destaining.",
+    "productUrl": "https://www.genscript.com/kit/L00753-eStain_L1C_Protein_Staining_Kit.html",
+    "kitSize": "1 kit: 2 L staining solution, 2 L destaining solution, 50 filter papers",
+    "applications": [
+      "SDS-PAGE gel staining",
+      "protein visualisation"
+    ],
+    "sourceUrl": "https://www.genscript.com/kit/L00753-eStain_L1C_Protein_Staining_Kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number L00753 present on fetched product page."
+  },
+  {
+    "vendor": "GenScript",
+    "vendorShort": "GenScript",
+    "productName": "Broad Multi Color Pre-Stained Protein Standard",
+    "catalogNumbers": [
+      "M00624-250",
+      "M00624-1250"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Pre-stained protein molecular weight ladder",
+    "description": "Mixture of ten highly purified pre-stained proteins spanning 10-270 kDa with covalently coupled chromophores; the 30 kDa and 270 kDa bands are orange, 50 kDa is green and the remaining bands are blue.",
+    "productUrl": "https://www.genscript.com/product/M00624-Broad_Multi_Color_Pre_Stained_Protein_Standard.html",
+    "storage": "-20°C for 24 months (4°C for 3 months); avoid repeated freeze-thaw",
+    "kitSize": "250 ul (M00624-250) / 1250 ul (M00624-1250)",
+    "applications": [
+      "SDS-PAGE migration monitoring",
+      "protein size estimation",
+      "Western blot transfer verification"
+    ],
+    "keyParameters": {
+      "notes": "10-270 kDa range, ten pre-stained proteins"
+    },
+    "sourceUrl": "https://www.genscript.com/product/M00624-Broad_Multi_Color_Pre_Stained_Protein_Standard.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number M00624-250/M00624-1250 present on fetched product page."
+  }
+]

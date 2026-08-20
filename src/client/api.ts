@@ -171,7 +171,7 @@ export async function getAuditLog(entityId?: string) {
 
 // ---------------------------------------------------------------- literature
 
-export type VerificationStatus = 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'UNCHECKED';
+export type VerificationStatus = 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'RETRACTED' | 'UNCHECKED';
 export interface VerifiedReference {
   citation: string; doiOrUrl?: string;
   verification: { status: VerificationStatus; confidence: number; note: string; canonical?: string; resolved?: { title: string; doi?: string; pmid?: string; url?: string; year?: number } };

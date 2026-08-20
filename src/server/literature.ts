@@ -8,13 +8,29 @@ import { getEnv } from './env';
  *   MISMATCH   — the DOI exists but points at a DIFFERENT paper (a classic
  *                hallucination signature: real-looking DOI, wrong content)
  *   NOT_FOUND  — the registry was reachable and has no such record
+ *   RETRACTED  — the record exists and matches, and the paper has been withdrawn
  *   UNCHECKED  — the registry could not be reached; we make no claim
  *
  * "NOT_FOUND" and "UNCHECKED" are deliberately distinct. Never report a paper as
  * non-existent because of a network error.
+ *
+ * RETRACTED exists because a title match is not the same as a sound citation. A retracted paper
+ * resolves cleanly, matches its own title exactly, and scores VERIFIED under every check above.
+ * Crossref carries the withdrawal in `updated-by`, so there is no excuse for reporting a retracted
+ * paper as verified and every reason not to: a protocol built on one is wrong in a way the reader
+ * cannot see.
  */
 
-export type VerificationStatus = 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'UNCHECKED';
+export type VerificationStatus = 'VERIFIED' | 'MISMATCH' | 'NOT_FOUND' | 'RETRACTED' | 'UNCHECKED';
+
+/** A withdrawal notice attached to a record by Crossref's `updated-by`. */
+export interface RetractionNotice {
+  /** Crossref's own vocabulary: retraction, withdrawal, removal, expression_of_concern, correction. */
+  type: string;
+  label: string;
+  doi?: string;
+  date?: string;
+}
 
 export interface ResolvedRecord {
   doi?: string;
@@ -25,6 +41,8 @@ export interface ResolvedRecord {
   year?: number;
   url?: string;
   source: 'crossref' | 'pubmed';
+  /** Withdrawal notices, deduplicated. Empty or absent means Crossref reported none. */
+  updates?: RetractionNotice[];
 }
 
 export interface VerificationResult {
@@ -143,6 +161,42 @@ interface CrossrefWork {
   issued?: { 'date-parts'?: number[][] };
   URL?: string;
   type?: string;
+  'updated-by'?: { DOI?: string; type?: string; label?: string; source?: string; updated?: { 'date-parts'?: number[][] } }[];
+}
+
+/**
+ * Crossref lists the same withdrawal more than once when both the publisher and Retraction Watch
+ * deposit it, so notices are deduplicated on type + DOI before they reach the caller.
+ */
+function parseUpdates(w: CrossrefWork): RetractionNotice[] {
+  const seen = new Set<string>();
+  const out: RetractionNotice[] = [];
+  for (const u of w['updated-by'] || []) {
+    const type = String(u.type || '').toLowerCase();
+    if (!type) continue;
+    const key = `${type}|${(u.DOI || '').toLowerCase()}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const dp = u.updated?.['date-parts']?.[0];
+    out.push({
+      type,
+      label: u.label || type,
+      doi: u.DOI,
+      date: Array.isArray(dp) && dp.length ? dp.map((n) => String(n).padStart(2, '0')).join('-') : undefined,
+    });
+  }
+  return out;
+}
+
+/** Withdrawals that invalidate the paper. A correction does not; an expression of concern warns. */
+const WITHDRAWAL_TYPES = new Set(['retraction', 'withdrawal', 'removal']);
+
+export function withdrawalOf(rec: ResolvedRecord | null | undefined): RetractionNotice | null {
+  return (rec?.updates || []).find((u) => WITHDRAWAL_TYPES.has(u.type)) || null;
+}
+
+export function concernOf(rec: ResolvedRecord | null | undefined): RetractionNotice | null {
+  return (rec?.updates || []).find((u) => u.type === 'expression_of_concern') || null;
 }
 
 function crossrefToRecord(w: CrossrefWork): ResolvedRecord {
@@ -155,6 +209,7 @@ function crossrefToRecord(w: CrossrefWork): ResolvedRecord {
     year: typeof year === 'number' ? year : undefined,
     url: w.URL || (w.DOI ? `https://doi.org/${w.DOI}` : undefined),
     source: 'crossref',
+    updates: parseUpdates(w),
   };
 }
 
@@ -300,6 +355,27 @@ async function searchByTitle(title: string): Promise<{ best: { rec: ResolvedReco
   return { best, reachable };
 }
 
+/**
+ * A withdrawal outranks a title match. Applied at every point where a record would otherwise be
+ * reported VERIFIED, including the title-search fallback.
+ */
+function withdrawalResult(rec: ResolvedRecord, sim: number, via: string): VerificationResult | null {
+  const w = withdrawalOf(rec);
+  if (!w) return null;
+  const when = w.date ? ` on ${w.date}` : '';
+  const notice = w.doi ? ` The notice is at DOI ${w.doi}.` : '';
+  return {
+    status: 'RETRACTED', confidence: sim, resolved: rec, canonical: formatCanonical(rec),
+    note: `${via}, but this paper was ${w.label.toLowerCase()}ed${when}.${notice} A retracted paper is not a valid basis for a protocol step. Replace the citation, and check whether the method it supports still stands.`,
+  };
+}
+
+/** An expression of concern does not invalidate the paper, so it rides along on the note. */
+function concernSuffix(rec: ResolvedRecord): string {
+  const c = concernOf(rec);
+  return c ? ` Note: Crossref carries an expression of concern on this paper${c.date ? ` (${c.date})` : ''}.` : '';
+}
+
 export async function verifyCitation(ref: { citation: string; doiOrUrl?: string }): Promise<VerificationResult> {
   const citation = String(ref.citation || '').trim();
   const doi = extractDoi(ref.doiOrUrl || '') || extractDoi(citation);
@@ -321,6 +397,8 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
       // is a different problem from a fabricated reference — and the fix is different too.
       const { best } = claimedTitle.length >= 10 ? await searchByTitle(claimedTitle) : { best: null };
       if (best && best.sim >= VERIFY_THRESHOLD) {
+        const withdrawn = withdrawalResult(best.rec, best.sim, `DOI ${doi} does not exist, but this paper does`);
+        if (withdrawn) return withdrawn;
         return {
           status: 'MISMATCH', confidence: best.sim, resolved: best.rec, canonical: formatCanonical(best.rec),
           note: `DOI ${doi} does not exist, but this paper does: "${best.rec.title}"${best.rec.doi ? ` at DOI ${best.rec.doi}` : ''}. The citation has the right paper and the wrong identifier.`,
@@ -335,8 +413,17 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
       };
     }
     const sim = titleSimilarity(claimedTitle, rec.title);
+    // The withdrawal check runs before the title comparison, not after it. Crossref rewrites a
+    // retracted record's title with a "Retracted:" prefix, which drags similarity down far enough to
+    // land in the MISMATCH band. That is protective by accident and wrong in substance: it tells the
+    // reader their identifier points at a different paper, when the identifier is right and the
+    // paper is withdrawn. Those need different fixes, so they need different answers.
+    {
+      const withdrawn = withdrawalResult(rec, sim, `DOI ${doi} resolves to this paper`);
+      if (withdrawn) return withdrawn;
+    }
     if (sim >= VERIFY_THRESHOLD) {
-      return { status: 'VERIFIED', confidence: sim, resolved: rec, canonical: formatCanonical(rec), note: `DOI resolves and title matches (${(sim * 100).toFixed(0)}%).` };
+      return { status: 'VERIFIED', confidence: sim, resolved: rec, canonical: formatCanonical(rec), note: `DOI resolves and title matches (${(sim * 100).toFixed(0)}%).${concernSuffix(rec)}` };
     }
     if (sim < MISMATCH_THRESHOLD) {
       return {
@@ -373,7 +460,9 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
     return { status: 'UNCHECKED', confidence: 0, note: 'No literature registry could be reached. This citation has not been verified.' };
   }
   if (best && best.sim >= VERIFY_THRESHOLD) {
-    return { status: 'VERIFIED', confidence: best.sim, resolved: best.rec, canonical: formatCanonical(best.rec), note: `Matched a registry record by title (${(best.sim * 100).toFixed(0)}%).` };
+    const withdrawn = withdrawalResult(best.rec, best.sim, `Matched a registry record by title (${(best.sim * 100).toFixed(0)}%)`);
+    if (withdrawn) return withdrawn;
+    return { status: 'VERIFIED', confidence: best.sim, resolved: best.rec, canonical: formatCanonical(best.rec), note: `Matched a registry record by title (${(best.sim * 100).toFixed(0)}%).${concernSuffix(best.rec)}` };
   }
   return {
     status: 'NOT_FOUND', confidence: best?.sim ?? 0,

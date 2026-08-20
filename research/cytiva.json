@@ -1,0 +1,1196 @@
+[
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Protein A HP",
+    "catalogNumbers": [
+      "17040201",
+      "17040303"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein A affinity prepacked column",
+    "description": "Prepacked column of Protein A Sepharose High Performance for purification of monoclonal and polyclonal antibodies and Fc-fusion proteins at laboratory scale.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/shop/chromatography/prepacked-columns/affinity-antibody/hitrap-protein-a-hp-antibody-purification-columns-p-06160",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "monoclonal antibody purification",
+      "polyclonal IgG purification",
+      "Fc-fusion protein capture"
+    ],
+    "keyParameters": {
+      "notes": "Protein A Sepharose High Performance, 34 um beads; run with syringe, pump or AKTA system"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23666-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17040201 (5 x 1 mL) and 17040303 (5 x 5 mL) present in the ordering table of the fetched Cytiva antibody purification and immunoprecipitation selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Protein G HP",
+    "catalogNumbers": [
+      "17040401",
+      "17040503"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein G affinity prepacked column",
+    "description": "Prepacked column of Protein G Sepharose High Performance for purification of IgG from a broad range of species, including subclasses that bind poorly to protein A.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "IgG purification",
+      "purification of antibodies from rat, goat, sheep and human IgG3"
+    ],
+    "keyParameters": {
+      "notes": "Recombinant protein G (Fc-binding fragment) coupled to Sepharose High Performance"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23666-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17040401 (5 x 1 mL) and 17040503 (5 x 5 mL) present in the ordering table of the fetched Cytiva antibody purification selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap MabSelect SuRe",
+    "catalogNumbers": [
+      "11003493",
+      "11003495"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Alkali-stabilized protein A affinity column",
+    "description": "Prepacked column of MabSelect SuRe resin, an alkali-stabilized protein A derived ligand that tolerates cleaning-in-place with sodium hydroxide, for monoclonal antibody capture.",
+    "protocolUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13686-pdf",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "monoclonal antibody capture",
+      "process development",
+      "NaOH cleaning-in-place"
+    ],
+    "keyParameters": {
+      "notes": "Alkali-tolerant protein A derived ligand; generic elution conditions across mAbs"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23666-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 11003493 (5 x 1 mL) and 11003495 (5 x 5 mL) present in the ordering table of the fetched Cytiva antibody purification selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap rProtein A FF",
+    "catalogNumbers": [
+      "17507901",
+      "17507902",
+      "17508001",
+      "17508002"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein A affinity column for antibody purification",
+    "description": "Prepacked column of rProtein A Sepharose Fast Flow for purification of monoclonal and polyclonal antibodies. Ligand is recombinant protein A produced in E. coli, coupled to 4% cross-linked spherical agarose.",
+    "protocolUrl": "https://cdn.cytivalifesciences.com.cn/api/public/content/digi-11169-pdf",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "2 x 1 mL / 5 x 1 mL / 1 x 5 mL / 5 x 5 mL",
+    "applications": [
+      "monoclonal antibody purification",
+      "polyclonal IgG purification"
+    ],
+    "keyParameters": {
+      "notes": "Dynamic binding capacity approx. 35 mg human IgG/mL resin; matrix cross-linked agarose 4%, ~90 um particle size"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com.cn/api/public/content/digi-11169-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17507901, 17507902, 17508001, 17508002 present in the ordering-information table of the fetched HiTrap rProtein A FF Instructions for Use PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "MabSelect protein A chromatography resin",
+    "catalogNumbers": [
+      "17519901",
+      "17519902",
+      "17519903",
+      "17519904",
+      "17519906"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Protein A affinity resin (bulk)",
+    "description": "Protein A affinity chromatography resin based on highly cross-linked spherical agarose with a recombinant protein A ligand, designed for capture of monoclonal antibodies from laboratory to process scale.",
+    "protocolUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-12118-pdf",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "25 mL / 200 mL / 1 L / 5 L / 10 L",
+    "applications": [
+      "monoclonal antibody capture",
+      "process-scale antibody purification"
+    ],
+    "keyParameters": {
+      "notes": "Ligand recombinant protein A (E. coli); dynamic binding capacity approx. 30 mg human IgG/mL resin"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-12118-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17519901/02/03/04/06 present in the ordering-information table of the fetched MabSelect affinity chromatography data file PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Protein A HP MultiTrap 96-well plates",
+    "catalogNumbers": [
+      "28903133"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "96-well protein A plate for antibody screening",
+    "description": "96-well filter plate prefilled with Protein A Sepharose High Performance for parallel small-scale purification and screening of antibodies and immunoprecipitation samples.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/shop/chromatography/prepacked-columns/affinity-antibody/protein-a-hp-multitrap-p-05736",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "4 plates, 100 uL resin per well",
+    "applications": [
+      "antibody screening",
+      "parallel purification",
+      "immunoprecipitation"
+    ],
+    "keyParameters": {
+      "notes": "Processed by centrifugation or vacuum"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23666-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 28903133 present in the ordering table of the fetched Cytiva antibody purification selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HisTrap HP",
+    "catalogNumbers": [
+      "29051021",
+      "17524701",
+      "17524801",
+      "17524802"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC prepacked column (Ni Sepharose High Performance)",
+    "description": "Prepacked column of Ni Sepharose High Performance for purification of histidine-tagged proteins by immobilized metal ion affinity chromatography. The small bead size gives high resolution and high binding capacity.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 x 1 mL / 5 x 1 mL / 1 x 5 mL / 5 x 5 mL",
+    "applications": [
+      "histidine-tagged protein purification",
+      "IMAC",
+      "recombinant protein capture"
+    ],
+    "keyParameters": {
+      "notes": "Ni Sepharose High Performance, 34 um cross-linked agarose beads; use with syringe, pump or AKTA system"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29051021, 17524701, 17524801, 17524802 present in the ordering-information table of the fetched Cytiva histidine-tagged protein purification selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HisTrap FF",
+    "catalogNumbers": [
+      "17531901",
+      "17525501"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC prepacked column (Ni Sepharose 6 Fast Flow)",
+    "description": "Prepacked column of Ni Sepharose 6 Fast Flow for one-step purification of histidine-tagged proteins from clarified lysate.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "histidine-tagged protein purification",
+      "IMAC"
+    ],
+    "keyParameters": {
+      "notes": "Ni Sepharose 6 Fast Flow, 90 um cross-linked agarose beads"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17531901 and 17525501 present in the ordering-information table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HisTrap FF crude",
+    "catalogNumbers": [
+      "29048631",
+      "11000458",
+      "17528601"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC prepacked column for unclarified lysate",
+    "description": "Prepacked Ni Sepharose 6 Fast Flow column designed to be loaded with unclarified cell lysate, removing the need for a separate clarification step before histidine-tagged protein capture.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 x 1 mL / 5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "histidine-tagged protein purification from unclarified lysate",
+      "IMAC"
+    ],
+    "keyParameters": {
+      "notes": "Tolerates direct loading of crude E. coli lysate"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29048631, 11000458, 17528601 present in the ordering-information table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HisTrap excel",
+    "catalogNumbers": [
+      "29048586",
+      "17371205",
+      "17371206"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "IMAC prepacked column for serum-containing samples",
+    "description": "Prepacked Ni Sepharose excel column with strongly bound nickel, intended for purification of histidine-tagged proteins directly from samples containing serum or cell culture supernatant with minimal nickel leakage.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 x 1 mL / 5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "histidine-tagged protein purification",
+      "mammalian cell culture supernatant",
+      "IMAC"
+    ],
+    "keyParameters": {
+      "notes": "Low nickel leakage; suitable for serum-containing feed"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29048586, 17371205, 17371206 present in the ordering-information table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap TALON crude",
+    "catalogNumbers": [
+      "29048565",
+      "28953766",
+      "28953767"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Cobalt IMAC prepacked column",
+    "description": "Prepacked TALON superflow (cobalt-charged) column for purification of histidine-tagged proteins, including direct loading of unclarified lysate. Cobalt chemistry typically gives lower co-elution of host-cell contaminants than nickel.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 x 1 mL / 5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "histidine-tagged protein purification",
+      "cobalt IMAC",
+      "unclarified lysate"
+    ],
+    "keyParameters": {
+      "notes": "TALON superflow resin, Co2+ charged"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29048565, 28953766, 28953767 present in the ordering-information table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Q HP",
+    "catalogNumbers": [
+      "17115301",
+      "17115401"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Strong anion exchange prepacked column",
+    "description": "Prepacked column of Q Sepharose High Performance, a strong anion exchanger, for high-resolution polishing and intermediate purification of proteins.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "anion exchange chromatography",
+      "protein polishing",
+      "intermediate purification"
+    ],
+    "keyParameters": {
+      "notes": "Q Sepharose High Performance, 34 um beads; quaternary ammonium ligand"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17115301 (5 x 1 mL) and 17115401 (5 x 5 mL) present in the IEX ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap SP HP",
+    "catalogNumbers": [
+      "17115101",
+      "17115201"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Strong cation exchange prepacked column",
+    "description": "Prepacked column of SP Sepharose High Performance, a strong cation exchanger, for high-resolution polishing and intermediate purification of proteins.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "cation exchange chromatography",
+      "protein polishing",
+      "intermediate purification"
+    ],
+    "keyParameters": {
+      "notes": "SP Sepharose High Performance, 34 um beads; sulfopropyl ligand"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17115101 (5 x 1 mL) and 17115201 (5 x 5 mL) present in the IEX ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Capto Q ImpRes",
+    "catalogNumbers": [
+      "17547051",
+      "17547055"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "High-resolution strong anion exchange column",
+    "description": "Prepacked column of Capto Q ImpRes, a strong anion exchange resin on a rigid high-flow agarose base matrix, designed for high-resolution polishing steps that scale to manufacturing.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "polishing chromatography",
+      "aggregate removal",
+      "anion exchange"
+    ],
+    "keyParameters": {
+      "notes": "Capto ImpRes base matrix, ~40 um particle size"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17547051 (5 x 1 mL) and 17547055 (5 x 5 mL) present in the IEX ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Capto SP ImpRes",
+    "catalogNumbers": [
+      "17546851",
+      "17546855"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "High-resolution strong cation exchange column",
+    "description": "Prepacked column of Capto SP ImpRes, a strong cation exchange resin on a rigid agarose base matrix, for high-resolution polishing of proteins and monoclonal antibodies.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "5 x 1 mL / 5 x 5 mL",
+    "applications": [
+      "polishing chromatography",
+      "aggregate removal",
+      "cation exchange"
+    ],
+    "keyParameters": {
+      "notes": "Capto ImpRes base matrix, ~40 um particle size"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17546851 (5 x 1 mL) and 17546855 (5 x 5 mL) present in the IEX ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiTrap Desalting",
+    "catalogNumbers": [
+      "29048684",
+      "17140801"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Prepacked desalting / buffer exchange column",
+    "description": "Prepacked 5 mL column of Sephadex G-25 Superfine for rapid group separation, desalting and buffer exchange of protein samples.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 x 5 mL / 5 x 5 mL",
+    "applications": [
+      "desalting",
+      "buffer exchange",
+      "removal of small molecules"
+    ],
+    "keyParameters": {
+      "notes": "Sephadex G-25 Superfine; recommended sample volume up to 1.5 mL per 5 mL column"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29048684 (1 x 5 mL) and 17140801 (5 x 5 mL) present in the desalting ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiPrep 26/10 Desalting",
+    "catalogNumbers": [
+      "17508701"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Preparative desalting / buffer exchange column",
+    "description": "Prepacked 53 mL Sephadex G-25 Fine column for desalting and buffer exchange of larger protein samples on a chromatography system.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "1 column (26 x 100 mm, 53 mL)",
+    "applications": [
+      "preparative desalting",
+      "buffer exchange"
+    ],
+    "keyParameters": {
+      "notes": "Up to 15 mL sample per run; columns can be connected in series for larger volumes"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 17508701 present in the desalting ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "PD-10 Desalting Columns",
+    "catalogNumbers": [
+      "17085101"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Gravity-flow desalting column",
+    "description": "Disposable gravity-flow columns packed with Sephadex G-25 Medium for desalting and buffer exchange of 1 to 2.5 mL protein samples.",
+    "storage": "2°C to 8°C",
+    "kitSize": "30 columns",
+    "applications": [
+      "desalting",
+      "buffer exchange",
+      "removal of labelling reagents"
+    ],
+    "keyParameters": {
+      "input": "1.0-2.5 mL sample",
+      "notes": "Sephadex G-25 Medium; gravity or spin protocol"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 17085101 present in the desalting ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "PD MiniTrap G-25",
+    "catalogNumbers": [
+      "28918007"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Small-volume desalting column",
+    "description": "Prepacked Sephadex G-25 columns for desalting and buffer exchange of small protein samples by gravity flow or centrifugation.",
+    "storage": "2°C to 8°C",
+    "kitSize": "50 columns",
+    "applications": [
+      "desalting",
+      "buffer exchange"
+    ],
+    "keyParameters": {
+      "input": "up to 0.5 mL sample per column"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 28918007 present in the desalting ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Superdex 200 Increase columns",
+    "catalogNumbers": [
+      "28990944",
+      "28990945",
+      "28990946"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Analytical size exclusion chromatography column",
+    "description": "Prepacked size exclusion columns for high-resolution separation of proteins and protein complexes, with a fractionation range of 10 000 to 600 000 Mr.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "10/300 GL (24 mL), 5/150 GL (3 mL), 3.2/300 (2.4 mL)",
+    "applications": [
+      "size exclusion chromatography",
+      "aggregate analysis",
+      "final polishing"
+    ],
+    "keyParameters": {
+      "notes": "Fractionation range 10 000-600 000 Mr; 28990944 = 10/300 GL, 28990945 = 5/150 GL, 28990946 = 3.2/300"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 28990944, 28990945, 28990946 present in the ordering table of the fetched Cytiva size exclusion chromatography selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Superdex 75 Increase columns",
+    "catalogNumbers": [
+      "29148721",
+      "29148722",
+      "29148723"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Analytical size exclusion chromatography column",
+    "description": "Prepacked size exclusion columns for high-resolution separation of small proteins and peptides, with a fractionation range of 3000 to 70 000 Mr.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "10/300 GL (24 mL), 5/150 GL (3 mL), 3.2/300 (2.4 mL)",
+    "applications": [
+      "size exclusion chromatography",
+      "small protein separation",
+      "final polishing"
+    ],
+    "keyParameters": {
+      "notes": "Fractionation range 3000-70 000 Mr; 29148721 = 10/300 GL, 29148722 = 5/150 GL, 29148723 = 3.2/300"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29148721, 29148722, 29148723 present in the ordering table of the fetched Cytiva SEC selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Superose 6 Increase columns",
+    "catalogNumbers": [
+      "29091596",
+      "29091597",
+      "29091598"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Broad-range size exclusion chromatography column",
+    "description": "Prepacked size exclusion columns with a very broad fractionation range of 5000 to 5 000 000 Mr, suited to large complexes, membrane proteins and virus-like particles.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "10/300 GL (24 mL), 5/150 GL (3 mL), 3.2/300 (2.4 mL)",
+    "applications": [
+      "size exclusion chromatography",
+      "protein complexes",
+      "membrane proteins",
+      "virus-like particles"
+    ],
+    "keyParameters": {
+      "notes": "Fractionation range 5000-5 000 000 Mr; 29091596 = 10/300 GL, 29091597 = 5/150 GL, 29091598 = 3.2/300"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29091596, 29091597, 29091598 present in the ordering table of the fetched Cytiva SEC selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiLoad Superdex 200 pg preparative SEC columns",
+    "catalogNumbers": [
+      "28989335",
+      "28989336"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Preparative size exclusion chromatography column",
+    "description": "Prepacked preparative size exclusion columns packed with Superdex 200 prep grade for high-resolution preparative separations in the 10 000 to 600 000 Mr range.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "16/600 (120 mL) / 26/600 (320 mL)",
+    "applications": [
+      "preparative size exclusion chromatography",
+      "final polishing",
+      "aggregate removal"
+    ],
+    "keyParameters": {
+      "notes": "28989335 = HiLoad 16/600 (120 mL bed); 28989336 = HiLoad 26/600 (320 mL bed)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 28989335 and 28989336 present in the ordering table of the fetched Cytiva SEC selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiLoad Superdex 75 pg preparative SEC columns",
+    "catalogNumbers": [
+      "28989333",
+      "28989334"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Preparative size exclusion chromatography column",
+    "description": "Prepacked preparative size exclusion columns packed with Superdex 75 prep grade for preparative separation of proteins in the 3000 to 70 000 Mr range.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "16/600 (120 mL) / 26/600 (320 mL)",
+    "applications": [
+      "preparative size exclusion chromatography",
+      "small protein separation"
+    ],
+    "keyParameters": {
+      "notes": "28989333 = HiLoad 16/600 (120 mL bed); 28989334 = HiLoad 26/600 (320 mL bed)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 28989333 and 28989334 present in the ordering table of the fetched Cytiva SEC selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "HiPrep Sephacryl S-300 HR columns",
+    "catalogNumbers": [
+      "17116701",
+      "17119601"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Preparative size exclusion chromatography column",
+    "description": "Prepacked HiPrep columns of Sephacryl S-300 High Resolution for preparative size exclusion chromatography in the 10 000 to 1 500 000 Mr range.",
+    "storage": "20% ethanol, 4°C to 30°C",
+    "kitSize": "16/60 (120 mL) / 26/60 (320 mL)",
+    "applications": [
+      "preparative size exclusion chromatography",
+      "large protein complexes"
+    ],
+    "keyParameters": {
+      "notes": "17116701 = HiPrep 16/60 (120 mL); 17119601 = HiPrep 26/60 (320 mL)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-13947-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 17116701 and 17119601 present in the ordering table of the fetched Cytiva SEC selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham ECL Western Blotting Detection Reagent",
+    "catalogNumbers": [
+      "RPN2109",
+      "RPN2209",
+      "RPN2106",
+      "RPN2134"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Enhanced chemiluminescence HRP substrate",
+    "description": "Horseradish peroxidase chemiluminescent substrate for routine detection of proteins on Western blots. Reported limit of detection is 40 ng for ERK 1/2.",
+    "storage": "2°C to 8°C",
+    "kitSize": "125 mL (1000 cm2) / 250 mL (2000 cm2) / 500 mL (4000 cm2) / 750 mL (6000 cm2)",
+    "applications": [
+      "Western blotting",
+      "routine protein detection",
+      "overexpressed and tagged proteins"
+    ],
+    "keyParameters": {
+      "notes": "LOD 40 ng ERK 1/2; RPN2109 = 125 mL, RPN2209 = 250 mL, RPN2106 = 500 mL, RPN2134 = 750 mL"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-16193-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes RPN2109, RPN2209, RPN2106, RPN2134 present in the ordering table of the fetched Amersham ECL Western blotting detection reagents selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham ECL Prime Western Blotting Detection Reagent",
+    "catalogNumbers": [
+      "RPN2232",
+      "RPN2236"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "High-sensitivity chemiluminescence HRP substrate",
+    "description": "High-sensitivity HRP chemiluminescent substrate with a wide dynamic range for quantitative Western blotting and expression analysis. Reported limit of detection is 20 ng for ERK 1/2.",
+    "storage": "2°C to 8°C",
+    "kitSize": "100 mL (1000 cm2) / 300 mL (3000 cm2)",
+    "applications": [
+      "Western blotting",
+      "protein quantitation",
+      "expression analysis"
+    ],
+    "keyParameters": {
+      "notes": "LOD 20 ng ERK 1/2; RPN2232 = 100 mL, RPN2236 = 300 mL"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-16193-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes RPN2232 and RPN2236 present in the ordering table of the fetched Amersham ECL selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham ECL Select Western Blotting Detection Reagent",
+    "catalogNumbers": [
+      "RPN2235"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Ultra-sensitive chemiluminescence HRP substrate",
+    "description": "Most sensitive of the Amersham ECL chemiluminescent HRP substrates, for detection of low-abundance proteins. Reported limit of detection is 5 ng for ERK 1/2.",
+    "storage": "2°C to 8°C",
+    "kitSize": "100 mL (1000 cm2)",
+    "applications": [
+      "Western blotting",
+      "low-abundance protein detection",
+      "protein quantitation"
+    ],
+    "keyParameters": {
+      "notes": "LOD 5 ng ERK 1/2"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-16193-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code RPN2235 present in the ordering table of the fetched Amersham ECL selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham ECL Plex Western Blotting System",
+    "catalogNumbers": [
+      "RPN998",
+      "RPN999"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Fluorescent multiplex Western blotting kit",
+    "description": "Fluorescent Western blotting system using CyDye-conjugated secondary antibodies for multiplex detection of two targets on one blot. Reported limit of detection is 5 ng for ERK 1/2.",
+    "storage": "2°C to 8°C, protect from light",
+    "kitSize": "1000 cm2; RPN998 supplied with Amersham Protran Premium, RPN999 with Amersham Hybond LFP",
+    "applications": [
+      "multiplex Western blotting",
+      "post-translational modification analysis",
+      "protein quantitation"
+    ],
+    "keyParameters": {
+      "notes": "Cy3 and Cy5 conjugated secondary antibodies; requires a fluorescence imager"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-16193-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes RPN998 and RPN999 present in the ordering table of the fetched Amersham ECL selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham ECL Rainbow Marker - Full Range",
+    "catalogNumbers": [
+      "RPN800E"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Prestained protein molecular weight marker",
+    "description": "Prestained coloured protein molecular weight marker for SDS-PAGE and Western blotting, visible on the gel and on the membrane after transfer.",
+    "storage": "-20°C",
+    "kitSize": "250 uL",
+    "applications": [
+      "SDS-PAGE",
+      "Western blotting",
+      "molecular weight estimation"
+    ],
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-16193-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code RPN800E present in the molecular weight markers ordering table of the fetched Amersham ECL selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham Hybond P 0.45 PVDF membrane",
+    "catalogNumbers": [
+      "10600023"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "PVDF blotting membrane",
+    "description": "Hydrophobic PVDF transfer membrane with 0.45 um pore size for protein blotting and chemiluminescent detection. Requires methanol pre-wetting.",
+    "storage": "Room temperature, dry",
+    "kitSize": "Roll, 30 cm x 4 m",
+    "applications": [
+      "Western blotting",
+      "protein transfer",
+      "chemiluminescent detection"
+    ],
+    "keyParameters": {
+      "notes": "0.2 um version supplied as 10600021 (26 cm x 4 m)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 10600023 present in the Western blotting membranes ordering table of the fetched Cytiva his-tag selection guide PDF; the ECL selection guide lists the same item as RPN10600023."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham Protran 0.45 NC nitrocellulose membrane",
+    "catalogNumbers": [
+      "10600002"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Nitrocellulose blotting membrane",
+    "description": "Nitrocellulose transfer membrane with 0.45 um pore size for protein blotting, compatible with chemiluminescent and fluorescent detection.",
+    "storage": "Room temperature, dry",
+    "kitSize": "Roll, 30 cm x 4 m",
+    "applications": [
+      "Western blotting",
+      "protein transfer"
+    ],
+    "keyParameters": {
+      "notes": "0.2 um version supplied as 10600001 (30 cm x 4 m)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Code 10600002 present in the Western blotting membranes ordering table of the fetched Cytiva his-tag selection guide PDF; the ECL selection guide lists the same item as RPN10600002."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Whatman GD/X syringe filters, PES",
+    "catalogNumbers": [
+      "6876-2502",
+      "6876-2504"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Syringe filter for sample clarification",
+    "description": "25 mm disposable syringe filters with polyethersulfone membrane and built-in glass microfibre prefilter, used to clarify protein samples before chromatography.",
+    "storage": "Room temperature",
+    "kitSize": "150 filters per pack",
+    "applications": [
+      "sample clarification",
+      "pre-column filtration",
+      "protein purification"
+    ],
+    "keyParameters": {
+      "notes": "6876-2502 = 0.2 um; 6876-2504 = 0.45 um"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 6876-2502 and 6876-2504 present in the syringe filters ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Whatman SPARTAN syringe filters, regenerated cellulose 30 mm",
+    "catalogNumbers": [
+      "10463060",
+      "10463062",
+      "10463052"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Syringe filter for sample clarification",
+    "description": "30 mm regenerated cellulose syringe filters with low protein binding, used to clarify buffers and protein samples before chromatography.",
+    "storage": "Room temperature",
+    "kitSize": "100 or 500 filters per pack",
+    "applications": [
+      "sample clarification",
+      "buffer filtration",
+      "pre-column filtration"
+    ],
+    "keyParameters": {
+      "notes": "10463060 = 0.2 um (100 pack); 10463062 = 0.2 um (500 pack); 10463052 = 0.45 um (500 pack)"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-23665-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 10463060, 10463062, 10463052 present in the syringe filters ordering table of the fetched Cytiva his-tag selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Sera-Xtracta Virus/Pathogen Kit",
+    "catalogNumbers": [
+      "29506009",
+      "29514201"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Magnetic bead viral and bacterial nucleic acid extraction",
+    "description": "Magnetic bead kit based on SeraSil-Mag beads for extraction of viral and bacterial DNA and RNA from swab samples in universal transport media and other cell-free fluids.",
+    "protocolUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-33788-pdf",
+    "storage": "15°C to 30°C",
+    "kitSize": "96 extractions / 1000 extractions",
+    "applications": [
+      "viral nucleic acid extraction",
+      "bacterial DNA extraction",
+      "pathogen detection workflows"
+    ],
+    "keyParameters": {
+      "input": "100-400 uL sample",
+      "notes": "Elution volume typically 50 uL; includes a 10 min heated lysis incubation"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-33788-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29506009 and 29514201 present in the fetched Sera-Xtracta Virus/Pathogen Kit user guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Sera-Mag SpeedBeads carboxylate-modified magnetic beads (3 um)",
+    "catalogNumbers": [
+      "29729998",
+      "29729997",
+      "29730063"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Carboxylate magnetic beads for nucleic acid clean-up and size selection",
+    "description": "Carboxylate-modified superparamagnetic beads with rapid magnetic response, widely used for solid-phase reversible immobilization clean-up and size selection of DNA in sequencing library workflows.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/products/items/sera-mag-speedbeads-and-sera-mag-carboxylate-modified-magnetic-particles-p-05936",
+    "storage": "2°C to 8°C",
+    "kitSize": "1 mL / 10 mL / 100 mL",
+    "applications": [
+      "SPRI clean-up",
+      "DNA size selection",
+      "NGS library preparation",
+      "bioconjugation"
+    ],
+    "keyParameters": {
+      "notes": "3 um nominal diameter; 29729998 = 1 mL, 29729997 = 10 mL, 29730063 = 100 mL"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/3jHPFlfci0q6lLIojXhHsQ-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29729998, 29729997, 29730063 present in the ordering table of the fetched Cytiva 'Choosing the right magnetic beads' selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Sera-Mag SpeedBeads streptavidin-blocked magnetic beads (3 um)",
+    "catalogNumbers": [
+      "29729996",
+      "29730006",
+      "29730064"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Streptavidin magnetic beads for biotinylated target capture",
+    "description": "Streptavidin-coated, blocked superparamagnetic beads for capture of biotinylated nucleic acids and proteins, including target enrichment and pull-down applications.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/products/items/sera-mag-speedbeads-and-sera-mag-streptavidin-coated-magnetic-particles-p-05939",
+    "storage": "2°C to 8°C",
+    "kitSize": "1 mL / 10 mL / 100 mL",
+    "applications": [
+      "biotinylated target capture",
+      "hybridization capture",
+      "pull-down assays"
+    ],
+    "keyParameters": {
+      "notes": "3 um nominal diameter; 29729996 = 1 mL, 29730006 = 10 mL, 29730064 = 100 mL"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/3jHPFlfci0q6lLIojXhHsQ-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29729996, 29730006, 29730064 present in the ordering table of the fetched Cytiva magnetic beads selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "SeraSil-Mag 400 silica magnetic beads",
+    "catalogNumbers": [
+      "29357369",
+      "29357371",
+      "29357372",
+      "29705862"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Silica-coated magnetic beads for nucleic acid extraction",
+    "description": "Silica-coated superparamagnetic beads of approximately 400 nm for extraction and clean-up of DNA and RNA in manual and automated workflows.",
+    "storage": "2°C to 8°C",
+    "kitSize": "5 mL / 60 mL / 450 mL / 1000 mL",
+    "applications": [
+      "nucleic acid extraction",
+      "automated sample prep",
+      "DNA and RNA clean-up"
+    ],
+    "keyParameters": {
+      "notes": "400 nm nominal diameter; 29357369 = 5 mL, 29357371 = 60 mL, 29357372 = 450 mL, 29705862 = 1000 mL"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/3jHPFlfci0q6lLIojXhHsQ-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 29357369, 29357371, 29357372, 29705862 present in the ordering table of the fetched Cytiva magnetic beads selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "His Mag Sepharose Ni",
+    "catalogNumbers": [
+      "28967388",
+      "28967390",
+      "29104065"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Magnetic IMAC beads for histidine-tagged proteins",
+    "description": "Nickel-charged magnetic Sepharose beads for small-scale, high-throughput purification and pull-down of histidine-tagged proteins without centrifugation or columns.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "2 x 1 mL / 5 x 1 mL / 100 mL medium",
+    "applications": [
+      "histidine-tagged protein pull-down",
+      "screening",
+      "magnetic IMAC"
+    ],
+    "keyParameters": {
+      "notes": "Agarose-based magnetic beads; compatible with 96-well magnetic racks and automation"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/3jHPFlfci0q6lLIojXhHsQ-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 28967388, 28967390, 29104065 present in the ordering table of the fetched Cytiva magnetic beads selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Protein A Mag Sepharose Xtra",
+    "catalogNumbers": [
+      "28967056",
+      "28967062"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Magnetic protein A beads for antibody capture",
+    "description": "High-capacity magnetic Sepharose beads with protein A ligand for small-scale antibody purification, screening and immunoprecipitation.",
+    "storage": "20% ethanol, 2°C to 8°C",
+    "kitSize": "2 x 1 mL / 5 x 1 mL",
+    "applications": [
+      "antibody purification",
+      "immunoprecipitation",
+      "clone screening"
+    ],
+    "keyParameters": {
+      "notes": "Agarose-based magnetic beads; compatible with automation and magnetic racks"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/3jHPFlfci0q6lLIojXhHsQ-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 28967056 and 28967062 present in the ordering table of the fetched Cytiva magnetic beads selection guide PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham CyDye fluorescent nucleotides (Cy3-dCTP / Cy5-dCTP)",
+    "catalogNumbers": [
+      "PA53021",
+      "PA53031",
+      "PA55021",
+      "PA55031"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Cy dye labelled nucleotides for probe labelling",
+    "description": "Cy3- and Cy5-labelled dCTP for enzymatic labelling of DNA and RNA probes used in multicolour detection studies such as microarrays, array CGH and FISH.",
+    "storage": "-20°C, protect from light",
+    "kitSize": "25 nmol / 250 nmol",
+    "applications": [
+      "microarray probe labelling",
+      "array CGH",
+      "FISH"
+    ],
+    "keyParameters": {
+      "notes": "PA53021 = Cy3-dCTP 25 nmol; PA53031 = Cy3-dCTP 250 nmol; PA55021 = Cy5-dCTP 25 nmol; PA55031 = Cy5-dCTP 250 nmol"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-5-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes PA53021, PA53031, PA55021, PA55031 present in the ordering table of the fetched Amersham CyDye fluorescent nucleotides PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "Amersham CyDye fluorescent nucleotides (Cy3-dUTP / Cy5-dUTP)",
+    "catalogNumbers": [
+      "PA53022",
+      "PA53032",
+      "PA55022",
+      "PA55032"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Cy dye labelled nucleotides for probe labelling",
+    "description": "Cy3- and Cy5-labelled dUTP for enzymatic labelling of DNA and RNA probes for microarray, array CGH and FISH applications.",
+    "storage": "-20°C, protect from light",
+    "kitSize": "25 nmol / 250 nmol",
+    "applications": [
+      "microarray probe labelling",
+      "array CGH",
+      "FISH"
+    ],
+    "keyParameters": {
+      "notes": "PA53022 = Cy3-dUTP 25 nmol; PA53032 = Cy3-dUTP 250 nmol; PA55022 = Cy5-dUTP 25 nmol; PA55032 = Cy5-dUTP 250 nmol. Cy3/Cy5 multipacks are PA55321 (dCTP) and PA55322 (dUTP)."
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-5-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes PA53022, PA53032, PA55022, PA55032 (plus multipacks PA55321/PA55322) present in the ordering table of the fetched Amersham CyDye fluorescent nucleotides PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "illustra GenomiPhi V2 DNA Amplification Kit",
+    "catalogNumbers": [
+      "25660030",
+      "25660031",
+      "25660032"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Whole genome amplification (Phi29 multiple displacement amplification)",
+    "description": "Whole genome amplification kit using Phi29 DNA polymerase and random primers to generate microgram quantities of high molecular weight DNA from limited genomic DNA input.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/shop/molecular-biology/pcr-and-amplification/kits-and-ready-to-go-beads/illustra-genomiphi-v2-dna-amplification-kits-p-06302",
+    "storage": "-80°C",
+    "kitSize": "25 / 100 / 500 reactions",
+    "applications": [
+      "whole genome amplification",
+      "genotyping",
+      "archiving limited DNA samples"
+    ],
+    "keyParameters": {
+      "notes": "Liquid format; 25660030 = 25 rxn, 25660031 = 100 rxn, 25660032 = 500 rxn"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-33007-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 25660030, 25660031, 25660032 present in the ordering table of the fetched Cytiva GenomiPhi DNA amplification kits PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "illustra GenomiPhi V3 Ready-To-Go DNA Amplification Kit",
+    "catalogNumbers": [
+      "25660108",
+      "25660124",
+      "25660196",
+      "25660197"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "Room-temperature-stable whole genome amplification beads",
+    "description": "Whole genome amplification kit supplied as room-temperature-stable lyophilized Ready-To-Go cakes, requiring only addition of sample and buffer before Phi29-based multiple displacement amplification.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/shop/molecular-and-immunodiagnostics/amplification/illustra-ready-to-go-genomiphi-v3-dna-amplification-kits-p-05495",
+    "storage": "Room temperature (lyophilized cakes)",
+    "kitSize": "Sample pack / 24 / 96 / 480 reactions",
+    "applications": [
+      "whole genome amplification",
+      "high-throughput genotyping",
+      "field and remote sample processing"
+    ],
+    "keyParameters": {
+      "notes": "25660108 = sample pack, 25660124 = 24 rxn, 25660196 = 96 rxn, 25660197 = 480 rxn"
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-33007-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 25660108, 25660124, 25660196, 25660197 present in the ordering table of the fetched Cytiva GenomiPhi DNA amplification kits PDF."
+  },
+  {
+    "vendor": "Cytiva",
+    "vendorShort": "Cytiva",
+    "productName": "illustra GenomiPhi HY Ready-To-Go DNA Amplification Kit",
+    "catalogNumbers": [
+      "25660308",
+      "25660324",
+      "25660396",
+      "25660397"
+    ],
+    "category": "PCR & Amplification",
+    "subcategory": "High-yield room-temperature-stable whole genome amplification beads",
+    "description": "High-yield whole genome amplification kit in room-temperature-stable lyophilized Ready-To-Go format, for generating large amounts of amplified genomic DNA from small inputs.",
+    "productUrl": "https://www.cytivalifesciences.com/en/us/shop/molecular-and-immunodiagnostics/amplification/illustra-ready-to-go-genomiphi-hy-dna-amplification-kits-p-06199",
+    "storage": "Room temperature (lyophilized cakes)",
+    "kitSize": "Sample pack / 24 / 96 / 280 reactions",
+    "applications": [
+      "high-yield whole genome amplification",
+      "DNA banking",
+      "genotyping"
+    ],
+    "keyParameters": {
+      "notes": "25660308 = sample pack, 25660324 = 24 rxn, 25660396 = 96 rxn, 25660397 = 280 rxn. Liquid GenomiPhi HY formats are 25660022/25660020/25660025."
+    },
+    "sourceUrl": "https://cdn.cytivalifesciences.com/api/public/content/digi-33007-pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Codes 25660308, 25660324, 25660396, 25660397 present in the ordering table of the fetched Cytiva GenomiPhi DNA amplification kits PDF."
+  }
+]

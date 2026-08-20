@@ -1,0 +1,1048 @@
+[
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIP-IT High Sensitivity",
+    "catalogNumbers": [
+      "53040"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Chromatin immunoprecipitation (ChIP) kit",
+    "description": "High-sensitivity chromatin immunoprecipitation kit supplying fixation, shearing, IP, wash, elution and DNA purification reagents plus Protein G agarose beads and ChIP filtration columns for 16 chromatin prep and IP reactions.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53040",
+    "protocolUrl": "https://www.activemotif.com/documents/1842.pdf",
+    "storage": "Components at -20°C, 4°C or room temperature depending on reagent; Protein G beads at 4°C after first thaw (do not refreeze)",
+    "kitSize": "16 chromatin preparation and immunoprecipitation reactions (1 x 15 cm plate or 100 mg tissue per prep)",
+    "applications": [
+      "ChIP-qPCR",
+      "ChIP-Seq",
+      "histone modification mapping",
+      "transcription factor binding"
+    ],
+    "keyParameters": {
+      "input": "10-30 µg chromatin (1.5-4.5 million cells) recommended; as few as 1,000 cells for abundant targets and 50,000 cells for low-abundance transcription factors",
+      "time": "~2-3 days end to end",
+      "notes": "Includes RNase A, Proteinase K, blocker, fixation/ChIP/wash/elution buffers and cross-link reversal reagents"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1842.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53040 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "CUT&Tag-IT Assay Kit (Cells)",
+    "catalogNumbers": [
+      "53160"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&Tag assay kit (antibody-targeted tagmentation)",
+    "description": "CUT&Tag kit that combines antibody-directed targeting with pA-Tn5 transposome-mediated tagmentation to map histone modifications and transcription factors, producing indexed sequencing libraries directly from intact cells bound to Concanavalin A beads.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53160",
+    "protocolUrl": "https://www.activemotif.com/documents/2200.pdf",
+    "storage": "Most reagents -20°C; buffers and beads 4°C; stable 6 months from receipt",
+    "kitSize": "16 reactions",
+    "applications": [
+      "CUT&Tag",
+      "histone modification profiling",
+      "transcription factor mapping",
+      "low-input epigenomics"
+    ],
+    "keyParameters": {
+      "input": "50,000-500,000 cells per reaction (200,000 recommended)",
+      "time": "~5-6 h plus optional overnight primary antibody incubation",
+      "notes": "Includes Concanavalin A beads, pA-Tn5 transposomes, secondary antibodies, tagmentation buffers, purification columns, Q5 polymerase and indexed primers"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2200.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53160 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "CUT&Tag-IT Assay Kit - Tissue",
+    "catalogNumbers": [
+      "53170"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&Tag assay kit for tissue samples",
+    "description": "CUT&Tag kit adapted for solid tissue, using Concanavalin A beads, digitonin and pA-Tn5 transposomes to generate dual-indexed sequencing libraries from small tissue inputs. Validated on heart, brain, spleen, kidney and liver.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53170",
+    "protocolUrl": "https://www.activemotif.com/documents/2255.pdf",
+    "storage": "Components at -20°C, 4°C or room temperature depending on reagent; stable 6 months from receipt",
+    "kitSize": "16 reactions",
+    "applications": [
+      "CUT&Tag from tissue",
+      "in vivo epigenomic profiling",
+      "histone modification mapping"
+    ],
+    "keyParameters": {
+      "input": "10 mg tissue per reaction optimal; 2-30 mg compatible",
+      "time": "~2-3 days including overnight primary antibody incubation",
+      "notes": "Dual-indexed primers (4x4 combinations) for 16-plex multiplexing; includes alpaca anti-rabbit IgG and rabbit anti-mouse secondary antibodies"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2255.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53170 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "CUT&Tag-IT R-loop Assay Kit",
+    "catalogNumbers": [
+      "53167"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&Tag assay kit for DNA:RNA hybrids (R-loops)",
+    "description": "CUT&Tag-based kit for genome-wide mapping of R-loops (three-stranded DNA-RNA hybrids) using the S9.6 DNA-RNA hybrid antibody with pA-Tn5 transposomes and Concanavalin A beads.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53167",
+    "protocolUrl": "https://www.activemotif.com/documents/2265.pdf",
+    "storage": "Components at -20°C, 4°C or room temperature depending on reagent",
+    "kitSize": "16 reactions",
+    "applications": [
+      "R-loop mapping",
+      "transcription-replication conflict studies",
+      "genome instability research"
+    ],
+    "keyParameters": {
+      "input": "200,000-500,000 cells per reaction; fresh or cryopreserved",
+      "time": "~2 h Day 1, ~6 h Day 2",
+      "notes": "Includes S9.6 DNA-RNA hybrid antibody, secondary antibody, protease inhibitor cocktail and indexed library primers"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2265.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53167 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "CUT&Tag-IT Core Assay Kit",
+    "catalogNumbers": [
+      "53176"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&Tag core assay kit (no indexing primers)",
+    "description": "Core CUT&Tag kit containing Concanavalin A beads, assembled pA-Tn5 transposomes preloaded with sequencing adapters, secondary antibodies, buffers and purification reagents; NGS indexing primers and polymerase are supplied by the user.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53176",
+    "protocolUrl": "https://www.activemotif.com/documents/2282.pdf",
+    "storage": "Components at -20°C, 4°C or room temperature depending on reagent; stable 6 months from receipt",
+    "kitSize": "16 reactions",
+    "applications": [
+      "CUT&Tag with custom indexing",
+      "histone modification profiling",
+      "transcription factor mapping"
+    ],
+    "keyParameters": {
+      "input": "50,000-500,000 cells per reaction (200,000 recommended)",
+      "time": "~6-7 h excluding primary antibody incubation (2 h to overnight)",
+      "notes": "Does not include NGS indexing primers or DNA polymerase; secondary antibodies are guinea pig anti-rabbit and rabbit anti-mouse"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2282.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53176 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIC/CUT&RUN Assay Kit",
+    "catalogNumbers": [
+      "53180"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&RUN / ChIC assay kit (pAG-MNase)",
+    "description": "ChIC/CUT&RUN kit using a pAG-MNase fusion protein and Concanavalin A beads to cleave and release antibody-targeted chromatin for genome-wide mapping of chromatin-associated proteins from low cell numbers.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53180",
+    "protocolUrl": "https://www.activemotif.com/documents/2263.pdf",
+    "storage": "Components at -20°C, 4°C or room temperature depending on reagent; stable 6 months from receipt",
+    "kitSize": "24 reactions",
+    "applications": [
+      "CUT&RUN",
+      "low-input chromatin profiling",
+      "histone modification mapping"
+    ],
+    "keyParameters": {
+      "input": "5,000-500,000 cells per reaction",
+      "time": "~3 h Day 1, ~5 h Day 2",
+      "notes": "Includes pAG-MNase, H3K4me3 positive control antibody, rabbit IgG negative control, digitonin, spermidine, stop solution with glycogen and RNase A, and DNA purification columns"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2263.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53180 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ATAC-Seq Kit",
+    "catalogNumbers": [
+      "53150"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "ATAC-Seq library preparation kit",
+    "description": "ATAC-Seq kit that uses assembled Tn5 transposomes to simultaneously fragment accessible chromatin in intact nuclei and add sequencing adapters, producing indexed sequencing-ready libraries in a three-step protocol.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53150",
+    "protocolUrl": "https://www.activemotif.com/documents/2182.pdf",
+    "storage": "Components at -20°C or room temperature depending on reagent; stable 6 months from receipt",
+    "kitSize": "16 sequencing-ready libraries",
+    "applications": [
+      "open chromatin profiling",
+      "regulatory element mapping",
+      "chromatin accessibility"
+    ],
+    "keyParameters": {
+      "input": "50,000-100,000 cells per reaction or 20-30 mg tissue",
+      "time": "Sequencing-ready libraries in hours (3-step protocol)",
+      "notes": "Includes assembled transposomes, tagmentation buffer, Q5 polymerase, i7/i5 indexed primers, DNA purification columns and SPRI beads"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2182.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53150 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Fixed Cell ATAC-Seq Kit",
+    "catalogNumbers": [
+      "53151"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "ATAC-Seq library preparation kit for fixed cells",
+    "description": "ATAC-Seq kit optimised for formaldehyde-fixed cells, adding a chromatin-opening and overnight decrosslinking step before tagmentation and indexed library amplification.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53151",
+    "protocolUrl": "https://www.activemotif.com/documents/2262.pdf",
+    "storage": "Components at room temperature, 4°C or -20°C depending on reagent; stable 6 months from receipt",
+    "kitSize": "16 sequencing-ready libraries",
+    "applications": [
+      "chromatin accessibility from fixed samples",
+      "FACS-sorted fixed cells",
+      "open chromatin profiling"
+    ],
+    "keyParameters": {
+      "input": "50,000-100,000 formaldehyde-fixed cells per reaction",
+      "time": "~2 days (Day 1 chromatin opening through overnight decrosslinking; Day 2 purification and PCR)",
+      "notes": "Includes hypotonic buffer, transposomes, tagmentation buffer, Q5 polymerase, 4x4 indexed primers, SPRI beads and purification columns"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2262.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53151 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ATAC-Seq Spike-In Control",
+    "catalogNumbers": [
+      "53154"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Spike-in normalisation control (Drosophila nuclei)",
+    "description": "Cryopreserved Drosophila cell nuclei added to ATAC-Seq samples before processing; Drosophila reads are mapped separately after sequencing and used to generate normalisation factors that correct for technical variation between samples.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53154",
+    "protocolUrl": "https://www.activemotif.com/documents/2278.pdf",
+    "storage": "-80°C; guaranteed 6 months after receipt",
+    "kitSize": "16 reactions (four 80 µL vials of nuclei at 500 nuclei/µL)",
+    "applications": [
+      "ATAC-Seq normalisation",
+      "quantitative chromatin accessibility comparisons"
+    ],
+    "keyParameters": {
+      "input": "10,000 spike-in nuclei per 50,000-100,000 sample cells",
+      "notes": "Drosophila nuclei spike-in; reads mapped separately for normalisation factor calculation"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2278.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53154 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIP-IT Express Magnetic Chromatin Immunoprecipitation Kit (with Sonication Shearing Kit)",
+    "catalogNumbers": [
+      "53008",
+      "53032"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Magnetic bead chromatin immunoprecipitation kit (sonication shearing)",
+    "description": "Magnetic ChIP kit using Protein G-coupled magnetic beads and sonication-based chromatin shearing to 200-1500 bp, with lysis, shearing, ChIP, elution and reverse cross-linking buffers included.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53008",
+    "protocolUrl": "https://www.activemotif.com/documents/1574.pdf",
+    "storage": "Most components -20°C (6 months); magnetic beads 4°C (do not refreeze)",
+    "kitSize": "25 ChIP reactions; 10 chromatin preparations",
+    "applications": [
+      "ChIP-qPCR",
+      "ChIP-Seq",
+      "histone modification and transcription factor mapping"
+    ],
+    "keyParameters": {
+      "input": "~1.5 x 10^7 cells per 15 cm plate (approx. 75 mg tissue) per chromatin prep",
+      "time": "10 min fixation; ~2 h chromatin prep; >=4 h IP (overnight optional); ~2 h cross-link reversal",
+      "notes": "Sonication shearing to 200-1500 bp; Protein G magnetic beads"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1574.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 53008 & 53032 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIP-IT Express Enzymatic Magnetic Chromatin Immunoprecipitation Kit (with Enzymatic Shearing Kit)",
+    "catalogNumbers": [
+      "53009",
+      "53035"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Magnetic bead chromatin immunoprecipitation kit (enzymatic shearing)",
+    "description": "Magnetic ChIP kit that shears chromatin with a proprietary enzymatic cocktail instead of sonication, avoiding heat and emulsification while producing reproducible 200-1500 bp fragments.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53009",
+    "protocolUrl": "https://www.activemotif.com/documents/2218.pdf",
+    "storage": "Most reagents -20°C; Protein G magnetic beads 4°C (do not refreeze)",
+    "kitSize": "25 ChIP reactions; 10 chromatin preparations",
+    "applications": [
+      "ChIP-qPCR",
+      "ChIP-Seq",
+      "sonication-free chromatin shearing"
+    ],
+    "keyParameters": {
+      "input": "~1.5 x 10^7 cells per 15 cm plate per chromatin prep",
+      "time": "Processes 8, 16 or 24 samples in parallel",
+      "notes": "Enzymatic shearing cocktail; Protein G magnetic beads; fragments 200-1500 bp"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2218.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 53009 & 53035 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Nuclear Extract Kit",
+    "catalogNumbers": [
+      "40010",
+      "40410"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation / nuclear extract preparation kit",
+    "description": "Kit for preparing nuclear, cytoplasmic and whole-cell protein fractions from adherent cells, suspension cells and fresh or frozen tissue, using hypotonic buffer, detergent and Lysis Buffer AM1 with protease and phosphatase inhibitors.",
+    "productUrl": "https://www.activemotif.com/catalog/details/40010",
+    "protocolUrl": "https://www.activemotif.com/documents/41.pdf",
+    "storage": "Components at 4°C or -20°C per component; Lysis Buffer 4°C for 6 months; DTT and protease inhibitor cocktail -20°C for 1 year",
+    "kitSize": "100 extractions (40010) or 400 extractions (40410), each based on ~8.8 x 10^6 cells",
+    "applications": [
+      "nuclear extract preparation for TransAM assays",
+      "transcription factor analysis",
+      "subcellular fractionation"
+    ],
+    "keyParameters": {
+      "input": "Adherent cells, suspension cells, fresh or frozen tissue",
+      "time": "~2 h",
+      "notes": "Includes Lysis Buffer AM1, DTT, protease inhibitor cocktail, PBS, phosphatase inhibitors, hypotonic buffer and detergent"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/41.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 40010 & 40410 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone Purification Kit",
+    "catalogNumbers": [
+      "40025"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Histone purification kit (column-based)",
+    "description": "Column-based kit for purifying core histones (H2A/H2B and H3/H4, with optional separate fractionation and H1 recovery) from cells or tissue while preserving post-translational modifications such as phosphorylation, acetylation and methylation.",
+    "productUrl": "https://www.activemotif.com/catalog/details/40025",
+    "protocolUrl": "https://www.activemotif.com/documents/163.pdf",
+    "storage": "Buffers and resin at 4°C; column stored upright at 4°C with gel bed submerged; stable 6 months from purchase",
+    "kitSize": "10 histone purifications",
+    "applications": [
+      "histone PTM analysis",
+      "mass spectrometry sample prep",
+      "Western blot of histones"
+    ],
+    "keyParameters": {
+      "input": "From one 100 mm plate of cells up to grams of tissue",
+      "time": "2 h to overnight extraction; overnight precipitation at 4°C",
+      "notes": "Yields ~0.4-0.5 mg total core histones from adherent cells or ~2.5 mg per gram of tissue"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/163.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 40025 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "MethylCollector Ultra",
+    "catalogNumbers": [
+      "55005"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Methylated DNA enrichment kit (MBD capture)",
+    "description": "Methylated DNA enrichment kit using His-tagged recombinant MBD2b with its binding partner MBD3L1 on magnetic nickel beads to capture CpG-methylated genomic DNA fragments for downstream qPCR or sequencing.",
+    "productUrl": "https://www.activemotif.com/catalog/details/55005",
+    "protocolUrl": "https://www.activemotif.com/documents/1646.pdf",
+    "storage": "-20°C for 6 months; magnetic beads at 4°C for 6 months after first thaw",
+    "kitSize": "30 reactions plus excess reagents for 5 control reactions",
+    "applications": [
+      "methylated DNA enrichment",
+      "MBD-seq",
+      "DNA methylation qPCR"
+    ],
+    "keyParameters": {
+      "input": "1 ng - 1 µg fragmented genomic DNA (analysis possible from fewer than 170 cells)",
+      "time": "~4-5 h (1 h binding at 4°C; 30 min elution at 50°C)",
+      "notes": "Includes high/low salt binding buffers, proteinase K, magnetic nickel beads, control genomic DNA and GAPDH/Xist/NBR2 primer sets"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1646.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 55005 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "hMeDIP Kit",
+    "catalogNumbers": [
+      "55010"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Hydroxymethylated DNA immunoprecipitation kit",
+    "description": "Immunoprecipitation kit that enriches genomic DNA fragments containing 5-hydroxymethylcytosine using a purified 5-hmC polyclonal antibody and Protein G magnetic beads, distinguishing 5-hmC from 5-mC.",
+    "productUrl": "https://www.activemotif.com/catalog/details/55010",
+    "protocolUrl": "https://www.activemotif.com/documents/1737.pdf",
+    "storage": "Most components -20°C; Protein G magnetic beads 4°C (do not refreeze); stable 6 months from receipt",
+    "kitSize": "10 reactions",
+    "applications": [
+      "5-hmC mapping",
+      "hMeDIP-qPCR",
+      "hMeDIP-seq"
+    ],
+    "keyParameters": {
+      "input": "100 ng - 1 µg fragmented genomic DNA per IP",
+      "time": "Overnight antibody incubation at 4°C plus ~2 h processing",
+      "notes": "Includes methylated/hydroxymethylated/unmethylated APC control DNAs, PCR primers and bar magnet"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1737.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 55010 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM NFkB p65 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "40096",
+      "40596"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA in which activated NFkB p65 in nuclear or whole-cell extracts binds an immobilised oligonucleotide carrying the NFkB consensus sequence; a p65 primary antibody and HRP-conjugated secondary give a colorimetric readout at 450 nm.",
+    "productUrl": "https://www.activemotif.com/catalog/details/40096",
+    "protocolUrl": "https://www.activemotif.com/documents/70.pdf",
+    "storage": "Components -20°C or 4°C; nuclear extract control at -80°C; stable 6 months",
+    "kitSize": "1 x 96 reactions (40096) or 5 x 96 reactions (40596)",
+    "applications": [
+      "NFkB activation measurement",
+      "replacement for EMSA/gel shift",
+      "inflammation signalling"
+    ],
+    "keyParameters": {
+      "input": "0.2-10 µg nuclear or whole-cell extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit <0.5 µg nuclear extract/well; reactive with human, mouse and rat p65"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/70.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 40096 and 40596 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM NFkB p50 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "41096",
+      "41596"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA that quantifies activated NFkB p50 in nuclear or whole-cell extracts by capture on an immobilised NFkB consensus oligonucleotide followed by p50 antibody and HRP-conjugated secondary detection.",
+    "productUrl": "https://www.activemotif.com/catalog/details/41096",
+    "protocolUrl": "https://www.activemotif.com/documents/70.pdf",
+    "storage": "Components -20°C or 4°C; nuclear extract control at -80°C; stable 6 months",
+    "kitSize": "1 x 96 reactions (41096) or 5 x 96 reactions (41596)",
+    "applications": [
+      "NFkB p50 activation measurement",
+      "replacement for EMSA/gel shift",
+      "inflammation signalling"
+    ],
+    "keyParameters": {
+      "input": "0.2-10 µg nuclear or whole-cell extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit <0.5 µg nuclear extract/well; human and mouse cross-reactivity"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/70.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 41096 and 41596 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM NFkB p52 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "48196",
+      "48696"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA for activated NFkB p52 (non-canonical pathway) in nuclear or whole-cell extracts, using an immobilised NFkB consensus oligonucleotide with p52 antibody and colorimetric HRP detection.",
+    "productUrl": "https://www.activemotif.com/catalog/details/48196",
+    "protocolUrl": "https://www.activemotif.com/documents/70.pdf",
+    "storage": "Components -20°C or 4°C; nuclear extract control at -80°C; stable 6 months",
+    "kitSize": "1 x 96 reactions (48196) or 5 x 96 reactions (48696)",
+    "applications": [
+      "non-canonical NFkB pathway analysis",
+      "replacement for EMSA/gel shift"
+    ],
+    "keyParameters": {
+      "input": "0.2-10 µg nuclear or whole-cell extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit <0.5 µg nuclear extract/well"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/70.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 48196 and 48696 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM NFkB Family Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "43296"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA panel (five NFkB subunits)",
+    "description": "TransAM kit supplied as two 96-well plates that measures activation of five NFkB subunits (p65, p50, p52, c-Rel and RelB) via binding to an immobilised NFkB consensus oligonucleotide with subunit-specific antibodies and colorimetric HRP detection.",
+    "productUrl": "https://www.activemotif.com/catalog/details/43296",
+    "protocolUrl": "https://www.activemotif.com/documents/68.pdf",
+    "storage": "Components -20°C or 4°C for 6 months; nuclear extract control at -80°C",
+    "kitSize": "2 x 96-well plates",
+    "applications": [
+      "multi-subunit NFkB profiling",
+      "canonical and non-canonical pathway analysis",
+      "inflammation research"
+    ],
+    "keyParameters": {
+      "input": "2-20 µg nuclear extract or 4-40 µg whole-cell extract per well",
+      "notes": "Detects p65, p50, p52, c-Rel and RelB; colorimetric readout at 450 nm"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/68.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 43296 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM Nrf2 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "50296",
+      "50796"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA in which activated Nrf2 in nuclear extracts binds an immobilised oligonucleotide containing the antioxidant response element (ARE) consensus sequence, detected with anti-Nrf2 primary and HRP-conjugated secondary antibodies.",
+    "productUrl": "https://www.activemotif.com/catalog/details/50296",
+    "protocolUrl": "https://www.activemotif.com/documents/1600.pdf",
+    "storage": "Most components -20°C; positive control extract -80°C; some buffers 4°C; stable 6 months",
+    "kitSize": "1 x 96 reactions (50296) or 5 x 96 reactions (50796)",
+    "applications": [
+      "oxidative stress response",
+      "Nrf2/ARE pathway analysis",
+      "toxicology research"
+    ],
+    "keyParameters": {
+      "input": "0.6-10 µg nuclear extract per well (human, mouse, rat)",
+      "time": "~3.5 h after nuclear extract preparation",
+      "notes": "Detection limit >0.6 µg nuclear extract/well; colorimetric readout at 450 nm"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1600.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 50296 & 50796 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM HIF-1 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "47096",
+      "47596"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA in which HIF dimers from nuclear extracts bind an immobilised oligonucleotide containing the hypoxia response element (HRE), detected with an anti-HIF-1 alpha primary antibody and HRP-conjugated secondary.",
+    "productUrl": "https://www.activemotif.com/catalog/details/47096",
+    "protocolUrl": "https://www.activemotif.com/documents/1620.pdf",
+    "storage": "Nuclear extract at -80°C; other components -20°C prior to first use, then 4°C or -20°C per component; stable 6 months",
+    "kitSize": "1 x 96 reactions (47096) or 5 x 96 reactions (47596)",
+    "applications": [
+      "hypoxia signalling",
+      "HIF pathway analysis",
+      "tumour biology"
+    ],
+    "keyParameters": {
+      "input": "2.5-20 µg nuclear extract per well",
+      "notes": "Colorimetric readout at 450 nm with optional 655 nm reference"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1620.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 47096 & 47596 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone Extraction Kit",
+    "catalogNumbers": [
+      "40028"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Acid histone extraction kit",
+    "description": "Rapid acid-extraction kit for isolating core histones with post-translational modifications (acetylation, methylation, phosphorylation) intact from cultured cells or tissue, scalable to 96-well culture plates.",
+    "productUrl": "https://www.activemotif.com/catalog/details/40028",
+    "protocolUrl": "https://www.activemotif.com/documents/2057.pdf",
+    "storage": "Extracted histones snap-frozen and stored at -80°C in acidic conditions",
+    "kitSize": "100 extraction reactions (or two 96-well cell culture plates, 192 wells)",
+    "applications": [
+      "histone PTM analysis",
+      "histone ELISA sample prep",
+      "Western blot of histones"
+    ],
+    "keyParameters": {
+      "input": "100,000-2 million cultured cells per reaction, or 5-50 mg tissue per reaction",
+      "time": "As little as 2.5 h",
+      "notes": "Preserves acetylation, methylation and phosphorylation marks"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2057.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 40028 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Total Histone H3 ELISA",
+    "catalogNumbers": [
+      "53110"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Histone quantification sandwich ELISA",
+    "description": "Sandwich ELISA using a monoclonal capture antibody and polyclonal detection antibody with HRP-conjugated secondary to quantify total histone H3 in purified core histones or acid extracts, with a recombinant H3 standard for the reference curve.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53110",
+    "protocolUrl": "https://www.activemotif.com/documents/1659.pdf",
+    "storage": "Most components 4°C; recombinant protein -80°C; stable 6 months from receipt",
+    "kitSize": "1 x 96 reactions (96-stripwell plate)",
+    "applications": [
+      "histone normalisation for PTM ELISAs",
+      "total H3 quantification"
+    ],
+    "keyParameters": {
+      "input": "15 ng - 1 µg purified core histones or 60 ng - 1 µg acid extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit >15 ng/well purified core histones, >60 ng/well acid extract; read at 450 nm"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1659.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53110 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone H3 acetyl Lys14 ELISA",
+    "catalogNumbers": [
+      "53115"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Histone PTM quantification sandwich ELISA",
+    "description": "Sandwich ELISA quantifying histone H3 acetylated at Lys14 in purified core histones or acid extracts, using a monoclonal capture antibody, polyclonal detection antibody and HRP-conjugated secondary with a recombinant acetylated H3 standard.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53115",
+    "protocolUrl": "https://www.activemotif.com/documents/1744.pdf",
+    "storage": "Reagents 4°C; recombinant control protein -80°C; stable 6 months from receipt",
+    "kitSize": "1 x 96 reactions (96-stripwell plate)",
+    "applications": [
+      "histone acetylation quantification",
+      "HDAC/HAT inhibitor studies",
+      "epigenetic drug screening"
+    ],
+    "keyParameters": {
+      "input": "0.06-2 µg purified core histones or 0.03-1 µg acid-extracted histones per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit >0.06 µg/well purified core histones, >0.03 µg/well acid extract; read at 450 nm"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1744.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53115 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIP-IT qPCR Analysis Kit",
+    "catalogNumbers": [
+      "53029"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "ChIP data normalisation and qPCR analysis kit",
+    "description": "Kit that normalises ChIP-qPCR data across samples and experiments by correcting for primer efficiency, chromatin input and DNA resuspension volume, reporting results as binding events detected per 1,000 cells.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53029",
+    "protocolUrl": "https://www.activemotif.com/documents/1843.pdf",
+    "storage": "DNA standards and primers -20°C; Tris-HCl buffer at room temperature",
+    "kitSize": "10 standard curves",
+    "applications": [
+      "ChIP-qPCR quantification",
+      "cross-experiment normalisation"
+    ],
+    "keyParameters": {
+      "input": "ChIP and input DNA samples",
+      "notes": "Includes DNA standards AM1/AM2/AM3, standard curve primer pair, human and mouse positive/negative control primer sets and an Excel analysis spreadsheet"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1843.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53029 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ATAC-Seq Express Kit",
+    "catalogNumbers": [
+      "53157"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Rapid ATAC-Seq library preparation kit",
+    "description": "Express-format ATAC-Seq kit using assembled Tn5 transposomes, tagmentation buffers, Q5 polymerase and dual-indexed primers to generate 16 sequencing-ready libraries in a three-step protocol from low cell numbers.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53157",
+    "protocolUrl": "https://www.activemotif.com/documents/2316.pdf",
+    "storage": "Components at -20°C or 4°C; stable 6 months from receipt",
+    "kitSize": "16 sequencing-ready libraries",
+    "applications": [
+      "low-input chromatin accessibility",
+      "open chromatin profiling",
+      "rapid ATAC-Seq"
+    ],
+    "keyParameters": {
+      "input": "1,000-100,000 cells per reaction or 20-30 mg tissue",
+      "time": "Sequencing-ready libraries in hours (3-step protocol)",
+      "notes": "i7 and i5 indexed primers give 16 unique index combinations; magnetic bead cleanup included"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2316.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53157 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "CUT&RUN Spike-In Control",
+    "catalogNumbers": [
+      "53183"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Spike-in normalisation control (Drosophila S2 nuclei + antibody)",
+    "description": "Cryopreserved Drosophila S2 cell nuclei plus a Drosophila-specific spike-in antibody, added to CUT&RUN reactions so that Drosophila read counts can be used to compute normalisation factors across samples.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53183",
+    "protocolUrl": "https://www.activemotif.com/documents/2279.pdf",
+    "storage": "Spike-In Antibody -20°C; Spike-In Nuclei -80°C; guaranteed 6 months after receipt",
+    "kitSize": "24 reactions",
+    "applications": [
+      "CUT&RUN normalisation",
+      "quantitative comparison across chromatin samples"
+    ],
+    "keyParameters": {
+      "input": "Added to experimental cells before the assay; spike-in antibody added with target antibody",
+      "notes": "Reads mapped to both experimental and Drosophila genomes to derive normalisation factors"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/2279.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53183 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM p53 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "41196",
+      "41696"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA in which p53 from nuclear extracts binds an immobilised oligonucleotide containing the p53 consensus sequence, detected with a p53 primary antibody and HRP-conjugated secondary for colorimetric readout at 450 nm.",
+    "productUrl": "https://www.activemotif.com/catalog/details/41196",
+    "protocolUrl": "https://www.activemotif.com/documents/73.pdf",
+    "storage": "Most components -20°C (6 months); nuclear extract -80°C; buffers 4°C after preparation",
+    "kitSize": "1 x 96-well plate (41196) or 5 x 96-well plates (41696)",
+    "applications": [
+      "p53 activation measurement",
+      "DNA damage response",
+      "EMSA replacement"
+    ],
+    "keyParameters": {
+      "input": "2-10 µg nuclear extract per well (0.6-10 µg quantitative range)",
+      "time": "3.5 h assay",
+      "notes": "Detection limit <0.6 µg nuclear extract/well; ~5-fold more sensitive and ~20-fold faster than EMSA; human and African green monkey p53"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/73.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 41196 & 41696 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "TransAM STAT3 Transcription Factor Assay Kit",
+    "catalogNumbers": [
+      "45196",
+      "45696"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "DNA-binding ELISA for transcription factor activation",
+    "description": "DNA-binding ELISA measuring activated STAT3 in nuclear or whole-cell extracts by capture on an immobilised STAT consensus oligonucleotide, detected with an activated-STAT3 antibody and HRP-conjugated secondary.",
+    "productUrl": "https://www.activemotif.com/catalog/details/45196",
+    "protocolUrl": "https://www.activemotif.com/documents/77.pdf",
+    "storage": "Most components -20°C or 4°C for 6 months; nuclear extract -80°C",
+    "kitSize": "1 x 96-well plate (45196) or 5 x 96-well plates (45696)",
+    "applications": [
+      "STAT3 activation measurement",
+      "cytokine signalling (IL-6, leptin)",
+      "EMSA replacement"
+    ],
+    "keyParameters": {
+      "input": "0.3-10 µg nuclear extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit <0.6 µg nuclear extract/well; ~10-fold more sensitive and ~40-fold faster than EMSA"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/77.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog Nos. 45196 & 45696 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone Purification Mini Kit",
+    "catalogNumbers": [
+      "40026"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Spin-column histone purification kit",
+    "description": "Spin column format kit for purifying core histones (H2A, H2B, H3 and H4) from small cell or tissue samples while preserving phosphorylation, acetylation and methylation marks.",
+    "productUrl": "https://www.activemotif.com/catalog/details/40026",
+    "protocolUrl": "https://www.activemotif.com/documents/1602.pdf",
+    "storage": "Buffered reagents 4°C; spin columns and collection tubes at room temperature; purified histones at -20°C or -80°C",
+    "kitSize": "20 purifications",
+    "applications": [
+      "histone PTM analysis",
+      "chromatin assembly substrates",
+      "mass spectrometry sample prep"
+    ],
+    "keyParameters": {
+      "input": "As few as 8 x 10^5 cells up to grams of tissue",
+      "time": "Crude extract 30 min - 2 h (or overnight) at 4°C, then column purification",
+      "notes": "Spin column format; PTMs preserved"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1602.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 40026 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "ChIP-IT PBMC",
+    "catalogNumbers": [
+      "53042"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Chromatin immunoprecipitation kit for primary blood cells",
+    "description": "ChIP kit optimised for difficult-to-lyse peripheral blood mononuclear cells (T cells, B cells, NK cells and monocytes), supplying Protein G agarose beads, filtration columns, ChIP/wash buffers and DNA purification reagents for 16 reactions.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53042",
+    "protocolUrl": "https://www.activemotif.com/documents/1925.pdf",
+    "storage": "Most reagents -20°C; Protein G beads 4°C after thawing (do not refreeze); several buffers at room temperature",
+    "kitSize": "16 chromatin preparation and immunoprecipitation reactions",
+    "applications": [
+      "ChIP from primary immune cells",
+      "clinical sample epigenetics",
+      "ChIP-qPCR and ChIP-Seq"
+    ],
+    "keyParameters": {
+      "input": "Minimum 10 million PBMC recommended",
+      "time": "~2-3 days (2 h fixation/lysis; 40 min sonication per sample; overnight IP; 2.5 h cross-link reversal)",
+      "notes": "Yields ~30-50% of the chromatin obtained from standard cell lines"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1925.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53042 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Bisulfite Conversion Kit",
+    "catalogNumbers": [
+      "55016"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Bisulfite conversion kit for DNA methylation analysis",
+    "description": "Bisulfite conversion kit that converts unmethylated cytosines to uracil with greater than 99% efficiency and greater than 80% DNA recovery, including a positive control PCR primer pair to confirm conversion.",
+    "productUrl": "https://www.activemotif.com/catalog/details/55016",
+    "protocolUrl": "https://www.activemotif.com/documents/1899.pdf",
+    "storage": "Components at room temperature or -20°C (Proteinase K and primers); stable 6 months from receipt",
+    "kitSize": "50 reactions",
+    "applications": [
+      "bisulfite sequencing",
+      "methylation-specific PCR",
+      "pyrosequencing sample prep"
+    ],
+    "keyParameters": {
+      "input": "200 pg - 2 µg DNA (optimal 500 ng - 2 µg)",
+      "time": "Conversion in as little as 1.5 h plus 30 min minimum proteinase K treatment",
+      "notes": ">99% conversion of unmethylated cytosines; >80% DNA recovery"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1899.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 55016 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone H3 dimethyl Lys9 ELISA",
+    "catalogNumbers": [
+      "53108"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Histone PTM quantification sandwich ELISA",
+    "description": "Sandwich ELISA in 96-stripwell format quantifying histone H3 dimethylated at Lys9 in purified core histones or acid extracts, with colorimetric HRP detection read at 450 nm.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53108",
+    "protocolUrl": "https://www.activemotif.com/documents/1658.pdf",
+    "storage": "Kit components 4°C for 6 months; recombinant histone protein -80°C",
+    "kitSize": "1 x 96 reactions",
+    "applications": [
+      "H3K9me2 quantification",
+      "heterochromatin studies",
+      "epigenetic drug screening"
+    ],
+    "keyParameters": {
+      "input": "15 ng - 1 µg purified core histones or 5-20 µg acid extract per well",
+      "time": "3.5 h assay",
+      "notes": "Detection limit >15 ng/well purified core histones, >5 µg/well acid extract"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1658.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53108 quoted on fetched Active Motif product manual PDF."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Histone H3 trimethyl Lys9 ELISA",
+    "catalogNumbers": [
+      "53109"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Histone PTM quantification sandwich ELISA",
+    "description": "Sandwich ELISA in 96-stripwell format quantifying histone H3 trimethylated at Lys9 in purified core histones or acid extracts, with colorimetric HRP detection read at 450 nm.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53109",
+    "protocolUrl": "https://www.activemotif.com/documents/1658.pdf",
+    "storage": "Kit components 4°C for 6 months; recombinant histone protein -80°C",
+    "kitSize": "1 x 96 reactions",
+    "applications": [
+      "H3K9me3 quantification",
+      "heterochromatin studies",
+      "epigenetic drug screening"
+    ],
+    "keyParameters": {
+      "input": "15 ng - 1 µg purified core histones or 5-20 µg acid extract per well",
+      "time": "3.5 h assay",
+      "notes": "Shares the manual with the H3K9me2 ELISA (53108); colorimetric readout at 450 nm"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1658.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53109 quoted on fetched Active Motif product manual PDF (Histone H3 trimethyl Lys9 ELISA)."
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "RNA ChIP-IT Magnetic Chromatin Immunoprecipitation Kit",
+    "catalogNumbers": [
+      "53024"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "RNA-protein (RNA ChIP / RIP) immunoprecipitation kit",
+    "description": "Formaldehyde cross-linking based kit for immunoprecipitating RNA-protein complexes from intact chromatin, suited to long non-coding RNA and pre-mRNA regulation studies. Antibody and RT-PCR reagents are user-supplied.",
+    "protocolUrl": "https://www.activemotif.com/documents/1723.pdf",
+    "storage": "Most components -20°C for 6 months; magnetic beads 4°C (do not refreeze)",
+    "kitSize": "25 reactions",
+    "applications": [
+      "RNA immunoprecipitation",
+      "lncRNA-protein interaction mapping",
+      "RIP-RT-PCR"
+    ],
+    "keyParameters": {
+      "input": "~1.5 x 10^7 cells (one 15 cm plate) per chromatin preparation",
+      "time": "~2-3 days",
+      "notes": "Includes magnetic beads, lysis/shearing buffers, DNase I, wash and elution buffers and cross-link reversal reagents"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1723.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53024 quoted on fetched Active Motif product manual PDF.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53024"
+  },
+  {
+    "vendor": "Active Motif",
+    "vendorShort": "Active Motif",
+    "productName": "Tag-ChIP-IT",
+    "catalogNumbers": [
+      "53022"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Epitope-tag based chromatin immunoprecipitation kit",
+    "description": "ChIP kit for proteins lacking ChIP-grade antibodies: the target is expressed with an AM-tag and immunoprecipitated with the supplied AM-Tag antibody, reducing background and enabling detection of low-abundance factors.",
+    "protocolUrl": "https://www.activemotif.com/documents/1971.pdf",
+    "storage": "-20°C (antibody, enzymes, buffers); 4°C (Protein G beads, fixation buffer); room temperature for most other buffers",
+    "kitSize": "16 chromatin preparation and immunoprecipitation reactions",
+    "applications": [
+      "ChIP for antibody-less targets",
+      "tagged transcription factor mapping",
+      "ChIP-qPCR and ChIP-Seq"
+    ],
+    "keyParameters": {
+      "input": "20-30 µg chromatin per ChIP (about one 100 mm dish, ~6.6 x 10^6 cells)",
+      "time": "~2-3 days (1.5 h fixation/lysis; 15 min sonication per sample; overnight IP; 2.5 h cross-link reversal and purification)",
+      "notes": "Includes AM-Tag antibody (160 µL), Protein G agarose beads, 16 ChIP filtration columns and 16 DNA purification columns"
+    },
+    "sourceUrl": "https://www.activemotif.com/documents/1971.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog No. 53022 quoted on fetched Active Motif product manual PDF.",
+    "productUrl": "https://www.activemotif.com/catalog/details/53022"
+  }
+]

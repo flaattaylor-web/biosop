@@ -1,0 +1,1032 @@
+[
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SF Cell Line 4D-Nucleofector X Kit L",
+    "catalogNumbers": [
+      "V4XC-2024"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for cell lines",
+    "description": "Nucleofection kit for efficient transfection of difficult-to-transfect cell lines such as K-562, Neuro-2A or RAW264.7 in the 100 µL Nucleocuvette Vessel format on the 4D-Nucleofector X Unit.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197171/SF-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "24 reactions (100 µL format)",
+    "applications": [
+      "cell line transfection",
+      "plasmid DNA delivery",
+      "siRNA/mRNA delivery",
+      "CRISPR RNP delivery"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "Contains 2.25 mL SF Nucleofector Solution, 0.5 mL Supplement 1, 50 µg pmaxGFP Vector, 24 x 100 µL Nucleocuvette Vessels, 24 single-use pipettes"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197171/SF-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XC-2024 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SF Cell Line 4D-Nucleofector X Kit S",
+    "catalogNumbers": [
+      "V4XC-2032"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for cell lines",
+    "description": "Nucleofection kit for efficient transfection of difficult-to-transfect cell lines such as K-562, Neuro-2A and RAW264.7 in the 20 µL 16-well Nucleocuvette Strip format on the 4D-Nucleofector X Unit.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197174/SF-Cell-Line-4D-Nucleofector-X-Kit-S",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "32 reactions (2 x 16-well Nucleocuvette Strips, 20 µL format)",
+    "applications": [
+      "cell line transfection",
+      "medium-throughput nucleofection",
+      "CRISPR RNP delivery"
+    ],
+    "keyParameters": {
+      "notes": "Contains 0.675 mL SF Nucleofector Solution, 0.15 mL Supplement 1, 50 µg pmaxGFP Vector, 2 x 16-well Nucleocuvette Strips; over 70 optimized cell types supported"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197174/SF-Cell-Line-4D-Nucleofector-X-Kit-S",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XC-2032 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SG Cell Line 4D-Nucleofector X Kit L",
+    "catalogNumbers": [
+      "V4XC-3024"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for cell lines",
+    "description": "Nucleofection kit suited for transfecting difficult-to-transfect cell lines in the 100 µL Nucleocuvette Vessel format on the 4D-Nucleofector X Unit. Optimized protocols exist for Ba/F3, Raji, THP-1, CHO-S, NIH/3T3 and others.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197172/SG-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "24 reactions (100 µL format)",
+    "applications": [
+      "cell line transfection",
+      "suspension cell line transfection",
+      "CHO-S engineering"
+    ],
+    "keyParameters": {
+      "notes": "Contains 2.25 mL SG Nucleofector Solution, 0.5 mL Supplement 1, 50 µg pmaxGFP Vector, 24 x 100 µL Nucleocuvette Vessels, 24 single-use pipettes"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197172/SG-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XC-3024 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SE Cell Line 4D-Nucleofector X Kit L",
+    "catalogNumbers": [
+      "V4XC-1024"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for cell lines",
+    "description": "Nucleofection kit for efficient transfection of difficult-to-transfect cell lines such as Jurkat or MCF-7 in the 4D-Nucleofector X Unit (100 µL format).",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197170/SE-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "24 reactions (100 µL Nucleocuvette Vessel format)",
+    "applications": [
+      "cell line transfection",
+      "Jurkat and MCF-7 transfection",
+      "low-throughput nucleofection"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "Contains 2.25 mL SE Nucleofector Solution, 0.5 mL Supplement 1, 50 µg pmaxGFP Vector, 24 x 100 µL Nucleocuvette Vessels"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197170/SE-Cell-Line-4D-Nucleofector-X-Kit-L",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XC-1024 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Cell Line Optimization 4D-Nucleofector X Kit",
+    "catalogNumbers": [
+      "V4XC-9064"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Nucleofection condition optimization kit",
+    "description": "Optimization kit for rapid determination of Nucleofection conditions for cell lines that lack an Optimized Protocol for the 4D-Nucleofector X Unit. Three Nucleofector Solutions (SE, SF, SG) can be tested with pre-selected programs in a single experiment.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197176/Cell-Line-Optimization-4D-Nucleofector-X-Kit",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "64 reactions (4 x 16-well Nucleocuvette Strips, 20 µL)",
+    "applications": [
+      "nucleofection condition screening",
+      "new cell line protocol development"
+    ],
+    "keyParameters": {
+      "notes": "Contains 0.675 mL each of Nucleofector Solutions SE, SF and SG, 3 x 0.15 mL Supplement 1, 50 µg pmaxGFP Vector, 4 x 16-well Nucleocuvette Strips"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197176/Cell-Line-Optimization-4D-Nucleofector-X-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XC-9064 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "P3 Primary Cell 4D-Nucleofector X Kit S",
+    "catalogNumbers": [
+      "V4XP-3032"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for primary cells",
+    "description": "Nucleofection kit delivering high transfection efficiencies for primary cells including human T cells, CD34+ cells, rat neurons, hepatocytes and keratinocytes, in the 20 µL Nucleocuvette Strip format on the 4D-Nucleofector X Unit.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197190/P3-Primary-Cell-4D-Nucleofector-X-Kit-S",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "32 reactions (2 x 16-well Nucleocuvette Strips, 20 µL format)",
+    "applications": [
+      "primary cell transfection",
+      "T cell engineering",
+      "CD34+ cell editing",
+      "neuron transfection"
+    ],
+    "keyParameters": {
+      "input": "5 x 10^4 to 1 x 10^6 cells per reaction",
+      "notes": "Contains 0.675 mL P3 Primary Cell Nucleofector Solution, 0.15 mL Supplement 1, 50 µg pmaxGFP Vector, 2 x 16-well Nucleocuvette Strips"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197190/P3-Primary-Cell-4D-Nucleofector-X-Kit-S",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XP-3032 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "P5 Primary Cell 4D-Nucleofector X Kit L",
+    "catalogNumbers": [
+      "V4XP-5024"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for primary cells",
+    "description": "Nucleofection kit for efficient transfection of specific primary cells such as HUVECs and skeletal myoblasts using the 4D-Nucleofector X Unit in the 100 µL format.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197187/P5-Primary-Cell-4D-Nucleofector-X-Kit-L",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "24 reactions (100 µL format)",
+    "applications": [
+      "HUVEC transfection",
+      "skeletal myoblast transfection",
+      "primary cell gene delivery"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "Contains 2.25 mL P5 Primary Cell Nucleofector Solution, 0.5 mL Supplement 3, 50 µg pmaxGFP Vector, 24 x 100 µL Nucleocuvette Vessels; conditions transferable to Shuttle and 384-well systems"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197187/P5-Primary-Cell-4D-Nucleofector-X-Kit-L",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XP-5024 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Primary Cell Optimization 4D-Nucleofector X Kit",
+    "catalogNumbers": [
+      "V4XP-9096"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Nucleofection condition optimization kit (primary cells)",
+    "description": "Optimization kit for rapidly determining Nucleofection conditions for primary cell types lacking an established Optimized Protocol for the 4D-Nucleofector X Unit. Contains all five primary cell solutions (P1-P5).",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197193/Primary-Cell-Optimization-4D-Nucleofector-X-Kit",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "96 reactions (6 x 16-well Nucleocuvette Strips, 20 µL)",
+    "applications": [
+      "primary cell nucleofection optimization",
+      "protocol development for endothelial, epithelial, fibroblast, glial, neuronal, smooth muscle and stem cells"
+    ],
+    "keyParameters": {
+      "notes": "Contains 0.675 mL each of Nucleofector Solutions P1-P5, 4 x 0.15 mL Supplement 1, 1 x 0.15 mL Supplement 3, 50 µg pmaxGFP Vector, 6 x 16-well Nucleocuvette Strips"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197193/Primary-Cell-Optimization-4D-Nucleofector-X-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4XP-9096 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "MycoAlert Mycoplasma Detection Kit (10 Tests)",
+    "catalogNumbers": [
+      "LT07-118"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Luminescent mycoplasma detection assay",
+    "description": "Selective biochemical test to detect Mycoplasma contamination in cell cultures. Viable mycoplasma are lysed and released mycoplasmal enzymes convert ADP to ATP, which is measured by luminescence before and after substrate addition.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186462/MycoAlert-Mycoplasma-Detection-Kit-%2810-Tests%29",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/30191",
+    "kitSize": "10 tests: 2 x 600 µL MycoAlert Reagent (lyophilized), 2 x 600 µL MycoAlert Substrate (lyophilized), 1 x 10 mL Assay Buffer",
+    "applications": [
+      "cell culture mycoplasma screening",
+      "cell bank QC",
+      "routine culture monitoring"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernatant",
+      "time": "< 20 minutes",
+      "notes": "Detects Mycoplasma, Acholeplasma, Entomoplasma and Spiroplasma (not Ureaplasma); requires a luminometer"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186462/MycoAlert-Mycoplasma-Detection-Kit-%2810-Tests%29",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LT07-118 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "MycoAlert PLUS Mycoplasma Detection Kit (100 Tests)",
+    "catalogNumbers": [
+      "LT07-710"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Luminescent mycoplasma detection assay",
+    "description": "Biochemical assay that detects mycoplasma contamination in cell cultures using mycoplasmal enzymes absent in eukaryotic cells. Released enzymes react with the MycoAlert PLUS Substrate, catalyzing conversion of ADP to ATP and generating a luminescent signal.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000200203/MycoAlert-PLUS-Mycoplasma-Detection-Kit-%28100-Tests%29",
+    "kitSize": "100 tests: 1 x 10 mL MycoAlert PLUS Reagent (lyophilized), 1 x 10 mL MycoAlert PLUS Substrate (lyophilized), 1 x 20 mL Assay Buffer",
+    "applications": [
+      "cell culture mycoplasma screening",
+      "cell bank QC",
+      "high-throughput culture monitoring"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernatant",
+      "time": "< 20 minutes",
+      "notes": "Compatible with tube luminometers, plate luminometers and multifunctional readers; detects common mollicutes except Ureaplasma"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000200203/MycoAlert-PLUS-Mycoplasma-Detection-Kit-%28100-Tests%29",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LT07-710 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "PyroGene Recombinant Factor C Endpoint Fluorescent Assay",
+    "catalogNumbers": [
+      "50-658U"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Recombinant Factor C endotoxin detection assay",
+    "description": "Endotoxin detection assay using recombinant Factor C instead of horseshoe crab lysate. Endotoxin binding activates rFC, which cleaves a fluorogenic substrate read at 380/440 nm within one hour.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000182383/PyroGene-Recombinant-Factor-C-Endpoint-Fluorescent-Assay",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/document/30836",
+    "kitSize": "192 tests (2 x 96 tests): 2 vials rFC enzyme solution, 2 x 6 mL fluorogenic substrate, 2 x 5 mL rFC assay buffer, 2 vials endotoxin control, 2 x 30 mL LAL Reagent Water",
+    "applications": [
+      "bacterial endotoxin testing",
+      "final product release testing",
+      "animal-free pyrogen testing"
+    ],
+    "keyParameters": {
+      "input": "Aqueous samples",
+      "time": "~1 hour",
+      "notes": "Sensitivity 0.005-5.0 EU/mL; endotoxin specific, avoids false-positive beta-glucan reactions; read at 380/440 nm"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000182383/PyroGene-Recombinant-Factor-C-Endpoint-Fluorescent-Assay",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 50-658U present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Kinetic-QCL Kinetic Chromogenic LAL Assay, 192 Test Kit",
+    "catalogNumbers": [
+      "50-650U"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Kinetic chromogenic LAL endotoxin assay",
+    "description": "Quantitative kinetic chromogenic Limulus Amebocyte Lysate assay for Gram-negative bacterial endotoxin. Samples are mixed with reconstituted LAL reagent in a 96-well plate and absorbance monitored at 405 nm; reaction time is inversely related to endotoxin concentration.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000182378/Kinetic-QCL-Kinetic-Chromogenic-LAL-Assay%2C-192-Test-Kit",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/30977",
+    "kitSize": "192 tests: LAL lysate (8 vials x 24 tests), 2 vials endotoxin standard, 3 x 30 mL LAL Reagent Water",
+    "applications": [
+      "endotoxin testing of vaccines",
+      "antibiotics",
+      "biologicals",
+      "small-volume parenterals"
+    ],
+    "keyParameters": {
+      "time": "Kinetic read at 405 nm in an incubating plate reader",
+      "notes": "Sensitivity 0.005-50.0 EU/mL; less prone to product inhibition than turbidimetric and gel clot methods"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000182378/Kinetic-QCL-Kinetic-Chromogenic-LAL-Assay%2C-192-Test-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 50-650U present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "EGM-2 Endothelial Cell Growth Medium-2 BulletKit",
+    "catalogNumbers": [
+      "CC-3162",
+      "CC-3156",
+      "CC-4176"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Endothelial cell growth medium (BulletKit)",
+    "description": "Culture system optimized for primary endothelial cells including HUVEC, aortic and pulmonary artery endothelial cells. Supplied as EBM-2 Basal Medium plus the EGM-2 SingleQuots supplement pack; final FBS concentration 2% with VEGF and without bovine brain extract.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185303/EGM-2-Endothelial-Cell-Growth-Medium-2-BulletKit",
+    "kitSize": "1 kit: EBM-2 Basal Medium (CC-3156) 500 mL + EGM-2 SingleQuots Supplement Pack (CC-4176: FBS 10 mL, hydrocortisone 0.2 mL, hFGF-B 2 mL, VEGF 0.5 mL, R3-IGF-1 0.5 mL, ascorbic acid 0.5 mL, hEGF 0.5 mL, GA-1000 0.5 mL, heparin 0.5 mL)",
+    "applications": [
+      "HUVEC culture",
+      "aortic and pulmonary artery endothelial cell culture",
+      "angiogenesis and tube formation assays"
+    ],
+    "keyParameters": {
+      "notes": "Final FBS concentration 2%; contains VEGF; BBE-free"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185303/EGM-2-Endothelial-Cell-Growth-Medium-2-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3162 (kit), CC-3156 (basal medium) and CC-4176 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Human T Cell Nucleofector Kit",
+    "catalogNumbers": [
+      "VPA-1002"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for primary human T cells",
+    "description": "Nucleofection kit optimized for efficient transfection of unstimulated or pre-stimulated primary human T cells using the Nucleofector I/II/2b System, with retained cell functionality after transfection.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191771/Human-T-Cell-Nucleofector-Kit",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/document/21685",
+    "kitSize": "25 reactions: 2.25 mL Nucleofector Solution for Human T Cells, 0.5 mL Supplement 1, 30 µg pmaxGFP Vector, 25 aluminium cuvettes (100 µL), 25 single-use pipettes",
+    "applications": [
+      "primary human T cell transfection",
+      "immunology research",
+      "T cell engineering"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "For Nucleofector I/II/2b Systems, single cuvette format"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191771/Human-T-Cell-Nucleofector-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number VPA-1002 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Cell Line Nucleofector Kit V",
+    "catalogNumbers": [
+      "VCA-1003"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for cell lines",
+    "description": "Nucleofection kit for difficult-to-transfect cell lines on the Nucleofector I/II/2b System, with optimized protocols for more than 50 cell types including HepG2, HL-60, Jurkat, K-562, MCF7, SH-SY5Y and THP-1.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191667/Cell-Line-Nucleofector-Kit-V",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/21037",
+    "kitSize": "25 reactions: 2.25 mL Nucleofector Solution V, 0.5 mL Supplement 1, 30 µg pmaxGFP Vector, 25 aluminium cuvettes (100 µL), 25 single-use pipettes",
+    "applications": [
+      "cell line transfection",
+      "plasmid and siRNA delivery",
+      "stable line generation"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "Single cuvette format for Nucleofector I/II/2b Systems"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191667/Cell-Line-Nucleofector-Kit-V",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number VCA-1003 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "MEGM Mammary Epithelial Cell Growth Medium BulletKit",
+    "catalogNumbers": [
+      "CC-3150",
+      "CC-3151",
+      "CC-4136"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free mammary epithelial cell growth medium",
+    "description": "Serum-free BulletKit medium system for culture of primary human mammary epithelial cells and the MCF-10A and MCF-12A cell lines, supplied as MEBM Basal Medium plus a MEGM SingleQuots supplement pack.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185294/MEGM-Mammary-Epithelial-Cell-Growth-Medium-BulletKit",
+    "kitSize": "1 kit: MEBM Basal Medium (CC-3151) 500 mL + MEGM SingleQuots pack (CC-4136: BPE 2.0 mL, hEGF 0.5 mL, insulin 0.5 mL, hydrocortisone 0.5 mL, GA-1000 0.5 mL)",
+    "applications": [
+      "primary human mammary epithelial cell (HMEC) culture",
+      "MCF-10A and MCF-12A culture",
+      "breast cancer research"
+    ],
+    "keyParameters": {
+      "notes": "Serum-free formulation; supplements supplied as colour-capped SingleQuots vials"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185294/MEGM-Mammary-Epithelial-Cell-Growth-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3150 (kit), CC-3151 (MEBM basal) and CC-4136 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "BEGM Bronchial Epithelial Cell Growth Medium BulletKit",
+    "catalogNumbers": [
+      "CC-3170",
+      "CC-3171",
+      "CC-4175"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free bronchial epithelial cell growth medium",
+    "description": "Serum-free BulletKit medium for cultivating normal and diseased human bronchial epithelial cells, supplied as BEBM Basal Medium plus a nine-component BEGM SingleQuots supplement pack.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185308/BEGM-Bronchial-Epithelial-Cell-Growth-Medium-BulletKit",
+    "kitSize": "1 kit: BEBM Basal Medium (CC-3171) 500 mL + BEGM SingleQuots pack (CC-4175: BPE 2.0 mL, insulin, hydrocortisone, GA-1000, retinoic acid, transferrin, triiodothyronine, epinephrine, hEGF, 0.5 mL each)",
+    "applications": [
+      "normal human bronchial epithelial (NHBE) cell culture",
+      "airway disease modeling",
+      "respiratory toxicology"
+    ],
+    "keyParameters": {
+      "notes": "Serum-free; optimized for cells from normal and diseased tissue"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185308/BEGM-Bronchial-Epithelial-Cell-Growth-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3170 (kit), CC-3171 (BEBM basal) and CC-4175 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "MSCGM Mesenchymal Stem Cell Growth Medium BulletKit",
+    "catalogNumbers": [
+      "PT-3001",
+      "PT-3238",
+      "PT-4105"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Mesenchymal stem cell growth medium",
+    "description": "Culture system designed to proliferate human bone marrow derived mesenchymal cells in an undifferentiated state. Serum is screened to prevent spontaneous differentiation while preserving osteogenic, chondrogenic and adipogenic potential.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186709/MSCGM-Mesenchymal-Stem-Cell-Growth-Medium-BulletKit",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/28460",
+    "kitSize": "1 kit: MSCBM Basal Medium (PT-3238) 500 mL + MSCGM SingleQuots Growth Supplement Kit (PT-4105: MCGS, L-glutamine, GA-1000)",
+    "applications": [
+      "hMSC expansion",
+      "undifferentiated MSC maintenance",
+      "MSC differentiation workflows"
+    ],
+    "keyParameters": {
+      "input": "Human bone marrow derived mesenchymal stem cells",
+      "notes": "Serum pre-screened against spontaneous differentiation"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186709/MSCGM-Mesenchymal-Stem-Cell-Growth-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers PT-3001 (kit), PT-3238 (basal) and PT-4105 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "hMSC Osteogenic Differentiation Medium BulletKit",
+    "catalogNumbers": [
+      "PT-3002",
+      "PT-3924",
+      "PT-4120"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "MSC osteogenic differentiation medium",
+    "description": "Serum-containing culture system that induces osteogenic differentiation of human bone marrow derived mesenchymal stem cells into mature, functionally active osteoblasts in as few as 14 days.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000188630/Human-Mesenchymal-Stem-Cell-(hMSC)-Osteogenic-Differentiation-Medium-BulletKit",
+    "kitSize": "1 kit: hMSC Osteogenic Differentiation Basal Medium (PT-3924) 170 mL + Osteogenic SingleQuots Supplements Kit (PT-4120)",
+    "applications": [
+      "osteogenic differentiation",
+      "bone biology research",
+      "MSC potency assessment"
+    ],
+    "keyParameters": {
+      "input": "~750,000 bone marrow derived hMSC (about 25 wells of a 6-well plate) per bottle",
+      "time": "as few as 14 days",
+      "notes": "Differentiation can be validated with OsteoImage Bone Mineralization Assay"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000188630/Human-Mesenchymal-Stem-Cell-(hMSC)-Osteogenic-Differentiation-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers PT-3002 (kit), PT-3924 (basal) and PT-4120 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "hMSC Adipogenic Differentiation Medium BulletKit",
+    "catalogNumbers": [
+      "PT-3004",
+      "PT-3102A",
+      "PT-3102B",
+      "PT-4122",
+      "PT-4135"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "MSC adipogenic differentiation medium",
+    "description": "Serum-containing media system that drives bone marrow derived hMSC toward mature, functional adipocytes using alternating induction and maintenance media.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186712/Human-Mesenchymal-Stem-Cell-%28hMSC%29-Adipogenic-Differentiation-Medium-BulletKit",
+    "kitSize": "1 kit: adipogenic maintenance medium (PT-3102A), adipogenic induction medium (PT-3102B), maintenance SingleQuots (PT-4122), induction SingleQuots (PT-4135)",
+    "applications": [
+      "adipogenic differentiation",
+      "metabolic and obesity research",
+      "MSC potency assessment"
+    ],
+    "keyParameters": {
+      "input": "~3 million bone marrow derived hMSC (about 15 wells of a 6-well plate) per kit",
+      "time": "~19 days"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186712/Human-Mesenchymal-Stem-Cell-%28hMSC%29-Adipogenic-Differentiation-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers PT-3004, PT-3102A, PT-3102B, PT-4122 and PT-4135 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "hMSC - Human Mesenchymal Stem Cells (Poietics)",
+    "catalogNumbers": [
+      "PT-2501"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Cryopreserved primary human bone marrow MSCs",
+    "description": "Poietics normal human bone marrow derived mesenchymal stem cells isolated from adult human bone marrow. Cells differentiate down chondrogenic, osteogenic, adipogenic and neural lineages and are cryopreserved after passage two.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186706/hMSC---Human-Mesenchymal-Stem-Cells",
+    "storage": "Cryopreserved (liquid nitrogen)",
+    "kitSize": "1 cryopreserved ampule, >=750,000 viable cells",
+    "applications": [
+      "MSC biology",
+      "differentiation assays",
+      "regenerative medicine research"
+    ],
+    "keyParameters": {
+      "notes": "Express CD29, CD44, CD73, CD90, CD105, CD166; negative for CD14, CD19, CD34, CD45, HLA-DR; recommended for use through passage five; tested negative for mycoplasma, bacteria, yeast, fungi, HIV-1 and hepatitis B/C"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000186706/hMSC---Human-Mesenchymal-Stem-Cells",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number PT-2501 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "HUVEC - Human Umbilical Vein Endothelial Cells, Pooled, in EGM-2",
+    "catalogNumbers": [
+      "C2519A"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Cryopreserved pooled primary endothelial cells",
+    "description": "Cryopreserved pooled human umbilical vein endothelial cells from multiple donors supplied in EGM-2 Medium. Guaranteed through 15 population doublings and tested negative for mycoplasma, bacteria, yeast and fungi.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000184665/HUVEC-%E2%80%93-Human-Umbilical-Vein-Endothelial-Cells,-Pooled,-in-EGM%E2%84%A2-2",
+    "storage": "Cryopreserved (liquid nitrogen)",
+    "kitSize": "1 cryopreserved ampule, >=500,000 cells",
+    "applications": [
+      "angiogenesis and tube formation assays",
+      "wound healing",
+      "vascular biology",
+      "inflammation and oncology research",
+      "transfection studies"
+    ],
+    "keyParameters": {
+      "notes": "CD31/CD105 positive; pooled donors reduce donor-to-donor variability; Certificate of Analysis supplied"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000184665/HUVEC-%E2%80%93-Human-Umbilical-Vein-Endothelial-Cells,-Pooled,-in-EGM%E2%84%A2-2",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number C2519A present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "X-VIVO 15 Serum-free Hematopoietic Cell Medium",
+    "catalogNumbers": [
+      "04-418Q"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free hematopoietic / immune cell medium",
+    "description": "Xeno-free serum-free hematopoietic cell medium containing L-glutamine, gentamicin and phenol red. Optimized for proliferation of tumor infiltrating lymphocytes (TIL) and expansion of CD3+ cells, monocytes, macrophages, NK cells and lymphocytic cell lines.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Culture-Media-and-Reagents/p/000000000000180994/X-VIVO-15-Serum-free-Hematopoietic-Cell-Medium",
+    "kitSize": "1 L bottle",
+    "applications": [
+      "TIL expansion",
+      "peripheral blood lymphocyte proliferation",
+      "dendritic cell culture",
+      "CAR-T cell development",
+      "macrophage culture"
+    ],
+    "keyParameters": {
+      "notes": "Contains L-glutamine, gentamicin and phenol red; serum-free and xeno-free"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Culture-Media-and-Reagents/p/000000000000180994/X-VIVO-15-Serum-free-Hematopoietic-Cell-Medium",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 04-418Q present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "P4 Primary Cell 4D-Nucleofector X Kit L",
+    "catalogNumbers": [
+      "V4XP-4024",
+      "V4XP-4020"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for primary cells",
+    "description": "Nucleofection kit giving high transfection efficiencies for primary cells while maintaining post-transfection functionality, optimized for mouse B cells, immature dendritic cells and mouse embryonic fibroblasts on the 4D-Nucleofector X Unit (100 µL format).",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197186/P4-Primary-Cell-4D-Nucleofector-X-Kit-L",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "24 reactions (V4XP-4024) or 12 reactions (V4XP-4020); 2.25 mL P4 Nucleofector Solution, 0.5 mL Supplement 1, 50 µg pmaxGFP Vector, 100 µL Nucleocuvette Vessels and single-use pipettes",
+    "applications": [
+      "mouse B cell transfection",
+      "dendritic cell transfection",
+      "MEF transfection"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000197186/P4-Primary-Cell-4D-Nucleofector-X-Kit-L",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers V4XP-4024 and V4XP-4020 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Human Mesenchymal Stem Cell Nucleofector Kit",
+    "catalogNumbers": [
+      "VPE-1001"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation (Nucleofection) kit for primary hMSCs",
+    "description": "Nucleofection kit for efficient transfection of primary human mesenchymal stem cells on the Nucleofector I/II/2b System, retaining cell functionality after transfection.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191792/Human-Mesenchymal-Stem-Cell-Nucleofector-Kit",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "25 reactions: 2.25 mL Nucleofector Solution for hMSC, 0.5 mL Supplement 1, 30 µg pmaxGFP Vector, 25 aluminium cuvettes (100 µL), 25 single-use pipettes",
+    "applications": [
+      "hMSC transfection",
+      "regenerative medicine research",
+      "gene function studies in MSCs"
+    ],
+    "keyParameters": {
+      "input": "2 x 10^5 to 2 x 10^7 cells per reaction",
+      "notes": "Single cuvette format"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000191792/Human-Mesenchymal-Stem-Cell-Nucleofector-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number VPE-1001 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "ViaLight Plus Cell Proliferation and Cytotoxicity BioAssay Kit, 1000 Test",
+    "catalogNumbers": [
+      "LT07-121",
+      "LT27-212",
+      "LT27-079",
+      "LT27-076"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Bioluminescent ATP cell viability / proliferation assay",
+    "description": "Bioluminescent assay measuring cellular ATP to determine cell viability and proliferation. Two-step, non-radioactive protocol requiring no cell washing or medium removal, with a luminescent signal half-life over 5 hours.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186463/ViaLight-Plus-Cell-Proliferation-and-Cytotoxicity-BioAssay-Kit%2C-1000-Test",
+    "kitSize": "1000 tests (10 plates): 2 x ATP Monitoring Reagent plus (LT27-212, lyophilized), 2 x 50 mL Assay Buffer (LT27-079), 1 x 50 mL Cell Lysis Reagent (LT27-076)",
+    "applications": [
+      "cell proliferation assays",
+      "cytotoxicity screening",
+      "96- and 384-well HTS",
+      "adherent and suspension cultures"
+    ],
+    "keyParameters": {
+      "input": "As few as 10 cells per well",
+      "time": "~10 minutes",
+      "notes": "Five-decade dynamic range; requires a luminometer"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186463/ViaLight-Plus-Cell-Proliferation-and-Cytotoxicity-BioAssay-Kit%2C-1000-Test",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LT07-121 and component numbers LT27-212/LT27-079/LT27-076 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "ToxiLight Non-Destructive Cytotoxicity BioAssay Kit with Plates, 500 Test",
+    "catalogNumbers": [
+      "LT17-217",
+      "LT27-060",
+      "LT27-066"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Bioluminescent adenylate kinase cytotoxicity assay",
+    "description": "Bioluminescent assay that measures release of the enzyme adenylate kinase (AK) from damaged cells. Because cells are not lysed, the assay is non-destructive and the same sample can be used for further assays.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186486/ToxiLight%E2%84%A2-Non-Destructive-Cytotoxicity-BioAssay-Kit,-500-Test",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/30547",
+    "kitSize": "500 tests (5 plates): 5 x 10 mL AK Detection Reagent (LT27-060, lyophilized), 1 x 50 mL AK Assay Buffer (LT27-066), 5 x 96-well white-walled microplates",
+    "applications": [
+      "cytotoxicity screening",
+      "non-destructive toxicity testing",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "Detection limit ~10 cells per microwell",
+      "time": "Signal readable 5 minutes after reagent addition",
+      "notes": "Dynamic range over 5 orders of magnitude"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000186486/ToxiLight%E2%84%A2-Non-Destructive-Cytotoxicity-BioAssay-Kit,-500-Test",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number LT17-217 and component numbers LT27-060/LT27-066 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "OsteoImage Mineralization Assay, 500 Test",
+    "catalogNumbers": [
+      "PA-1503"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Fluorescent hydroxyapatite mineralization assay",
+    "description": "Rapid fluorescent in vitro assay that detects bone cell mineralization by hydroxyapatite-specific binding. Works with primary osteoblasts, osteoblast stem cells and cell lines and completes in under 90 minutes without extraction steps.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000187678/OsteoImage%E2%84%A2-Mineralization-Assay%2C-500-Test",
+    "kitSize": "500 tests (5 pre-coated 96-well plates): 500 µL OsteoImage Staining Reagent, 50 mL Staining Reagent Dilution Buffer, 50 mL 10X Wash Buffer",
+    "applications": [
+      "osteogenic differentiation readout",
+      "bone mineralization quantification",
+      "microscopy and plate-reader analysis"
+    ],
+    "keyParameters": {
+      "time": "< 90 minutes",
+      "notes": "Hydroxyapatite specific, unlike von Kossa or Alizarin Red staining"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Cell-analysis/p/000000000000187678/OsteoImage%E2%84%A2-Mineralization-Assay%2C-500-Test",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number PA-1503 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SmGM-2 Smooth Muscle Cell Growth Medium-2 BulletKit",
+    "catalogNumbers": [
+      "CC-3182",
+      "CC-3181",
+      "CC-4149"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Smooth muscle cell growth medium (Clonetics BulletKit)",
+    "description": "Clonetics culture system developed for maintenance and expansion of human smooth muscle cells from vascular, cardiac, airway and prostate origins. Supplied as SmBM Basal Medium plus SmGM-2 SingleQuots; final formulation contains 5% FBS.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185312/SmGM--2-Smooth-Muscle-Cell-Growth-Medium--2-BulletKit",
+    "kitSize": "1 kit: SmBM Basal Medium (CC-3181) 500 mL + SmGM-2 SingleQuots pack (CC-4149: FBS 25 mL, insulin 0.5 mL, hFGF-B 1.0 mL, hEGF 0.5 mL, GA-1000 0.5 mL)",
+    "applications": [
+      "aortic, coronary artery, bronchial, pulmonary artery, prostate and uterine smooth muscle cell culture",
+      "vascular biology"
+    ],
+    "keyParameters": {
+      "notes": "5% FBS final concentration"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185312/SmGM--2-Smooth-Muscle-Cell-Growth-Medium--2-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3182 (kit), CC-3181 (SmBM basal) and CC-4149 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SAGM Small Airway Epithelial Cell Growth Medium BulletKit",
+    "catalogNumbers": [
+      "CC-3118",
+      "CC-3119",
+      "CC-4124"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free small airway epithelial cell growth medium",
+    "description": "Serum-free BulletKit system optimized to support human small airway epithelial cells from normal and diseased tissue, supplied as SABM Basal Medium plus a ten-component SAGM SingleQuots supplement pack.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185278/SAGM-Small-Airway-Epithelial-Cell-Growth-Medium-BulletKit",
+    "kitSize": "1 kit: SABM Basal Medium (CC-3119) 500 mL + SAGM SingleQuots pack (CC-4124: BPE 2.0 mL, insulin, hydrocortisone, GA-1000, retinoic acid, fatty-acid-free BSA 5 mL, transferrin, triiodothyronine, epinephrine, hEGF)",
+    "applications": [
+      "small airway epithelial cell (SAEC) culture",
+      "respiratory disease modeling",
+      "epithelial co-culture experiments"
+    ],
+    "keyParameters": {
+      "notes": "Serum-free; supports cells from normal and diseased tissue"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185278/SAGM-Small-Airway-Epithelial-Cell-Growth-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3118 (kit), CC-3119 (SABM basal) and CC-4124 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "HCM Hepatocyte Culture Medium BulletKit",
+    "catalogNumbers": [
+      "CC-3198",
+      "CC-3199",
+      "CC-4182"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free primary hepatocyte maintenance medium",
+    "description": "Serum-free hepatocyte maintenance medium formed by combining HBM Hepatocyte Basal Medium with the HCM SingleQuots supplement pack, for culture of primary hepatocytes.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/ADME-and-Toxicology/p/000000000000185319/HCM-Hepatocyte-Culture-Medium-BulletKit",
+    "kitSize": "1 kit: HBM Hepatocyte Basal Medium (CC-3199) 500 mL + HCM SingleQuots pack (CC-4182: transferrin, ascorbic acid, hEGF, insulin, hydrocortisone, GA-1000 0.5 mL each, fatty-acid-free BSA 10 mL)",
+    "applications": [
+      "primary hepatocyte culture",
+      "ADME and toxicology studies",
+      "cytochrome P450 induction",
+      "3D hepatocyte spheroid culture"
+    ],
+    "keyParameters": {
+      "notes": "Serum-free maintenance medium; protocols available for long-term 3D spheroid culture and CYP induction"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/ADME-and-Toxicology/p/000000000000185319/HCM-Hepatocyte-Culture-Medium-BulletKit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers CC-3198 (kit), CC-3199 (HBM basal) and CC-4182 (SingleQuots) present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "AoSMC - Human Aortic Smooth Muscle Cells (Clonetics)",
+    "catalogNumbers": [
+      "CC-2571"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Cryopreserved primary human aortic smooth muscle cells",
+    "description": "Human vascular smooth muscle cells isolated from the aorta, shipped cryopreserved in third passage. Guaranteed for 15 population doublings and to stain positive for alpha smooth muscle actin and negative for von Willebrand Factor VIII after differentiation.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185122/AoSMC-%E2%80%93-Human-Aortic-Smooth-Muscle-Cells",
+    "storage": "Cryopreserved (liquid nitrogen)",
+    "kitSize": "1 cryopreserved ampoule, >=500,000 cells/vial",
+    "applications": [
+      "vascular research",
+      "atherosclerosis",
+      "hypertension",
+      "stroke and diabetes research"
+    ],
+    "keyParameters": {
+      "notes": "Recommended medium SmGM-2 (CC-3182); tested negative for mycoplasma, bacteria, yeast, fungi; HIV-1 and hepatitis B/C not detected"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Primary-and-Stem-Cells/p/000000000000185122/AoSMC-%E2%80%93-Human-Aortic-Smooth-Muscle-Cells",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number CC-2571 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "PYROGENT Plus Gel Clot LAL Assay (with Endotoxin), 200 Test",
+    "catalogNumbers": [
+      "N294-125"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Gel clot LAL endotoxin assay",
+    "description": "Gel clot Limulus Amebocyte Lysate assay for qualitative endotoxin testing, supplied with a matched control standard endotoxin in the same box so CSE does not need to be purchased separately.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000186643/PYROGENT-Plus-Gel-Clot-LAL-Assay-(with-Endotoxin)",
+    "kitSize": "200 tests (4 vials x 50 tests lysate) with matched control standard endotoxin",
+    "applications": [
+      "qualitative endotoxin testing",
+      "pyrogen screening of parenterals and devices"
+    ],
+    "keyParameters": {
+      "notes": "Sensitivity 0.125 EU/mL; requires depyrogenated 10 x 75 mm glass reaction tubes; no instrumentation needed"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Endotoxin-Detection/p/000000000000186643/PYROGENT-Plus-Gel-Clot-LAL-Assay-(with-Endotoxin)",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number N294-125 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SF Cell Line 96-well Nucleofector Kit",
+    "catalogNumbers": [
+      "V4SC-2096"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "96-well Nucleofection kit for cell lines",
+    "description": "Medium- to high-throughput Nucleofection kit for cell lines such as K-562, Neuro-2A and RAW264.7 on the 4D-Nucleofector 96-well Unit, compatible with automated liquid handling.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000198709/SF-Cell-Line-96-well-Nucleofector-Kit",
+    "protocolUrl": "http://knowledge.lonza.com/",
+    "kitSize": "96 reactions (also available as 960 reactions): 2.25 mL SF Cell Line Nucleofector Solution, 0.5 mL Supplement 1, 50 µg pmaxGFP Vector, 1 x 96-well Nucleocuvette Plate (20 µL)",
+    "applications": [
+      "high-throughput cell line transfection",
+      "screening",
+      "automated nucleofection"
+    ],
+    "keyParameters": {
+      "input": "50,000 to 1,000,000 cells per well",
+      "notes": "Optimized protocols for 40+ cell types including HEK293, CHO-K1 and A549"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000198709/SF-Cell-Line-96-well-Nucleofector-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4SC-2096 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "Primary Cell Optimization 96-well Nucleofector Kit",
+    "catalogNumbers": [
+      "V4SP-9096"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "96-well Nucleofection optimization kit (primary cells)",
+    "description": "Optimization kit to rapidly determine Nucleofection conditions for primary cell types lacking an Optimized Protocol for the 4D-Nucleofector 96-well Unit, testing all five primary cell solutions with pre-selected programs in one experiment.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000198766/Primary-Cell-Optimization-96-well-Nucleofector-Kit",
+    "protocolUrl": "https://knowledge.lonza.com/",
+    "kitSize": "2 x 96-well Nucleocuvette Plates: Nucleofector Solutions P1-P5 (0.675 mL each), 4 x 0.15 mL Supplement 1, 1 x 0.15 mL Supplement 3, 2 x 50 µg pmaxGFP Vector",
+    "applications": [
+      "primary cell nucleofection optimization",
+      "high-throughput protocol development"
+    ],
+    "keyParameters": {
+      "notes": "Allows complete optimization plus optional fine-tuning run"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Transfection/p/000000000000198766/Primary-Cell-Optimization-96-well-Nucleofector-Kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number V4SP-9096 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "TheraPEAK X-VIVO-15 Serum-free Hematopoietic Cell Medium",
+    "catalogNumbers": [
+      "BEBP04-744Q"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "GMP serum-free immune cell medium for cell therapy",
+    "description": "GMP-manufactured, xeno-free serum-free hematopoietic cell medium providing a nutritionally balanced environment for T cells, NK cells, lymphocytes, dendritic cells, monocytes and macrophages. Contains L-glutamine; free of gentamicin and phenol red.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Culture-Media-and-Reagents/p/000000000000224371/TheraPEAK-X-VIVO-15-Serum-free-Hematopoietic-Cell-Medium",
+    "protocolUrl": "https://bioscience.lonza.com/lonza_bs/US/en/download/product/asset/30661",
+    "storage": "See Certificate of Analysis",
+    "kitSize": "1 L bottle",
+    "applications": [
+      "CAR-T cell manufacturing",
+      "T and NK cell expansion",
+      "dendritic cell culture",
+      "cell therapy process development"
+    ],
+    "keyParameters": {
+      "notes": "Human-derived components only; produced under GMP"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Culture-Media-and-Reagents/p/000000000000224371/TheraPEAK-X-VIVO-15-Serum-free-Hematopoietic-Cell-Medium",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number BEBP04-744Q present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "SeaKem LE Agarose",
+    "catalogNumbers": [
+      "50004"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Molecular biology grade agarose for DNA gel electrophoresis",
+    "description": "Molecular biology grade agarose for routine nucleic acid analysis by gel electrophoresis and blotting, giving sharp resolution of DNA with no detectable DNase or RNase activity.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Electrophoresis/p/000000000000182126/SeaKem-LE-Agarose",
+    "kitSize": "25 g, 100 g, 125 g, 500 g and 1 kg pack sizes",
+    "applications": [
+      "DNA gel electrophoresis",
+      "Southern and Northern blotting",
+      "PCR product analysis"
+    ],
+    "keyParameters": {
+      "notes": "Resolution range 100 bp - 23 kb; gelling temperature 36 +/- 1.5 °C at 1.5%; melting temperature >90 °C at 1.5%; gel strength >1,200 g/cm2 at 1%; low EEO"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Electrophoresis/p/000000000000182126/SeaKem-LE-Agarose",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 50004 present on fetched product page."
+  },
+  {
+    "vendor": "Lonza",
+    "vendorShort": "Lonza",
+    "productName": "NuSieve 3:1 Agarose",
+    "catalogNumbers": [
+      "50090"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "High-resolution agarose for small DNA fragments",
+    "description": "Molecular biology grade, standard melting temperature agarose that yields strong gels for fine resolution of small DNA, RNA and PCR products.",
+    "productUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Electrophoresis/p/000000000000182183/NuSieve-3:1-Agarose",
+    "kitSize": "25 g, 125 g, 500 g and 1 kg pack sizes",
+    "applications": [
+      "resolution of small DNA and PCR products",
+      "RNA analysis",
+      "fragment sizing below 1 kb"
+    ],
+    "keyParameters": {
+      "notes": "Resolves 10-1,500 bp (optimal 50-1,000 bp); gelling temperature 32.5-38.0 °C and melting temperature <=90 °C at 4%; gel strength >=1,400 g/cm2 at 4%"
+    },
+    "sourceUrl": "https://bioscience.lonza.com/lonza_bs/US/en/Electrophoresis/p/000000000000182183/NuSieve-3:1-Agarose",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 50090 present on fetched product page."
+  }
+]

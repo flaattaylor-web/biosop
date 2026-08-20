@@ -1,0 +1,1092 @@
+[
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Library Preparation EF Kit 1.0",
+    "catalogNumbers": [
+      "104174",
+      "104175"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Enzymatic fragmentation DNA library prep",
+    "description": "Incorporates the reagents and enzymes needed for DNA fragmentation with those for end repair, dA-tailing, and adapter ligation into a single reaction.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "16 samples (104174) / 96 samples (104175)",
+    "applications": [
+      "whole genome sequencing",
+      "target enrichment"
+    ],
+    "keyParameters": {
+      "notes": "Single-reaction enzymatic fragmentation, end repair, dA-tailing and adapter ligation"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 104174/104175 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Library Preparation EF Kit 2.0",
+    "catalogNumbers": [
+      "104206",
+      "104207"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Enzymatic fragmentation DNA library prep",
+    "description": "Updated version of the Twist enzymatic fragmentation library preparation kit, combining fragmentation, end repair, dA-tailing and adapter ligation.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "16 samples (104206) / 96 samples (104207)",
+    "applications": [
+      "whole genome sequencing",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 104206/104207 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Library Preparation Kit, Mechanical Fragmentation",
+    "catalogNumbers": [
+      "104176",
+      "104177"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Mechanical fragmentation DNA library prep",
+    "description": "Designed for use with gDNA that has already been sheared mechanically, combining the enzymes and reagents for end repair, dA-tailing, and adapter ligation.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "16 samples (104176) / 96 samples (104177)",
+    "applications": [
+      "whole genome sequencing",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 104176/104177 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "NEBNext EM-seq Kit for Twist Targeted Methylation Sequencing",
+    "catalogNumbers": [
+      "101976"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic methyl-seq library prep",
+    "description": "Enzymatic methyl-seq (EM-seq) kit supplied for use with the Twist targeted methylation sequencing workflow.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "96 samples",
+    "applications": [
+      "targeted methylation sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 101976 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Methylation Enhancer",
+    "catalogNumbers": [
+      "103557"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Target enrichment additive",
+    "description": "Reagent used in the Twist targeted methylation sequencing workflow to enhance enrichment of converted, methylation-informative libraries.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "12 reactions",
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 103557 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Binding and Purification Beads Kit",
+    "catalogNumbers": [
+      "100983"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Hybridisation capture beads and wash buffers",
+    "description": "Streptavidin binding beads and wash reagents used to capture and purify probe-hybridised libraries in the Twist target enrichment workflow.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "12 reactions",
+    "applications": [
+      "hybridisation capture",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 100983 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Fast Hybridization and Wash Kit",
+    "catalogNumbers": [
+      "101174"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Fast hybridisation solution for target enrichment",
+    "description": "Hybridisation and wash reagents that shorten the probe hybridisation step of the Twist target enrichment workflow.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "12 reactions",
+    "applications": [
+      "hybridisation capture",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 101174 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Targeted Methylation Sequencing Workflow",
+    "catalogNumbers": [
+      "103496"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "End-to-end targeted methylation workflow kit",
+    "description": "Bundled workflow containing the library preparation, enzymatic conversion and hybridisation reagents for Twist targeted methylation sequencing.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "kitSize": "96x12 reactions",
+    "applications": [
+      "targeted methylation sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/ngs-library-preparation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 103496 present on fetched page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Standard Hyb and Wash Kit v2",
+    "catalogNumbers": [
+      "104445",
+      "104446",
+      "104447"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Standard hybridisation solution for target enrichment",
+    "description": "Hybridisation reagents and wash buffers for the standard hybridisation version of the Twist target enrichment workflow.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/reagent-kits/Standard-Hybridization-Reagent-Kit",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-04/DOC-001320-Protocol_LongReadLP-StdHyb-v2Enrichment-REV3%20singles.pdf",
+    "storage": "-20°C and 2-8°C",
+    "kitSize": "2 reactions (104445) / 12 reactions (104446) / 96 reactions (104447)",
+    "applications": [
+      "hybridisation capture",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-04/DOC-001320-Protocol_LongReadLP-StdHyb-v2Enrichment-REV3%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 104445/104446/104447 listed in the fetched Twist Long-Read Library Preparation and Standard Hyb v2 Enrichment protocol PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Universal Blockers",
+    "catalogNumbers": [
+      "100856",
+      "100578",
+      "100767"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Adapter blocking oligos for hybridisation capture",
+    "description": "Blocking oligonucleotides added during hybridisation to prevent adapter-mediated daisy-chaining of library molecules during Twist target enrichment.",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-04/DOC-001320-Protocol_LongReadLP-StdHyb-v2Enrichment-REV3%20singles.pdf",
+    "storage": "-20°C",
+    "kitSize": "2 reactions (100856) / 12 reactions (100578) / 96 reactions (100767)",
+    "applications": [
+      "hybridisation capture",
+      "target enrichment"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-04/DOC-001320-Protocol_LongReadLP-StdHyb-v2Enrichment-REV3%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 100856/100578/100767 listed in the fetched Twist Long-Read Library Prep and Standard Hyb v2 Enrichment protocol PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist TrueAmp Polymerase Mix",
+    "catalogNumbers": [
+      "116475",
+      "116476"
+    ],
+    "category": "Enzymes & Modifying Reagents",
+    "subcategory": "High-fidelity library amplification polymerase mix",
+    "description": "Polymerase master mix used for library amplification in Twist TrueAmp library preparation and target enrichment workflows.",
+    "productUrl": "https://www.twistbioscience.com/next-generation-sequencing/target-enrichment-solutions/trueamp-polymerase-mix",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2026-01/DOC-4025%20Twist%20TrueAmp%20Library%20Prep%20Protocol%20with%20Universal%20Adapter%20System%20REV1%20singles.pdf",
+    "storage": "-20°C",
+    "kitSize": "16 reactions (116475) / 96 reactions (116476)",
+    "applications": [
+      "NGS library amplification"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2026-01/DOC-4025%20Twist%20TrueAmp%20Library%20Prep%20Protocol%20with%20Universal%20Adapter%20System%20REV1%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 116475/116476 listed in the fetched Twist TrueAmp Library Prep Protocol PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Universal Adapter System - TruSeq Compatible",
+    "catalogNumbers": [
+      "101307",
+      "101308",
+      "101309",
+      "101310",
+      "101311"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Universal adapters with unique dual-index primers",
+    "description": "Proprietary universal TruSeq-compatible adapters supplied with Twist unique dual-index (UDI) primers; compatible with all 'T-A' overhang ligation workflows and designed to eliminate adapter dimer formation.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/universal-adapter-system",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2026-01/DOC-4025%20Twist%20TrueAmp%20Library%20Prep%20Protocol%20with%20Universal%20Adapter%20System%20REV1%20singles.pdf",
+    "storage": "-20°C",
+    "kitSize": "16 samples (101307) / 96 samples per plate A-D (101308-101311)",
+    "applications": [
+      "NGS library indexing",
+      "multiplexed sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2023-03/DOC-001037_ProductSheet_UniversalAdapters-REV2_FINAL.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 101307-101311 listed in the fetched Twist Universal Adapter Systems product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist HT Universal Adapter System - TruSeq Compatible",
+    "catalogNumbers": [
+      "106390",
+      "106391",
+      "106392",
+      "106393",
+      "106396",
+      "106398",
+      "106399",
+      "106400",
+      "106401",
+      "106402",
+      "106403",
+      "106404",
+      "106405",
+      "106406",
+      "106407",
+      "106408"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "High-throughput universal adapters with UDI primers",
+    "description": "Twist Universal Adapters paired with high-throughput UDI primers in automation-friendly 96- or 384-well formats, providing up to 3,072 indexes.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/universal-adapter-system",
+    "storage": "-20°C",
+    "kitSize": "96-well format (106390-106400) and 384-well format (106401-106408)",
+    "applications": [
+      "high-throughput NGS library indexing",
+      "automation"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2023-03/DOC-001037_ProductSheet_UniversalAdapters-REV2_FINAL.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 106390-106408 listed in the fetched Twist Universal Adapter Systems product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Full Length UDI Adapters",
+    "catalogNumbers": [
+      "107381",
+      "107469",
+      "107470",
+      "107471"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Full-length unique dual-index adapters",
+    "description": "Full-length Y-shaped unique dual-index adapters that enable PCR-free whole genome sequencing library preparation; supplied in 96-well plates.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/universal-adapter-system",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/DOC-4026%20Twist%20PCR-Free%20WGS%20Library%20Preparation%20Kit%20Protocol%20REV3%20singles.pdf",
+    "storage": "-20°C",
+    "kitSize": "384 samples (plates 1-16)",
+    "applications": [
+      "PCR-free WGS",
+      "NGS library indexing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/DOC-4026%20Twist%20PCR-Free%20WGS%20Library%20Preparation%20Kit%20Protocol%20REV3%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107381/107469/107470/107471 listed in the fetched Twist PCR-Free WGS Library Preparation Kit Protocol PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist DNA Purification Beads",
+    "catalogNumbers": [
+      "100322",
+      "100584"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "SPRI-type clean-up and size-selection beads",
+    "description": "Paramagnetic beads used for post-reaction clean-up and size selection throughout the Twist NGS library preparation workflow.",
+    "protocolUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2026-01/DOC-4025%20Twist%20TrueAmp%20Library%20Prep%20Protocol%20with%20Universal%20Adapter%20System%20REV1%20singles.pdf",
+    "storage": "2-8°C",
+    "kitSize": "16 reactions (100322) / 96 reactions (100584)",
+    "applications": [
+      "library clean-up",
+      "size selection"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2026-01/DOC-4025%20Twist%20TrueAmp%20Library%20Prep%20Protocol%20with%20Universal%20Adapter%20System%20REV1%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 100322/100584 listed in the fetched Twist TrueAmp Library Prep Protocol PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist cfDNA Library Preparation Kit",
+    "catalogNumbers": [
+      "107603",
+      "107604"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Cell-free DNA library preparation",
+    "description": "Enables high conversion cfDNA library generation for next-generation sequencing on Illumina systems, addressing the challenges of degraded and low-abundance circulating cell-free DNA.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/library-preparation/cfDNA-library-prep-kit",
+    "kitSize": "16 samples (107603) / 96 samples (107604)",
+    "applications": [
+      "liquid biopsy",
+      "oncology research",
+      "cfDNA sequencing"
+    ],
+    "keyParameters": {
+      "input": "1-20 ng cfDNA",
+      "time": "Sequence-ready libraries in 2 hours"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2024-03/DOC-001476%20cfDNA%20Library%20Prep%20Kit%20REV2%20singles_0.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107603/107604 listed in the fetched Twist cfDNA Library Preparation Kit product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist cfDNA Library Preparation and Hyb Mix Kit",
+    "catalogNumbers": [
+      "107609",
+      "107610"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "cfDNA library prep bundled with hybridisation reagents",
+    "description": "Bundle of the Twist cfDNA library preparation reagents together with hybridisation mix for downstream target enrichment.",
+    "kitSize": "16 samples and 2 reactions (107609) / 96 samples and 12 reactions (107610)",
+    "applications": [
+      "liquid biopsy",
+      "target enrichment"
+    ],
+    "keyParameters": {
+      "input": "1-20 ng cfDNA"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2024-03/DOC-001476%20cfDNA%20Library%20Prep%20Kit%20REV2%20singles_0.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107609/107610 listed in the fetched Twist cfDNA Library Preparation Kit product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Exome 2.0",
+    "catalogNumbers": [
+      "104132",
+      "104134",
+      "104136"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Whole exome target enrichment panel",
+    "description": "Panel for enrichment reactions targeting 36.5 Mb of human protein coding and non-coding regions.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/fixed-panels/exome2",
+    "kitSize": "2 reactions (104132) / 12 reactions (104134) / 96 reactions (104136)",
+    "applications": [
+      "whole exome sequencing",
+      "rare disease research",
+      "population genomics"
+    ],
+    "keyParameters": {
+      "notes": "36.5 Mb target region"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-08/DOC-001266_ProductSheet_Exome2.0-REV2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 104132/104134/104136 listed in the fetched Twist Exome 2.0 Panel product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Exome 2.0 plus Comprehensive Exome Spike-in",
+    "catalogNumbers": [
+      "105034",
+      "105035",
+      "105036"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Whole exome panel with comprehensive spike-in",
+    "description": "Panel for enrichment reactions targeting 37.6 Mb of human protein coding and non-coding regions, combining Exome 2.0 with the Comprehensive Exome spike-in.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/fixed-panels/exome2",
+    "kitSize": "2 reactions (105034) / 12 reactions (105035) / 96 reactions (105036)",
+    "applications": [
+      "whole exome sequencing",
+      "clinical research"
+    ],
+    "keyParameters": {
+      "notes": "37.6 Mb target region"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-08/DOC-001266_ProductSheet_Exome2.0-REV2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 105034/105035/105036 listed in the fetched Twist Exome 2.0 Panel product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Comprehensive Exome",
+    "catalogNumbers": [
+      "102031",
+      "102032",
+      "102033"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Comprehensive exome target enrichment panel",
+    "description": "Panel for enrichment reactions targeting 36.8 Mb of human protein coding regions, covering greater than 99% of protein-coding genes based on CCDS, RefSeq and GENCODE.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/fixed-panels/human-comprehensive-exome",
+    "kitSize": "2 reactions (102031) / 12 reactions (102032) / 96 reactions (102033)",
+    "applications": [
+      "whole exome sequencing"
+    ],
+    "keyParameters": {
+      "notes": "36.8 Mb target, 41.2 Mb design size"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2020-07/ProductSheet_ComprehensiveExomePanel_8JUL20_Rev1.1.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 102031/102032/102033 listed in the fetched Twist Comprehensive Exome Panel product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Human Methylome Panel",
+    "catalogNumbers": [
+      "105517",
+      "105520",
+      "105521"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Targeted methylation enrichment panel",
+    "description": "Targets 3.98M CpG sites through 123 Mb of genomic content to target biologically relevant methylation markers.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/fixed-panels/human-methylome-panel",
+    "kitSize": "2 reactions (105517) / 12 reactions (105520) / 96 reactions (105521)",
+    "applications": [
+      "methylation profiling",
+      "epigenetic biomarker discovery"
+    ],
+    "keyParameters": {
+      "notes": "3.98M CpG sites; 123 Mb target"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2022-06/DOC-001317_ProductSheet_HumanMethylPanel-Rev1-singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 105517/105520/105521 listed in the fetched Twist Human Methylome Panel product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist RNA Exome",
+    "catalogNumbers": [
+      "107143",
+      "107144",
+      "107146"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Transcriptome target enrichment panel",
+    "description": "Targets 35.8 Mb of bases, 19,708 genes and 63,215 isoforms for human transcriptome analysis using exon-aware probe designs; works with degraded and intact RNA including FFPE.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/rna-sequencing-solutions",
+    "kitSize": "2 reactions (107143) / 12 reactions (107144) / 96 reactions (107146)",
+    "applications": [
+      "targeted RNA sequencing",
+      "FFPE transcriptomics"
+    ],
+    "keyParameters": {
+      "notes": "19,708 genes; >1.8 fold enrichment over whole transcriptome"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2024-11/Twist%20RNA%20Exome%20Product%20Sheet.PDF",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107143/107144/107146 listed in the fetched Twist RNA Exome product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist RNA Library Prep Kit",
+    "catalogNumbers": [
+      "107060",
+      "107061"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded total RNA library preparation",
+    "description": "Produces high quality stranded RNA sequencing libraries, taking a sample through to completed library in as little as 5 hours.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/rna-sequencing-solutions",
+    "kitSize": "16 samples (107060) / 96 samples (107061)",
+    "applications": [
+      "whole transcriptome sequencing",
+      "FFPE RNA-seq"
+    ],
+    "keyParameters": {
+      "input": "1 ng to 1,000 ng total RNA",
+      "time": "<5 hours"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2023-05/DOC-001378TwistRNASequencingWorkflowSolutionsREV1singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107060/107061 listed in the fetched Twist RNA Sequencing Workflow Solutions product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist RNA Library Prep with Depletion",
+    "catalogNumbers": [
+      "107147",
+      "107148"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Stranded RNA library prep with rRNA/globin depletion",
+    "description": "Twist stranded RNA library preparation supplied with depletion reagents for removal of abundant transcripts prior to library construction.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/rna-sequencing-solutions",
+    "kitSize": "16 samples (107147) / 96 samples (107148)",
+    "applications": [
+      "whole transcriptome sequencing",
+      "FFPE RNA-seq"
+    ],
+    "keyParameters": {
+      "input": "1 ng to 1,000 ng total RNA"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2023-05/DOC-001378TwistRNASequencingWorkflowSolutionsREV1singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107147/107148 listed in the fetched Twist RNA Sequencing Workflow Solutions product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "NEBNext EM-seq v2 Kit for Twist Methylation",
+    "catalogNumbers": [
+      "129335"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic methyl-seq v2 library prep",
+    "description": "End-to-end sample preparation solution for identifying methylated regions in the human genome using enzymatic conversion rather than bisulfite treatment; targeted methylation panels sold separately.",
+    "productUrl": "https://www.twistbioscience.com/next-generation-sequencing/library-preparation-solutions/EM-seq-v2-Methylation-Detection-System",
+    "kitSize": "96 reactions",
+    "applications": [
+      "targeted methylation sequencing",
+      "epigenetics"
+    ],
+    "keyParameters": {
+      "input": "0.1 ng to 200 ng",
+      "notes": "Detects 15% more CpGs than bisulfite methods; compatible with Bismark and bwa-meth"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/DOC-001221_ProductSheet_NGSMethylationDetectionSystem-Rev2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 129335 listed in the fetched Twist EM-seq v2 Methylation Detection System product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Targeted EM-seq v2 Fast Hyb Workflow",
+    "catalogNumbers": [
+      "129336"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "End-to-end EM-seq v2 workflow with fast hybridisation",
+    "description": "Complete targeted enzymatic methyl-seq v2 workflow bundle configured with Twist fast hybridisation reagents.",
+    "productUrl": "https://www.twistbioscience.com/next-generation-sequencing/library-preparation-solutions/EM-seq-v2-Methylation-Detection-System",
+    "kitSize": "96x12 reactions",
+    "applications": [
+      "targeted methylation sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/DOC-001221_ProductSheet_NGSMethylationDetectionSystem-Rev2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 129336 listed in the fetched Twist EM-seq v2 Methylation Detection System product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Targeted EM-seq v2 SHv2 Hyb Workflow",
+    "catalogNumbers": [
+      "129337"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "End-to-end EM-seq v2 workflow with standard hybridisation v2",
+    "description": "Complete targeted enzymatic methyl-seq v2 workflow bundle configured with Twist Standard Hybridization v2 reagents.",
+    "productUrl": "https://www.twistbioscience.com/next-generation-sequencing/library-preparation-solutions/EM-seq-v2-Methylation-Detection-System",
+    "kitSize": "96x12 reactions",
+    "applications": [
+      "targeted methylation sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/DOC-001221_ProductSheet_NGSMethylationDetectionSystem-Rev2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 129337 listed in the fetched Twist EM-seq v2 Methylation Detection System product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "NEBNext LV Unique Dual Index Primers",
+    "catalogNumbers": [
+      "127377",
+      "127378",
+      "127379",
+      "127380"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Low-volume unique dual index primers",
+    "description": "Low-volume unique dual index primer plates supplied for use with the Twist EM-seq v2 methylation detection system.",
+    "kitSize": "96 samples per plate (Plates A-D)",
+    "applications": [
+      "NGS library indexing",
+      "methylation sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/DOC-001221_ProductSheet_NGSMethylationDetectionSystem-Rev2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 127377-127380 listed in the fetched Twist EM-seq v2 Methylation Detection System product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist cfDNA Pan-Cancer Reference Standard v2",
+    "catalogNumbers": [
+      "107576",
+      "107577",
+      "107578",
+      "107579",
+      "107580",
+      "107581",
+      "107582",
+      "107583",
+      "107584",
+      "107585",
+      "107586",
+      "107587",
+      "107588",
+      "107589",
+      "107590"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic cfDNA reference standard with defined VAF",
+    "description": "Synthetic cell-free DNA reference standards supplied at defined variant allele frequencies (0% wild type, 0.1%, 0.25%, 0.5%, 1%, 2% and 5%) for validating liquid biopsy assays.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/Twist-cfDNA-Pan-Cancer-Reference-Standard-v2",
+    "kitSize": "300 ng set (107576); 3 ug and 600 ng single-VAF tubes",
+    "applications": [
+      "liquid biopsy assay validation",
+      "variant detection limit of detection"
+    ],
+    "keyParameters": {
+      "notes": "VAF levels 0%, 0.1%, 0.25%, 0.5%, 1%, 2%, 5%"
+    },
+    "sourceUrl": "https://www.twistbioscience.com/faq/synthetic-controls/what-are-kit-configurations-cfdna-standards",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107576-107590 listed in the fetched Twist FAQ page on cfDNA standard kit configurations."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Respiratory Virus Controls (13 Count)",
+    "catalogNumbers": [
+      "103730"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA/DNA control bundle",
+    "description": "Bundle of 13 synthetic respiratory virus controls covering a broad range of RNA and DNA viruses relevant to respiratory disease research; aligned with the content of the Twist Respiratory Virus Research Panel.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "NGS pathogen detection controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 103730 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Influenza A (H5N1) RNA Control",
+    "catalogNumbers": [
+      "109012"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA control",
+    "description": "Single-stranded negative-sense synthetic RNA control based on the influenza A H5N1 genome.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "pathogen surveillance controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 109012 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Influenza RNA Controls (H1N1 2009, H3N2, Influenza B)",
+    "catalogNumbers": [
+      "103001",
+      "103002",
+      "103003"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA controls",
+    "description": "Single-stranded negative-sense synthetic RNA controls for influenza A H1N1 (2009, 13,158 bases), influenza A H3N2 (14,452 bases) and influenza B (14,452 bases).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "respiratory pathogen assay controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103001/103002/103003 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Human Coronavirus RNA Controls (229E, NL63, OC43)",
+    "catalogNumbers": [
+      "103011",
+      "103012",
+      "103013"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA controls",
+    "description": "Single-stranded positive-sense synthetic RNA controls for human coronavirus 229E (27,317 bases), NL63 (27,553 bases) and OC43 (30,741 bases).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "respiratory pathogen assay controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103011/103012/103013 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Enterovirus 68 and Rhinovirus 89 RNA Controls",
+    "catalogNumbers": [
+      "103005",
+      "103006"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA controls",
+    "description": "Single-stranded positive-sense synthetic RNA controls for human enterovirus 68 (7,367 bases) and human rhinovirus 89 (7,152 bases).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "respiratory pathogen assay controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103005/103006 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Paramyxovirus RNA Controls (Mumps, Measles, Parainfluenza 1 and 4)",
+    "catalogNumbers": [
+      "103007",
+      "103008",
+      "103009",
+      "103010"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral RNA controls",
+    "description": "Single-stranded negative-sense synthetic RNA controls for mumps virus (15,384 bases), human parainfluenza virus 1 (15,600 bases), measles virus (15,894 bases) and human parainfluenza virus 4 (17,052 bases).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "respiratory pathogen assay controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103007-103010 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic Human Bocavirus 1 DNA Control",
+    "catalogNumbers": [
+      "103004"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic viral DNA control",
+    "description": "Single-stranded synthetic DNA control based on the human bocavirus 1 genome (5,164 bases).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "applications": [
+      "assay development",
+      "respiratory pathogen assay controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 103004 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic SARS-CoV-2 RNA Controls",
+    "catalogNumbers": [
+      "102019",
+      "102024",
+      "102860",
+      "102862",
+      "102917",
+      "102918",
+      "103087",
+      "103511",
+      "103512",
+      "103513",
+      "103514",
+      "103515",
+      "103533"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic SARS-CoV-2 RNA controls",
+    "description": "Each control consists of six non-overlapping 5 kb fragments generated from Twist Gene Fragments then transcribed into ssRNA, providing coverage of greater than 99.9% of the bases of the SARS-CoV-2 viral genome.",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "kitSize": "100 uL per control",
+    "applications": [
+      "SARS-CoV-2 assay development",
+      "NGS sequencing controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 102019-103533 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Synthetic SARS-CoV-2 Variant RNA Controls (Alpha through Omicron lineages)",
+    "catalogNumbers": [
+      "103907",
+      "103909",
+      "104043",
+      "104044",
+      "104338",
+      "104529",
+      "104530",
+      "104531",
+      "104532",
+      "104533",
+      "104534",
+      "104538",
+      "104539",
+      "105204",
+      "105345",
+      "105346",
+      "105865",
+      "105857",
+      "106196",
+      "106197",
+      "106198",
+      "106199",
+      "106929",
+      "106930"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Synthetic SARS-CoV-2 variant RNA controls",
+    "description": "Synthetic ssRNA controls representing SARS-CoV-2 variants of concern including Alpha (B.1.1.7), Beta (B.1.351), Gamma (P.1), Kappa (B.1.617.1), Iota (B.1.526), Epsilon (B.1.429), Delta (B.1.617.2, AY.1, AY.2) and Omicron lineages (B.1.1.529/BA.1, BA.2, B.2.12.1, BA.4, BA.5).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "kitSize": "100 uL per control",
+    "applications": [
+      "variant assay validation",
+      "genomic surveillance controls"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103907-106930 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Assay Ready and Encapsulated SARS-CoV-2 Controls",
+    "catalogNumbers": [
+      "103925",
+      "103926",
+      "103927",
+      "104422",
+      "104426",
+      "104423",
+      "104427",
+      "104424",
+      "104428"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Encapsulated synthetic SARS-CoV-2 controls",
+    "description": "Ready-to-use synthetic SARS-CoV-2 controls: assay ready controls supplied at approximately 2 million copies per tube (Control 2, Alpha B.1.1.7 Controls 14 and 15) and encapsulated controls supplied in 16-tube or 96-tube racks (Control 2, Control 28 Delta AY.1, Control 48 B.1.1.529/BA.1).",
+    "productUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "kitSize": "~2M copies/tube (assay ready); 16-tube or 96-tube rack (encapsulated)",
+    "applications": [
+      "full-process extraction controls",
+      "assay validation"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/products/ngs/synthetic-viral-controls",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 103925-103927 and 104422-104428 present in the fetched Twist synthetic viral controls page."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist EF Library Prep + UDI and Fast Hyb Kit",
+    "catalogNumbers": [
+      "101896",
+      "101900"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Complete enzymatic-fragmentation library prep and enrichment kit",
+    "description": "Complete kit configuration combining Twist enzymatic fragmentation library preparation, UDI adapters and fast hybridisation reagents; enrichment panels sold separately and KAPA HiFi HotStart ReadyMix required separately.",
+    "kitSize": "16x2 reactions (101896) / 96x12 reactions (101900)",
+    "applications": [
+      "target enrichment",
+      "exome sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/faq/ngs-kits/what-complete-kit-configurations-ngs-library-preparation-and-enrichment-does-twist",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 101896/101900 present in the fetched Twist FAQ page on complete kit configurations."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist EF Library Prep + UDI and Standard Hyb Kit",
+    "catalogNumbers": [
+      "101897",
+      "101901"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Complete enzymatic-fragmentation library prep and enrichment kit",
+    "description": "Complete kit configuration combining Twist enzymatic fragmentation library preparation, UDI adapters and standard hybridisation reagents; enrichment panels sold separately.",
+    "kitSize": "16x2 reactions (101897) / 96x12 reactions (101901)",
+    "applications": [
+      "target enrichment",
+      "exome sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/faq/ngs-kits/what-complete-kit-configurations-ngs-library-preparation-and-enrichment-does-twist",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 101897/101901 present in the fetched Twist FAQ page on complete kit configurations."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist MF Library Prep + UDI and Fast Hyb Kit",
+    "catalogNumbers": [
+      "101898",
+      "101902"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Complete mechanical-fragmentation library prep and enrichment kit",
+    "description": "Complete kit configuration combining Twist mechanical fragmentation library preparation, UDI adapters and fast hybridisation reagents; enrichment panels sold separately.",
+    "kitSize": "16x2 reactions (101898) / 96x12 reactions (101902)",
+    "applications": [
+      "target enrichment",
+      "exome sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/faq/ngs-kits/what-complete-kit-configurations-ngs-library-preparation-and-enrichment-does-twist",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 101898/101902 present in the fetched Twist FAQ page on complete kit configurations."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist MF Library Prep + UDI and Standard Hyb Kit",
+    "catalogNumbers": [
+      "101899",
+      "101903"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Complete mechanical-fragmentation library prep and enrichment kit",
+    "description": "Complete kit configuration combining Twist mechanical fragmentation library preparation, UDI adapters and standard hybridisation reagents; enrichment panels sold separately.",
+    "kitSize": "16x2 reactions (101899) / 96x12 reactions (101903)",
+    "applications": [
+      "target enrichment",
+      "exome sequencing"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/faq/ngs-kits/what-complete-kit-configurations-ngs-library-preparation-and-enrichment-does-twist",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 101899/101903 present in the fetched Twist FAQ page on complete kit configurations."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist for Element Exome 2.0 plus Comprehensive Spike-in Workflow",
+    "catalogNumbers": [
+      "107686",
+      "109326",
+      "109328"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Exome workflow bundle for Element sequencers",
+    "description": "Workflow bundles pairing Twist Exome 2.0 plus Comprehensive Exome spike-in with Twist library preparation, hybridisation reagents and the Twist Universal Adapter System for Element AVITI and Trinity sequencing.",
+    "kitSize": "12 reactions / 16 samples (107686); 96 reactions (109326, 109328)",
+    "applications": [
+      "whole exome sequencing on Element platforms"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-01/DOC-001481%20Exome%202%20Plus%20Comp%20Spike-In%20Workflow%20REV2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part numbers 107686/109326/109328 listed in the fetched Twist for Element Exome Workflow Solutions product sheet PDF."
+  },
+  {
+    "vendor": "Twist Bioscience",
+    "vendorShort": "Twist",
+    "productName": "Twist Universal Adapter System for Element",
+    "catalogNumbers": [
+      "107682"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Element-compatible universal adapters with UDI primers",
+    "description": "Twist Universal Adapters supplied with UDI primers compatible with Element sequencing platforms.",
+    "storage": "-20°C",
+    "kitSize": "96 samples",
+    "applications": [
+      "NGS library indexing on Element platforms"
+    ],
+    "sourceUrl": "https://www.twistbioscience.com/content/dam/twistbioscience/resources/2025-01/DOC-001481%20Exome%202%20Plus%20Comp%20Spike-In%20Workflow%20REV2%20singles.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Part number 107682 listed in the fetched Twist for Element Exome Workflow Solutions product sheet PDF."
+  }
+]

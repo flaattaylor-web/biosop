@@ -1,0 +1,947 @@
+[
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD4 MicroBeads, human",
+    "catalogNumbers": [
+      "130-045-101"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "MicroBeads conjugated to monoclonal anti-human CD4 antibodies (isotype mouse IgG1) for magnetic labelling and MACS column separation of CD4+ cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd4-microbeads-human.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "2 mL (for 10^9 total cells, up to 100 separations)",
+    "applications": [
+      "positive selection of CD4+ T cells",
+      "depletion of CD4+ cells",
+      "functional and coculture studies"
+    ],
+    "keyParameters": {
+      "input": "up to 10^9 total cells per vial",
+      "notes": "CD14 MicroBeads (130-050-201) may be used to deplete monocytes first; optional dead cell depletion with Dead Cell Removal Kit"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_67l3dp2f3l5m9b1aj6inldsh2r?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-045-101 appears on the fetched Miltenyi CD4 MicroBeads datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD8 MicroBeads, human",
+    "catalogNumbers": [
+      "130-045-201"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "Anti-human CD8 conjugated MACS MicroBeads for magnetic labelling and column-based positive selection or depletion of CD8+ cytotoxic T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd8-microbeads-human.html",
+    "applications": [
+      "positive selection of CD8+ T cells",
+      "depletion of CD8+ cells"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD3 MicroBeads, human",
+    "catalogNumbers": [
+      "130-050-101"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "Anti-human CD3 conjugated MACS MicroBeads for magnetic labelling and column-based positive selection or depletion of CD3+ pan T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd3-microbeads-human.html",
+    "applications": [
+      "pan T cell positive selection",
+      "T cell depletion"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD14 MicroBeads, human",
+    "catalogNumbers": [
+      "130-050-201"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "MicroBeads conjugated to monoclonal anti-human CD14 antibodies (isotype mouse IgG2a). CD14 is strongly expressed on most monocytes and macrophages and weakly on neutrophils and some myeloid dendritic cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd14-microbeads-human.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "2 mL (for 10^9 total cells, up to 100 separations)",
+    "applications": [
+      "isolation of CD14+ monocytes",
+      "in vitro generation of dendritic cells or macrophages",
+      "cytotoxicity and migration studies"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_2evdm6e7jp7up842efgqdklc1c/IM0001260.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-050-201 appears on the fetched Miltenyi CD14 MicroBeads datasheet PDF (IM0001260)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD19 MicroBeads, human",
+    "catalogNumbers": [
+      "130-050-301"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "Anti-human CD19 conjugated MACS MicroBeads for magnetic labelling and column-based positive selection or depletion of CD19+ B cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd19-microbeads-human.html",
+    "applications": [
+      "B cell positive selection",
+      "B cell depletion"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD45 MicroBeads, human",
+    "catalogNumbers": [
+      "130-045-801"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "Anti-human CD45 conjugated MACS MicroBeads for magnetic labelling of leukocytes, used to enrich or deplete CD45+ cells from cell suspensions such as dissociated tissue.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd45-microbeads-human.html",
+    "applications": [
+      "leukocyte enrichment",
+      "leukocyte depletion from tumour digests"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD34 MicroBead Kit, human",
+    "catalogNumbers": [
+      "130-046-702",
+      "130-046-703"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Hematopoietic stem/progenitor cell isolation kit",
+    "description": "MicroBeads directly conjugated to CD34 antibodies plus FcR Blocking Reagent for magnetic labelling and enrichment of CD34-expressing haematopoietic progenitor cells from blood and tissue sources.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd34-microbead-kit-human.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "2 mL (2x10^9 cells, up to 20 separations) / 10 mL (10^10 cells, up to 100 separations)",
+    "applications": [
+      "isolation of haematopoietic progenitor cells",
+      "isolation of endothelial progenitor cells",
+      "isolation from differentiated stem cell cultures"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_edac80u6m13tj368fp5sse6h3a/IM0001498.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-046-702 and 130-046-703 appear on the fetched Miltenyi CD34 MicroBead Kit datasheet PDF (IM0001498)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Pan T Cell Isolation Kit, human",
+    "catalogNumbers": [
+      "130-096-535"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched T cell isolation kit (negative selection)",
+    "description": "Negative-selection kit for isolation of untouched human pan T cells from PBMCs; non-target cells are magnetically labelled and depleted.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/pan-t-cell-isolation-kit-human.html",
+    "applications": [
+      "untouched pan T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD4+ T Cell Isolation Kit, human",
+    "catalogNumbers": [
+      "130-096-533"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched T cell isolation kit (negative selection)",
+    "description": "Negative-selection kit for isolation of untouched human CD4+ T cells from PBMCs by depletion of non-CD4+ T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd4-t-cell-isolation-kit-human.html",
+    "applications": [
+      "untouched CD4+ T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD8+ T Cell Isolation Kit, human",
+    "catalogNumbers": [
+      "130-096-495"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched T cell isolation kit (negative selection)",
+    "description": "Negative-selection kit for isolation of untouched human CD8+ T cells from PBMCs by depletion of non-CD8+ T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd8-t-cell-isolation-kit-human.html",
+    "applications": [
+      "untouched CD8+ T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "NK Cell Isolation Kit, human",
+    "catalogNumbers": [
+      "130-092-657"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched NK cell isolation kit (negative selection)",
+    "description": "Two-component kit (NK Cell Biotin-Antibody Cocktail plus NK Cell MicroBead Cocktail) that isolates untouched human NK cells from PBMCs by depletion of the unwanted, magnetically labelled fraction.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/nk-cell-isolation-kit-human.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "For 10^9 total cells (1 mL biotin-antibody cocktail + 2 mL MicroBead cocktail)",
+    "applications": [
+      "untouched NK cell isolation from PBMC"
+    ],
+    "keyParameters": {
+      "notes": "Components supplied in buffer with stabiliser and 0.05% sodium azide; research use only"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_geh73eknot6qnfnk6pp6hbu92o/IM0001512.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-092-657 appears on the fetched Miltenyi NK Cell Isolation Kit datasheet PDF (IM0001512)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Pan Monocyte Isolation Kit, human",
+    "catalogNumbers": [
+      "130-096-537"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched monocyte isolation kit (negative selection)",
+    "description": "Negative-selection kit for isolation of untouched classical, intermediate and non-classical monocytes from human PBMCs.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/pan-monocyte-isolation-kit-human.html",
+    "applications": [
+      "untouched monocyte isolation from PBMC"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "B Cell Isolation Kit II, human",
+    "catalogNumbers": [
+      "130-091-151"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched B cell isolation kit (negative selection)",
+    "description": "Negative-selection kit for isolation of untouched human B cells from PBMCs.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/b-cell-isolation-kit-ii-human.html",
+    "applications": [
+      "untouched B cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "CD25 MicroBeads II, human",
+    "catalogNumbers": [
+      "130-092-983"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic cell separation MicroBeads (positive selection)",
+    "description": "Anti-human CD25 conjugated MACS MicroBeads used for enrichment of CD25+ cells such as regulatory T cells and activated T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/cd25-microbeads-ii-human.html",
+    "applications": [
+      "regulatory T cell enrichment",
+      "activated T cell enrichment"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Tumor Cell Isolation Kit, human",
+    "catalogNumbers": [
+      "130-108-339"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Untouched tumour cell isolation kit (negative selection)",
+    "description": "Negative-selection kit that depletes non-tumour cells from dissociated human tumour tissue to give untouched tumour cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/tumor-cell-isolation-kit-human.html",
+    "applications": [
+      "untouched tumour cell isolation from dissociated tissue"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "StraightFrom Whole Blood CD4 MicroBeads, human",
+    "catalogNumbers": [
+      "130-090-877"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Whole-blood direct magnetic labelling MicroBeads",
+    "description": "MicroBeads for direct magnetic labelling and isolation of CD4+ cells straight from anticoagulated human whole blood, without prior density gradient centrifugation.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/straightfrom-whole-blood-cd4-microbeads-human.html",
+    "applications": [
+      "CD4+ T cell isolation directly from whole blood"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "StraightFrom Whole Blood CD8 MicroBeads, human",
+    "catalogNumbers": [
+      "130-090-878"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Whole-blood direct magnetic labelling MicroBeads",
+    "description": "MicroBeads for direct magnetic labelling and isolation of CD8+ cells straight from anticoagulated human whole blood.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/straightfrom-whole-blood-cd8-microbeads-human.html",
+    "applications": [
+      "CD8+ T cell isolation directly from whole blood"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "StraightFrom Whole Blood CD14 MicroBeads, human",
+    "catalogNumbers": [
+      "130-090-879"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Whole-blood direct magnetic labelling MicroBeads",
+    "description": "MicroBeads for direct magnetic labelling and isolation of CD14+ monocytes straight from anticoagulated human whole blood.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/straightfrom-whole-blood-cd14-microbeads-human.html",
+    "applications": [
+      "monocyte isolation directly from whole blood"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "StraightFrom Whole Blood CD3 MicroBeads, human",
+    "catalogNumbers": [
+      "130-090-874"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Whole-blood direct magnetic labelling MicroBeads",
+    "description": "MicroBeads for direct magnetic labelling and isolation of CD3+ pan T cells straight from anticoagulated human whole blood.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/straightfrom-whole-blood-cd3-microbeads-human.html",
+    "applications": [
+      "pan T cell isolation directly from whole blood"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_bcqlu2q06p46rddc3ntgnsf21e?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi 'Autolabeling-compatible MACS MicroBeads and Isolation Kits' reference PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Dead Cell Removal Kit",
+    "catalogNumbers": [
+      "130-090-101"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Dead and apoptotic cell depletion kit",
+    "description": "Dead Cell Removal MicroBeads recognise a moiety in the plasma membrane of apoptotic and dead cells so that labelled cells are retained on a MACS column while live cells pass through.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/dead-cell-removal-kit.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "For 10^9 total cells, up to 100 separations (10 mL MicroBeads + 25 mL 20x Binding Buffer Stock Solution)",
+    "applications": [
+      "dead cell depletion after tissue dissociation",
+      "removal of early apoptotic cells",
+      "viability clean-up before sorting or sequencing"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_9ndq9pouph0pvf6lmr5osgv41s?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-090-101 appears on the fetched Miltenyi Dead Cell Removal Kit datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Tumor Dissociation Kit, human",
+    "catalogNumbers": [
+      "130-095-929"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Three-enzyme kit for gentle dissociation of human tumour tissue into viable single cells; the procedure preserves the vast majority of cell surface markers (evaluated against >200 surface markers).",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/tumor-dissociation-kit-human.html",
+    "applications": [
+      "cell separation",
+      "flow analysis",
+      "cell sorting"
+    ],
+    "keyParameters": {
+      "notes": "Enzyme concentration can be lowered to preserve sensitive epitopes; used with gentleMACS Dissociators"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_a8tksr6uf95id9ohsujoh08q0o/IM0014390.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-095-929 appears on the fetched Miltenyi Tumor Dissociation Kit, human datasheet PDF (IM0014390)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Tumor Dissociation Kit, mouse",
+    "catalogNumbers": [
+      "130-096-730"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of mouse tumour tissue into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/tumor-dissociation-kit-mouse.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Adult Brain Dissociation Kit, mouse and rat",
+    "catalogNumbers": [
+      "130-107-677"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of adult mouse and rat brain tissue, with debris and red blood cell removal into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/adult-brain-dissociation-kit-mouse-and-rat.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Lung Dissociation Kit, mouse",
+    "catalogNumbers": [
+      "130-095-927"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of mouse lung tissue into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/lung-dissociation-kit-mouse.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Liver Dissociation Kit, mouse",
+    "catalogNumbers": [
+      "130-105-807"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of mouse liver tissue into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/liver-dissociation-kit-mouse.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Multi Tissue Dissociation Kit 1",
+    "catalogNumbers": [
+      "130-110-201"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of a range of soft tissues where a mild enzyme mix is required into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/multi-tissue-dissociation-kit-1.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Neural Tissue Dissociation Kit (P)",
+    "catalogNumbers": [
+      "130-092-628"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of neural tissue using papain into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/neural-tissue-dissociation-kit-p.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Whole Skin Dissociation Kit, human",
+    "catalogNumbers": [
+      "130-101-540"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of human whole skin (epidermis and dermis) into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/whole-skin-dissociation-kit-human.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "FFPE Tissue Dissociation Kit",
+    "catalogNumbers": [
+      "130-118-052"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzymatic tissue dissociation kit",
+    "description": "Enzyme kit listed by Miltenyi for gentle enzymatic dissociation of formalin-fixed paraffin-embedded tissue sections into single-cell suspensions, used together with the gentleMACS Dissociators and gentleMACS C Tubes.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/ffpe-tissue-dissociation-kit.html",
+    "applications": [
+      "preparation of single-cell suspensions",
+      "downstream flow cytometry, cell separation or sorting"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_hi4t1em0md7q92glmjme6j8l10?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi gentleMACS Dissociators, Tubes and Reagent Kits reference list PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "gentleMACS C Tubes",
+    "catalogNumbers": [
+      "130-093-237",
+      "130-096-334"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Dissociation consumable (tubes)",
+    "description": "Purple-capped tubes with an integrated rotor/stator, designed exclusively for automated dissociation of tissue into single-cell suspensions on the gentleMACS Dissociators.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/gentlemacs-c-tubes.html",
+    "storage": "Dry, protected from light, room temperature (19–25 °C)",
+    "kitSize": "25 tubes (sterile, single packed) / 100 tubes (sterile, 4×25)",
+    "applications": [
+      "automated tissue dissociation to single-cell suspension"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_f8namcgvu93hrbdgcvf4c8jj5o?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-093-237 and 130-096-334 appear on the fetched Miltenyi gentleMACS C Tubes datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "gentleMACS M Tubes",
+    "catalogNumbers": [
+      "130-093-236",
+      "130-096-335"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Homogenisation consumable (tubes)",
+    "description": "Orange-capped rotor/stator tubes for automated homogenisation of tissues and cells on the gentleMACS Dissociators to isolate subcellular material such as RNA, DNA, proteins or pathogens.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/gentlemacs-m-tubes.html",
+    "storage": "Dry, protected from light, room temperature (19–25 °C)",
+    "kitSize": "25 tubes (sterile, single packed) / 100 tubes (sterile, 4×25)",
+    "applications": [
+      "tissue homogenisation for nucleic acid or protein extraction"
+    ],
+    "keyParameters": {
+      "input": "20–4000 mg tissue in 500 µL–10 mL total volume"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_sie3ni545t0e3ehp0o4gajud0f?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-093-236 and 130-096-335 appear on the fetched Miltenyi gentleMACS M Tubes datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACS Tissue Storage Solution",
+    "catalogNumbers": [
+      "130-100-108"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Tissue transport and storage solution",
+    "description": "Solution listed by Miltenyi for storage and transport of tissue samples prior to dissociation and downstream cell isolation.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macs-tissue-storage-solution.html",
+    "applications": [
+      "tissue sample storage before dissociation"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6r8m6loqt174n7djh6eh9kq15e/T%20Cell%20Quick%20Guide.pdf?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi T Cell Product Quick Guide PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "TexMACS Medium",
+    "catalogNumbers": [
+      "130-097-196"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free T cell culture medium",
+    "description": "Serum-free, animal component-free and antibiotic-free medium with stable glutamine, human albumin and phenol red for cultivation and expansion of T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/texmacs-medium.html",
+    "storage": "+2 to +8 °C, protected from light",
+    "kitSize": "500 mL",
+    "applications": [
+      "cultivation and expansion of human and mouse T cells"
+    ],
+    "keyParameters": {
+      "notes": "Osmolality 280–340 mOsmol/kg; pH 6.9–7.5; research use only"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_fipu6dal252et7f2dtfj8j0924/TexMACS%20Medium",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-097-196 appears on the fetched Miltenyi TexMACS Medium datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "T Cell TransAct, human",
+    "catalogNumbers": [
+      "130-128-758",
+      "130-111-160"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Polyclonal T cell activation reagent",
+    "description": "Polymeric nanomatrix conjugated to humanised CD3 and CD28 agonists in PBS with 0.03% poloxamer 188, used for polyclonal activation and expansion of human T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/t-cell-transact-human.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "1×2 mL (130-128-758) / 2×2 mL (130-111-160)",
+    "applications": [
+      "polyclonal T cell activation",
+      "T cell expansion",
+      "activation prior to gene modification"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_h4kco0qorl10r2cc8s69cnmm55?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-128-758 and 130-111-160 appear on the fetched Miltenyi T Cell TransAct datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACS GMP T Cell TransAct",
+    "catalogNumbers": [
+      "170-076-156"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "GMP-grade T cell activation reagent",
+    "description": "GMP-grade polymeric nanomatrix conjugated to recombinant humanised CD3 and CD28 agonists in PBS with 0.03% poloxamer 188 and 5 g/L recombinant human serum albumin, for ex vivo activation and expansion of human T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macs-gmp-t-cell-transact.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "4 mL vial; activates up to 2×10^8 enriched T cells or 4×10^8 PBMCs at 1:17.5",
+    "applications": [
+      "ex vivo T cell activation and expansion for cell manufacturing"
+    ],
+    "keyParameters": {
+      "notes": "Recommended with TexMACS GMP Medium (order no. 170-076-306); ex vivo cell processing only"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_9dk2r9v6f900t241miclbv1u6a/IM0017384.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 170-076-156 appears on the fetched MACS GMP T Cell TransAct datasheet PDF (IM0017384)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Human IL-2 IS, premium grade",
+    "catalogNumbers": [
+      "130-097-744",
+      "130-097-745",
+      "130-097-746",
+      "130-097-748"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine for cell culture",
+    "description": "Recombinant human interleukin-2 IS (improved sequence), a non-glycosylated 133-amino-acid polypeptide of 15.4 kDa expressed in E. coli, >97% pure by SDS-PAGE with <0.1 EU/µg endotoxin.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/il-2-is-premium-grade-human.html",
+    "storage": "Lyophilised: –20 °C; reconstituted aliquots at –20 °C or below",
+    "kitSize": "10 µg / 50 µg / 200 µg / 1000 µg",
+    "applications": [
+      "T cell activation and propagation",
+      "NK cell stimulation and expansion",
+      "LAK and CIK cell generation"
+    ],
+    "keyParameters": {
+      "notes": "Lyophilised from 0.2 µm filtered buffer with mannitol and trehalose; reconstitute to 0.1–1.0 mg/mL"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_2epvornjmt3rv0qthqhbita94i/IM0007458.PDF?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-097-744/745/746/748 appear on the fetched Miltenyi Human IL-2 IS premium grade datasheet PDF (IM0007458)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "T Cell Activation/Expansion Kit, human",
+    "catalogNumbers": [
+      "130-091-441"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Bead-based T cell activation kit",
+    "description": "Kit listed by Miltenyi for antigen-independent polyclonal activation and expansion of human T cells using anti-CD3/anti-CD28 loaded MACSiBead particles.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/t-cell-activation-expansion-kit-human.html",
+    "applications": [
+      "polyclonal T cell activation and expansion"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6r8m6loqt174n7djh6eh9kq15e/T%20Cell%20Quick%20Guide.pdf?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi T Cell Product Quick Guide PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACSQuant Calibration Beads",
+    "catalogNumbers": [
+      "130-093-607"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Flow cytometer calibration beads",
+    "description": "Calibration particles of 2 µm and 3 µm; the 3 µm particles are stained with fluorescent dyes covering commonly used flow cytometry fluorochromes and are excited between 400 and 650 nm in all fluorescence channels.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macsquant-calibration-beads.html",
+    "storage": "+2 to +8 °C, protected from light; do not freeze",
+    "kitSize": "3.5 mL, up to 100 tests",
+    "applications": [
+      "calibration of scatter and fluorescence settings on MACSQuant Flow Cytometers"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6cdofjiif17j14sdl514m5gh29?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-093-607 appears on the fetched Miltenyi MACSQuant Calibration Beads datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "7-Color Immunophenotyping Kit, human",
+    "catalogNumbers": [
+      "130-098-456"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Flow cytometry immunophenotyping panel",
+    "description": "Pre-mixed 7-colour antibody cocktail listed by Miltenyi for flow cytometric immunophenotyping of major human leukocyte populations.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/7-color-immunophenotyping-kit-human.html",
+    "applications": [
+      "flow cytometric immunophenotyping of human blood leukocytes"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6r8m6loqt174n7djh6eh9kq15e/T%20Cell%20Quick%20Guide.pdf?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi T Cell Product Quick Guide PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACSPlex Cytokine 12 Kit, human",
+    "catalogNumbers": [
+      "130-099-169"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Bead-based multiplex cytokine assay",
+    "description": "Bead-based multiplex assay listed by Miltenyi for simultaneous flow cytometric quantification of 12 human cytokines.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macsplex-cytokine-12-kit-human.html",
+    "applications": [
+      "multiplex cytokine quantification by flow cytometry"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6r8m6loqt174n7djh6eh9kq15e/T%20Cell%20Quick%20Guide.pdf?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi T Cell Product Quick Guide PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "FoxP3 Staining Buffer Set",
+    "catalogNumbers": [
+      "130-093-142"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Fixation/permeabilisation buffer set",
+    "description": "Buffer set listed by Miltenyi for fixation and permeabilisation of cells prior to intranuclear FoxP3 staining and flow cytometric analysis of regulatory T cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/foxp3-staining-buffer-set.html",
+    "applications": [
+      "intranuclear FoxP3 staining",
+      "regulatory T cell analysis"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_6r8m6loqt174n7djh6eh9kq15e/T%20Cell%20Quick%20Guide.pdf?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim next to this product name in the fetched Miltenyi T Cell Product Quick Guide PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "7-AAD Staining Solution",
+    "catalogNumbers": [
+      "130-111-568"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Dead cell exclusion dye",
+    "description": "Ready-to-use 7-aminoactinomycin D solution listed by Miltenyi for flow cytometric exclusion of dead cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/7-aad-staining-solution.html",
+    "applications": [
+      "dead cell exclusion in flow cytometry"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_67l3dp2f3l5m9b1aj6inldsh2r?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim in the fetched Miltenyi CD4 MicroBeads datasheet PDF (required/optional materials section)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "Propidium Iodide Solution",
+    "catalogNumbers": [
+      "130-093-233"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Dead cell exclusion dye",
+    "description": "Ready-to-use propidium iodide solution listed by Miltenyi for flow cytometric exclusion of dead cells.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/propidium-iodide-solution.html",
+    "applications": [
+      "dead cell exclusion in flow cytometry"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_67l3dp2f3l5m9b1aj6inldsh2r?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order number listed verbatim in the fetched Miltenyi CD4 MicroBeads datasheet PDF (required/optional materials section)."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACSwell Imaging Frames",
+    "catalogNumbers": [
+      "130-124-673",
+      "130-126-794",
+      "130-124-675",
+      "130-124-676"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Sample carrier for cyclic imaging",
+    "description": "Single-use cyclo-olefin polymer frames that form a liquid-tight chamber on a microscope slide for cell and tissue analysis on the MACSima Imaging System. Available as MACSwell One, One Small, Two and Four.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macswell-imaging-frames.html",
+    "storage": "Dry, protected from light, +19 to +25 °C",
+    "kitSize": "10 pieces per box",
+    "applications": [
+      "MACSima cyclic immunofluorescence imaging",
+      "spatial analysis of tissue sections"
+    ],
+    "keyParameters": {
+      "notes": "Frame dimensions 95 × 31 × 14.5 mm; material cyclo-olefin polymer with polycarbonate sliders"
+    },
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_i06nrleg3p67dfoc0vuqm94754?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order nos. 130-124-673, 130-126-794, 130-124-675 and 130-124-676 appear on the fetched Miltenyi MACSwell Imaging Frames datasheet PDF."
+  },
+  {
+    "vendor": "Miltenyi Biotec",
+    "vendorShort": "Miltenyi",
+    "productName": "MACSima Running Buffer",
+    "catalogNumbers": [
+      "130-121-565"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Instrument running buffer",
+    "description": "Running buffer listed by Miltenyi for operation of the MACSima Imaging System (order no. 130-121-164) during cyclic immunofluorescence imaging.",
+    "productUrl": "https://www.miltenyibiotec.com/US-en/products/macsima-running-buffer.html",
+    "applications": [
+      "MACSima Imaging System operation"
+    ],
+    "sourceUrl": "https://static.miltenyibiotec.com/asset/150655405641/document_i06nrleg3p67dfoc0vuqm94754?content-disposition=inline",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Order no. 130-121-565 appears in the related-products section of the fetched Miltenyi MACSwell Imaging Frames datasheet PDF."
+  }
+]

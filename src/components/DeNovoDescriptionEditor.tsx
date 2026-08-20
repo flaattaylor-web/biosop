@@ -100,6 +100,16 @@ export const DISCIPLINES = [
   'Histology & Imaging',
   'Biochemistry & Enzymology',
   'Analytical Chemistry',
+  'Cell & Gene Therapy',
+  'Neuroscience',
+  'Stem Cells & Organoids',
+  'Single-Cell & Spatial Biology',
+  'Epigenetics & Chromatin',
+  'Microbiome & Metagenomics',
+  'Structural Biology & Biophysics',
+  'Microscopy & Imaging',
+  'Model Organism Methods',
+  'Plant Biology',
   'Other',
 ] as const;
 

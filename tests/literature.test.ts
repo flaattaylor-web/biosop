@@ -3,6 +3,29 @@ import { _setTransport, verifyCitation, titleSimilarity, extractDoi, resolveDoi 
 
 const REGISTRY: Record<string, unknown> = {
   '10.1038/nmeth.2019': { DOI: '10.1038/nmeth.2019', title: ['Fiji: an open-source platform for biological-image analysis'], author: [{ given: 'J', family: 'Schindelin' }], 'container-title': ['Nature Methods'], issued: { 'date-parts': [[2012]] } },
+  // The real Crossref shape for Voinnet 2003, the standard p19 silencing-suppressor citation. It
+  // resolves, the title matches its own record exactly, and it is retracted. Duplicated notices are
+  // deliberate: Crossref returns both the publisher and Retraction Watch deposits.
+  '10.1046/j.1365-313X.2003.01676.x': {
+    DOI: '10.1046/j.1365-313X.2003.01676.x',
+    title: ['Retracted: An enhanced transient expression system in plants based on suppression of gene silencing by the p19 protein of tomato bushy stunt virus'],
+    author: [{ given: 'O', family: 'Voinnet' }], 'container-title': ['The Plant Journal'], issued: { 'date-parts': [[2003]] },
+    'updated-by': [
+      { DOI: '10.1111/tpj.12893', type: 'correction', label: 'Correction', source: 'retraction-watch', updated: { 'date-parts': [[2015, 6, 8]] } },
+      { DOI: '10.1111/tpj.13066', type: 'retraction', label: 'Retraction', source: 'retraction-watch', updated: { 'date-parts': [[2015, 11, 13]] } },
+      { DOI: '10.1111/tpj.13066', type: 'retraction', label: 'Retraction', source: 'publisher', updated: { 'date-parts': [[2015, 11, 13]] } },
+    ],
+  },
+  '10.1000/concern': {
+    DOI: '10.1000/concern', title: ['A paper under an expression of concern'], author: [{ given: 'A', family: 'Author' }],
+    'container-title': ['Journal'], issued: { 'date-parts': [[2019]] },
+    'updated-by': [{ DOI: '10.1000/eoc', type: 'expression_of_concern', label: 'Expression of concern', source: 'publisher', updated: { 'date-parts': [[2021, 3, 1]] } }],
+  },
+  '10.1000/corrected': {
+    DOI: '10.1000/corrected', title: ['A paper that was merely corrected'], author: [{ given: 'B', family: 'Author' }],
+    'container-title': ['Journal'], issued: { 'date-parts': [[2018]] },
+    'updated-by': [{ DOI: '10.1000/corr', type: 'correction', label: 'Correction', source: 'publisher', updated: { 'date-parts': [[2019, 1, 1]] } }],
+  },
 };
 
 beforeEach(() => {
@@ -31,6 +54,35 @@ describe('literature verification', () => {
     const r = await verifyCitation({ citation: 'Jones (2015). Optimized qPCR master mix for low-input RNA. NAR.', doiOrUrl: '10.1038/nmeth.2019' });
     expect(r.status).toBe('MISMATCH');
     expect(r.resolved?.title).toMatch(/Fiji/);
+  });
+  it('RETRACTED outranks a perfect title match', async () => {
+    const r = await verifyCitation({
+      citation: 'Voinnet O, Rivas S, Mestre P, Baulcombe D. An enhanced transient expression system in plants based on suppression of gene silencing by the p19 protein of tomato bushy stunt virus. The Plant Journal. 2003;33(5):949-956.',
+      doiOrUrl: '10.1046/j.1365-313X.2003.01676.x',
+    });
+    expect(r.status).toBe('RETRACTED');
+    expect(r.note).toMatch(/retract/i);
+    expect(r.note).toContain('10.1111/tpj.13066');
+    expect(r.note).toContain('2015-11-13');
+  });
+  it('deduplicates the publisher and Retraction Watch deposits of the same notice', async () => {
+    const rec = await resolveDoi('10.1046/j.1365-313X.2003.01676.x');
+    expect(rec?.updates?.filter((u) => u.type === 'retraction')).toHaveLength(1);
+  });
+  it('an expression of concern warns but does not invalidate', async () => {
+    const r = await verifyCitation({ citation: 'Author A. A paper under an expression of concern. Journal. 2019.', doiOrUrl: '10.1000/concern' });
+    expect(r.status).toBe('VERIFIED');
+    expect(r.note).toMatch(/expression of concern/i);
+  });
+  it('a correction is not a withdrawal', async () => {
+    const r = await verifyCitation({ citation: 'Author B. A paper that was merely corrected. Journal. 2018.', doiOrUrl: '10.1000/corrected' });
+    expect(r.status).toBe('VERIFIED');
+    expect(r.note).not.toMatch(/retract/i);
+  });
+  it('a record with no updated-by is unaffected', async () => {
+    const r = await verifyCitation({ citation: 'Schindelin J (2012). Fiji: an open-source platform for biological-image analysis. Nat Methods.', doiOrUrl: '10.1038/nmeth.2019' });
+    expect(r.status).toBe('VERIFIED');
+    expect(r.note).not.toMatch(/retract|concern/i);
   });
   it('UNCHECKED, never NOT_FOUND, when the registry is unreachable', async () => {
     _setTransport(async () => { throw new Error('ECONNREFUSED'); });

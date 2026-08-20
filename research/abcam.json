@@ -1,0 +1,1170 @@
+[
+  {
+    "productName": "Human IL-6 ELISA Kit (SimpleStep ELISA)",
+    "catalogNumbers": [
+      "ab178013"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "SimpleStep sandwich ELISA kit",
+    "description": "Colorimetric sandwich SimpleStep ELISA for quantitative measurement of human IL-6 using a single-wash Mix-Wash-Read protocol with 450 nm readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-6-elisa-kit-ab178013",
+    "storage": "+4°C",
+    "kitSize": "1 x 96 tests / 10 x 96 tests / 1 x 384 tests",
+    "applications": [
+      "ELISA",
+      "cytokine quantification",
+      "serum/plasma analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell culture supernatant, serum, EDTA plasma, citrate plasma, cerebrospinal fluid",
+      "time": "1 h 30 m",
+      "notes": "Sensitivity 1.6 pg/mL; 450 nm colorimetric readout"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab178013 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-6-elisa-kit-ab178013"
+  },
+  {
+    "productName": "Human TNF alpha ELISA Kit (SimpleStep ELISA)",
+    "catalogNumbers": [
+      "ab181421"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "SimpleStep sandwich ELISA kit",
+    "description": "SimpleStep sandwich ELISA for quantitative measurement of human TNF-alpha; capture and detector antibodies are combined in a single mix so the assay uses one incubation and a single wash.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-tnf-alpha-elisa-kit-ab181421",
+    "storage": "+4°C",
+    "kitSize": "1 x 96 tests / 10 x 96 tests / 1 x 384 tests",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "keyParameters": {
+      "input": "Serum, plasma (heparin, citrate, EDTA), CSF, cell culture supernatant",
+      "time": "90 minutes",
+      "notes": "Sensitivity 4.32 pg/mL; 450 nm colorimetric readout"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab181421 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-tnf-alpha-elisa-kit-ab181421"
+  },
+  {
+    "productName": "Annexin V-FITC Apoptosis Staining / Detection Kit",
+    "catalogNumbers": [
+      "ab14085"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis detection kit (flow cytometry)",
+    "description": "Stains phosphatidylserine exposed on the outer membrane of apoptotic cells with Annexin V-FITC and includes propidium iodide to distinguish apoptotic from necrotic and non-apoptotic cells.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-fitc-apoptosis-staining-detection-kit-ab14085",
+    "storage": "+4°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "10 minutes",
+      "notes": "Ex/Em 488/530 nm; contains Annexin V-FITC II, propidium iodide II and binding buffer"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab14085 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-fitc-apoptosis-staining-detection-kit-ab14085"
+  },
+  {
+    "productName": "Caspase-3 Assay Kit (Colorimetric)",
+    "catalogNumbers": [
+      "ab39401"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Caspase activity assay kit",
+    "description": "Assays the activity of caspases recognising the DEVD sequence by measuring p-nitroaniline released from a labelled substrate. Also detects caspase-7 activity.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/caspase-3-assay-kit-colorimetric-ab39401",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "apoptosis",
+      "enzyme activity assay",
+      "cell and tissue lysates"
+    ],
+    "keyParameters": {
+      "input": "Cell lysate, tissue lysate",
+      "time": "~2 hours",
+      "notes": "400 nm readout on a standard microplate reader"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab39401 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/caspase-3-assay-kit-colorimetric-ab39401"
+  },
+  {
+    "productName": "ChIP Kit",
+    "catalogNumbers": [
+      "ab500"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Chromatin immunoprecipitation kit",
+    "description": "Chromatin immunoprecipitation kit for mapping target proteins and histone modifications to specific loci in the genome, validated for mammalian suspension and adherent cells.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-kit-ab500",
+    "storage": "Multi-condition; refer to protocol booklet",
+    "kitSize": "1 kit (12 components)",
+    "applications": [
+      "ChIP",
+      "ChIP-qPCR"
+    ],
+    "keyParameters": {
+      "notes": "Includes positive control histone H3 antibody ab1791, protein A beads, ChIP buffer, proteinase K and DNA purifying slurry; not suitable for ChIP-seq"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab500 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-kit-ab500"
+  },
+  {
+    "productName": "High-sensitivity ChIP Kit",
+    "catalogNumbers": [
+      "ab185913"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "High-sensitivity chromatin immunoprecipitation kit",
+    "description": "Complete set of optimised reagents for chromatin immunoprecipitation in a high-throughput format, designed to detect low-abundance targets with minimal background.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/chip-kits/high-sensitivity-chip-kit-ab185913",
+    "storage": "Multi-condition; shipped on blue ice",
+    "kitSize": "24 tests / 48 tests",
+    "applications": [
+      "ChIP-PCR",
+      "ChIP-on-chip",
+      "ChIP-seq"
+    ],
+    "keyParameters": {
+      "input": "Optimal 1-2 x 10^5 cells or 10-20 mg tissue; range 2 x 10^3 to 1 x 10^6 cells, 0.5-50 mg tissue",
+      "time": "5 hours",
+      "notes": "Positive:negative control enrichment ratio >500"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab185913 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/chip-kits/high-sensitivity-chip-kit-ab185913"
+  },
+  {
+    "productName": "ChIP Kit (Transcription factors, ChIP-seq)",
+    "catalogNumbers": [
+      "ab270813"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Transcription factor ChIP-seq kit",
+    "description": "Complete solution for chromatin preparation and immunoprecipitation of transcription factors from mammalian cells and tissues and yeast, with output suitable for ChIP-seq.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-kit-transcription-factors-chip-seq-ab270813",
+    "storage": "Shipped on blue ice; refer to protocols",
+    "kitSize": "24 tests",
+    "applications": [
+      "ChIP-seq",
+      "transcription factor ChIP",
+      "next-generation sequencing"
+    ],
+    "keyParameters": {
+      "input": "4,000,000 cells per IP or 30 mg tissue per IP",
+      "notes": "Includes CTCF positive control antibody, IgG negative control, protein A magnetic beads and control primer pairs"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab270813 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-kit-transcription-factors-chip-seq-ab270813"
+  },
+  {
+    "productName": "ChIP-Seq High Sensitivity Kit",
+    "catalogNumbers": [
+      "ab185908"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "ChIP-seq kit with library preparation",
+    "description": "Complete set of reagents for carrying out ChIP-seq starting from mammalian cells or tissues, including selective enrichment of chromatin fractions and library preparation for Illumina platforms.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-seq-high-sensitivity-kit-ab185908",
+    "storage": "Shipped on blue ice; refer to protocols",
+    "kitSize": "12 tests / 24 tests",
+    "applications": [
+      "ChIP-seq",
+      "genome-wide protein-DNA interaction analysis",
+      "Illumina sequencing"
+    ],
+    "keyParameters": {
+      "input": "1 x 10^5 to 1 x 10^6 cells (optimal 4-5 x 10^5); 5-50 mg tissue (optimal 20-30 mg); 1-100 ng enriched DNA",
+      "time": "7 hours"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab185908 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/chip-kits/chip-seq-high-sensitivity-kit-ab185908"
+  },
+  {
+    "productName": "ATP Assay Kit (Colorimetric/Fluorometric)",
+    "catalogNumbers": [
+      "ab83355",
+      "K354-100"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (ATP quantification)",
+    "description": "Addition-only ATP assay with a single 30 minute room-temperature incubation, detecting ATP in cell lysates, tissue extracts and biological fluids by colorimetric or fluorometric readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/atp-assay-kit-colorimetric-fluorometric-ab83355",
+    "storage": "-20°C",
+    "kitSize": "100 tests / 2000 tests",
+    "applications": [
+      "metabolism",
+      "energy metabolism",
+      "cell lysate analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates, tissue extracts, plasma, serum, urine, biological fluids",
+      "time": "1 hour total (30 min incubation)",
+      "notes": "Colorimetric 570 nm; fluorometric Ex/Em 535/587 nm; sensitivity <1 µM"
+    },
+    "verified": true,
+    "verificationNote": "Catalog numbers ab83355 and K354-100 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/atp-assay-kit-colorimetric-fluorometric-ab83355"
+  },
+  {
+    "productName": "NAD/NADH Assay Kit (Colorimetric)",
+    "catalogNumbers": [
+      "ab65348"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (NAD/NADH)",
+    "description": "Quantifies NAD+ and NADH and their ratio in samples from mammals and other species using an enzyme cycling reaction with colorimetric readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/nad-nadh-assay-kit-colorimetric-ab65348",
+    "storage": "-20°C",
+    "kitSize": "100 tests / 2000 tests",
+    "applications": [
+      "metabolism",
+      "redox state analysis"
+    ],
+    "keyParameters": {
+      "input": "Tissue lysate, urine, serum, cell lysate",
+      "time": "~2 hours",
+      "notes": "450 nm readout; detection range 400-2000 nM; does not detect NADP or NADPH"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab65348 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/nad-nadh-assay-kit-colorimetric-ab65348"
+  },
+  {
+    "productName": "NADP/NADPH Assay Kit",
+    "catalogNumbers": [
+      "ab65349"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (NADP/NADPH)",
+    "description": "Enzyme-cycling assay for sensitive detection of intracellular NADP, NADPH and their ratio, without cross-reactivity to NAD+/NADH.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/nadp-nadph-assay-kit-ab65349",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "metabolism",
+      "redox state analysis"
+    ],
+    "keyParameters": {
+      "input": "Tissue extracts, cell lysate",
+      "time": "2 hours",
+      "notes": "OD 450 nm on a microplate reader"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab65349 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/nadp-nadph-assay-kit-ab65349"
+  },
+  {
+    "productName": "L-Lactate Assay Kit (Colorimetric)",
+    "catalogNumbers": [
+      "ab65331"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (L-lactate)",
+    "description": "Quantitative colorimetric assay in which lactate dehydrogenase oxidises lactate to generate a product that reacts with a probe to produce a measurable colour change.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/l-lactate-assay-kit-colorimetric-ab65331",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "metabolism",
+      "glycolysis",
+      "biological fluid analysis"
+    ],
+    "keyParameters": {
+      "input": "Tissue lysate, urine, plasma, cell culture supernatant, serum, cell lysate",
+      "time": "30 minutes at room temperature",
+      "notes": "450 nm readout; sensitivity 0.02 mM; range 0.02-20 mM"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab65331 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/l-lactate-assay-kit-colorimetric-ab65331"
+  },
+  {
+    "productName": "Glucose Uptake Assay Kit (Colorimetric)",
+    "catalogNumbers": [
+      "ab136955"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (glucose uptake)",
+    "description": "Simple, direct, non-radioactive colorimetric assay for measuring glucose uptake in cell cultures, based on uptake and phosphorylation of 2-deoxyglucose.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/glucose-uptake-assay-kit-colorimetric-ab136955",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "metabolism",
+      "insulin signalling",
+      "cell culture"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "3 hours",
+      "notes": "Sensitivity <=0.01 nmol/well; microplate reader readout"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab136955 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/glucose-uptake-assay-kit-colorimetric-ab136955"
+  },
+  {
+    "productName": "Nuclear Extraction Kit",
+    "catalogNumbers": [
+      "ab113474"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation / nuclear protein extraction kit",
+    "description": "Selective method for nuclear protein extraction and fractionation from cells or tissue samples in about one hour, giving high yields of nuclear proteins.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/nuclear-extraction-kit-ab113474",
+    "storage": "+4°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "western blot",
+      "protein-DNA binding assays",
+      "nuclear enzyme assays"
+    ],
+    "keyParameters": {
+      "input": "Adherent cells, suspension cells, tissue",
+      "time": "1 hour",
+      "notes": "Includes 10X pre-extraction buffer, ENE2 extraction buffer, DTT and protease inhibitor cocktail"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab113474 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/nuclear-extraction-kit-ab113474"
+  },
+  {
+    "productName": "APC Conjugation Kit - Lightning-Link",
+    "catalogNumbers": [
+      "ab201807"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody labelling / conjugation kit",
+    "description": "Lightning-Link kit for direct conjugation of allophycocyanin (APC) to antibodies, proteins and peptides with about 30 seconds hands-on time and no purification step.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/conjugation-kits/apc-conjugation-kit-lightning-link-ab201807",
+    "storage": "-20°C",
+    "kitSize": "3 x 10 µg / 100 µg / 3 x 100 µg / 1 mg",
+    "applications": [
+      "flow cytometry",
+      "ELISA",
+      "immunohistochemistry",
+      "immunofluorescence",
+      "western blot"
+    ],
+    "keyParameters": {
+      "input": "Antibody at ideally 1 mg/mL",
+      "time": "<4 hours (3 h modifier incubation + 30 min quencher)",
+      "notes": "100% antibody recovery; no post-conjugation purification required"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab201807 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/conjugation-kits/apc-conjugation-kit-lightning-link-ab201807"
+  },
+  {
+    "productName": "Resazurin Assay Kit (Cell Viability)",
+    "catalogNumbers": [
+      "ab129732"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell viability / metabolic activity assay",
+    "description": "Fluorometric/colorimetric assay measuring the metabolic capacity of live cells through reduction of non-fluorescent resazurin to red fluorescent resorufin.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/resazurin-assay-kit-cell-viability-ab129732",
+    "storage": "+4°C",
+    "kitSize": "2000 tests (1 x 24 mL 20X Cell Viability Stain)",
+    "applications": [
+      "cell viability",
+      "cytotoxicity",
+      "cell proliferation",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "~4 h stain incubation; cells can be monitored 24-48 h",
+      "notes": "Fluorescence Ex/Em 530-560/590 nm or absorbance 570 nm; no-wash homogeneous assay"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab129732 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/resazurin-assay-kit-cell-viability-ab129732"
+  },
+  {
+    "productName": "LDH Assay Kit (Cytotoxicity, Fluorometric)",
+    "catalogNumbers": [
+      "ab197004"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "LDH-release cytotoxicity assay",
+    "description": "Detects lactate dehydrogenase released from damaged cells; LDH converts lactate to pyruvate and NADH, which reduces a probe to generate fluorescence.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/ldh-cytotoxicity-assay-kit-fluorometric-ab197004",
+    "storage": "-20°C",
+    "kitSize": "500 tests",
+    "applications": [
+      "cytotoxicity",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "5 µL cell culture media; suspension and adherent cells",
+      "time": "<20 minutes",
+      "notes": "Ex/Em 535/587 nm; sensitivity ~100 cells per well"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab197004 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/ldh-cytotoxicity-assay-kit-fluorometric-ab197004"
+  },
+  {
+    "productName": "Mouse and Rabbit Specific HRP/DAB Detection IHC Kit",
+    "catalogNumbers": [
+      "ab64264"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "IHC detection kit (HRP/DAB, biotin-streptavidin)",
+    "description": "Complete IHC detection kit using a biotinylated anti-rabbit/anti-mouse secondary antibody and HRP-labelled streptavidin with DAB chromogen.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/ihc-kits/mouse-and-rabbit-specific-hrp-dab-detection-ihc-kit-ab64264",
+    "storage": "+4°C",
+    "kitSize": "15 mL",
+    "applications": [
+      "IHC-P",
+      "formalin/PFA-fixed paraffin-embedded sections"
+    ],
+    "keyParameters": {
+      "notes": "Contains 50x DAB chromogen, streptavidin peroxidase, biotinylated goat anti-polyvalent, DAB substrate, hydrogen peroxide block, protein block"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab64264 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/ihc-kits/mouse-and-rabbit-specific-hrp-dab-detection-ihc-kit-ab64264"
+  },
+  {
+    "productName": "Mouse and Rabbit Specific HRP/DAB IHC Detection Kit - Micro-polymer",
+    "catalogNumbers": [
+      "ab236466"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "IHC detection kit (biotin-free micro-polymer)",
+    "description": "Biotin-free colorimetric micro-polymer IHC kit detecting mouse and rabbit primary antibodies; the smaller detection complex improves tissue penetration and suits tissues with endogenous biotin.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/ihc-kits/mouse-and-rabbit-specific-hrp-dab-ihc-detection-kit-micro-polymer-ab236466",
+    "storage": "+4°C",
+    "kitSize": "15 mL / 60 mL / 125 mL",
+    "applications": [
+      "IHC-P",
+      "formalin/PFA-fixed paraffin-embedded sections"
+    ],
+    "keyParameters": {
+      "notes": "Ready-to-use reagents: hydrogen peroxide block, protein block, goat anti-rabbit HRP conjugate, mouse specifying reagent, DAB substrate and 50x DAB chromogen"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab236466 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/ihc-kits/mouse-and-rabbit-specific-hrp-dab-ihc-detection-kit-micro-polymer-ab236466"
+  },
+  {
+    "productName": "Rabbit Specific IHC Polymer Detection Kit HRP/DAB",
+    "catalogNumbers": [
+      "ab209101"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "IHC polymer detection kit (HRP/DAB)",
+    "description": "Indirect polymer detection system for rabbit primary antibodies in tissue sections, avoiding avidin-biotin chemistry and endogenous biotin blocking steps.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/ihc-kits/rabbit-specific-ihc-polymer-detection-kit-hrp-dab-ab209101",
+    "storage": "+4°C",
+    "kitSize": "15 mL (1 x 15 mL amplifier + 1 x 15 mL detector)",
+    "applications": [
+      "IHC-P",
+      "IHC-FoFr (frozen sections)"
+    ],
+    "keyParameters": {
+      "time": "30 min room-temperature incubations",
+      "notes": "DAB substrate not included; DAB Substrate Kit ab64238 recommended separately"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab209101 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/ihc-kits/rabbit-specific-ihc-polymer-detection-kit-hrp-dab-ab209101"
+  },
+  {
+    "productName": "Propidium Iodide Flow Cytometry Kit",
+    "catalogNumbers": [
+      "ab139418"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell cycle analysis kit",
+    "description": "Kit for quantitative DNA content analysis in tissue culture cells using propidium iodide staining followed by flow cytometry.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/propidium-iodide-flow-cytometry-kit-ab139418",
+    "storage": "Shipped on blue ice; refer to protocols",
+    "kitSize": "200 tests",
+    "applications": [
+      "cell cycle analysis",
+      "cell viability",
+      "apoptosis studies",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "<1 hour total processing",
+      "notes": "Contains 200X RNase A, 10X PBS and 20X propidium iodide; flow cytometer required"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab139418 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/propidium-iodide-flow-cytometry-kit-ab139418"
+  },
+  {
+    "productName": "Annexin V-iFluor 488 Apoptosis Detection Kit",
+    "catalogNumbers": [
+      "ab219916"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis detection kit (flow cytometry)",
+    "description": "Annexin V labelled with the green fluorescent dye iFluor 488 for identification and quantitation of apoptotic cells on a single-cell basis by flow cytometry.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-ifluor-488-apoptosis-detection-kit-ab219916",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "time": "30 min staining incubation",
+      "notes": "Ex/Em 490/525 nm; contains 100X Annexin 488, assay buffer and 100X propidium iodide"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab219916 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-ifluor-488-apoptosis-detection-kit-ab219916"
+  },
+  {
+    "productName": "ATP Synthase Activity Assay Kit (Colorimetric)",
+    "catalogNumbers": [
+      "ab109714"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Mitochondrial enzyme activity assay (Complex V)",
+    "description": "Immunocapture-based microplate assay determining ATP synthase (Complex V) activity by monitoring the decrease in absorbance at 340 nm.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/atp-synthase-activity-assay-kit-colorimetric-ab109714",
+    "storage": "Shipped on dry ice; refer to protocols",
+    "kitSize": "96 tests",
+    "applications": [
+      "mitochondrial enzyme activity",
+      "OXPHOS analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell culture extracts, tissue extracts, purified mitochondria, cell lysate",
+      "time": "6 hours",
+      "notes": "340 nm readout; reactivity human, rat, cow"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab109714 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/atp-synthase-activity-assay-kit-colorimetric-ab109714"
+  },
+  {
+    "productName": "Human IL-1 beta ELISA Kit (SimpleStep ELISA)",
+    "catalogNumbers": [
+      "ab214025"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "SimpleStep sandwich ELISA kit",
+    "description": "Colorimetric sandwich SimpleStep ELISA for quantitative measurement of human IL-1 beta with a 450 nm readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-1-beta-elisa-kit-ab214025",
+    "storage": "+4°C",
+    "kitSize": "1 x 96 tests / 10 x 96 tests",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "keyParameters": {
+      "input": "Heparin/citrate/EDTA plasma, serum, cell culture supernatant",
+      "time": "1 h 30 m",
+      "notes": "Sensitivity 5.64 pg/mL"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab214025 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-1-beta-elisa-kit-ab214025"
+  },
+  {
+    "productName": "Mouse IL-6 ELISA Kit (SimpleStep ELISA)",
+    "catalogNumbers": [
+      "ab222503"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "SimpleStep sandwich ELISA kit",
+    "description": "Colorimetric sandwich SimpleStep ELISA for mouse IL-6 using a Mix-Wash-Read protocol with a single incubation and wash step.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/elisa-kits/mouse-il-6-elisa-kit-ab222503",
+    "storage": "+4°C",
+    "kitSize": "1 x 96 tests / 10 x 96 tests / 384-well format",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "keyParameters": {
+      "input": "Serum, plasma, cell culture supernatant; 384-well format needs max 12.5 µL sample",
+      "time": "90 minutes",
+      "notes": "Sensitivity 11.3 pg/mL; TMB substrate, 450 nm readout"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab222503 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/elisa-kits/mouse-il-6-elisa-kit-ab222503"
+  },
+  {
+    "productName": "Mitochondria Isolation Kit for Cultured Cells",
+    "catalogNumbers": [
+      "ab110170"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation / mitochondria isolation kit",
+    "description": "Isolates mitochondria from cultured mammalian cells by differential centrifugation, giving material suitable for western blot, immunocapture or activity assays.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/mitochondria-isolation-kit-for-cultured-cells-ab110170",
+    "storage": "+4°C",
+    "kitSize": "Up to 20 isolations",
+    "applications": [
+      "western blot",
+      "immunocapture assays",
+      "mitochondrial activity assays"
+    ],
+    "keyParameters": {
+      "input": "Cultured mammalian cells",
+      "time": "1 hour",
+      "notes": "Contains Reagent A (50 mL), Reagent B (50 mL), Reagent C (10 mL)"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab110170 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/mitochondria-isolation-kit-for-cultured-cells-ab110170"
+  },
+  {
+    "productName": "HRP Conjugation Kit - Lightning-Link",
+    "catalogNumbers": [
+      "ab102890"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody labelling / conjugation kit",
+    "description": "Directional conjugation of horseradish peroxidase to antibodies, proteins and peptides with 100% antibody recovery and no purification step before use in detection assays.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/conjugation-kits/hrp-conjugation-kit-lightning-link-ab102890",
+    "protocolUrl": "https://content.abcam.com/content/dam/abcam/product/documents/102/ab102890/hrp-conjugation-kit-protocol-book-v10c-ab102890%20(website).pdf",
+    "storage": "-20°C",
+    "kitSize": "3 x 10 µg / 100 µg / 3 x 100 µg / 1 mg / 5 x 1 mg / 5 mg",
+    "applications": [
+      "western blot",
+      "ELISA",
+      "sandwich ELISA",
+      "competitive ELISA",
+      "immunohistochemistry"
+    ],
+    "keyParameters": {
+      "time": "<4 hours (3 h modifier + 30 min quencher); ~30 s hands-on",
+      "notes": "Custom sizes up to 100 mg on demand"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab102890 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/conjugation-kits/hrp-conjugation-kit-lightning-link-ab102890"
+  },
+  {
+    "productName": "FITC Conjugation Kit (Fast) - Lightning-Link",
+    "catalogNumbers": [
+      "ab188285"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody labelling / conjugation kit",
+    "description": "Rapid FITC/fluorescein labelling of antibodies, proteins and peptides in a two-step add-and-incubate process with no purification required.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/conjugation-kits/fitc-conjugation-kit-fast-lightning-link-ab188285",
+    "storage": "-20°C",
+    "kitSize": "3 x 10 µg / 100 µg / 3 x 100 µg / 1 mg",
+    "applications": [
+      "flow cytometry",
+      "immunofluorescence",
+      "ELISA",
+      "immunohistochemistry",
+      "immunocytochemistry",
+      "lateral flow assay",
+      "western blot"
+    ],
+    "keyParameters": {
+      "time": "<20 minutes (15 min modifier + 5 min quencher)",
+      "notes": "100% antibody recovery; no further purification needed"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab188285 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/conjugation-kits/fitc-conjugation-kit-fast-lightning-link-ab188285"
+  },
+  {
+    "productName": "Plasma Membrane Protein Extraction Kit",
+    "catalogNumbers": [
+      "ab65400",
+      "K268-50"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Membrane protein extraction kit",
+    "description": "Optimised buffers and reagents for extraction of native plasma membrane proteins from mammalian tissues and cells; can extract total cellular membrane protein or purify plasma membrane protein at >90% purity.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/plasma-membrane-protein-extraction-kit-ab65400",
+    "protocolUrl": "https://content.abcam.com/content/dam/abcam/product/documents/65/ab65400/Plasma-Membrane-Protein-Extraction-protocol-book-v10b-ab65400%20(website).pdf",
+    "storage": "-20°C",
+    "kitSize": "50 tests",
+    "applications": [
+      "western blot",
+      "2-D gels",
+      "SDS-PAGE",
+      "enzyme analyses"
+    ],
+    "keyParameters": {
+      "input": "Tissue homogenate, cell culture extracts",
+      "time": "<1 hour",
+      "notes": "Contains upper/lower phase solutions, homogenization buffer I and protease inhibitor cocktail I"
+    },
+    "verified": true,
+    "verificationNote": "Catalog numbers ab65400 and K268-50 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/plasma-membrane-protein-extraction-kit-ab65400"
+  },
+  {
+    "productName": "Protein Extraction Kit",
+    "catalogNumbers": [
+      "ab270054"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Total protein extraction buffer kit",
+    "description": "Proprietary SDS- and reducing agent-containing buffer for unbiased solubilisation of proteins from cells and tissues for proteomics applications.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/protein-extraction-kit-ab270054",
+    "storage": "+4°C",
+    "kitSize": "1 kit (1 x 50 mL protein extraction buffer)",
+    "applications": [
+      "proteomics",
+      "SDS-PAGE",
+      "FASP",
+      "protein quantification"
+    ],
+    "keyParameters": {
+      "input": "Freshly harvested cells, frozen cells, tissue",
+      "notes": "Not for use prior to functional protein assays; use detergent/reducing-agent compatible protein assays"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab270054 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/protein-extraction-kit-ab270054"
+  },
+  {
+    "productName": "Cell Fractionation Kit - High Throughput (HT)",
+    "catalogNumbers": [
+      "ab109718"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation kit (96-well)",
+    "description": "Rapid preparation of cytosolic, mitochondrial and nuclear fractions from adherent cells by sequential detergent extraction in a 96-well format.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/cell-fractionation-kit-high-throughput-ht-ab109718",
+    "storage": "-20°C (Detergent HT I at -80°C; plates at room temperature)",
+    "kitSize": "1 x 96 tests",
+    "applications": [
+      "western blot",
+      "dot blot",
+      "ELISA",
+      "protein translocation studies"
+    ],
+    "keyParameters": {
+      "input": "Adherent cells in 96-well plates",
+      "time": "1 hour for 96 samples",
+      "notes": "Produces highly enriched, not purified, fractions"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab109718 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/cell-fractionation-kit-high-throughput-ht-ab109718"
+  },
+  {
+    "productName": "Fraction-PREP Cell Fractionation Kit",
+    "catalogNumbers": [
+      "ab288085"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation kit (4 fractions)",
+    "description": "Reproducible extraction of four subcellular protein fractions - cytosol, nucleus, membrane/particulate and cytoskeletal - without ultracentrifugation.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/fraction-prep-cell-fractionation-kit-ab288085",
+    "storage": "-20°C",
+    "kitSize": "50 tests",
+    "applications": [
+      "western blot",
+      "1-D and 2-D gel electrophoresis",
+      "enzyme activity assays",
+      "gel shift assays"
+    ],
+    "keyParameters": {
+      "input": "Suspension cells, adherent cells, tissue homogenate",
+      "time": "2 hours",
+      "notes": "No ultracentrifugation required"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab288085 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/fraction-prep-cell-fractionation-kit-ab288085"
+  },
+  {
+    "productName": "DCFDA / H2DCFDA - Cellular ROS Assay Kit",
+    "catalogNumbers": [
+      "ab113851"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Reactive oxygen species (ROS) assay kit",
+    "description": "Measures reactive oxygen species in cell cultures using the cell-permeant reagent DCFDA (2',7'-dichlorofluorescin diacetate), which fluoresces after oxidation.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/dcfda-h2dcfda-cellular-ros-assay-kit-ab113851",
+    "protocolUrl": "https://content.abcam.com/content/dam/abcam/product/documents/113/ab113851/DCFDA-H2DCFDA-Cellular-ROS-assay-protocol-book-v2b-ab113851%20(website).pdf",
+    "storage": "-20°C",
+    "kitSize": "300 tests",
+    "applications": [
+      "oxidative stress",
+      "microplate reader",
+      "fluorescence microscopy",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "40 minutes",
+      "notes": "Ex/Em 485/535 nm; includes 20 mM DCFDA, 10X sterile dilution buffer and 55 mM TBHP positive control"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab113851 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/dcfda-h2dcfda-cellular-ros-assay-kit-ab113851"
+  },
+  {
+    "productName": "Methylated DNA Quantification Kit (Fluorometric)",
+    "catalogNumbers": [
+      "ab117129"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Global DNA methylation (5-mC) quantification kit",
+    "description": "Microplate-based kit quantifying global DNA methylation by specifically measuring 5-methylcytosine levels in DNA from saliva, urine, plasma, tissue and cell suspensions.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/methylated-dna-quantification-kit-fluorometric-ab117129",
+    "storage": "Shipped on blue ice; refer to protocols",
+    "kitSize": "48 tests / 96 tests",
+    "applications": [
+      "global DNA methylation quantification",
+      "epigenetics"
+    ],
+    "keyParameters": {
+      "input": "DNA; sensitivity >=50 pg/well",
+      "time": "4 hours",
+      "notes": "Fluorescent readout on a microplate reader; includes capture and detection antibodies plus positive and negative controls"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab117129 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/methylated-dna-quantification-kit-fluorometric-ab117129"
+  },
+  {
+    "productName": "Global DNA Methylation Assay Kit (5 Methyl Cytosine, Colorimetric)",
+    "catalogNumbers": [
+      "ab233486"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Global DNA methylation (5-mC) quantification kit",
+    "description": "Contains all reagents for quantification of global DNA methylation, detecting methylated DNA with capture and detection antibodies and colorimetric microplate readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/global-dna-methylation-assay-kit-5-methyl-cytosine-colorimetric-ab233486",
+    "protocolUrl": "https://www.abcam.com/ps/products/233/ab233486/documents/ab233486%20Global%20DNA%20Methylation%20Assay%20Kit%20(5%20Methyl%20Cytosine,%20Colorimetric)%20v1b%20(website).pdf",
+    "applications": [
+      "global DNA methylation quantification",
+      "epigenetics",
+      "cancer research"
+    ],
+    "keyParameters": {
+      "input": "100 ng input DNA; single- or double-stranded DNA from various species",
+      "notes": "Detection limit as low as 0.05% methylated DNA; specific to 5-methylcytosine with no cross-reactivity to unmethylated cytosine"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab233486 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/global-dna-methylation-assay-kit-5-methyl-cytosine-colorimetric-ab233486"
+  },
+  {
+    "productName": "Immunoprecipitation Kit",
+    "catalogNumbers": [
+      "ab206996"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Immunoprecipitation / Co-IP kit",
+    "description": "Kit for immunoprecipitation and co-immunoprecipitation with optimised buffers for cell/tissue extract preparation, antigen binding and washing, using Protein A/G Sepharose beads.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/immunoprecipitation-kit-ab206996",
+    "storage": "+4°C",
+    "kitSize": "25 tests",
+    "applications": [
+      "immunoprecipitation",
+      "co-immunoprecipitation",
+      "SDS-PAGE",
+      "western blot"
+    ],
+    "keyParameters": {
+      "input": "Tissue, suspension cells, adherent cells",
+      "notes": "Includes RIPA lysis buffer, non-denaturing lysis buffer, Protein A/G Sepharose beads I, protease inhibitor cocktail I and 10X wash buffer"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab206996 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/sample-preparation-kits/immunoprecipitation-kit-ab206996"
+  },
+  {
+    "productName": "JC-1 - Mitochondrial Membrane Potential Assay Kit",
+    "catalogNumbers": [
+      "ab113850"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Mitochondrial membrane potential assay kit",
+    "description": "Fluorescence assay using the cationic dye JC-1, which forms red-fluorescent aggregates in polarised mitochondria and remains as green-fluorescent monomers in depolarised mitochondria.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/jc-1-mitochondrial-membrane-potential-assay-kit-ab113850",
+    "storage": "Shipped on blue ice; refer to protocol",
+    "kitSize": "100 tests",
+    "applications": [
+      "mitochondrial health",
+      "apoptosis",
+      "fluorescent microplate reader"
+    ],
+    "keyParameters": {
+      "input": "Live suspension or adherent cells (not compatible with fixation)",
+      "time": "1 hour",
+      "notes": "Monomer Ex/Em 475/530 nm; aggregate Ex/Em 535/590 nm; includes JC-1, 10X dilution buffer, 50 mM FCCP and DMSO"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab113850 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/jc-1-mitochondrial-membrane-potential-assay-kit-ab113850"
+  },
+  {
+    "productName": "TMRE - Mitochondrial Membrane Potential Assay Kit",
+    "catalogNumbers": [
+      "ab113852"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Mitochondrial membrane potential assay kit",
+    "description": "Quantifies changes in mitochondrial membrane potential in live cells using the fluorescent dye TMRE, which accumulates in active mitochondria.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/tmre-mitochondrial-membrane-potential-assay-kit-ab113852",
+    "protocolUrl": "https://content.abcam.com/content/dam/abcam/product/documents/113/ab113852/TMRE-Mitochondrial-Membrane-Potential-Assay-protocol-book-v10d-ab113852%20(website).pdf",
+    "storage": "-20°C",
+    "kitSize": "200 tests",
+    "applications": [
+      "flow cytometry",
+      "microplate spectrophotometry",
+      "fluorescence microscopy"
+    ],
+    "keyParameters": {
+      "input": "Live suspension or adherent cells (not compatible with fixation)",
+      "time": "35 minutes",
+      "notes": "Ex/Em 549/575 nm on plate reader; 488 nm laser / 575 nm on flow cytometer; contains 1 mM TMRE and 50 mM FCCP"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab113852 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/tmre-mitochondrial-membrane-potential-assay-kit-ab113852"
+  },
+  {
+    "productName": "NAD/NADH Assay Kit II (Colorimetric)",
+    "catalogNumbers": [
+      "ab221821"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Metabolic assay kit (NAD/NADH)",
+    "description": "Measures NAD+, NADH and their ratio in mammalian cell lysates using an ADH and diaphorase coupled reaction that converts WST-1 to formazan.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/nad-nadh-assay-kit-ii-colorimetric-ab221821",
+    "storage": "-80°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "metabolism",
+      "redox state analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysate",
+      "time": "30 minute incubation with kinetic monitoring",
+      "notes": "OD 450 nm; sensitivity 62.5 nM; reaction is not stopped so absorbance must be monitored continuously"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab221821 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/nad-nadh-assay-kit-ii-colorimetric-ab221821"
+  },
+  {
+    "productName": "Annexin V-iFluor 647 Apoptosis Detection Kit",
+    "catalogNumbers": [
+      "ab219919"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis detection kit (flow cytometry)",
+    "description": "Annexin V labelled with iFluor 647 for identification and quantification of apoptotic cells on a single-cell basis by flow cytometry or fluorescence microscopy.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-ifluor-647-apoptosis-detection-kit-ab219919",
+    "storage": "+4°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "notes": "Ex/Em 650/680 nm; spectrally similar to Cy5 and Alexa Fluor 647; contains assay buffer and 100X Annexin 647 stock"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab219919 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/annexin-v-ifluor-647-apoptosis-detection-kit-ab219919"
+  },
+  {
+    "productName": "Cleaved Caspase-3 Staining Kit (Red)",
+    "catalogNumbers": [
+      "ab65617"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Activated caspase-3 staining kit",
+    "description": "Detects activated caspase-3 in living cells using Red-DEVD-FMK, a cell-permeable fluorescent inhibitor that binds irreversibly to activated caspase-3 in apoptotic cells.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/assay-kits/cleaved-caspase-3-staining-kit-red-ab65617",
+    "storage": "-20°C",
+    "kitSize": "100 tests",
+    "applications": [
+      "apoptosis",
+      "fluorescence microscopy",
+      "flow cytometry",
+      "microplate reader"
+    ],
+    "keyParameters": {
+      "input": "Suspension and adherent cells",
+      "time": "2 hours",
+      "notes": "Sulfo-rhodamine (red) conjugate; includes Red-DEVD-FMK, Z-VAD-FMK and wash buffer IV"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab65617 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/assay-kits/cleaved-caspase-3-staining-kit-red-ab65617"
+  },
+  {
+    "productName": "Human IL-8 ELISA Kit (SimpleStep ELISA)",
+    "catalogNumbers": [
+      "ab214030"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "SimpleStep sandwich ELISA kit",
+    "description": "Colorimetric sandwich SimpleStep ELISA for human IL-8 using a single-wash, one-incubation protocol on a pre-coated microplate with 450 nm readout.",
+    "sourceUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-8-elisa-kit-ab214030",
+    "storage": "+4°C",
+    "kitSize": "1 x 96 tests / 10 x 96 tests / 1 x 384 tests",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "keyParameters": {
+      "input": "Serum, plasma (heparin, citrate, EDTA), cell culture supernatant, cerebrospinal fluid",
+      "time": "1 h 30 m",
+      "notes": "Sensitivity 1.8 pg/mL; detection range 3.91-250 pg/mL; recovery 84-104%"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number ab214030 present on fetched Abcam product page.",
+    "vendor": "Abcam",
+    "vendorShort": "Abcam",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.abcam.com/en-us/products/elisa-kits/human-il-8-elisa-kit-ab214030"
+  }
+]

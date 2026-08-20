@@ -20,9 +20,33 @@ Generates biotech SOPs and reaction sheets with Gemini, then **independently ver
 | Hosting | AI Studio scaffold only | Cloudflare Workers from GitHub, custom domain, stateless by default (D1 optional); Node server kept for local dev |
 | Privacy | SOP JSON posted to server for every export | Exports and worklists run in the browser; only AI calls and citation strings leave it — spelled out in a Data & privacy panel |
 
+## Reference protocol library
+
+`src/data/biologyProtocols.ts` — **124 protocols across 18 disciplines**, transcribed from published standard practice rather than generated. Each carries hazards, PPE, equipment, reagents, numbered steps with times and temperatures, QC acceptance criteria, a troubleshooting matrix, and primary references whose DOIs were resolved against Crossref at the time of writing.
+
+| Discipline | Count | | Discipline | Count |
+|---|---|---|---|---|
+| Virology | 16 | | Microbiome & Metagenomics | 6 |
+| Molecular Biology | 10 | | Plant Biology | 6 |
+| Cell & Gene Therapy | 9 | | Proteomics & Protein Biochemistry | 6 |
+| Neuroscience | 8 | | Cell Culture | 5 |
+| Stem Cells & Organoids | 8 | | Microbiology | 3 |
+| Model Organism Methods | 8 | | Histology & Imaging | 2 |
+| Biochemistry & Enzymology | 7 | | Immunology & Immunoassay | 2 |
+| Epigenetics & Chromatin | 7 | | | |
+| Microscopy & Imaging | 7 | | | |
+| Single-Cell & Spatial Biology | 7 | | | |
+| Structural Biology & Biophysics | 7 | | | |
+
+These are reference material, not model output. They exist as the counterweight to the generator: a corpus the rules engine can be run against, and a source a user can compare a generated document to. A qualified scientist must still review and adapt any of them to their own cells, agents and institutional rules before use.
+
 ## Commercial kit repository
 
-`public/data/kit-index.json` — **620 products from 16 vendors**, every entry traced to a fetched vendor page with the catalog number confirmed on it (`verified: true`; entries that couldn't be confirmed were left out). Sources are in `research/*.json` (one file per vendor, with `sourceUrl` + `retrievedAt`); rebuild the index with `node scripts/build-kit-index.mjs`.
+`public/data/kit-index.json` — **1,231 products from 32 vendors**, every entry traced to a fetched vendor page with the catalog number confirmed on it (`verified: true`; entries that couldn't be confirmed were left out). Sources are in `research/*.json` (one file per vendor, with `sourceUrl` + `retrievedAt`); rebuild the index with `node scripts/build-kit-index.mjs`.
+
+Vendors: NEB, Thermo Fisher, MilliporeSigma, Promega, QIAGEN, Roche/KAPA, Bio-Rad, Takara, Agilent, Illumina, Zymo, 10x, IDT, Beckman, PacBio, Oxford Nanopore, Twist, GenScript, Abcam, Cell Signaling Technology, Miltenyi Biotec, BioLegend, STEMCELL Technologies, Lonza, Cytiva, Macherey-Nagel, Norgen Biotek, Omega Bio-tek, Biotium, Mirus Bio, Bio-Techne/R&D Systems, Active Motif.
+
+Entries that could not be confirmed on a vendor page are held in `research/_pending/` and are **not** merged into the shipped index. `tests/kits.test.ts` asserts the shipped index is 100% verified, so an unverified entry cannot reach the app by accident.
 
 In the app (**Company Kit Repository → Catalog**): search by name / catalog number / vendor / application, filter by vendor and category. **Find on the web** discovers products not in the catalog: Gemini + Google Search grounding finds the vendor page, the server fetches it, extracts the record, and marks it *verified* only if the catalog number appears in the fetched page text; results are saved to **My kits** in your browser. **Generate SOP from manufacturer protocol** fetches the vendor's protocol page/PDF and attaches it to the generation as the primary reference (PDFs are passed to the model inline), stamps the SOP with vendor/catalog/URL, and runs the normal audit.
 

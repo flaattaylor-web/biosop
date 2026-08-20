@@ -1,6 +1,4 @@
 import { SopDocument } from '../types';
-import { BIOLOGY_PROTOCOLS } from './biologyProtocols';
-import { COMPANY_KIT_SOPS } from './companyKits';
 
 export const INITIAL_GENERIC_SOPS: SopDocument[] = [
   {
@@ -238,4 +236,18 @@ export const INITIAL_GENERIC_SOPS: SopDocument[] = [
   }
 ];
 
-export const SAMPLE_SOPS: SopDocument[] = [...COMPANY_KIT_SOPS, ...BIOLOGY_PROTOCOLS, ...INITIAL_GENERIC_SOPS];
+/**
+ * The bundled library is roughly 1.2 MB of protocol text: 124 reference methods and 57 kit SOPs.
+ * Importing it statically put all of that in the entry chunk, so the browser parsed every protocol
+ * before it could paint anything, whether or not the user ever opened the library.
+ *
+ * It is fetched on demand instead. `INITIAL_GENERIC_SOPS` is small and stays synchronous so the app
+ * has a document to render immediately; the rest arrives a moment later and merges in.
+ */
+export async function loadBundledLibrary(): Promise<SopDocument[]> {
+  const [biology, kits] = await Promise.all([
+    import('./biologyProtocols'),
+    import('./companyKits'),
+  ]);
+  return [...kits.COMPANY_KIT_SOPS, ...biology.BIOLOGY_PROTOCOLS, ...INITIAL_GENERIC_SOPS];
+}

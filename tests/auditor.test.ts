@@ -9,7 +9,14 @@ const base = (): SopDocument => ({
   hazards: [{ type: 'CHEMICAL', label: 'x', description: 'y' }],
   ppeRequirements: [{ item: 'gloves', required: true }],
   equipmentRequired: ['thermocycler'], reagentsRequired: ['mix'],
-  steps: [{ stepNumber: 1, title: 'Do', instruction: 'A sufficiently long instruction for the step.' }],
+  // Three steps carrying quantities, because the completeness dimension errors below three steps and
+  // warns when fewer than half of them contain a number. This fixture predates those rules; it is the
+  // fixture that was stale, not the auditor.
+  steps: [
+    { stepNumber: 1, title: 'Thaw and mix', instruction: 'Thaw the 2X master mix on ice for 10 min and vortex for 5 s.', timingMinutes: 10, tempCelsius: 4 },
+    { stepNumber: 2, title: 'Assemble', instruction: 'Assemble a 20 uL reaction: 10 uL of 2X mix, 8 uL water, 2 uL template.', timingMinutes: 15, tempCelsius: 22 },
+    { stepNumber: 3, title: 'Cycle', instruction: 'Run 35 cycles of 95 C for 15 s and 60 C for 60 s.', timingMinutes: 90, tempCelsius: 95 },
+  ],
   qualityControl: ['Include an NTC'], troubleshooting: [{ issue: 'a', cause: 'b', solution: 'c' }],
   references: [{ citation: 'Real paper', doiOrUrl: '10.1/x', verificationStatus: 'VERIFIED' }],
   revisionHistory: [{ version: '1.0', date: '2026-01-01', changes: 'init', author: 'A' }],

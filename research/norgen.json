@@ -1,0 +1,1395 @@
+[
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification Kit",
+    "catalogNumbers": [
+      "17200",
+      "37500",
+      "17250",
+      "17270"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA extraction, spin column (retains microRNA)",
+    "description": "Spin-column kit for rapid purification of total RNA - including microRNA - without phenol. Norgen's proprietary resin separation matrix binds and elutes all RNA sizes irrespective of size or GC content, without bias.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/Total-RNA-Purification-Kit-Insert-PI17200-32-M14.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (17200) / 100 preps (37500) / 250 preps (17250) / 500 preps (17270)",
+    "applications": [
+      "qRT-PCR",
+      "RT-PCR",
+      "microarrays",
+      "NGS",
+      "small RNA sequencing"
+    ],
+    "keyParameters": {
+      "input": "Max 3x10^6 animal cells; 10 mg animal tissue; 100 µL blood; 200 µL plasma/serum; 1x10^9 bacteria; 50 mg plant tissue",
+      "time": "20 min for 10 purifications",
+      "notes": "Phenol-free; retains small RNA/microRNA"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17200/37500/17250/17270 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification 96-Well Kit",
+    "catalogNumbers": [
+      "24300",
+      "24370",
+      "24350",
+      "24380"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA extraction, 96-well high throughput",
+    "description": "High-throughput 96-well plate format of Norgen's Total RNA Purification chemistry for purification of total RNA including microRNA without phenol; deep-well plates are available for larger lysate volumes.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "Standard: 192 preps (24300) / 576 preps (24370); Deep well: 192 preps (24350) / 576 preps (24380)",
+    "applications": [
+      "qRT-PCR",
+      "microarrays",
+      "NGS",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "notes": "96-well plates for manual or automated processing; deep-well version accommodates larger lysate volumes"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 24300/24370/24350/24380 present on fetched Norgen Total RNA Purification Kits listing page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification Kit (Magnetic Bead System)",
+    "catalogNumbers": [
+      "75400",
+      "75500"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA extraction, magnetic bead",
+    "description": "Magnetic bead version of Norgen's total RNA chemistry, isolating all RNA sizes including microRNA without phenol; available in single-tube and 96-well formats and suited to automated liquid handling.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps, single tube (75400) / 200 preps, 96-well (75500)",
+    "applications": [
+      "qRT-PCR",
+      "NGS",
+      "small RNA sequencing",
+      "high-throughput automation"
+    ],
+    "keyParameters": {
+      "notes": "Magnetic bead format; no columns or centrifugation required; 96-well format for automation"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 75400/75500 present on fetched Norgen Total RNA Purification Kits listing page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification Micro Kit",
+    "catalogNumbers": [
+      "35300",
+      "35350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Low-input total RNA extraction (microRNA retained)",
+    "description": "Purification of total RNA including microRNA from small input amounts such as low cell numbers and laser-capture microdissected samples, with elution in as little as 20 µL.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-micro-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI35300-6%20Total%20RNA%20Purification%20Micro%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (35300) / 250 preps (35350)",
+    "applications": [
+      "qRT-PCR",
+      "RT-PCR",
+      "microarrays",
+      "small RNA sequencing",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "Max 5x10^5 animal cells; ~3 mg animal tissue; LCM samples up to 5x10^5 cells",
+      "time": "20 min for 10 purifications",
+      "notes": "Minimum elution volume 20 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-micro-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 35300/35350 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification Maxi Kit",
+    "catalogNumbers": [
+      "26800"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Large-scale total RNA extraction",
+    "description": "Maxi-format spin column kit for rapid purification of total RNA including microRNA without phenol, from large sample inputs such as up to 250 mg brain tissue or 10 mL whole blood.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-maxi-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI26800-5%20Total%20RNA%20Purification%20Maxi%20Kit.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "8 preps",
+    "applications": [
+      "real-time PCR",
+      "RT-PCR",
+      "Northern blotting",
+      "expression arrays"
+    ],
+    "keyParameters": {
+      "input": "Up to 100 mg liver/kidney; 250 mg brain; 2-10 mL whole blood; 2.5x10^10 bacteria",
+      "time": "4 purifications in 40 min"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-maxi-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 26800 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Total RNA Purification Plus Kit",
+    "catalogNumbers": [
+      "48300",
+      "48400"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA extraction with column-based gDNA removal",
+    "description": "Total RNA (including microRNA) purification using an extra column for efficient removal of contaminating genomic DNA, replacing the enzymatic DNase step.",
+    "productUrl": "https://norgenbiotek.com/product/total-rna-purification-plus-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-06/PI48300-8%20Total%20RNA%20Purification%20Plus%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (48300) / 100 preps (48400)",
+    "applications": [
+      "qRT-PCR",
+      "RT-PCR",
+      "microarrays",
+      "NGS",
+      "small RNA research"
+    ],
+    "keyParameters": {
+      "input": "5-25 mg tissue; 100 µL whole blood; 3x10^6 mammalian cells; 200 µL plasma/serum",
+      "time": "25 min for 10 purifications",
+      "notes": "gDNA removal column replaces DNase treatment"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/total-rna-purification-plus-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 48300/48400 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plant/Fungi Total RNA Purification Kit",
+    "catalogNumbers": [
+      "25800",
+      "31350",
+      "25850",
+      "31900"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plant and fungal total RNA extraction",
+    "description": "Isolation of total RNA, including virus and viroid RNA and microRNA, from plant tissues, plant cells and filamentous fungi without phenol or chloroform.",
+    "productUrl": "https://norgenbiotek.com/product/plantfungi-total-rna-purification-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI25800-14%20Plant%20Fungi%20Total%20RNA%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (25800) / 100 preps (31350) / 250 preps (25850) / 192 preps, 96-well high throughput (31900)",
+    "applications": [
+      "real-time PCR",
+      "RT-PCR",
+      "Northern blotting",
+      "RNase protection",
+      "expression arrays",
+      "high-throughput plant screening"
+    ],
+    "keyParameters": {
+      "input": "Max 50 mg plant tissue; 1x10^6 plant cells; 50 mg fungi (wet weight)",
+      "time": "~30 min for 10 purifications"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plantfungi-total-rna-purification-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 25800/31350/25850/31900 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum RNA Purification Mini Kit",
+    "catalogNumbers": [
+      "55000"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Circulating and exosomal RNA from plasma/serum",
+    "description": "Rapid purification of circulating RNA and exosomal RNA, including microRNA, from plasma or serum without phenol extraction and without carrier RNA.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-07/PI55000-12%20Plasma%20Serum%20RNA%20Purification%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "small RNA sequencing",
+      "circulating biomarker qPCR",
+      "exosomal RNA analysis"
+    ],
+    "keyParameters": {
+      "input": "50-200 µL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "EDTA or citrate anticoagulant (not heparin); elution 10-25 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55000 present on fetched Norgen Plasma/Serum RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum RNA Purification Midi Kit",
+    "catalogNumbers": [
+      "56100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Circulating and exosomal RNA from plasma/serum, midi scale",
+    "description": "Midi-scale two-column method for purification of circulating and exosomal RNA including microRNA from larger plasma or serum volumes, with on-column concentration.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-07/PI56100-3%20Plasma%20Serum%20RNA%20Purification%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "20 preps",
+    "applications": [
+      "small RNA sequencing",
+      "circulating biomarker qPCR",
+      "exosomal RNA analysis"
+    ],
+    "keyParameters": {
+      "input": "250 µL - 1.5 mL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Two-column method; elution 50-100 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56100 present on fetched Norgen Plasma/Serum RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum RNA Purification Maxi Kit",
+    "catalogNumbers": [
+      "56200"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Circulating and exosomal RNA from plasma/serum, maxi scale",
+    "description": "Maxi-scale two-column method for purification of circulating and exosomal RNA including microRNA from 2-5 mL of plasma or serum, followed by concentration.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-07/PI56200-3%20Plasma%20Serum%20RNA%20Purification%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "10 preps",
+    "applications": [
+      "small RNA sequencing",
+      "circulating biomarker qPCR",
+      "exosomal RNA analysis"
+    ],
+    "keyParameters": {
+      "input": "2-5 mL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Two-column method; elution 50-100 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56200 present on fetched Norgen Plasma/Serum RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Saliva DNA Collection and Preservation Devices",
+    "catalogNumbers": [
+      "RU49000",
+      "RU49010"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Saliva collection and ambient DNA preservation device",
+    "description": "Non-invasive saliva collection and DNA preservation device with collection funnel, tube, cap and preservative ampoule; preserves DNA at ambient temperature.",
+    "productUrl": "https://norgenbiotek.com/product/saliva-dna-collection-and-preservation-devices-50",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PIRU49000-5%20Saliva%20DNA%20Collection%20and%20Preservation%20Devices%20%2850%29%20Insert.pdf",
+    "storage": "Room temperature; preserved samples stable up to 6 years at room temperature",
+    "kitSize": "50 devices (RU49000) / 4 devices sample pack (RU49010)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "sequencing",
+      "SNP analysis",
+      "microarrays",
+      "population studies"
+    ],
+    "keyParameters": {
+      "input": "2 mL saliva collected; 4 mL final volume with preservative",
+      "notes": "Samples rendered non-infectious for safe handling and shipping"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/saliva-dna-collection-and-preservation-devices-50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers RU49000/RU49010 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Saliva DNA Collection, Preservation and Isolation Kit",
+    "catalogNumbers": [
+      "35700"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Saliva collection device plus DNA isolation kit",
+    "description": "All-in-one kit for non-invasive saliva collection, ambient-temperature DNA preservation, and laboratory isolation of high quality genomic DNA.",
+    "productUrl": "https://norgenbiotek.com/product/saliva-dna-collection-preservation-and-isolation-kit-0",
+    "storage": "Room temperature; collection devices stable up to 3 years, preserved samples over 5 years",
+    "kitSize": "50 devices",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "sequencing",
+      "SNP analysis",
+      "microarrays",
+      "RFLP",
+      "Southern blot"
+    ],
+    "keyParameters": {
+      "input": "2 mL saliva collected; 4 mL total with preservative",
+      "time": "DNA isolation ~35 min",
+      "notes": "CE-IVD marked; typical yield 5-20 µg DNA from 0.5 mL; not available for sale in the United States"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/saliva-dna-collection-preservation-and-isolation-kit-0",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 35700 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Stool DNA Isolation Kit",
+    "catalogNumbers": [
+      "27600",
+      "65600"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Stool/fecal microbial and host DNA extraction, spin column",
+    "description": "Spin-column purification of microbial and host DNA from stool and fecal samples, fresh, frozen or preserved, with removal of PCR inhibitors such as humic acids.",
+    "productUrl": "https://norgenbiotek.com/product/stool-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (27600) / 192 preps, 96-well high throughput (65600)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "Southern blot",
+      "sequencing",
+      "microarray",
+      "microbiome profiling"
+    ],
+    "keyParameters": {
+      "input": "200 mg stool or 400 µL preserved sample",
+      "time": "~30 min for 10 purifications",
+      "notes": "50 µL elution; column capacity 50 µg; HMW DNA up to 50 kb"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/stool-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 27600/65600 present on fetched Norgen Stool DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Stool DNA Isolation Kit (Magnetic Bead System)",
+    "catalogNumbers": [
+      "55700",
+      "63100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Stool/fecal DNA extraction, magnetic bead",
+    "description": "Magnetic bead purification of microbial and host DNA from stool and fecal samples, yielding higher molecular weight DNA and suited to automation.",
+    "productUrl": "https://norgenbiotek.com/product/stool-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (55700) / 192 preps, 96-well high throughput (63100)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "sequencing",
+      "microbiome profiling",
+      "automation"
+    ],
+    "keyParameters": {
+      "input": "200 mg stool or 200 µL preserved sample",
+      "time": "~30 min for 10 purifications",
+      "notes": "Magnetic bead format; automation-friendly"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/stool-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 55700/63100 present on fetched Norgen Stool DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Microbiome DNA Isolation Kit",
+    "catalogNumbers": [
+      "64100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Swab-based microbiome DNA extraction",
+    "description": "Spin-column isolation of total DNA from microbiome samples collected using a swab, simultaneously recovering host and microbial genomic DNA and removing PCR inhibitors.",
+    "productUrl": "https://norgenbiotek.com/product/microbiome-dna-isolation-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-06/PI64100-7%20Microbiome%20DNA%20Isolation%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "PCR",
+      "NGS",
+      "metagenomic sequencing",
+      "microbiome profiling"
+    ],
+    "keyParameters": {
+      "input": "Max 1 mL preserved swab sample",
+      "time": "30 min for 10 purifications",
+      "notes": "Column binding capacity 50 µg; validated on fecal, saliva, buccal, nasal, skin, food and surface swabs"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/microbiome-dna-isolation-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 64100 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Stool Nucleic Acid Collection and Preservation Tubes",
+    "catalogNumbers": [
+      "45660"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Stool collection and ambient nucleic acid preservation tube",
+    "description": "Collection tube containing 4 mL of preservative with an integrated scoop, preserving stool nucleic acids at ambient temperature while preventing microbial overgrowth, inactivating viruses and eliminating odour.",
+    "productUrl": "https://norgenbiotek.com/product/stool-nucleic-acid-collection-and-preservation-tubes",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI45660-5%20Stool%20Nucleic%20Acid%20Collection%20and%20Preservation%20Tubes%20Insert.pdf",
+    "storage": "Room temperature 15-25 °C; tubes stable 2 years from shipment",
+    "kitSize": "50 tubes",
+    "applications": [
+      "microbiome profiling",
+      "metagenomics",
+      "NGS",
+      "qPCR",
+      "ddPCR",
+      "metabolomics"
+    ],
+    "keyParameters": {
+      "input": "2 g stool per tube",
+      "notes": "DNA stable 2 years and RNA 7 days at room temperature; tube 76 mm x 20 mm"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/stool-nucleic-acid-collection-and-preservation-tubes",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 45660 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum Cell-Free Circulating and Viral Nucleic Acid Purification Kits",
+    "catalogNumbers": [
+      "56300",
+      "56400",
+      "56500"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA, circulating/exosomal RNA and viral nucleic acid co-purification",
+    "description": "Purifies and concentrates high quality, inhibitor-free cell-free circulating DNA, circulating and exosomal RNA, and viral DNA/RNA from plasma or serum in a single prep.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-and-viral-nucleic-acid-purification-maxi-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI56300-4%20Plasma%20Serum%20cfc%20and%20Viral%20NA%20Purification%20Mini%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "Mini 50 preps (56300) / Midi 20 preps (56400) / Maxi 10 preps (56500)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "RT-qPCR",
+      "methylation-sensitive assays",
+      "expression arrays",
+      "NGS library prep"
+    ],
+    "keyParameters": {
+      "input": "50-200 µL (Mini); 250 µL-1.5 mL (Midi); 2-5 mL (Maxi) plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "EDTA or citrate anticoagulant; recovers RNA of all sizes and DNA >=50 bp; elution 10-25 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-and-viral-nucleic-acid-purification-maxi-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 56300/56400/56500 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum Cell-Free Circulating DNA Purification Micro Kit",
+    "catalogNumbers": [
+      "55500"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA (cfDNA) from plasma/serum",
+    "description": "Spin-column purification of cell-free circulating DNA from plasma or serum, isolating all sizes of circulating DNA (>=50 bp) including viral and bacterial DNA, free of inhibitors.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI55500-13%20Plasma-Serum%20Cell%20Free%20Circulating%20DNA%20Purification%20Kits_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "10-200 µL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 25-50 µL; recovers DNA >=50 bp"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55500 present on fetched Norgen Plasma/Serum Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum Cell-Free Circulating DNA Purification Mini Kit",
+    "catalogNumbers": [
+      "55100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA (cfDNA) from plasma/serum",
+    "description": "Spin-column purification of cell-free circulating DNA from plasma or serum, isolating all sizes of circulating DNA (>=50 bp) including viral and bacterial DNA, free of inhibitors.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI55100-1%20Plasma-Serum%20Cell%20Free%20Circulating%20DNA%20Purification%20Kits_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "200-500 µL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 25-50 µL; recovers DNA >=50 bp"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55100 present on fetched Norgen Plasma/Serum Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum Cell-Free Circulating DNA Purification Midi Kit",
+    "catalogNumbers": [
+      "55600"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA (cfDNA) from plasma/serum",
+    "description": "Spin-column purification of cell-free circulating DNA from plasma or serum, isolating all sizes of circulating DNA (>=50 bp) including viral and bacterial DNA, free of inhibitors.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI55600-1%20Plasma-Serum%20Cell%20Free%20Circulating%20DNA%20Purification%20Kits.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "20 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "1-4 mL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 25-50 µL; recovers DNA >=50 bp"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55600 present on fetched Norgen Plasma/Serum Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum Cell-Free Circulating DNA Purification Maxi Kit",
+    "catalogNumbers": [
+      "55800"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA (cfDNA) from plasma/serum",
+    "description": "Spin-column purification of cell-free circulating DNA from plasma or serum, isolating all sizes of circulating DNA (>=50 bp) including viral and bacterial DNA, free of inhibitors.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI55800-1%20Plasma-Serum%20Cell%20Free%20Circulating%20DNA%20Purification%20Kits.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "10 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "5-10 mL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 25-50 µL; recovers DNA >=50 bp"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55800 present on fetched Norgen Plasma/Serum Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating DNA Purification Mini Kit",
+    "catalogNumbers": [
+      "56600"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA from urine",
+    "description": "Purifies and concentrates high quality, high purity and inhibitor-free cell-free circulating DNA from urine samples, recovering all DNA sizes >=50 bp.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI56600-5%20Urine%20CFC%20DNA%20Purification%20Mini%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "250 µL - 2 mL urine",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 50-100 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56600 present on fetched Norgen Urine Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating DNA Purification Midi Kit",
+    "catalogNumbers": [
+      "56700"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA from urine",
+    "description": "Purifies and concentrates high quality, high purity and inhibitor-free cell-free circulating DNA from urine samples, recovering all DNA sizes >=50 bp.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI56700-2%20Urine%20CFC%20DNA%20Purification%20Midi%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "20 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "2-10 mL urine",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 50-100 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56700 present on fetched Norgen Urine Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating DNA Purification Maxi Kit",
+    "catalogNumbers": [
+      "56800"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating DNA from urine",
+    "description": "Purifies and concentrates high quality, high purity and inhibitor-free cell-free circulating DNA from urine samples, recovering all DNA sizes >=50 bp.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI56800-2%20Urine%20CFC%20DNA%20Purification%20Maxi%20Kit%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "10 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Southern blot",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "10-30 mL urine",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Elution volume 50-100 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-dna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56800 present on fetched Norgen Urine Cell-Free Circulating DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating RNA Purification Mini Kit",
+    "catalogNumbers": [
+      "56900"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating and exosomal RNA from urine",
+    "description": "Purifies and concentrates cell-free circulating RNA including exosomal RNA and microRNA from urine, without phenol extraction or carrier RNA.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI56900-6%20Urine%20cfc%20RNA%20Purification%20Kits%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "Northern blotting",
+      "small RNA sequencing",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "250 µL - 2 mL urine",
+      "time": "25-30 min for 10 purifications (Mini)",
+      "notes": "Elution volume 50-100 µL; Midi/Maxi use a two-column concentration method"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 56900 present on fetched Norgen Urine Cell-Free Circulating RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating RNA Purification Midi Kit",
+    "catalogNumbers": [
+      "57000"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating and exosomal RNA from urine",
+    "description": "Purifies and concentrates cell-free circulating RNA including exosomal RNA and microRNA from urine, without phenol extraction or carrier RNA.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI57000-2%20Urine%20cfc%20RNA%20Purification%20Kits%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "20 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "Northern blotting",
+      "small RNA sequencing",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "2-10 mL urine",
+      "time": "25-30 min for 10 purifications (Mini)",
+      "notes": "Elution volume 50-100 µL; Midi/Maxi use a two-column concentration method"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 57000 present on fetched Norgen Urine Cell-Free Circulating RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Cell-Free Circulating RNA Purification Maxi Kit",
+    "catalogNumbers": [
+      "57100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Cell-free circulating and exosomal RNA from urine",
+    "description": "Purifies and concentrates cell-free circulating RNA including exosomal RNA and microRNA from urine, without phenol extraction or carrier RNA.",
+    "productUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI57100-2%20Urine%20cfc%20RNA%20Purification%20Kits%20Insert_0.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "10 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "Northern blotting",
+      "small RNA sequencing",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "10-30 mL urine",
+      "time": "25-30 min for 10 purifications (Mini)",
+      "notes": "Elution volume 50-100 µL; Midi/Maxi use a two-column concentration method"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-cell-free-circulating-rna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 57100 present on fetched Norgen Urine Cell-Free Circulating RNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Collection and Stabilization Devices",
+    "catalogNumbers": [
+      "18118",
+      "18122",
+      "18113",
+      "18126",
+      "18129"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Urine collection tubes, cup and stabilizer for ambient nucleic acid preservation",
+    "description": "Devices for rapid collection and preservation of urine samples, supplied as tubes containing a dried stabilizer pellet, a liquid single-dose stabilizer ampoule, or a stabilization cup.",
+    "productUrl": "https://norgenbiotek.com/product/urine-collection-and-stabilization-devices",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI18118-3%20Urine%20Collection%20and%20Preservation%20Tubes%20%285%20cc%29%20Insert.pdf",
+    "storage": "Room temperature 15-25 °C, up to 2 years",
+    "kitSize": "50 tubes 5 cc (18118) / 50 tubes 15 cc (18122) / 50 tubes 50 cc (18113) / 50 single doses (18126) / 1 cup 120 cc (18129)",
+    "applications": [
+      "urine DNA isolation",
+      "urine RNA isolation",
+      "protein purification",
+      "liquid biopsy"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL (5 cc); 5-15 mL (15 cc); 5-45 mL (50 cc); 100-120 mL (cup)",
+      "notes": "Orange stabilizer pellet dissolves on mixing; stabilized samples storable at RT, 4 °C or -20 °C"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-collection-and-stabilization-devices",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 18118/18122/18113/18126/18129 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Urine Nucleic Acid Collection and Preservation System",
+    "catalogNumbers": [
+      "76200"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "At-home urine collection with evacuated preservative tubes",
+    "description": "Non-invasive at-home urine collection system with evacuated tubes prefilled with preservative and a collection cup with integrated transfer device; preserves nucleic acids at ambient temperature in a closed design that prevents spills and aerosol generation.",
+    "productUrl": "https://norgenbiotek.com/product/urine-nucleic-acid-collection-and-preservation-system",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/Urine%20Collection%20Vaccutainer%20Instructions-v2.0.pdf",
+    "storage": "15-30 °C; nucleic acids stable up to 2 years",
+    "kitSize": "1 system (2 preservative tubes + 1 collection cup)",
+    "applications": [
+      "STI and UTI research",
+      "biomarker discovery",
+      "viral/bacterial/fungal detection",
+      "RNA analysis"
+    ],
+    "keyParameters": {
+      "input": "~9 mL per tube (10 mL capacity); 60 mL collection cup",
+      "notes": "Preservative inactivates viruses, bacteria and fungi; research use only"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/urine-nucleic-acid-collection-and-preservation-system",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 76200 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "RNA/DNA/Protein Purification Plus Kit",
+    "catalogNumbers": [
+      "47700"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Sequential RNA, genomic DNA and protein isolation from one sample",
+    "description": "Sequential isolation of total RNA (including microRNA), genomic DNA and protein from a single sample of animal cells, tissues, blood, bacteria, yeast, fungi or plants, with no sample splitting, phenol or precipitation.",
+    "productUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-06/PI47700-11%20RNA%20DNA%20Protein%20Purification%20Plus%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "qPCR",
+      "RT-qPCR",
+      "Western blot",
+      "ELISA",
+      "mass spectrometry"
+    ],
+    "keyParameters": {
+      "input": "Max 5x10^6 animal cells; 25 mg tissue; 100 µL blood; 1x10^9 bacteria; 50 mg plant tissue",
+      "time": "~30 min for 10 purifications",
+      "notes": "Capacity 50 µg RNA / 20 µg DNA (>=30 kb) / 200 µg protein; protein eluted in MS-compatible buffer"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 47700 present on fetched Norgen RNA/DNA/Protein Purification Plus Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "RNA/DNA/Protein Purification Plus Micro Kit",
+    "catalogNumbers": [
+      "51600"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Low-input sequential RNA, DNA and protein isolation",
+    "description": "Micro-format sequential isolation of RNA, genomic DNA and protein from limited samples such as microdissected tissue, laser-capture material, stem cells, sorted cells and circulating tumour cells.",
+    "productUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-06/PI51600-8%20RNA%20DNA%20Protein%20Purification%20Plus%20Micro%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "qPCR",
+      "RT-qPCR",
+      "Western blot",
+      "mass spectrometry",
+      "single-cell-scale analysis"
+    ],
+    "keyParameters": {
+      "time": "<30 minutes per purification",
+      "notes": "RNA/DNA elution as low as 20 µL; protein elution as low as 50 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 51600 present on fetched Norgen RNA/DNA/Protein Purification Plus Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "RNA/DNA/Protein Purification 96-Well Plus Kit",
+    "catalogNumbers": [
+      "51700"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "High-throughput sequential RNA, DNA and protein isolation",
+    "description": "96-well plate format using dual plates to purify genomic DNA and RNA/protein simultaneously from the same samples for high-throughput workflows.",
+    "productUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/2026-06/PI51700-7%20RNA-DNA-Protein%20Isolation%2096-Well%20Kit.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "96 preps",
+    "applications": [
+      "qPCR",
+      "RT-qPCR",
+      "Western blot",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "notes": "Dual 96-well plates for parallel DNA and RNA/protein purification"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/rnadnaprotein-purification-plus-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 51700 present on fetched Norgen RNA/DNA/Protein Purification Plus Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Exosomal RNA Isolation Kit",
+    "catalogNumbers": [
+      "58000",
+      "58040"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "RNA isolation from purified exosomes",
+    "description": "Spin-column isolation of exosomal RNA, including microRNA, from exosomes previously purified by Norgen kits, ultracentrifugation, size-exclusion chromatography or other commercial methods. No phenol, proteinase K or ultracentrifugation required.",
+    "productUrl": "https://norgenbiotek.com/product/exosomal-rna-isolation-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI58000-7%20Exosomal%20RNA%20Isolation%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (58000) / 4 preps (58040)",
+    "applications": [
+      "RT-qPCR",
+      "small RNA sequencing",
+      "exosomal biomarker analysis"
+    ],
+    "keyParameters": {
+      "input": "Purified exosomes (40-200 nm) from urine, plasma/serum, cell culture media or saliva",
+      "time": "35-45 min for 10 samples",
+      "notes": "Isolates all RNA sizes including microRNA"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/exosomal-rna-isolation-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 58000/58040 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Plasma/Serum RNA/DNA Purification Mini Kit",
+    "catalogNumbers": [
+      "55200"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Sequential circulating RNA and cell-free DNA from one plasma/serum sample",
+    "description": "Sequential isolation of circulating RNA, exosomal RNA and cell-free circulating DNA from the same plasma or serum sample, without phenol/chloroform extraction or protease treatment.",
+    "productUrl": "https://norgenbiotek.com/product/plasmaserum-rnadna-purification-mini-kit",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI55200-4%20Plasma%20Serum%20RNA-DNA%20Purification%20Mini%20Kit.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "RT-qPCR",
+      "PCR",
+      "qPCR",
+      "methylation-sensitive PCR",
+      "Northern blot",
+      "Southern blot",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "10-200 µL plasma/serum",
+      "time": "15-20 min for 10 purifications",
+      "notes": "Recovers all RNA sizes including microRNA and DNA fragments >=50 bp; elution 10-25 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/plasmaserum-rnadna-purification-mini-kit",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 55200 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "cf-DNA/cf-RNA Preservative Tubes",
+    "catalogNumbers": [
+      "63950"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Blood collection tube for cell-free DNA/RNA preservation",
+    "description": "Closed evacuated plastic blood collection tubes with a formaldehyde-free proprietary preservation agent, for collecting and preserving cell-free circulating DNA, circulating tumour DNA and cell-free RNA from whole blood during storage and shipping.",
+    "productUrl": "https://norgenbiotek.com/product/cf-dnacf-rna-preservative-tubes",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI63950-14%20cfDNA%20cfRNA%20Preservative%20Tubes%20Insert.pdf",
+    "storage": "Unfilled tubes 15-30 °C through expiration date",
+    "kitSize": "50 tubes (10 mL tubes, 8.7 mL draw)",
+    "applications": [
+      "liquid biopsy",
+      "PCR",
+      "qPCR",
+      "RT-qPCR",
+      "methylation-sensitive PCR",
+      "microarrays",
+      "NGS"
+    ],
+    "keyParameters": {
+      "input": "8.7 mL whole blood draw; yields ~6-7 mL plasma",
+      "notes": "cf-DNA and cf-RNA stable up to 30 days at 15-25 °C; cf-DNA up to 8 days at 37 °C; tube 16 x 100 mm PET, 1.3 mL preservative"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/cf-dnacf-rna-preservative-tubes",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 63950 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Stool Total RNA Purification Kit",
+    "catalogNumbers": [
+      "49500",
+      "49540"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Host and microbial total RNA from stool",
+    "description": "Purifies total RNA from small amounts of stool, simultaneously isolating host and microbial RNA across all RNA sizes from large mRNA to microRNA while eliminating PCR inhibitors including humic acids.",
+    "productUrl": "https://norgenbiotek.com/product/309",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI49500-7%20Stool%20Total%20RNA%20Kit%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (49500) / 4 preps (49540)",
+    "applications": [
+      "real-time PCR",
+      "RT-PCR gene expression",
+      "16S sequencing",
+      "microbiome studies",
+      "colorectal cancer biomarker research"
+    ],
+    "keyParameters": {
+      "input": "Max 200 mg fresh/frozen stool or 400 µL preserved stool",
+      "time": "~30 min for 10 samples",
+      "notes": "Column capacity 50 µg; max loading volume 600 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/309",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 49500/49540 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "RNA/DNA Purification Kit",
+    "catalogNumbers": [
+      "48700"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Sequential total RNA and genomic DNA from one sample",
+    "description": "Two-column system for sequential isolation of total RNA and genomic DNA from a single sample, with one column dedicated to DNA and one to RNA purification.",
+    "productUrl": "https://norgenbiotek.com/product/rnadna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI48700-11%20RNA%20DNA%20Purification%20Kit%20Insert.pdf",
+    "storage": "Proteinase K at -20 °C; other solutions at room temperature; stable 1 year from shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "microRNA profiling",
+      "gene expression studies",
+      "biomarker discovery",
+      "cell line characterisation"
+    ],
+    "keyParameters": {
+      "input": "Max 5x10^6 animal cells; 25 mg tissue; 200 µL blood; 1x10^9 bacteria; 50 mg plant tissue",
+      "time": "30 min for 10 purifications",
+      "notes": "Binding capacity 50 µg RNA / 20 µg DNA; max load 650 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/rnadna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 48700 present on fetched Norgen RNA/DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "RNA/DNA Purification Micro Kit",
+    "catalogNumbers": [
+      "50300"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Low-input sequential total RNA and genomic DNA",
+    "description": "Micro-column version of the RNA/DNA Purification Kit for sequential recovery of total RNA and genomic DNA from precious or small samples such as biopsies, with elution in as little as 20 µL.",
+    "productUrl": "https://norgenbiotek.com/product/rnadna-purification-kits",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI50300-6%20RNA%20DNA%20Purification%20Micro%20Kit%20Insert_0.pdf",
+    "storage": "Proteinase K at -20 °C; other solutions at room temperature; stable 1 year from shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "microRNA profiling",
+      "gene expression studies",
+      "biomarker discovery",
+      "biopsy analysis"
+    ],
+    "keyParameters": {
+      "time": "30 min for 10 purifications",
+      "notes": "Binding capacity 35 µg RNA / 10 µg DNA; elution as low as 20 µL"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/rnadna-purification-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 50300 present on fetched Norgen RNA/DNA Purification Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Blood DNA Isolation Mini Kit",
+    "catalogNumbers": [
+      "46300",
+      "46380"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood, spin column",
+    "description": "Spin-column preparation of genomic, mitochondrial, viral and bacterial DNA from small volumes of whole blood collected with EDTA, citrate or heparin.",
+    "productUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (46300) / 100 preps (46380)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "genotyping",
+      "NGS",
+      "microarrays"
+    ],
+    "keyParameters": {
+      "input": "20-200 µL whole blood",
+      "time": "<30 minutes",
+      "notes": "Average yield 4-12 µg from 200 µL blood; column capacity >50 µg"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 46300/46380 present on fetched Norgen Blood DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Blood DNA Isolation Midi Kit",
+    "catalogNumbers": [
+      "51400"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood, midi scale",
+    "description": "Midi-format spin column kit for preparation of genomic DNA from 0.3-2 mL of whole blood.",
+    "productUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "20 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "genotyping",
+      "NGS",
+      "microarrays"
+    ],
+    "keyParameters": {
+      "input": "0.3-2 mL whole blood",
+      "time": "<30 minutes"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 51400 present on fetched Norgen Blood DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Blood DNA Isolation Maxi Kit",
+    "catalogNumbers": [
+      "31200"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood, maxi scale",
+    "description": "Maxi-format spin column kit for preparation of genomic DNA from 3-10 mL of whole blood.",
+    "productUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "12 preps",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "genotyping",
+      "NGS",
+      "biobanking"
+    ],
+    "keyParameters": {
+      "input": "3-10 mL whole blood",
+      "time": "<30 minutes"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 31200 present on fetched Norgen Blood DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Blood DNA Isolation 96-Well Kit",
+    "catalogNumbers": [
+      "46350"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood, 96-well high throughput",
+    "description": "High-throughput 96-well plate format for isolation of genomic DNA from whole blood.",
+    "productUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "192 preps (2 x 96-well plates)",
+    "applications": [
+      "PCR",
+      "genotyping",
+      "NGS",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "200 µL whole blood per well",
+      "time": "<30 minutes"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 46350 present on fetched Norgen Blood DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Blood DNA Isolation Kit (Magnetic Bead System)",
+    "catalogNumbers": [
+      "59800",
+      "62600"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood, magnetic bead",
+    "description": "Magnetic bead purification of genomic DNA from whole blood, available in single-tube and 96-well high-throughput formats for automation.",
+    "productUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps (59800) / 192 preps, 96-well (62600)",
+    "applications": [
+      "PCR",
+      "qPCR",
+      "genotyping",
+      "NGS",
+      "automation"
+    ],
+    "keyParameters": {
+      "input": "200 µL whole blood",
+      "notes": "Magnetic bead format suited to automated liquid handlers"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/blood-dna-isolation-kits",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 59800/62600 present on fetched Norgen Blood DNA Isolation Kits page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Preserved Blood RNA Purification Kit I (for use with Tempus Blood RNA Tubes)",
+    "catalogNumbers": [
+      "43400"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from Tempus-preserved whole blood",
+    "description": "Isolation and purification of total RNA, from large mRNA down to microRNA and siRNA, from blood preserved in Tempus Blood RNA Tubes, without phenol extraction.",
+    "productUrl": "https://norgenbiotek.com/product/preserved-blood-rna-purification-kit-i-use-tempus-blood-rna-tubes",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI43400-4%20Preserved%20Blood%20RNA%20Purification%20Kit%20I%20%28Tempus%29%20Insert.pdf",
+    "storage": "Room temperature; stable 2 years from date of shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "real-time RT-PCR",
+      "Northern blotting",
+      "expression profiling",
+      "microRNA analysis",
+      "NGS",
+      "small RNA-Seq"
+    ],
+    "keyParameters": {
+      "input": "3 mL preserved blood per prep",
+      "time": "20-30 min for 10 purifications",
+      "notes": "Average yield 5-25 µg per 3 mL preserved human blood"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/preserved-blood-rna-purification-kit-i-use-tempus-blood-rna-tubes",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 43400 present on fetched Norgen product page."
+  },
+  {
+    "vendor": "Norgen Biotek",
+    "vendorShort": "Norgen",
+    "productName": "Preserved Blood RNA Purification Kit II (for use with PAXgene Blood RNA Tubes)",
+    "catalogNumbers": [
+      "43500"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from PAXgene-preserved whole blood",
+    "description": "Isolation and purification of total RNA, from large mRNA to microRNA and siRNA, from blood preserved in PAXgene Blood RNA Tubes, without phenol extraction.",
+    "productUrl": "https://norgenbiotek.com/product/preserved-blood-rna-purification-kit-ii-use-paxgene-blood-rna-tubes",
+    "protocolUrl": "https://norgenbiotek.com/sites/default/files/resources/PI43500-4%20Preserved%20Blood%20RNA%20Purification%20Kit%20II%20%28Paxgene%29%20Insert.pdf",
+    "storage": "Room temperature; DNase I at -20 °C; stable 1 year from shipment",
+    "kitSize": "50 preps",
+    "applications": [
+      "RT-PCR",
+      "Northern blotting",
+      "expression profiling",
+      "miRNA cloning",
+      "NGS",
+      "small RNA sequencing"
+    ],
+    "keyParameters": {
+      "input": "Max 650 µL per column",
+      "time": "30 min for 10 purifications",
+      "notes": "Average yield 5-20 µg per 2.5 mL preserved human blood"
+    },
+    "sourceUrl": "https://norgenbiotek.com/product/preserved-blood-rna-purification-kit-ii-use-paxgene-blood-rna-tubes",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 43500 present on fetched Norgen product page."
+  }
+]

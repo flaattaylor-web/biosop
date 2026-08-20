@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { Header } from './components/Header';
 import { SopGenerator } from './components/SopGenerator';
 import { SopViewer } from './components/SopViewer';
 import { ReactionSheetViewer } from './components/ReactionSheetViewer';
 import { LiteratureCrossTester } from './components/LiteratureCrossTester';
 import { ProtocolLibrary } from './components/ProtocolLibrary';
-import { KitRepository } from './components/KitRepository';
-import { SAMPLE_SOPS } from './data/sampleProtocols';
+import { INITIAL_GENERIC_SOPS, loadBundledLibrary } from './data/sampleProtocols';
 import { SopDocument, ReactionSheet, ProtocolSuggestion } from './types';
 import { ensureReactionSheet, sanitizeAndValidateSop } from './utils/sheetUtils';
 import { protocolStorage } from './client/storage';
 import { exportLiveExcelLocal } from './client/exportsLocal';
 import { DataPrivacyPanel } from './components/DataPrivacyPanel';
 import { useEffect } from 'react';
+
+// Split out of the entry chunk: KitRepository pulls in the 57 kit SOPs, and the library view is not
+// what most sessions start with.
+const KitRepository = lazy(() => import('./components/KitRepository').then((m) => ({ default: m.KitRepository })));
+
+const ChunkLoading: React.FC<{ what: string }> = ({ what }) => (
+  <div className="max-w-5xl mx-auto px-4 py-16 text-center text-sm text-slate-500 font-mono">Loading {what}...</div>
+);
 
 /**
  * A generated document with an unexpected shape used to take the whole application down: React
@@ -93,8 +100,8 @@ class RenderErrorBoundary extends ErrorBoundaryBase {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'generator' | 'viewer' | 'excel' | 'crosstest' | 'library' | 'companyKits'>('companyKits');
-  const [protocols, setProtocols] = useState<SopDocument[]>(() => SAMPLE_SOPS.map(sanitizeAndValidateSop));
-  const [currentSop, setCurrentSop] = useState<SopDocument>(() => sanitizeAndValidateSop(SAMPLE_SOPS[0]));
+  const [protocols, setProtocols] = useState<SopDocument[]>(() => INITIAL_GENERIC_SOPS.map(sanitizeAndValidateSop));
+  const [currentSop, setCurrentSop] = useState<SopDocument>(() => sanitizeAndValidateSop(INITIAL_GENERIC_SOPS[0]));
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [selectedSuggestion, setSelectedSuggestion] = useState<ProtocolSuggestion | null>(null);
   /** null = unknown, false = no API server reachable (e.g. opened as a static file). */
@@ -105,6 +112,24 @@ export default function App() {
     fetch('/api/health', { cache: 'no-store' })
       .then((r) => { if (!cancelled) setServerOnline(r.ok); })
       .catch(() => { if (!cancelled) setServerOnline(false); });
+    return () => { cancelled = true; };
+  }, []);
+
+  // Pull the bundled library in after first paint. Anything already in state (a saved protocol, or
+  // one the user just generated) wins on id collision, so this can never overwrite the user's work
+  // no matter which of the two boot effects resolves first.
+  useEffect(() => {
+    let cancelled = false;
+    loadBundledLibrary()
+      .then((lib) => {
+        if (cancelled) return;
+        const clean = lib.map(sanitizeAndValidateSop);
+        setProtocols((prev) => {
+          const have = new Set(prev.map((p) => p.id));
+          return [...prev, ...clean.filter((p) => !have.has(p.id))];
+        });
+      })
+      .catch((e) => console.warn('Bundled protocol library failed to load:', e));
     return () => { cancelled = true; };
   }, []);
 
@@ -266,6 +291,7 @@ export default function App() {
         )}
 
         {activeTab === 'companyKits' && (
+          <Suspense fallback={<ChunkLoading what="the kit repository" />}>
           <KitRepository
             allProtocols={protocols}
             onAddProtocol={(newSop) => {
@@ -284,6 +310,7 @@ export default function App() {
               setActiveTab('crosstest');
             }}
           />
+          </Suspense>
         )}
         </RenderErrorBoundary>
       </main>

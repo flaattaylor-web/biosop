@@ -1,0 +1,1202 @@
+[
+  {
+    "productName": "SimpleChIP Enzymatic Chromatin IP Kit (Magnetic Beads)",
+    "catalogNumbers": [
+      "9003"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic chromatin immunoprecipitation kit",
+    "description": "Complete ChIP kit for detecting endogenous protein-DNA interactions and histone modifications in mammalian cells, using micrococcal nuclease digestion and ChIP-grade Protein G magnetic beads.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/enzymatic-chromatin-ip-kit-magnetic-beads/9003",
+    "protocolUrl": "https://media.cellsignal.com/pdf/9003.pdf",
+    "storage": "Store components at temperatures indicated on individual tube labels",
+    "kitSize": "6 chromatin preparations and 30 immunoprecipitations",
+    "applications": [
+      "ChIP",
+      "ChIP-qPCR",
+      "ChIP-seq",
+      "ChIP-on-chip"
+    ],
+    "keyParameters": {
+      "input": "4 x 10^6 cells per IP (scalable)",
+      "time": "Complete assay in as little as two days",
+      "notes": "Includes Histone H3 antibody positive control, normal rabbit IgG negative control, human and mouse RPL30 primer sets and DNA purification spin columns"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9003 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/enzymatic-chromatin-ip-kit-magnetic-beads/9003"
+  },
+  {
+    "productName": "SimpleChIP Plus Enzymatic Chromatin IP Kit (Magnetic Beads)",
+    "catalogNumbers": [
+      "9005"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic chromatin immunoprecipitation kit (cells and tissue)",
+    "description": "ChIP kit using micrococcal nuclease enzymatic fragmentation rather than sonication for milder chromatin treatment; detects protein-DNA interactions and histone modifications from cells or tissue.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/plus-enzymatic-chromatin-ip-kit-magnetic-beads/9005",
+    "protocolUrl": "https://media.cellsignal.com/pdf/9005.pdf",
+    "storage": "Store components at temperatures indicated on individual tube labels",
+    "kitSize": "30 chromatin immunoprecipitations",
+    "applications": [
+      "ChIP",
+      "ChIP-seq",
+      "transcription factor ChIP",
+      "histone modification analysis"
+    ],
+    "keyParameters": {
+      "input": "4 x 10^6 cells or 25 mg tissue per IP",
+      "time": "Complete assay in approximately two days",
+      "notes": "Includes ChIP-grade Protein G magnetic beads, Histone H3 positive control, normal rabbit IgG negative control and RPL30 primer sets"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9005 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/plus-enzymatic-chromatin-ip-kit-magnetic-beads/9005"
+  },
+  {
+    "productName": "SimpleChIP Enzymatic Chromatin IP Kit (Agarose Beads)",
+    "catalogNumbers": [
+      "9002"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Enzymatic chromatin immunoprecipitation kit",
+    "description": "ChIP kit that fragments chromatin into 1-5 nucleosome pieces by micrococcal nuclease digestion, preserving antibody epitopes and avoiding sonication; uses ChIP-grade Protein G agarose beads.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/enzymatic-chromatin-ip-kit-agarose-beads/9002",
+    "protocolUrl": "https://media.cellsignal.com/pdf/9002.pdf",
+    "storage": "Store components at temperatures indicated on individual tube labels",
+    "kitSize": "6 chromatin preparations and 30 immunoprecipitations",
+    "applications": [
+      "ChIP",
+      "ChIP-qPCR",
+      "standard PCR"
+    ],
+    "keyParameters": {
+      "input": "4 x 10^6 cells per IP (scalable)",
+      "time": "Complete assay in as little as two days",
+      "notes": "Not compatible with ChIP-seq because of salmon sperm DNA blocking on the beads"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9002 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/enzymatic-chromatin-ip-kit-agarose-beads/9002"
+  },
+  {
+    "productName": "CUT&RUN Assay Kit",
+    "catalogNumbers": [
+      "86652"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&RUN protein-DNA interaction assay kit",
+    "description": "Detects endogenous protein-DNA interactions and histone modifications in mammalian cells by targeted nuclease digestion, as a faster alternative to traditional chromatin immunoprecipitation.",
+    "sourceUrl": "https://www.cellsignal.com/products/cut-run-kits-reagents/cut-run-assay-kit/86652",
+    "protocolUrl": "https://media.cellsignal.com/pdf/86652.pdf",
+    "storage": "All components stable at least 12 months at recommended temperatures",
+    "kitSize": "Up to 8 digestion reactions (P size) / up to 24 digestion reactions (S size)",
+    "applications": [
+      "CUT&RUN",
+      "histone modification profiling",
+      "transcription factor mapping",
+      "next-generation sequencing",
+      "qPCR"
+    ],
+    "keyParameters": {
+      "input": "5,000-250,000 cells per reaction; fixed cells, primary cells and tissue compatible",
+      "time": "Complete assay in as little as one day",
+      "notes": "Includes yeast normalization spike-in DNA and primer set, Tri-Methyl-Histone H3 (Lys4) #9751 positive control, Rabbit IgG isotype control #66362, human #7014 and mouse #7015 RPL30 primer sets"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #86652 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cut-run-kits-reagents/cut-run-assay-kit/86652"
+  },
+  {
+    "productName": "CUT&Tag Assay Kit",
+    "catalogNumbers": [
+      "77552"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "CUT&Tag chromatin profiling kit",
+    "description": "Reagent kit optimised for detecting protein-DNA interactions and histone modifications in fresh or lightly fixed cells, generating sequencing-ready libraries by tagmentation.",
+    "sourceUrl": "https://www.cellsignal.com/products/cut-tag-kits-reagents/cut-tag-assay-kit/77552",
+    "protocolUrl": "https://www.cellsignal.com/learn-and-support/protocols/cut-tag-kit-protocol",
+    "storage": "All components stable 6 months at recommended temperatures",
+    "kitSize": "Up to 24 reactions",
+    "applications": [
+      "CUT&Tag",
+      "histone modification profiling",
+      "transcription factor mapping",
+      "next-generation sequencing"
+    ],
+    "keyParameters": {
+      "input": "Recommended 100,000 cells or 1 mg tissue per reaction; validated down to 5,000-10,000 cells (histones) or 20,000 cells (transcription factors/cofactors)",
+      "time": "Assay can be completed in approximately one day",
+      "notes": "Compatible with NGS but not qPCR; includes Tri-Methyl-Histone H3 (Lys4) (C42D8) positive control and normal rabbit/mouse IgG negative controls"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #77552 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cut-tag-kits-reagents/cut-tag-assay-kit/77552"
+  },
+  {
+    "productName": "PathScan Phospho-Stat3 (Tyr705) Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7300"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Phospho-specific sandwich ELISA kit",
+    "description": "Solid-phase sandwich ELISA detecting endogenous phospho-Stat3 (Tyr705); a Stat3 rabbit monoclonal capture antibody is coated onto the microwells and detection uses a phospho-Stat3 mouse monoclonal antibody with an HRP-linked secondary.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-stat3-tyr705-sandwich-elisa-kit/7300",
+    "protocolUrl": "https://www.cellsignal.com/products/7300/datasheet?images=1&protocol=1",
+    "applications": [
+      "ELISA",
+      "cell signalling analysis",
+      "phosphorylation profiling"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "Colorimetric TMB substrate readout; species reactivity human, mouse, rat, monkey"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 7300 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-stat3-tyr705-sandwich-elisa-kit/7300"
+  },
+  {
+    "productName": "SignalFire ECL Reagent",
+    "catalogNumbers": [
+      "6883"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Chemiluminescent western blot substrate",
+    "description": "Enhanced chemiluminescent HRP substrate for western blotting, giving a robust signal with extended signal duration; HRP converts luminol to an excited intermediate that emits light for up to three hours.",
+    "sourceUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-ecl-reagent/6883",
+    "protocolUrl": "https://media.cellsignal.com/pdf/6883.pdf",
+    "storage": "Room temperature; stable 36 months; store Reagents A and B separately",
+    "kitSize": "Two 2X concentrates (Reagent A #65293 and Reagent B #82201) mixed 1:1 before use",
+    "applications": [
+      "western blot",
+      "immunoblot detection"
+    ],
+    "keyParameters": {
+      "notes": "Picogram-level protein detection with HRP-conjugated secondary antibodies"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #6883 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-ecl-reagent/6883"
+  },
+  {
+    "productName": "SignalFire Plus ECL Reagent",
+    "catalogNumbers": [
+      "12630"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Chemiluminescent western blot substrate",
+    "description": "Highly sensitive chemiluminescent substrate for western blot detection with an extended signal output lasting several hours, allowing multiple film or digital exposures.",
+    "sourceUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-plus-ecl-reagent/12630",
+    "protocolUrl": "https://www.cellsignal.com/products/12630/datasheet?images=1&protocol=0",
+    "storage": "Room temperature; stable 36 months; do not store Reagents A and B pre-mixed",
+    "kitSize": "Two 2X concentrates (Reagent A and B) mixed 1:1 immediately before use",
+    "applications": [
+      "western blot",
+      "immunoblot detection"
+    ],
+    "keyParameters": {
+      "notes": "Detects low picogram amounts of protein; requires ~5-fold less HRP-linked secondary antibody than traditional ECL; light emission continues up to 24 hours"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #12630 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-plus-ecl-reagent/12630"
+  },
+  {
+    "productName": "SignalFire Elite ECL Reagent",
+    "catalogNumbers": [
+      "12757"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Chemiluminescent western blot substrate",
+    "description": "Ultra-sensitive chemiluminescent HRP substrate for western blot, enabling detection of femtogram amounts of protein on film or digital imaging systems.",
+    "sourceUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-elite-ecl-reagent/12757",
+    "protocolUrl": "https://www.cellsignal.com/products/12757/datasheet?images=1&protocol=0",
+    "storage": "+4°C; stable 36 months; keep Reagents A and B separate until use",
+    "kitSize": "Two 2X concentrates (Reagent A and B) mixed 1:1 before use",
+    "applications": [
+      "western blot",
+      "low-abundance protein detection"
+    ],
+    "keyParameters": {
+      "notes": "Femtogram sensitivity; uses about ten-fold less anti-rabbit IgG HRP-linked antibody; signal maximal immediately and continues up to one hour"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #12757 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/wb-ip-reagents/signalfire-elite-ecl-reagent/12757"
+  },
+  {
+    "productName": "Cell Fractionation Kit",
+    "catalogNumbers": [
+      "9038"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation kit",
+    "description": "Separates cultured cells into three fractions - cytoplasmic, membrane/organelle and nuclear/cytoskeletal - by detergent-based fractionation for analysis by SDS-PAGE and western blotting.",
+    "sourceUrl": "https://www.cellsignal.com/products/experimental-controls/cell-fractionation-kit/9038",
+    "protocolUrl": "https://media.cellsignal.com/pdf/9038.pdf",
+    "storage": "-20°C (Protease Inhibitor Cocktail #5871 at +4°C)",
+    "kitSize": "Sufficient buffer for 20 assays",
+    "applications": [
+      "western blot",
+      "protein localisation",
+      "protein complex studies"
+    ],
+    "keyParameters": {
+      "input": "Cultured cells",
+      "notes": "Detergent-based fractionation is faster than density centrifugation"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 9038 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/experimental-controls/cell-fractionation-kit/9038"
+  },
+  {
+    "productName": "PTMScan Ubiquitin Remnant Motif (K-epsilon-GG) Kit",
+    "catalogNumbers": [
+      "5562"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "PTM peptide immunoaffinity enrichment kit",
+    "description": "Enriches ubiquitinated peptides by immunoaffinity purification with a bead-conjugated antibody against the di-glycine remnant left on lysine after trypsin digestion, for LC-MS/MS identification and quantification of ubiquitination sites.",
+    "sourceUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/ubiquitin-remnant-motif-k-epsilon-gg-kit/5562",
+    "storage": "-20°C (antibody beads supplied in IAP buffer containing 50% glycerol)",
+    "applications": [
+      "proteomics",
+      "LC-MS/MS",
+      "ubiquitination site profiling"
+    ],
+    "keyParameters": {
+      "notes": "Includes K-epsilon-GG antibody bead conjugate on protein A agarose, PTMScan IAP Buffer #9993 and reversed-phase purification microtips"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #5562 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/ubiquitin-remnant-motif-k-epsilon-gg-kit/5562"
+  },
+  {
+    "productName": "PTMScan Acetyl-Lysine Motif [Ac-K] Kit",
+    "catalogNumbers": [
+      "13416"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "PTM peptide immunoaffinity enrichment kit",
+    "description": "Enriches acetyl-lysine-containing peptides by immunoprecipitation with a bead-conjugated motif antibody, paired with LC-MS/MS to identify acetylated lysine residues.",
+    "sourceUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/acetyl-lysine-motif-ac-k-kit/13416",
+    "storage": "-20°C; do not aliquot the antibody",
+    "applications": [
+      "proteomics",
+      "LC-MS/MS",
+      "acetylation site profiling"
+    ],
+    "keyParameters": {
+      "notes": "Motif antibody conjugated to protein A agarose beads, PTMScan IAP Buffer #9993 and reversed-phase desalting microtips; higher-sensitivity magnetic bead version #46784 available"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 13416 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/acetyl-lysine-motif-ac-k-kit/13416"
+  },
+  {
+    "productName": "PTMScan Phospho-Tyrosine Rabbit Monoclonal Antibody (P-Tyr-1000) Kit",
+    "catalogNumbers": [
+      "8803"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "PTM peptide immunoaffinity enrichment kit",
+    "description": "Enriches tyrosine-phosphorylated peptides by immunoprecipitation with a bead-conjugated P-Tyr-1000 rabbit monoclonal antibody for LC-MS/MS analysis of tyrosine phosphorylation.",
+    "sourceUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/phospho-tyrosine-rabbit-mab-p-tyr-1000-kit/8803",
+    "storage": "-20°C (antibody beads in IAP buffer with 50% glycerol); do not aliquot the antibody",
+    "applications": [
+      "proteomics",
+      "LC-MS/MS",
+      "phosphotyrosine profiling",
+      "kinase activity monitoring"
+    ],
+    "keyParameters": {
+      "notes": "Higher-sensitivity magnetic bead versions available as 10-assay #38572 or 3-assay #29879"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #8803 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/proteomic-analysis-products/phospho-tyrosine-rabbit-mab-p-tyr-1000-kit/8803"
+  },
+  {
+    "productName": "PathScan RTK Signaling Antibody Array Kit (Chemiluminescent Readout)",
+    "catalogNumbers": [
+      "7982"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Multiplex sandwich antibody array",
+    "description": "Slide-based sandwich immunoassay array for simultaneous detection of 28 phosphorylated receptor tyrosine kinases and 11 signaling nodes from cell lysates.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/rtk-signaling-antibody-array-kit-chemiluminescent-readout/7982",
+    "storage": "+4°C (Lysis Buffer at -20°C)",
+    "kitSize": "Two 8-pad slides, up to 16 samples",
+    "applications": [
+      "multiplex signalling analysis",
+      "cancer research",
+      "target validation"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates at 0.2-1 mg/mL total protein",
+      "notes": "39 targets total; streptavidin-HRP with LumiGLO reagent; human-optimised"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #7982 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/rtk-signaling-antibody-array-kit-chemiluminescent-readout/7982"
+  },
+  {
+    "productName": "PathScan Intracellular Signaling Array Kit (Chemiluminescent Readout)",
+    "catalogNumbers": [
+      "7323"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Multiplex sandwich antibody array",
+    "description": "Slide-based sandwich immunoassay array detecting 18 well-characterised signalling molecules in their phosphorylated or cleaved forms, including Erk1/2, p38, JNK, Stat proteins, Akt, mTOR, AMPK, HSP27, p53, caspase-3 and PARP.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/intracellular-signaling-array-kit-chemiluminescent-readout/7323",
+    "storage": "+4°C (Lysis Buffer at -20°C)",
+    "kitSize": "Two 16-pad slides, up to 32 samples (576 data points)",
+    "applications": [
+      "multiplex signalling analysis",
+      "apoptosis signalling",
+      "pathway profiling"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates at 0.2-1 mg/mL total protein",
+      "notes": "Streptavidin-HRP with LumiGLO reagent; human reactivity"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #7323 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/intracellular-signaling-array-kit-chemiluminescent-readout/7323"
+  },
+  {
+    "productName": "Immunofluorescence Application Solutions Kit",
+    "catalogNumbers": [
+      "12727"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Immunofluorescence buffer/reagent kit",
+    "description": "Supporting reagents for immunofluorescence on cultured cells (IF-IC) or frozen sections (IF-F), validated with CST IF-approved antibodies and supplied with a matching protocol.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/immunofluorescence-application-solutions-kit/12727",
+    "storage": "Room temperature for #12528 and #12606; +4°C for #12411 and #12378",
+    "kitSize": "100 assays (at 100 µL assay volume)",
+    "applications": [
+      "immunofluorescence (IF-IC)",
+      "immunofluorescence on frozen sections (IF-F)"
+    ],
+    "keyParameters": {
+      "notes": "Contains formaldehyde fixative, permeabilization and blocking solutions and wash buffers; primary/secondary antibodies, methanol and antifade mounting medium not included"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #12727 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/immunofluorescence-application-solutions-kit/12727"
+  },
+  {
+    "productName": "Immunohistochemistry Application Solutions Kit (Rabbit)",
+    "catalogNumbers": [
+      "13079"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "IHC buffer/detection reagent kit",
+    "description": "Supporting reagents for immunohistochemistry staining of paraffin-embedded tissue samples or cell pellets, validated with CST IHC-recommended rabbit antibodies.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/immunohistochemistry-application-solutions-kit-rabbit/13079",
+    "storage": "+4°C; components stable at least 12 months unopened",
+    "kitSize": "120 slides (at 100 µL assay volume)",
+    "applications": [
+      "IHC-P",
+      "cell pellet staining"
+    ],
+    "keyParameters": {
+      "notes": "Includes SignalStain antibody diluent, wash buffer, secondary antibody, DAB substrate kit and mounting medium"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #13079 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/immunohistochemistry-application-solutions-kit-rabbit/13079"
+  },
+  {
+    "productName": "SignalStain Apoptosis (Cleaved Caspase-3) IHC Detection Kit",
+    "catalogNumbers": [
+      "12692"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis IHC detection kit",
+    "description": "Detects activated caspase-3 in formalin-fixed paraffin-embedded human and mouse tissue using a cleaved caspase-3 (Asp175) (D3E9) rabbit mAb with polymer-based HRP SignalStain Boost detection and DAB chromogen.",
+    "sourceUrl": "https://www.cellsignal.com/products/primary-antibodies/apoptosis-cleaved-caspase-3-ihc-detection-kit/12692",
+    "applications": [
+      "IHC-P",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "input": "Formalin-fixed paraffin-embedded human and mouse tissue",
+      "notes": "Includes concentration-matched rabbit mAb IgG control; antibody detects the 17/19 kDa large fragment and not full-length caspase-3"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 12692 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/primary-antibodies/apoptosis-cleaved-caspase-3-ihc-detection-kit/12692"
+  },
+  {
+    "productName": "BrdU Cell Proliferation Assay Kit",
+    "catalogNumbers": [
+      "6813"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell proliferation ELISA kit",
+    "description": "Colorimetric ELISA detecting 5-bromo-2'-deoxyuridine incorporated into cellular DNA during proliferation, using a BrdU (Bu20a) mouse monoclonal antibody with HRP-linked secondary and TMB substrate.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/brdu-cell-proliferation-assay-kit/6813",
+    "protocolUrl": "https://media.cellsignal.com/pdf/6813.pdf",
+    "applications": [
+      "cell proliferation",
+      "cell cycle S-phase analysis"
+    ],
+    "keyParameters": {
+      "input": "Cultured cells, 0.2-2 x 10^4 cells/well recommended",
+      "notes": "Colorimetric HRP/TMB readout; all species expected"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #6813 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/brdu-cell-proliferation-assay-kit/6813"
+  },
+  {
+    "productName": "BrdU Cell Proliferation Chemiluminescent Assay Kit",
+    "catalogNumbers": [
+      "5492"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell proliferation chemiluminescent assay kit",
+    "description": "Chemiluminescent assay detecting BrdU incorporated into newly synthesised DNA using an anti-BrdU mouse monoclonal antibody, an HRP-linked secondary and a chemiluminescent substrate read in relative light units.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/brdu-cell-proliferation-chemiluminescent-assay-kit/5492",
+    "applications": [
+      "cell proliferation",
+      "cell cycle S-phase analysis"
+    ],
+    "keyParameters": {
+      "input": "0.2-2 x 10^4 cells/well depending on cell type",
+      "notes": "Requires DNA fixation and denaturation step; all species expected"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #5492 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/brdu-cell-proliferation-chemiluminescent-assay-kit/5492"
+  },
+  {
+    "productName": "XTT Cell Viability Kit",
+    "catalogNumbers": [
+      "9095"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell viability / metabolic activity assay",
+    "description": "Colorimetric assay measuring cellular metabolic activity through dehydrogenase-mediated conversion of the yellow tetrazolium salt XTT into a coloured formazan dye.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/xtt-cell-viability-kit/9095",
+    "protocolUrl": "https://media.cellsignal.com/pdf/9095.pdf",
+    "applications": [
+      "cell viability",
+      "cytotoxicity screening",
+      "drug discovery",
+      "high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "Most cell lines; 0.2-2 x 10^4 cells/well recommended",
+      "notes": "Absorbance read at 450 nm; no radioactivity, fixation or permeabilization required; PMS electron coupling reagent improves XTT reduction"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9095 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/xtt-cell-viability-kit/9095"
+  },
+  {
+    "productName": "PathScan Phospho-Akt1 (Ser473) Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7160"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Phospho-specific sandwich ELISA kit",
+    "description": "Sandwich ELISA detecting endogenous phospho-Akt1 (Ser473); a phospho-Akt (Ser473) rabbit mAb is coated on the microwells and detection uses a mouse antibody with HRP/TMB development.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-akt1-ser473-sandwich-elisa-kit/7160",
+    "protocolUrl": "https://www.cellsignal.com/products/7160/datasheet?images=1&protocol=1",
+    "kitSize": "96-well format (384-well available on request)",
+    "applications": [
+      "ELISA",
+      "cell signalling analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "Colorimetric TMB readout; species reactivity human, mouse, rat"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #7160 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-akt1-ser473-sandwich-elisa-kit/7160"
+  },
+  {
+    "productName": "PathScan Phospho-p44/42 MAPK (Thr202/Tyr204) Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7177"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Phospho-specific sandwich ELISA kit",
+    "description": "Sandwich ELISA detecting endogenous p44/42 MAPK dually phosphorylated at Thr202/Tyr204 (Thr185/Tyr187 of p42), using a coated capture antibody with HRP/TMB detection.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-p44-42-mapk-thr202-tyr204-sandwich-elisa-kit/7177",
+    "kitSize": "96-well format (384-well available on request)",
+    "applications": [
+      "ELISA",
+      "MAPK pathway analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "Colorimetric TMB readout; species reactivity human, mouse, rat"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #7177 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-p44-42-mapk-thr202-tyr204-sandwich-elisa-kit/7177"
+  },
+  {
+    "productName": "PathScan Cell Growth Multi-Target Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7239"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Multi-target sandwich ELISA kit",
+    "description": "Solid-phase sandwich ELISA detecting six cell growth and differentiation signalling targets: S6 ribosomal protein, phospho-S6 (Ser235/236), Akt1, phospho-Akt (Ser473), phospho-Akt (Thr308) and phospho-p44/42 MAPK (Thr202/Tyr204).",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/cell-growth-multi-target-sandwich-elisa-kit/7239",
+    "kitSize": "16 assays per target protein",
+    "applications": [
+      "ELISA",
+      "multi-target pathway profiling"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "HRP/TMB detection read at 450 nm; species reactivity human and mouse"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 7239 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/cell-growth-multi-target-sandwich-elisa-kit/7239"
+  },
+  {
+    "productName": "DNA Library Prep Kit for Illumina Systems (ChIP-seq, CUT&RUN)",
+    "catalogNumbers": [
+      "56795"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "ChIP-seq / CUT&RUN DNA library prep kit",
+    "description": "Contains the enzymes and buffers needed to generate DNA sequencing libraries from ChIP or CUT&RUN DNA for Illumina next-generation sequencing platforms.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/dna-library-prep-kit-for-illumina-systems-chip-seq-cut-run/56795",
+    "protocolUrl": "https://www.cellsignal.com/learn-and-support/protocols/protocol-dna-lib-prep-kit-for-illumina",
+    "storage": "-20°C; stable 12 months",
+    "kitSize": "24 reactions",
+    "applications": [
+      "ChIP-seq",
+      "CUT&RUN sequencing",
+      "Illumina library preparation"
+    ],
+    "keyParameters": {
+      "input": "As little as 0.5 ng ChIP DNA or 0.1 ng CUT&RUN DNA",
+      "notes": "Requires Multiplex Oligos #29580 (single index) or #47538 (dual index); not compatible with agarose bead kits or CUT&Tag"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #56795 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/dna-library-prep-kit-for-illumina-systems-chip-seq-cut-run/56795"
+  },
+  {
+    "productName": "Multiplex Oligos for Illumina Systems (Dual Index Primers) (ChIP-seq, CUT&RUN)",
+    "catalogNumbers": [
+      "47538"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Dual-index adaptors and primers",
+    "description": "Adaptors and primers for multiplexed sample preparation for Illumina next-generation sequencing downstream of ChIP-seq and CUT&RUN assays.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/chip-seq-multiplex-oligos-for-illumina-dual-index-primers/47538",
+    "protocolUrl": "https://www.cellsignal.com/learn-and-support/protocols/multiplex-oligos-illumina-dual-index",
+    "storage": "-20°C (tubes #54631 and #70942 at room temperature); stable 12 months",
+    "kitSize": "Up to 96 uniquely barcoded DNA libraries (96 indexes)",
+    "applications": [
+      "ChIP-seq",
+      "CUT&RUN sequencing",
+      "multiplexed Illumina sequencing"
+    ],
+    "keyParameters": {
+      "notes": "Requires DNA Library Prep Kit for Illumina Systems #56795; not compatible with CUT&Tag or agarose bead-based assays"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #47538 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/chip-seq-multiplex-oligos-for-illumina-dual-index-primers/47538"
+  },
+  {
+    "productName": "Active Ras Detection Kit",
+    "catalogNumbers": [
+      "8821"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GTPase activation pull-down kit",
+    "description": "Measures Ras GTPase activation using a GST-Raf1-RBD fusion protein to bind GTP-bound active Ras, which is then pulled down with glutathione resin and detected by western blot.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-ras-detection-kit/8821",
+    "protocolUrl": "https://media.cellsignal.com/pdf/8821.pdf",
+    "storage": "-80°C (GTPgammaS, GDP, GST-Raf1-RBD); +4°C (buffer, resin, Ras mAb); room temperature (SDS sample buffer, spin cups)",
+    "applications": [
+      "western blot",
+      "GTPase activation assay",
+      "pull-down"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; species reactivity human, mouse",
+      "notes": "Includes GTPgammaS and GDP controls, glutathione resin, spin cups and Ras mouse mAb #8832"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 8821 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-ras-detection-kit/8821"
+  },
+  {
+    "productName": "Active Rho Detection Kit",
+    "catalogNumbers": [
+      "8820"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GTPase activation pull-down kit",
+    "description": "Provides all reagents for measuring Rho GTPase activation, capturing GTP-bound Rho with a GST-Rhotekin-RBD fusion protein and glutathione resin for western blot detection.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rho-detection-kit/8820",
+    "storage": "-80°C (GTPgammaS, GDP, GST-Rhotekin-RBD); -20°C (Rho rabbit antibody); +4°C (buffer, resin, SDS sample buffer)",
+    "applications": [
+      "western blot",
+      "GTPase activation assay",
+      "pull-down"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; species reactivity human, mouse",
+      "notes": "Includes GTPgammaS and GDP controls, glutathione resin, spin cup and collection tubes and Rho rabbit antibody"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 8820 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rho-detection-kit/8820"
+  },
+  {
+    "productName": "Active Rac1 Detection Kit",
+    "catalogNumbers": [
+      "8815"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GTPase activation pull-down kit",
+    "description": "Provides all reagents for measuring Rac1 GTPase activation, capturing GTP-bound Rac1 with a GST-human PAK1-PBD fusion protein and glutathione resin for western blot detection.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rac1-detection-kit/8815",
+    "storage": "-80°C (GTPgammaS, GDP); -20°C (GST-PAK1-PBD, Rac1 mouse mAb); +4°C (buffer, resin, SDS sample buffer)",
+    "applications": [
+      "western blot",
+      "GTPase activation assay",
+      "pull-down"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; species reactivity human, mouse",
+      "notes": "Includes GTPgammaS and GDP controls, glutathione resin and spin cup/collection tubes"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 8815 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rac1-detection-kit/8815"
+  },
+  {
+    "productName": "SimpleChIP Plus Sonication Chromatin IP Kit",
+    "catalogNumbers": [
+      "56383"
+    ],
+    "category": "Epigenetics & Methylation",
+    "subcategory": "Sonication-based chromatin immunoprecipitation kit",
+    "description": "Complete ChIP kit optimised for detecting endogenous protein-DNA interactions and histone modifications in mammalian cells and tissue using sonication-based chromatin fragmentation.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/plus-sonication-chromatin-ip-kit/56383",
+    "protocolUrl": "https://www.cellsignal.com/learn-and-support/protocols/protocol-simplechip-plus-sonication",
+    "storage": "Stable at least 12 months past reference date at recommended temperatures",
+    "kitSize": "Up to 24 chromatin immunoprecipitations",
+    "applications": [
+      "ChIP-qPCR",
+      "ChIP-seq"
+    ],
+    "keyParameters": {
+      "input": "4 x 10^6 cells or 25 mg tissue per IP",
+      "time": "Complete assay in as little as two days",
+      "notes": "Includes cell and nuclear lysis buffers, ChIP-grade Protein G magnetic beads, DNA purification spin columns, Histone H3 positive control, normal rabbit IgG negative control and RPL30 primer sets"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #56383 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/plus-sonication-chromatin-ip-kit/56383"
+  },
+  {
+    "productName": "Apoptosis Antibody Sampler Kit",
+    "catalogNumbers": [
+      "9915"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody sampler kit (western blot panel)",
+    "description": "Panel of primary antibodies plus secondary reagents for evaluating levels of inactive and active caspases, including caspase-3, -7 and -9 pro- and cleaved forms and PARP.",
+    "sourceUrl": "https://www.cellsignal.com/products/primary-antibodies/apoptosis-antibody-sampler-kit/9915",
+    "kitSize": "Enough reagent for two western blot experiments per primary antibody",
+    "applications": [
+      "western blot",
+      "immunofluorescence",
+      "flow cytometry",
+      "immunoprecipitation",
+      "IHC-P"
+    ],
+    "keyParameters": {
+      "notes": "Contains component antibodies #5625, #7074, #7076, #8438, #9508, #9542, #9664, #12827, #14220, #52873"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9915 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/primary-antibodies/apoptosis-antibody-sampler-kit/9915"
+  },
+  {
+    "productName": "Autophagy Antibody Sampler Kit",
+    "catalogNumbers": [
+      "4445"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody sampler kit (western blot panel)",
+    "description": "Panel of primary antibodies for investigating the molecular machinery of autophagy, targeting ATG3, ATG5, ATG7, ATG12, Beclin-1 and LC3, supplied with secondary antibody.",
+    "sourceUrl": "https://www.cellsignal.com/products/primary-antibodies/autophagy-antibody-sampler-kit/4445",
+    "kitSize": "Enough reagent for two western blot experiments per primary antibody",
+    "applications": [
+      "western blot",
+      "immunoprecipitation",
+      "immunofluorescence",
+      "IHC-P",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "notes": "Targets include ATG12, ATG3, ATG5, ATG7, Beclin-1 and LC3 variants"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #4445 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/primary-antibodies/autophagy-antibody-sampler-kit/4445"
+  },
+  {
+    "productName": "Phospho-Akt Pathway Antibody Sampler Kit",
+    "catalogNumbers": [
+      "9916"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody sampler kit (western blot panel)",
+    "description": "Panel of eight primary antibodies for evaluating activation status of the Akt signalling pathway, including PTEN and phosphorylated Akt, GSK-3 beta, c-Raf and PDK1.",
+    "sourceUrl": "https://www.cellsignal.com/products/primary-antibodies/phospho-akt-pathway-antibody-sampler-kit/9916",
+    "kitSize": "Enough reagent for two western blot experiments per primary antibody",
+    "applications": [
+      "western blot",
+      "fluorescent western",
+      "immunoprecipitation",
+      "IHC-P",
+      "immunofluorescence",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "notes": "Contains component antibodies #3438, #4060, #4691, #5558, #7074, #9421, #9551, #13038"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9916 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/primary-antibodies/phospho-akt-pathway-antibody-sampler-kit/9916"
+  },
+  {
+    "productName": "mTOR Pathway Antibody Sampler Kit",
+    "catalogNumbers": [
+      "9964"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody sampler kit (western blot panel)",
+    "description": "Panel of primary antibodies for investigating control of protein translation, cell growth and proliferation through mTOR signalling.",
+    "sourceUrl": "https://www.cellsignal.com/products/primary-antibodies/mtor-pathway-antibody-sampler-kit/9964",
+    "kitSize": "Enough reagent for two western blot experiments per primary antibody",
+    "applications": [
+      "western blot",
+      "immunoprecipitation",
+      "IHC-P",
+      "immunofluorescence",
+      "flow cytometry",
+      "fluorescent western"
+    ],
+    "keyParameters": {
+      "notes": "Contains component antibodies #2114, #2280, #2974, #2983, #3274, #5536 plus secondary #7074"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 9964 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/primary-antibodies/mtor-pathway-antibody-sampler-kit/9964"
+  },
+  {
+    "productName": "Cell Lysis Buffer (10X)",
+    "catalogNumbers": [
+      "9803"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Non-denaturing cell lysis buffer",
+    "description": "Non-denaturing 10X lysis buffer for extracting protein from cultured cells and tissue while preserving protein structure and interactions.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/cell-lysis-buffer-10x/9803",
+    "storage": "-20°C long term; +4°C for 1-2 weeks in regular use",
+    "kitSize": "10X concentrate; makes 150 mL of 1X working solution",
+    "applications": [
+      "cell lysis",
+      "immunoprecipitation",
+      "western blot"
+    ],
+    "keyParameters": {
+      "notes": "1X composition: 20 mM Tris-HCl pH 7.5, 150 mM NaCl, 1 mM Na2EDTA, 1 mM EGTA, 1% Triton, 2.5 mM sodium pyrophosphate, 1 mM beta-glycerophosphate, 1 mM Na3VO4, 1 µg/mL leupeptin"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #9803 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/cell-lysis-buffer-10x/9803"
+  },
+  {
+    "productName": "Cell Fractionation Kit (Eco-friendly detergent)",
+    "catalogNumbers": [
+      "42193"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Subcellular fractionation kit",
+    "description": "Separates cultured cells into cytoplasmic, membrane/organelle and nuclear/cytoskeletal fractions for SDS-PAGE and western blotting, using the biodegradable non-ionic surfactant ECOSURF SA-9 in place of Triton X-100.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/cell-fractionation-kit-eco-friendly-detergent/42193",
+    "storage": "-20°C (Protease Inhibitor Cocktail #5871 at +4°C)",
+    "kitSize": "20 assays",
+    "applications": [
+      "western blot",
+      "subcellular fractionation",
+      "protein localisation"
+    ],
+    "keyParameters": {
+      "input": "Cultured cells",
+      "notes": "Includes fractionation buffers, 100X Protease Inhibitor Cocktail #5871 and ECOSURF SA-9 detergent"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #42193 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/cell-fractionation-kit-eco-friendly-detergent/42193"
+  },
+  {
+    "productName": "SignalStain IHC Dual Staining Kit (HRP, Rabbit, Brown / AP, Mouse, Red)",
+    "catalogNumbers": [
+      "82456"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Dual-colour IHC detection kit",
+    "description": "Enables simultaneous detection of two antigens on one tissue section, pairing HRP with brown DAB chromogen for rabbit antibodies and alkaline phosphatase with Vibrant Red chromogen for mouse antibodies.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/ihc-dual-staining-kit-hrp-rabbit-brown-ap-mouse-red/82456",
+    "storage": "+4°C; components stable at least 12 months past reference date",
+    "kitSize": "120 slides (at 100 µL assay volume)",
+    "applications": [
+      "IHC-P",
+      "dual staining"
+    ],
+    "keyParameters": {
+      "notes": "Includes SignalStain Boost HRP (rabbit) and AP (mouse) detection reagents, DAB Substrate Kit #8059, Vibrant Red AP Substrate Kit #76713, blocking solution and antibody diluent; works best when targets are in different compartments or cell types"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #82456 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/ihc-dual-staining-kit-hrp-rabbit-brown-ap-mouse-red/82456"
+  },
+  {
+    "productName": "SignalStain DAB Substrate Kit",
+    "catalogNumbers": [
+      "8059",
+      "8059S",
+      "8059P"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "IHC chromogenic substrate kit",
+    "description": "Provides the reagents to prepare a diaminobenzidine working solution that reacts with HRP detection systems to produce brown staining on tissue sections.",
+    "sourceUrl": "https://www.cellsignal.com/products/buffers-dyes/dab-substrate-kit/8059",
+    "protocolUrl": "https://media.cellsignal.com/pdf/8059.pdf",
+    "storage": "+4°C, protected from light; unopened kits stable 12 months",
+    "kitSize": "~1,200 slides (#8059S) / ~120 slides (#8059P)",
+    "applications": [
+      "IHC",
+      "HRP-based chromogenic detection"
+    ],
+    "keyParameters": {
+      "notes": "Contains DAB chromogen concentrate and DAB diluent; add 1 drop (30 µL) concentrate per 1 mL diluent; working solution stable up to 2 weeks at 4°C; DAB is a suspected carcinogen"
+    },
+    "verified": true,
+    "verificationNote": "Catalog numbers 8059, #8059S and #8059P present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/buffers-dyes/dab-substrate-kit/8059"
+  },
+  {
+    "productName": "PathScan Phospho-NF-kappaB p65 (Ser536) Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7173"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Phospho-specific sandwich ELISA kit",
+    "description": "Sandwich ELISA detecting endogenous phospho-NF-kappaB p65 (Ser536); a phospho-p65 mouse mAb is coated onto the microwells with rabbit monoclonal detection and HRP/TMB development.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-nf-kappab-p65-ser536-sandwich-elisa-kit/7173",
+    "kitSize": "96-well format (384-well available on request)",
+    "applications": [
+      "ELISA",
+      "NF-kappaB pathway analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "Colorimetric TMB readout; species reactivity human and mouse"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 7173 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/phospho-nf-kappab-p65-ser536-sandwich-elisa-kit/7173"
+  },
+  {
+    "productName": "PathScan Total p44/42 MAPK (Erk1/2) Sandwich ELISA Kit",
+    "catalogNumbers": [
+      "7050"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Total-protein sandwich ELISA kit",
+    "description": "Solid-phase sandwich ELISA detecting endogenous total p44/42 MAPK (Erk1/2) using a mouse monoclonal capture antibody, rabbit detection antibody and HRP-linked secondary.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/total-p44-42-mapk-erk1-2-sandwich-elisa-kit/7050",
+    "kitSize": "96-well format (384-well available on request)",
+    "applications": [
+      "ELISA",
+      "MAPK pathway analysis"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates",
+      "notes": "Colorimetric TMB readout; species reactivity human and mouse"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 7050 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/total-p44-42-mapk-erk1-2-sandwich-elisa-kit/7050"
+  },
+  {
+    "productName": "PathScan Immune Cell Signaling Antibody Array Kit (Chemiluminescent Readout)",
+    "catalogNumbers": [
+      "13792"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Multiplex sandwich antibody array",
+    "description": "Glass slide sandwich immunoassay array for simultaneous detection of 19 immune and inflammatory signalling molecules from cell lysates.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/immune-cell-signaling-antibody-array-kit-chemiluminescent-readout/13792",
+    "storage": "+4°C (Lysis Buffer at -20°C)",
+    "kitSize": "Two slides, 32 samples, 608 data points (targets spotted in duplicate)",
+    "applications": [
+      "multiplex signalling analysis",
+      "immunology",
+      "inflammation research"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates at 0.2-1 mg/mL total protein",
+      "notes": "HRP-streptavidin with LumiGLO reagent; optimised for human samples"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 13792 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/immune-cell-signaling-antibody-array-kit-chemiluminescent-readout/13792"
+  },
+  {
+    "productName": "PathScan EGFR Signaling Antibody Array Kit (Fluorescent Readout)",
+    "catalogNumbers": [
+      "12785"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Multiplex sandwich antibody array",
+    "description": "Glass slide sandwich immunoassay array for simultaneous detection of phosphorylated EGFR, HER2 and c-Met at distinct sites plus key downstream signalling nodes.",
+    "sourceUrl": "https://www.cellsignal.com/products/elisa-kits/egfr-signaling-antibody-array-kit-fluorescent-readout/12785",
+    "storage": "+4°C (Lysis Buffer at -20°C)",
+    "kitSize": "2 slides, up to 16 samples (targets split between sub-arrays A and B)",
+    "applications": [
+      "multiplex signalling analysis",
+      "receptor tyrosine kinase profiling",
+      "cancer research"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates at 0.2-1 mg/mL total protein",
+      "notes": "Streptavidin-DyLight 680 fluorescent readout; human reactivity"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 12785 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/elisa-kits/egfr-signaling-antibody-array-kit-fluorescent-readout/12785"
+  },
+  {
+    "productName": "Active Cdc42 Detection Kit",
+    "catalogNumbers": [
+      "8819"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GTPase activation pull-down kit",
+    "description": "Provides all reagents for measuring Cdc42 GTPase activation, using a GST-human PAK1-PBD fusion protein to bind GTP-bound Cdc42 for glutathione resin pull-down and western blot detection.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-cdc42-detection-kit/8819",
+    "protocolUrl": "https://media.cellsignal.com/pdf/8819.pdf",
+    "storage": "-80°C (GTPgammaS, GDP); -20°C (GST-PAK1-PBD, Cdc42 mouse mAb); +4°C (buffer, resin, SDS sample buffer)",
+    "applications": [
+      "western blot",
+      "GTPase activation assay",
+      "pull-down"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; species reactivity human, mouse",
+      "notes": "Includes GTPgammaS/GDP controls, glutathione resin and spin cup/collection tubes"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number 8819 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-cdc42-detection-kit/8819"
+  },
+  {
+    "productName": "Active Rap1 Detection Kit",
+    "catalogNumbers": [
+      "8818"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "GTPase activation pull-down kit",
+    "description": "Measures Rap1 GTPase activation using a GST-RalGDS-RBD fusion protein to bind GTP-bound Rap1, followed by glutathione resin immunoprecipitation and western blot detection.",
+    "sourceUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rap1-detection-kit/8818",
+    "storage": "-80°C (GTPgammaS, GDP, GST-RalGDS-RBD); +4°C (buffer, resin, SDS sample buffer, Rap1 rabbit mAb)",
+    "applications": [
+      "western blot",
+      "GTPase activation assay",
+      "pull-down"
+    ],
+    "keyParameters": {
+      "input": "Cell lysates; species reactivity human, mouse",
+      "notes": "Includes GTPgammaS/GDP controls, glutathione resin and spin cup/collection tubes"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #8818 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/cellular-assay-kits/active-rap1-detection-kit/8818"
+  },
+  {
+    "productName": "Multiplex Oligos for Illumina Systems (Single Index Primers) (ChIP-seq, CUT&RUN)",
+    "catalogNumbers": [
+      "29580"
+    ],
+    "category": "NGS Library Preparation",
+    "subcategory": "Single-index adaptors and primers",
+    "description": "Adaptors and primers for multiplexed Illumina sequencing library preparation downstream of ChIP and CUT&RUN assays, for genome-wide quantification of target DNA enrichment.",
+    "sourceUrl": "https://www.cellsignal.com/products/chip-kits-reagents/multiplex-oligos-for-illumina-systems-single-index-primers-chip-seq-cut-run/29580",
+    "storage": "-20°C; stable 12 months",
+    "kitSize": "Up to 12 distinct barcodes; reagents for 24 DNA sequencing libraries",
+    "applications": [
+      "ChIP-seq",
+      "CUT&RUN sequencing",
+      "multiplexed Illumina sequencing"
+    ],
+    "keyParameters": {
+      "input": "Validated with as little as 0.5 ng ChIP DNA or 0.1 ng CUT&RUN DNA",
+      "notes": "Requires DNA Library Prep Kit #56795; compatible with SimpleChIP kits #9003/#9005/#56383 and CUT&RUN kits #86652/#84647"
+    },
+    "verified": true,
+    "verificationNote": "Catalog number #29580 present on fetched CST product page.",
+    "vendor": "Cell Signaling Technology",
+    "vendorShort": "CST",
+    "retrievedAt": "2026-08-20",
+    "productUrl": "https://www.cellsignal.com/products/chip-kits-reagents/multiplex-oligos-for-illumina-systems-single-index-primers-chip-seq-cut-run/29580"
+  }
+]

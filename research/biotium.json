@@ -1,0 +1,1331 @@
+[
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "GelRed Nucleic Acid Gel Stain",
+    "catalogNumbers": [
+      "41001",
+      "41002",
+      "41002-1",
+      "41003",
+      "41003-T",
+      "41003-1"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Fluorescent nucleic acid gel stain",
+    "description": "Ultra-sensitive, environmentally safe fluorescent DNA/RNA gel stain designed as a direct replacement for ethidium bromide, with virtually identical spectra to EtBr. Reported to be more sensitive than EtBr and SYBR Safe, and non-mutagenic in Ames testing.",
+    "productUrl": "https://biotium.com/product/gelred-nucleic-acid-gel-stain/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/11/PI-GelRed-GelGreen-Quick-Start-Protocol.pdf",
+    "storage": "Room temperature, protect from light",
+    "kitSize": "41003-T 0.1 mL / 41003 0.5 mL / 41003-1 10 mL (10,000X in water); 41002 0.5 mL / 41002-1 10 mL (10,000X in DMSO); 41001 4 L (3X in water)",
+    "applications": [
+      "agarose gel DNA staining",
+      "polyacrylamide gel staining",
+      "precast gel staining",
+      "post-electrophoresis staining"
+    ],
+    "keyParameters": {
+      "notes": "41003 = 10,000X in water; 41002 = 10,000X in DMSO; 41001 = 3X in water (ready-to-use). Compatible with 254 nm UV transilluminators and blue-light gel readers using ethidium bromide filter sets. Warm to 45-50 °C if dye precipitates."
+    },
+    "sourceUrl": "https://biotium.com/wp-content/uploads/2015/02/PI-41002-41003.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 41002/41002-1 (10,000X DMSO), 41003-T/41003/41003-1 (10,000X water) and 41001 (3X water) listed with formats and unit sizes in the fetched Biotium product information sheet PI-41002-41003; 41001 3X/4 L also confirmed in fetched PI-41001."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "GelGreen Nucleic Acid Gel Stain",
+    "catalogNumbers": [
+      "41004",
+      "41005"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Fluorescent nucleic acid gel stain",
+    "description": "Highly sensitive green fluorescent nucleic acid dye for staining DNA in agarose gels. Cell membrane-impermeant and non-mutagenic, thermally and hydrolytically stable, and compatible with downstream gel purification, restriction digest, sequencing and cloning.",
+    "productUrl": "https://biotium.com/product/gelgreen-nucleic-acid-gel-stain/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2015/02/PI-41004-41005.pdf",
+    "storage": "Room temperature (avoids precipitation), protect from light",
+    "kitSize": "0.1 mL trial, 0.5 mL, 10 mL (each format)",
+    "applications": [
+      "agarose gel DNA staining",
+      "precast gel staining",
+      "post-electrophoresis staining"
+    ],
+    "keyParameters": {
+      "notes": "41004 = 10,000X in DMSO; 41005 = 10,000X in water. Viewed with 254 nm UV transilluminator or blue-light gel reader using SYBR Green / GelStar filters."
+    },
+    "sourceUrl": "https://biotium.com/product/gelgreen-nucleic-acid-gel-stain/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 41004 and 41005 with formats and sizes present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "PAGE GelRed Nucleic Acid Gel Stain",
+    "catalogNumbers": [
+      "41008",
+      "41014"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Polyacrylamide gel nucleic acid stain",
+    "description": "Non-toxic, non-mutagenic red DNA gel stain formulated specifically for polyacrylamide gels, designed to penetrate densely packed PAGE gels efficiently. Compatible with downstream gel purification, restriction digest, sequencing and cloning.",
+    "productUrl": "https://biotium.com/product/page-gelred-nucleic-acid-gel-stain/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/08/PI-41008.pdf",
+    "storage": "Room temperature, protect from light",
+    "kitSize": "41008 (10,000X in water): 0.1 mL, 500 µL; 41014 (1X in water): 4 L",
+    "applications": [
+      "PAGE",
+      "DGGE",
+      "EMSA",
+      "PFGE",
+      "post-electrophoresis staining"
+    ],
+    "keyParameters": {
+      "notes": "6-8x more sensitive for dsDNA than RNA; compatible with 254 nm UV transilluminator and ethidium bromide filter sets; non-hazardous disposal."
+    },
+    "sourceUrl": "https://biotium.com/product/page-gelred-nucleic-acid-gel-stain/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 41008 (0.1 mL, 500 µL) and 41014 (4 L, 1X) present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "GelRed Prestain Plus 6X DNA Loading Dye",
+    "catalogNumbers": [
+      "41011"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Prestaining DNA gel loading dye",
+    "description": "6X DNA loading buffer containing the non-mutagenic GelRed fluorescent dye, allowing gel loading and DNA staining in a single step. Contains density agents and two blue tracking dyes that migrate at approximately 1.5 kb and 200 bp in 1% agarose.",
+    "productUrl": "https://biotium.com/product/gelred-prestain-plus-6x-dna-loading-dye/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2018/11/PI-41011.pdf",
+    "storage": "Room temperature, protect from light",
+    "kitSize": "1 mL",
+    "applications": [
+      "agarose gel electrophoresis",
+      "one-step DNA prestaining"
+    ],
+    "keyParameters": {
+      "input": "Recommended for 50-200 ng ladder or about 100 ng DNA per band or less",
+      "notes": "Improved version of the original 6X GelRed Prestain Loading Buffer; minimises DNA band migration shift."
+    },
+    "sourceUrl": "https://biotium.com/product/gelred-prestain-plus-6x-dna-loading-dye/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 41011 with 1 mL size present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "EvaGreen Dye, 20X in Water",
+    "catalogNumbers": [
+      "31000"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "dsDNA-binding qPCR dye",
+    "description": "Patented green fluorescent nucleic acid binding dye that is essentially non-fluorescent by itself but becomes highly fluorescent on binding dsDNA. Brighter and less PCR-inhibitory than SYBR Green, with high thermal, chemical and photostability.",
+    "productUrl": "https://biotium.com/product/evagreen-dye-20x-in-water/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/07/PI-31000.pdf",
+    "storage": "-10 to -35 °C",
+    "kitSize": "1 mL trial size; 5 x 1 mL",
+    "applications": [
+      "qPCR",
+      "high-resolution melt (HRM)",
+      "LAMP",
+      "digital PCR",
+      "isothermal amplification"
+    ],
+    "keyParameters": {
+      "input": "Supplied as 20X (25 µM) concentrate",
+      "notes": "Ex/Em approximately 500/530 nm when DNA-bound; non-mutagenic and non-cytotoxic per Biotium safety report."
+    },
+    "sourceUrl": "https://biotium.com/product/evagreen-dye-20x-in-water/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 31000 with 20X concentration and sizes present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Fast Plus EvaGreen qPCR Master Mix",
+    "catalogNumbers": [
+      "31020",
+      "31020-1",
+      "31020-2",
+      "31020-T",
+      "31014",
+      "31014-1",
+      "31014-2",
+      "31014-T",
+      "31015",
+      "31015-1",
+      "31015-2",
+      "31015-T"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "EvaGreen dye-based qPCR master mix",
+    "description": "2X qPCR master mix combining EvaGreen dye with Cheetah Taq hot-start DNA polymerase, formulated for fast two-step cycling protocols. Available with no ROX, low ROX or high ROX passive reference dye.",
+    "productUrl": "https://biotium.com/product/fast-plus-evagreen-qpcr-master-mix/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/07/PI-31014-31015-31020.pdf",
+    "storage": "-20 °C (-10 to -35 °C); stable at least 12 months from receipt",
+    "kitSize": "100 rxn trial (1 x 1 mL, -T) / 200 rxn (2 x 1 mL) / 500 rxn (5 x 1 mL, -1) / 5,000 rxn (50 x 1 mL, -2)",
+    "applications": [
+      "qPCR",
+      "high-resolution melt analysis",
+      "fast cycling qPCR"
+    ],
+    "keyParameters": {
+      "input": "10 µL 2X mix + 0.1-0.5 µM each primer + template in a 20 µL reaction",
+      "time": "95 °C 2 min activation, then 40 cycles of 95 °C 5 s / 60 °C 30 s",
+      "notes": "31020 = No ROX; 31014 = Low ROX; 31015 = High ROX."
+    },
+    "sourceUrl": "https://biotium.com/wp-content/uploads/2013/07/PI-31014-31015-31020.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All twelve catalog numbers with ROX variants and reaction sizes listed in the fetched Biotium product information sheet PI-31014-31015-31020."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Fast EvaGreen qPCR Master Mix",
+    "catalogNumbers": [
+      "31003"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "EvaGreen dye-based qPCR master mix",
+    "description": "2X qPCR master mix containing EvaGreen qPCR dye and Cheetah Taq hot-start DNA polymerase, optimised for fast cycling protocols. Supplied with a separate vial of ROX reference dye so it can be used on high-ROX, low-ROX or no-ROX instruments.",
+    "productUrl": "https://biotium.com/product/fast-evagreena-qpcr-master-mix-200-rxn/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/07/PI-31003.pdf",
+    "storage": "-10 to -35 °C",
+    "kitSize": "1 mL trial; 2 x 1 mL; 5 x 1 mL; 50 x 1 mL",
+    "applications": [
+      "qPCR",
+      "high-resolution melt (HRM) analysis"
+    ],
+    "keyParameters": {
+      "notes": "Separate ROX reference dye vial included for instrument-specific ROX requirements. Listed on the vendor page as available by special order."
+    },
+    "sourceUrl": "https://biotium.com/product/fast-evagreena-qpcr-master-mix-200-rxn/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 31003 with unit sizes present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Forget-Me-Not EvaGreen qPCR Master Mix (2-Color Tracking)",
+    "catalogNumbers": [
+      "31041-T",
+      "31041-1",
+      "31041-20mL",
+      "31042-T",
+      "31042-1",
+      "31042-20mL"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "EvaGreen qPCR master mix with visual tracking dye",
+    "description": "Dye-based qPCR master mix containing EvaGreen dye, Cheetah HotStart Taq polymerase and a two-colour visual tracking system: a low-concentration blue dye in the master mix plus a high-concentration blue dye in the optional template tracking buffer, giving visual confirmation that reactions were assembled correctly.",
+    "productUrl": "https://biotium.com/product/forget-qpcr-master-mix/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/09/PI-31041-31042.pdf",
+    "storage": "-20 °C",
+    "kitSize": "1 mL trial (100 rxn, -T); 5 x 1 mL (500 rxn, -1); 10 mL and 2 x 10 mL bulk (-20mL)",
+    "applications": [
+      "qPCR",
+      "high-resolution melt (HRM) analysis",
+      "fast cycling qPCR"
+    ],
+    "keyParameters": {
+      "notes": "31041 supplied without ROX; 31042 supplied with a separate ROX vial."
+    },
+    "sourceUrl": "https://biotium.com/product/forget-qpcr-master-mix/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 31041/31042 with -T, -1 and -20mL size suffixes present on the fetched Biotium product page and confirmed in the fetched Biotium qPCR Master Mixes flyer."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Forget-Me-Not Universal Probe qPCR Master Mix",
+    "catalogNumbers": [
+      "31043-T",
+      "31043-1",
+      "31044-T",
+      "31044-1"
+    ],
+    "category": "qPCR & Digital PCR",
+    "subcategory": "Probe-based qPCR master mix",
+    "description": "Master mix for fluorescent probe-based PCR, including quantitation and SNP genotyping, suitable for all common probe chemistries (TaqMan, BHQ, molecular beacons) in singleplex or multiplex reactions. Contains Cheetah HotStart Taq DNA polymerase and is supplied with a 40X Forget-Me-Not Tracking Buffer containing an inert blue dye.",
+    "productUrl": "https://biotium.com/product/forget-me-not-universal-probe-master-mix/",
+    "storage": "-20 °C",
+    "kitSize": "1 mL trial / 100 reactions (-T); 5 x 1 mL / 500 reactions (-1)",
+    "applications": [
+      "probe-based qPCR",
+      "SNP genotyping",
+      "multiplex qPCR"
+    ],
+    "keyParameters": {
+      "notes": "31043 = standard (no ROX); 31044 = with ROX. Supplied with 40X Forget-Me-Not Tracking Buffer containing an inert blue dye; only primers, probe and template need to be added."
+    },
+    "sourceUrl": "https://biotium.com/wp-content/uploads/2015/12/qPCR-Master-Mixes-flyer.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 31043-T, 31043-1, 31044-T and 31044-1 with ROX variants and sizes listed in the fetched Biotium qPCR Master Mixes flyer; product details taken from the fetched product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "GelRed Agarose LE",
+    "catalogNumbers": [
+      "41029-5g",
+      "41029-50g"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Pre-stained agarose",
+    "description": "Ultrapure molecular biology grade low-electroendosmosis agarose pre-coated with GelRed Nucleic Acid Gel Stain, so gels are cast already containing stain without handling concentrated dye solutions. Suitable for 0.8-2% gels in TAE or TBE; a 1% gel gives a final 1X GelRed concentration.",
+    "productUrl": "https://biotium.com/product/gelred-agarose-le/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2018/09/PI-41029.pdf",
+    "storage": "Room temperature (prevents dye precipitation)",
+    "kitSize": "5 g; 50 g",
+    "applications": [
+      "agarose gel electrophoresis",
+      "DNA/RNA gel staining"
+    ],
+    "keyParameters": {
+      "notes": "Non-toxic, non-mutagenic dye; compatible with downstream sequencing and cloning."
+    },
+    "sourceUrl": "https://biotium.com/product/gelred-agarose-le/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 41029-5g and 41029-50g present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "DNAzure 2.0 Visible Blue DNA Gel Stain Kit",
+    "catalogNumbers": [
+      "41045"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Visible-light DNA gel stain kit",
+    "description": "Blue nucleic acid gel stain kit that lets dsDNA in agarose or polyacrylamide gels be seen by eye after light exposure, avoiding UV illumination when excising bands. The 2.0 formulation is more sensitive than the original DNAzure stain.",
+    "productUrl": "https://biotium.com/product/dnazure-2-0-visible-blue-dna-gel-stain-kit/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2026/06/PI-41045.pdf",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "Stains 4 gels or 20 gels",
+    "applications": [
+      "agarose and polyacrylamide gel DNA visualisation",
+      "UV-free band excision",
+      "gel documentation"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: Component A 100X, Component B 100X, Component C 10X, 6X DNA Loading Buffer (Orange)",
+      "time": "Post-electrophoresis staining plus light exposure, up to about 30 min for colour development",
+      "notes": "Detects around 1 ng dsDNA per band; bands are visible blue and also fluoresce in the near-IR around 700 nm."
+    },
+    "sourceUrl": "https://biotium.com/product/dnazure-2-0-visible-blue-dna-gel-stain-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 41045 with 4-gel and 20-gel kit sizes and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "EMBER Ultra DNA Gel Kit",
+    "catalogNumbers": [
+      "41043"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Pre-coated agarose DNA gel stain kit",
+    "description": "High-sensitivity DNA gel stain supplied as pre-coated agarose plus a matched loading dye, so no post-electrophoresis staining step is needed. Biotium describes it as giving the highest sensitivity and resolution for DNA among current agarose gel stains.",
+    "productUrl": "https://biotium.com/product/ember-ultra-dna-gel-kit/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2024/11/PI-41043.pdf",
+    "storage": "Components have different storage temperatures; see kit instructions on receipt",
+    "kitSize": "10 gels; 30 gels",
+    "applications": [
+      "agarose gel electrophoresis",
+      "low-input DNA detection",
+      "blue LED gel imaging"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: EMBER Ultra Precoated Agarose and EMBER Ultra DNA Loading Dye",
+      "notes": "Detects 1 ng or less of DNA, about five times more sensitive than SYBR Gold. Optimal on blue LED imagers; also works on UV imagers with SYBR or EtBr filters. Not for PAGE, DGGE, EMSA or PFGE gels."
+    },
+    "sourceUrl": "https://biotium.com/product/ember-ultra-dna-gel-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 41043 with 10-gel and 30-gel kit sizes and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "AccuClear Ultra High Sensitivity dsDNA Quantitation Kit with DNA Standards",
+    "catalogNumbers": [
+      "31028",
+      "31029"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Fluorometric dsDNA quantitation kit",
+    "description": "Fluorescent microplate assay for sensitive and selective detection of double-stranded DNA with a wide linear range from 0.03 to 250 ng. Supplied with AccuClear dye, quantitation buffer and dsDNA standards.",
+    "productUrl": "https://biotium.com/product/accuclear-ultra-high-sensitivity-dsdna-quantitation-kit-with-7-dna-standards/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/11/PI-31028.pdf",
+    "storage": "2 to 8 °C",
+    "kitSize": "200 assays (trial); 1,000 assays; 2,000 assays",
+    "applications": [
+      "microplate DNA quantitation",
+      "NGS library and sample QC",
+      "purified DNA quantitation"
+    ],
+    "keyParameters": {
+      "input": "Linear detection range 0.03-250 ng DNA",
+      "notes": "Ex/Em 468/507 nm with DNA. Kit contents: AccuClear Dye 100X, DNA Quantitation Buffer 20X, dsDNA standard 25 ng/µL (trial and 2,000-assay kits) or set of 7 dsDNA standards (1,000-assay kit). 31029 is the alternative-format catalog number with its own protocol PI-31029."
+    },
+    "sourceUrl": "https://biotium.com/product/accuclear-ultra-high-sensitivity-dsdna-quantitation-kit-with-7-dna-standards/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 31028 (trial/1,000/2,000 assays) and 31029 present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "AccuGreen High Sensitivity dsDNA Quantitation Kit",
+    "catalogNumbers": [
+      "31066",
+      "31068"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Fluorometric dsDNA quantitation kit",
+    "description": "Fluorescent assay for sensitive, selective quantitation of double-stranded DNA on handheld fluorometers such as the Qubit, offered as a cost-effective alternative to the Qubit dsDNA HS assay. Supplied with dye, quantitation buffer and two DNA standards.",
+    "productUrl": "https://biotium.com/product/accugreen-high-sensitivity-dsdna-quantitation-kit/",
+    "storage": "2 to 8 °C",
+    "kitSize": "100 assays; 500 assays",
+    "applications": [
+      "handheld fluorometer DNA quantitation",
+      "NGS library QC",
+      "purified dsDNA quantitation"
+    ],
+    "keyParameters": {
+      "input": "Linear range 0.1-100 ng dsDNA per tube; sample range 5 pg/µL to 100 ng/µL",
+      "notes": "Ex/Em 502/523 nm with DNA. Kit contents: AccuGreen Dye 200X, DNA Quantitation Buffer 20X, Standard 1 (0 ng/µL) and Standard 2 (10 ng/µL). 31068 is the same assay supplied as a solution without DNA standards."
+    },
+    "sourceUrl": "https://biotium.com/product/accugreen-high-sensitivity-dsdna-quantitation-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 31066 (kit, 100/500 assays) and 31068 (solution) present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "TrueBlack Lipofuscin Autofluorescence Quencher",
+    "catalogNumbers": [
+      "23007",
+      "23011"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Tissue autofluorescence quencher",
+    "description": "Reagent that quenches lipofuscin autofluorescence in tissue sections for immunofluorescence staining, presented as a superior alternative to Sudan Black B. Also reduces background from other sources such as collagen, elastin and red blood cells.",
+    "productUrl": "https://biotium.com/product/trueblack-lipofuscin-autofluorescence-quencher/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/11/PI-23007.pdf",
+    "storage": "Room temperature, protect from light",
+    "kitSize": "1 mL (each format)",
+    "applications": [
+      "immunofluorescence of aged/human tissue",
+      "brain and retina imaging",
+      "FFPE tissue background reduction"
+    ],
+    "keyParameters": {
+      "input": "Dilute concentrate in 70% ethanol to 1X for treatment",
+      "notes": "23007 = 20X in DMF; 23011 = 30X in DMSO. Can be applied before or after immunofluorescence staining."
+    },
+    "sourceUrl": "https://biotium.com/product/trueblack-lipofuscin-autofluorescence-quencher/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23007 (20X in DMF) and 23011 (30X in DMSO) present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "TrueBlack Plus Lipofuscin Autofluorescence Quencher, 40X in DMSO",
+    "catalogNumbers": [
+      "23014"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Tissue autofluorescence quencher",
+    "description": "Water-soluble lipofuscin autofluorescence quencher that reduces autofluorescence with minimal red background and can be used in PBS rather than 70% ethanol. Lower far-red background than the original TrueBlack formulation and no hazardous solvents required.",
+    "productUrl": "https://biotium.com/product/trueblack-plus-lipofuscin-autofluorescence-quencher-40x-in-dmso/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2020/07/PI-23014.pdf",
+    "storage": "Room temperature, protect from light",
+    "kitSize": "50 µL; 500 µL",
+    "applications": [
+      "immunofluorescence microscopy",
+      "tissue autofluorescence reduction"
+    ],
+    "keyParameters": {
+      "input": "Supplied as 40X concentrate in DMSO; dilute in PBS",
+      "notes": "Can be applied before or after immunofluorescence staining."
+    },
+    "sourceUrl": "https://biotium.com/product/trueblack-plus-lipofuscin-autofluorescence-quencher-40x-in-dmso/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 23014 with 40X in DMSO format and 50 µL / 500 µL sizes present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "EverBrite Mounting Medium",
+    "catalogNumbers": [
+      "23001",
+      "23002"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Antifade mounting medium",
+    "description": "Liquid antifade mounting medium formulated to preserve the fluorescence of CF Dyes and other fluorochromes in fixed cells and tissue sections. Unlike some competing formulations it is compatible with cyanine-based dyes, and slides can be imaged immediately after sealing the coverslip.",
+    "productUrl": "https://biotium.com/product/everbrite-mounting-medium/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2014/03/PI-23001-23002.pdf",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "10 mL",
+    "applications": [
+      "immunofluorescence microscopy",
+      "fixed cell and tissue section mounting"
+    ],
+    "keyParameters": {
+      "notes": "23001 = without DAPI; 23002 = with DAPI. Refractive index 1.46. Mounted slides can be stored at 4 °C for a year or longer."
+    },
+    "sourceUrl": "https://biotium.com/product/everbrite-mounting-medium/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23001 and 23002 with DAPI variants and 10 mL size present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "EverBrite Hardset Mounting Medium",
+    "catalogNumbers": [
+      "23003",
+      "23004",
+      "23016"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Hardset antifade mounting medium",
+    "description": "Antifade mounting medium formulated to preserve fluorescence of CF Dyes and other fluorochromes, which hardens at room temperature so coverslips do not need to be sealed. Compatible with fluorescein, rhodamine and cyanine-based dyes.",
+    "productUrl": "https://biotium.com/product/everbrite-hardset-mounting-medium/",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "10 mL",
+    "applications": [
+      "immunofluorescence microscopy",
+      "fixed cell and tissue section mounting"
+    ],
+    "keyParameters": {
+      "time": "Hardens completely at room temperature in 24 h",
+      "notes": "23003 = without DAPI; 23004 = with DAPI; 23016 = with NucSpot 640. Refractive index 1.38 initially, 1.42 after 24 h, 1.46 after four days."
+    },
+    "sourceUrl": "https://biotium.com/product/everbrite-hardset-mounting-medium/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23003, 23004 and 23016 with variants and 10 mL size present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "EverBrite TrueBlack Hardset Mounting Medium",
+    "catalogNumbers": [
+      "23017",
+      "23018",
+      "23019"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Hardset mounting medium with autofluorescence quencher",
+    "description": "Hardset antifade mounting medium that also quenches lipofuscin autofluorescence, so mounting, background reduction and optional nuclear counterstaining happen in one step. Compatible with CF Dyes and cyanine-based fluorophores.",
+    "productUrl": "https://biotium.com/product/everbrite-trueblack-hardset/",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "2 mL; 10 mL",
+    "applications": [
+      "immunofluorescence microscopy of tissue sections",
+      "autofluorescence reduction",
+      "fixed cell mounting"
+    ],
+    "keyParameters": {
+      "notes": "23017 = no nuclear stain; 23018 = with DAPI; 23019 = with NucSpot 640. Refractive index 1.42 after 24 h, 1.46 after four days."
+    },
+    "sourceUrl": "https://biotium.com/product/everbrite-trueblack-hardset/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23017, 23018 and 23019 with nuclear-stain variants and 2 mL / 10 mL sizes present on fetched Biotium product page.",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2021/01/PI-EverBrite-TrueBlack-Hardset.pdf"
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Drop-n-Stain EverBrite Mounting Medium",
+    "catalogNumbers": [
+      "23008",
+      "23009"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Antifade mounting medium",
+    "description": "EverBrite antifade mounting medium in a Drop-n-Stain format, supplied without DAPI or with DAPI, for mounting fixed cells and tissue sections for fluorescence microscopy.",
+    "productUrl": "https://biotium.com/product/drop-n-stain-everbrite-mounting-medium/",
+    "storage": "2 to 8 °C, protect from light",
+    "applications": [
+      "immunofluorescence microscopy",
+      "fixed cell and tissue section mounting"
+    ],
+    "keyParameters": {
+      "notes": "23008 = without DAPI; 23009 = with DAPI."
+    },
+    "sourceUrl": "https://biotium.com/product/everbrite-mounting-medium/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23008 and 23009 with their DAPI variants appear in the product table on the fetched EverBrite Mounting Medium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "TrueBlack IF Background Suppressor System (Permeabilizing)",
+    "catalogNumbers": [
+      "23012",
+      "23012-T"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Immunofluorescence blocking and permeabilisation buffer",
+    "description": "Blocking buffer system for immunofluorescence microscopy that blocks non-specific antibody binding as well as direct interaction of charged fluorescent dyes with cells or tissue. Contains non-mammalian blocking agents plus detergent so blocking and permeabilisation occur in one step.",
+    "productUrl": "https://biotium.com/product/trueblack-if-background-suppressor-system-permeabilizing/",
+    "storage": "Refer to product protocol PI-23012",
+    "kitSize": "20 assays trial (23012-T); 200 assays kit; 100 mL and 1 L dropper bottles",
+    "applications": [
+      "intracellular immunofluorescence",
+      "tissue section staining",
+      "background suppression for CF405S/CF405M/far-red dyes"
+    ],
+    "keyParameters": {
+      "time": "Blocks background in 10 min",
+      "notes": "System comprises TrueBlack IF Background Suppressor plus TrueBlack IF Blocking Buffer, which also serves as antibody diluent."
+    },
+    "sourceUrl": "https://biotium.com/product/trueblack-if-background-suppressor-system-permeabilizing/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 23012 and 23012-T with sizes present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Viability/Cytotoxicity Assay Kit for Animal Live & Dead Cells",
+    "catalogNumbers": [
+      "30002"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Live/dead viability and cytotoxicity assay",
+    "description": "Two-colour assay for staining live (green) and dead (red) cells within the same cell population by flow cytometry or fluorescence microscopy. Contains calcein AM, which is converted to green-fluorescent calcein by esterases in live cells, and EthD-III, which stains nuclei of membrane-compromised dead cells red.",
+    "productUrl": "https://biotium.com/product/viabilitycytotoxicity-assay-kit-for-animal-live-dead-cells/",
+    "storage": "-10 to -35 °C, protect from light",
+    "kitSize": "150 assays or 300 assays",
+    "applications": [
+      "fluorescence microscopy",
+      "flow cytometry",
+      "fluorescence microplate reader",
+      "cytotoxicity screening"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: calcein AM 4 mM in DMSO; EthD-III 2 mM in DMSO/H2O",
+      "notes": "Calcein Ex/Em 494/517 nm; EthD-III Ex/Em 532/625 nm. EthD-III reported ~45% brighter than ethidium homodimer I."
+    },
+    "sourceUrl": "https://biotium.com/product/viabilitycytotoxicity-assay-kit-for-animal-live-dead-cells/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 30002 with 150- and 300-assay sizes and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Dual Apoptosis Assay with NucView 488 Caspase-3 Substrate & Annexin V",
+    "catalogNumbers": [
+      "30067"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis assay kit",
+    "description": "Kit for simultaneous detection of caspase-3 activation and phosphatidylserine translocation in intact cells, combining the cell-permeable NucView 488 caspase-3 substrate with a fluorescent Annexin V conjugate.",
+    "productUrl": "https://biotium.com/product/dual-apoptosis-assay-with-nucview-488-caspase-3-substrate-and-annexin-v/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/11/PI-30067.pdf",
+    "storage": "2 to 8 °C, do not freeze, protect from light",
+    "kitSize": "50 flow cytometry assays (200 µL assay volume)",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "live cell imaging",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: NucView 488 caspase-3 substrate (0.2 mM in DMSO), Annexin V conjugate, 5X Annexin binding buffer, Ac-DEVD-CHO caspase-3 inhibitor (2 mM in DMSO)",
+      "notes": "Annexin V conjugate options include CF594, CF640R and sulforhodamine 101 (Texas Red). Formaldehyde-fixable."
+    },
+    "sourceUrl": "https://biotium.com/product/dual-apoptosis-assay-with-nucview-488-caspase-3-substrate-and-annexin-v/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 30067 with 50-assay size and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Annexin V Conjugates",
+    "catalogNumbers": [
+      "29005",
+      "29003",
+      "29011",
+      "29014",
+      "29010",
+      "29004",
+      "29009",
+      "29012",
+      "29008",
+      "29001",
+      "29013",
+      "29045",
+      "29057",
+      "99902"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Apoptosis detection reagent",
+    "description": "Fluorescent and affinity-tagged Annexin V conjugates that detect apoptotic cells by binding phosphatidylserine translocated to the outer plasma membrane during apoptosis. CF Dye conjugates are supplied as 50 µg/mL solutions in Tris/EDTA/NaCl with BSA and sodium azide.",
+    "productUrl": "https://biotium.com/product/annexin-v-conjugates/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2016/12/PI-AnnexinV.pdf",
+    "storage": "2 to 8 °C, do not freeze, protect from light",
+    "kitSize": "0.5 mL at 50 µg/mL (CF Dye, FITC, biotin); 100 µL or 500 µL at 5 µL/test (R-PE, APC); 15 mL 5X binding buffer",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "live cell imaging",
+      "apoptosis detection"
+    ],
+    "keyParameters": {
+      "notes": "CF488A 29005, CF647 29003, CF594 29011, CF640R 29014, CF568 29010, CF555 29004, CF405M 29009, CF350 29012, CF633 29008; FITC 29001, biotin 29013, R-PE 29045, APC 29057; 5X Annexin V Binding Buffer 99902."
+    },
+    "sourceUrl": "https://biotium.com/product/annexin-v-conjugates/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the conjugate table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "NucView Caspase-3 Substrates",
+    "catalogNumbers": [
+      "10402",
+      "10403",
+      "10405",
+      "10407",
+      "10406",
+      "10408"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Live-cell caspase-3 activity substrate",
+    "description": "Cell-membrane-permeable fluorogenic caspase-3/7 substrates that allow real-time detection of caspase activity in live cells; on cleavage the released dye binds DNA and stains the nucleus of the apoptotic cell. Available in blue, green and orange fluorescence and in DMSO or PBS formulations.",
+    "productUrl": "https://biotium.com/products/enzyme-substrates/nucview-caspase-3/",
+    "storage": "Store frozen, protect from light",
+    "kitSize": "1 mM solution",
+    "applications": [
+      "live-cell apoptosis imaging",
+      "flow cytometry",
+      "high-content screening"
+    ],
+    "keyParameters": {
+      "notes": "NucView 488 (green): 10402 in DMSO, 10403 in PBS; NucView 405 (blue, Pacific Blue channel): 10405 in DMSO, 10407 in PBS; NucView 530 (orange, Cy3 channel): 10406 in DMSO, 10408 in PBS. PBS formulations are for DMSO-sensitive cell types."
+    },
+    "sourceUrl": "https://biotium.com/technology/nucview-caspase-3-substrates/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All six catalog numbers with their colours and DMSO/PBS formulations present in the product table on the fetched Biotium NucView technology page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "NucView 488 Dual Apoptosis and Necrosis Assay Kits",
+    "catalogNumbers": [
+      "30062",
+      "30072",
+      "30073"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Multiplexed apoptosis assay kits",
+    "description": "Kits pairing the NucView 488 caspase-3 substrate with a second probe to read out an additional apoptosis or necrosis parameter in the same cells: MitoView 633 for mitochondrial membrane potential, RedDot 2 for membrane-compromised necrotic cells, or CF640R Annexin V for phosphatidylserine exposure.",
+    "productUrl": "https://biotium.com/technology/nucview-caspase-3-substrates/",
+    "storage": "Store protected from light; refer to individual kit protocol",
+    "applications": [
+      "flow cytometry",
+      "fluorescence microscopy",
+      "live-cell apoptosis and necrosis discrimination"
+    ],
+    "keyParameters": {
+      "notes": "30062 = NucView 488 + MitoView 633 Apoptosis Kit; 30072 = NucView 488 + RedDot 2 Apoptosis & Necrosis Kit; 30073 = Dual Apoptosis Assay with NucView 488 + CF640R Annexin V."
+    },
+    "sourceUrl": "https://biotium.com/technology/nucview-caspase-3-substrates/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 30062, 30072 and 30073 with kit names present in the dual detection kit table on the fetched Biotium NucView technology page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Live-or-Dye Fixable Viability Staining Kits",
+    "catalogNumbers": [
+      "32002",
+      "32003",
+      "32004",
+      "32005",
+      "32006",
+      "32007",
+      "32008",
+      "32009",
+      "32011",
+      "32012",
+      "32013",
+      "32014",
+      "32015",
+      "32016",
+      "32017",
+      "32018",
+      "32021",
+      "32022",
+      "32023",
+      "32024"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Fixable viability dyes for flow cytometry",
+    "description": "Amine-reactive dyes that enter cells with compromised plasma membranes and covalently label free amines on intracellular proteins, so dead cells can be excluded from flow cytometry analysis even after fixation and permeabilisation.",
+    "productUrl": "https://biotium.com/product/live-or-dye-fixable-viability-staining-kit/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2014/09/PI-Live-or-Dye.pdf",
+    "storage": "-10 to -35 °C, protect from light, desiccate",
+    "kitSize": "Single-colour kits: 50, 200 or 250 assays; sampler kits: 50 assays with 5 colours",
+    "applications": [
+      "flow cytometry",
+      "spectral flow cytometry",
+      "fluorescence microscopy",
+      "dead cell exclusion"
+    ],
+    "keyParameters": {
+      "notes": "Single-colour kits by Ex/Em: 32018 330/410, 32002 350/448, 32014 375/600, 32003 405/452, 32009 405/545, 32004 488/515, 32012 510/550, 32005 568/583, 32006 594/614, 32015 615/740, 32007 640/662, 32023 650/720, 32013 665/685, 32024 700/745, 32008 750/777, 32011 787/808, 32021 820/835, 32022 850/870. 32016 = Standard Sampler Kit; 32017 = Spectral Sampler Kit."
+    },
+    "sourceUrl": "https://biotium.com/product/live-or-dye-fixable-viability-staining-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the single-colour and sampler kit tables on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "ViaFluor SE Cell Proliferation Kits",
+    "catalogNumbers": [
+      "30050",
+      "30068",
+      "30086",
+      "30139"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Cell proliferation tracking dyes",
+    "description": "Fixable succinimidyl ester cytoplasmic stains for monitoring cell division by dye dilution in flow cytometry; also used to track cell populations in co-culture. Supplied as lyophilised dye in single-use vials with anhydrous DMSO.",
+    "productUrl": "https://biotium.com/product/viafluor-se-cell-proliferation-kit/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2016/12/PI-ViaFluor-Cell-Proliferation.pdf",
+    "storage": "-10 to -35 °C, protect from light, desiccate",
+    "kitSize": "Trial (1 vial) or set of 10 vials",
+    "applications": [
+      "cell proliferation by dye dilution",
+      "flow cytometry",
+      "co-culture population tracking",
+      "live cell imaging"
+    ],
+    "keyParameters": {
+      "notes": "ViaFluor CFSE 30050 (Ex/Em 495/519, FITC channel); ViaFluor 405 SE 30068 (387/446, Pacific Blue); ViaFluor 488 SE 30086 (495/524, FITC); ViaFluor 650 SE 30139 (653/682, APC)."
+    },
+    "sourceUrl": "https://biotium.com/product/viafluor-se-cell-proliferation-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 30050, 30068, 30086 and 30139 with dyes and spectra present in the product table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Viability/Cytotoxicity Assay Kit for Bacteria Live & Dead Cells",
+    "catalogNumbers": [
+      "30027"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Bacterial live/dead viability assay",
+    "description": "Two-colour fluorescence assay staining live bacteria green and dead bacteria red using the DNA dyes DMAO and EthD-III, allowing live and dead cells to be distinguished in the same bacterial population with a rapid no-wash protocol.",
+    "productUrl": "https://biotium.com/product/viabilitycytotoxicity-assay-kit-for-bacteria-live-and-dead-cells/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2015/01/PI-30027.pdf",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "1000 assays",
+    "applications": [
+      "bacterial viability",
+      "antimicrobial testing",
+      "fluorescence microscopy",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: DMAO 5 mM (2 x 100 µL), EthD-III 2 mM (2 x 150 µL)",
+      "notes": "DMAO Ex/Em 496/528 nm with DNA; EthD-III Ex/Em 532/625 nm with DNA. Listed on the vendor page as available by special order."
+    },
+    "sourceUrl": "https://biotium.com/product/viabilitycytotoxicity-assay-kit-for-bacteria-live-and-dead-cells/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 30027 with 1000-assay size and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "ATP-Glo Bioluminometric Cell Viability Assay",
+    "catalogNumbers": [
+      "30020"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Luminescent ATP viability assay",
+    "description": "Highly sensitive, homogeneous flash-type luminescence assay for quantifying ATP in cultured cells as a measure of viable cell number. Supplied with D-luciferin, recombinant firefly luciferase, assay buffer and a 2 mM ATP standard.",
+    "productUrl": "https://biotium.com/product/atp-glotm-bioluminometric-cell-viability-assay/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2013/07/PI-30020.pdf",
+    "storage": "-60 °C or below",
+    "kitSize": "50 assays; 200 assays; 1,000 assays",
+    "applications": [
+      "cell viability",
+      "cell proliferation",
+      "cytotoxicity screening"
+    ],
+    "keyParameters": {
+      "notes": "Detects as little as a single cell or 0.01 pmol ATP with linearity over 6 orders of magnitude; requires a luminometer with reagent injectors for flash-type signal. Biotium lists Steady-ATP HTS Viability Assay Kit (30138) as an improved replacement."
+    },
+    "sourceUrl": "https://biotium.com/product/atp-glotm-bioluminometric-cell-viability-assay/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 30020 with kit sizes and contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Steady-ATP HTS Viability Assay Kit",
+    "catalogNumbers": [
+      "30138-1",
+      "30138-2",
+      "30138-3"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Luminescent ATP viability assay",
+    "description": "Single-step homogeneous luminescent viability assay using Chemostable Luciferase to detect cellular ATP, giving a wide dynamic range for determining viable cell number when assessing proliferation or compound cytotoxicity.",
+    "productUrl": "https://biotium.com/product/steady-atp-hts-viability-assay-kit/",
+    "storage": "-10 to -35 °C",
+    "applications": [
+      "high-throughput cell viability screening",
+      "cytotoxicity assays",
+      "cell proliferation"
+    ],
+    "keyParameters": {
+      "notes": "Detection limit as low as 16 cells/well in 384-well format; signal half-life greater than 5 hours; linear over 3-4 orders of magnitude. Kit contents: Steady-ATP Substrate and Steady-ATP Buffer."
+    },
+    "sourceUrl": "https://biotium.com/product/steady-atp-hts-viability-assay-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 30138-1, 30138-2 and 30138-3 with assay counts present on fetched Biotium product page.",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2024/11/PI-30138.pdf",
+    "kitSize": "120 assays (30138-1); 1,000 assays (30138-2); 10,000 assays (30138-3)"
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Mix-n-Stain CF Dye Antibody Labeling Kits",
+    "catalogNumbers": [
+      "92273",
+      "92253",
+      "92233",
+      "92275",
+      "92255",
+      "92235",
+      "92279",
+      "92259",
+      "92238",
+      "92276",
+      "92256",
+      "92236",
+      "92278",
+      "92258",
+      "92245"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody labelling kit",
+    "description": "Kits for labelling IgG antibodies with any of over 30 CF Dye colours in as little as 15 minutes with no purification step. Accommodate 5-100 µg of antibody and tolerate common buffer components including BSA and ascites fluid.",
+    "productUrl": "https://biotium.com/product/mix-n-stain-cf-dye-antibody-labeling-kit/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/10/PI-Mix-n-Stain-Antibody-Labeling-Kits.pdf",
+    "storage": "Store desiccated and protected from light; Mix-n-Stain storage buffer included",
+    "kitSize": "One labelling reaction per kit at 5-20 µg, 20-50 µg or 50-100 µg antibody scale; 3-reaction packs available for selected dyes",
+    "applications": [
+      "immunofluorescence microscopy",
+      "flow cytometry",
+      "direct antibody labelling"
+    ],
+    "keyParameters": {
+      "time": "15 min reaction, under 30 s hands-on",
+      "notes": "Listed catalog numbers are the 5-20 / 20-50 / 50-100 µg kits for CF488A (92273/92253/92233), CF568 (92275/92255/92235), CF647 (92279/92259/92238), CF594 (92276/92256/92236) and CF640R (92278/92258/92245). Over 30 CF Dye colours available."
+    },
+    "sourceUrl": "https://biotium.com/product/mix-n-stain-cf-dye-antibody-labeling-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the dye-vs-scale catalog table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "CF Dye Phalloidin Conjugates",
+    "catalogNumbers": [
+      "00042",
+      "00042-T",
+      "00044",
+      "00044-T",
+      "00045",
+      "00045-T",
+      "00041",
+      "00041-T",
+      "00050",
+      "00050-T",
+      "00034",
+      "00034-T",
+      "00049",
+      "00049-T",
+      "00027",
+      "00030",
+      "00033",
+      "00028"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "F-actin cytoskeleton stain",
+    "description": "Fluorescently labelled phalloidins that act as highly selective actin filament stains for fixed and permeabilised cells, binding F-actin with nanomolar affinity. Available in 17 CF Dye colours plus biotin and traditional fluorophores.",
+    "productUrl": "https://biotium.com/product/phalloidin-conjugate/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2016/12/PI-CF-Dye-Phalloidin.pdf",
+    "storage": "Store frozen and protected from light; store stained samples at 4 °C in mounting medium",
+    "kitSize": "50 U trial (-T suffix) or 300 U for CF Dye conjugates; 100-300 U for biotin and classic dyes",
+    "applications": [
+      "fluorescence microscopy",
+      "cytoskeleton visualisation",
+      "tissue staining",
+      "super-resolution (STORM) imaging"
+    ],
+    "keyParameters": {
+      "notes": "Examples: CF488A 00042 (Ex/Em 490/515), CF568 00044 (562/583), CF594 00045 (593/614), CF647 00041 (650/665), CF640R 00050 (642/662), CF405M 00034 (408/452), CF350 00049 (347/448); rhodamine 00027, fluorescein 00030, Texas Red 00033, biotin-XX 00028. Membrane-impermeant, for fixed/permeabilised cells only."
+    },
+    "sourceUrl": "https://biotium.com/product/phalloidin-conjugate/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the phalloidin conjugate catalog table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "CF Dye & Biotin SE Protein Labeling Kits",
+    "catalogNumbers": [
+      "92210",
+      "92211",
+      "92212",
+      "92228",
+      "92213",
+      "92208",
+      "92209",
+      "92214",
+      "92215",
+      "92216",
+      "92217",
+      "92225",
+      "92218",
+      "92219",
+      "92223",
+      "92220",
+      "92226",
+      "92221",
+      "92222",
+      "92224"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Protein and antibody labelling kit",
+    "description": "Kits for succinimidyl ester labelling of antibodies or other proteins with Biotium CF Dyes or biotin. Each kit supplies three 1 mg labelling reactions with lyophilised dye SE, anhydrous DMSO, bicarbonate reaction buffer, PBS, and 10K MWCO ultrafiltration, reaction and storage vials.",
+    "productUrl": "https://biotium.com/product/cf-dye-biotin-se-protein-labeling-kits/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2016/12/PI-CF-Dye-Biotin-Protein-Labeling-Kits.pdf",
+    "storage": "Store lyophilised dye protected from light and moisture",
+    "kitSize": "3 x 1 mg protein labelling reactions",
+    "applications": [
+      "antibody labelling",
+      "protein conjugation",
+      "fluorescence microscopy",
+      "flow cytometry",
+      "in vivo imaging"
+    ],
+    "keyParameters": {
+      "notes": "Dye assignments include CF350 92210, CF405S 92211, CF405M 92212, CF405L 92228, CF488A 92213, CF532 92208, CF543 92209, CF555 92214, CF568 92215, CF594 92216, CF633 92217, CF640R 92225, CF647 92218, CF660R 92219, CF660C 92223, CF680 92220, CF680R 92226, CF750 92221, CF770 92222, biotin 92224."
+    },
+    "sourceUrl": "https://biotium.com/product/cf-dye-biotin-se-protein-labeling-kits/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All twenty catalog numbers appear in the dye/catalog table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "Mix-n-Stain Maxi Antibody Labeling Kits, 1 mg Labeling",
+    "catalogNumbers": [
+      "92420",
+      "92421",
+      "92404",
+      "92454",
+      "92405",
+      "92406",
+      "92407",
+      "92408",
+      "92409",
+      "92410",
+      "92422",
+      "92423",
+      "92424",
+      "92411",
+      "92415",
+      "92419"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Antibody labelling kit",
+    "description": "Kits that conjugate 1 mg of IgG with Biotium CF Dyes or other dyes in about 30 minutes with no purification needed after labelling, giving an average of 4-6 dye molecules per antibody. Supplied with reaction buffer, lyophilised reactive dye and quenching buffer.",
+    "productUrl": "https://biotium.com/product/mix-n-stain-antibody-labeling-kits-1-mg-labeling/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2019/05/PI-Mix-n-Stain-Maxi-Antibody-Labeling-Kits.pdf",
+    "storage": "Protect from light",
+    "kitSize": "1 mg antibody labelling per kit",
+    "applications": [
+      "immunofluorescence microscopy",
+      "flow cytometry",
+      "in vivo imaging",
+      "multicolour staining"
+    ],
+    "keyParameters": {
+      "time": "About 30 min labelling, no purification step",
+      "notes": "Dye assignments: CF350 92420, CF405S 92421, CF405M 92404, CF405L 92454, CF488A 92405, CF555 92406, CF568 92407, CF594 92408, CF633 92409, CF647 92410, CF680 92422, CF750 92423, CF770 92424, fluorescein 92411, Cyanine 555 92415, Cyanine 647 92419. Listed on the vendor page as available by special order."
+    },
+    "sourceUrl": "https://biotium.com/product/mix-n-stain-antibody-labeling-kits-1-mg-labeling/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All sixteen catalog numbers appear in the dye/catalog table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "NucSpot Live Cell Nuclear Stains",
+    "catalogNumbers": [
+      "40081",
+      "40082"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Live-cell nuclear stain",
+    "description": "Cell membrane-permeant DNA dyes that specifically stain nuclei in live or fixed cells with excellent DNA specificity and no wash step, and with low toxicity for long-term live cell imaging. Supplied with verapamil to counter dye efflux.",
+    "productUrl": "https://biotium.com/product/nucspot-live-cell-nuclear-stains/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2017/03/PI-40081-1.pdf",
+    "storage": "2 to 8 °C, protect from light",
+    "kitSize": "Trial size or 1 kit",
+    "applications": [
+      "long-term live cell imaging (24-72 h)",
+      "no-wash nuclear staining",
+      "3D organoid imaging",
+      "super-resolution microscopy"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: NucSpot Live Dye 1000X in DMSO and verapamil 100 mM in DMSO",
+      "notes": "NucSpot Live 488 (40081) Ex/Em 503/518 nm; NucSpot Live 650 (40082) Ex/Em 655/681 nm. Also compatible with formaldehyde- or methanol-fixed cells."
+    },
+    "sourceUrl": "https://biotium.com/product/nucspot-live-cell-nuclear-stains/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 40081 and 40082 with spectra and kit contents present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "MitoView Mitochondrial Dyes",
+    "catalogNumbers": [
+      "70070",
+      "70070-T",
+      "70054",
+      "70054-T",
+      "70055",
+      "70055-T",
+      "70075",
+      "70075-50ug",
+      "70068",
+      "70068-T"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Mitochondrial stains",
+    "description": "Fluorogenic mitochondrial stains for live cells that rapidly accumulate in mitochondria and can be imaged without washing, available across blue, green, far-red and near-infrared channels.",
+    "productUrl": "https://biotium.com/product/mitoview-dyes/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2016/12/PI-MitoView-Dyes-2.pdf",
+    "storage": "-10 to -35 °C, protect from light",
+    "kitSize": "50 µg trial vial (-T) or 20 x 50 µg",
+    "applications": [
+      "no-wash live cell mitochondrial staining",
+      "flow cytometry",
+      "mitochondrial membrane potential measurement"
+    ],
+    "keyParameters": {
+      "notes": "MitoView 405 (70070) 398/440 nm; MitoView Green (70054) 490/523 nm; MitoView 633 (70055) 622/648 nm; MitoView 650 (70075) 644/670 nm; MitoView 720 (70068) 720/758 nm. MitoView 633 is membrane-potential dependent; MitoView Green is the fixable option."
+    },
+    "sourceUrl": "https://biotium.com/product/mitoview-dyes/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the product table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "CellBrite Steady Membrane Staining Kits",
+    "catalogNumbers": [
+      "30105",
+      "30105-T",
+      "30106",
+      "30106-T",
+      "30107",
+      "30107-T",
+      "30150",
+      "30150-T",
+      "30142",
+      "30142-T",
+      "30108",
+      "30108-T",
+      "30109",
+      "30109-T",
+      "30141",
+      "30141-T",
+      "30152",
+      "30152-T"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Plasma membrane stains",
+    "description": "Membrane staining kits that allow fluorescence imaging of the cell surface for up to several days in culture, supplied as a 1000X dye plus an optional 1000X Enhancer that masks intracellular signal. Nine colours from blue to near-infrared.",
+    "productUrl": "https://biotium.com/product/cellbrite-steady-membrane-staining-kits/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2020/02/PI-CellBrite-Steady.pdf",
+    "storage": "Store frozen, protect from light",
+    "kitSize": "100 labelings (trial, -T; 20 µL dye + 20 µL enhancer) or 500 labelings (100 µL each)",
+    "applications": [
+      "live cell surface imaging",
+      "3D culture and organoid staining",
+      "extracellular vesicle labelling",
+      "STORM imaging"
+    ],
+    "keyParameters": {
+      "notes": "CellBrite Steady 405 (30105) 406/428; 488 (30106) 505/529; 550 (30107) 562/579; 568 (30150) 569/588; 594 (30142) 580/615; 650 (30108) 656/676; 685 (30109) 686/708; 750 (30141) 755/789; 785 (30152) 788/815 nm. Steady 550, 650 and 685 are STORM compatible."
+    },
+    "sourceUrl": "https://biotium.com/product/cellbrite-steady-membrane-staining-kits/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers appear in the colour/size table on the fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "One-Step Blue Protein Gel Stain",
+    "catalogNumbers": [
+      "21003"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Protein gel stain",
+    "description": "Ready-to-use visible blue protein gel staining solution for SDS-PAGE that requires no fixation or washing steps. Non-toxic, aqueous-based and certified safe for drain disposal; proteins can be visualised as blue bands or by near-infrared fluorescence imaging.",
+    "productUrl": "https://biotium.com/product/one-step-blue-protein-gel-stain/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2015/10/PI-21003.pdf",
+    "storage": "4 °C",
+    "kitSize": "1 L (21003-1L)",
+    "applications": [
+      "SDS-PAGE protein staining",
+      "mass spectrometry-compatible staining",
+      "Edman sequencing"
+    ],
+    "keyParameters": {
+      "time": "5-60 min staining; full staining in about 1 h",
+      "notes": "Sensitivity approximately 10-20 ng protein per band; destaining optional; alternative to Coomassie Brilliant Blue."
+    },
+    "sourceUrl": "https://biotium.com/product/one-step-blue-protein-gel-stain/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 21003-1L present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "One-Step Lumitein Protein Gel Stain",
+    "catalogNumbers": [
+      "21004-1L",
+      "21004-4L"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Fluorescent protein gel stain",
+    "description": "Ready-to-use luminescent red fluorescent protein gel stain for SDS-PAGE requiring no fixation or wash steps. Aqueous-based with no methanol or acetic acid and certified non-toxic for drain disposal under CCR Title 22.",
+    "productUrl": "https://biotium.com/product/one-step-lumitein-protein-gel-stain/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2015/10/PI-21004.pdf",
+    "storage": "4 °C",
+    "kitSize": "1 L; 4 L",
+    "applications": [
+      "SDS-PAGE protein staining",
+      "mass spectrometry-compatible staining",
+      "Edman sequencing"
+    ],
+    "keyParameters": {
+      "time": "5-60 min single-step staining",
+      "notes": "Sensitivity approximately 1-10 ng protein per band; Ex/Em 280, 460 (broad)/610 nm; imaged on UV or blue-light transilluminators or laser gel scanners."
+    },
+    "sourceUrl": "https://biotium.com/product/one-step-lumitein-protein-gel-stain/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 21004-1L and 21004-4L present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "1 kb DNA Ladder, Ready-to-Load",
+    "catalogNumbers": [
+      "31084"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "DNA size ladder",
+    "description": "DNA ladder of 13 double-stranded fragments from 250 bp to 10 kb supplied pre-diluted in 1X loading buffer for direct gel loading. The 1 kb and 3 kb bands are of increased intensity for orientation.",
+    "productUrl": "https://biotium.com/product/1-kb-dna-ladder-ready-to-load/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2024/07/PI-31084-31085.pdf",
+    "storage": "-10 to -35 °C",
+    "kitSize": "150 applications (1.5 mL)",
+    "applications": [
+      "agarose gel electrophoresis",
+      "linear dsDNA fragment sizing"
+    ],
+    "keyParameters": {
+      "input": "20 ng/µL",
+      "notes": "13 fragments, 250 bp-10 kb; separate vial of 6X loading buffer included; blue tracking dyes migrate at ~1.5 kb and ~200 bp."
+    },
+    "sourceUrl": "https://biotium.com/product/1-kb-dna-ladder-ready-to-load/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 31084 with 150-application size present on fetched Biotium product page."
+  },
+  {
+    "vendor": "Biotium",
+    "vendorShort": "Biotium",
+    "productName": "100 bp DNA Ladder, Ready-to-Load",
+    "catalogNumbers": [
+      "31085"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "DNA size ladder",
+    "description": "DNA ladder of 11 double-stranded fragments from 100 bp to 1500 bp supplied pre-diluted in 1X loading buffer so it is ready to load. The 500 bp band is of increased intensity for orientation.",
+    "productUrl": "https://biotium.com/product/100-bp-dna-ladder-ready-to-load/",
+    "protocolUrl": "https://biotium.com/wp-content/uploads/2024/07/PI-31084-31085.pdf",
+    "storage": "-10 to -35 °C",
+    "kitSize": "150 applications (1.5 mL)",
+    "applications": [
+      "agarose gel electrophoresis",
+      "linear dsDNA fragment sizing"
+    ],
+    "keyParameters": {
+      "input": "20 ng/µL",
+      "notes": "11 fragments, 100-1500 bp; separate vial of 6X loading buffer included."
+    },
+    "sourceUrl": "https://biotium.com/product/100-bp-dna-ladder-ready-to-load/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 31085 with 150-application size and band range present on fetched Biotium product page."
+  }
+]

@@ -242,7 +242,7 @@ export async function generateControlledWordDocument(sop: SopDocument, opts: Con
   if (!refs.length) children.push(para('None.'));
   for (const r of refs) {
     const status = (r as { verificationStatus?: string }).verificationStatus;
-    const badge = status === 'VERIFIED' ? ' [verified in registry]' : status === 'NOT_FOUND' ? ' [NOT FOUND — unverifiable]' : status === 'MISMATCH' ? ' [DOI MISMATCH — check]' : ' [not verified]';
+    const badge = status === 'VERIFIED' ? ' [verified in registry]' : status === 'RETRACTED' ? ' [RETRACTED — paper withdrawn, do not rely on this]' : status === 'NOT_FOUND' ? ' [NOT FOUND — unverifiable]' : status === 'MISMATCH' ? ' [DOI MISMATCH — check]' : ' [not verified]';
     children.push(new Paragraph({
       children: [text(r.citation), ...(r.doiOrUrl ? [text(` ${r.doiOrUrl}`, { color: '1D4ED8' })] : []), text(badge, { color: status === 'VERIFIED' ? '166534' : 'B91C1C', size: 16 })],
       bullet: { level: 0 },

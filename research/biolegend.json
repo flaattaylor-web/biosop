@@ -1,0 +1,286 @@
+[
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie NIR Fixable Viability Kit",
+    "catalogNumbers": [
+      "423105",
+      "423106"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that is non-permeant to live cells but permeant to cells with compromised membranes; emits in the near-infrared for multicolour flow cytometry.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-nir-fixable-viability-kit-8657",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month",
+    "kitSize": "100 tests (423105, 1 vial) / 500 tests (423106, 5 vials)",
+    "applications": [
+      "flow cytometry viability staining"
+    ],
+    "keyParameters": {
+      "notes": "Red laser (633 nm) excitation; recommended dilution 1:100–1:1000 for 1–10 million cells"
+    },
+    "sourceUrl": "https://www.biolegend.com/en-us/products/zombie-nir-fixable-viability-kit-8657",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423105 and 423106 appear on the fetched BioLegend product page."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie Aqua Fixable Viability Kit",
+    "catalogNumbers": [
+      "423101",
+      "423102"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that is non-permeant to live cells but permeant to cells with compromised membranes; violet-excited with emission maximum at 516 nm.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-aqua-fixable-viability-kit-8444",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month",
+    "kitSize": "100 tests (423101) / 500 tests (423102)",
+    "applications": [
+      "flow cytometry",
+      "immunofluorescence cytochemistry"
+    ],
+    "keyParameters": {
+      "notes": "Violet laser (405 nm) excitation, emission max 516 nm; 1:100–1:1000 for flow cytometry"
+    },
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/zombie-aqua-fixable-viability-kit-8444+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423101 and 423102 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching)."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie Green Fixable Viability Kit",
+    "catalogNumbers": [
+      "423111",
+      "423112"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that cannot penetrate intact membranes but enters cells with compromised membranes; gives green fluorescence suitable for multicolour detection.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-green-fixable-viability-kit-9340",
+    "kitSize": "100 tests (423111) / 500 tests (423112)",
+    "applications": [
+      "flow cytometry",
+      "immunocytochemistry",
+      "intracellular flow cytometry"
+    ],
+    "keyParameters": {
+      "notes": "Blue laser (488 nm) excitation, emission max 515 nm"
+    },
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/zombie-green-fixable-viability-kit-9340+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423111 and 423112 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching).",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month"
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie Violet Fixable Viability Kit",
+    "catalogNumbers": [
+      "423113",
+      "423114"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that is non-permeant to live cells but permeant to cells with compromised membranes; violet-excited (405 nm) with emission maximum at 423 nm.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-violet-fixable-viability-kit-9341",
+    "kitSize": "100 tests (423113) / 500 tests (423114)",
+    "applications": [
+      "flow cytometry",
+      "immunocytochemistry",
+      "intracellular flow cytometry"
+    ],
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/zombie-violet-fixable-viability-kit-9341+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423113 and 423114 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching).",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month",
+    "keyParameters": {
+      "notes": "Violet laser (405 nm) excitation, emission max 423 nm; 1:100–1:1000 for flow cytometry"
+    }
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie UV Fixable Viability Kit",
+    "catalogNumbers": [
+      "423107",
+      "423108"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that is non-permeant to live cells but permeant to cells with compromised membranes; UV-excited with emission maximum at 459 nm.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-uv-fixable-viability-kit-9336",
+    "kitSize": "100 tests (423107) / 500 tests (423108)",
+    "applications": [
+      "flow cytometry viability staining"
+    ],
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/zombie-uv-fixable-viability-kit-9336+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423107 and 423108 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching).",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month",
+    "keyParameters": {
+      "notes": "UV laser (355 nm) excitation, emission max 459 nm; 1:100–1:1000 for 1–10 million cells"
+    }
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "LEGENDplex Human Inflammation Panel 1 (13-plex) with V-bottom Plate",
+    "catalogNumbers": [
+      "740809"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Bead-based multiplex flow cytometry immunoassay",
+    "description": "Bead-based multiplex assay using fluorescence-encoded beads for simultaneous quantification of 13 human inflammatory cytokines and chemokines on standard flow cytometers.",
+    "productUrl": "https://www.biolegend.com/en-us/products/legendplex-human-inflammation-panel-1-13-plex-with-v-bottom-plate-16929",
+    "kitSize": "100 tests",
+    "applications": [
+      "serum",
+      "cell culture supernatant"
+    ],
+    "keyParameters": {
+      "notes": "Analytes: IL-1b, IFN-a2, IFN-g, TNF-a, CCL2 (MCP-1), IL-6, CXCL8 (IL-8), IL-10, IL-12p70, IL-17A, IL-18, IL-23, IL-33"
+    },
+    "sourceUrl": "https://www.biolegend.com/en-gb/products/legendplex-human-inflammation-panel-1-13-plex-with-v-bottom-plate-16929",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 740809 appears on the fetched BioLegend product page."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "LEGENDplex Human Essential Immune Response Panel (13-plex)",
+    "catalogNumbers": [
+      "740929",
+      "740930"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Bead-based multiplex flow cytometry immunoassay",
+    "description": "Bead-based multiplex assay using fluorescence-encoded beads for simultaneous measurement of 13 core human immune response analytes in cell culture supernatant and serum.",
+    "productUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/human/human-essential-immune-response-panel",
+    "kitSize": "Kit with filter plate (740929) or V-bottom plate (740930)",
+    "applications": [
+      "cell culture supernatant",
+      "serum"
+    ],
+    "keyParameters": {
+      "notes": "Analytes: IL-4, IL-2, CXCL10 (IP-10), IL-1b, TNF-a, CCL2 (MCP-1), IL-17A, IL-6, IL-10, IFN-g, IL-12p70, free active TGF-b1, CXCL8 (IL-8)"
+    },
+    "sourceUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/human/human-essential-immune-response-panel",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 740929 (filter plate) and 740930 (V-bottom plate) appear on the fetched BioLegend LEGENDplex panel page."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "LEGENDplex Human Proinflammatory Chemokine Panel 1 (13-plex)",
+    "catalogNumbers": [
+      "740984",
+      "740985",
+      "741080",
+      "741081"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Bead-based multiplex flow cytometry immunoassay",
+    "description": "Bead-based multiplex assay using fluorescence-encoded beads for simultaneous measurement of 13 human chemokines on standard flow cytometers.",
+    "productUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/human/human-proinflammatory-chemokine-panel-1",
+    "kitSize": "13-plex filter plate (740984) / V-bottom plate (740985); 12-plex filter (741080) / V-bottom (741081)",
+    "applications": [
+      "cell culture supernatant",
+      "serum and plasma"
+    ],
+    "keyParameters": {
+      "notes": "Analytes: CXCL8, CXCL10, CCL11, CCL17, CCL2, CCL5, CCL3, CXCL9, CXCL5, CCL20, CXCL1, CXCL11, CCL4. RANTES requires separate dilution in serum/plasma"
+    },
+    "sourceUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/human/human-proinflammatory-chemokine-panel-1",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 740984/740985 (13-plex, filter and V-bottom) and 741080/741081 (12-plex) appear on the fetched BioLegend LEGENDplex panel page."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "LEGENDplex Mouse Inflammation Panel (13-plex)",
+    "catalogNumbers": [
+      "740150",
+      "740446"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Bead-based multiplex flow cytometry immunoassay",
+    "description": "Bead-based multiplex assay using fluorescence-encoded beads for simultaneous detection of 13 mouse inflammatory cytokines produced mainly by innate immune cells.",
+    "productUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/mouse/mouse-inflammation-panel",
+    "kitSize": "Kit with filter plate (740150) or V-bottom plate (740446)",
+    "applications": [
+      "mouse serum",
+      "cell culture supernatant"
+    ],
+    "keyParameters": {
+      "notes": "Analytes: IL-23, IL-1a, IFN-g, TNF-a, CCL2, IL-12p70, IL-1b, IL-10, IL-6, IL-27, IL-17A, IFN-b, GM-CSF"
+    },
+    "sourceUrl": "https://www.biolegend.com/en-us/immunoassays/legendplex/products/mouse/mouse-inflammation-panel",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 740150 (filter plate) and 740446 (V-bottom plate) appear on the fetched BioLegend LEGENDplex panel page."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Zombie Red Fixable Viability Kit",
+    "catalogNumbers": [
+      "423109",
+      "423110"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Amine-reactive fixable viability dye",
+    "description": "Amine-reactive fluorescent dye that is non-permeant to live cells but permeant to cells with compromised membranes; gives red fluorescence with emission maximum at 624 nm.",
+    "productUrl": "https://www.biolegend.com/en-us/products/zombie-red-fixable-viability-kit-9338",
+    "storage": "-20 °C on receipt; after reconstitution in DMSO store at -20 °C, desiccated and protected from light, for no more than one month",
+    "kitSize": "100 tests (423109) / 500 tests (423110)",
+    "applications": [
+      "flow cytometry",
+      "immunocytochemistry",
+      "intracellular flow cytometry"
+    ],
+    "keyParameters": {
+      "notes": "Excited by blue (488 nm), green (532 nm) or yellow-green (561 nm) lasers; emission max 624 nm; 1:100–1:1000 for flow cytometry"
+    },
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/zombie-red-fixable-viability-kit-9338+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 423109 and 423110 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching)."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Compensation Beads",
+    "catalogNumbers": [
+      "424601",
+      "424602"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Antibody-capture compensation control beads",
+    "description": "Kit of positive (antibody-binding) and negative beads that bind fluorescently tagged mouse, rat, rabbit, donkey, hamster and human antibodies, used as single-colour compensation controls for multicolour flow cytometry.",
+    "productUrl": "https://www.biolegend.com/en-us/products/compensation-beads-22230",
+    "storage": "2–8 °C on receipt",
+    "kitSize": "25 tests (424601) / 100 tests (424602)",
+    "applications": [
+      "single-colour compensation controls",
+      "multicolour flow cytometry setup"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with dyes excited by blue, green, yellow-green, violet, ultraviolet and red lasers; research use only"
+    },
+    "sourceUrl": "https://cytek-web.s3.amazonaws.com/cytekbio.com/documentation-center/TDS/biolegend/compensation-beads-22230+(TDS).pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 424601 and 424602 appear on the fetched BioLegend technical data sheet PDF for this product (mirrored copy; biolegend.com returned HTTP 403 to automated fetching)."
+  }
+]

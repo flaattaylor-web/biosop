@@ -1,0 +1,996 @@
+[
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Plasmid, Mini kit for plasmid DNA",
+    "catalogNumbers": [
+      "740588.10",
+      "740588.50",
+      "740588.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid DNA miniprep (silica spin column)",
+    "description": "Spin column kit for rapid mini preparation of high-purity plasmid DNA from E. coli using silica membrane technology, with centrifugation or vacuum handling.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-Mini-kit-for-plasmid-DNA-740588.50",
+    "protocolUrl": "https://www.mn-net.com/media/pdf/45/51/02/Instruction-NucleoSpin-Plasmid.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing",
+      "transfection of cells"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL culture (high copy), 6-10 mL (low copy)",
+      "time": "20 min / 6 preps",
+      "notes": "Elution volume 50 uL; typical yield 25-45 ug; binding capacity 60 ug; A260/A280 1.8-1.85"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-Mini-kit-for-plasmid-DNA-740588.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF numbers 740588.10 / 740588.50 / 740588.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Plasmid Transfection-grade, Mini kit for ultrapure plasmid DNA",
+    "catalogNumbers": [
+      "740490.10",
+      "740490.50",
+      "740490.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Transfection-grade plasmid miniprep with endotoxin reduction",
+    "description": "Silica membrane spin column kit with an endotoxin reduction step, giving ultrapure plasmid DNA at endotoxin levels of <=50 EU/ug DNA for transfection of non-sensitive cells.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-Transfection-grade-Mini-kit-for-ultrapure-plasmid-DNA-740490.50",
+    "protocolUrl": "https://www.mn-net.com/media/7f/87/5c/1786507314/Instruction-NucleoSpin-Plasmid-Transfection-grade_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "transfection",
+      "cell injection",
+      "cloning"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL E. coli culture",
+      "time": "20 min / 6 preps",
+      "notes": "Elution 30-50 uL; yield 15-30 ug; binding capacity 35 ug; endotoxin <=50 EU/ug DNA"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-Transfection-grade-Mini-kit-for-ultrapure-plasmid-DNA-740490.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740490.10 / 740490.50 / 740490.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoBond Xtra Midi kit for transfection-grade plasmid DNA",
+    "catalogNumbers": [
+      "740410.10",
+      "740410.50",
+      "740410.100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid midiprep (anion exchange)",
+    "description": "Anion exchange column kit using a second generation anion exchanger for fast purification of transfection-grade plasmid DNA at midi scale. Compatible with manual and automated workflows.",
+    "productUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Midi-kit-for-transfection-grade-plasmid-DNA-740410.50",
+    "protocolUrl": "https://www.mn-net.com/media/72/90/89/1786507313/Instruction-NucleoBond-Xtra_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 100 preps",
+    "applications": [
+      "transfection",
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<200 mL culture (high copy); <400 mL (low copy)",
+      "time": "~70 min/prep (~30 min with NucleoBond Finalizer)",
+      "notes": "Typical yield 500 ug; binding capacity 1000 ug; endotoxin 1-10 EU/ug DNA; A260/A280 1.8-1.95"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Midi-kit-for-transfection-grade-plasmid-DNA-740410.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740410.10 / 740410.50 / 740410.100 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoBond Xtra Maxi kit for transfection-grade plasmid DNA",
+    "catalogNumbers": [
+      "740414.10",
+      "740414.50",
+      "740414.100"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plasmid maxiprep (anion exchange)",
+    "description": "Second generation anion exchange column kit for fast purification of high-purity, high-integrity plasmid DNA of transfection-grade quality at maxi scale.",
+    "productUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Maxi-kit-for-transfection-grade-plasmid-DNA-740414.50",
+    "protocolUrl": "https://www.mn-net.com/media/72/90/89/1786507313/Instruction-NucleoBond-Xtra_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 100 preps",
+    "applications": [
+      "transfection of cells",
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<600 mL culture (high copy); <1200 mL (low copy)",
+      "time": "75 min/prep",
+      "notes": "Typical yield 1000 ug; binding capacity 3000 ug; endotoxin 1-10 EU/ug DNA; A260/A280 1.8-1.95"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Maxi-kit-for-transfection-grade-plasmid-DNA-740414.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740414.10 / 740414.50 / 740414.100 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoBond Xtra Midi EF, Midi kit for endotoxin-free plasmid DNA",
+    "catalogNumbers": [
+      "740420.10",
+      "740420.50"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Endotoxin-free plasmid midiprep (anion exchange)",
+    "description": "Anion-exchange column kit producing endotoxin-free, transfection-grade plasmid DNA at midi scale for sensitive cells and gene therapy applications.",
+    "productUrl": "https://www.mn-net.com/us/nucleobond-xtra-midi-ef-midi-kit-for-endotoxin-free-plasmid-dna-740420.50",
+    "protocolUrl": "https://www.mn-net.com/media/54/9e/ef/1786507313/Instruction-NucleoBond-Xtra-EF_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 preps",
+    "applications": [
+      "transfection of cells",
+      "gene therapy",
+      "cloning",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<200 mL culture (high copy); <400 mL (low copy)",
+      "time": "85 min/prep",
+      "notes": "Typical yield 500 ug; binding capacity 1000 ug; endotoxin <=0.05 EU/ug DNA"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/nucleobond-xtra-midi-ef-midi-kit-for-endotoxin-free-plasmid-dna-740420.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740420.10 and 740420.50 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoBond Xtra Maxi EF, Maxi kit for endotoxin-free plasmid DNA",
+    "catalogNumbers": [
+      "740424.10",
+      "740424.50"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Endotoxin-free plasmid maxiprep (anion exchange)",
+    "description": "Anion-exchange column kit for maxi-scale preparation of plasmid DNA with very low endotoxin content, suitable for transfection of sensitive cell lines and gene therapy work.",
+    "productUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Maxi-EF-Maxi-kit-for-endotoxin-free-plasmid-DNA-740424.50",
+    "protocolUrl": "https://www.mn-net.com/media/54/9e/ef/1786507313/Instruction-NucleoBond-Xtra-EF_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 preps",
+    "applications": [
+      "transfection of cells",
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<600 mL culture (high copy); <1200 mL (low copy)",
+      "time": "90 min/prep",
+      "notes": "Typical yield 1000 ug; binding capacity 3000 ug; endotoxin <=0.05 EU/ug DNA"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoBond-Xtra-Maxi-EF-Maxi-kit-for-endotoxin-free-plasmid-DNA-740424.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740424.10 and 740424.50 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Gel and PCR Clean-up",
+    "catalogNumbers": [
+      "740609.50"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Gel extraction and PCR clean-up",
+    "description": "Dual-purpose silica membrane kit for extracting DNA fragments from agarose gels and for purifying PCR products directly from reaction mixtures.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Gel-and-PCR-Clean-up-Columns-for-gel-extraction-and-PCR-clean-up-740609.50S",
+    "protocolUrl": "https://www.mn-net.com/media/e1/f2/af/1786510914/LF-NucleoSpin-Gel-and-PCR-Clean-up_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "50 preps (columns-only formats: 740609.50S, 740609.250S)",
+    "applications": [
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<400 uL PCR reaction or agarose gel slice",
+      "time": "10 min / 6 preps",
+      "notes": "Elution 15-30 uL; typical recovery 70-95%; binding capacity 25 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Gel-and-PCR-Clean-up-Columns-for-gel-extraction-and-PCR-clean-up-740609.50S",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740609.50 (Mini kit) plus columns-only 740609.50S and 740609.250S present on the fetched page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin RNA, Mini kit for RNA purification",
+    "catalogNumbers": [
+      "740955.10",
+      "740955.50",
+      "740955.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA miniprep with on-column rDNase",
+    "description": "Silica-membrane spin column kit that isolates high-purity, high-integrity total RNA from cultured cells, tissue, bacteria and yeast. rDNase is supplied for on-column DNA digestion.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Mini-kit-for-RNA-purification-740955.50",
+    "protocolUrl": "https://www.mn-net.com/media/41/c0/a6/1784192253/Instruction-NucleoSpin-RNA_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "RNA-Seq",
+      "RT-PCR"
+    ],
+    "keyParameters": {
+      "input": "<5 x 10^6 cultured cells; <30 mg tissue; <10^9 bacterial cells; <10^8 yeast cells",
+      "time": "35 min / 6 preps",
+      "notes": "Elution 30-120 uL; yield ~14 ug from 10^6 HeLa cells; binding capacity 200 ug; RIN >9; A260/A280 1.9-2.1"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Mini-kit-for-RNA-purification-740955.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740955.50 and the 10 / 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin RNA Plus, Mini kit for RNA purification with DNA removal column",
+    "catalogNumbers": [
+      "740984.10",
+      "740984.50",
+      "740984.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA miniprep with gDNA removal column",
+    "description": "Spin column kit for high-purity, high-integrity RNA from a wide range of sample materials. A dedicated gDNA Removal Column eliminates genomic DNA without rDNase digestion.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Plus-Mini-kit-for-RNA-purification-with-DNA-removal-column-740984.50",
+    "protocolUrl": "https://www.mn-net.com/media/b7/a4/7d/1786518116/Instruction-NucleoSpin-RNA-Plus_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "Northern blotting",
+      "RT-PCR",
+      "RNA-Seq"
+    ],
+    "keyParameters": {
+      "input": "<1 x 10^7 cultured cells; <30 mg tissue; <10^9 bacterial cells; <100 mg plant material",
+      "time": "20 min / 6 preps",
+      "notes": "Elution 30-120 uL; yield 40-100 ug; binding capacity 200 ug; RIN >9"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Plus-Mini-kit-for-RNA-purification-with-DNA-removal-column-740984.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740984.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin RNA/Protein, Mini kit for RNA and protein purification",
+    "catalogNumbers": [
+      "740933.10",
+      "740933.50",
+      "740933.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Parallel RNA and protein purification",
+    "description": "Silica membrane spin column kit for parallel isolation of RNA and total protein from one undivided sample, avoiding the need to split samples between separate workflows.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Protein-Mini-kit-for-RNA-and-protein-purification-740933.50",
+    "protocolUrl": "https://www.mn-net.com/media/fc/33/60/1786345424/Instruction-NucleoSpin-RNA-Protein_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "qRT-PCR",
+      "RNA-Seq",
+      "Northern blotting",
+      "Western blotting",
+      "SDS-PAGE"
+    ],
+    "keyParameters": {
+      "input": "<5 x 10^6 cultured cells; <30 mg human/animal tissue; <100 mg plant tissue",
+      "time": "30 min/6 preps (RNA) plus 35 min/6 preps (protein)",
+      "notes": "Elution RNA 40-120 uL, protein 10-100 uL; yield <70 ug RNA and <1200 ug protein"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Protein-Mini-kit-for-RNA-and-protein-purification-740933.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740933.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Tissue, Mini kit for DNA from cells and tissue",
+    "catalogNumbers": [
+      "740952.10",
+      "740952.50",
+      "740952.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA miniprep from tissue and cells",
+    "description": "Silica-membrane spin column kit for genomic DNA from human and animal tissue and cultured cells. Proteinase K is included and multiple support protocols are provided.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Tissue-Mini-kit-for-DNA-from-cells-and-tissue-740952.50",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "multiplex PCR",
+      "next generation sequencing",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<25 mg tissue or 10^2-10^7 cultured cells",
+      "time": "20 min/prep excluding lysis",
+      "notes": "Elution 60-100 uL; yield 20-35 ug; binding capacity 60 ug; fragment size 200 bp to ~50 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Tissue-Mini-kit-for-DNA-from-cells-and-tissue-740952.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740952.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Blood, Mini kit for DNA from blood",
+    "catalogNumbers": [
+      "740951.10",
+      "740951.50",
+      "740951.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic DNA from whole blood and body fluids",
+    "description": "Spin column kit for isolation of DNA from whole blood stabilized with EDTA, citrate or heparin, and from serum, plasma and other body fluids. Proteinase K is supplied for lysis.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Blood-Mini-kit-for-DNA-from-blood-740951.50",
+    "protocolUrl": "https://www.mn-net.com/media/a8/c3/0b/1783900701/Instruction-NucleoSpin-Blood-L-XL-QuickPure_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR",
+      "next generation sequencing",
+      "Southern blotting",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<5 x 10^6 cells",
+      "time": "30 min/prep",
+      "notes": "Elution 60-200 uL; yield 4-6 ug; binding capacity 60 ug; fragment size 200 bp to ~50 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Blood-Mini-kit-for-DNA-from-blood-740951.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF numbers 740951.10 / 740951.50 / 740951.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin DNA Stool, Mini kit for DNA from stool",
+    "catalogNumbers": [
+      "740472.10",
+      "740472.50",
+      "740472.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Genomic and microbiome DNA from stool",
+    "description": "Silica membrane spin kit with bead tubes for mechanical lysis, designed to isolate DNA from stool samples including inhibitor-rich material.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-DNA-Stool-Mini-kit-for-DNA-from-stool-740472.50",
+    "protocolUrl": "https://www.mn-net.com/media/09/65/7a/1786514528/Instruction-NucleoSpin-DNA-Stool_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR",
+      "real-time PCR",
+      "microarrays",
+      "Southern blotting"
+    ],
+    "keyParameters": {
+      "input": "180-220 mg stool",
+      "time": "60 min / 10 preps",
+      "notes": "Elution 30-100 uL; fragment size 200 bp to ~50 kbp; A260/A280 1.7-1.9; bead tubes included"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-DNA-Stool-Mini-kit-for-DNA-from-stool-740472.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740472.10 / 740472.50 / 740472.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Microbial DNA, Mini kit for DNA from microorganisms",
+    "catalogNumbers": [
+      "740235.10",
+      "740235.50",
+      "740235.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Microbial genomic DNA with bead-beating lysis",
+    "description": "Silica membrane kit supplied with MN Bead Tubes Type B for mechanical lysis, isolating total DNA from Gram-positive and Gram-negative bacteria, yeast and fungi.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Microbial-DNA-Mini-kit-for-DNA-from-microorganisms-740235.50",
+    "protocolUrl": "https://www.mn-net.com/media/b7/82/30/1786345421/Instruction-NucleoSpin-Microbial-DNA_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "next generation sequencing",
+      "PCR",
+      "real-time PCR",
+      "Southern blotting"
+    ],
+    "keyParameters": {
+      "input": "<40 mg wet weight",
+      "time": "35 min/prep",
+      "notes": "Elution 100-200 uL; yield 5-25 ug from 30 mg wet weight; binding capacity 60 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Microbial-DNA-Mini-kit-for-DNA-from-microorganisms-740235.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740235.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Plant II, Mini kit for DNA from plants",
+    "catalogNumbers": [
+      "740770.10",
+      "740770.50",
+      "740770.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Plant genomic DNA miniprep",
+    "description": "Spin column kit for genomic DNA from a wide range of plant species, supplied with two alternative lysis buffers and NucleoSpin Plant Filters to handle different plant materials.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Plant-II-Mini-kit-for-DNA-from-plants-740770.50",
+    "protocolUrl": "https://www.mn-net.com/media/56/bf/90/1786514528/Instruction-NucleoSpin-Plant-II_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR",
+      "Southern blotting",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<100 mg wet weight or <20 mg dry weight",
+      "time": "30 min/prep",
+      "notes": "Elution 50-100 uL; yield 1-30 ug from 100 mg wet weight; binding capacity 50 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Plant-II-Mini-kit-for-DNA-from-plants-740770.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740770.10 / 740770.50 / 740770.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Food, Mini kit for DNA from food",
+    "catalogNumbers": [
+      "740945.10",
+      "740945.50",
+      "740945.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "DNA from food and feed samples",
+    "description": "Silica membrane spin kit for isolation of DNA from processed and unprocessed food and feed, robust against strongly acidic or alkaline and contaminant-rich samples.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Food-Mini-kit-for-DNA-from-food-740945.50",
+    "protocolUrl": "https://www.mn-net.com/media/78/d2/01/1786514529/Instruction-NucleoSpin-Food_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "real-time PCR",
+      "GMO testing",
+      "Southern blotting",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<200 mg food or feed",
+      "time": "30 min / 6 preps",
+      "notes": "Elution 100 uL; yield 0.1-10 ug from 200 mg; binding capacity 30 ug; fragment size 300 bp to ~50 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Food-Mini-kit-for-DNA-from-food-740945.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740945.10 / 740945.50 / 740945.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Virus, Mini kit for viral RNA/DNA purification",
+    "catalogNumbers": [
+      "740983.10",
+      "740983.50",
+      "740983.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Viral RNA and DNA from cell-free fluids",
+    "description": "Silica membrane spin column kit for parallel isolation of viral RNA and DNA from cell-free biological fluids such as serum and plasma.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Virus-Mini-kit-for-viral-RNA-DNA-purification-740983.50",
+    "protocolUrl": "https://www.mn-net.com/media/76/ed/dc/1785859318/Instruction-NucleoSpin-Virus_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR",
+      "RT-PCR",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<200 uL sample (up to 400 uL with two loading steps)",
+      "time": "50 min / 6 preps",
+      "notes": "Elution 30 uL; binding capacity 25 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Virus-Mini-kit-for-viral-RNA-DNA-purification-740983.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740983.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin RNA Virus, Mini kit for viral RNA from cell-free fluids",
+    "catalogNumbers": [
+      "740956.10",
+      "740956.50",
+      "740956.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Viral RNA/DNA from cell-free fluids with carrier RNA",
+    "description": "Spin column kit for isolating viral RNA and DNA from cell-free biological fluids, serum and plasma. Carrier RNA is included to maximize recovery from low-titre samples.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Virus-Mini-kit-for-viral-RNA-from-cell-free-fluids-740956.50",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "RT-PCR",
+      "enzymatic reactions"
+    ],
+    "keyParameters": {
+      "input": "<150 uL sample",
+      "time": "30 min / 4-6 preps",
+      "notes": "Elution 50 uL; typical binding capacity 40 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-Virus-Mini-kit-for-viral-RNA-from-cell-free-fluids-740956.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740956.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoMag Pathogen kit for viral/bacterial DNA and viral RNA from clinical samples",
+    "catalogNumbers": [
+      "744210.4"
+    ],
+    "category": "Diagnostics & Pathogen Detection",
+    "subcategory": "Magnetic bead pathogen nucleic acid extraction",
+    "description": "Magnetic bead based kit for isolation of viral RNA/DNA and bacterial DNA from virtually all clinical sample types, supporting manual processing and open automation platforms.",
+    "productUrl": "https://www.mn-net.com/us/NucleoMag-Pathogen-kit-for-viral-bacterial-DNA-and-viral-RNA-from-clinical-spl.-744210.4",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps (also available as 96 and 9600 preps)",
+    "applications": [
+      "PCR",
+      "RT-PCR",
+      "pathogen detection",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "<200 uL whole blood, serum, plasma, swab solution or feces; <25 mg tissue",
+      "time": "40-120 min / 96 preps",
+      "notes": "Elution 50-100 uL; validated on Eppendorf epMotion, Tecan Freedom EVO, Hamilton NIMBUS Presto and Genomic STARlet"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoMag-Pathogen-kit-for-viral-bacterial-DNA-and-viral-RNA-from-clinical-spl.-744210.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 744210.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin 96 Tissue Core Kit, 96-well kit for DNA from cells and tissue",
+    "catalogNumbers": [
+      "740454.4"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "96-well genomic DNA purification",
+    "description": "96-well silica membrane kit for purification of genomic DNA from a broad range of samples in plate format, supplied as NucleoSpin Tissue Binding Strips with buffers and Proteinase K.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-96-Tissue-Core-Kit-96-well-kit-for-DNA-from-cells-and-tissue-740454.4",
+    "protocolUrl": "https://www.mn-net.com/media/ca/98/1b/1786514527/Instruction-NucleoSpin-96-Tissue_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps (4 x 96)",
+    "applications": [
+      "PCR",
+      "Southern blotting",
+      "enzymatic reactions",
+      "high-throughput genotyping"
+    ],
+    "keyParameters": {
+      "input": "<20 mg human/animal tissue or <10^6 cells",
+      "time": "60 min/plate excluding lysis",
+      "notes": "Elution 100-200 uL; yield 15-25 ug; binding capacity 40 ug; centrifugation or vacuum handling"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-96-Tissue-Core-Kit-96-well-kit-for-DNA-from-cells-and-tissue-740454.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740454.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Plasmid EasyPure, Mini kit for easy plasmid DNA purification",
+    "catalogNumbers": [
+      "740727.10",
+      "740727.50",
+      "740727.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Fast plasmid miniprep with one-step wash",
+    "description": "Spin column kit for rapid isolation of high copy plasmid DNA from E. coli, with a buffer system that allows a single washing step and completes isolation in under 10 minutes of hands-on work.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-EasyPure-Mini-kit-for-easy-plasmid-DNA-purification-740727.50",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing",
+      "transformation"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL E. coli culture",
+      "time": "14 min / 6 preps",
+      "notes": "Elution 50 uL; yield 15-30 ug; binding capacity 35 ug; for high copy plasmids <25 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Plasmid-EasyPure-Mini-kit-for-easy-plasmid-DNA-purification-740727.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740727.10 / 740727.50 / 740727.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin 96 Plasmid, 96-well kit for plasmid DNA",
+    "catalogNumbers": [
+      "740625.4"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "96-well high-throughput plasmid purification",
+    "description": "Silica membrane kit in 96-well plate format for high-throughput plasmid DNA purification, compatible with automated liquid handling platforms.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-96-Plasmid-96-well-kit-for-plasmid-DNA-740625.4",
+    "protocolUrl": "https://www.mn-net.com/media/6b/16/22/1786514528/Instruction-NucleoSpin-96-Plasmid_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps (also available as 96 and 2304 preps)",
+    "applications": [
+      "cloning",
+      "PCR",
+      "restriction analysis",
+      "sequencing",
+      "transformation"
+    ],
+    "keyParameters": {
+      "input": "1-5 mL E. coli culture",
+      "time": "50 min/plate",
+      "notes": "Elution 75-150 uL; yield 4-30 ug; application notes for Eppendorf, Tecan, Hamilton, Integra and Flow Robotics"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-96-Plasmid-96-well-kit-for-plasmid-DNA-740625.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740625.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Gel and PCR Clean-up XS",
+    "catalogNumbers": [
+      "740611.10",
+      "740611.50",
+      "740611.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Micro-scale gel extraction and PCR clean-up",
+    "description": "XS format silica membrane kit combining PCR clean-up and gel extraction for small samples, allowing concentration of DNA into very small elution volumes.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Gel-and-PCR-Clean-up-XS-740611.50",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR clean-up",
+      "gel extraction",
+      "sample concentration",
+      "cloning",
+      "sequencing"
+    ],
+    "keyParameters": {
+      "input": "<200 uL PCR mixture or <200 mg agarose gel",
+      "time": "15 min / 6 preps",
+      "notes": "Elution 6-12 uL; typical recovery 75-95%; binding capacity 5 ug; fragment size <25 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Gel-and-PCR-Clean-up-XS-740611.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740611.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin RNA XS, Micro kit for RNA purification",
+    "catalogNumbers": [
+      "740902.10",
+      "740902.50",
+      "740902.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Micro-scale total RNA purification",
+    "description": "XS format silica membrane spin kit for isolation of RNA from very small samples such as microdissected tissue and low cell numbers, with small elution volumes.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-XS-Micro-kit-for-RNA-purification-740902.50",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "qRT-PCR",
+      "RNA-Seq",
+      "array technology",
+      "Northern blotting",
+      "primer extension"
+    ],
+    "keyParameters": {
+      "input": "<5 mg human/animal tissue or small cell numbers",
+      "time": "35 min / 6 preps",
+      "notes": "Elution 5-30 uL; yield 0.1-1.5 ng from 10^2 cells up to 1000-1500 ng from 10^5 cells; RIN >9"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-RNA-XS-Micro-kit-for-RNA-purification-740902.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740902.10 / 740902.50 / 740902.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin totalRNA FFPE XS, Micro kit for RNA from FFPE",
+    "catalogNumbers": [
+      "740969.10",
+      "740969.50"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Total RNA from FFPE tissue",
+    "description": "XS format silica membrane kit for isolation of both small and large RNA species from formalin-fixed paraffin-embedded tissue, with centrifugation or vacuum handling.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-totalRNA-FFPE-XS-Micro-kit-for-RNA-from-FFPE-740969.50",
+    "protocolUrl": "https://www.mn-net.com/media/d6/17/19/1786518116/Instruction-NucleoSpin-totalRNA-FFPE-XS_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 preps",
+    "applications": [
+      "RNA-Seq",
+      "qRT-PCR",
+      "FFPE biomarker analysis"
+    ],
+    "keyParameters": {
+      "input": "<5 mg FFPE tissue",
+      "time": "70 min / 6 preps (90 min with optional rDNase digest)",
+      "notes": "Elution 5-30 uL; recovers fragments >18 nt; theoretical binding capacity 100 ug"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-totalRNA-FFPE-XS-Micro-kit-for-RNA-from-FFPE-740969.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740969.10 and 740969.50 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin TriPrep, Mini kit for RNA, DNA, and protein purification",
+    "catalogNumbers": [
+      "740966.10",
+      "740966.50",
+      "740966.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Parallel RNA, DNA and protein purification",
+    "description": "Silica membrane spin column kit for parallel isolation of RNA, genomic DNA and total protein from a single undivided sample.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-TriPrep-Mini-kit-for-RNA-DNA-and-protein-purification-740966.50",
+    "protocolUrl": "https://www.mn-net.com/media/89/33/f9/1786518116/Instruction-NucleoSpin-TriPrep_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "qRT-PCR",
+      "RNA-Seq",
+      "chip hybridization",
+      "Western blotting"
+    ],
+    "keyParameters": {
+      "input": "<5 x 10^6 cultured cells; <30 mg human/animal tissue; <100 mg plant tissue",
+      "time": "45 min / 6 preps for RNA + DNA, plus 35 min / 6 preps for protein",
+      "notes": "Elution RNA 40-120 uL, DNA 100 uL, protein 10-100 uL; yields <70 ug RNA, <6 ug DNA, <1200 ug protein"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-TriPrep-Mini-kit-for-RNA-DNA-and-protein-purification-740966.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740966.50 plus 10 and 250 prep pack sizes present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoZOL, one phase RNA purification",
+    "catalogNumbers": [
+      "740404.200"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Phenol-based one-phase RNA extraction reagent",
+    "description": "One-phase extraction reagent for isolation of total RNA from cells, tissue, bacteria, yeast, plant material and viral fluids without chloroform phase separation.",
+    "productUrl": "https://www.mn-net.com/us/NucleoZOL-one-phase-RNA-purification-740404.200",
+    "protocolUrl": "https://www.mn-net.com/media/e3/7b/e5/1786507313/Instruction-NucleoZOL_pa.pdf",
+    "kitSize": "200 mL",
+    "applications": [
+      "qRT-PCR",
+      "RNA-Seq",
+      "array technology",
+      "Northern blotting",
+      "RNase protection assays"
+    ],
+    "keyParameters": {
+      "input": "<2 x 10^6 cultured, bacterial or yeast cells; <100 mg tissue; <0.4 mL viral fluid",
+      "time": "<1 h",
+      "notes": "Typical yield 1-8 ug total RNA per mg sample; A260/A280 1.8-2.1; RIN >9; recovers RNA >10 nt"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoZOL-one-phase-RNA-purification-740404.200",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740404.200 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin Soil, Mini kit for DNA from soil",
+    "catalogNumbers": [
+      "740780.10",
+      "740780.50",
+      "740780.250"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "DNA from soil with inhibitor removal",
+    "description": "Silica membrane kit supplied with MN Bead Tubes Type A, two alternative lysis buffers and a NucleoSpin Inhibitor Removal Column for purification of DNA from diverse soil types.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-Soil-Mini-kit-for-DNA-from-soil-740780.50",
+    "protocolUrl": "https://www.mn-net.com/media/d1/aa/db/1786514529/Instruction-NucleoSpin-Soil_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "10 / 50 / 250 preps",
+    "applications": [
+      "PCR",
+      "real-time PCR",
+      "metagenomics",
+      "16S analysis",
+      "microarrays"
+    ],
+    "keyParameters": {
+      "input": "<500 mg soil",
+      "time": "90 min / 10 preps",
+      "notes": "Elution 30-100 uL; yield 2-10 ug from 500 mg soil; fragment size 50 bp to ~50 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-Soil-Mini-kit-for-DNA-from-soil-740780.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740780.10 / 740780.50 / 740780.250 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoSpin 96 Virus, 96-well kit for viral RNA/DNA purification",
+    "catalogNumbers": [
+      "740691.4"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "96-well viral nucleic acid purification",
+    "description": "Silica membrane kit in 96-well plate format for parallel isolation of viral RNA and DNA from biological fluids, compatible with automated robotic platforms.",
+    "productUrl": "https://www.mn-net.com/us/NucleoSpin-96-Virus-96-well-kit-for-viral-RNA-DNA-purification-740691.4",
+    "protocolUrl": "https://www.mn-net.com/media/4d/7c/a0/1786514527/Instruction-NucleoSpin-96-Virus_pa.pdf",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps",
+    "applications": [
+      "PCR",
+      "RT-PCR",
+      "enzymatic reactions",
+      "high-throughput viral testing"
+    ],
+    "keyParameters": {
+      "input": "<150 uL cell-free fluid, plasma or serum",
+      "time": "60 min/plate",
+      "notes": "Elution 70-100 uL; theoretical binding capacity 40 ug; fragment size 100 bp to ~50 kbp"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoSpin-96-Virus-96-well-kit-for-viral-RNA-DNA-purification-740691.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 740691.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoMag Virus kit for RNA/DNA purification from cell-free fluids",
+    "catalogNumbers": [
+      "744800.4"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Magnetic bead viral nucleic acid purification",
+    "description": "Magnetic bead based kit for isolation of viral RNA and DNA from biological fluids such as serum and plasma, for manual use or on open automation platforms.",
+    "productUrl": "https://www.mn-net.com/us/NucleoMag-Virus-kit-for-RNA-DNA-purification-from-cell-free-fluids-744800.4",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps (also available as 96 preps)",
+    "applications": [
+      "PCR",
+      "RT-PCR",
+      "enzymatic reactions",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "<200 uL sample",
+      "time": "40-120 min / 96 preps",
+      "notes": "Elution 50-100 uL; fragment size 300 bp to ~50 kbp; application notes for Tecan Freedom EVO, Thermo KingFisher Flex, Opentrons OT-2 and epMotion"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoMag-Virus-kit-for-RNA-DNA-purification-from-cell-free-fluids-744800.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 744800.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoMag Tissue kit for DNA purification from cells and tissue",
+    "catalogNumbers": [
+      "744300.4"
+    ],
+    "category": "Nucleic Acid Purification",
+    "subcategory": "Magnetic bead genomic DNA purification",
+    "description": "Magnetic bead based kit for purification of genomic DNA from cells and tissue, designed for automated processing on a wide range of open liquid handling platforms.",
+    "productUrl": "https://www.mn-net.com/us/NucleoMag-Tissue-kit-for-DNA-purification-from-cells-and-tissue-744300.4",
+    "storage": "15-25 °C",
+    "kitSize": "384 preps (also available as 96 and 2304 preps)",
+    "applications": [
+      "PCR",
+      "Southern blotting",
+      "enzymatic reactions",
+      "automated extraction"
+    ],
+    "keyParameters": {
+      "input": "<20 mg human/animal tissue or <10^6 cells",
+      "time": "40-120 min / 96 preps",
+      "notes": "Elution 50-200 uL; A260/A280 1.6-1.9; validated on epMotion, Tecan Freedom EVO, Thermo KingFisher, Hamilton MICROLAB/NIMBUS, Opentrons OT-2/Flex"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoMag-Tissue-kit-for-DNA-purification-from-cells-and-tissue-744300.4",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 744300.4 present on the fetched product page."
+  },
+  {
+    "vendor": "MACHEREY-NAGEL",
+    "vendorShort": "Macherey-Nagel",
+    "productName": "NucleoMag kit for clean up and size selection of NGS library prep reactions",
+    "catalogNumbers": [
+      "744970.50"
+    ],
+    "category": "NGS Library QC & Quantification",
+    "subcategory": "Magnetic bead clean-up and size selection",
+    "description": "Magnetic bead kit for clean-up and single- or double-sided size selection of NGS library preparation reactions, with reported 50 bp size selection accuracy for fragments between 150 bp and approximately 800 bp.",
+    "productUrl": "https://www.mn-net.com/us/NucleoMag-kit-for-clean-up-and-size-selection-of-NGS-library-prep-reactions-744970.50",
+    "storage": "2-8 °C",
+    "kitSize": "50 mL (also available as 5 mL and 500 mL)",
+    "applications": [
+      "NGS library clean-up",
+      "size selection",
+      "cDNA synthesis clean-up",
+      "in vitro transcription clean-up"
+    ],
+    "keyParameters": {
+      "input": "7.5 pg-5 ug nucleic acid in NGS reaction mixtures",
+      "time": "40-120 min / 96 preps",
+      "notes": "Elution 10-100 uL; typical recovery >=80%"
+    },
+    "sourceUrl": "https://www.mn-net.com/us/NucleoMag-kit-for-clean-up-and-size-selection-of-NGS-library-prep-reactions-744970.50",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "REF 744970.50 present on the fetched product page."
+  }
+]

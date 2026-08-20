@@ -1,0 +1,767 @@
+[
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-LT1 Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 2300",
+      "MIR 2304"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Plasmid DNA transfection reagent",
+    "description": "Broad spectrum, low toxicity DNA transfection reagent for efficient delivery of plasmid DNA to a wide range of cell types, including single or multiple plasmid delivery for virus production.",
+    "productUrl": "https://www.mirusbio.com/product/transit-lt1-transfection-reagent-0-4-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml001_transit_lt1_transfection_reagent.pdf",
+    "storage": "4 °C",
+    "kitSize": "0.4 mL (MIR 2304); 1.0 mL (MIR 2300); 5 x 1.0 mL and 10 x 1.0 mL packs also available",
+    "applications": [
+      "plasmid DNA transfection",
+      "virus production",
+      "iPSC transfection",
+      "co-transfection of multiple plasmids"
+    ],
+    "keyParameters": {
+      "notes": "One-year guarantee. Contains raw materials derived from animals. Demonstrated in human iPSCs, iCell cardiomyocytes and HepG2 cells. Research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-lt1-transfection-reagent-0-4-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 2304 (0.4 mL) and MIR 2300 (1.0 mL) present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-2020 Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 5400",
+      "MIR 5402",
+      "MIR 5404",
+      "MIR 5406"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Animal-free plasmid DNA transfection reagent",
+    "description": "High performance, animal-free, broad spectrum DNA transfection reagent for delivering plasmid DNA to diverse mammalian cell types, including hard-to-transfect lines and primary cells, with low toxicity.",
+    "productUrl": "https://www.mirusbio.com/product/transit-2020-transfection-reagent-1-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml055_transit_2020_transfection_reagent.pdf",
+    "storage": "-20 °C",
+    "kitSize": "1.0 mL (MIR 5400); 0.4 mL (MIR 5402); 5 x 1.0 mL (MIR 5404); 10 x 1.0 mL (MIR 5406)",
+    "applications": [
+      "plasmid DNA transfection",
+      "primary cell and stem cell transfection",
+      "gene expression studies"
+    ],
+    "keyParameters": {
+      "notes": "Free of animal-derived components; one-year shelf life from manufacture; research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-2020-transfection-reagent-1-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 5400, 5402, 5404 and 5406 with unit sizes present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-293 Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 2700",
+      "MIR 2704"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "HEK 293 plasmid DNA transfection reagent",
+    "description": "High efficiency, low toxicity DNA transfection reagent optimised for 293 cells, reported to give 75-85% transfection efficiency in HEK 293. Supports single and multiple plasmid delivery for applications such as virus production.",
+    "productUrl": "https://www.mirusbio.com/product/transit-293-transfection-reagent-0-4-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml009_transit_293_transfection_reagent.pdf",
+    "storage": "4 °C",
+    "kitSize": "0.4 mL (MIR 2704); 1.0 mL (MIR 2700); 5 x 1.0 mL and 10 x 1.0 mL also available",
+    "applications": [
+      "HEK 293 transfection",
+      "virus production",
+      "recombinant protein expression"
+    ],
+    "keyParameters": {
+      "notes": "75-85% transfection efficiency in HEK 293 cells; one-year guarantee; research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-293-transfection-reagent-0-4-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 2704 (0.4 mL) and MIR 2700 (1.0 mL) present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-X2 Dynamic Delivery System",
+    "catalogNumbers": [
+      "MIR 6000",
+      "MIR 6003"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Multi-cargo (DNA/siRNA/RNP) transfection reagent",
+    "description": "Non-liposomal polymeric transfection system for delivery of plasmid DNA, siRNA/miRNA and CRISPR/Cas9 components (plasmid plus guide RNA, or RNP complexes) across a broad range of cell types.",
+    "productUrl": "https://www.mirusbio.com/product/transit-x2-dynamic-delivery-system-1-5-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml061-transit-x2-dynamic-delivery-system-user-protocol.pdf",
+    "storage": "-20 °C",
+    "kitSize": "0.3 mL (MIR 6003); 1.5 mL (MIR 6000); 0.75 mL, 5 x 1.5 mL and 10 x 1.5 mL also available",
+    "applications": [
+      "plasmid DNA transfection",
+      "siRNA/miRNA transfection",
+      "CRISPR/Cas9 RNP delivery",
+      "genome editing"
+    ],
+    "keyParameters": {
+      "notes": "Animal origin free; one-year shelf life. Dedicated CRISPR protocols available for plasmid+gRNA and RNP delivery."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-x2-dynamic-delivery-system-1-5-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "MIR 6000 present on the fetched 1.5 mL product page; MIR 6003 confirmed as the SKU on the separately fetched 0.3 mL product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-mRNA Transfection Kit",
+    "catalogNumbers": [
+      "MIR 2225"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "mRNA and large RNA transfection kit",
+    "description": "High efficiency, low toxicity transfection kit for delivering large RNA and CRISPR guide RNA. Supplied with TransIT-mRNA Transfection Reagent plus mRNA Boost Reagent, and is serum compatible so media replacement is not required.",
+    "productUrl": "https://www.mirusbio.com/product/transit-mrna-transfection-kit-0-4-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml036_transit_mrna_transfection_kit.pdf",
+    "storage": "4 °C",
+    "kitSize": "0.4 mL (MIR 2225); 1.0 mL, 5 x 1.0 mL and 10 x 1.0 mL also available",
+    "applications": [
+      "mRNA delivery",
+      "CRISPR/Cas9 mRNA and gRNA delivery",
+      "stem cell transfection",
+      "high-titer virus production"
+    ],
+    "keyParameters": {
+      "input": "Kit components: TransIT-mRNA Transfection Reagent and mRNA Boost Reagent",
+      "notes": "Animal-origin free; one-year shelf life; research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-mrna-transfection-kit-0-4-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 2225 (0.4 mL) present as the SKU on the fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-TKO Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 2150"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "siRNA transfection reagent",
+    "description": "High efficiency, low toxicity siRNA and plasmid DNA transfection reagent for mammalian cells, used for broad-spectrum siRNA delivery and gene knockdown across diverse cell types including primary cells and stem cells.",
+    "productUrl": "https://www.mirusbio.com/product/transit-tko-transfection-reagent-1-5-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml015_transit_tko_transfection_reagent.pdf",
+    "storage": "4 °C",
+    "kitSize": "1.5 mL (MIR 2150); 0.4 mL, 5 x 1.5 mL and 10 x 1.5 mL also available",
+    "applications": [
+      "siRNA transfection",
+      "gene knockdown/silencing",
+      "plasmid DNA transfection"
+    ],
+    "keyParameters": {
+      "notes": "Animal origin free; one-year product guarantee; research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-tko-transfection-reagent-1-5-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 2150 (1.5 mL) present on fetched Mirus Bio product page; other pack sizes listed without distinct numbers on that page so are not claimed."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-PRO Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 5750"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Suspension cell protein production transfection reagent",
+    "description": "Animal-origin-free transfection reagent designed for high, reproducible protein yield in suspension CHO and 293 cells, compatible with a range of media formulations including CHOgro Expression Medium.",
+    "productUrl": "https://www.mirusbio.com/product/transit-pro-transfection-reagent-kit-10-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/transit-pro-transfection-reagent-protocol.pdf",
+    "storage": "-20 °C",
+    "kitSize": "10 mL without boost (MIR 5750); 1 mL without boost also available",
+    "applications": [
+      "transient protein expression",
+      "suspension CHO-S transfection",
+      "Expi293F transfection",
+      "antibody production"
+    ],
+    "keyParameters": {
+      "notes": "Animal origin free; one-year product guarantee. Dedicated Expi293F quick reference protocol available."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-pro-transfection-reagent-kit-10-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 5750 (10 mL, without boost) present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-Lenti Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 6603"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Lentivirus production transfection reagent",
+    "description": "Transfection reagent formulated to enhance delivery of packaging and transfer vectors to adherent HEK 293T and suspension 293-F cells to increase recombinant lentivirus production, with no media change required and a single harvest.",
+    "productUrl": "https://www.mirusbio.com/product/transit-lenti-transfection-reagent-0-3-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/transit-lenti-reagent-protocol.pdf",
+    "storage": "-20 °C",
+    "kitSize": "0.3 mL (MIR 6603); 0.75 mL, 1.5 mL, 5 x 1.5 mL and 10 x 1.5 mL also available",
+    "applications": [
+      "lentivirus production",
+      "HEK 293T and 293-F transfection",
+      "viral vector manufacture"
+    ],
+    "keyParameters": {
+      "notes": "Animal origin free; one-year guarantee; research use only. Larger pack catalog numbers were not stated on the fetched page and are not claimed here."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-lenti-transfection-reagent-0-3-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU MIR 6603 (0.3 mL) present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-VirusGEN Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 6703",
+      "MIR 6704",
+      "MIR 6705",
+      "MIR 6706",
+      "MIR 6707",
+      "MIR 6708"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Viral vector production transfection reagent",
+    "description": "Fully synthetic, animal-origin-free transfection reagent for plasmid delivery to HEK 293 cells for recombinant AAV and lentivirus production, scalable from under 1 mL to large-scale suspension cultures.",
+    "productUrl": "https://www.mirusbio.com/product/transit-virusgen-transfection-reagent-0-3-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/transit-virusgen-transfection-reagent-protocol.pdf",
+    "storage": "-10 to -30 °C",
+    "kitSize": "0.3 mL (MIR 6703); 0.75 mL (MIR 6704); 1.5 mL (MIR 6705); 5 x 1.5 mL (MIR 6706); 10 x 1.5 mL (MIR 6707); 30 mL (MIR 6708)",
+    "applications": [
+      "AAV production",
+      "lentivirus production",
+      "adherent and suspension HEK 293 transfection"
+    ],
+    "keyParameters": {
+      "notes": "12-month guarantee; research use only. Fully synthetic and animal origin free."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-virusgen-transfection-reagent-0-3-ml/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 6703 through MIR 6708 with unit sizes present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "VirusGEN AAV Transfection Kit",
+    "catalogNumbers": [
+      "MIR 6750",
+      "MIR 6745",
+      "MIR 6755"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "AAV production transfection kit",
+    "description": "Kit that enhances delivery of packaging and transfer plasmids to adherent and suspension HEK 293 cells to increase recombinant adeno-associated virus production. Supplies TransIT-VirusGEN reagent together with a complex formation solution, and is scalable from under 1 mL to large-scale culture.",
+    "productUrl": "https://www.mirusbio.com/product/virusgen-aav-transfection-kit-1-kit-for-10-l-of-cell-culture/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/virusgen-aav-transfection-kit-protocol.pdf",
+    "storage": "TransIT-VirusGEN reagent -10 to -30 °C; complex formation solution and enhancer per bottle label",
+    "kitSize": "MIR 6750: 2 x 1.5 mL reagent + 1 x 100 mL complex formation solution; MIR 6745: 1 x 30 mL + 1 x 1 L (10 L culture); MIR 6755: 1 x 150 mL + 5 x 1 L (large scale)",
+    "applications": [
+      "recombinant AAV production",
+      "suspension and adherent HEK 293 transfection",
+      "viral vector manufacture"
+    ],
+    "keyParameters": {
+      "notes": "Fully synthetic, animal origin free. 12-month guarantee on the reagent; 6-month guarantee on complex formation solution and enhancer."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/virusgen-aav-transfection-kit-1-kit-for-10-l-of-cell-culture/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 6750, MIR 6745 and MIR 6755 with component volumes and culture scales present in the table on the fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "VirusGEN LV Transfection Kit",
+    "catalogNumbers": [
+      "MIR 6760"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Lentivirus production transfection kit",
+    "description": "Transfection kit that enhances plasmid delivery to HEK 293 cells for lentivirus production in adherent and suspension culture, supplied as reagent plus complex formation solution and enhancer.",
+    "productUrl": "https://www.mirusbio.com/product/transit-virusgen-transfection-reagent-and-kits-4/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/virusgen-lv-transfection-kit-protocol.pdf",
+    "storage": "Per component; TransIT-VirusGEN reagent -10 to -30 °C",
+    "kitSize": "1 kit for 1 L of cell culture",
+    "applications": [
+      "lentivirus production",
+      "HEK 293 suspension and adherent transfection",
+      "viral vector manufacture"
+    ],
+    "keyParameters": {
+      "notes": "Fully synthetic, animal origin free. 12-month guarantee for the reagent; 6 months for complex formation solution and enhancer. Research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-virusgen-transfection-reagent-and-kits-4/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 6760 with the 1 L culture kit size present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "VirusGEN GMP AAV Transfection Kit",
+    "catalogNumbers": [
+      "MIR 6815-GMP"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "GMP-grade AAV production transfection kit",
+    "description": "GMP-manufactured transfection kit for large-scale production of high-titer viral vectors in suspension and adherent HEK 293 cells. Supplied as TransIT-VirusGEN GMP Transfection Reagent plus VirusGEN GMP AAV Complex Formation Solution and Enhancer.",
+    "productUrl": "https://www.mirusbio.com/product/virusgen-gmp-aav-transfection-kit/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/virusgen-gmp-aav-transfection-kit-protocol.pdf",
+    "storage": "TransIT-VirusGEN GMP reagent -10 to -30 °C; complex formation solution and enhancer 2 to 10 °C",
+    "applications": [
+      "large-scale AAV production",
+      "therapeutic viral vector manufacture",
+      "HEK 293 transfection"
+    ],
+    "keyParameters": {
+      "notes": "GMP manufactured and tested for appearance, identity, sterility, endotoxin and mycoplasma. Animal origin free, fully synthetic."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/virusgen-gmp-aav-transfection-kit/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 6815-GMP present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "CHOgro High Yield Expression System",
+    "catalogNumbers": [
+      "MIR 6270"
+    ],
+    "category": "Protein Expression & Purification",
+    "subcategory": "Suspension CHO transient expression system",
+    "description": "Complete system for transient transfection and protein production in suspension CHO cells, supplying expression medium, complex formation solution, L-glutamine, poloxamer 188, TransIT-PRO transfection reagent and a titer enhancer.",
+    "productUrl": "https://www.mirusbio.com/product/chogro-high-yield-expression-system/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/chogro-high-yield-expression-system-full-protocol.pdf",
+    "storage": "Medium, complex formation solution and titer enhancer 4 °C; TransIT-PRO reagent and L-glutamine -20 °C; poloxamer 188 room temperature",
+    "kitSize": "1 kit: CHOgro Expression Medium 2 x 1 L, Complex Formation Solution 100 mL, L-Glutamine 100 mL, Poloxamer 188 100 mL, TransIT-PRO 1 mL, CHOgro Titer Enhancer 20 mL",
+    "applications": [
+      "transient protein expression",
+      "antibody production",
+      "suspension CHO cell culture"
+    ],
+    "keyParameters": {
+      "notes": "Most components carry a one-year guarantee. Listed on the vendor page as available on backorder at time of retrieval."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/chogro-high-yield-expression-system/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 6270 with the full component list present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT Lentivirus System",
+    "catalogNumbers": [
+      "MIR 6650",
+      "MIR 6655"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Complete lentivirus production and transduction system",
+    "description": "Complete system for producing and transducing with recombinant lentivirus, combining TransIT-Lenti Transfection Reagent, a Lentivirus Packaging Mix and the TransduceIT transduction enhancement reagent.",
+    "productUrl": "https://www.mirusbio.com/product/transit-lenti-transfection-reagent-0-3-ml/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/transit-lentivirus-system-full-protocol.pdf",
+    "storage": "-20 °C, tightly capped",
+    "kitSize": "MIR 6650: TransIT-Lenti 0.3 mL + Packaging Mix 0.25 mL (5 rxn) + TransduceIT 1 mL; MIR 6655: TransIT-Lenti 1.5 mL + Packaging Mix 1.7 mL (34 rxn) + TransduceIT 1 mL",
+    "applications": [
+      "lentivirus production",
+      "lentiviral transduction",
+      "stable cell line generation"
+    ],
+    "keyParameters": {
+      "notes": "Component catalog numbers: TransIT-Lenti MIR 6600 (1.5 mL) / MIR 6603 (0.3 mL); Lentivirus Packaging Mix MIR 6630 (5 rxn) / MIR 6640 (34 rxn); TransduceIT Reagent MIR 6620. One-year guarantee from date of purchase."
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/transit-lentivirus-system-full-protocol.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "All listed catalog numbers with kit compositions present in the fetched Mirus Bio TransIT Lentivirus System full protocol. Order codes for the system are MIR 6650 and MIR 6655 only; MIR 6600/6603/6620/6630/6640 appear on the same page as the component products bundled into the system and are indexed separately, so they are not listed here."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "RevIT AAV Enhancer",
+    "catalogNumbers": [
+      "MIR 8000",
+      "MIR 8000-10x"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "AAV production titer enhancer",
+    "description": "Media additive that integrates into existing AAV production workflows and is reported to give 2-4x higher titers across a range of serotypes, growth media formulations and transfection platforms, allowing plasmid DNA input to be reduced.",
+    "productUrl": "https://www.mirusbio.com/product/revit-aav-enhancer-1-5-ml-for-1-l-of-cell-culture/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/quick-reference-protocols/revit-aav-enhancer.pdf",
+    "storage": "-20 °C, protect from light",
+    "kitSize": "1.5 mL for 1 L of cell culture (MIR 8000); 10 x 1.5 mL for 10 L (MIR 8000-10x)",
+    "applications": [
+      "recombinant AAV production",
+      "viral titer enhancement"
+    ],
+    "keyParameters": {
+      "notes": "Animal origin free; 6-month shelf life; compatible with any transfection reagent platform. Research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/revit-aav-enhancer-1-5-ml-for-1-l-of-cell-culture/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 8000 and MIR 8000-10x with culture scales present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "TransIT-VirusGEN GMP Transfection Reagent",
+    "catalogNumbers": [
+      "MIR 6845-GMP"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "GMP-grade viral vector transfection reagent",
+    "description": "GMP-manufactured, fully synthetic and animal-origin-free transfection reagent that enhances delivery of packaging and transfer vector DNA to suspension and adherent HEK 293 cells for large-scale lentivirus and AAV production.",
+    "productUrl": "https://www.mirusbio.com/product/transit-virusgen-gmp-transfection-kit-for-50l-of-culture/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/transit-virusgen-gmp-protocol.pdf",
+    "storage": "-10 to -30 °C",
+    "kitSize": "150 mL",
+    "applications": [
+      "large-scale AAV production",
+      "lentivirus production",
+      "cell and gene therapy vector manufacture"
+    ],
+    "keyParameters": {
+      "notes": "GMP manufactured with testing for appearance, identity, sterility, endotoxin and mycoplasma; retest date given on the Certificate of Analysis. For research use and further manufacturing, not for human administration."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/transit-virusgen-gmp-transfection-kit-for-50l-of-culture/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU MIR 6845-GMP with 150 mL size present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Nucleic Acid Labeling Kit, Fluorescein",
+    "catalogNumbers": [
+      "MIR 3200",
+      "MIR 3225"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Nucleic acid labelling kit",
+    "description": "Kit for covalent chemical labelling of DNA or RNA with fluorescein using the Label IT reagent, which alkylates nucleic acid in a single one-hour reaction with no enzymatic step. Supplied with lyophilised Label IT reagent, reconstitution solution, 10X labelling buffer and spin columns for purification.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-labeling-kit-fluorescein-labels-100-%C2%B5g-nucleic-acid/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "storage": "-20 °C",
+    "kitSize": "Sufficient for labelling 25 µg (MIR 3225, 5 spin columns) or 100 µg (MIR 3200, 20 spin columns) of nucleic acid",
+    "applications": [
+      "fluorescent probe preparation",
+      "FISH",
+      "tracking nucleic acid delivery",
+      "microarray probes"
+    ],
+    "keyParameters": {
+      "time": "1 h at 37 °C labelling reaction",
+      "notes": "Non-enzymatic covalent labelling; works with plasmid DNA, oligonucleotides and RNA."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-labeling-kit-fluorescein-labels-100-%C2%B5g-nucleic-acid/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU MIR 3200 confirmed on fetched Mirus Bio product page; MIR 3225 (25 µg) listed in the fetched Label IT protocol ML002 ordering table."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Nucleic Acid Labeling Kit, Cy3",
+    "catalogNumbers": [
+      "MIR 3600",
+      "MIR 3625"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Nucleic acid labelling kit",
+    "description": "Kit for covalent, non-enzymatic labelling of DNA or RNA with Cy3 using the Label IT alkylating reagent in a single one-hour reaction. Supplied with lyophilised reagent, reconstitution solution, 10X buffer and spin columns.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-labeling-kit-cy3-labels-100-%C2%B5g-nucleic-acid/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "storage": "-20 °C",
+    "kitSize": "Sufficient for labelling 25 µg (MIR 3625, 5 spin columns) or 100 µg (MIR 3600, 20 spin columns) of nucleic acid",
+    "applications": [
+      "fluorescent probe preparation",
+      "FISH",
+      "nucleic acid delivery tracking",
+      "microarray probes"
+    ],
+    "keyParameters": {
+      "time": "1 h at 37 °C labelling reaction"
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 3600 (100 µg) and MIR 3625 (25 µg) listed in the ordering table of the fetched Mirus Bio Label IT protocol ML002."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Nucleic Acid Labeling Kit, Cy5",
+    "catalogNumbers": [
+      "MIR 3700",
+      "MIR 3725"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Nucleic acid labelling kit",
+    "description": "Kit for covalent, non-enzymatic labelling of DNA or RNA with Cy5 using the Label IT alkylating reagent in a single one-hour reaction. Supplied with lyophilised reagent, reconstitution solution, 10X buffer and spin columns.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-labeling-kit-cy5-labels-100-%C2%B5g-nucleic-acid/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "storage": "-20 °C",
+    "kitSize": "Sufficient for labelling 25 µg (MIR 3725, 5 spin columns) or 100 µg (MIR 3700, 20 spin columns) of nucleic acid",
+    "applications": [
+      "far-red fluorescent probe preparation",
+      "FISH",
+      "nucleic acid delivery tracking"
+    ],
+    "keyParameters": {
+      "time": "1 h at 37 °C labelling reaction"
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 3700 (100 µg) and MIR 3725 (25 µg) listed in the ordering table of the fetched Mirus Bio Label IT protocol ML002."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Nucleic Acid Modifying Kit, Amine",
+    "catalogNumbers": [
+      "MIR 3900",
+      "MIR 3925"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Nucleic acid modification kit",
+    "description": "Kit that introduces primary amine groups onto DNA or RNA with the Label IT alkylating reagent, providing attachment points for subsequent conjugation of NHS-ester dyes, haptens or other molecules. Supplied with lyophilised reagent, reconstitution solution, 10X buffer and spin columns.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-modifying-kit-amine-sufficient-reagent-for-modifying-100-%C2%B5g-of-nucleic-acid/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "storage": "-20 °C",
+    "kitSize": "Sufficient for modifying 25 µg (MIR 3925, 5 spin columns) or 100 µg (MIR 3900, 20 spin columns) of nucleic acid",
+    "applications": [
+      "custom nucleic acid conjugation",
+      "NHS-ester dye labelling",
+      "probe synthesis"
+    ],
+    "keyParameters": {
+      "time": "1 h at 37 °C modification reaction"
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 3900 (100 µg) and MIR 3925 (25 µg) listed in the ordering table of the fetched Mirus Bio Label IT protocol ML002."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Nucleic Acid Labeling Kit, CX-Rhodamine",
+    "catalogNumbers": [
+      "MIR 3100",
+      "MIR 3125"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Nucleic acid labelling kit",
+    "description": "Kit for covalent, non-enzymatic labelling of DNA or RNA with CX-Rhodamine using the Label IT alkylating reagent in a single one-hour reaction. Supplied with lyophilised reagent, reconstitution solution, 10X buffer and spin columns.",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "storage": "-20 °C",
+    "kitSize": "Sufficient for labelling 25 µg (MIR 3125, 5 spin columns) or 100 µg (MIR 3100, 20 spin columns) of nucleic acid",
+    "applications": [
+      "fluorescent probe preparation",
+      "FISH",
+      "nucleic acid delivery tracking"
+    ],
+    "keyParameters": {
+      "time": "1 h at 37 °C labelling reaction"
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml002_label_it_nucleic_acid_labeling_kit.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 3100 (100 µg) and MIR 3125 (25 µg) listed in the ordering table of the fetched Mirus Bio Label IT protocol ML002.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-nucleic-acid-labeling-kit-cx-rhodamine-labels-100-%C2%B5g-nucleic-acid/"
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Ingenio Electroporation Solution",
+    "catalogNumbers": [
+      "MIR 50111",
+      "MIR 50114",
+      "MIR 50117"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation solution",
+    "description": "Electroporation solution for delivering DNA, siRNA and CRISPR/Cas9 RNP into a broad range of mammalian cell lines and primary cells. Compatible with exponential decay, square wave and Amaxa Nucleofector electroporators.",
+    "productUrl": "https://www.mirusbio.com/product/ingenio-electroporation-solution-25-rxn/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "storage": "4 °C",
+    "kitSize": "25 rxns / 1 x 6.25 mL (MIR 50111); 50 rxns / 1 x 12.5 mL (MIR 50114); 100 rxns / 2 x 12.5 mL (MIR 50117)",
+    "applications": [
+      "DNA electroporation",
+      "siRNA electroporation",
+      "CRISPR/Cas9 RNP delivery",
+      "primary cell and iPSC electroporation"
+    ],
+    "keyParameters": {
+      "input": "Starting conditions: 20 µg DNA per 1 mL of cells, or 250 nM siRNA final concentration",
+      "notes": "1 mL of solution is sufficient for 4 electroporations in 0.4 cm cuvettes or 10 in 0.2 cm cuvettes. One-year shelf life from date of purchase."
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 50111, 50114 and 50117 with volumes and 4 °C storage listed in the ordering table of the fetched Mirus Bio Ingenio protocol ML052."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Ingenio Electroporation Kit (Amaxa Nucleofector compatible)",
+    "catalogNumbers": [
+      "MIR 50112",
+      "MIR 50115",
+      "MIR 50118"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation kit with cuvettes",
+    "description": "Ingenio Electroporation Solution supplied together with cuvettes and transfer pipettes formatted for Amaxa Nucleofector instruments, for delivery of DNA, siRNA and CRISPR/Cas9 RNP into mammalian cells.",
+    "productUrl": "https://www.mirusbio.com/product/ingenio-electroporation-solution-25-rxn/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "storage": "Solution at 4 °C; all other kit materials at room temperature",
+    "kitSize": "25 reactions (MIR 50112); 50 reactions (MIR 50115); 100 reactions (MIR 50118)",
+    "applications": [
+      "nucleofection-format electroporation",
+      "DNA and siRNA delivery",
+      "CRISPR/Cas9 RNP delivery"
+    ],
+    "keyParameters": {
+      "notes": "Related Amaxa-format kits MIR 50108 (25 rxn), MIR 50109 (50 rxn) and MIR 50110 (100 rxn) are also listed in the protocol."
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 50112, 50115 and 50118 with reaction counts listed in the ordering table of the fetched Mirus Bio Ingenio protocol ML052."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Ingenio Electroporation Kit (open system)",
+    "catalogNumbers": [
+      "MIR 50113",
+      "MIR 50116",
+      "MIR 50119"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Electroporation kit with cuvettes",
+    "description": "Ingenio Electroporation Solution supplied with cuvettes and transfer pipettes for use in open-system (exponential decay and square wave) electroporators, for delivery of DNA, siRNA and CRISPR/Cas9 RNP into mammalian cells.",
+    "productUrl": "https://www.mirusbio.com/product/ingenio-electroporation-solution-50-rxn/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "storage": "Solution at 4 °C; all other kit materials at room temperature",
+    "kitSize": "25 reactions (MIR 50113); 50 reactions (MIR 50116); 100 reactions (MIR 50119)",
+    "applications": [
+      "cuvette-based electroporation",
+      "DNA and siRNA delivery",
+      "CRISPR/Cas9 RNP delivery"
+    ],
+    "keyParameters": {
+      "input": "20 µg DNA per 1 mL cells or 250 nM siRNA final concentration as starting conditions"
+    },
+    "sourceUrl": "https://tools.mirusbio.com/assets/protocols/ml052_ingenio_electroporation_products.pdf",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers MIR 50113, 50116 and 50119 with reaction counts listed in the ordering table of the fetched Mirus Bio Ingenio protocol ML052."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Ingenio EZporator Electroporation System",
+    "catalogNumbers": [
+      "MIR 51000"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Benchtop electroporation instrument",
+    "description": "Open-system electroporation instrument for high efficiency transfection of mammalian cells, designed to be used with Ingenio Electroporation Solution and suited to hard-to-transfect, stem and primary cells. Supplied with a complimentary 8-reaction Ingenio Electroporation Kit including solution, cuvettes and cell droppers.",
+    "productUrl": "https://www.mirusbio.com/product/ingenio-ezporator-electroporation-system/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/user-manuals/ingenio-ezporator-electroporation-system-user-manual.pdf",
+    "storage": "Room temperature (instrument)",
+    "kitSize": "1 instrument plus 8-reaction starter kit",
+    "applications": [
+      "mammalian and insect cell electroporation",
+      "CRISPR RNP delivery",
+      "primary and stem cell transfection"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with 0.2 cm and 0.4 cm electroporation cuvettes. Research use only; animal origin free."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/ingenio-ezporator-electroporation-system/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 51000 present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT Tracker Intracellular Nucleic Acid Localization Kit, Cy5",
+    "catalogNumbers": [
+      "MIR 7021"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "Plasmid DNA tracking/labelling kit",
+    "description": "Kit for efficient direct labelling of plasmid DNA for in vitro and in vivo tracking. The Label IT Tracker reagent contains a fluorophore, an electrostatic linker and a reactive alkylating group so DNA is covalently labelled without disrupting plasmid structure or gene expression.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-tracker-intracellular-nucleic-acid-localization-kits-cy5-labels-50-200-%C2%B5g-plasmid-dna/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml054_label_it_tracker_kit.pdf",
+    "storage": "-20 °C (dried pellet and reconstituted reagent)",
+    "kitSize": "Labels 50-200 µg plasmid DNA",
+    "applications": [
+      "subcellular localisation tracking",
+      "reporter transgene expression monitoring",
+      "fluorescence microscopy"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: Label IT Tracker Reagent, Label IT Reconstitution Solution, 10X Labeling Buffer",
+      "notes": "One-year guarantee, 6 months after reconstitution. Animal origin free; research use only."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/label-it-tracker-intracellular-nucleic-acid-localization-kits-cy5-labels-50-200-%C2%B5g-plasmid-dna/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number MIR 7021 present on fetched Mirus Bio product page."
+  },
+  {
+    "vendor": "Mirus Bio",
+    "vendorShort": "Mirus",
+    "productName": "Label IT siRNA Tracker Intracellular Localization Kit, Cy3",
+    "catalogNumbers": [
+      "MIR 7212"
+    ],
+    "category": "Oligos, Probes & Standards",
+    "subcategory": "siRNA tracking/labelling kit",
+    "description": "One-step chemical labelling kit for direct fluorescent labelling of siRNA for in vitro and in vivo tracking, allowing visualisation of siRNA delivery alongside functional gene knockdown studies.",
+    "productUrl": "https://www.mirusbio.com/product/label-it-sirna-tracker-intracellular-localization-kits-cy3-labels-50-%C2%B5g-sirna/",
+    "protocolUrl": "https://tools.mirusbio.com/assets/protocols/ml035_label_it_sirna_tracker_kit.pdf",
+    "storage": "-20 °C for all supplied reagents (reagent stored at -20 °C as dried pellet and reconstituted)",
+    "kitSize": "Labels 50 µg siRNA",
+    "applications": [
+      "intracellular siRNA tracking",
+      "siRNA delivery visualisation",
+      "knockdown studies"
+    ],
+    "keyParameters": {
+      "input": "Kit contents: Label IT siRNA Tracker Reagent, Label IT Reconstitution Solution, 10X Labeling Buffer A, siRNA Dilution Buffer",
+      "notes": "One-year guarantee, 6 months after reconstitution."
+    },
+    "sourceUrl": "https://www.mirusbio.com/product/label-it-sirna-tracker-intracellular-localization-kits-cy3-labels-50-%C2%B5g-sirna/",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "SKU MIR 7212 present on fetched Mirus Bio product page."
+  }
+]

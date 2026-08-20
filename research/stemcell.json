@@ -1,0 +1,1121 @@
+[
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "mTeSR Plus cGMP Pluripotent Stem Cell Maintenance Medium",
+    "catalogNumbers": [
+      "100-0276",
+      "100-1130"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Feeder-free hPSC maintenance medium",
+    "description": "Serum-free, stabilized cell culture medium for the feeder-free maintenance and expansion of human embryonic stem (ES) and induced pluripotent stem (iPS) cells. Enhanced pH buffering and stabilized FGF2 support weekend-free feeding schedules.",
+    "productUrl": "https://www.stemcell.com/products/mtesr-plus.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000007758-PIS_02.pdf",
+    "storage": "Basal medium 2-8°C; 5X supplement -20°C; complete medium 2-8°C up to 2 weeks or -20°C up to 6 months",
+    "kitSize": "500 mL kit (100-0276: 400 mL basal + 100 mL 5X supplement) / 1 L kit (100-1130: 800 mL basal + 2 x 100 mL supplement)",
+    "applications": [
+      "hPSC maintenance",
+      "hPSC expansion",
+      "feeder-free culture",
+      "cell therapy development"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells on Matrigel, Vitronectin XF or Laminin-521",
+      "notes": "Weekend-free feeding schedule; stabilized FGF2; cGMP manufactured"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/mtesr-plus.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 100-0276 and 100-1130 present on fetched product page; component numbers 100-0274/100-0275 confirmed on fetched PIS PDF."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "mTeSR1 Pluripotent Stem Cell Maintenance Medium",
+    "catalogNumbers": [
+      "85850",
+      "85857"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Feeder-free hPSC maintenance medium",
+    "description": "cGMP-manufactured, feeder-free maintenance medium for human pluripotent stem cells. Serum-free formulation made with pre-screened raw materials to maintain undifferentiated phenotypes with batch-to-batch consistency.",
+    "productUrl": "https://www.stemcell.com/products/mtesr1.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005505-MAN_04.pdf",
+    "storage": "See Product Information Sheet; supplement stored frozen, basal medium refrigerated",
+    "kitSize": "500 mL kit (85850: 400 mL basal + 100 mL 5X supplement) / 1 L kit (85857: 800 mL basal + 2 x 100 mL supplement)",
+    "applications": [
+      "hPSC maintenance",
+      "reprogramming",
+      "differentiation workflows"
+    ],
+    "keyParameters": {
+      "notes": "Most widely published feeder-free hPSC culture medium; FDA Master File available"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/mtesr1.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 85850 and 85857 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "TeSR-E8 Medium for Maintenance of Human Pluripotent Stem Cells",
+    "catalogNumbers": [
+      "05990"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Animal component-free hPSC maintenance medium",
+    "description": "Feeder-free, animal component-free culture medium for maintenance of hESCs and hiPSCs, based on the E8 formulation from the James Thomson laboratory. Simplified low-protein formulation containing only essential components.",
+    "productUrl": "https://www.stemcell.com/products/tesr-e8.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005516-MAN_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 480 mL basal medium + 20 mL 25X supplement",
+    "applications": [
+      "hPSC maintenance",
+      "hPSC expansion",
+      "xeno-free culture"
+    ],
+    "keyParameters": {
+      "notes": "Compatible with Matrigel hESC-Qualified Matrix, Vitronectin XF or Laminin-521"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/tesr-e8.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05990 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "ReLeSR Human PSC Selection and Passaging Reagent",
+    "catalogNumbers": [
+      "100-0483",
+      "100-0484"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzyme-free hPSC passaging reagent",
+    "description": "cGMP, enzyme-free human pluripotent stem cell selection and passaging reagent. Enables dissociation and passaging of human ES/iPS cells as aggregates without manual selection or scraping.",
+    "productUrl": "https://www.stemcell.com/products/relesr.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "100 mL (100-0483) / 500 mL (100-0484)",
+    "applications": [
+      "hPSC passaging",
+      "selective removal of differentiated cells",
+      "reprogramming",
+      "culture automation"
+    ],
+    "keyParameters": {
+      "notes": "Chemically defined; generates optimally sized aggregates; compatible with closed culture vessels"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/relesr.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 100-0483 and 100-0484 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "Gentle Cell Dissociation Reagent",
+    "catalogNumbers": [
+      "100-0485",
+      "100-1077"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Enzyme-free cell dissociation reagent",
+    "description": "Enzyme-free, cGMP reagent for dissociation of human pluripotent stem cells into cell aggregates for routine passaging or into single-cell suspension. Also used to isolate intestinal crypts and to break up Matrigel domes in organoid culture.",
+    "productUrl": "https://www.stemcell.com/products/gentle-cell-dissociation-reagent.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "100 mL (100-0485) / 500 mL (100-1077)",
+    "applications": [
+      "hPSC dissociation",
+      "routine passaging",
+      "single-cell suspension",
+      "intestinal crypt isolation",
+      "organoid passaging"
+    ],
+    "keyParameters": {
+      "notes": "Chemically defined; used at room temperature; cGMP, ISO 13485 and ISO 9001 manufacturing"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/gentle-cell-dissociation-reagent.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 100-0485 and 100-1077 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "IntestiCult Organoid Growth Medium (Human)",
+    "catalogNumbers": [
+      "06010"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Human intestinal organoid growth medium",
+    "description": "Complete cell culture medium for establishment and maintenance of human intestinal organoids. Supports organoid generation within one week from isolated human intestinal crypts or stem cells.",
+    "productUrl": "https://www.stemcell.com/products/intesticult-organoid-growth-medium-human.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003510-PIS_08.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 50 mL basal medium + 50 mL organoid supplement",
+    "applications": [
+      "intestinal organoid culture",
+      "disease modeling",
+      "drug discovery",
+      "toxicity screening"
+    ],
+    "keyParameters": {
+      "input": "Isolated human intestinal crypts or intestinal stem cells",
+      "time": "Organoids within ~1 week"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/intesticult-organoid-growth-medium-human.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 06010 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "PneumaCult-Ex Plus Medium",
+    "catalogNumbers": [
+      "05040"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Airway epithelial cell expansion medium",
+    "description": "Defined, serum- and bovine pituitary extract (BPE)-free cell culture medium supporting expansion of primary human airway and nasal epithelial cells at each passage. Works with PneumaCult-ALI media for a BPE-free airway culture system.",
+    "productUrl": "https://www.stemcell.com/products/pneumacult-ex-plus-medium.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 490 mL basal medium + 10 mL 50X supplement",
+    "applications": [
+      "primary human bronchial epithelial cell expansion",
+      "pre-ALI expansion",
+      "respiratory research",
+      "toxicity studies"
+    ],
+    "keyParameters": {
+      "notes": "Serum-free and BPE-free; feeds into air-liquid interface (ALI) differentiation"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/pneumacult-ex-plus-medium.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05040 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "CryoStor CS10 Cryopreservation Medium",
+    "catalogNumbers": [
+      "07930",
+      "100-1061"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Defined cryopreservation medium (10% DMSO)",
+    "description": "cGMP-manufactured, animal component-free, defined cryopreservation medium containing 10% DMSO. Ready-to-use, serum-free formulation with USP-grade components for preservation of cells at -70°C to -196°C.",
+    "productUrl": "https://www.stemcell.com/products/cryostor-cs10.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000383-PIS_03.pdf",
+    "storage": "2-8°C; 2-year shelf life from manufacture date",
+    "kitSize": "50 mL, 80 mL, 100 mL, 160 mL, 1000 mL (07930); 100 mL (100-1061)",
+    "applications": [
+      "cryopreservation of hPSCs",
+      "HSPC banking",
+      "T/B/NK cell cryopreservation",
+      "MSC cryopreservation"
+    ],
+    "keyParameters": {
+      "notes": "10% DMSO; storage of frozen cells at -70°C to -196°C"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/cryostor-cs10.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 07930 and 100-1061 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Definitive Endoderm Kit",
+    "catalogNumbers": [
+      "05110"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC definitive endoderm differentiation kit",
+    "description": "Serum-free, animal component-free medium system for efficient differentiation of human ES and iPS cells into definitive endoderm. Produces multipotent endoderm capable of further differentiation toward pancreatic, hepatic, intestinal and pulmonary lineages.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-definitive-endoderm-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003448-PIS_02.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 100 mL endoderm basal medium + 0.35 mL Supplement MR (100X) + 1.1 mL Supplement CJ (100X)",
+    "applications": [
+      "definitive endoderm differentiation",
+      "developmental studies",
+      "disease modeling",
+      "drug discovery"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells",
+      "notes": "Serum-free and animal component-free"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-definitive-endoderm-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05110 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Intestinal Organoid Kit",
+    "catalogNumbers": [
+      "05140"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC-derived intestinal organoid differentiation kit",
+    "description": "Serum-free medium system enabling robust and efficient generation of hPSC-derived intestinal organoids via a three-stage differentiation protocol. Organoids model the developing intestinal epithelium and are long-term expandable.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-intestinal-organoid-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005572-MAN_03.pdf",
+    "storage": "See Technical Manual",
+    "kitSize": "1 kit: Endoderm Basal Medium 100 mL, Definitive Endoderm Supplement CJ 1.1 mL, GI Supplement PK 0.64 mL, GI Supplement UB 0.64 mL, Intestinal Organoid Basal Medium 100 mL, Intestinal Organoid Supplement 2 mL",
+    "applications": [
+      "intestinal organoid generation from hPSCs",
+      "disease modeling",
+      "compound screening",
+      "toxicity testing"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cell lines",
+      "notes": "Three-stage protocol; organoids can be passaged or cryopreserved"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-intestinal-organoid-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05140 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Ventricular Cardiomyocyte Differentiation Kit",
+    "catalogNumbers": [
+      "05010"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC cardiomyocyte differentiation kit",
+    "description": "Serum-free kit supporting differentiation of human pluripotent stem cells into ventricular cardiomyocytes that are greater than 80% cardiac troponin T-positive (cTnT+).",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-cardiomyocyte-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003442-PIS_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: Cardiomyocyte Differentiation Basal Medium 380 mL, Supplements A/B/C (10X) 10/10/20 mL, Cardiomyocyte Maintenance Basal Medium 490 mL, Maintenance Supplement (50X) 10 mL",
+    "applications": [
+      "cardiomyocyte differentiation",
+      "disease modeling",
+      "drug discovery",
+      "cardiac toxicity testing"
+    ],
+    "keyParameters": {
+      "input": "Human pluripotent stem cells",
+      "time": "~15 days",
+      "notes": "~50 million cardiomyocytes from a single well of a 12-well plate; >80% cTnT+"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-cardiomyocyte-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05010 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Cardiomyocyte Maintenance Kit",
+    "catalogNumbers": [
+      "05020"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "hPSC-derived cardiomyocyte maintenance medium",
+    "description": "Serum-free, two-component maintenance medium enabling long-term maintenance of human PSC-derived cardiomyocytes for one month or longer while preserving function. Compatible with cardiomyocytes generated using the STEMdiff Ventricular or Atrial Cardiomyocyte Differentiation Kits.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-cardiomyocyte-maintenance-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000009775-PIS_01.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 490 mL maintenance basal medium + 10 mL 50X maintenance supplement",
+    "applications": [
+      "cardiomyocyte maintenance",
+      "disease modeling",
+      "toxicology",
+      "pharmacology"
+    ],
+    "keyParameters": {
+      "input": "hPSC-derived cardiomyocytes",
+      "time": "Maintenance for 1 month or longer"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-cardiomyocyte-maintenance-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05020 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff SMADi Neural Induction Kit",
+    "catalogNumbers": [
+      "08581",
+      "08582"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC neural induction / NPC differentiation kit",
+    "description": "Serum-free medium kit enabling highly efficient SMAD inhibition-mediated neural induction of human ES and iPS cells to CNS-type neural progenitor cells, while inhibiting non-CNS differentiation. Compatible with embryoid body and monolayer protocols.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-smadi-neural-induction-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005588-MAN_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit (08581): 250 mL Neural Induction Medium + 0.5 mL SMADi supplement; 2-pack (08582): 2 x 250 mL + 2 x 0.5 mL",
+    "applications": [
+      "neural induction",
+      "neural progenitor cell generation",
+      "neuron and glia differentiation",
+      "disease modeling"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells",
+      "notes": "Dual SMAD inhibition; monolayer or embryoid body protocol"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-smadi-neural-induction-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 08581 and 08582 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "MethoCult H4034 Optimum Methylcellulose Medium (Human)",
+    "catalogNumbers": [
+      "04034"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Human hematopoietic CFU (colony-forming unit) assay medium",
+    "description": "Methylcellulose-based semi-solid medium for detection and quantification of human hematopoietic progenitor cells in colony-forming unit (CFU) assays. Supports erythroid (BFU-E, CFU-E), granulocyte-macrophage (CFU-GM, CFU-G, CFU-M) and multipotential (CFU-GEMM) progenitors.",
+    "productUrl": "https://www.stemcell.com/products/methocult-h4034-optimum.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005589-MAN_02.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "72 mL (24 x 3 mL) or 100 mL",
+    "applications": [
+      "CFU assay",
+      "cord blood potency testing",
+      "hematopoietic cell therapy QC",
+      "progenitor function assessment"
+    ],
+    "keyParameters": {
+      "input": "Bone marrow, peripheral blood, cord blood or mobilized peripheral blood cells",
+      "notes": "Contains SCF, IL-3, EPO, G-CSF, GM-CSF in Iscove's MDM with BSA and FBS; dispense with 16-gauge blunt-end needle and 3 cc syringe"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/methocult-h4034-optimum.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 04034 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "HepatiCult Organoid Growth Medium (Human)",
+    "catalogNumbers": [
+      "100-0385"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Human liver organoid growth medium",
+    "description": "Culture medium for long-term expansion and maintenance of human liver organoids. Supports establishment of hepatic organoids from human liver tissue or PSC-derived hepatic cells.",
+    "productUrl": "https://www.stemcell.com/products/hepaticult-organoid-growth-medium-human.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000008300-Initiation_Growth_and_Differentiation_of_Human_Hepati.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 95 mL organoid basal medium + 5 mL organoid growth supplement",
+    "applications": [
+      "liver organoid initiation and expansion",
+      "disease modeling",
+      "drug discovery",
+      "toxicity testing",
+      "96-well high-throughput screening"
+    ],
+    "keyParameters": {
+      "input": "Human liver tissue or hPSC-derived hepatic cells",
+      "notes": "Cryopreservation compatible; supports organoid-derived monolayers on Transwell inserts"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/hepaticult-organoid-growth-medium-human.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 100-0385 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "PneumaCult-ALI Medium",
+    "catalogNumbers": [
+      "05001",
+      "05021",
+      "05022"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Air-liquid interface airway differentiation medium",
+    "description": "Serum- and BPE-free medium for human airway epithelial cells cultured at the air-liquid interface (ALI). Supports extensive mucociliary differentiation into a pseudostratified epithelium resembling native human airways.",
+    "productUrl": "https://www.stemcell.com/products/pneumacult-ali-medium.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: 450 mL ALI basal medium + 50 mL 10X supplement + 5 x 1 mL 100X maintenance supplement; 05021 supplied with 12 mm Transwell inserts, 05022 with 6.5 mm inserts",
+    "applications": [
+      "ALI culture of human bronchial epithelial cells",
+      "mucociliary differentiation",
+      "respiratory disease modeling",
+      "inhalation toxicity testing"
+    ],
+    "keyParameters": {
+      "input": "Expanded primary human airway epithelial cells",
+      "notes": "Serum-free and BPE-free; pairs with PneumaCult-Ex Plus"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/pneumacult-ali-medium.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 05001, 05021 and 05022 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "RosetteSep Human T Cell Enrichment Cocktail",
+    "catalogNumbers": [
+      "15021",
+      "15061"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunodensity negative selection cocktail for T cells",
+    "description": "Immunodensity negative selection cocktail that isolates untouched human T cells directly from whole blood. Tetrameric Antibody Complexes crosslink unwanted cells to red blood cells so they pellet during density gradient centrifugation.",
+    "productUrl": "https://www.stemcell.com/products/rosettesep-human-t-cell-enrichment-cocktail.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "2 mL, processes 40 mL whole blood (15021) / 5 x 2 mL, processes 200 mL whole blood (15061)",
+    "applications": [
+      "T cell isolation from whole blood",
+      "T cell research",
+      "T cell engineering",
+      "flow cytometry"
+    ],
+    "keyParameters": {
+      "input": "Whole blood, buffy coat or leukapheresis sample",
+      "notes": "Typical CD3+ purity 90-97%; use over Lymphoprep or RosetteSep DM-L; combine with SepMate for higher throughput"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/rosettesep-human-t-cell-enrichment-cocktail.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 15021 and 15061 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "SepMate-50 (IVD) Density Gradient Centrifugation Tubes",
+    "catalogNumbers": [
+      "85450",
+      "85460"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "PBMC density gradient separation tube",
+    "description": "Centrifugation tube with an internal insert for rapid PBMC isolation by density gradient centrifugation. The insert eliminates manual layering of blood over the density medium and allows cells to be harvested by pouring.",
+    "productUrl": "https://www.stemcell.com/products/sepmate-50-ivd.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003788-PIS_10.pdf",
+    "storage": "Room temperature",
+    "kitSize": "100 tubes (85450) / 500 tubes (85460), packaged 25 tubes per bag",
+    "applications": [
+      "PBMC isolation from whole blood or bone marrow",
+      "immunology research",
+      "HLA and chimerism analysis"
+    ],
+    "keyParameters": {
+      "input": "4-17 mL sample volume",
+      "time": "10 min centrifugation (brake on)",
+      "notes": "Polypropylene; cGMP manufactured; compatible with RosetteSep cocktails"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/sepmate-50-ivd.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 85450 and 85460 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human T Cell Isolation Kit",
+    "catalogNumbers": [
+      "17951",
+      "100-0695",
+      "17951RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic negative selection kit (pan T cells)",
+    "description": "Column-free immunomagnetic negative selection kit that isolates untouched human T cells from PBMCs or leukapheresis samples by removing cells expressing CD14, CD16, CD19, CD20, CD36, CD56, CD66b, CD123 and GlyA.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-t-cell-isolation-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000005298-PIS_02.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 x 10^9 cells (17951: 1 mL cocktail + 1 mL Dextran RapidSpheres) / 1 x 10^10 cells (100-0695: 10 mL + 10 mL) / RoboSep format (17951RF)",
+    "applications": [
+      "T cell isolation",
+      "flow cytometry",
+      "cell culture and expansion",
+      "DNA/RNA extraction",
+      "T cell therapy development"
+    ],
+    "keyParameters": {
+      "input": "PBMCs or leukapheresis sample",
+      "time": "as little as 8 minutes",
+      "notes": "Up to 98% purity; untouched cells, column-free"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-t-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17951, 100-0695 and 17951RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human CD4+ T Cell Isolation Kit",
+    "catalogNumbers": [
+      "17952",
+      "100-0696",
+      "17952RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic negative selection kit (CD4+ T cells)",
+    "description": "Immunomagnetic negative isolation of untouched human CD4+ T cells from PBMCs or leukapheresis samples. Removes cells expressing CD8, CD14, CD16, CD19, CD20, CD36, CD56, CD66b, CD123, TCR gamma/delta and GlyA.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-cd4-t-cell-isolation-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000005309-PIS_02.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 x 10^9 cells (17952) / 1 x 10^10 cells (100-0696) / RoboSep format (17952RF)",
+    "applications": [
+      "CD4+ T cell isolation",
+      "flow cytometry",
+      "cell culture and expansion",
+      "DNA/RNA extraction"
+    ],
+    "keyParameters": {
+      "input": "PBMCs or leukapheresis sample",
+      "notes": "Typical CD3+CD4+ purity 94.8 +/- 2.3%; untouched, particle-free cells"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-cd4-t-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17952, 100-0696 and 17952RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human CD8+ T Cell Isolation Kit",
+    "catalogNumbers": [
+      "17953",
+      "100-0710",
+      "17953RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic negative selection kit (CD8+ T cells)",
+    "description": "Immunomagnetic negative isolation of untouched human CD8+ T cells from PBMCs or leukapheresis samples using a column-free EasySep magnet procedure.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-cd8-t-cell-isolation-kit.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 x 10^9 cells (17953) / 1 x 10^10 cells (100-0710) / RoboSep format (17953RF)",
+    "applications": [
+      "CD8+ T cell isolation",
+      "flow cytometry",
+      "cytotoxicity and cytokine assays",
+      "CAR-T cell development"
+    ],
+    "keyParameters": {
+      "input": "PBMCs or leukapheresis sample",
+      "time": "as little as 8 minutes",
+      "notes": "Up to 91% purity; typical CD3+CD8+ content 85.6 +/- 4.9%"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-cd8-t-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17953, 100-0710 and 17953RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Direct Human T Cell Isolation Kit",
+    "catalogNumbers": [
+      "19661",
+      "19661RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Whole-blood immunomagnetic T cell isolation kit",
+    "description": "Immunomagnetic negative selection kit that isolates untouched human T cells directly from whole blood without density gradient centrifugation, RBC lysis or sedimentation, using EasySep Direct RapidSpheres.",
+    "productUrl": "https://www.stemcell.com/products/easysep-direct-human-t-cell-isolation-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000907-PIS_03.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "Processes 100 mL whole blood (19661); RoboSep format with filter tips (19661RF)",
+    "applications": [
+      "T cell isolation from whole blood",
+      "functional assays",
+      "flow cytometry",
+      "cell therapy development"
+    ],
+    "keyParameters": {
+      "input": "Fresh whole blood",
+      "time": "~20-30 minutes depending on magnet",
+      "notes": "Up to 97% T cell purity; >99.9% RBC depletion without lysis"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-direct-human-t-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 19661 and 19661RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human CD34 Positive Selection Kit II",
+    "catalogNumbers": [
+      "17856",
+      "100-1569",
+      "17856RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic positive selection kit (CD34+ cells)",
+    "description": "Column-free immunomagnetic positive selection of highly purified human CD34+ cells from bone marrow, mobilized peripheral blood, cord blood or pluripotent stem cell cultures using antibody complexes and an EasySep magnet.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-cd34-positive-selection-kit-ii.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "5 x 10^9 cells (17856) / 1 x 10^10 cells (100-1569) / RoboSep format (17856RF)",
+    "applications": [
+      "CD34+ HSPC isolation",
+      "flow cytometry",
+      "downstream culture and molecular analysis",
+      "chimerism analysis"
+    ],
+    "keyParameters": {
+      "input": "Bone marrow, mobilized peripheral blood, cord blood or hPSC culture",
+      "notes": "Typical CD34+ purity 93.5 +/- 1.1%; no columns required"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-cd34-positive-selection-kit-ii.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17856, 100-1569 and 17856RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human NK Cell Isolation Kit",
+    "catalogNumbers": [
+      "17955",
+      "100-0960",
+      "17955RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic negative selection kit (NK cells)",
+    "description": "Immunomagnetic negative isolation of untouched human NK cells from PBMCs or leukapheresis samples using a fast, column-free magnetic separation procedure.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-nk-cell-isolation-kit.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 x 10^9 cells (17955) / 1 x 10^10 cells (100-0960) / RoboSep format (17955RF)",
+    "applications": [
+      "NK cell isolation",
+      "flow cytometry",
+      "cell culture and expansion",
+      "DNA/RNA extraction"
+    ],
+    "keyParameters": {
+      "input": "PBMCs or leukapheresis sample",
+      "time": "~8-9 minutes",
+      "notes": "Purity up to 94% (typical 85.0 +/- 8.0%)"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-nk-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17955, 100-0960 and 17955RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Human B Cell Isolation Kit",
+    "catalogNumbers": [
+      "17954",
+      "100-0971",
+      "17954RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Immunomagnetic negative selection kit (B cells)",
+    "description": "Immunomagnetic negative isolation of untouched human B cells from PBMCs or leukapheresis samples by depleting cells expressing CD2, CD3, CD14, CD16, CD36, CD43, CD56, CD66b and GlyA.",
+    "productUrl": "https://www.stemcell.com/products/easysep-human-b-cell-isolation-kit.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 x 10^9 cells (17954) / 1 x 10^10 cells (100-0971) / RoboSep format (17954RF)",
+    "applications": [
+      "B cell isolation",
+      "flow cytometry",
+      "cell culture and expansion",
+      "DNA/RNA extraction"
+    ],
+    "keyParameters": {
+      "input": "PBMCs or leukapheresis sample",
+      "time": "as little as 9 minutes",
+      "notes": "Purity up to 96%; kit contains isolation cocktail, Dextran RapidSpheres and cocktail enhancer"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-human-b-cell-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 17954, 100-0971 and 17954RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "EasySep Direct Human PBMC Isolation Kit",
+    "catalogNumbers": [
+      "19654",
+      "19654RF"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Whole-blood immunomagnetic PBMC isolation kit",
+    "description": "Immunomagnetic negative isolation of untouched human PBMCs directly from fresh whole blood, buffy coat, bone marrow, cord blood or leukapheresis product without density gradient centrifugation or RBC lysis.",
+    "productUrl": "https://www.stemcell.com/products/easysep-direct-human-pbmc-isolation-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003347-PIS_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "Processes 100 mL whole blood (19654); RoboSep format (19654RF)",
+    "applications": [
+      "PBMC isolation",
+      "flow cytometry",
+      "cell culture",
+      "DNA/RNA extraction",
+      "HLA analysis"
+    ],
+    "keyParameters": {
+      "input": "Fresh whole blood, buffy coat, bone marrow, cord blood or leukapheresis product",
+      "notes": "99.9% RBC depletion; removes granulocytes, platelets and RBCs"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/easysep-direct-human-pbmc-isolation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 19654 and 19654RF present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "ImmunoCult Human CD3/CD28 T Cell Activator",
+    "catalogNumbers": [
+      "10971",
+      "10991"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Soluble antibody T cell activation reagent",
+    "description": "Soluble anti-human CD3 and CD28 monospecific antibody complexes that activate and expand human T cells without magnetic beads, feeder cells or antigen, while maintaining high cell viability.",
+    "productUrl": "https://www.stemcell.com/products/immunocult-human-cd3-cd28-t-cell-activator.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "2 mL (10971) / 10 mL (10991)",
+    "applications": [
+      "T cell activation and expansion",
+      "cell culture and characterization",
+      "drug discovery and toxicity testing",
+      "cell therapy development"
+    ],
+    "keyParameters": {
+      "input": "Purified human T cells or PBMCs",
+      "notes": "Bead-free and feeder-free; pairs with ImmunoCult-XF T Cell Expansion Medium"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/immunocult-human-cd3-cd28-t-cell-activator.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 10971 and 10991 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "StemSpan SFEM II Serum-Free Expansion Medium",
+    "catalogNumbers": [
+      "09605",
+      "09655"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free hematopoietic cell expansion medium",
+    "description": "Serum-free medium for culture and expansion of hematopoietic cells isolated from human cord blood, bone marrow or mobilized peripheral blood. Contains Iscove's MDM, bovine serum albumin, recombinant human insulin, iron-saturated human transferrin and 2-mercaptoethanol.",
+    "productUrl": "https://www.stemcell.com/products/stemspan-sfem-ii.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000430-PIS_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "100 mL or 500 mL",
+    "applications": [
+      "CD34+ cell expansion",
+      "erythroid, myeloid and megakaryocyte differentiation",
+      "genome editing workflows",
+      "cell therapy development"
+    ],
+    "keyParameters": {
+      "input": "Cord blood, bone marrow or mobilized peripheral blood hematopoietic cells",
+      "notes": "Cytokine-free base; supplement with cytokines as required"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemspan-sfem-ii.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 09605 and 09655 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "ClonaCell-HY Hybridoma Kit",
+    "catalogNumbers": [
+      "03800"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Semi-solid medium hybridoma generation kit",
+    "description": "Complete kit for hybridoma generation that combines selection and cloning into a single step using a methylcellulose-based semi-solid medium, so individual hybridomas grow as discrete single-cell-derived colonies.",
+    "productUrl": "https://www.stemcell.com/products/clonacell-hy-hybridoma-kit.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: Medium A 500 mL, Medium B 500 mL, Medium C 100 mL, Medium D 90 mL, Medium E 500 mL, ClonaCell-HY PEG 1.5 mL",
+    "applications": [
+      "hybridoma generation",
+      "monoclonal antibody production",
+      "cell line development"
+    ],
+    "keyParameters": {
+      "input": "Mouse or rat splenocytes plus myeloma fusion partner",
+      "notes": "Selection and cloning combined in one step; colonies picked directly from semi-solid medium"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/clonacell-hy-hybridoma-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 03800 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "MethoCult GF M3434 Methylcellulose Medium (Mouse)",
+    "catalogNumbers": [
+      "03434"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Mouse hematopoietic CFU assay medium",
+    "description": "Methylcellulose-based medium with recombinant cytokines including EPO for mouse hematopoietic cells. Supports growth and enumeration of BFU-E, CFU-GM, CFU-G, CFU-M and CFU-GEMM progenitors.",
+    "productUrl": "https://www.stemcell.com/products/methocult-gf-m3434.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/manual/10000005597-Mouse_Colony_Forming_Unit_Assays_Using_MethoCult.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "72 mL or 100 mL",
+    "applications": [
+      "mouse CFU assay",
+      "hematopoietic progenitor enumeration",
+      "functional assays",
+      "drug discovery and toxicity testing"
+    ],
+    "keyParameters": {
+      "input": "Mouse bone marrow, spleen, peripheral blood or fetal liver cells",
+      "notes": "Pre-formulated with recombinant cytokines including EPO"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/methocult-gf-m3434.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 03434 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "BrainPhys Neuronal Medium",
+    "catalogNumbers": [
+      "05790"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free neurophysiological basal medium",
+    "description": "Serum-free neurophysiological basal medium formulated to mimic the CNS extracellular environment and support long-term culture of primary CNS-derived and hPSC-derived neurons with improved synaptic activity.",
+    "productUrl": "https://www.stemcell.com/products/brainphys-neuronal-medium.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000225-PIS_04.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "500 mL",
+    "applications": [
+      "long-term neuronal culture",
+      "hPSC-derived neuron maturation",
+      "microelectrode array recording",
+      "calcium imaging",
+      "disease modeling"
+    ],
+    "keyParameters": {
+      "input": "Primary CNS neurons or hPSC-derived neurons",
+      "notes": "Requires pairing with a serum-replacement supplement such as NeuroCult SM1"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/brainphys-neuronal-medium.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05790 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "NeuroCult SM1 Neuronal Supplement",
+    "catalogNumbers": [
+      "05711",
+      "100-1281"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "50X serum-free neuronal culture supplement",
+    "description": "50X supplement for the serum-free culture of neurons, containing antioxidants, vitamin A, insulin and other components that support neuron survival and maturation of CNS-derived or hPSC-derived neurons.",
+    "productUrl": "https://www.stemcell.com/products/neurocult-sm1-neuronal-supplement.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000210-PIS_01.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "10 mL or 100 mL",
+    "applications": [
+      "primary neuron culture",
+      "hPSC-derived neuron differentiation and maturation",
+      "drug discovery and toxicity assays",
+      "calcium imaging"
+    ],
+    "keyParameters": {
+      "notes": "50X concentrate; compatible with BrainPhys and other basal media"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/neurocult-sm1-neuronal-supplement.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 05711 and 100-1281 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Cerebral Organoid Kit",
+    "catalogNumbers": [
+      "08570"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC cerebral (brain) organoid differentiation kit",
+    "description": "Defined, serum-free culture medium system for generating self-organized, pluripotent stem cell-derived cerebral organoids using a four-stage protocol based on the Lancaster et al. method. Organoids develop cortical-like regions including ventricular, subventricular and intermediate zones and a cortical plate.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-cerebral-organoid-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003530-PIS_06.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: Cerebral Organoid Basal Medium 1 (1100 mL), Basal Medium 2 (250 mL), Supplements A-E (0.25-10 mL)",
+    "applications": [
+      "cerebral organoid generation",
+      "neuroscience research",
+      "disease modeling",
+      "drug discovery and toxicity testing"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells",
+      "notes": "Four-stage protocol (EB formation, induction, expansion, maturation)"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-cerebral-organoid-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 08570 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Trilineage Differentiation Kit",
+    "catalogNumbers": [
+      "05230"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC pluripotency functional validation assay",
+    "description": "Culture assay to functionally validate the ability of new or established human ES and iPS cell lines to differentiate to the three germ layers. Monolayer-based endpoint assay completed within one week.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-trilineage-differentiation-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003454-PIS_03.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: Trilineage Ectoderm Medium 175 mL, Mesoderm Medium 100 mL, Endoderm Medium 100 mL",
+    "applications": [
+      "pluripotency validation",
+      "hPSC line characterization",
+      "quality control",
+      "functional assay"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells",
+      "time": "~1 week",
+      "notes": "Monolayer protocol; endpoint assay for ectoderm, mesoderm and endoderm"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-trilineage-differentiation-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05230 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "STEMdiff Hematopoietic Kit",
+    "catalogNumbers": [
+      "05310"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "hPSC hematopoietic progenitor differentiation kit",
+    "description": "Serum-free, feeder-free kit for differentiation of human ES or iPS cells into hematopoietic progenitor cells. After 12 days of culture, cells typically yield 25-65% (average 43%) CD34+CD45+ progenitors with colony-forming capacity.",
+    "productUrl": "https://www.stemcell.com/products/stemdiff-hematopoietic-kit.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000003456-PIS_03.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "1 kit: Hematopoietic Basal Medium 120 mL, Supplement A (200X) 225 µL, Supplement B (200X) 375 µL",
+    "applications": [
+      "hematopoietic progenitor differentiation",
+      "cell therapy development",
+      "hematopoiesis research"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cells",
+      "time": "12 days",
+      "notes": "25-65% CD34+CD45+ (average 43%); serum-free and feeder-free"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/stemdiff-hematopoietic-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05310 present on fetched product page."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "MammoCult Human Medium Kit",
+    "catalogNumbers": [
+      "05620"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Mammosphere / tumorsphere culture medium",
+    "description": "Serum-free, estrogen- and progesterone-free culture medium optimized for culture of mammospheres from normal human primary breast tissue and tumorspheres from human breast cancer cell lines.",
+    "productUrl": "https://www.stemcell.com/products/mammocult-human-medium-kit.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "500 mL kit: 450 mL MammoCult Basal Medium (Human) + 50 mL MammoCult Proliferation Supplement (Human)",
+    "applications": [
+      "mammosphere culture",
+      "tumorsphere culture",
+      "cancer research",
+      "epithelial cell biology"
+    ],
+    "keyParameters": {
+      "input": "Normal human primary breast tissue or breast cancer cell lines",
+      "notes": "Requires separately sold Hydrocortisone Stock Solution (07925) and Heparin Solution (07980)"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/mammocult-human-medium-kit.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog number 05620 present on fetched product page (plus add-in reagents 07925 and 07980)."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "mFreSR Cryopreservation Medium for Human ES and iPS Cells",
+    "catalogNumbers": [
+      "05854",
+      "05855"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Serum-free hPSC cryopreservation medium",
+    "description": "Serum-free, ready-to-use cryopreservation medium containing DMSO, designed for cryopreservation of human embryonic and induced pluripotent stem cells.",
+    "productUrl": "https://www.stemcell.com/products/mfresr.html",
+    "protocolUrl": "https://cdn.stemcell.com/media/files/pis/10000000238-PIS_01.pdf",
+    "storage": "See Product Information Sheet",
+    "kitSize": "50 mL (05854); larger format (05855)",
+    "applications": [
+      "hPSC cryopreservation",
+      "stem cell banking"
+    ],
+    "keyParameters": {
+      "input": "Human ES/iPS cell aggregates",
+      "notes": "Reported thawing efficiencies 5- to 10-fold over other methods; compatible with mTeSR1 and mTeSR Plus"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/mfresr.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 05854 and 05855 present on fetched product page and its PIS/SDS listings."
+  },
+  {
+    "vendor": "STEMCELL Technologies",
+    "vendorShort": "STEMCELL",
+    "productName": "Lymphoprep Density Gradient Medium",
+    "catalogNumbers": [
+      "07801",
+      "07811",
+      "07861",
+      "18060",
+      "18061"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Density gradient medium for mononuclear cell isolation",
+    "description": "Density gradient medium containing diatrizoic acid dihydrate (9.1% w/v) and polysaccharide (5.7% w/v) with a density of 1.077 g/mL, used to isolate mononuclear cells from peripheral blood, cord blood and bone marrow.",
+    "productUrl": "https://www.stemcell.com/products/lymphoprep.html",
+    "storage": "See Product Information Sheet",
+    "kitSize": "250 mL, 500 mL, 1000 mL and 3000 mL formats",
+    "applications": [
+      "PBMC isolation",
+      "cord blood and bone marrow mononuclear cell isolation",
+      "immunology research"
+    ],
+    "keyParameters": {
+      "notes": "Density 1.077 g/mL; sterile and endotoxin tested; compatible with SepMate and RosetteSep; ISO 9001:2015 and ISO 13485 manufacturing"
+    },
+    "sourceUrl": "https://www.stemcell.com/products/lymphoprep.html",
+    "retrievedAt": "2026-08-20",
+    "verified": true,
+    "verificationNote": "Catalog numbers 07801, 07811, 07861, 18060 and 18061 present on fetched product page."
+  }
+]

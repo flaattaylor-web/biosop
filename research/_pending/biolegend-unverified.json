@@ -1,0 +1,603 @@
+[
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Human IL-6",
+    "catalogNumbers": [
+      "430504"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of human IL-6, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/430504.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Human IFN-γ",
+    "catalogNumbers": [
+      "430104"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of human IFN-γ, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/430104.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Human TNF-α",
+    "catalogNumbers": [
+      "430204"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of human TNF-α, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/430204.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Human IL-1β",
+    "catalogNumbers": [
+      "437004"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of human IL-1β, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/437004.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "TotalSeq-B Human Universal Cocktail, V1.0",
+    "catalogNumbers": [
+      "399904"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Antibody-oligonucleotide conjugate panel for single-cell multi-omics",
+    "description": "Pre-mixed panel of TotalSeq-B antibody-oligonucleotide conjugates for simultaneous surface-protein and transcriptome profiling of human cells (proteogenomics) on 10x Genomics 3' feature barcoding workflows.",
+    "productUrl": "https://www.biolegend.com/en-us/products/totalseq-b-human-universal-cocktail-v1dot0-20960",
+    "kitSize": "5 tests",
+    "applications": [
+      "single-cell proteogenomics",
+      "CITE-seq style surface protein profiling"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/399904.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "TotalSeq-C Human Universal Cocktail, V1.0",
+    "catalogNumbers": [
+      "399905"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Antibody-oligonucleotide conjugate panel for single-cell multi-omics",
+    "description": "Pre-mixed panel of TotalSeq-C antibody-oligonucleotide conjugates for human single-cell surface-protein profiling alongside 5' gene expression and immune repertoire workflows.",
+    "productUrl": "https://www.biolegend.com/en-us/products/totalseq-c-human-universal-cocktail-v1-0-19736",
+    "kitSize": "5 tests",
+    "applications": [
+      "single-cell proteogenomics",
+      "5' gene expression with feature barcoding"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/399905.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "TotalSeq-B Human TBNK Cocktail",
+    "catalogNumbers": [
+      "399902"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Antibody-oligonucleotide conjugate panel for single-cell multi-omics",
+    "description": "TotalSeq-B antibody-oligonucleotide cocktail targeting core T, B and NK lineage markers (including CD4, CD19, CD3ε, CD16, CD56, CD14, CD8 and CD45) for single-cell proteogenomics.",
+    "productUrl": "https://www.biolegend.com/en-us/products/totalseq-b-human-tbnk-cocktail-19243",
+    "kitSize": "5 tests",
+    "applications": [
+      "single-cell proteogenomics",
+      "immune cell phenotyping"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/399902.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Human CD4 T Cell Isolation Kit",
+    "catalogNumbers": [
+      "480009",
+      "480010"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched CD4+ T cells from human PBMCs by negative selection; each lot is individually optimised and components should not be mixed between lots.",
+    "productUrl": "https://www.biolegend.com/en-us/products/mojosort-human-cd4-t-cell-isolation-kit-11873",
+    "kitSize": "10 tests (480009) / 100 tests (480010)",
+    "applications": [
+      "untouched CD4+ T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480010.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Human CD8 T Cell Isolation Kit",
+    "catalogNumbers": [
+      "480012"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched CD8+ T cells from human PBMCs by negative selection.",
+    "productUrl": "https://www.biolegend.com/en-us/products/mojosort-human-cd8-t-cell-isolation-kit-11874",
+    "kitSize": "100 tests",
+    "applications": [
+      "untouched CD8+ T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480012.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Streptavidin Nanobeads",
+    "catalogNumbers": [
+      "480016"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic streptavidin nanobeads for cell separation",
+    "description": "Streptavidin-conjugated magnetic nanobeads for positive or negative isolation of cells when used with biotin-conjugated antibodies or similar biotinylated reagents.",
+    "productUrl": "https://www.biolegend.com/en-us/products/mojosort-streptavidin-nanobeads-11877",
+    "kitSize": "1 mL",
+    "applications": [
+      "positive selection",
+      "negative selection",
+      "custom magnetic cell separation"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480016.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "True-Nuclear Transcription Factor Buffer Set",
+    "catalogNumbers": [
+      "424401"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Fixation/permeabilisation buffer set for nuclear antigens",
+    "description": "Buffer set containing True-Nuclear 4X Fix Concentrate (30 mL), True-Nuclear Fix Diluent (100 mL) and True-Nuclear 10X Perm Buffer (100 mL) for staining transcription factors and other nuclear antigens.",
+    "productUrl": "https://www.biolegend.com/en-us/products/true-nuclear-transcription-factor-buffer-set-10859",
+    "kitSize": "120 tests",
+    "applications": [
+      "intracellular/nuclear staining for flow cytometry",
+      "transcription factor staining"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/424401.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "True-Phos Perm Buffer",
+    "catalogNumbers": [
+      "425401"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Permeabilisation buffer for phospho-epitope staining",
+    "description": "Permeabilisation buffer used after fixation for intracellular staining of phosphorylated proteins by flow cytometry.",
+    "productUrl": "https://www.biolegend.com/en-us/products/true-phos-perm-buffer-11205",
+    "kitSize": "125 mL",
+    "applications": [
+      "phospho-flow cytometry",
+      "intracellular signalling analysis"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/425401.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Cell Activation Cocktail (with Brefeldin A)",
+    "catalogNumbers": [
+      "423304"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Polyclonal cell stimulation cocktail",
+    "description": "PMA/ionomycin stimulation cocktail supplied with Brefeldin A for activating cells prior to intracellular cytokine staining; cells are typically incubated at 37 °C for about 6 hours.",
+    "productUrl": "https://www.biolegend.com/en-us/products/cell-activation-cocktail-with-brefeldin-a-9407",
+    "kitSize": "400 µL",
+    "applications": [
+      "intracellular cytokine staining",
+      "surface and intracellular flow staining",
+      "ELISA of stimulated supernatants"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/423304.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Cell Staining Buffer",
+    "catalogNumbers": [
+      "420201"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Flow cytometry staining and wash buffer",
+    "description": "Ready-to-use staining and washing buffer for antibody labelling of cells for flow cytometry and immunocytochemistry.",
+    "productUrl": "https://www.biolegend.com/en-us/products/cell-staining-buffer-1494",
+    "kitSize": "500 mL",
+    "applications": [
+      "flow cytometry staining and washing",
+      "immunocytochemistry"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/420201.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Recombinant Human IL-2 (carrier-free)",
+    "catalogNumbers": [
+      "589102"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine for cell culture",
+    "description": "Carrier-free recombinant human IL-2 produced in insect cells and supplied as a biologically active liquid formulation for in vitro assays.",
+    "productUrl": "https://www.biolegend.com/en-us/products/recombinant-human-il-2-carrier-free-6992",
+    "kitSize": "10 µg",
+    "applications": [
+      "T cell culture and expansion",
+      "in vitro bioassays"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/589102.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Recombinant Human IFN-γ (carrier-free)",
+    "catalogNumbers": [
+      "570202"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine for cell culture",
+    "description": "Carrier-free recombinant human IFN-γ produced in E. coli, supplied as a liquid formulation shipped on blue ice for in vitro bioassays.",
+    "productUrl": "https://www.biolegend.com/en-us/products/recombinant-human-ifn-gamma-carrier-free-4173",
+    "kitSize": "10 µg",
+    "applications": [
+      "cell stimulation",
+      "in vitro bioassays"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/570202.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Human IL-2",
+    "catalogNumbers": [
+      "431804"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of human IL-2, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/431804.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "ELISA MAX Deluxe Set Mouse IL-2",
+    "catalogNumbers": [
+      "431004"
+    ],
+    "category": "Western Blot & Immunoassay",
+    "subcategory": "Sandwich ELISA set",
+    "description": "ELISA MAX Deluxe Set for quantification of mouse IL-2, supplied with capture and detection antibodies, standard, plates and all buffers required to run the assay.",
+    "kitSize": "5 plates",
+    "applications": [
+      "ELISA",
+      "cytokine quantification"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/431004.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Mouse CD4 T Cell Isolation Kit",
+    "catalogNumbers": [
+      "480006"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched CD4+ T cells from mouse lymphoid tissues by negative selection.",
+    "kitSize": "100 tests",
+    "applications": [
+      "untouched mouse CD4+ T cell isolation from lymphoid tissue"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480006.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Mouse CD8 T Cell Isolation Kit",
+    "catalogNumbers": [
+      "480008"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched CD8+ T cells from mouse lymphoid tissues by negative selection.",
+    "kitSize": "100 tests",
+    "applications": [
+      "untouched mouse CD8+ T cell isolation from lymphoid tissue"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480008.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Mouse Hematopoietic Progenitor Cell Isolation Kit",
+    "catalogNumbers": [
+      "480004"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched haematopoietic stem/progenitor cells (HSC/HPC) from mouse bone marrow by negative selection.",
+    "kitSize": "100 tests",
+    "applications": [
+      "untouched mouse HSC/HPC isolation from bone marrow"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480004.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Human CD3 T Cell Isolation Kit",
+    "catalogNumbers": [
+      "480021"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched CD3+ T cells from human PBMCs; expected purity >95% CD3+ cells after separation of PBMCs from healthy donors by flow cytometry.",
+    "kitSize": "10 tests",
+    "applications": [
+      "untouched pan T cell isolation from PBMC"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480021.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "MojoSort Human Pan Monocyte Isolation Kit",
+    "catalogNumbers": [
+      "480060"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Magnetic negative-selection cell isolation kit",
+    "description": "Magnetic nanobead kit for isolation of untouched pan monocytes from human PBMCs by negative selection.",
+    "kitSize": "200 tests",
+    "applications": [
+      "untouched monocyte isolation from PBMC"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/480060.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "TotalSeq-A0251 anti-human Hashtag 1 Antibody",
+    "catalogNumbers": [
+      "394601"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Cell hashing antibody-oligonucleotide conjugate",
+    "description": "TotalSeq-A conjugated antibody cocktail against CD298 and β2-microglobulin (clones LNH-94 and 2M2) carrying hashtag barcode 1, used to label a sample for multiplexed single-cell sequencing.",
+    "productUrl": "https://www.biolegend.com/en-us/products/totalseq-a0251-anti-human-hashtag-1-16080",
+    "kitSize": "10 µg",
+    "applications": [
+      "cell hashing",
+      "sample multiplexing for single-cell RNA-seq"
+    ],
+    "keyParameters": {
+      "notes": "Mouse IgG1, κ; clone LNH-94; 2M2"
+    },
+    "sourceUrl": "https://www.labome.com/product/BioLegend/394601.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "TotalSeq-C0251 anti-human Hashtag 1 Antibody",
+    "catalogNumbers": [
+      "394661"
+    ],
+    "category": "Single-Cell & Spatial",
+    "subcategory": "Cell hashing antibody-oligonucleotide conjugate",
+    "description": "TotalSeq-C conjugated antibody against CD298/β2-microglobulin (clones LNH-94 and 2M2) carrying hashtag barcode 1, for sample multiplexing in 10x 5' single-cell workflows.",
+    "productUrl": "https://www.biolegend.com/en-us/products/totalseq-c0251-anti-human-hashtag-1-19604",
+    "kitSize": "10 µg",
+    "applications": [
+      "cell hashing",
+      "sample multiplexing for single-cell RNA-seq"
+    ],
+    "keyParameters": {
+      "notes": "Mouse IgG1, κ; clone LNH-94; 2M2"
+    },
+    "sourceUrl": "https://www.labome.com/product/BioLegend/394661.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Recombinant Human TNF-α (carrier-free)",
+    "catalogNumbers": [
+      "570104"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine for cell culture",
+    "description": "Carrier-free recombinant human TNF-α produced in E. coli and supplied as a liquid formulation shipped on blue ice for in vitro bioassays.",
+    "productUrl": "https://www.biolegend.com/en-us/products/recombinant-human-tnf-alpha-carrier-free-4142",
+    "kitSize": "50 µg",
+    "applications": [
+      "cell stimulation",
+      "in vitro bioassays"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/570104.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Recombinant Human GM-CSF (carrier-free)",
+    "catalogNumbers": [
+      "572904"
+    ],
+    "category": "Cell Culture & Transfection",
+    "subcategory": "Recombinant cytokine for cell culture",
+    "description": "Carrier-free recombinant human GM-CSF (CSF2) produced in E. coli, supplied as a liquid formulation shipped on blue ice.",
+    "productUrl": "https://www.biolegend.com/en-us/products/recombinant-human-gm-csf-carrier-free-6315",
+    "kitSize": "100 µg",
+    "applications": [
+      "monocyte-derived dendritic cell and macrophage culture",
+      "in vitro bioassays"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/572904.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "Intracellular Staining Perm Wash Buffer (10X)",
+    "catalogNumbers": [
+      "421002"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Permeabilisation wash buffer",
+    "description": "10X concentrated permeabilisation wash buffer used during intracellular staining protocols; crystallisation or precipitation on storage at 2–8 °C is normal and does not affect performance.",
+    "productUrl": "https://www.biolegend.com/en-us/products/intracellular-staining-permeabilization-wash-buffer-10x-1519",
+    "kitSize": "100 mL",
+    "applications": [
+      "intracellular flow cytometry",
+      "immunocytochemistry",
+      "immunohistochemistry"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/421002.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  },
+  {
+    "vendor": "BioLegend",
+    "vendorShort": "BioLegend",
+    "productName": "FOXP3 Fix/Perm Buffer Set",
+    "catalogNumbers": [
+      "421403"
+    ],
+    "category": "Cell Analysis & Viability",
+    "subcategory": "Fixation/permeabilisation buffer set for nuclear antigens",
+    "description": "Fixation and permeabilisation buffer set for intracellular flow cytometric detection of FOXP3 and other nuclear antigens.",
+    "productUrl": "https://www.biolegend.com/en-us/products/foxp3-fix-perm-buffer-set-2915",
+    "kitSize": "100 tests",
+    "applications": [
+      "FOXP3 intracellular staining",
+      "regulatory T cell analysis by flow cytometry"
+    ],
+    "sourceUrl": "https://www.labome.com/product/BioLegend/421403.html",
+    "retrievedAt": "2026-08-20",
+    "verified": false,
+    "verificationNote": "Catalog number confirmed on a third-party product page (www.labome.com), not on a fetched BioLegend page. www.biolegend.com returns HTTP 403 to automated fetching and its datasheet PDFs are robots-blocked. Treat as unconfirmed until checked against the vendor site."
+  }
+]
