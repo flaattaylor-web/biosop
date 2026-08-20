@@ -258,6 +258,28 @@ export async function searchPubmed(query: string, retmax = 5): Promise<ResolvedR
 const VERIFY_THRESHOLD = 0.6;
 const MISMATCH_THRESHOLD = 0.3;
 
+/**
+ * Not every legitimate reference is a journal article. A WHO manual, a pharmacopoeia chapter or a
+ * vendor protocol will never appear in Crossref or PubMed, and reporting them as "may not exist"
+ * puts a fabrication flag on the most authoritative source a protocol can cite. Recognise them and
+ * say plainly that they need checking at the source instead.
+ */
+const INSTITUTIONAL_HOSTS = [
+  'who.int', 'cdc.gov', 'fda.gov', 'nih.gov', 'nist.gov', 'epa.gov', 'ema.europa.eu', 'ich.org',
+  'iso.org', 'usp.org', 'oecd.org', 'clsi.org', 'ecdc.europa.eu', 'oie.int', 'woah.org',
+  'nanoporetech.com', 'illumina.com', 'neb.com', 'thermofisher.com', 'qiagen.com', 'promega.com',
+  'takarabio.com', 'beckman.com', 'agilent.com', 'bio-rad.com', 'zymoresearch.com', 'pacb.com',
+  '10xgenomics.com', 'twistbioscience.com', 'idtdna.com', 'protocols.io',
+];
+
+const INSTITUTIONAL_NAMES = /world health organization|\bwho\b|centers for disease control|\bcdc\b|food and drug administration|european medicines agency|international organization for standardization|pharmacopeia|pharmacopoeia|\bclsi\b|\bich\b guideline|laboratory biosafety manual|oxford nanopore|illumina|new england biolabs|thermo fisher|qiagen|promega|takara|beckman coulter|agilent|bio-rad/i;
+
+function institutionalSource(citation: string, url: string): string | null {
+  const host = INSTITUTIONAL_HOSTS.find((h) => url.toLowerCase().includes(h));
+  if (host) return host;
+  return INSTITUTIONAL_NAMES.test(citation) ? 'a standards body or manufacturer' : null;
+}
+
 /** Best title match across Crossref then PubMed, and whether any registry answered at all. */
 async function searchByTitle(title: string): Promise<{ best: { rec: ResolvedRecord; sim: number } | null; reachable: boolean }> {
   let reachable = false;
@@ -330,7 +352,17 @@ export async function verifyCitation(ref: { citation: string; doiOrUrl?: string 
     };
   }
 
-  // Path 2: no DOI. Search by title in Crossref, then PubMed.
+  // Path 2: no DOI.
+  const institution = institutionalSource(citation, ref.doiOrUrl || '');
+  if (institution) {
+    return {
+      status: 'UNCHECKED',
+      confidence: 0,
+      note: `This is a document from ${institution === 'a standards body or manufacturer' ? institution : institution}, not a journal article, so it is not indexed in Crossref or PubMed. Confirm it against the source URL — absence from a registry says nothing about a document of this kind.`,
+    };
+  }
+
+  // Search by title in Crossref, then PubMed.
   if (claimedTitle.length < 10) {
     return { status: 'NOT_FOUND', confidence: 0, note: 'Citation is too short to search.' };
   }
