@@ -82,6 +82,127 @@ const BLANK_STARTER_TITLE = 'N/A — start from a blank description';
  * the Covaris/SPRI starter meant every de novo run inherited acoustic shearing whether or not the
  * protocol should have it — including direct RNA runs, where shearing is contraindicated.
  */
+/**
+ * The de novo studio used to assume every protocol was a reagent-assembly workflow: the category
+ * defaulted to Next-Generation Sequencing, the placeholder asked about shearing and bead ratios,
+ * and every quick-add chip was a molecular biology directive. Asked for a TCID50 titration or an
+ * H&E stain, a user had nowhere to put the parameters that actually matter, and the generator was
+ * prompted for the wrong ones.
+ */
+export const DISCIPLINES = [
+  'Molecular Biology',
+  'Next-Generation Sequencing',
+  'Virology',
+  'Cell Culture',
+  'Proteomics & Protein Biochemistry',
+  'Immunology & Immunoassay',
+  'Microbiology',
+  'Histology & Imaging',
+  'Biochemistry & Enzymology',
+  'Analytical Chemistry',
+  'Other',
+] as const;
+
+const CHIPS_BY_DISCIPLINE: Record<string, { label: string; snippet: string }[]> = {
+  'Virology': [
+    { label: '🦠 Cell line & MOI', snippet: 'Specify the permissive cell line, seeding density per well, and the infection dose as MOI or as a ten-fold dilution series.' },
+    { label: '🧫 CPE scoring criteria', snippet: 'Define what counts as cytopathic effect, at what magnification it is scored, and on which day post-infection.' },
+    { label: '📐 Reed-Muench / Spearman-Karber', snippet: 'Calculate the 50% endpoint by the Reed-Muench method and state the volume inoculated alongside the titre.' },
+    { label: '🧪 Overlay & fixation', snippet: 'Include the semi-solid overlay composition, the fixation time in 4% formaldehyde, and the crystal violet staining step.' },
+    { label: '🛡️ Containment controls', snippet: 'Include uninfected cell control wells and a reference virus stock of known titre on every plate.' },
+  ],
+  'Cell Culture': [
+    { label: '🧫 Seeding density & confluence', snippet: 'State the seeding density per well or flask, the vessel format, and the confluence required on the day of the experiment.' },
+    { label: '🌡️ Incubation conditions', snippet: 'Give incubation temperature, CO2 percentage, humidity and duration explicitly for every incubation step.' },
+    { label: '🧬 Passage limits & provenance', snippet: 'State the acceptable passage range, the medium formulation with supplement percentages, and the authentication status of the line.' },
+    { label: '❄️ Cryopreservation parameters', snippet: 'Include the freezing medium composition, the controlled cooling rate, and the storage phase.' },
+    { label: '🔬 Mycoplasma screening', snippet: 'Require mycoplasma screening on antibiotic-free culture before the cells enter the experiment.' },
+  ],
+  'Proteomics & Protein Biochemistry': [
+    { label: '⚖️ Load per lane', snippet: 'State protein input as a mass per lane or per injection and the assay used to quantify it.' },
+    { label: '🧪 Buffer compositions', snippet: 'Give every buffer with component concentrations and pH, and mark which are prepared fresh.' },
+    { label: '🔌 Gel & transfer conditions', snippet: 'Specify gel percentage, run voltage and duration, and the transfer method with time, voltage and cooling.' },
+    { label: '🧫 Antibody dilutions', snippet: 'Give primary and secondary antibody dilutions, diluent, incubation time and temperature, and the wash regime.' },
+    { label: '📊 Loading control', snippet: 'Include a loading control or total protein normalisation and state which exposures are used for quantification.' },
+  ],
+  'Immunology & Immunoassay': [
+    { label: '🧪 Coating & blocking', snippet: 'State the coating antigen concentration and buffer, and the blocking agent, concentration and duration.' },
+    { label: '📈 Standard curve', snippet: 'Include a standard curve with its range, the fit model, and the acceptance criteria for R-squared and replicate CV.' },
+    { label: '🎯 Titrated antibodies', snippet: 'Use titrated antibody concentrations per lot rather than supplier defaults, and record the lot numbers.' },
+    { label: '🔬 FMO and isotype controls', snippet: 'Include fluorescence-minus-one and isotype controls for every gate boundary that is not clearly bimodal.' },
+  ],
+  'Microbiology': [
+    { label: '🧫 Media & atmosphere', snippet: 'State the medium and agar formulation, incubation temperature, atmosphere and duration.' },
+    { label: '📏 Inoculum standardisation', snippet: 'Standardise the inoculum quantitatively by OD600, McFarland standard or CFU/mL and give the dilution scheme.' },
+    { label: '🔢 Counting rule', snippet: 'Define which plates are countable and how colonies are counted and converted to CFU/mL.' },
+    { label: '🛡️ Sterility & reference strain', snippet: 'Include an uninoculated sterility control and a reference strain with an expected result.' },
+  ],
+  'Histology & Imaging': [
+    { label: '🔪 Section & fixation', snippet: 'State fixation type and duration, embedding, section thickness in micrometres, and the slide type.' },
+    { label: '♨️ Antigen retrieval', snippet: 'Name the retrieval buffer and pH, the heating method, time at temperature, and the cool-down period.' },
+    { label: '⏱️ Development timing', snippet: 'State chromogen development timing and what the operator watches for, since the step is judged by eye and irreversible.' },
+    { label: '🎯 Positive & negative slides', snippet: 'Include a known-positive control tissue and a negative control with the primary omitted, processed identically.' },
+  ],
+  'Molecular Biology': [
+    { label: '⚡ 8-Channel pipetting', snippet: 'Optimise liquid handling for 8-channel pipetting across columns A-H in 96-well format with 10% overflow.' },
+    { label: '🧲 SPRI cleanup ratios', snippet: 'Specify bead ratios, two fresh 80% ethanol washes, and the elution buffer and volume.' },
+    { label: '🌡️ Thermal profile', snippet: 'Give the full thermal profile: denaturation, annealing and extension temperatures, durations and cycle count.' },
+    { label: '🎯 NTC and positive control', snippet: 'Include a no-template control and a positive control reaction on every run.' },
+    { label: '📊 QC checkpoints', snippet: 'Include fluorometric quantification and capillary sizing as quality checkpoints.' },
+  ],
+};
+
+const GENERIC_CHIPS = [
+  { label: '📏 Quantities & concentrations', snippet: 'Give every quantity, concentration and volume explicitly, with the unit and the stock it comes from.' },
+  { label: '🌡️ Times & temperatures', snippet: 'State the duration and temperature of every incubation, and any speed or force for centrifugation steps.' },
+  { label: '🎯 Controls', snippet: 'Specify the controls appropriate to this work and what result would invalidate the run.' },
+  { label: '⏸️ Safe stopping points', snippet: 'Identify validated safe stopping points with the storage temperature and maximum hold time.' },
+  { label: '✅ Acceptance criteria', snippet: 'Define quality control acceptance criteria with numeric thresholds rather than qualitative statements.' },
+];
+
+const PLACEHOLDER_BY_DISCIPLINE: Record<string, string> = {
+  'Virology': `Describe the assay in detail. For example:
+- Cell line, seeding density and vessel (e.g. Vero E6, 2 x 10^4 per well, 96-well plate)
+- Virus and dose (e.g. ten-fold dilutions 10^-1 to 10^-8, 100 µL per well, 8 replicates)
+- Incubation (e.g. 5 days at 37 °C, 5% CO2)
+- Readout and scoring rule (e.g. CPE scored per well at 100x on day 5)
+- Calculation (e.g. Reed-Muench 50% endpoint)
+- Controls (e.g. uninfected wells, reference stock of known titre)`,
+  'Cell Culture': `Describe the procedure in detail. For example:
+- Cell line, passage range and medium with supplements (e.g. HEK293T, P5-P25, DMEM + 10% FBS)
+- Vessel and seeding density (e.g. T75 flask, 1 x 10^6 cells)
+- Incubation conditions (e.g. 37 °C, 5% CO2, humidified)
+- Handling steps with times (e.g. 0.05% trypsin, 3 min at 37 °C)
+- Acceptance criteria (e.g. viability above 90% by trypan blue)`,
+  'Proteomics & Protein Biochemistry': `Describe the workflow in detail. For example:
+- Sample and load (e.g. 20 µg lysate per lane, quantified by BCA)
+- Separation (e.g. 4-12% gel, 150 V for 60 min)
+- Transfer or digestion conditions (e.g. wet transfer, 100 V, 90 min at 4 °C)
+- Antibodies or enzymes with dilutions and incubation (e.g. 1:1000 primary, overnight at 4 °C)
+- Detection and quantification (e.g. ECL, unsaturated exposure, normalised to total protein)`,
+  'Histology & Imaging': `Describe the staining run in detail. For example:
+- Specimen (e.g. FFPE, 4 µm sections on charged slides)
+- Dewax and rehydration series with times
+- Retrieval (e.g. citrate pH 6.0, 20 min, cool 20 min)
+- Antibody or stain with dilution, time and temperature
+- Development, counterstain and mounting
+- Controls (e.g. known positive tissue, primary omitted)`,
+  'Microbiology': `Describe the method in detail. For example:
+- Organism and strain, medium and agar formulation
+- Inoculum preparation and standardisation (e.g. adjusted to 0.5 McFarland)
+- Plating or broth volumes and dilution scheme
+- Incubation temperature, atmosphere and duration
+- Counting or reading rule and controls`,
+};
+
+const DEFAULT_PLACEHOLDER = `Describe the protocol you want to build in detail — the more specific you are, the more usable the result. For example:
+- What the protocol acts on, and the starting quantity
+- Reagents, media or stains with concentrations
+- Every incubation: temperature, duration, atmosphere
+- Equipment and its settings
+- Controls and what invalidates the run
+- Quality control checkpoints with numeric acceptance criteria`;
+
 const TEMPLATE_STARTERS = [
   {
     title: BLANK_STARTER_TITLE,
@@ -127,7 +248,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
   const [overflow, setOverflow] = useState<number>(overflowPercent);
   const totalReactions = Math.max(1, samples * reps + posCtrl + negCtrl);
   const effectiveReactions = Math.ceil(totalReactions * (1 + overflow / 100));
-  const [category, setCategory] = useState<string>('Next-Generation Sequencing');
+  const [category, setCategory] = useState<string>('');
   const [targetHost, setTargetHost] = useState<string>('Mammalian / Bacterial gDNA');
   const [biosafetyLevel, setBiosafetyLevel] = useState<BioSafetyLevel>('BSL-1');
   const [isExpanding, setIsExpanding] = useState<boolean>(false);
@@ -221,7 +342,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              Describe your custom protocol in plain language or bullet points. The 99% accuracy engine synthesizes stoichiometric master mixes, equipment parameters, and GLP quality benchmarks.
+              Describe your protocol in plain language or bullet points. Choose the discipline first — the prompts, quick-add directives and generated document all follow from it.
             </p>
           </div>
         </div>
@@ -258,7 +379,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
               type="text"
               value={protocolTitle}
               onChange={(e) => setProtocolTitle(e.target.value)}
-              placeholder="e.g. De Novo NGS Library Prep with Covaris Shearing"
+              placeholder="e.g. TCID50 endpoint dilution titration on Vero E6 cells"
               className="w-full text-xs font-semibold px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-all"
               required
             />
@@ -268,13 +389,16 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
             <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
               Protocol Category
             </label>
-            <input
-              type="text"
+            <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              placeholder="e.g. Next-Gen Sequencing"
-              className="w-full text-xs font-medium px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-all"
-            />
+              className="w-full text-xs font-medium px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-all cursor-pointer"
+            >
+              <option value="">Select a discipline…</option>
+              {DISCIPLINES.map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
           </div>
 
           <div className="space-y-1">
@@ -326,14 +450,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             rows={7}
-            placeholder="Describe the SOP you want to build in detail. For example:
-- Input sample type and starting quantity (e.g. 50 ng gDNA in 50 µL)
-- Shearing method (e.g. Covaris ME220 350 bp shearing, 75W PIP, 75s @ 6°C)
-- Reagents & master mixes (e.g. NEB Ultra II end repair master mix, 8-channel pipetting)
-- Incubation temperatures (e.g. 20°C for 30m, 65°C for 30m)
-- Cleanup & bead ratios (e.g. 0.8x SPRI magnetic beads with 2x 80% fresh ethanol washes)
-- Safe stopping points (e.g. hold at -20°C overnight)
-- Quality control checkpoints (e.g. Qubit fluorometer HS quantification)"
+            placeholder={PLACEHOLDER_BY_DISCIPLINE[category] || DEFAULT_PLACEHOLDER}
             className="w-full text-xs font-mono leading-relaxed p-3.5 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-all shadow-inner"
             required
           />
@@ -346,7 +463,7 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
             <span>Quick-Add Protocol Directives & Accuracy Enhancers:</span>
           </label>
           <div className="flex flex-wrap gap-1.5">
-            {QUICK_SPEC_CHIPS.map((chip, idx) => (
+            {(CHIPS_BY_DISCIPLINE[category] || (category === 'Next-Generation Sequencing' ? QUICK_SPEC_CHIPS : GENERIC_CHIPS)).map((chip, idx) => (
               <button
                 key={idx}
                 type="button"
@@ -422,35 +539,35 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
           </div>
         )}
 
-        {/* Action Button */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100">
-          {/* BATCH DESIGN — drives every master mix volume downstream */}
-        <div className="rounded-xl border border-slate-200 bg-slate-50 p-3.5 space-y-3">
-          <div className="flex items-center justify-between gap-3 flex-wrap">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Batch Design</span>
-            <span className="text-[11px] font-mono text-slate-600">
-              {samples} x {reps} + {posCtrl} pos + {negCtrl} neg = <strong>{totalReactions} reactions</strong>
-              {overflow > 0 && <> &rarr; <strong>{effectiveReactions}</strong> with +{overflow}% overflow</>}
+        {/* Batch design. Rendered as its own full-width block: nested inside the action row it was
+            squeezed to about a third of the width and the five controls wrapped into an unreadable
+            stagger. */}
+        <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-3">
+          <div className="flex items-baseline justify-between gap-3 flex-wrap">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Batch design</span>
+            <span className="text-xs font-mono text-slate-600">
+              {samples} x {reps} + {posCtrl} pos + {negCtrl} neg = <strong className="text-slate-900">{totalReactions} reactions</strong>
+              {overflow > 0 && <> &rarr; <strong className="text-slate-900">{effectiveReactions}</strong> with +{overflow}%</>}
             </span>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {([
               ['Samples', samples, setSamples, 1, 384],
               ['Replicates', reps, setReps, 1, 12],
-              ['Positive controls', posCtrl, setPosCtrl, 0, 24],
-              ['Negative controls', negCtrl, setNegCtrl, 0, 24],
+              ['+ Controls', posCtrl, setPosCtrl, 0, 24],
+              ['- Controls', negCtrl, setNegCtrl, 0, 24],
               ['Overflow %', overflow, setOverflow, 0, 100],
             ] as [string, number, (n: number) => void, number, number][]).map(([label, value, setter, min, max]) => (
-              <div key={label} className="space-y-1">
-                <label className="block text-[10px] font-semibold uppercase tracking-wider text-slate-500">{label}</label>
-                <div className="flex items-center rounded-lg border border-slate-300 bg-white overflow-hidden">
+              <div key={label} className="space-y-1.5">
+                <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 whitespace-nowrap">{label}</label>
+                <div className="flex items-stretch rounded-lg border border-slate-300 bg-white overflow-hidden h-10">
                   <button
                     type="button"
                     onClick={() => setter(Math.max(min, value - 1))}
                     disabled={value <= min}
-                    className="px-2 py-1.5 text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
+                    className="w-9 shrink-0 text-lg leading-none text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
                     aria-label={`Decrease ${label}`}
-                  >-</button>
+                  >&minus;</button>
                   <input
                     type="number"
                     min={min}
@@ -460,13 +577,13 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
                       const n = parseInt(e.target.value, 10);
                       setter(Number.isNaN(n) ? min : Math.min(max, Math.max(min, n)));
                     }}
-                    className="w-full text-center text-sm font-semibold text-slate-900 py-1.5 focus:outline-none"
+                    className="min-w-0 flex-1 text-center text-base font-semibold text-slate-900 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                   />
                   <button
                     type="button"
                     onClick={() => setter(Math.min(max, value + 1))}
                     disabled={value >= max}
-                    className="px-2 py-1.5 text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
+                    className="w-9 shrink-0 text-lg leading-none text-slate-500 hover:bg-slate-100 disabled:opacity-30 cursor-pointer"
                     aria-label={`Increase ${label}`}
                   >+</button>
                 </div>
@@ -474,10 +591,13 @@ export const DeNovoDescriptionEditor: React.FC<DeNovoDescriptionEditorProps> = (
             ))}
           </div>
           <p className="text-[11px] text-slate-500">
-            Every per-step master mix, the Excel calculator and the cost estimate scale from these numbers.
+            Batch sizing applies to protocols that consume reagent per sample. Every per-step mix, the Excel
+            calculator and the cost estimate scale from these numbers.
           </p>
         </div>
 
+        {/* Action Button */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100">
         <div className="flex items-center gap-2 text-xs text-slate-600">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>99%+ Mathematical & Stoichiometric Verification Engine Active</span>
