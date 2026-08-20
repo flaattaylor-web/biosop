@@ -441,7 +441,7 @@ export const SopGenerator: React.FC<SopGeneratorProps> = ({
             <span>AI Biotech Laboratory Engine</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-            Generate Standard Operating Procedures & Per-Step Master Mix Reaction Sheets
+            Generate Standard Operating Procedures Across the Life Sciences
           </h1>
           <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
             Create validated SOPs or synthesize groundbreaking <strong>de novo</strong> cutting-edge protocols from first-principles biochemistry and peer-reviewed literature. Automatically calculates master mixes for each step of the reaction.
@@ -515,7 +515,7 @@ export const SopGenerator: React.FC<SopGeneratorProps> = ({
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Describe what you want to build in plain English or bullet points. The 99% accuracy engine synthesizes stoichiometric master mixes, Covaris shearing, and 8-channel pipetting workflows.
+                      Describe what you want to build in plain English or bullet points. Pick your discipline and the generator asks for the parameters that discipline actually specifies.
                     </p>
                   </div>
                 </div>
