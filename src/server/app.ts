@@ -151,15 +151,18 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
     // The diagnostic must always answer. Unbounded, it hung exactly like the generation it was built
     // to explain, which made the one tool for telling "the key is broken" from "streaming is broken"
     // useless at the moment it was needed. 20s is far longer than a two-token reply should ever take.
-    const PROBE_MS = 20_000;
-    const probe = async (mode: 'blocking' | 'streaming') => {
+    // 8s, not 20s. "Reply with the single word: ok" is two tokens; anything slower than this is
+    // broken by any standard, and a diagnostic that outlives the caller's own read timeout cannot be
+    // read from outside the app, which is precisely when it is needed.
+    const PROBE_MS = 8_000;
+    const probe = async (mode: 'blocking' | 'streaming', probeModel: string = model) => {
       const started = Date.now();
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), PROBE_MS);
       const expired = () => Date.now() - started >= PROBE_MS;
       try {
         const ai = getAiClient();
-        const req = { model, contents: 'Reply with the single word: ok', config: { abortSignal: ctrl.signal } };
+        const req = { model: probeModel, contents: 'Reply with the single word: ok', config: { abortSignal: ctrl.signal } };
         let text = '';
         if (mode === 'blocking') {
           text = (await ai.models.generateContent(req)).text || '';
@@ -175,7 +178,7 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
         if (expired()) {
           return {
             ok: false, ms: Date.now() - started, classified: 'timeout',
-            raw: `No response from ${model} within ${PROBE_MS / 1000}s. The request was accepted but nothing came back, which usually means GEMINI_MODEL names a model this key cannot use, or the provider is not answering.`,
+            raw: `No response from ${probeModel} within ${PROBE_MS / 1000}s. The request was accepted but nothing came back, which usually means this key cannot use that model, or the provider is not answering.`,
           };
         }
         return { ok: false, ms: Date.now() - started, classified: classifyAiError(raw), raw: raw.slice(0, 1200) };
@@ -183,14 +186,28 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
         clearTimeout(timer);
       }
     };
-    // Run both probes concurrently so the endpoint answers in one probe's time, not two.
-    const [blocking, streaming] = await Promise.all([probe('blocking'), probe('streaming')]);
+    // Probe every candidate, not just the configured one. Knowing that gemini-3.6-flash is silent is
+    // half an answer; knowing which model DOES reply is the whole answer, because that is the value
+    // to pin in GEMINI_MODEL. All probes run concurrently, so this costs one probe's wall clock.
+    const candidates = modelCandidates();
+    const [blocking, streaming, ...perModel] = await Promise.all([
+      probe('blocking'),
+      probe('streaming'),
+      ...candidates.map((m) => probe('blocking', m).then((r) => ({ model: m, ...r }))),
+    ]);
+    const working = perModel.filter((r) => r.ok).map((r) => r.model);
     return c.json({
       model,
-      candidates: modelCandidates(),
       keyConfigured: !!getEnv('GEMINI_API_KEY'),
       blocking,
       streaming,
+      candidates: perModel,
+      workingModels: working,
+      recommendation: working.length
+        ? (working.includes(model)
+            ? `The configured model (${model}) is responding.`
+            : `Set GEMINI_MODEL to ${working[0]} — the configured model (${model}) did not answer, but ${working[0]} did.`)
+        : `No candidate model answered within ${PROBE_MS / 1000}s. Check that the key is valid and has quota, and check status.cloud.google.com.`,
     });
   });
 
