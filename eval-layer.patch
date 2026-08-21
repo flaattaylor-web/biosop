@@ -1,0 +1,2442 @@
+From 40bbfd10f48bec66eed611bb83f592b00d405926 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 21 Aug 2026 22:29:02 +0000
+Subject: [PATCH] Add evaluation layer: statistics, auditor calibration, anchor
+ drift suite
+
+Ports the pure statistics from the bench eval harness into src/core and wires
+them to two questions this repo could not previously answer: does the auditor
+agree with a human, and has it silently changed its mind.
+
+- src/core/evalStats.ts        kappa, Gwet AC1, exact McNemar, paired t, Wilson,
+                               power with a floor so a large gap cannot report
+                               that two items would have been enough
+- src/core/auditCalibration.ts per-dimension agreement between auditProtocol and
+                               human labels; excludes what the auditor declined
+                               to assess rather than counting it as agreement
+- src/core/sopRubric.ts        the SOP-drafting rubric as typed data; hard fails
+                               gate rather than deduct
+- tests/auditAnchor.test.ts    five frozen fixtures plus a recorded baseline;
+                               catches auditor drift, not model drift
+- tests/sopQuality.test.ts     skips until a real golden set exists
+
+85 new tests. Reference values computed independently with SciPy, not recorded
+from this implementation.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01XrLkHSCmvvz4sDsZDVpGhr
+---
+ .gitignore                            |   3 +
+ src/core/auditCalibration.ts          | 270 +++++++++++++
+ src/core/evalStats.ts                 | 524 ++++++++++++++++++++++++++
+ src/core/sopRubric.ts                 | 146 +++++++
+ tests/auditAnchor.test.ts             | 123 ++++++
+ tests/auditCalibration.test.ts        | 227 +++++++++++
+ tests/evalStats.test.ts               | 344 +++++++++++++++++
+ tests/fixtures/GOLDEN-SET.md          |  85 +++++
+ tests/fixtures/anchorProtocols.ts     | 134 +++++++
+ tests/fixtures/auditAnchors.json      | 257 +++++++++++++
+ tests/fixtures/goldenSet.example.json |  23 ++
+ tests/sopQuality.test.ts              | 176 +++++++++
+ 12 files changed, 2312 insertions(+)
+ create mode 100644 src/core/auditCalibration.ts
+ create mode 100644 src/core/evalStats.ts
+ create mode 100644 src/core/sopRubric.ts
+ create mode 100644 tests/auditAnchor.test.ts
+ create mode 100644 tests/auditCalibration.test.ts
+ create mode 100644 tests/evalStats.test.ts
+ create mode 100644 tests/fixtures/GOLDEN-SET.md
+ create mode 100644 tests/fixtures/anchorProtocols.ts
+ create mode 100644 tests/fixtures/auditAnchors.json
+ create mode 100644 tests/fixtures/goldenSet.example.json
+ create mode 100644 tests/sopQuality.test.ts
+
+diff --git a/.gitignore b/.gitignore
+index 3a2af0c..abb47bd 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -9,3 +9,6 @@ coverage/
+ data/
+ .wrangler/
+ .dev.vars
++
++# Real golden set holds working methods; keep it local.
++tests/fixtures/goldenSet.json
+diff --git a/src/core/auditCalibration.ts b/src/core/auditCalibration.ts
+new file mode 100644
+index 0000000..29d756c
+--- /dev/null
++++ b/src/core/auditCalibration.ts
+@@ -0,0 +1,270 @@
++/**
++ * Calibration of the auditor against human judgement.
++ *
++ * `auditor.ts` produces verdicts. Nothing in the codebase has ever asked whether
++ * those verdicts agree with a qualified reader, which is the same gap that made
++ * the original 99.2-and-PASS scaffold worthless: it scored confidently and was
++ * never measured against anyone.
++ *
++ * This module measures it. You hand-label a set of protocols, the auditor labels
++ * the same set, and the result is a per-dimension agreement table. The headline
++ * number is not "the auditor is good"; it is which dimensions agree with you and
++ * which do not.
++ *
++ * Reading the output:
++ *
++ *   - Low agreement on a dimension usually means the DIMENSION is ambiguous, not
++ *     that the auditor is broken. Rewrite the check before blaming it.
++ *   - Positive leniency means the auditor passes things you would fail, which is
++ *     the dangerous direction for a document someone will run at a bench.
++ *   - A dimension the auditor could not assess is excluded, never counted as
++ *     agreement. Silence is not concurrence.
++ */
++
++import type { AuditDimensionKey, AuditReport, AuditVerdict } from './auditor';
++import { agreement, agreementBand, wilsonInterval } from './evalStats';
++import type { Agreement, AgreementBand, ProportionInterval } from './evalStats';
++
++/** Human judgement for one protocol. Omit a dimension you did not assess. */
++export interface HumanLabels {
++  /** Would you let someone run this document as written? */
++  acceptable: boolean;
++  /** Per-dimension pass/fail, for the dimensions you actually looked at. */
++  dimensions: Partial<Record<AuditDimensionKey, boolean>>;
++}
++
++export interface CalibrationCase {
++  /** Stable identifier so a disagreement can be traced back to a protocol. */
++  id: string;
++  report: AuditReport;
++  labels: HumanLabels;
++}
++
++export interface CalibrationOptions {
++  /**
++   * Dimension score at or above which the auditor is taken to be passing that
++   * dimension. Applied only when the dimension carries no ERROR finding.
++   */
++  passThreshold?: number;
++  /**
++   * Below this many compared items a kappa is reported but not trusted. Twenty
++   * is the same floor the golden-set guidance uses.
++   */
++  minimumForConfidence?: number;
++}
++
++export type DimensionStatus =
++  /** Enough agreement, and enough data to believe it. */
++  | 'CALIBRATED'
++  /** Kappa below 0.40. The criterion is probably ambiguous. */
++  | 'AMBIGUOUS'
++  /** Your labels never varied, so agreement carries no information. */
++  | 'DEGENERATE'
++  /** Too few comparable items to conclude anything. */
++  | 'INSUFFICIENT'
++  /** The auditor never assessed this dimension on any labelled protocol. */
++  | 'NOT_ASSESSED';
++
++export interface DimensionCalibration {
++  key: AuditDimensionKey;
++  label: string;
++  /** Items where both you and the auditor produced a judgement. */
++  compared: number;
++  /** Items the auditor could not assess, excluded rather than assumed to agree. */
++  excludedNotAssessed: number;
++  /** Items you did not label, also excluded. */
++  excludedUnlabelled: number;
++  stats: Agreement;
++  band: AgreementBand;
++  status: DimensionStatus;
++  /** Ids where you and the auditor disagreed, so they can be re-read. */
++  disagreements: string[];
++}
++
++export interface CalibrationReport {
++  /** Protocols carrying at least one usable comparison. */
++  n: number;
++  /** Agreement on the overall accept/reject call. */
++  overall: Agreement;
++  overallBand: AgreementBand;
++  /** Proportion of protocols where the overall calls matched, with interval. */
++  overallAccuracy: ProportionInterval;
++  dimensions: DimensionCalibration[];
++  /**
++   * Plain-language problems found. Empty means nothing was flagged, which is
++   * not the same as the auditor being validated.
++   */
++  concerns: string[];
++  /** Verbatim scope statement, so a calibration figure never travels alone. */
++  scopeStatement: string;
++}
++
++const DIMENSION_ORDER: AuditDimensionKey[] = [
++  'STOICHIOMETRY',
++  'VOLUME_BALANCE',
++  'PIPETTABILITY',
++  'DOCUMENT_COMPLETENESS',
++  'SAFETY_AND_QC',
++  'CITATION_INTEGRITY',
++  'PLATFORM_RULES',
++];
++
++/** An auditor verdict reduced to the same accept/reject call a human makes. */
++export function verdictIsAcceptable(verdict: AuditVerdict): boolean | null {
++  switch (verdict) {
++    case 'PASS':
++    case 'PASS_WITH_WARNINGS':
++      return true;
++    case 'FAIL':
++      return false;
++    case 'INSUFFICIENT_DATA':
++      // The auditor declining to judge is not a judgement. Excluded, not coerced.
++      return null;
++  }
++}
++
++/**
++ * Whether the auditor passed one dimension.
++ *
++ * Returns null when the dimension was not assessed, which keeps unexamined
++ * dimensions out of the agreement counts entirely.
++ */
++export function dimensionIsPassing(
++  report: AuditReport,
++  key: AuditDimensionKey,
++  passThreshold: number,
++): boolean | null {
++  const dim = report.dimensions.find((d) => d.key === key);
++  if (!dim || dim.score === null) return null;
++  const hasError = dim.findings.some((f) => f.severity === 'ERROR');
++  if (hasError) return false;
++  return dim.score >= passThreshold;
++}
++
++export function calibrateAuditor(
++  cases: readonly CalibrationCase[],
++  options: CalibrationOptions = {},
++): CalibrationReport {
++  const passThreshold = options.passThreshold ?? 80;
++  const minimumForConfidence = options.minimumForConfidence ?? 20;
++
++  /* ---- overall accept/reject ---- */
++  const humanOverall: boolean[] = [];
++  const auditorOverall: boolean[] = [];
++  for (const c of cases) {
++    const a = verdictIsAcceptable(c.report.verdict);
++    if (a === null) continue;
++    humanOverall.push(c.labels.acceptable);
++    auditorOverall.push(a);
++  }
++  const overall = agreement(humanOverall, auditorOverall);
++  const matches = overall.tp + overall.tn;
++
++  /* ---- per dimension ---- */
++  const dimensions: DimensionCalibration[] = DIMENSION_ORDER.map((key) => {
++    const human: boolean[] = [];
++    const auditorSide: boolean[] = [];
++    const disagreements: string[] = [];
++    let excludedNotAssessed = 0;
++    let excludedUnlabelled = 0;
++
++    for (const c of cases) {
++      const humanCall = c.labels.dimensions[key];
++      const auditorCall = dimensionIsPassing(c.report, key, passThreshold);
++      if (auditorCall === null) {
++        excludedNotAssessed++;
++        continue;
++      }
++      if (humanCall === undefined) {
++        excludedUnlabelled++;
++        continue;
++      }
++      human.push(humanCall);
++      auditorSide.push(auditorCall);
++      if (humanCall !== auditorCall) disagreements.push(c.id);
++    }
++
++    const stats = agreement(human, auditorSide);
++    const compared = human.length;
++    const label = findLabel(cases, key) ?? key;
++
++    let status: DimensionStatus;
++    if (compared === 0) status = 'NOT_ASSESSED';
++    else if (stats.degenerate) status = 'DEGENERATE';
++    else if (compared < minimumForConfidence) status = 'INSUFFICIENT';
++    else if (!Number.isFinite(stats.kappa) || stats.kappa < 0.4) status = 'AMBIGUOUS';
++    else status = 'CALIBRATED';
++
++    return {
++      key,
++      label,
++      compared,
++      excludedNotAssessed,
++      excludedUnlabelled,
++      stats,
++      band: agreementBand(stats.kappa),
++      status,
++      disagreements,
++    };
++  });
++
++  /* ---- concerns, stated plainly ---- */
++  const concerns: string[] = [];
++  if (humanOverall.length < minimumForConfidence) {
++    concerns.push(
++      `Only ${humanOverall.length} protocols carry an overall comparison; ${minimumForConfidence} is the floor at which these figures mean much.`,
++    );
++  }
++  if (Number.isFinite(overall.leniency) && overall.leniency > 0.1) {
++    concerns.push(
++      `The auditor accepts protocols you would reject on ${(overall.leniency * 100).toFixed(0)} percent of items. Leniency is the dangerous direction for a document someone runs at a bench.`,
++    );
++  }
++  for (const d of dimensions) {
++    if (d.status === 'AMBIGUOUS') {
++      concerns.push(
++        `${d.label}: kappa ${fmt(d.stats.kappa)} over ${d.compared} items. Rewrite the check before trusting it; low agreement usually means an ambiguous criterion.`,
++      );
++    }
++    if (d.status === 'DEGENERATE') {
++      concerns.push(
++        `${d.label}: your labels never varied over ${d.compared} items, so agreement here carries no information. Label some failing protocols.`,
++      );
++    }
++    if (d.status === 'NOT_ASSESSED') {
++      concerns.push(`${d.label}: never assessed on any labelled protocol, so it is uncalibrated.`);
++    }
++    if (d.compared > 0 && Number.isFinite(d.stats.sensitivity) && d.stats.sensitivity < 0.5) {
++      concerns.push(
++        `${d.label}: catches under half of what you pass (sensitivity ${fmt(d.stats.sensitivity)}).`,
++      );
++    }
++  }
++
++  return {
++    n: humanOverall.length,
++    overall,
++    overallBand: agreementBand(overall.kappa),
++    overallAccuracy: wilsonInterval(matches, humanOverall.length),
++    dimensions,
++    concerns,
++    scopeStatement:
++      'These figures describe how far the automated auditor agrees with one human reader on one labelled set ' +
++      'of protocols. They are a measure of agreement, not of correctness: a well-calibrated auditor reproduces ' +
++      'that reader, including that reader’s mistakes. Agreement on this set says nothing about protocols ' +
++      'unlike it, and nothing here constitutes validation, qualification, or evidence of conformance to ' +
++      'ISO 9001, GLP, GMP, or 21 CFR Part 11.',
++  };
++}
++
++function findLabel(cases: readonly CalibrationCase[], key: AuditDimensionKey): string | null {
++  for (const c of cases) {
++    const d = c.report.dimensions.find((x) => x.key === key);
++    if (d) return d.label;
++  }
++  return null;
++}
++
++function fmt(x: number): string {
++  return Number.isFinite(x) ? x.toFixed(2) : 'undefined';
++}
+diff --git a/src/core/evalStats.ts b/src/core/evalStats.ts
+new file mode 100644
+index 0000000..fe7c572
+--- /dev/null
++++ b/src/core/evalStats.ts
+@@ -0,0 +1,524 @@
++/**
++ * Statistics for evaluating generated output against human judgement.
++ *
++ * Design principle: this module never reports a result it cannot support. Every
++ * function that can be undefined for its input says so explicitly rather than
++ * returning a number that looks authoritative. The reason is the same one that
++ * produced `auditor.ts`: a score that cannot fail, or a difference that cannot
++ * be distinguished from noise, is worse than no number at all because it reads
++ * as an endorsement.
++ *
++ * Everything here is pure and dependency-free. Implementations are checked
++ * against published reference values in `tests/evalStats.test.ts`.
++ */
++
++/* ------------------------------------------------------------------ *
++ * Special functions
++ * ------------------------------------------------------------------ */
++
++/** Lanczos approximation, g = 7, n = 9. Accurate to ~15 significant figures. */
++const LANCZOS = [
++  0.99999999999980993, 676.5203681218851, -1259.1392167224028,
++  771.32342877765313, -176.61502916214059, 12.507343278686905,
++  -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7,
++] as const;
++
++export function logGamma(z: number): number {
++  if (z < 0.5) return Math.log(Math.PI / Math.sin(Math.PI * z)) - logGamma(1 - z);
++  const zz = z - 1;
++  let x = LANCZOS[0];
++  for (let i = 1; i < 9; i++) x += LANCZOS[i] / (zz + i);
++  const t = zz + 7.5;
++  return 0.5 * Math.log(2 * Math.PI) + (zz + 0.5) * Math.log(t) - t + Math.log(x);
++}
++
++/** Continued-fraction expansion for the incomplete beta (modified Lentz). */
++function betaContinuedFraction(a: number, b: number, x: number): number {
++  const FPMIN = 1e-300;
++  const EPS = 3e-16;
++  const qab = a + b;
++  const qap = a + 1;
++  const qam = a - 1;
++  let c = 1;
++  let d = 1 - (qab * x) / qap;
++  if (Math.abs(d) < FPMIN) d = FPMIN;
++  d = 1 / d;
++  let h = d;
++  for (let m = 1; m <= 300; m++) {
++    const m2 = 2 * m;
++    let aa = (m * (b - m) * x) / ((qam + m2) * (a + m2));
++    d = 1 + aa * d;
++    if (Math.abs(d) < FPMIN) d = FPMIN;
++    c = 1 + aa / c;
++    if (Math.abs(c) < FPMIN) c = FPMIN;
++    d = 1 / d;
++    h *= d * c;
++    aa = (-(a + m) * (qab + m) * x) / ((a + m2) * (qap + m2));
++    d = 1 + aa * d;
++    if (Math.abs(d) < FPMIN) d = FPMIN;
++    c = 1 + aa / c;
++    if (Math.abs(c) < FPMIN) c = FPMIN;
++    d = 1 / d;
++    const del = d * c;
++    h *= del;
++    if (Math.abs(del - 1) < EPS) break;
++  }
++  return h;
++}
++
++/** Regularized incomplete beta, I_x(a, b). */
++export function incompleteBeta(a: number, b: number, x: number): number {
++  if (x <= 0) return 0;
++  if (x >= 1) return 1;
++  const front = Math.exp(
++    logGamma(a + b) - logGamma(a) - logGamma(b) + a * Math.log(x) + b * Math.log(1 - x),
++  );
++  return x < (a + 1) / (a + b + 2)
++    ? (front * betaContinuedFraction(a, b, x)) / a
++    : 1 - (front * betaContinuedFraction(b, a, 1 - x)) / b;
++}
++
++/** Two-sided p-value for Student's t with `df` degrees of freedom. */
++export function tTestTwoSided(t: number, df: number): number {
++  if (!Number.isFinite(t) || df <= 0) return NaN;
++  return incompleteBeta(df / 2, 0.5, df / (df + t * t));
++}
++
++/**
++ * Inverse standard normal CDF (Acklam's rational approximation).
++ *
++ * Accurate to roughly 2e-9 absolute across the range, which is four orders of
++ * magnitude finer than anything that could move a verdict here: it shifts a
++ * 95 percent interval multiplier in the ninth decimal place. `tests/evalStats.test.ts`
++ * pins it to that documented accuracy rather than to machine precision, because
++ * claiming precision the method does not have is the same error this module exists
++ * to prevent.
++ */
++export function probit(p: number): number {
++  const a = [
++    -3.969683028665376e1, 2.209460984245205e2, -2.759285104469687e2,
++    1.38357751867269e2, -3.066479806614716e1, 2.506628277459239,
++  ];
++  const b = [
++    -5.447609879822406e1, 1.615858368580409e2, -1.556989798598866e2,
++    6.680131188771972e1, -1.328068155288572e1,
++  ];
++  const c = [
++    -7.784894002430293e-3, -3.223964580411365e-1, -2.400758277161838,
++    -2.549732539343734, 4.374664141464968, 2.938163982698783,
++  ];
++  const d = [7.784695709041462e-3, 3.224671290700398e-1, 2.445134137142996, 3.754408661907416];
++  const pLow = 0.02425;
++  const pHigh = 1 - pLow;
++  if (p <= 0 || p >= 1) return NaN;
++  if (p < pLow) {
++    const q = Math.sqrt(-2 * Math.log(p));
++    return (
++      (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) /
++      ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1)
++    );
++  }
++  if (p > pHigh) {
++    const q = Math.sqrt(-2 * Math.log(1 - p));
++    return (
++      -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) /
++      ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1)
++    );
++  }
++  const q = p - 0.5;
++  const r = q * q;
++  return (
++    ((((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q) /
++    (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1)
++  );
++}
++
++/**
++ * Student t quantile by bisection on the CDF.
++ *
++ * Deliberately not 1.96. Golden sets are small, and at n = 12 the normal
++ * multiplier understates the interval by about 10 percent.
++ */
++export function tQuantile(p: number, df: number): number {
++  if (df > 2000) return probit(p);
++  let lo = -100;
++  let hi = 100;
++  for (let i = 0; i < 200; i++) {
++    const mid = (lo + hi) / 2;
++    const cdf = mid >= 0 ? 1 - tTestTwoSided(mid, df) / 2 : tTestTwoSided(mid, df) / 2;
++    if (cdf < p) lo = mid;
++    else hi = mid;
++  }
++  return (lo + hi) / 2;
++}
++
++/* ------------------------------------------------------------------ *
++ * Descriptive
++ * ------------------------------------------------------------------ */
++
++export function mean(xs: readonly number[]): number {
++  return xs.length ? xs.reduce((s, x) => s + x, 0) / xs.length : NaN;
++}
++
++/** Sample standard deviation (n - 1). NaN for fewer than two values. */
++export function standardDeviation(xs: readonly number[]): number {
++  const n = xs.length;
++  if (n < 2) return NaN;
++  const m = mean(xs);
++  return Math.sqrt(xs.reduce((s, x) => s + (x - m) * (x - m), 0) / (n - 1));
++}
++
++export interface Summary {
++  n: number;
++  mean: number;
++  sd: number;
++  se: number;
++  /** Half-width of the confidence interval, which is the number worth showing. */
++  half: number;
++  lo: number;
++  hi: number;
++}
++
++export function summarize(values: readonly number[], confidence = 0.95): Summary {
++  const n = values.length;
++  const m = mean(values);
++  if (n < 2) {
++    return { n, mean: m, sd: NaN, se: NaN, half: NaN, lo: NaN, hi: NaN };
++  }
++  const sd = standardDeviation(values);
++  const se = sd / Math.sqrt(n);
++  const tc = tQuantile(1 - (1 - confidence) / 2, n - 1);
++  return { n, mean: m, sd, se, half: tc * se, lo: m - tc * se, hi: m + tc * se };
++}
++
++export interface ProportionInterval {
++  p: number;
++  lo: number;
++  hi: number;
++}
++
++/**
++ * Wilson score interval for a proportion.
++ *
++ * Correct at the sample sizes golden sets actually reach, where the normal
++ * approximation produces intervals that run past 0 or 1.
++ */
++export function wilsonInterval(successes: number, n: number, confidence = 0.95): ProportionInterval {
++  if (n <= 0) return { p: NaN, lo: NaN, hi: NaN };
++  const z = probit(1 - (1 - confidence) / 2);
++  const p = successes / n;
++  const denom = 1 + (z * z) / n;
++  const centre = (p + (z * z) / (2 * n)) / denom;
++  const half = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / denom;
++  // At p = 0 and p = 1 the algebra gives exactly 0 and exactly 1, but the
++  // floating-point route can land a fraction below. Pin the endpoints so an
++  // all-pass run never reports an upper bound of 0.9999999999999999.
++  const lo = successes === 0 ? 0 : Math.max(0, centre - half);
++  const hi = successes === n ? 1 : Math.min(1, centre + half);
++  return { p, lo, hi };
++}
++
++/* ------------------------------------------------------------------ *
++ * Paired comparison
++ * ------------------------------------------------------------------ */
++
++export interface PairedComparisonFailed {
++  ok: false;
++  reason: string;
++  code: 'LENGTH_MISMATCH' | 'TOO_FEW_PAIRS';
++}
++
++export interface PairedComparisonOk {
++  ok: true;
++  n: number;
++  meanA: number;
++  meanB: number;
++  /** Mean of (b - a) over matched items. */
++  diff: number;
++  sdDiff: number;
++  se: number;
++  t: number;
++  df: number;
++  p: number;
++  /** Correlation between the two runs. This is what pairing buys you. */
++  r: number;
++  lo: number;
++  hi: number;
++}
++
++export type PairedComparison = PairedComparisonOk | PairedComparisonFailed;
++
++/** Paired comparison of matched continuous scores. `b` minus `a`. */
++export function pairedComparison(
++  a: readonly number[],
++  b: readonly number[],
++  confidence = 0.95,
++): PairedComparison {
++  if (a.length !== b.length) {
++    return {
++      ok: false,
++      code: 'LENGTH_MISMATCH',
++      reason: `Runs cover different item counts (${a.length} and ${b.length}); pairing requires identical items.`,
++    };
++  }
++  const n = a.length;
++  if (n < 2) {
++    return { ok: false, code: 'TOO_FEW_PAIRS', reason: 'Need at least two paired items.' };
++  }
++  const diffs = a.map((x, i) => (b[i] as number) - x);
++  const diff = mean(diffs);
++  const sdDiff = standardDeviation(diffs);
++  const se = sdDiff / Math.sqrt(n);
++  const df = n - 1;
++  const t = se > 0 ? diff / se : diff === 0 ? 0 : Infinity;
++  const p = se > 0 ? tTestTwoSided(t, df) : diff === 0 ? 1 : 0;
++  const tc = tQuantile(1 - (1 - confidence) / 2, df);
++
++  const ma = mean(a);
++  const mb = mean(b);
++  let num = 0;
++  let da = 0;
++  let db = 0;
++  for (let i = 0; i < n; i++) {
++    const xa = (a[i] as number) - ma;
++    const xb = (b[i] as number) - mb;
++    num += xa * xb;
++    da += xa * xa;
++    db += xb * xb;
++  }
++  const r = da > 0 && db > 0 ? num / Math.sqrt(da * db) : NaN;
++
++  return {
++    ok: true,
++    n,
++    meanA: ma,
++    meanB: mb,
++    diff,
++    sdDiff,
++    se,
++    t,
++    df,
++    p,
++    r,
++    lo: diff - tc * se,
++    hi: diff + tc * se,
++  };
++}
++
++/**
++ * Below this many pairs the large-sample power formula stops meaning anything.
++ *
++ * Without the floor, a very large observed gap reports "you needed 2 items",
++ * which is arithmetically true and indefensible in front of anyone who knows
++ * what the formula assumes.
++ */
++export const MIN_MEANINGFUL_PAIRS = 6;
++
++export interface PowerAssessment {
++  /** Raw N* from the formula, before flooring. NaN when delta is zero. */
++  requiredRaw: number;
++  /** The requirement actually claimed, never below MIN_MEANINGFUL_PAIRS. */
++  required: number;
++  /** True when the formula asked for fewer pairs than the floor allows. */
++  floored: boolean;
++  /** Resolution ratio q = n / required. At least 1 means the gap is claimable. */
++  q: number;
++  claimable: boolean;
++  /** Smallest difference this sample size could resolve, given the observed noise. */
++  minimumDetectable: number;
++}
++
++/**
++ * Required paired n for a difference of `delta`, and whether the sample you
++ * have can actually resolve it.
++ *
++ *   N* = ((z_(1-a/2) + z_(1-b)) * sd_D / delta)^2
++ *
++ * At alpha = 0.05 and power = 0.80 the leading constant is 7.849.
++ */
++export function assessPower(
++  sdDiff: number,
++  delta: number,
++  n: number,
++  alpha = 0.05,
++  power = 0.8,
++): PowerAssessment {
++  const z = probit(1 - alpha / 2) + probit(power);
++  const minimumDetectable = n > 0 ? sdDiff * Math.sqrt((z * z) / n) : NaN;
++  const absDelta = Math.abs(delta);
++  if (!(absDelta > 0) || !(sdDiff >= 0)) {
++    return {
++      requiredRaw: NaN,
++      required: NaN,
++      floored: false,
++      q: NaN,
++      claimable: false,
++      minimumDetectable,
++    };
++  }
++  const requiredRaw = Math.pow((z * sdDiff) / absDelta, 2);
++  const floored = requiredRaw < MIN_MEANINGFUL_PAIRS;
++  const required = Math.max(MIN_MEANINGFUL_PAIRS, requiredRaw);
++  const q = required > 0 ? n / required : NaN;
++  return { requiredRaw, required, floored, q, claimable: q >= 1, minimumDetectable };
++}
++
++/* ------------------------------------------------------------------ *
++ * Paired binary
++ * ------------------------------------------------------------------ */
++
++export interface McNemarResult {
++  n: number;
++  n00: number;
++  n01: number;
++  n10: number;
++  n11: number;
++  /** Only the discordant pairs carry information. */
++  discordant: number;
++  /** Exact binomial two-sided p. No chi-square approximation, no continuity fudge. */
++  p: number;
++  rateA: number;
++  rateB: number;
++}
++
++/** P(X >= k) for X ~ Binomial(n, 0.5). */
++export function binomialUpperTail(k: number, n: number): number {
++  if (k <= 0) return 1;
++  let s = 0;
++  for (let i = k; i <= n; i++) {
++    s += Math.exp(
++      logGamma(n + 1) - logGamma(i + 1) - logGamma(n - i + 1) + n * Math.log(0.5),
++    );
++  }
++  return Math.min(1, s);
++}
++
++/** Exact McNemar test over matched pass/fail outcomes. */
++export function mcNemar(a: readonly boolean[], b: readonly boolean[]): McNemarResult {
++  let n00 = 0;
++  let n01 = 0;
++  let n10 = 0;
++  let n11 = 0;
++  const n = Math.min(a.length, b.length);
++  for (let i = 0; i < n; i++) {
++    const x = a[i];
++    const y = b[i];
++    if (x && !y) n10++;
++    else if (!x && y) n01++;
++    else if (x && y) n11++;
++    else n00++;
++  }
++  const discordant = n01 + n10;
++  const p = discordant === 0 ? 1 : Math.min(1, 2 * binomialUpperTail(Math.max(n01, n10), discordant));
++  return {
++    n,
++    n00,
++    n01,
++    n10,
++    n11,
++    discordant,
++    p,
++    rateA: n ? (n10 + n11) / n : NaN,
++    rateB: n ? (n01 + n11) / n : NaN,
++  };
++}
++
++/* ------------------------------------------------------------------ *
++ * Agreement
++ * ------------------------------------------------------------------ */
++
++export interface Agreement {
++  n: number;
++  /** Reference said yes, candidate said yes. */
++  tp: number;
++  fp: number;
++  fn: number;
++  tn: number;
++  /** Raw observed agreement. Always report it beside kappa. */
++  po: number;
++  /** Cohen's kappa. NaN when chance agreement is total. */
++  kappa: number;
++  /** Gwet's AC1, which stays stable where kappa collapses on skewed marginals. */
++  ac1: number;
++  sensitivity: number;
++  specificity: number;
++  /** Positive means the candidate says yes more often than the reference does. */
++  leniency: number;
++  /** True when the reference labels never vary, which makes kappa meaningless. */
++  degenerate: boolean;
++}
++
++/**
++ * Two-by-two agreement between a reference labeller (you) and a candidate
++ * labeller (the auditor, or a judge model).
++ *
++ * The matrix is the primary output. Every metric below it derives from those
++ * four counts, and none of them can reconstruct what the matrix shows.
++ */
++export function agreement(
++  reference: readonly boolean[],
++  candidate: readonly boolean[],
++): Agreement {
++  let tp = 0;
++  let fp = 0;
++  let fn = 0;
++  let tn = 0;
++  const len = Math.min(reference.length, candidate.length);
++  for (let i = 0; i < len; i++) {
++    const r = reference[i];
++    const c = candidate[i];
++    if (r && c) tp++;
++    else if (!r && c) fp++;
++    else if (r && !c) fn++;
++    else tn++;
++  }
++  const n = tp + fp + fn + tn;
++  if (n === 0) {
++    return {
++      n: 0, tp: 0, fp: 0, fn: 0, tn: 0, po: NaN, kappa: NaN, ac1: NaN,
++      sensitivity: NaN, specificity: NaN, leniency: NaN, degenerate: true,
++    };
++  }
++  const po = (tp + tn) / n;
++  const pe = ((tp + fn) / n) * ((tp + fp) / n) + ((fp + tn) / n) * ((fn + tn) / n);
++  const kappa = pe < 1 ? (po - pe) / (1 - pe) : NaN;
++  const pi = ((tp + fn) / n + (tp + fp) / n) / 2;
++  const peGwet = 2 * pi * (1 - pi);
++  const ac1 = peGwet < 1 ? (po - peGwet) / (1 - peGwet) : NaN;
++  const positives = tp + fn;
++  return {
++    n,
++    tp,
++    fp,
++    fn,
++    tn,
++    po,
++    kappa,
++    ac1,
++    sensitivity: positives ? tp / positives : NaN,
++    specificity: fp + tn ? tn / (fp + tn) : NaN,
++    leniency: (tp + fp - positives) / n,
++    degenerate: positives === 0 || positives === n,
++  };
++}
++
++export type AgreementBand =
++  | 'undefined'
++  | 'poor to fair'
++  | 'moderate'
++  | 'substantial'
++  | 'almost perfect';
++
++/**
++ * Landis and Koch bands.
++ *
++ * Below 0.40 on a criterion, the usual cause is an ambiguous criterion rather
++ * than a bad labeller. Rewrite the criterion before blaming the model.
++ */
++export function agreementBand(kappa: number): AgreementBand {
++  if (!Number.isFinite(kappa)) return 'undefined';
++  if (kappa < 0.4) return 'poor to fair';
++  if (kappa < 0.6) return 'moderate';
++  if (kappa < 0.75) return 'substantial';
++  return 'almost perfect';
++}
+diff --git a/src/core/sopRubric.ts b/src/core/sopRubric.ts
+new file mode 100644
+index 0000000..8b60c74
+--- /dev/null
++++ b/src/core/sopRubric.ts
+@@ -0,0 +1,146 @@
++/**
++ * The rubric BioSOP's own output is graded against.
++ *
++ * This is the SOP-drafting rubric from the bench evaluation work, expressed as
++ * typed data so it can be scored in a test rather than read off a screen.
++ *
++ * Two design decisions worth not re-litigating:
++ *
++ *   1. **Criteria are binary, never a 1-5 scale.** The same grading task run at
++ *      two-way and five-way granularity drops accuracy from 76 to 57 percent and
++ *      kappa from 0.51 to 0.34. Decomposing a judgement into yes/no checks is
++ *      what makes two readers agree.
++ *   2. **Hard failures gate; they are not a large negative weight.** A negative
++ *      weight is compensable, so enough satisfied criteria bury it. The gate is
++ *      evaluated before the score and overrides it, which is the same rule
++ *      `auditor.ts` follows when an ERROR forces FAIL at any score.
++ */
++
++export type CriterionWeight = 'ESSENTIAL' | 'IMPORTANT' | 'OPTIONAL';
++
++/** Essential 1.0, Important 0.7, Optional 0.3. */
++export const WEIGHT_VALUE: Record<CriterionWeight, number> = {
++  ESSENTIAL: 1.0,
++  IMPORTANT: 0.7,
++  OPTIONAL: 0.3,
++};
++
++export interface RubricCriterion {
++  id: string;
++  weight: CriterionWeight;
++  text: string;
++}
++
++export interface HardFail {
++  id: string;
++  text: string;
++}
++
++export interface Rubric {
++  id: string;
++  title: string;
++  /** Fraction of available weight required to pass, absent any hard failure. */
++  passThreshold: number;
++  criteria: RubricCriterion[];
++  hardFails: HardFail[];
++  /** What a golden set for this rubric needs to look like. */
++  goldenSetGuidance: string;
++}
++
++export const SOP_DRAFTING_RUBRIC: Rubric = {
++  id: 'sop-drafting',
++  title: 'SOP drafting from a validated method',
++  passThreshold: 0.9,
++  criteria: [
++    { id: 'c0', weight: 'ESSENTIAL', text: 'Every step in the source method appears with the same parameters' },
++    { id: 'c1', weight: 'ESSENTIAL', text: 'No step invented, reordered or merged in a way that changes chemistry or timing' },
++    { id: 'c2', weight: 'ESSENTIAL', text: "Any regulation, standard or guidance cited exists and says what's claimed" },
++    { id: 'c3', weight: 'ESSENTIAL', text: 'Safety and hazard steps preserved at the same or greater specificity' },
++    { id: 'c4', weight: 'ESSENTIAL', text: 'Inference log present and complete: everything not stated in the source is listed there' },
++    { id: 'c5', weight: 'IMPORTANT', text: 'Pitched so someone trained but new to the method could execute it' },
++    { id: 'c6', weight: 'IMPORTANT', text: 'Acceptance criteria and expected results carried through from the source' },
++    { id: 'c7', weight: 'IMPORTANT', text: "Equipment and reagents listed with the source's exact identifiers" },
++    { id: 'c8', weight: 'IMPORTANT', text: 'Language specific to your lab, not generic template filler' },
++    { id: 'c9', weight: 'IMPORTANT', text: 'Trace table maps every SOP step back to a source method line' },
++    { id: 'c10', weight: 'OPTIONAL', text: 'Follows your SOP template structure and numbering' },
++    { id: 'c11', weight: 'OPTIONAL', text: 'Change-control fields present and left blank for you' },
++  ],
++  hardFails: [
++    { id: 'h0', text: "A cited standard or guidance that doesn't exist or doesn't say that" },
++    { id: 'h1', text: 'Any safety step weakened, merged or removed' },
++    { id: 'h2', text: 'A parameter changed from the source method' },
++  ],
++  goldenSetGuidance:
++    'Method-to-SOP pairs where an approved SOP already exists to grade against. Fifteen is a working minimum ' +
++    'and twenty to fifty is the useful range. Over-sample hard cases, reserve about a third as adversarial, ' +
++    'and include a few where the correct answer is that the source does not say.',
++};
++
++/** One graded item: which criteria were met, and which hard failures fired. */
++export interface ItemScoreInput {
++  /** Criterion ids judged met. Anything absent counts as not met. */
++  criteriaMet: readonly string[];
++  /** Hard-fail ids that fired. */
++  hardFailsFired: readonly string[];
++}
++
++export interface ItemScore {
++  /** Fraction of available weight satisfied, in [0, 1]. */
++  score: number;
++  /** Count of criteria met, which is not the same as the weighted score. */
++  metCount: number;
++  hardFailed: boolean;
++  /** A hard failure fails the item at any score. */
++  passed: boolean;
++}
++
++export function scoreItem(rubric: Rubric, input: ItemScoreInput): ItemScore {
++  const totalWeight = rubric.criteria.reduce((s, c) => s + WEIGHT_VALUE[c.weight], 0);
++  const met = new Set(input.criteriaMet);
++  let earned = 0;
++  let metCount = 0;
++  for (const c of rubric.criteria) {
++    if (met.has(c.id)) {
++      earned += WEIGHT_VALUE[c.weight];
++      metCount++;
++    }
++  }
++  const score = totalWeight > 0 ? earned / totalWeight : 0;
++  const hardFailed = input.hardFailsFired.length > 0;
++  return {
++    score,
++    metCount,
++    hardFailed,
++    // The gate comes first, deliberately. A document that weakened a safety step
++    // does not pass because it did well on formatting.
++    passed: !hardFailed && score >= rubric.passThreshold,
++  };
++}
++
++export interface CriterionMetRate {
++  id: string;
++  text: string;
++  weight: CriterionWeight;
++  met: number;
++  n: number;
++  rate: number;
++}
++
++/**
++ * Met-rate per criterion, worst first.
++ *
++ * The aggregate score says a run failed. This says where, which is the only
++ * version of the number you can act on.
++ */
++export function criterionMetRates(
++  rubric: Rubric,
++  items: readonly ItemScoreInput[],
++): CriterionMetRate[] {
++  const n = items.length;
++  return rubric.criteria
++    .map((c) => {
++      const met = items.filter((it) => it.criteriaMet.includes(c.id)).length;
++      return { id: c.id, text: c.text, weight: c.weight, met, n, rate: n ? met / n : NaN };
++    })
++    .sort((a, b) => a.rate - b.rate);
++}
+diff --git a/tests/auditAnchor.test.ts b/tests/auditAnchor.test.ts
+new file mode 100644
+index 0000000..b3fd4cc
+--- /dev/null
++++ b/tests/auditAnchor.test.ts
+@@ -0,0 +1,123 @@
++import { describe, it, expect } from 'vitest';
++import { ANCHOR_CASES } from './fixtures/anchorProtocols';
++import { auditProtocol } from '../src/core/auditor';
++import baseline from './fixtures/auditAnchors.json';
++
++/**
++ * Anchor suite: does the auditor still say what it said?
++ *
++ * Unlike the other test files here, the expected values in
++ * `fixtures/auditAnchors.json` are a recording of this codebase's own output.
++ * That is the point. This suite does not assert that the auditor is right; it
++ * asserts that it has not silently changed its mind. Correctness is the job of
++ * `auditor.test.ts`, and agreement with a human is the job of
++ * `auditCalibration.ts` over a labelled corpus.
++ *
++ * Scope, stated so nobody over-reads a green run: `auditProtocol` is pure over
++ * (document, calculation) and never calls a model. This catches drift in the
++ * AUDITOR. It does not and cannot catch drift in the generation model, because
++ * no model is invoked here. Model drift needs the golden-set run in
++ * `sopQuality.test.ts`, which is key-gated and skips by default.
++ *
++ * When a fixture moves:
++ *   1. Work out whether you meant it.
++ *   2. If you did, regenerate the baseline in the same commit as the change and
++ *      say in the message which fixture moved and why.
++ *   3. If you did not, the anchor just did its job.
++ *
++ * Do not edit the fixtures in `anchorProtocols.ts` to make this pass.
++ */
++
++type DimensionBaseline = {
++  score: number | null;
++  coverage: number;
++  errors: number;
++  warnings: number;
++};
++type CaseBaseline = {
++  verdict: string;
++  overallScore: number | null;
++  confidence: number;
++  errorCount: number;
++  warningCount: number;
++  dimensions: Record<string, DimensionBaseline>;
++};
++
++const BASELINE = baseline as unknown as Record<string, CaseBaseline>;
++
++describe('auditor anchors: the verdicts have not moved', () => {
++  it('every anchor case has a recorded baseline', () => {
++    for (const c of ANCHOR_CASES) {
++      expect(BASELINE[c.id], `no baseline recorded for anchor "${c.id}"`).toBeDefined();
++    }
++    expect(Object.keys(BASELINE).length).toBe(ANCHOR_CASES.length);
++  });
++
++  for (const c of ANCHOR_CASES) {
++    describe(c.id, () => {
++      const expected = BASELINE[c.id] as CaseBaseline;
++      const actual = auditProtocol(c.sop, c.calc);
++
++      it(`holds its verdict (${c.intent})`, () => {
++        expect(actual.verdict).toBe(expected.verdict);
++      });
++
++      it('holds its overall score and confidence', () => {
++        expect(actual.overallScore).toBe(expected.overallScore);
++        expect(actual.confidence).toBe(expected.confidence);
++      });
++
++      it('holds its error and warning counts', () => {
++        expect(actual.errorCount).toBe(expected.errorCount);
++        expect(actual.warningCount).toBe(expected.warningCount);
++      });
++
++      it('holds every dimension score, coverage and finding count', () => {
++        for (const dim of actual.dimensions) {
++          const exp = expected.dimensions[dim.key];
++          expect(exp, `dimension ${dim.key} missing from baseline`).toBeDefined();
++          const errors = dim.findings.filter((f) => f.severity === 'ERROR').length;
++          const warnings = dim.findings.filter((f) => f.severity === 'WARNING').length;
++          expect(
++            { score: dim.score, coverage: dim.coverage, errors, warnings },
++            `${c.id} / ${dim.key} moved`,
++          ).toEqual(exp);
++        }
++      });
++    });
++  }
++});
++
++describe('the properties the anchors exist to protect', () => {
++  it('a confirmed arithmetic error is a FAIL regardless of the overall score', () => {
++    // This is the whole design argument restated as a test: hard failures gate,
++    // they do not average out. The overflowing fixture scores in the eighties
++    // and still fails.
++    const overflow = ANCHOR_CASES.find((c) => c.id === 'overflowing-volumes');
++    expect(overflow).toBeDefined();
++    const r = auditProtocol(overflow!.sop, overflow!.calc);
++    expect(r.errorCount).toBeGreaterThan(0);
++    expect(r.verdict).toBe('FAIL');
++    expect(r.overallScore).toBeGreaterThan(80);
++  });
++
++  it('declines to judge when there is nothing to judge, rather than passing', () => {
++    const bare = ANCHOR_CASES.find((c) => c.id === 'no-reaction-data');
++    const r = auditProtocol(bare!.sop, bare!.calc);
++    expect(r.verdict).toBe('INSUFFICIENT_DATA');
++    // The arithmetic dimensions must be null, not zero and not full marks.
++    for (const key of ['STOICHIOMETRY', 'VOLUME_BALANCE', 'PIPETTABILITY']) {
++      expect(r.dimensions.find((d) => d.key === key)?.score).toBeNull();
++    }
++  });
++
++  it('never returns a score without also returning what it did not check', () => {
++    for (const c of ANCHOR_CASES) {
++      const r = auditProtocol(c.sop, c.calc);
++      if (r.overallScore !== null) {
++        expect(r.limitations.length, `${c.id} scored without stating limitations`).toBeGreaterThan(0);
++      }
++      expect(r.scopeStatement).toContain('does NOT verify');
++    }
++  });
++});
+diff --git a/tests/auditCalibration.test.ts b/tests/auditCalibration.test.ts
+new file mode 100644
+index 0000000..740be3a
+--- /dev/null
++++ b/tests/auditCalibration.test.ts
+@@ -0,0 +1,227 @@
++import { describe, it, expect } from 'vitest';
++import {
++  calibrateAuditor,
++  dimensionIsPassing,
++  verdictIsAcceptable,
++  type CalibrationCase,
++  type HumanLabels,
++} from '../src/core/auditCalibration';
++import type { AuditDimension, AuditDimensionKey, AuditReport, AuditVerdict } from '../src/core/auditor';
++
++/**
++ * These fixtures are synthetic AuditReports, not generated protocols. The point
++ * is to test the calibration arithmetic and, more importantly, what it refuses
++ * to conclude. Whether the real auditor agrees with a real reader is a question
++ * only a labelled corpus can answer.
++ */
++
++const ALL_KEYS: AuditDimensionKey[] = [
++  'STOICHIOMETRY',
++  'VOLUME_BALANCE',
++  'PIPETTABILITY',
++  'DOCUMENT_COMPLETENESS',
++  'SAFETY_AND_QC',
++  'CITATION_INTEGRITY',
++  'PLATFORM_RULES',
++];
++
++function dim(key: AuditDimensionKey, score: number | null, hasError = false): AuditDimension {
++  return {
++    key,
++    label: key.toLowerCase().replace(/_/g, ' '),
++    score,
++    coverage: score === null ? 0 : 1,
++    whatWasChecked: 'fixture',
++    notChecked: [],
++    findings: hasError
++      ? [{ severity: 'ERROR', code: 'X', message: 'fixture error' }]
++      : [],
++  };
++}
++
++function report(
++  verdict: AuditVerdict,
++  scores: Partial<Record<AuditDimensionKey, number | null>>,
++  errored: AuditDimensionKey[] = [],
++): AuditReport {
++  return {
++    generatedAt: '2026-01-01T00:00:00.000Z',
++    overallScore: 90,
++    confidence: 0.9,
++    verdict,
++    errorCount: errored.length,
++    warningCount: 0,
++    dimensions: ALL_KEYS.map((k) =>
++      dim(k, k in scores ? (scores[k] as number | null) : 90, errored.includes(k)),
++    ),
++    scopeStatement: 'fixture',
++    limitations: [],
++  };
++}
++
++const labels = (acceptable: boolean, dims: Partial<Record<AuditDimensionKey, boolean>> = {}): HumanLabels => ({
++  acceptable,
++  dimensions: dims,
++});
++
++describe('mapping auditor output onto a human call', () => {
++  it('treats PASS and PASS_WITH_WARNINGS as acceptable, FAIL as not', () => {
++    expect(verdictIsAcceptable('PASS')).toBe(true);
++    expect(verdictIsAcceptable('PASS_WITH_WARNINGS')).toBe(true);
++    expect(verdictIsAcceptable('FAIL')).toBe(false);
++  });
++
++  it('refuses to turn INSUFFICIENT_DATA into a judgement', () => {
++    // Declining to judge is not the same as passing. Coercing it either way
++    // is how an auditor gets credit for work it did not do.
++    expect(verdictIsAcceptable('INSUFFICIENT_DATA')).toBeNull();
++  });
++
++  it('an ERROR finding fails a dimension regardless of its score', () => {
++    const r = report('FAIL', { STOICHIOMETRY: 99 }, ['STOICHIOMETRY']);
++    expect(dimensionIsPassing(r, 'STOICHIOMETRY', 80)).toBe(false);
++  });
++
++  it('an unassessed dimension is null, not false', () => {
++    const r = report('PASS', { PLATFORM_RULES: null });
++    expect(dimensionIsPassing(r, 'PLATFORM_RULES', 80)).toBeNull();
++  });
++
++  it('applies the threshold to scored dimensions', () => {
++    const r = report('PASS', { SAFETY_AND_QC: 79 });
++    expect(dimensionIsPassing(r, 'SAFETY_AND_QC', 80)).toBe(false);
++    expect(dimensionIsPassing(r, 'SAFETY_AND_QC', 70)).toBe(true);
++  });
++});
++
++describe('calibration arithmetic', () => {
++  it('counts overall agreement and traces disagreements to their protocol', () => {
++    const cases: CalibrationCase[] = [
++      { id: 'p1', report: report('PASS', {}), labels: labels(true, { STOICHIOMETRY: true }) },
++      { id: 'p2', report: report('FAIL', {}, ['STOICHIOMETRY']), labels: labels(false, { STOICHIOMETRY: false }) },
++      // auditor passes it, the human would not: a leniency error
++      { id: 'p3', report: report('PASS', {}), labels: labels(false, { STOICHIOMETRY: false }) },
++    ];
++    const cal = calibrateAuditor(cases);
++    expect(cal.n).toBe(3);
++    expect(cal.overall.tp).toBe(1);
++    expect(cal.overall.tn).toBe(1);
++    expect(cal.overall.fp).toBe(1);
++    const stoich = cal.dimensions.find((d) => d.key === 'STOICHIOMETRY');
++    expect(stoich?.disagreements).toEqual(['p3']);
++  });
++
++  it('excludes protocols the auditor declined to judge instead of scoring them', () => {
++    const cases: CalibrationCase[] = [
++      { id: 'p1', report: report('PASS', {}), labels: labels(true) },
++      { id: 'p2', report: report('INSUFFICIENT_DATA', {}), labels: labels(false) },
++    ];
++    const cal = calibrateAuditor(cases);
++    expect(cal.n).toBe(1);
++  });
++
++  it('excludes unassessed dimensions rather than counting them as agreement', () => {
++    const cases: CalibrationCase[] = [
++      { id: 'p1', report: report('PASS', { PLATFORM_RULES: null }), labels: labels(true, { PLATFORM_RULES: true }) },
++      { id: 'p2', report: report('PASS', { PLATFORM_RULES: null }), labels: labels(true, { PLATFORM_RULES: true }) },
++    ];
++    const cal = calibrateAuditor(cases);
++    const platform = cal.dimensions.find((d) => d.key === 'PLATFORM_RULES');
++    expect(platform?.compared).toBe(0);
++    expect(platform?.excludedNotAssessed).toBe(2);
++    expect(platform?.status).toBe('NOT_ASSESSED');
++  });
++
++  it('excludes dimensions the human did not label', () => {
++    const cases: CalibrationCase[] = [
++      { id: 'p1', report: report('PASS', {}), labels: labels(true, {}) },
++    ];
++    const cal = calibrateAuditor(cases);
++    const stoich = cal.dimensions.find((d) => d.key === 'STOICHIOMETRY');
++    expect(stoich?.excludedUnlabelled).toBe(1);
++    expect(stoich?.compared).toBe(0);
++  });
++});
++
++describe('what calibration refuses to conclude', () => {
++  it('will not call a dimension calibrated on a handful of items', () => {
++    const cases: CalibrationCase[] = Array.from({ length: 8 }, (_, i) => ({
++      id: `p${i}`,
++      report: report(i % 2 === 0 ? 'PASS' : 'FAIL', {}, i % 2 === 0 ? [] : ['SAFETY_AND_QC']),
++      labels: labels(i % 2 === 0, { SAFETY_AND_QC: i % 2 === 0 }),
++    }));
++    const cal = calibrateAuditor(cases);
++    const safety = cal.dimensions.find((d) => d.key === 'SAFETY_AND_QC');
++    // Perfect agreement, and still not enough items to claim calibration.
++    expect(safety?.stats.kappa).toBeCloseTo(1, 10);
++    expect(safety?.status).toBe('INSUFFICIENT');
++    expect(cal.concerns.some((c) => c.includes('floor at which these figures mean much'))).toBe(true);
++  });
++
++  it('flags a dimension where the human labels never vary', () => {
++    const cases: CalibrationCase[] = Array.from({ length: 25 }, (_, i) => ({
++      id: `p${i}`,
++      report: report('PASS', {}),
++      labels: labels(true, { CITATION_INTEGRITY: true }),
++    }));
++    const cal = calibrateAuditor(cases);
++    const cite = cal.dimensions.find((d) => d.key === 'CITATION_INTEGRITY');
++    expect(cite?.status).toBe('DEGENERATE');
++    expect(cal.concerns.some((c) => c.includes('never varied'))).toBe(true);
++  });
++
++  it('flags an ambiguous criterion rather than reporting a low kappa quietly', () => {
++    // Auditor and human agree at roughly chance on this dimension.
++    const cases: CalibrationCase[] = Array.from({ length: 24 }, (_, i) => {
++      const auditorPass = i % 2 === 0;
++      const humanPass = i % 3 === 0;
++      return {
++        id: `p${i}`,
++        report: report('PASS', { VOLUME_BALANCE: auditorPass ? 90 : 40 }),
++        labels: labels(true, { VOLUME_BALANCE: humanPass }),
++      };
++    });
++    const cal = calibrateAuditor(cases);
++    const vol = cal.dimensions.find((d) => d.key === 'VOLUME_BALANCE');
++    expect(vol?.compared).toBe(24);
++    expect(vol?.status).toBe('AMBIGUOUS');
++    expect(cal.concerns.some((c) => c.includes('Rewrite the check'))).toBe(true);
++  });
++
++  it('names leniency explicitly, because that is the direction that hurts', () => {
++    // Auditor passes everything; the human rejects a third of it.
++    const cases: CalibrationCase[] = Array.from({ length: 24 }, (_, i) => ({
++      id: `p${i}`,
++      report: report('PASS', {}),
++      labels: labels(i % 3 !== 0),
++    }));
++    const cal = calibrateAuditor(cases);
++    expect(cal.overall.leniency).toBeGreaterThan(0.1);
++    expect(cal.concerns.some((c) => c.includes('dangerous direction'))).toBe(true);
++  });
++
++  it('reports an interval on overall accuracy, not a bare percentage', () => {
++    const cases: CalibrationCase[] = Array.from({ length: 20 }, (_, i) => ({
++      id: `p${i}`,
++      report: report(i < 18 ? 'PASS' : 'FAIL', {}, i < 18 ? [] : ['STOICHIOMETRY']),
++      labels: labels(i < 18),
++    }));
++    const cal = calibrateAuditor(cases);
++    expect(cal.overallAccuracy.p).toBe(1);
++    // 20 for 20 is not evidence of perfection; the interval says so.
++    expect(cal.overallAccuracy.lo).toBeLessThan(0.9);
++    expect(cal.overallAccuracy.hi).toBe(1);
++  });
++
++  it('carries a scope statement so a calibration figure never travels alone', () => {
++    const cal = calibrateAuditor([]);
++    expect(cal.scopeStatement).toContain('measure of agreement, not of correctness');
++    expect(cal.scopeStatement).toContain('21 CFR Part 11');
++  });
++
++  it('an empty corpus concludes nothing rather than throwing', () => {
++    const cal = calibrateAuditor([]);
++    expect(cal.n).toBe(0);
++    expect(cal.dimensions.every((d) => d.status === 'NOT_ASSESSED')).toBe(true);
++  });
++});
+diff --git a/tests/evalStats.test.ts b/tests/evalStats.test.ts
+new file mode 100644
+index 0000000..957f281
+--- /dev/null
++++ b/tests/evalStats.test.ts
+@@ -0,0 +1,344 @@
++import { describe, it, expect } from 'vitest';
++import fc from 'fast-check';
++import {
++  logGamma,
++  tTestTwoSided,
++  probit,
++  tQuantile,
++  mean,
++  standardDeviation,
++  summarize,
++  wilsonInterval,
++  pairedComparison,
++  assessPower,
++  binomialUpperTail,
++  mcNemar,
++  agreement,
++  agreementBand,
++  MIN_MEANINGFUL_PAIRS,
++} from '../src/core/evalStats';
++import type { PairedComparisonFailed } from '../src/core/evalStats';
++
++/**
++ * Reference values in this file were produced independently with SciPy
++ * (scipy.stats / scipy.special), not by running the implementation and
++ * recording what it said. A test that records its own output proves only that
++ * the code is deterministic.
++ */
++
++const near = (actual: number, expected: number, tol = 1e-10) =>
++  expect(Math.abs(actual - expected)).toBeLessThan(tol);
++
++describe('special functions against SciPy', () => {
++  it('logGamma matches math.lgamma', () => {
++    near(logGamma(0.5), 0.5723649429247, 1e-12);
++    near(logGamma(1.0), 0.0, 1e-12);
++    near(logGamma(5.0), 3.178053830347945, 1e-12);
++    near(logGamma(10.5), 13.940625219403763, 1e-11);
++    // reflection branch, z < 0.5
++    near(logGamma(0.1), 2.252712651734206, 1e-11);
++  });
++
++  it('two-sided t p-values match scipy.stats.t.sf', () => {
++    near(tTestTwoSided(2.0, 10), 0.07338803477074, 1e-12);
++    near(tTestTwoSided(11.2, 17), 2.869621e-9, 1e-15);
++    near(tTestTwoSided(1.0, 1), 0.5, 1e-12);
++    near(tTestTwoSided(3.5, 29), 0.001524446314655, 1e-13);
++    near(tTestTwoSided(0.5, 100), 0.618173565830887, 1e-12);
++  });
++
++  it('probit matches scipy.stats.norm.ppf to its documented accuracy', () => {
++    // Acklam is a rational approximation, not an exact inverse. The tolerance
++    // here is the accuracy the method actually has (~2e-9 absolute), which is
++    // still four orders of magnitude finer than anything that moves a verdict.
++    const ACKLAM = 2e-9;
++    near(probit(0.975), 1.959963984540054, ACKLAM);
++    near(probit(0.5), 0.0, 1e-12);
++    near(probit(0.8), 0.841621233572914, ACKLAM);
++    near(probit(0.01), -2.326347874040841, ACKLAM);
++    near(probit(0.999), 3.090232306167813, ACKLAM);
++  });
++
++  it('probit refuses values outside (0, 1) rather than extrapolating', () => {
++    expect(Number.isNaN(probit(0))).toBe(true);
++    expect(Number.isNaN(probit(1))).toBe(true);
++    expect(Number.isNaN(probit(-0.2))).toBe(true);
++  });
++
++  it('t quantiles match scipy.stats.t.ppf where golden sets actually live', () => {
++    near(tQuantile(0.975, 1), 12.706204736174694, 1e-7);
++    near(tQuantile(0.975, 5), 2.570581835636315, 1e-9);
++    near(tQuantile(0.975, 11), 2.200985160091639, 1e-9);
++    near(tQuantile(0.975, 17), 2.109815577833316, 1e-9);
++    near(tQuantile(0.975, 29), 2.045229642132703, 1e-9);
++    near(tQuantile(0.975, 100), 1.983971518523552, 1e-9);
++  });
++
++  it('substitutes the normal above df 2000, and that substitution is defensible', () => {
++    // Documented shortcut: above df 2000 the t quantile is replaced by the normal.
++    near(tQuantile(0.975, 3000), 1.959963984540054, 2e-9);
++    // The true value there is 1.9607550553; the error the shortcut introduces is
++    // smaller than a thousandth of a multiplier, which cannot move a verdict.
++    expect(Math.abs(1.960755055322458 - tQuantile(0.975, 3000))).toBeLessThan(1e-3);
++  });
++
++  it('the small-n t multiplier is materially larger than 1.96', () => {
++    // The reason tQuantile exists at all. At n = 12 a normal multiplier
++    // understates the interval by roughly 12 percent.
++    expect(tQuantile(0.975, 11) / probit(0.975)).toBeGreaterThan(1.11);
++  });
++});
++
++describe('descriptive statistics', () => {
++  it('mean and sample standard deviation', () => {
++    near(mean([1, 2, 3, 4]), 2.5, 1e-15);
++    near(standardDeviation([2, 4, 4, 4, 5, 5, 7, 9]), 2.13808993529939, 1e-12);
++  });
++
++  it('refuses a standard deviation of one value instead of reporting zero', () => {
++    expect(Number.isNaN(standardDeviation([5]))).toBe(true);
++    expect(Number.isNaN(standardDeviation([]))).toBe(true);
++  });
++
++  it('summarize reports the CI half-width, which is the number worth showing', () => {
++    const s = summarize([0.62, 0.55, 0.71, 0.48, 0.66, 0.59, 0.73, 0.51, 0.68, 0.57, 0.64, 0.6]);
++    expect(s.n).toBe(12);
++    near(s.mean, 0.6116666666666666, 1e-12);
++    near(s.half, tQuantile(0.975, 11) * s.se, 1e-12);
++    near(s.lo, s.mean - s.half, 1e-12);
++  });
++});
++
++describe('Wilson interval against scipy proportion_ci', () => {
++  it('matches at a middling proportion', () => {
++    // Tolerance is 1e-9 because the Acklam z propagates into both endpoints.
++    const w = wilsonInterval(10, 20);
++    near(w.lo, 0.299298008198212, 1e-9);
++    near(w.hi, 0.700701991801788, 1e-9);
++  });
++
++  it('stays inside [0, 1] at the boundaries where the normal approximation escapes', () => {
++    const zero = wilsonInterval(0, 10);
++    near(zero.lo, 0, 1e-12);
++    near(zero.hi, 0.277532799862889, 1e-9);
++    const all = wilsonInterval(18, 18);
++    near(all.lo, 0.824120776353342, 1e-9);
++    near(all.hi, 1, 1e-12);
++  });
++
++  it('matches at a small awkward n', () => {
++    const w = wilsonInterval(3, 7);
++    near(w.lo, 0.15821985525147, 1e-9);
++    near(w.hi, 0.749541635472343, 1e-9);
++  });
++
++  it('never produces an interval outside [0, 1] for any input', () => {
++    fc.assert(
++      fc.property(fc.integer({ min: 0, max: 200 }), fc.integer({ min: 1, max: 200 }), (k, n) => {
++        const kk = Math.min(k, n);
++        const w = wilsonInterval(kk, n);
++        return w.lo >= 0 && w.hi <= 1 && w.lo <= w.p && w.p <= w.hi;
++      }),
++    );
++  });
++});
++
++/** Twelve matched scores. Reference figures computed with scipy.stats.ttest_rel. */
++const RUN_A = [0.62, 0.55, 0.71, 0.48, 0.66, 0.59, 0.73, 0.51, 0.68, 0.57, 0.64, 0.6];
++const RUN_B = [0.81, 0.74, 0.88, 0.69, 0.85, 0.77, 0.91, 0.72, 0.86, 0.79, 0.83, 0.78];
++
++describe('paired comparison', () => {
++  it('matches scipy.stats.ttest_rel and pearsonr', () => {
++    const r = pairedComparison(RUN_A, RUN_B);
++    expect(r.ok).toBe(true);
++    if (!r.ok) return;
++    expect(r.n).toBe(12);
++    expect(r.df).toBe(11);
++    near(r.meanA, 0.6116666666666666, 1e-12);
++    near(r.meanB, 0.8024999999999999, 1e-12);
++    near(r.diff, 0.190833333333333, 1e-12);
++    near(r.sdDiff, 0.015050420310249, 1e-12);
++    near(r.t, 43.923428355815183, 1e-9);
++    near(r.p, 1.04e-13, 1e-14);
++    near(r.r, 0.988355356282291, 1e-10);
++    near(r.lo, 0.181270752486616, 1e-11);
++    near(r.hi, 0.200395914180051, 1e-11);
++  });
++
++  it('refuses runs of different lengths instead of truncating them', () => {
++    const r = pairedComparison([1, 2, 3], [1, 2]);
++    expect(r.ok).toBe(false);
++    // The repo's base tsconfig is non-strict, where narrowing a boolean
++    // discriminant to its false branch does not apply. The cast keeps this file
++    // compiling under both passes that `npm run lint` runs.
++    expect((r as PairedComparisonFailed).code).toBe('LENGTH_MISMATCH');
++  });
++
++  it('refuses a single pair', () => {
++    const r = pairedComparison([1], [2]);
++    expect(r.ok).toBe(false);
++    expect((r as PairedComparisonFailed).code).toBe('TOO_FEW_PAIRS');
++  });
++
++  it('reverses sign but not magnitude when the runs are swapped', () => {
++    fc.assert(
++      fc.property(
++        fc.array(fc.tuple(fc.double({ min: 0, max: 1, noNaN: true }), fc.double({ min: 0, max: 1, noNaN: true })), {
++          minLength: 3,
++          maxLength: 40,
++        }),
++        (pairs) => {
++          const a = pairs.map((p) => p[0]);
++          const b = pairs.map((p) => p[1]);
++          const fwd = pairedComparison(a, b);
++          const rev = pairedComparison(b, a);
++          if (!fwd.ok || !rev.ok) return true;
++          if (!Number.isFinite(fwd.t) || !Number.isFinite(rev.t)) return true;
++          return (
++            Math.abs(fwd.diff + rev.diff) < 1e-9 && Math.abs(Math.abs(fwd.t) - Math.abs(rev.t)) < 1e-6
++          );
++        },
++      ),
++    );
++  });
++});
++
++describe('power assessment', () => {
++  it('reproduces the 7.849 leading constant at alpha .05 and power .80', () => {
++    const z = probit(0.975) + probit(0.8);
++    near(z * z, 7.848879, 1e-5);
++  });
++
++  it('floors the requirement rather than claiming a two-item study was enough', () => {
++    const cmp = pairedComparison(RUN_A, RUN_B);
++    expect(cmp.ok).toBe(true);
++    if (!cmp.ok) return;
++    const power = assessPower(cmp.sdDiff, cmp.diff, cmp.n);
++    // The raw formula asks for well under one pair for a gap this large.
++    expect(power.requiredRaw).toBeLessThan(1);
++    expect(power.floored).toBe(true);
++    expect(power.required).toBe(MIN_MEANINGFUL_PAIRS);
++    near(power.q, 12 / MIN_MEANINGFUL_PAIRS, 1e-12);
++    expect(power.claimable).toBe(true);
++  });
++
++  it('refuses to call a gap claimable when the sample cannot resolve it', () => {
++    // Noisy scores, small real difference, few items.
++    const power = assessPower(0.2, 0.02, 10);
++    expect(power.floored).toBe(false);
++    expect(power.required).toBeGreaterThan(100);
++    expect(power.claimable).toBe(false);
++    expect(power.q).toBeLessThan(1);
++  });
++
++  it('reports the smallest difference the sample could have resolved', () => {
++    const power = assessPower(0.2, 0.02, 10);
++    const z = probit(0.975) + probit(0.8);
++    near(power.minimumDetectable, 0.2 * Math.sqrt((z * z) / 10), 1e-12);
++    // and that floor is above the observed gap, which is why it is not claimable
++    expect(power.minimumDetectable).toBeGreaterThan(0.02);
++  });
++
++  it('gives no verdict at all when there is no difference to size', () => {
++    const power = assessPower(0.05, 0, 20);
++    expect(Number.isNaN(power.required)).toBe(true);
++    expect(power.claimable).toBe(false);
++  });
++});
++
++describe('McNemar exact', () => {
++  it('matches the exact binomial tail', () => {
++    // 299 / 4096 = P(X >= 9 | n = 12, p = 0.5)
++    near(binomialUpperTail(9, 12), 299 / 4096, 1e-12);
++  });
++
++  it('reproduces a hand-checkable table', () => {
++    // n10 = 9 (A pass, B fail), n01 = 3 (A fail, B pass)
++    const a = [...Array(9).fill(true), ...Array(3).fill(false), true, false];
++    const b = [...Array(9).fill(false), ...Array(3).fill(true), true, false];
++    const m = mcNemar(a, b);
++    expect(m.n10).toBe(9);
++    expect(m.n01).toBe(3);
++    expect(m.n11).toBe(1);
++    expect(m.n00).toBe(1);
++    expect(m.discordant).toBe(12);
++    near(m.p, 0.14599609375, 1e-12);
++  });
++
++  it('reports p = 1 when nothing disagrees, rather than dividing by zero', () => {
++    const m = mcNemar([true, false, true], [true, false, true]);
++    expect(m.discordant).toBe(0);
++    expect(m.p).toBe(1);
++  });
++
++  it('cell counts always sum to n', () => {
++    fc.assert(
++      fc.property(fc.array(fc.tuple(fc.boolean(), fc.boolean()), { minLength: 1, maxLength: 60 }), (pairs) => {
++        const m = mcNemar(pairs.map((p) => p[0]), pairs.map((p) => p[1]));
++        return m.n00 + m.n01 + m.n10 + m.n11 === m.n && m.n === pairs.length;
++      }),
++    );
++  });
++});
++
++describe('agreement', () => {
++  /** tp = 20, fp = 5, fn = 10, tn = 15. Cohen's kappa is exactly 0.40. */
++  const reference = [...Array(20).fill(true), ...Array(10).fill(true), ...Array(5).fill(false), ...Array(15).fill(false)];
++  const candidate = [...Array(20).fill(true), ...Array(10).fill(false), ...Array(5).fill(true), ...Array(15).fill(false)];
++
++  it('reproduces a hand-computed kappa', () => {
++    const a = agreement(reference, candidate);
++    expect(a.n).toBe(50);
++    expect([a.tp, a.fp, a.fn, a.tn]).toEqual([20, 5, 10, 15]);
++    near(a.po, 0.7, 1e-12);
++    near(a.kappa, 0.4, 1e-12);
++  });
++
++  it('computes Gwet AC1 alongside it', () => {
++    const a = agreement(reference, candidate);
++    // pi = 0.55, pe = 2(0.55)(0.45) = 0.495, AC1 = (0.7 - 0.495) / 0.505
++    near(a.ac1, 0.205 / 0.505, 1e-12);
++  });
++
++  it('reports sensitivity, specificity and the direction of the disagreement', () => {
++    const a = agreement(reference, candidate);
++    near(a.sensitivity, 20 / 30, 1e-12);
++    near(a.specificity, 15 / 20, 1e-12);
++    // The candidate says yes 25 times where the reference says yes 30 times:
++    // it is stricter, not more lenient.
++    near(a.leniency, -0.1, 1e-12);
++  });
++
++  it('flags a degenerate criterion instead of reporting a meaningless kappa', () => {
++    // Reference never varies. Kappa is undefined here, and the honest answer is
++    // that the criterion is uninformative, not that agreement was perfect.
++    const a = agreement([true, true, true, true], [true, true, false, true]);
++    expect(a.degenerate).toBe(true);
++    expect(a.po).toBeGreaterThan(0);
++  });
++
++  it('perfect agreement gives kappa 1, and a coin flip gives about 0', () => {
++    const perfect = agreement([true, false, true, false], [true, false, true, false]);
++    near(perfect.kappa, 1, 1e-12);
++    const chance = agreement([true, true, false, false], [true, false, true, false]);
++    near(chance.kappa, 0, 1e-12);
++  });
++
++  it('observed agreement is always a proportion', () => {
++    fc.assert(
++      fc.property(fc.array(fc.tuple(fc.boolean(), fc.boolean()), { minLength: 1, maxLength: 60 }), (pairs) => {
++        const a = agreement(pairs.map((p) => p[0]), pairs.map((p) => p[1]));
++        return a.po >= 0 && a.po <= 1 && a.tp + a.fp + a.fn + a.tn === pairs.length;
++      }),
++    );
++  });
++
++  it('bands kappa the way the calibration report reads it', () => {
++    expect(agreementBand(NaN)).toBe('undefined');
++    expect(agreementBand(0.2)).toBe('poor to fair');
++    expect(agreementBand(0.39999)).toBe('poor to fair');
++    expect(agreementBand(0.4)).toBe('moderate');
++    expect(agreementBand(0.6)).toBe('substantial');
++    expect(agreementBand(0.75)).toBe('almost perfect');
++  });
++});
+diff --git a/tests/fixtures/GOLDEN-SET.md b/tests/fixtures/GOLDEN-SET.md
+new file mode 100644
+index 0000000..5589dce
+--- /dev/null
++++ b/tests/fixtures/GOLDEN-SET.md
+@@ -0,0 +1,85 @@
++# Authoring the golden set
++
++`tests/sopQuality.test.ts` measures how good BioSOP's SOP output actually is. It
++cannot run until you supply the one thing no tooling can generate for you: a set
++of bench methods where **you already know the right answer.**
++
++That file does not exist in the repo, and it should not be invented. A quality
++figure computed against fabricated methods and fabricated reference answers is
++worse than having no figure, because it looks like evidence. The whole argument
++this project rests on is that a score which cannot fail is worthless; a score
++measured against made-up ground truth is the same failure wearing statistics.
++
++## What to create
++
++Put a file at `tests/fixtures/goldenSet.json` matching
++`goldenSet.example.json`. It is gitignored by default, because these are your
++working methods.
++
++```jsonc
++{
++  "rubricId": "sop-drafting",
++  "createdAt": "2026-08-21",
++  "items": [
++    {
++      "id": "rna-extraction-trizol",
++      "sourceMethod": "…your working protocol, verbatim…",
++      "referenceSop": "…the approved SOP you grade against…",
++      "difficulty": "hard",
++      "adversarial": false,
++      "notes": "Source omits the incubation temperature. Correct behaviour is to flag it, not to fill it in."
++    }
++  ]
++}
++```
++
++## The bar for an item
++
++**Two competent people in your field, reading the source method and the
++reference SOP independently, would reach the same pass/fail verdict.** If you
++cannot say that about an item, it will add noise, not signal, and it will drag
++the agreement statistics down in a way that looks like a model problem.
++
++## Composition
++
++- **Fifteen items is a working minimum. Twenty to fifty is the useful range.**
++  Below fifteen the confidence interval is wider than most differences you would
++  want to detect.
++- **Over-sample hard cases.** Roughly three and a half times enrichment relative
++  to what you actually see day to day. Easy items are cheap to pass and tell you
++  nothing.
++- **Reserve about a third as adversarial.** Sources with a missing parameter, an
++  internal contradiction, an ambiguous step, a hazard the source does not name.
++- **Include items where the correct answer is "the source does not say."** A
++  model that never says this is one that fills gaps silently, which is the
++  failure mode that matters most here.
++- **Hold back a private split** you do not tune against.
++
++## Grading
++
++Score each generated SOP against `SOP_DRAFTING_RUBRIC` in
++`src/core/sopRubric.ts`. Criteria are yes/no on purpose. Hard failures gate the
++item regardless of its score, the same way an ERROR forces FAIL in `auditor.ts`.
++
++Grade against **the approved SOP you actually have**, not against what a good SOP
++would look like in the abstract. The moment you start grading against your
++impression of quality, two runs stop being comparable.
++
++## Calibrating the auditor at the same time
++
++While you are reading these documents anyway, record your own pass/fail call per
++audit dimension. That turns the same labour into a `CalibrationCase` for
++`src/core/auditCalibration.ts`, which answers a question nothing else in the repo
++answers: does `auditor.ts` agree with you? Twenty labelled protocols is the floor
++at which those figures start to mean anything.
++
++## What the suite will and will not catch
++
++It **will** catch a real change in output quality between prompt versions, model
++versions, or template changes, and it will tell you when the difference you are
++looking at is too small for your sample to claim.
++
++It **will not** catch drift by itself unless you run it. `auditProtocol` never
++calls a model, so `tests/auditAnchor.test.ts` catches auditor drift only. Model
++drift needs this suite run against a live key, on a schedule, with the results
++kept.
+diff --git a/tests/fixtures/anchorProtocols.ts b/tests/fixtures/anchorProtocols.ts
+new file mode 100644
+index 0000000..646fb01
+--- /dev/null
++++ b/tests/fixtures/anchorProtocols.ts
+@@ -0,0 +1,134 @@
++/**
++ * Frozen protocol fixtures for auditor drift detection.
++ *
++ * These are anchors. Their contents must not be edited to make a test pass. If
++ * the auditor's output moves on a fixture, either the change was intended (in
++ * which case re-baseline deliberately and say why in the commit) or it was not
++ * (in which case the anchor just did its job).
++ *
++ * They deliberately span the verdict range: one clean, one with a fatal
++ * arithmetic defect, one thin on safety, one with an unverifiable citation.
++ */
++
++import type { SopDocument } from '../../src/types';
++import { calculateReaction, type ReactionCalculation } from '../../src/core/reactionMath';
++
++function baseDocument(overrides: Partial<SopDocument> = {}): SopDocument {
++  return {
++    id: 'anchor',
++    documentId: 'SOP-ANCHOR',
++    version: '1.0',
++    effectiveDate: '2026-01-01',
++    title: 'Anchor protocol',
++    category: 'PCR',
++    author: 'Anchor',
++    scope: 'Fixed fixture for drift detection.',
++    biosafetyLevel: 'BSL-1',
++    hazards: [{ type: 'CHEMICAL', label: 'Ethidium bromide', description: 'Mutagen; handle in fume hood.' }],
++    ppeRequirements: [{ item: 'nitrile gloves', required: true }],
++    equipmentRequired: ['thermocycler', 'microcentrifuge'],
++    reagentsRequired: ['2X master mix', 'nuclease-free water'],
++    steps: [
++      {
++        stepNumber: 1,
++        title: 'Thaw and mix',
++        instruction: 'Thaw the 2X master mix on ice for 10 min and vortex for 5 s.',
++        timingMinutes: 10,
++        tempCelsius: 4,
++      },
++      {
++        stepNumber: 2,
++        title: 'Assemble',
++        instruction: 'Assemble a 20 uL reaction: 10 uL of 2X mix, 8 uL water, 2 uL template.',
++        timingMinutes: 15,
++        tempCelsius: 22,
++      },
++      {
++        stepNumber: 3,
++        title: 'Cycle',
++        instruction: 'Run 35 cycles of 95 C for 15 s and 60 C for 60 s.',
++        timingMinutes: 90,
++        tempCelsius: 95,
++      },
++    ],
++    qualityControl: ['Include a no-template control on every plate.'],
++    troubleshooting: [{ issue: 'No product', cause: 'Primer degradation', solution: 'Use a fresh aliquot.' }],
++    references: [{ citation: 'A real paper', doiOrUrl: '10.1/x', verificationStatus: 'VERIFIED' }],
++    revisionHistory: [{ version: '1.0', date: '2026-01-01', changes: 'Initial issue.', author: 'Anchor' }],
++    ...overrides,
++  };
++}
++
++export interface AnchorCase {
++  id: string;
++  /** Why this fixture exists, so a future reader knows what it is protecting. */
++  intent: string;
++  sop: SopDocument;
++  calc: ReactionCalculation | null;
++}
++
++const cleanCalc = (): ReactionCalculation =>
++  calculateReaction(
++    [
++      { id: 'mix', name: '2X Mix', stockConc: 2, stockUnit: 'X', finalConc: 1, finalUnit: 'X' },
++      { id: 'water', name: 'Water', stockConc: 1, stockUnit: 'X', finalConc: 1, finalUnit: 'X' },
++    ],
++    { targetVolumeMicroliters: 20 },
++  );
++
++/** Components whose required volumes exceed the reaction volume. */
++const overflowingCalc = (): ReactionCalculation =>
++  calculateReaction(
++    [
++      { id: 'mix', name: 'Mix', stockConc: 2, stockUnit: 'X', finalConc: 1.5, finalUnit: 'X' },
++      { id: 'primer', name: 'Primer', stockConc: 10, stockUnit: 'µM', finalConc: 4, finalUnit: 'µM' },
++      { id: 'probe', name: 'Probe', stockConc: 5, stockUnit: 'µM', finalConc: 2, finalUnit: 'µM' },
++    ],
++    { targetVolumeMicroliters: 20 },
++  );
++
++export const ANCHOR_CASES: AnchorCase[] = [
++  {
++    id: 'clean-pcr',
++    intent: 'A well-formed document with balanced arithmetic. Guards against the auditor becoming harsher by accident.',
++    sop: baseDocument(),
++    calc: cleanCalc(),
++  },
++  {
++    id: 'overflowing-volumes',
++    intent: 'Component volumes exceed the reaction volume. This must never stop being a FAIL.',
++    sop: baseDocument({ documentId: 'SOP-ANCHOR-2', title: 'Overflowing reaction' }),
++    calc: overflowingCalc(),
++  },
++  {
++    id: 'no-safety-content',
++    intent: 'Hazards, PPE and QC stripped out. Guards the safety dimension against silently loosening.',
++    sop: baseDocument({
++      documentId: 'SOP-ANCHOR-3',
++      title: 'No safety content',
++      hazards: [],
++      ppeRequirements: [],
++      qualityControl: [],
++    }),
++    calc: cleanCalc(),
++  },
++  {
++    id: 'unverified-citation',
++    intent: 'A citation whose DOI resolves to the wrong paper, which is the hallucination signature.',
++    sop: baseDocument({
++      documentId: 'SOP-ANCHOR-4',
++      title: 'Mismatched citation',
++      references: [
++        { citation: 'Claimed paper', doiOrUrl: '10.1/wrong', verificationStatus: 'MISMATCH' },
++        { citation: 'Unchecked paper', doiOrUrl: '10.1/unknown', verificationStatus: 'UNCHECKED' },
++      ],
++    }),
++    calc: cleanCalc(),
++  },
++  {
++    id: 'no-reaction-data',
++    intent: 'No reaction calculation at all. The arithmetic dimensions must decline to score rather than pass by default.',
++    sop: baseDocument({ documentId: 'SOP-ANCHOR-5', title: 'Document only' }),
++    calc: null,
++  },
++];
+diff --git a/tests/fixtures/auditAnchors.json b/tests/fixtures/auditAnchors.json
+new file mode 100644
+index 0000000..3a0401b
+--- /dev/null
++++ b/tests/fixtures/auditAnchors.json
+@@ -0,0 +1,257 @@
++{
++  "clean-pcr": {
++    "verdict": "PASS",
++    "overallScore": 100,
++    "confidence": 0.83,
++    "errorCount": 0,
++    "warningCount": 0,
++    "dimensions": {
++      "STOICHIOMETRY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "VOLUME_BALANCE": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PIPETTABILITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "DOCUMENT_COMPLETENESS": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "SAFETY_AND_QC": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "CITATION_INTEGRITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PLATFORM_RULES": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      }
++    }
++  },
++  "overflowing-volumes": {
++    "verdict": "FAIL",
++    "overallScore": 84.3,
++    "confidence": 0.83,
++    "errorCount": 1,
++    "warningCount": 0,
++    "dimensions": {
++      "STOICHIOMETRY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "VOLUME_BALANCE": {
++        "score": 35,
++        "coverage": 1,
++        "errors": 1,
++        "warnings": 0
++      },
++      "PIPETTABILITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "DOCUMENT_COMPLETENESS": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "SAFETY_AND_QC": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "CITATION_INTEGRITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PLATFORM_RULES": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      }
++    }
++  },
++  "no-safety-content": {
++    "verdict": "FAIL",
++    "overallScore": 93,
++    "confidence": 0.83,
++    "errorCount": 2,
++    "warningCount": 1,
++    "dimensions": {
++      "STOICHIOMETRY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "VOLUME_BALANCE": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PIPETTABILITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "DOCUMENT_COMPLETENESS": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "SAFETY_AND_QC": {
++        "score": 42,
++        "coverage": 1,
++        "errors": 2,
++        "warnings": 1
++      },
++      "CITATION_INTEGRITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PLATFORM_RULES": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      }
++    }
++  },
++  "unverified-citation": {
++    "verdict": "FAIL",
++    "overallScore": 92,
++    "confidence": 0.75,
++    "errorCount": 1,
++    "warningCount": 1,
++    "dimensions": {
++      "STOICHIOMETRY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "VOLUME_BALANCE": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PIPETTABILITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "DOCUMENT_COMPLETENESS": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "SAFETY_AND_QC": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "CITATION_INTEGRITY": {
++        "score": 17,
++        "coverage": 0,
++        "errors": 1,
++        "warnings": 1
++      },
++      "PLATFORM_RULES": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      }
++    }
++  },
++  "no-reaction-data": {
++    "verdict": "INSUFFICIENT_DATA",
++    "overallScore": 100,
++    "confidence": 0.3,
++    "errorCount": 0,
++    "warningCount": 0,
++    "dimensions": {
++      "STOICHIOMETRY": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      },
++      "VOLUME_BALANCE": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PIPETTABILITY": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      },
++      "DOCUMENT_COMPLETENESS": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "SAFETY_AND_QC": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "CITATION_INTEGRITY": {
++        "score": 100,
++        "coverage": 1,
++        "errors": 0,
++        "warnings": 0
++      },
++      "PLATFORM_RULES": {
++        "score": null,
++        "coverage": 0,
++        "errors": 0,
++        "warnings": 0
++      }
++    }
++  }
++}
+diff --git a/tests/fixtures/goldenSet.example.json b/tests/fixtures/goldenSet.example.json
+new file mode 100644
+index 0000000..726b7d2
+--- /dev/null
++++ b/tests/fixtures/goldenSet.example.json
+@@ -0,0 +1,23 @@
++{
++  "_comment": "TEMPLATE ONLY. Copy to goldenSet.json and replace every field with real methods you know the answer to. The placeholder text below is deliberately not a usable protocol: a quality figure computed against invented ground truth is not evidence.",
++  "rubricId": "sop-drafting",
++  "createdAt": "2026-01-01",
++  "items": [
++    {
++      "id": "REPLACE-ME-example-1",
++      "sourceMethod": "<paste your working method here, verbatim, do not summarise>",
++      "referenceSop": "<paste the approved SOP you will grade against>",
++      "difficulty": "hard",
++      "adversarial": false,
++      "notes": "<what makes this item hard, and what correct behaviour looks like>"
++    },
++    {
++      "id": "REPLACE-ME-example-2-adversarial",
++      "sourceMethod": "<a method with a parameter deliberately missing>",
++      "referenceSop": "<the approved SOP, which flags the gap rather than filling it>",
++      "difficulty": "hard",
++      "adversarial": true,
++      "notes": "Correct behaviour is an [AMBIGUOUS] marker and an inference-log entry, not a plausible guess."
++    }
++  ]
++}
+diff --git a/tests/sopQuality.test.ts b/tests/sopQuality.test.ts
+new file mode 100644
+index 0000000..c752e44
+--- /dev/null
++++ b/tests/sopQuality.test.ts
+@@ -0,0 +1,176 @@
++import { describe, it, expect } from 'vitest';
++import { existsSync, readFileSync } from 'node:fs';
++import { join } from 'node:path';
++import {
++  SOP_DRAFTING_RUBRIC,
++  scoreItem,
++  criterionMetRates,
++  WEIGHT_VALUE,
++  type ItemScoreInput,
++} from '../src/core/sopRubric';
++import { summarize, pairedComparison, assessPower, wilsonInterval } from '../src/core/evalStats';
++
++/**
++ * Quality of BioSOP's SOP output, measured against a golden set.
++ *
++ * This suite SKIPS unless `tests/fixtures/goldenSet.json` exists. That is
++ * deliberate and it is not a gap to be filled with fixtures: the golden set has
++ * to be real methods where the answer is already known, and no amount of
++ * generated placeholder data can stand in for that. See
++ * `tests/fixtures/GOLDEN-SET.md`.
++ *
++ * The rubric mechanics below are tested unconditionally, because those are
++ * arithmetic and can be checked without any bench knowledge at all.
++ */
++
++const GOLDEN_PATH = join(__dirname, 'fixtures', 'goldenSet.json');
++const hasGoldenSet = existsSync(GOLDEN_PATH);
++
++interface GoldenItem {
++  id: string;
++  sourceMethod: string;
++  referenceSop: string;
++  difficulty?: string;
++  adversarial?: boolean;
++  notes?: string;
++}
++
++describe('rubric mechanics', () => {
++  it('weights essential, important and optional at 1.0, 0.7 and 0.3', () => {
++    expect(WEIGHT_VALUE.ESSENTIAL).toBe(1.0);
++    expect(WEIGHT_VALUE.IMPORTANT).toBe(0.7);
++    expect(WEIGHT_VALUE.OPTIONAL).toBe(0.3);
++  });
++
++  it('scores an all-met item at 1 and an all-missed item at 0', () => {
++    const all = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    expect(scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: all, hardFailsFired: [] }).score).toBeCloseTo(1, 12);
++    expect(scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: [], hardFailsFired: [] }).score).toBe(0);
++  });
++
++  it('a hard failure fails the item at any score', () => {
++    // This is the property the whole design turns on. Everything satisfied,
++    // one safety step weakened, and it must not pass.
++    const all = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    const r = scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: all, hardFailsFired: ['h1'] });
++    expect(r.score).toBeCloseTo(1, 12);
++    expect(r.hardFailed).toBe(true);
++    expect(r.passed).toBe(false);
++  });
++
++  it('a hard failure is a gate, not a deduction that good criteria can bury', () => {
++    const all = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    const clean = scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: all, hardFailsFired: [] });
++    const gated = scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: all, hardFailsFired: ['h0'] });
++    // Identical score, opposite verdict. If the gate were a weight these would differ.
++    expect(gated.score).toBe(clean.score);
++    expect(clean.passed).toBe(true);
++    expect(gated.passed).toBe(false);
++  });
++
++  it('dropping one essential criterion falls below the 0.90 threshold', () => {
++    const all = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    const missingEssential = all.filter((id) => id !== 'c0');
++    const r = scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: missingEssential, hardFailsFired: [] });
++    expect(r.passed).toBe(false);
++  });
++
++  it('dropping one optional criterion does not', () => {
++    const all = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    const missingOptional = all.filter((id) => id !== 'c11');
++    expect(scoreItem(SOP_DRAFTING_RUBRIC, { criteriaMet: missingOptional, hardFailsFired: [] }).passed).toBe(true);
++  });
++
++  it('every criterion and hard fail carries a unique id', () => {
++    const ids = SOP_DRAFTING_RUBRIC.criteria.map((c) => c.id);
++    const hids = SOP_DRAFTING_RUBRIC.hardFails.map((h) => h.id);
++    expect(new Set(ids).size).toBe(ids.length);
++    expect(new Set(hids).size).toBe(hids.length);
++  });
++
++  it('reports per-criterion met rates worst first, so a failure says where', () => {
++    const items: ItemScoreInput[] = [
++      { criteriaMet: ['c0', 'c1', 'c5'], hardFailsFired: [] },
++      { criteriaMet: ['c0', 'c5'], hardFailsFired: [] },
++      { criteriaMet: ['c0'], hardFailsFired: [] },
++    ];
++    const rates = criterionMetRates(SOP_DRAFTING_RUBRIC, items);
++    expect(rates[0]?.rate).toBe(0);
++    const c0 = rates.find((r) => r.id === 'c0');
++    expect(c0?.rate).toBe(1);
++    for (let i = 1; i < rates.length; i++) {
++      expect(rates[i]!.rate).toBeGreaterThanOrEqual(rates[i - 1]!.rate);
++    }
++  });
++});
++
++describe.skipIf(!hasGoldenSet)('SOP quality against the golden set', () => {
++  const golden = hasGoldenSet
++    ? (JSON.parse(readFileSync(GOLDEN_PATH, 'utf8')) as { items: GoldenItem[] })
++    : { items: [] };
++
++  it('the golden set is large enough to conclude anything', () => {
++    expect(golden.items.length).toBeGreaterThanOrEqual(15);
++  });
++
++  it('every item carries a reference answer, which is what makes it gradeable', () => {
++    for (const item of golden.items) {
++      expect(item.referenceSop?.trim().length, `${item.id} has no reference SOP`).toBeGreaterThan(0);
++      expect(item.sourceMethod?.trim().length, `${item.id} has no source method`).toBeGreaterThan(0);
++    }
++  });
++
++  it('reserves a meaningful share of adversarial items', () => {
++    const adversarial = golden.items.filter((i) => i.adversarial).length;
++    // Roughly a third is the target. A quarter is the point below which the set
++    // stops probing the failure mode that matters.
++    expect(adversarial / golden.items.length).toBeGreaterThanOrEqual(0.25);
++  });
++
++  it('has no placeholder items left from the template', () => {
++    for (const item of golden.items) {
++      expect(item.id.startsWith('REPLACE-ME'), `${item.id} is still a template placeholder`).toBe(false);
++      expect(item.sourceMethod.includes('<paste'), `${item.id} still holds template text`).toBe(false);
++    }
++  });
++});
++
++/**
++ * Worked demonstration of the reporting path, on obviously synthetic scores.
++ *
++ * These numbers describe nothing. They exist so the statistics wiring is
++ * exercised in CI even before a real golden set lands, and so the shape of the
++ * output is visible to whoever reads this file next.
++ */
++describe('reporting path', () => {
++  const SYNTHETIC_A = [0.86, 0.91, 0.78, 0.94, 0.83, 0.88, 0.9, 0.75, 0.92, 0.87, 0.8, 0.89];
++  const SYNTHETIC_B = [0.9, 0.93, 0.84, 0.96, 0.88, 0.91, 0.94, 0.82, 0.95, 0.9, 0.86, 0.92];
++
++  it('summarises a run with an interval rather than a bare mean', () => {
++    const s = summarize(SYNTHETIC_A);
++    expect(s.n).toBe(12);
++    expect(s.half).toBeGreaterThan(0);
++    expect(s.lo).toBeLessThan(s.mean);
++    expect(s.hi).toBeGreaterThan(s.mean);
++  });
++
++  it('reports a pass rate as an interval, because 10 of 12 is not 83 percent', () => {
++    const passes = SYNTHETIC_A.filter((x) => x >= SOP_DRAFTING_RUBRIC.passThreshold).length;
++    const w = wilsonInterval(passes, SYNTHETIC_A.length);
++    expect(w.hi - w.lo).toBeGreaterThan(0.2);
++  });
++
++  it('pairs two runs and refuses to claim a gap the sample cannot resolve', () => {
++    const cmp = pairedComparison(SYNTHETIC_A, SYNTHETIC_B);
++    expect(cmp.ok).toBe(true);
++    if (!cmp.ok) return;
++    const power = assessPower(cmp.sdDiff, cmp.diff, cmp.n);
++    // Whichever way this lands, the verdict and the interval have to agree with
++    // each other: a claimable gap is one whose interval excludes zero.
++    if (power.claimable) {
++      expect(Math.sign(cmp.lo)).toBe(Math.sign(cmp.hi));
++    } else {
++      expect(power.minimumDetectable).toBeGreaterThan(Math.abs(cmp.diff));
++    }
++  });
++});
+-- 
+2.43.0
+

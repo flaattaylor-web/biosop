@@ -1,0 +1,23 @@
+{
+  "_comment": "TEMPLATE ONLY. Copy to goldenSet.json and replace every field with real methods you know the answer to. The placeholder text below is deliberately not a usable protocol: a quality figure computed against invented ground truth is not evidence.",
+  "rubricId": "sop-drafting",
+  "createdAt": "2026-01-01",
+  "items": [
+    {
+      "id": "REPLACE-ME-example-1",
+      "sourceMethod": "<paste your working method here, verbatim, do not summarise>",
+      "referenceSop": "<paste the approved SOP you will grade against>",
+      "difficulty": "hard",
+      "adversarial": false,
+      "notes": "<what makes this item hard, and what correct behaviour looks like>"
+    },
+    {
+      "id": "REPLACE-ME-example-2-adversarial",
+      "sourceMethod": "<a method with a parameter deliberately missing>",
+      "referenceSop": "<the approved SOP, which flags the gap rather than filling it>",
+      "difficulty": "hard",
+      "adversarial": true,
+      "notes": "Correct behaviour is an [AMBIGUOUS] marker and an inference-log entry, not a plausible guess."
+    }
+  ]
+}

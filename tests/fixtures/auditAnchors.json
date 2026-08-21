@@ -1,0 +1,257 @@
+{
+  "clean-pcr": {
+    "verdict": "PASS",
+    "overallScore": 100,
+    "confidence": 0.83,
+    "errorCount": 0,
+    "warningCount": 0,
+    "dimensions": {
+      "STOICHIOMETRY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "VOLUME_BALANCE": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PIPETTABILITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "DOCUMENT_COMPLETENESS": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "SAFETY_AND_QC": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "CITATION_INTEGRITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PLATFORM_RULES": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  "overflowing-volumes": {
+    "verdict": "FAIL",
+    "overallScore": 84.3,
+    "confidence": 0.83,
+    "errorCount": 1,
+    "warningCount": 0,
+    "dimensions": {
+      "STOICHIOMETRY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "VOLUME_BALANCE": {
+        "score": 35,
+        "coverage": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "PIPETTABILITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "DOCUMENT_COMPLETENESS": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "SAFETY_AND_QC": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "CITATION_INTEGRITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PLATFORM_RULES": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  "no-safety-content": {
+    "verdict": "FAIL",
+    "overallScore": 93,
+    "confidence": 0.83,
+    "errorCount": 2,
+    "warningCount": 1,
+    "dimensions": {
+      "STOICHIOMETRY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "VOLUME_BALANCE": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PIPETTABILITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "DOCUMENT_COMPLETENESS": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "SAFETY_AND_QC": {
+        "score": 42,
+        "coverage": 1,
+        "errors": 2,
+        "warnings": 1
+      },
+      "CITATION_INTEGRITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PLATFORM_RULES": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  "unverified-citation": {
+    "verdict": "FAIL",
+    "overallScore": 92,
+    "confidence": 0.75,
+    "errorCount": 1,
+    "warningCount": 1,
+    "dimensions": {
+      "STOICHIOMETRY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "VOLUME_BALANCE": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PIPETTABILITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "DOCUMENT_COMPLETENESS": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "SAFETY_AND_QC": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "CITATION_INTEGRITY": {
+        "score": 17,
+        "coverage": 0,
+        "errors": 1,
+        "warnings": 1
+      },
+      "PLATFORM_RULES": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  "no-reaction-data": {
+    "verdict": "INSUFFICIENT_DATA",
+    "overallScore": 100,
+    "confidence": 0.3,
+    "errorCount": 0,
+    "warningCount": 0,
+    "dimensions": {
+      "STOICHIOMETRY": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      "VOLUME_BALANCE": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PIPETTABILITY": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      "DOCUMENT_COMPLETENESS": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "SAFETY_AND_QC": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "CITATION_INTEGRITY": {
+        "score": 100,
+        "coverage": 1,
+        "errors": 0,
+        "warnings": 0
+      },
+      "PLATFORM_RULES": {
+        "score": null,
+        "coverage": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  }
+}
