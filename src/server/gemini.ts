@@ -38,6 +38,100 @@ export function isOverloaded(err: unknown): boolean {
 
 const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+// ---------------------------------------------------------------------------
+// Deadlines
+//
+// Every Gemini call in this file used to run unbounded. If the API accepted the request and then
+// went silent, nothing on the server ever gave up: the model ladder is six candidates deep and each
+// gets two attempts, so a single hang could sit through twelve openings and then fall back to the
+// blocking path for twelve more. The only backstop was the client's five minute guard, by which
+// point the user had waited five minutes to be told to shorten their description.
+//
+// Three bounds now apply. A per-attempt timeout kills one hung call and moves to the next model. An
+// idle timeout on the stream catches the specific failure the error copy described, where the
+// connection opens and no chunk ever arrives. A total budget stops the ladder well before the
+// client's guard, so the failure is fast and says which models were actually tried.
+// ---------------------------------------------------------------------------
+
+/** One model call. Long enough for a real SOP, short enough that a hang is not the user's problem. */
+const ATTEMPT_TIMEOUT_MS = Number(getEnv('GEMINI_ATTEMPT_TIMEOUT_MS') || 60_000);
+/** Silence between stream chunks. Gemini streams steadily once it starts; a long gap means it stopped. */
+const STREAM_IDLE_TIMEOUT_MS = Number(getEnv('GEMINI_STREAM_IDLE_TIMEOUT_MS') || 45_000);
+/** Whole-generation budget, deliberately inside the client's 5 minute guard. */
+const TOTAL_BUDGET_MS = Number(getEnv('GEMINI_TOTAL_BUDGET_MS') || 210_000);
+
+export class GeminiTimeoutError extends Error {
+  constructor(message: string) { super(message); this.name = 'GeminiTimeoutError'; }
+}
+
+/** True for our own deadline errors, which are retryable against the next model. */
+export function isTimeout(err: unknown): boolean {
+  return (err as { name?: string })?.name === 'GeminiTimeoutError';
+}
+
+/**
+ * An AbortSignal that fires on our deadline or when the caller aborts, whichever comes first.
+ * `AbortSignal.any` is not available in every runtime this ships to, so it is composed by hand.
+ */
+function deadline(ms: number, parent?: AbortSignal) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(new Error('deadline')), ms);
+  const onParent = () => { clearTimeout(timer); ctrl.abort(); };
+  if (parent) {
+    if (parent.aborted) onParent();
+    else parent.addEventListener('abort', onParent, { once: true });
+  }
+  return {
+    signal: ctrl.signal,
+    done: () => { clearTimeout(timer); parent?.removeEventListener('abort', onParent); },
+  };
+}
+
+/** Race a call against a deadline, so a silent provider costs one attempt rather than everything. */
+export async function withTimeout<T>(ms: number, label: string, run: (signal: AbortSignal) => Promise<T>, parent?: AbortSignal): Promise<T> {
+  const d = deadline(ms, parent);
+  const timedOut = new Promise<never>((_, rej) => {
+    d.signal.addEventListener('abort', () => {
+      if (parent?.aborted) return; // a real client abort surfaces from the call itself
+      rej(new GeminiTimeoutError(`${label} did not respond within ${Math.round(ms / 1000)}s.`));
+    }, { once: true });
+  });
+  try {
+    return await Promise.race([run(d.signal), timedOut]);
+  } finally {
+    d.done();
+  }
+}
+
+/**
+ * Wrap an async iterable so a gap between items is an error rather than an indefinite wait.
+ * This is the guard for "Gemini accepted the request but never finished it".
+ */
+export async function* withIdleTimeout<T>(source: AsyncIterable<T>, ms: number): AsyncGenerator<T> {
+  const it = source[Symbol.asyncIterator]();
+  for (;;) {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const idle = new Promise<'idle'>((res) => { timer = setTimeout(() => res('idle'), ms); });
+    let r: IteratorResult<T> | 'idle';
+    try {
+      r = await Promise.race([it.next(), idle]);
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+    if (r === 'idle') {
+      // Close the source, but never wait on it. A generator suspended on a promise that will not
+      // settle also never settles its own return(), so awaiting cleanup here reintroduced exactly
+      // the hang this function exists to prevent. Found by the stalled-stream test, not by reading.
+      try { void it.return?.(undefined as never); } catch { /* closing a dead iterator is not an error */ }
+      throw new GeminiTimeoutError(`The model stopped sending data for ${Math.round(ms / 1000)}s.`);
+    }
+    if (r.done) return;
+    yield r.value;
+  }
+}
+
+
+
 /** True when an error means "this model ID is not usable by this key" rather than a transient fault. */
 export function isModelUnavailable(err: unknown): boolean {
   const m = String((err as { message?: string })?.message || err);
@@ -67,20 +161,35 @@ async function generateWithRetry(
   params: Parameters<typeof ai.models.generateContent>[0]
 ) {
   const candidateModels = modelCandidates(params.model);
+  const startedAt = Date.now();
+  const tried: string[] = [];
 
   let lastError: any = null;
 
   for (const modelName of candidateModels) {
+    if (Date.now() - startedAt > TOTAL_BUDGET_MS) break;
+    tried.push(modelName);
     for (let attempt = 1; attempt <= 2; attempt++) {
+      if (Date.now() - startedAt > TOTAL_BUDGET_MS) break;
       try {
-        const response = await ai.models.generateContent({
-          ...params,
-          model: modelName,
-        });
+        const response = await withTimeout(
+          ATTEMPT_TIMEOUT_MS,
+          `${modelName} (blocking)`,
+          (signal) => ai.models.generateContent({
+            ...params,
+            model: modelName,
+            config: { ...params.config, abortSignal: signal },
+          }),
+        );
         return response;
       } catch (err: any) {
         lastError = err;
         const errMsg = String(err?.message || err);
+        // A hung model is worth exactly one attempt. Move down the ladder rather than waiting again.
+        if (isTimeout(err)) {
+          console.warn(`[Gemini API] ${modelName} timed out. Trying next candidate...`);
+          break;
+        }
         const isNotFound = errMsg.includes('404') || errMsg.includes('NOT_FOUND') || errMsg.includes('no longer available');
         if (isNotFound) {
           console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next valid candidate...`);
@@ -107,6 +216,14 @@ async function generateWithRetry(
     }
   }
 
+  // Say what was actually attempted. "It timed out" with no other detail is what made this hard to
+  // diagnose from the outside in the first place.
+  if (isTimeout(lastError) || !lastError) {
+    throw new GeminiTimeoutError(
+      `No model responded within the time budget. Tried: ${tried.join(', ') || 'none'}. ` +
+      `Check that GEMINI_MODEL names a model your key can use (/api/ai-selftest reports this).`,
+    );
+  }
   throw lastError;
 }
 
@@ -656,26 +773,39 @@ export async function generateSopAndReactionSheetStream(
   // swapped here without the user seeing a partial response.
   let stream: Awaited<ReturnType<typeof ai.models.generateContentStream>> | null = null;
   let streamError: unknown = null;
+  const startedAt = Date.now();
+  const tried: string[] = [];
   for (const modelName of modelCandidates()) {
+    if (Date.now() - startedAt > TOTAL_BUDGET_MS) break;
+    tried.push(modelName);
     // Two attempts per model: a 503 "high demand" is usually a spike lasting seconds, and when it
     // is not, the next model in the ladder is rarely saturated at the same moment. Without this a
     // transient spike on one model failed the whole generation.
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
-        stream = await ai.models.generateContentStream({
-          model: modelName,
-          contents: contentsFor(bundle, params),
-          config: {
-            systemInstruction: bundle.systemInstruction,
-            responseMimeType: 'application/json',
-            responseSchema: sopDocumentSchema,
-            abortSignal: signal,
-          },
-        });
+        stream = await withTimeout(
+          ATTEMPT_TIMEOUT_MS,
+          `${modelName} (stream open)`,
+          (deadlineSignal) => ai.models.generateContentStream({
+            model: modelName,
+            contents: contentsFor(bundle, params),
+            config: {
+              systemInstruction: bundle.systemInstruction,
+              responseMimeType: 'application/json',
+              responseSchema: sopDocumentSchema,
+              abortSignal: deadlineSignal,
+            },
+          }),
+          signal,
+        );
         break;
       } catch (err) {
         streamError = err;
         if (isClientAbort(err) || signal?.aborted) throw err;
+        if (isTimeout(err)) {
+          console.warn(`[Gemini API] ${modelName} did not open a stream in time. Trying next candidate...`);
+          break;
+        }
         if (isModelUnavailable(err)) {
           console.warn(`[Gemini API] Model ${modelName} is not available (404). Trying next candidate...`);
           break;
@@ -694,11 +824,19 @@ export async function generateSopAndReactionSheetStream(
     }
     if (stream) break;
   }
-  if (!stream) throw streamError instanceof Error ? streamError : new Error(String(streamError));
+  if (!stream) {
+    if (isTimeout(streamError) || !streamError) {
+      throw new GeminiTimeoutError(
+        `No model opened a stream within the time budget. Tried: ${tried.join(', ') || 'none'}. ` +
+        `Check GEMINI_MODEL against /api/ai-selftest.`,
+      );
+    }
+    throw streamError instanceof Error ? streamError : new Error(String(streamError));
+  }
 
   let acc = '';
   try {
-    for await (const chunk of stream) {
+    for await (const chunk of withIdleTimeout(stream, STREAM_IDLE_TIMEOUT_MS)) {
       if (signal?.aborted) throw new Error('Generation aborted by client.');
       const t = chunk.text || '';
       if (t) {
@@ -712,6 +850,15 @@ export async function generateSopAndReactionSheetStream(
     // call returns the same document without depending on a long-lived connection, so retry there
     // once rather than failing a generation the user has already waited on.
     if (signal?.aborted || isClientAbort(err)) throw err;
+    // The blocking retry is worth doing, but only if there is time left. Falling into a second full
+    // model ladder after the budget is spent is how one stall turned into a five minute wait.
+    const spent = Date.now() - startedAt;
+    if (spent > TOTAL_BUDGET_MS) {
+      throw new GeminiTimeoutError(
+        `Generation stopped after ${Math.round(spent / 1000)}s. ${String((err as Error)?.message || err)} ` +
+        `Tried: ${tried.join(', ')}.`,
+      );
+    }
     console.warn(`[Gemini API] Stream ended early (${String((err as Error)?.message || err)}). Retrying without streaming...`);
     onChunk('', acc); // nudge the SSE channel so the client sees the connection is still alive
     return await generateSopAndReactionSheet(params);

@@ -10,8 +10,7 @@ import type { ProtocolStore, SignatureRole } from './db';
 import type { SopDocument, ReactionSheet } from '../types';
 import {
   generateSopAndReactionSheet, generateSopAndReactionSheetStream, crossTestAgainstLiterature, autoFixSopFromLiterature,
-  searchAndSuggestProtocols, expandDeNovoDescription, SopGenerationParams, getAiClient, defaultModel,
-} from './gemini';
+  searchAndSuggestProtocols, expandDeNovoDescription, SopGenerationParams, getAiClient, defaultModel, modelCandidates } from './gemini';
 import { generateExcelWorkbook } from './excel';
 import { generateWordDocument } from './word';
 import { generateLiveExcelWorkbook } from './excelLive';
@@ -149,28 +148,49 @@ export function createApp(opts: AppOptions): Hono<AppEnv> {
    */
   app.get('/api/ai-selftest', async (c) => {
     const model = defaultModel();
+    // The diagnostic must always answer. Unbounded, it hung exactly like the generation it was built
+    // to explain, which made the one tool for telling "the key is broken" from "streaming is broken"
+    // useless at the moment it was needed. 20s is far longer than a two-token reply should ever take.
+    const PROBE_MS = 20_000;
     const probe = async (mode: 'blocking' | 'streaming') => {
       const started = Date.now();
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), PROBE_MS);
+      const expired = () => Date.now() - started >= PROBE_MS;
       try {
         const ai = getAiClient();
-        const req = { model, contents: 'Reply with the single word: ok' };
+        const req = { model, contents: 'Reply with the single word: ok', config: { abortSignal: ctrl.signal } };
         let text = '';
         if (mode === 'blocking') {
           text = (await ai.models.generateContent(req)).text || '';
         } else {
-          for await (const chunk of await ai.models.generateContentStream(req)) text += chunk.text || '';
+          for await (const chunk of await ai.models.generateContentStream(req)) {
+            text += chunk.text || '';
+            if (expired()) break;
+          }
         }
         return { ok: true, ms: Date.now() - started, text: text.trim().slice(0, 40) };
       } catch (e) {
         const raw = e instanceof Error ? e.message : String(e);
+        if (expired()) {
+          return {
+            ok: false, ms: Date.now() - started, classified: 'timeout',
+            raw: `No response from ${model} within ${PROBE_MS / 1000}s. The request was accepted but nothing came back, which usually means GEMINI_MODEL names a model this key cannot use, or the provider is not answering.`,
+          };
+        }
         return { ok: false, ms: Date.now() - started, classified: classifyAiError(raw), raw: raw.slice(0, 1200) };
+      } finally {
+        clearTimeout(timer);
       }
     };
+    // Run both probes concurrently so the endpoint answers in one probe's time, not two.
+    const [blocking, streaming] = await Promise.all([probe('blocking'), probe('streaming')]);
     return c.json({
       model,
+      candidates: modelCandidates(),
       keyConfigured: !!getEnv('GEMINI_API_KEY'),
-      blocking: await probe('blocking'),
-      streaming: await probe('streaming'),
+      blocking,
+      streaming,
     });
   });
 
