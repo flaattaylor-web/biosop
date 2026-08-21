@@ -83,6 +83,73 @@ describe('bench workbook', () => {
     for (const n of ['RXN_VOL', 'N_RXN', 'N_EFF', 'OVERFLOW', 'MIN_PIP']) expect(dn).toContain(n);
   });
 
+  /**
+   * Excel refuses a workbook whose XML violates the schema and "repairs" it by silently dropping
+   * content; LibreOffice and most readers tolerate the same file, so a defect here survives review
+   * and only shows up on a real user's machine. These assertions cover the violations this generator
+   * has actually produced.
+   */
+  it('emits structurally valid XML: no overlapping validation or merge ranges', async () => {
+    const wb = await open(await generateLiveExcelWorkbook(sheet(), sop()));
+
+    const boxes = (ref: string) => {
+      const [a, b] = ref.split(':');
+      const cell = (r: string) => {
+        const m = /([A-Z]+)(\d+)/.exec(r)!;
+        let col = 0;
+        for (const ch of m[1]) col = col * 26 + (ch.charCodeAt(0) - 64);
+        return { col, row: Number(m[2]) };
+      };
+      const p1 = cell(a); const p2 = cell(b || a);
+      return { c1: Math.min(p1.col, p2.col), c2: Math.max(p1.col, p2.col), r1: Math.min(p1.row, p2.row), r2: Math.max(p1.row, p2.row) };
+    };
+    const overlaps = (x: ReturnType<typeof boxes>, y: ReturnType<typeof boxes>) =>
+      !(x.c2 < y.c1 || y.c2 < x.c1 || x.r2 < y.r1 || y.r2 < x.r1);
+
+    for (const ws of wb.worksheets) {
+      // Data validation ranges must be disjoint. ExcelJS coalesces per-cell rules into overlapping
+      // sqrefs, which is invalid OOXML and makes Excel repair the file.
+      const dv = (ws as unknown as { dataValidations: { model: Record<string, unknown> } }).dataValidations.model || {};
+      const refs = Object.keys(dv);
+      for (let i = 0; i < refs.length; i++) {
+        for (let j = i + 1; j < refs.length; j++) {
+          expect(
+            overlaps(boxes(refs[i]), boxes(refs[j])),
+            `${ws.name}: validation ranges ${refs[i]} and ${refs[j]} overlap`,
+          ).toBe(false);
+        }
+      }
+
+      const merges: string[] = ((ws as unknown as { model: { merges?: string[] } }).model.merges) || [];
+      for (let i = 0; i < merges.length; i++) {
+        for (let j = i + 1; j < merges.length; j++) {
+          expect(
+            overlaps(boxes(merges[i]), boxes(merges[j])),
+            `${ws.name}: merged ranges ${merges[i]} and ${merges[j]} overlap`,
+          ).toBe(false);
+        }
+      }
+    }
+  });
+
+  it('never writes an empty or unbalanced formula', async () => {
+    const wb = await open(await generateLiveExcelWorkbook(sheet(), sop()));
+    let checked = 0;
+    for (const ws of wb.worksheets) {
+      ws.eachRow((r) => r.eachCell((c) => {
+        const v = c.value as { formula?: string } | null;
+        if (v && typeof v === 'object' && 'formula' in v && typeof v.formula === 'string') {
+          checked++;
+          expect(v.formula.trim(), `${ws.name}!${c.address} has an empty formula`).not.toBe('');
+          const opens = (v.formula.match(/\(/g) || []).length;
+          const closes = (v.formula.match(/\)/g) || []).length;
+          expect(opens, `${ws.name}!${c.address} unbalanced: ${v.formula}`).toBe(closes);
+        }
+      }));
+    }
+    expect(checked).toBeGreaterThan(10);
+  });
+
   it('counts per-tube components in the run cost, which the mix column would report as zero', async () => {
     const wb = await open(await generateLiveExcelWorkbook(sheet(), sop()));
     const cost = wb.getWorksheet('Reagents & Cost')!;

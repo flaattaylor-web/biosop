@@ -163,6 +163,20 @@ function page(ws: ExcelJS.Worksheet, o: { landscape?: boolean; titlesRow?: strin
   };
 }
 
+/**
+ * Apply a validation to one explicit range.
+ *
+ * Setting the same rule cell-by-cell makes ExcelJS coalesce the cells into ranges badly: four calls
+ * on B9..B12 came out as sqref="B10:B12" AND sqref="B9:B12". Overlapping dataValidation ranges are
+ * invalid OOXML, and Excel treats an invalid range as a corrupt file, repairs it, and drops content
+ * on the way through. LibreOffice ignores the overlap entirely, which is why it survived review.
+ *
+ * The typings do not expose the sheet-level collection, so this reaches past them deliberately.
+ */
+function validate(ws: ExcelJS.Worksheet, range: string, rule: ExcelJS.DataValidation) {
+  (ws as unknown as { dataValidations: { add(r: string, v: ExcelJS.DataValidation): void } }).dataValidations.add(range, rule);
+}
+
 const money = (v: number) => Math.round(v * 100) / 100;
 
 // ---------------------------------------------------------------------------
@@ -321,18 +335,19 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
     ['Positive controls', design.posControls, 'N_POS', ''],
     ['Negative controls', design.negControls, 'N_NEG', 'The no-template control belongs here.'],
   ];
+  const designFirstRow = sr;
   for (const [k, v, name, note] of designRows) {
     label(wsu, sr, 1, k, { bold: true });
     asInput(wsu.getCell(sr, 2), '0');
     wsu.getCell(sr, 2).value = v;
-    wsu.getCell(sr, 2).dataValidation = {
-      type: 'whole', operator: 'greaterThanOrEqual', formulae: [0], allowBlank: false,
-      showErrorMessage: true, errorTitle: 'Whole number', error: 'Counts must be zero or a positive whole number.',
-    };
     label(wsu, sr, 4, note, { size: 9, color: MUTED });
     wb.definedNames.add(`'Setup'!$B$${sr}`, name);
     sr++;
   }
+  validate(wsu, `B${designFirstRow}:B${sr - 1}`, {
+    type: 'whole', operator: 'greaterThanOrEqual', formulae: [0], allowBlank: false,
+    showErrorMessage: true, errorTitle: 'Whole number', error: 'Counts must be zero or a positive whole number.',
+  });
 
   label(wsu, sr, 1, 'Total reactions', { bold: true });
   asCalc(wsu.getCell(sr, 2), '0');
@@ -344,10 +359,10 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
   label(wsu, sr, 1, 'Overflow allowance', { bold: true });
   asInput(wsu.getCell(sr, 2), '0%');
   wsu.getCell(sr, 2).value = design.overflowPercent / 100;
-  wsu.getCell(sr, 2).dataValidation = {
+  validate(wsu, `B${sr}`, {
     type: 'decimal', operator: 'between', formulae: [0, 1], allowBlank: false,
     showErrorMessage: true, errorTitle: 'Overflow', error: 'Enter a percentage between 0% and 100%.',
-  };
+  });
   label(wsu, sr, 4, 'Extra mix to cover pipetting loss. 10% is typical, more for many small transfers.', { size: 9, color: MUTED });
   wb.definedNames.add(`'Setup'!$B$${sr}`, 'OVERFLOW');
   sr++;
@@ -468,10 +483,6 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
     const mixFlag = ws.getCell(row, 10);
     mixFlag.value = inMix ? 'Y' : 'N';
     asInput(mixFlag);
-    mixFlag.dataValidation = {
-      type: 'list', allowBlank: false, formulae: ['"Y,N"'],
-      showErrorMessage: true, errorTitle: 'In mix?', error: 'Y puts this component in the shared master mix. N means it is added to each tube.',
-    };
 
     const runVol = ws.getCell(row, 11);
     runVol.value = { formula: `IF(J${row}="Y",ROUND(I${row}*N_EFF,2),0)`, result: inMix ? Number((c.volPerRxnMicroliters * mm.effectiveReactions).toFixed(2)) : 0 };
@@ -497,6 +508,10 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
     row++;
   });
   const last = row - 1;
+  validate(ws, `J${first}:J${last}`, {
+    type: 'list', allowBlank: false, formulae: ['"Y,N"'],
+    showErrorMessage: true, errorTitle: 'In mix?', error: 'Y puts this component in the shared master mix. N means it is added to each tube.',
+  });
 
   // The diluent balances against everything else. Excluding its own cell keeps the reference acyclic.
   for (const d of diluentRows) {
@@ -882,10 +897,10 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
     cost.value = { formula: `ROUND(C${cr}*F${cr},2)`, result: money(runVolume * (price.costPerMicroliter || 0)) };
     asCalc(cost, '$0.00');
     asInput(wc.getCell(cr, 8));
-    wc.getCell(cr, 8).dataValidation = { type: 'list', allowBlank: true, formulae: ['"Yes,No,Order"'] };
     cr++;
   });
   const costLast = cr - 1;
+  validate(wc, `H${costFirst}:H${costLast}`, { type: 'list', allowBlank: true, formulae: ['"Yes,No,Order"'] });
   cr++;
   for (let i = 1; i <= 8; i++) { fill(wc.getCell(cr, i), ACCENT); wc.getCell(cr, i).border = boxed; }
   label(wc, cr, 1, 'TOTAL PER RUN', { bold: true, size: 11, color: PAPER });
