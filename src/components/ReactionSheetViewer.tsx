@@ -26,7 +26,7 @@ import {
   DollarSign,
   PieChart
 } from 'lucide-react';
-import { ReactionSheet, ReagentComponent, ThermocyclerStep, StepByStepReactionStep, SopCostEstimation, DnaNormalizationResult } from '../types';
+import { ReactionSheet, SopDocument, ReagentComponent, ThermocyclerStep, StepByStepReactionStep, SopCostEstimation, DnaNormalizationResult } from '../types';
 import { ReagentCostEstimator } from './ReagentCostEstimator';
 import { DnaNormalizationCalculator } from './DnaNormalizationCalculator';
 import { AuditReportCard } from './AuditReportCard';
@@ -37,12 +37,19 @@ interface ReactionSheetViewerProps {
   reactionSheet: ReactionSheet;
   onUpdateSheet: (updatedSheet: ReactionSheet) => void;
   sopAuditReport?: import('../core/auditor').AuditReport;
+  /**
+   * The document this reaction sheet belongs to. The workbook needs it for the Run Record header,
+   * the reagent lot table and the whole Protocol sheet; without it the export silently produced a
+   * workbook with no method in it, which defeats the point of a bench workbook.
+   */
+  sop?: SopDocument;
 }
 
 export const ReactionSheetViewer: React.FC<ReactionSheetViewerProps> = ({
   reactionSheet,
   onUpdateSheet,
-  sopAuditReport
+  sopAuditReport,
+  sop
 }) => {
   const [numReactions, setNumReactions] = useState<number>(reactionSheet.defaultNumReactions || 10);
   const [sampleCount, setSampleCount] = useState<number>(
@@ -259,12 +266,12 @@ export const ReactionSheetViewer: React.FC<ReactionSheetViewerProps> = ({
         defaultOverflowPercent: overflowPercent
       };
       // Live-formula workbook built in the browser (nothing uploaded).
-      const bytes = await generateLiveExcelWorkbook(sheetToExport);
+      const bytes = await generateLiveExcelWorkbook(sheetToExport, sop);
       const blob = new Blob([bytes as BlobPart], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${(reactionSheet.title || 'Reaction_Sheet').replace(/[^a-zA-Z0-9_-]/g, '_')}_live.xlsx`;
+      a.download = `${(sop?.title || reactionSheet.title || 'Reaction_Sheet').replace(/[^a-zA-Z0-9_-]/g, '_')}_live.xlsx`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);

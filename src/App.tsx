@@ -258,6 +258,7 @@ export default function App() {
             reactionSheet={activeReactionSheet}
             onUpdateSheet={handleUpdateSheet}
             sopAuditReport={currentSop.auditReport}
+            sop={currentSop}
           />
         )}
 
