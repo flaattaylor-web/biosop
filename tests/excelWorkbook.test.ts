@@ -54,6 +54,25 @@ describe('bench workbook', () => {
     expect(run).toContain('Test Method');
   });
 
+  /**
+   * The workbook used to open on Run Record, which is deliberately an empty form (operator, lot
+   * numbers and signatures are filled in at the bench). Opening there made the whole file look
+   * blank, with the calculator two tabs away and unseen. Open on the thing the user came for.
+   */
+  it('opens on the Master Mix calculator, not on the empty Run Record form', async () => {
+    const wb = await open(await generateLiveExcelWorkbook(sheet(), sop()));
+    const idx = wb.worksheets.findIndex((w) => w.name === 'Master Mix');
+    expect(idx).toBeGreaterThan(-1);
+
+    const views = (wb as unknown as { views: { activeTab?: number }[] }).views || [];
+    expect(views[0]?.activeTab, 'workbook must open on the Master Mix tab').toBe(idx);
+
+    // The generator also marks exactly one sheet tabSelected, which is required for Excel to treat
+    // the workbook as consistent. ExcelJS writes it correctly but does not surface it again through
+    // its own reader, so that invariant is verified against the raw XML rather than asserted here.
+    expect(wb.worksheets[0].name).toBe('Run Record');
+  });
+
   it('degrades honestly when no SOP is supplied rather than inventing one', async () => {
     const wb = await open(await generateLiveExcelWorkbook(sheet()));
     expect(wb.worksheets.map((w) => w.name)).not.toContain('Protocol');

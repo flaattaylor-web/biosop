@@ -997,6 +997,24 @@ export async function generateLiveExcelWorkbook(reactionSheet: ReactionSheet, so
   page(wp, { docId, sheetName: 'About' });
   await wp.protect('', { selectLockedCells: true, selectUnlockedCells: true });
 
+  // Open on the calculator, not on the Run Record.
+  //
+  // Run Record is deliberately a form: operator, date, lot numbers and signatures are all empty
+  // because they get filled in at the bench. As sheet 1 that made the whole workbook read as blank
+  // on opening, with the actual master mix two tabs away and unseen. The first thing you should see
+  // is the thing you came for.
+  const masterMixIndex = wb.worksheets.findIndex((w) => w.name === 'Master Mix');
+  if (masterMixIndex >= 0) {
+    wb.views = [{
+      x: 0, y: 0, width: 24000, height: 18000,
+      firstSheet: 0, activeTab: masterMixIndex, visibility: 'visible',
+    }];
+    // Exactly one sheet may claim the selected tab, or Excel flags the workbook as inconsistent.
+    wb.worksheets.forEach((w, i) => {
+      w.views = (w.views || []).map((v) => ({ ...v, tabSelected: i === masterMixIndex }));
+    });
+  }
+
   const buf = await wb.xlsx.writeBuffer();
   return new Uint8Array(buf as ArrayBuffer);
 }
